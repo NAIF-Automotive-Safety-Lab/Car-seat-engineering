@@ -1,0 +1,626 @@
+name: T-OCS R4.1 Real MBD Gate
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "R4.1/**"
+      - "SR11/**"
+      - "tools/**"
+      - ".github/workflows/tocs-mbd.yml"
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: tocs-mbd-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  R41_PATH: R4.1/R4.1.step
+  R41_SHA256: fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68
+  R41_SOLIDS: "62"
+
+  # Current Chrono documentation recommends Python 3.12 for the
+  # prebuilt PyChrono route and documents Cascade support through
+  # the source-built Python module path.
+  PYTHON_VERSION: "3.12"
+  CHRONO_VERSION: "10.0.0"
+  CONDA_ENV: tocs-mbd
+
+  EVIDENCE_DIR: artifacts
+  RAW_SOLVER_DIR: artifacts/raw_solver
+
+jobs:
+  tocs-mbd:
+    name: T-OCS R4.1 / Real 3D MBD
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+
+    defaults:
+      run:
+        shell: bash -el {0}
+
+    steps:
+      # ============================================================
+      # PRE-FLIGHT — required repository files
+      # ============================================================
+      - name: PRE-FLIGHT — required repository files
+        id: gate_preflight
+        run: |
+          set -euo pipefail
+
+          required_files=(
+            "${R41_PATH}"
+            "SR11/adapter/pychrono_r41_adapter.py"
+            "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+            "SR11/manifests/V1_SR11_FRAME_MAPPING.json"
+            "SR11/joints/V1_SR11_JOINT_MAPPING.json"
+            "SR11/contacts/V1_SR11_CONTACT_MAPPING.json"
+            "SR11/parameters/V1_SR11_ASSUMPTIONS.json"
+            "tools/validate_r41_step.py"
+            "tools/validate_sr11_adapter.py"
+            "tools/pychrono_smoke_test.py"
+          )
+
+          mkdir -p "${EVIDENCE_DIR}"
+
+          for f in "${required_files[@]}"; do
+            if [[ ! -f "$f" ]]; then
+              echo "REQUIRED_ARTIFACTS=FAIL"
+              echo "MISSING_FILE=$f"
+              exit 5
+            fi
+          done
+
+          echo "REQUIRED_ARTIFACTS=PASS"
+
+      # ============================================================
+      # GATE 1 — HOST
+      # ============================================================
+      - name: GATE 1 — HOST
+        id: gate_host
+        run: |
+          set -euo pipefail
+
+          echo "RUNNER_OS=${RUNNER_OS}"
+          echo "RUNNER_ARCH=${RUNNER_ARCH}"
+          uname -a
+          uname -m
+          command -v python3
+          python3 --version
+
+          [[ "${RUNNER_OS}" == "Linux" ]]
+          [[ "$(uname -m)" == "x86_64" ]]
+
+          echo "HOST_STATUS=PASS"
+
+      # ============================================================
+      # GATE 3 — R4.1 EXISTENCE
+      # Deliberately before solver setup.
+      # ============================================================
+      - name: GATE 3 — R4.1 EXISTENCE
+        id: gate_r41_exists
+        run: |
+          set -euo pipefail
+
+          if [[ ! -f "${R41_PATH}" ]]; then
+            echo "R4.1_PRESENT=FAIL"
+            exit 10
+          fi
+
+          echo "R4.1_PRESENT=PASS"
+
+      # ============================================================
+      # GATE 4 — R4.1 SHA-256
+      # ============================================================
+      - name: GATE 4 — R4.1 SHA-256
+        id: gate_r41_sha
+        run: |
+          set -euo pipefail
+
+          actual="$(sha256sum "${R41_PATH}" | awk '{print $1}')"
+
+          echo "EXPECTED_SHA256=${R41_SHA256}"
+          echo "ACTUAL_SHA256=${actual}"
+
+          if [[ "${actual}" != "${R41_SHA256}" ]]; then
+            echo "SHA_MATCH=FAIL"
+            exit 11
+          fi
+
+          echo "SHA_MATCH=PASS"
+
+      # ============================================================
+      # GATE 5 — STEP READABILITY
+      # ============================================================
+      - name: GATE 5 — STEP READABILITY
+        id: gate_step_read
+        run: |
+          set -euo pipefail
+
+          python tools/validate_r41_step.py \
+            "${R41_PATH}" \
+            "${EVIDENCE_DIR}/r41_readability.json" \
+            --readability-only
+
+          echo "STEP_READ=PASS"
+
+      # ============================================================
+      # GATE 6 — SOLID COUNT
+      # ============================================================
+      - name: GATE 6 — SOLID COUNT
+        id: gate_solid_count
+        run: |
+          set -euo pipefail
+
+          python tools/validate_r41_step.py \
+            "${R41_PATH}" \
+            "${EVIDENCE_DIR}/r41_solids.json" \
+            --solid-count-only
+
+          echo "SOLID_COUNT=PASS"
+
+      # ============================================================
+      # GATE 2 — PYCHRONO / CHRONO REAL ENGINE SETUP
+      #
+      # Why source build here:
+      # the current prebuilt Conda PyChrono packages do not provide
+      # pychrono.cascade, while SR11's STEP adapter requires Cascade.
+      # Build Chrono 10.0.0 from source with PYTHON + CASCADE enabled.
+      # ============================================================
+      - name: GATE 2 — setup isolated Conda environment
+        id: gate_conda
+        run: |
+          set -euo pipefail
+
+          conda create -y -n "${CONDA_ENV}" \
+            -c conda-forge \
+            "python=${PYTHON_VERSION}"
+
+          conda activate "${CONDA_ENV}"
+
+          python --version
+          conda --version
+
+      - name: GATE 2 — install Chrono build dependencies
+        id: gate_chrono_deps
+        run: |
+          set -euo pipefail
+          conda activate "${CONDA_ENV}"
+
+          # Cascade requires OpenCASCADE. Current Chrono 10 docs list
+          # OCCT 7.9.2/7.9.3 as compatible and Python bindings with
+          # pythonocc-core 7.9.0.
+          conda install -y \
+            -c conda-forge \
+            "occt=7.9.2" \
+            "pythonocc-core=7.9.0" \
+            "swig>=4.0" \
+            cmake \
+            ninja \
+            git \
+            pkg-config
+
+      - name: GATE 2 — build Chrono ${CHRONO_VERSION} with Python + Cascade
+        id: gate_chrono_build
+        run: |
+          set -euo pipefail
+          conda activate "${CONDA_ENV}"
+
+          git clone --depth 1 --branch "release/${CHRONO_VERSION}" \
+            https://github.com/projectchrono/chrono.git \
+            "${RUNNER_TEMP}/chrono"
+
+          cmake -S "${RUNNER_TEMP}/chrono" \
+                -B "${RUNNER_TEMP}/chrono-build" \
+                -G Ninja \
+                -DCMAKE_BUILD_TYPE=Release \
+                -DCMAKE_INSTALL_PREFIX="${CONDA_PREFIX}/chrono" \
+                -DCH_ENABLE_MODULE_CORE=ON \
+                -DCH_ENABLE_MODULE_CASCADE=ON \
+                -DCH_ENABLE_MODULE_PYTHON=ON \
+                -DCH_ENABLE_MODULE_POSTPROCESS=ON \
+                -DPYTHON_EXECUTABLE="$(command -v python)" \
+                -DOpenCASCADE_DIR="$(
+                  find "${CONDA_PREFIX}" \
+                    -name OpenCASCADEConfig.cmake \
+                    -print -quit \
+                )"
+
+          test -n "$(
+            find "${CONDA_PREFIX}" \
+              -name OpenCASCADEConfig.cmake \
+              -print -quit
+          )"
+
+          cmake --build "${RUNNER_TEMP}/chrono-build" --parallel
+          cmake --install "${RUNNER_TEMP}/chrono-build"
+
+          {
+            echo "CHRONO_SOURCE=${RUNNER_TEMP}/chrono"
+            echo "CHRONO_BUILD=${RUNNER_TEMP}/chrono-build"
+            echo "CHRONO_INSTALL=${CONDA_PREFIX}/chrono"
+          } | tee "${EVIDENCE_DIR}/chrono_build_paths.txt"
+
+      - name: GATE 2 — PYCHRONO import + Cascade capability
+        id: gate_pychrono_runtime
+        run: |
+          set -euo pipefail
+          conda activate "${CONDA_ENV}"
+
+          export PYTHONPATH="${CONDA_PREFIX}/chrono/bin:${PYTHONPATH:-}"
+          export LD_LIBRARY_PATH="${CONDA_PREFIX}/chrono/lib:${CONDA_PREFIX}/lib:${LD_LIBRARY_PATH:-}"
+
+          python - <<'PY'
+          import sys
+          import pychrono.core as chrono
+          import pychrono.cascade as cascade
+
+          print("PYCHRONO_IMPORT=PASS")
+          print("PYTHON=" + sys.version.split()[0])
+          print("CHRONO_VERSION=" + str(getattr(chrono, "CHRONO_VERSION", "UNKNOWN")))
+          print("PYCHRONO_CORE=" + str(getattr(chrono, "__version__", "UNKNOWN")))
+          print("CASCADE_IMPORT=PASS")
+          print("CASCADE_MODULE=" + str(cascade))
+          PY
+
+      # ============================================================
+      # REAL SMOKE TEST
+      # ============================================================
+      - name: GATE 2 — REAL PyChrono smoke test
+        id: gate_smoke
+        run: |
+          set -euo pipefail
+          conda activate "${CONDA_ENV}"
+
+          export PYTHONPATH="${CONDA_PREFIX}/chrono/bin:${PYTHONPATH:-}"
+          export LD_LIBRARY_PATH="${CONDA_PREFIX}/chrono/lib:${CONDA_PREFIX}/lib:${LD_LIBRARY_PATH:-}"
+
+          python tools/pychrono_smoke_test.py \
+            > "${EVIDENCE_DIR}/pychrono_smoke.stdout.log" \
+            2> "${EVIDENCE_DIR}/pychrono_smoke.stderr.log"
+
+          test -f "${EVIDENCE_DIR}/pychrono_smoke.json"
+
+          python - <<'PY'
+          import json
+          import sys
+
+          d = json.load(open("artifacts/pychrono_smoke.json"))
+
+          required = ("status", "import", "system_created",
+                      "joint_created", "reaction_extracted")
+
+          missing = [k for k in required if k not in d]
+          if missing:
+              print("PYCHRONO_SMOKE=FAIL")
+              print("MISSING=" + ",".join(missing))
+              raise SystemExit(20)
+
+          if d["status"] != "PASS":
+              print("PYCHRONO_SMOKE=FAIL")
+              print(json.dumps(d, indent=2))
+              raise SystemExit(21)
+
+          if not d["reaction_extracted"]:
+              print("PYCHRONO_SMOKE=FAIL")
+              print("REASON=REACTION_NOT_EXTRACTED")
+              raise SystemExit(22)
+
+          print("PYCHRONO_SMOKE=PASS")
+          PY
+
+      # ============================================================
+      # GATE 7 — SR11 ADAPTER
+      # ============================================================
+      - name: GATE 7 — SR11 ADAPTER
+        id: gate_sr11
+        run: |
+          set -euo pipefail
+
+          python tools/validate_sr11_adapter.py
+
+      # ============================================================
+      # GATE 8 — MODEL INTEGRITY
+      # ============================================================
+      - name: GATE 8 — MODEL INTEGRITY
+        id: gate_model_integrity
+        run: |
+          set -euo pipefail
+
+          python - <<'PY'
+          import json
+          import sys
+
+          data = json.load(
+              open("SR11/manifests/V1_SR11_BODY_MAPPING.json",
+                   encoding="utf-8")
+          )
+          bodies = data.get("bodies")
+
+          if not isinstance(bodies, list) or not bodies:
+              print("MODEL_INTEGRITY=FAIL")
+              print("REASON=NO_BODIES")
+              raise SystemExit(40)
+
+          required = {
+              "BASE",
+              "RAIL_L",
+              "RAIL_R",
+              "CARRIAGE",
+              "ABSORBER_L",
+              "ABSORBER_R",
+              "SEATBACK",
+              "ROT_CTRL_L",
+              "ROT_CTRL_R",
+              "LOCK_L",
+              "LOCK_R",
+              "ENDSTOPS",
+              "HINGE",
+              "ANTI_RACK",
+              "SHOULDER_ANCHOR",
+              "SHOULDER_GUSSET",
+              "SHOULDER_ROOT",
+              "SHOULDER_BRACE",
+              "SHOULDER_FRAME_BRACKET",
+          }
+
+          ids = []
+          coverage = set()
+
+          for i, body in enumerate(bodies):
+              if not isinstance(body, dict):
+                  print("MODEL_INTEGRITY=FAIL")
+                  print(f"REASON=BODY_ENTRY_NOT_OBJECT INDEX={i}")
+                  raise SystemExit(41)
+
+              body_id = body.get("mbd_body_id")
+              if not isinstance(body_id, str) or not body_id.strip():
+                  print("MODEL_INTEGRITY=FAIL")
+                  print(f"REASON=EMPTY_MBD_BODY_ID INDEX={i}")
+                  raise SystemExit(42)
+
+              ids.append(body_id.strip())
+
+              for sid in body.get("step_solid_indices", []):
+                  if sid in coverage:
+                      print("MODEL_INTEGRITY=FAIL")
+                      print(f"REASON=DUPLICATE_STEP_SOLID={sid}")
+                      raise SystemExit(43)
+                  coverage.add(sid)
+
+          if coverage != set(range(1, 63)):
+              print("MODEL_INTEGRITY=FAIL")
+              print(
+                  "REASON=STEP_MAPPING_NOT_EXACT_62 "
+                  f"COUNT={len(coverage)}"
+              )
+              raise SystemExit(44)
+
+          missing = sorted(required - set(ids))
+          if missing:
+              print("MODEL_INTEGRITY=FAIL")
+              print("MISSING=" + ",".join(missing))
+              raise SystemExit(45)
+
+          duplicates = sorted({x for x in ids if ids.count(x) > 1})
+          if duplicates:
+              print("MODEL_INTEGRITY=FAIL")
+              print(
+                  "DUPLICATE_MBD_BODY_IDS=" +
+                  ",".join(duplicates)
+              )
+              raise SystemExit(46)
+
+          print("STEP_MAPPING_COVERAGE=62/62")
+          print("UNIQUE_MBD_BODY_IDS=PASS")
+          print("MODEL_INTEGRITY=PASS")
+          PY
+
+      # ============================================================
+      # GATE 9 — MBD READINESS
+      # ============================================================
+      - name: GATE 9 — REAL MBD READINESS
+        id: gate_mbd_ready
+        run: |
+          set -euo pipefail
+          conda activate "${CONDA_ENV}"
+
+          export PYTHONPATH="${CONDA_PREFIX}/chrono/bin:${PYTHONPATH:-}"
+          export LD_LIBRARY_PATH="${CONDA_PREFIX}/chrono/lib:${CONDA_PREFIX}/lib:${LD_LIBRARY_PATH:-}"
+
+          python - <<'PY'
+          import importlib
+          import json
+          from pathlib import Path
+          import sys
+
+          for module in ("pychrono.core", "pychrono.cascade"):
+              try:
+                  importlib.import_module(module)
+              except Exception as exc:
+                  print("MBD_READY=FAIL")
+                  print(f"REASON=MODULE_UNAVAILABLE:{module}")
+                  print(repr(exc))
+                  raise SystemExit(50)
+
+          adapter_path = Path(
+              "SR11/adapter/pychrono_r41_adapter.py"
+          )
+
+          text = adapter_path.read_text(encoding="utf-8")
+
+          required_callables = (
+              "load_r41_model",
+              "validate_r41_hash",
+              "build_bodies",
+              "build_frames",
+              "build_joints",
+              "build_contacts",
+              "build_friction",
+              "build_endstops",
+              "build_lock170",
+              "validate_model",
+              "run_smoke",
+              "run_case",
+              "extract_results",
+              "package_evidence",
+          )
+
+          missing = [
+              name for name in required_callables
+              if f"def {name}(" not in text
+          ]
+
+          if missing:
+              print("MBD_READY=FAIL")
+              print("REASON=MISSING_ADAPTER_CALLABLES")
+              print("MISSING=" + ",".join(missing))
+              raise SystemExit(51)
+
+          params = json.loads(
+              Path(
+                  "SR11/parameters/V1_SR11_ASSUMPTIONS.json"
+              ).read_text(encoding="utf-8")
+          ).get("parameters", [])
+
+          allowed = {
+              "SOURCE_VERIFIED",
+              "DERIVED",
+              "ASSUMED",
+              "UNKNOWN",
+          }
+
+          invalid = [
+              p.get("parameter", f"INDEX_{i}")
+              for i, p in enumerate(params)
+              if p.get("status") not in allowed
+          ]
+
+          if invalid:
+              print("MBD_READY=FAIL")
+              print("REASON=INVALID_PARAMETER_STATUS")
+              print("PARAMETERS=" + ",".join(invalid))
+              raise SystemExit(52)
+
+          print("MBD_READY=PASS")
+          PY
+
+      # ============================================================
+      # GATE 10 — ACTUAL R4.1 3D MBD EXECUTION
+      # ============================================================
+      - name: GATE 10 — REAL 3D MBD execution
+        id: gate_mbd
+        run: |
+          set -euo pipefail
+          conda activate "${CONDA_ENV}"
+
+          export PYTHONPATH="${CONDA_PREFIX}/chrono/bin:${PYTHONPATH:-}"
+          export LD_LIBRARY_PATH="${CONDA_PREFIX}/chrono/lib:${CONDA_PREFIX}/lib:${LD_LIBRARY_PATH:-}"
+
+          mkdir -p "${RAW_SOLVER_DIR}"
+
+          python SR11/adapter/pychrono_r41_adapter.py \
+            --run \
+            --model "${R41_PATH}" \
+            --output-dir "${RAW_SOLVER_DIR}" \
+            > "${RAW_SOLVER_DIR}/stdout.log" \
+            2> "${RAW_SOLVER_DIR}/stderr.log"
+
+          test -f "${RAW_SOLVER_DIR}/execution_manifest.json"
+
+          python - <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          root = Path("artifacts/raw_solver")
+          manifest_path = root / "execution_manifest.json"
+          d = json.loads(manifest_path.read_text(encoding="utf-8"))
+
+          required = (
+              "execution_id",
+              "case_id",
+              "solver",
+              "solver_version",
+              "model_sha256",
+              "input_sha256",
+              "parameter_sha256",
+              "exit_code",
+              "status",
+          )
+
+          missing = [k for k in required if k not in d]
+          if missing:
+              print("REAL_3D_MBD=FAIL")
+              print("MISSING_MANIFEST_FIELDS=" + ",".join(missing))
+              raise SystemExit(60)
+
+          if d.get("status") != "PASS":
+              print("REAL_3D_MBD=FAIL")
+              print(json.dumps(d, indent=2))
+              raise SystemExit(61)
+
+          if int(d.get("exit_code", -1)) != 0:
+              print("REAL_3D_MBD=FAIL")
+              print("REASON=NONZERO_SOLVER_EXIT_CODE")
+              raise SystemExit(62)
+
+          if d.get("model_sha256") != (
+              "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+          ):
+              print("REAL_3D_MBD=FAIL")
+              print("REASON=R4.1_MODEL_HASH_MISMATCH")
+              raise SystemExit(63)
+
+          raw_files = [
+              p for p in root.rglob("*")
+              if p.is_file()
+              and p.name not in {
+                  "stdout.log",
+                  "stderr.log",
+                  "execution_manifest.json",
+              }
+              and p.stat().st_size > 0
+          ]
+
+          if not raw_files:
+              print("REAL_3D_MBD=FAIL")
+              print("REASON=NO_RAW_SOLVER_OUTPUT")
+              raise SystemExit(64)
+
+          print("REAL_3D_MBD=PASS")
+          print(f"RAW_SOLVER_FILES={len(raw_files)}")
+          PY
+
+      # ============================================================
+      # GATE 11 — RAW EVIDENCE / PROVENANCE
+      # ============================================================
+      - name: GATE 11 — RAW EVIDENCE / PROVENANCE
+        if: always()
+        run: |
+          set +e
+          mkdir -p "${EVIDENCE_DIR}"
+
+          actual_r41="$(sha256sum "${R41_PATH}" 2>/dev/null | awk '{print $1}')"
+
+          {
+            echo "commit_sha=${GITHUB_SHA}"
+            echo "workflow_run_id=${GITHUB_RUN_ID}"
+            echo "workflow_run_attempt=${GITHUB_RUN_ATTEMPT}"
+            echo "runner_os=${RUNNER_OS}"
+            echo "runner_arch=${RUNNER_ARCH}"
+            echo "python=$(python3 --version 2>&1)"
+            echo "chrono_target=${CHRONO_VERSION}"
+            echo "r41_path=${R41_PATH}"
+            echo "r41_sha256_expected=${R41_SHA256}"
+            echo "r41_sha256_actual=${actual_r41}"
+            echo "timestamp_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          } > "${EVIDENCE_DIR}/provenance.txt"
+
+          find "${EVIDENCE_DIR}" -type f -print0 \
+            | sort -z \
+            | xargs -0 -r sha256sum \
+            > "${EVIDENCE
