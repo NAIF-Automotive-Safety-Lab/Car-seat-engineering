@@ -55,6 +55,11 @@
       "reason": "Existing adapter resolves its source geometry as SR11/geometry/T_OCS_V0_R4_1_SHOULDER_REPAIR.step; this path was not fabricated or redirected"
     },
     {
+      "check": "MODEL_INTEGRITY_GATE_COMPATIBILITY",
+      "status": "BLOCKED",
+      "reason": "Recovered manifest has 31 body records with authoritative 62/62 solid coverage; current Gate 3 compares len(bodies) with R41_SOLIDS=62 and would reject it. Workflow was not modified."
+    },
+    {
       "check": "REAL_MBD",
       "status": "NOT_STARTED",
       "reason": "Per instruction; no solver execution claimed"
