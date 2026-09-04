@@ -1,0 +1,14 @@
+{
+  "joint_ids": [
+    "J-RAIL-CARRIAGE-L",
+    "J-RAIL-CARRIAGE-R",
+    "J-SEATBACK",
+    "J-ROTCTRL-L",
+    "J-ROTCTRL-R",
+    "J-LOCK170"
+  ],
+  "model_dof": 2,
+  "dof_evidence_level": "MODEL_EXECUTED",
+  "hardware_verified": false,
+  "status": "MODEL_DEFINED_WITH_PARTIAL_MODEL_EVIDENCE"
+}

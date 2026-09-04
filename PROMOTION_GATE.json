@@ -1,0 +1,10 @@
+{
+  "promotion": "BLOCKED",
+  "reason": [
+    "Complete 189-overlap semantic ownership not proven.",
+    "Physical mass/inertia/material/contact/friction evidence incomplete.",
+    "Real MBD unavailable.",
+    "Dynamic bilateral evidence unavailable."
+  ],
+  "design_change_authorized": false
+}

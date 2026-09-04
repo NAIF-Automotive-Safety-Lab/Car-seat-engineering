@@ -1,0 +1,19 @@
+{
+  "R4.1_BASELINE": "IMMUTABLE",
+  "ARTIFACT_RECOVERY": "PARTIAL",
+  "ARTIFACT_RECOVERY_REASON": "GitHub connected search exposed no accessible repository; local R4.1 and SR11 artifacts are available. Manus workspace is not an available tool in this session.",
+  "CAD_REPAIR": "NOT_AUTHORIZED",
+  "MECHANISM_REPAIR": "NOT_AUTHORIZED",
+  "LOAD_PATH": "PROVEN_TOPOLOGY",
+  "ABSORBER": "UNKNOWN",
+  "ENDSTOP": "UNKNOWN",
+  "LOCK170": "UNKNOWN_FOR_PHYSICAL_BEHAVIOR",
+  "SR11_ADAPTER": "STATIC_VALIDATION_PASS",
+  "PYCHRONO": "BLOCKED",
+  "REAL_MBD": "BLOCKED",
+  "CONVERGENCE": "BLOCKED",
+  "EVIDENCE_INTEGRITY": "PASS",
+  "R4.1_REPAIR_CANDIDATE": "NO_GEOMETRY_CHANGE_AUTHORIZED",
+  "PROMOTION_DECISION": "BLOCKED",
+  "reason_for_block": "No new mechanical failure has been proven that authorizes a CAD repair; real PyChrono/MBD execution is unavailable, while several physical/model parameters remain UNKNOWN."
+}

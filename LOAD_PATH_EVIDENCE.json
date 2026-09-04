@@ -1,0 +1,15 @@
+{
+  "topology": "PROVEN",
+  "capacity": "UNKNOWN",
+  "connectivity": true,
+  "chain": [
+    "190_Shoulder_Anchor",
+    "R4_190_SHOULDER_GUSSET",
+    "SHOULDER_ROOT_MEMBER",
+    "OUTBOARD_BRACE",
+    "FRAME_OUTBOARD_BRACKET",
+    "160_Seatback_Structural_Frame"
+  ],
+  "evidence_level": "GEOMETRY_VERIFIED",
+  "status": "PROVEN_TOPOLOGY_ONLY"
+}

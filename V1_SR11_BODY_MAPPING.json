@@ -1,0 +1,504 @@
+{
+  "schema_version": "1.0",
+  "mapping_type": "deterministic_solid_index_from_R4.1_STEP_readback",
+  "source_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "solids": 62,
+  "bodies": [
+    {
+      "mbd_body_id": "BASE",
+      "step_solid_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        34,
+        35
+      ],
+      "components": [
+        "100_Vehicle_Interface_Base",
+        "100_Base_Hardpoint_Boss_FL",
+        "100_Base_Hardpoint_Boss_RL",
+        "100_Base_Hardpoint_Boss_FR",
+        "100_Base_Hardpoint_Boss_RR",
+        "210_Sensor_Mount_L",
+        "210_Sensor_Mount_R"
+      ],
+      "reference_frame": "BASE_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "RAIL_L",
+      "step_solid_indices": [
+        6,
+        7,
+        36
+      ],
+      "components": [
+        "110L_Load_Path_A",
+        "110L_Load_Path_B",
+        "R4_Rail_L"
+      ],
+      "reference_frame": "RAIL_L_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "RAIL_R",
+      "step_solid_indices": [
+        8,
+        9,
+        37
+      ],
+      "components": [
+        "110R_Load_Path_A",
+        "110R_Load_Path_B",
+        "R4_Rail_R"
+      ],
+      "reference_frame": "RAIL_R_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "CARRIAGE",
+      "step_solid_indices": [
+        10,
+        38
+      ],
+      "components": [
+        "120_Carriage",
+        "R4_Carriage"
+      ],
+      "reference_frame": "CARRIAGE_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "ABSORBER_L",
+      "step_solid_indices": [
+        11,
+        12
+      ],
+      "components": [
+        "130L_Absorber_A",
+        "130L_Absorber_B"
+      ],
+      "reference_frame": "ABSORBER_L_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "ABSORBER_R",
+      "step_solid_indices": [
+        13,
+        14
+      ],
+      "components": [
+        "130R_Absorber_A",
+        "130R_Absorber_B"
+      ],
+      "reference_frame": "ABSORBER_R_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "PELVIC_CONTROL",
+      "step_solid_indices": [
+        15
+      ],
+      "components": [
+        "140_Pelvic_Control"
+      ],
+      "reference_frame": "PELVIC_CONTROL_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "SEATBACK",
+      "step_solid_indices": [
+        16
+      ],
+      "components": [
+        "160_Seatback_Frame"
+      ],
+      "reference_frame": "SEATBACK_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "ROT_CTRL_L",
+      "step_solid_indices": [
+        17
+      ],
+      "components": [
+        "150L_Rotation_Link"
+      ],
+      "reference_frame": "ROT_CTRL_L_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "ROT_CTRL_R",
+      "step_solid_indices": [
+        18
+      ],
+      "components": [
+        "150R_Rotation_Link"
+      ],
+      "reference_frame": "ROT_CTRL_R_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "SOURCE_LOCK_L",
+      "step_solid_indices": [
+        19
+      ],
+      "components": [
+        "170_L_Housing_Source"
+      ],
+      "reference_frame": "SOURCE_LOCK_L_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "SOURCE_LOCK_R",
+      "step_solid_indices": [
+        20
+      ],
+      "components": [
+        "170_R_Housing_Source"
+      ],
+      "reference_frame": "SOURCE_LOCK_R_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "REBOUND_L",
+      "step_solid_indices": [
+        21,
+        22
+      ],
+      "components": [
+        "180L_Rebound_A",
+        "180L_Rebound_B"
+      ],
+      "reference_frame": "REBOUND_L_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "REBOUND_R",
+      "step_solid_indices": [
+        23,
+        24
+      ],
+      "components": [
+        "180R_Rebound_A",
+        "180R_Rebound_B"
+      ],
+      "reference_frame": "REBOUND_R_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "LAP_ANCHOR_L",
+      "step_solid_indices": [
+        25,
+        26
+      ],
+      "components": [
+        "190_Lap_Anchor_L_A",
+        "190_Lap_Anchor_L_B"
+      ],
+      "reference_frame": "LAP_ANCHOR_L_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "LAP_ANCHOR_R",
+      "step_solid_indices": [
+        27,
+        28
+      ],
+      "components": [
+        "190_Lap_Anchor_R_A",
+        "190_Lap_Anchor_R_B"
+      ],
+      "reference_frame": "LAP_ANCHOR_R_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "SHOULDER_ANCHOR",
+      "step_solid_indices": [
+        29,
+        30
+      ],
+      "components": [
+        "190_Shoulder_Anchor_A",
+        "190_Shoulder_Anchor_B"
+      ],
+      "reference_frame": "SHOULDER_ANCHOR_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "GUIDE_L",
+      "step_solid_indices": [
+        31
+      ],
+      "components": [
+        "200_TorsoHead_Guide_L"
+      ],
+      "reference_frame": "GUIDE_L_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "GUIDE_R",
+      "step_solid_indices": [
+        32
+      ],
+      "components": [
+        "200_TorsoHead_Guide_R"
+      ],
+      "reference_frame": "GUIDE_R_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "UPPER_GUIDE",
+      "step_solid_indices": [
+        33
+      ],
+      "components": [
+        "200_Upper_Torso_Head_Guide"
+      ],
+      "reference_frame": "UPPER_GUIDE_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "ENDSTOPS",
+      "step_solid_indices": [
+        39,
+        40,
+        41,
+        42
+      ],
+      "components": [
+        "R4_Endstop_L_Front",
+        "R4_Endstop_L_Rear",
+        "R4_Endstop_R_Front",
+        "R4_Endstop_R_Rear"
+      ],
+      "reference_frame": "ENDSTOPS_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "HINGE",
+      "step_solid_indices": [
+        43,
+        44,
+        45,
+        46,
+        47
+      ],
+      "components": [
+        "R4_Hinge_Shaft",
+        "R4_Hinge_Support_L",
+        "R4_Hinge_Support_R",
+        "R4_Hinge_Barrel_L",
+        "R4_Hinge_Barrel_R"
+      ],
+      "reference_frame": "HINGE_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "ANTI_RACK",
+      "step_solid_indices": [
+        48
+      ],
+      "components": [
+        "R4_AntiRack_Crossmember"
+      ],
+      "reference_frame": "ANTI_RACK_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "LOCK_L",
+      "step_solid_indices": [
+        49,
+        50,
+        51,
+        52
+      ],
+      "components": [
+        "R4_170_L_Housing",
+        "R4_170_L_Pawl",
+        "R4_170_L_Capture",
+        "R4_170_L_Release"
+      ],
+      "reference_frame": "LOCK_L_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "LOCK_R",
+      "step_solid_indices": [
+        53,
+        54,
+        55,
+        56
+      ],
+      "components": [
+        "R4_170_R_Housing",
+        "R4_170_R_Pawl",
+        "R4_170_R_Capture",
+        "R4_170_R_Release"
+      ],
+      "reference_frame": "LOCK_R_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "GUSSET_L",
+      "step_solid_indices": [
+        57
+      ],
+      "components": [
+        "R4_190_Gusset_L"
+      ],
+      "reference_frame": "GUSSET_L_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "GUSSET_R",
+      "step_solid_indices": [
+        58
+      ],
+      "components": [
+        "R4_190_Gusset_R"
+      ],
+      "reference_frame": "GUSSET_R_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "SHOULDER_GUSSET",
+      "step_solid_indices": [
+        59
+      ],
+      "components": [
+        "R4_190_Shoulder_Gusset"
+      ],
+      "reference_frame": "SHOULDER_GUSSET_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "SHOULDER_ROOT",
+      "step_solid_indices": [
+        60
+      ],
+      "components": [
+        "SHOULDER_ROOT_MEMBER"
+      ],
+      "reference_frame": "SHOULDER_ROOT_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "SHOULDER_BRACE",
+      "step_solid_indices": [
+        61
+      ],
+      "components": [
+        "OUTBOARD_BRACE"
+      ],
+      "reference_frame": "SHOULDER_BRACE_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "mbd_body_id": "SHOULDER_FRAME_BRACKET",
+      "step_solid_indices": [
+        62
+      ],
+      "components": [
+        "FRAME_OUTBOARD_BRACKET"
+      ],
+      "reference_frame": "SHOULDER_FRAME_BRACKET_FRAME",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "status": "MODEL_DEFINED"
+    }
+  ]
+}

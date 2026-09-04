@@ -1,0 +1,65 @@
+{
+  "source": "SR11/parameters/V1_SR11_ASSUMPTIONS.json",
+  "parameters": [
+    {
+      "parameter": "mass",
+      "status": "UNKNOWN"
+    },
+    {
+      "parameter": "CG",
+      "status": "UNKNOWN"
+    },
+    {
+      "parameter": "inertia",
+      "status": "UNKNOWN"
+    },
+    {
+      "parameter": "density",
+      "status": "UNKNOWN"
+    },
+    {
+      "parameter": "friction_coefficient",
+      "status": "UNKNOWN"
+    },
+    {
+      "parameter": "contact_stiffness",
+      "status": "UNKNOWN"
+    },
+    {
+      "parameter": "contact_damping",
+      "status": "UNKNOWN"
+    },
+    {
+      "parameter": "restitution",
+      "status": "UNKNOWN"
+    },
+    {
+      "parameter": "absorber_Fx",
+      "status": "UNKNOWN"
+    },
+    {
+      "parameter": "absorber_Fv",
+      "status": "UNKNOWN"
+    },
+    {
+      "parameter": "vehicle_pulse",
+      "status": "UNKNOWN"
+    },
+    {
+      "parameter": "initial_velocity",
+      "status": "UNKNOWN"
+    },
+    {
+      "parameter": "joint_compliance",
+      "status": "UNKNOWN"
+    },
+    {
+      "parameter": "bolt_joint_stiffness",
+      "status": "UNKNOWN"
+    }
+  ],
+  "unknown_count": 14,
+  "assumption_only_allowed": true,
+  "physical_validation": "NOT_DONE",
+  "status": "INCOMPLETE"
+}

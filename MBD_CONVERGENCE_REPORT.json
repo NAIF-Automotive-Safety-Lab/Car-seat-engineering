@@ -1,0 +1,7 @@
+{
+  "timestep_convergence": "NOT_EXECUTED",
+  "constraint_drift": "NOT_EXECUTED",
+  "reaction_stability": "NOT_EXECUTED",
+  "energy_balance": "NOT_EXECUTED",
+  "status": "BLOCKED"
+}

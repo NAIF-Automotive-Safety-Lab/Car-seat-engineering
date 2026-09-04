@@ -1,0 +1,8 @@
+{
+  "positive_volume_overlaps": 189,
+  "cross_body": 170,
+  "intra_body": 19,
+  "semantic_ownership_complete_for_all_189": false,
+  "scope_note": "This raw B-rep overlap count is not interchangeable with historical R4 scope (27) or R4.1 total (189 = 69+90+30).",
+  "status": "PARTIAL"
+}

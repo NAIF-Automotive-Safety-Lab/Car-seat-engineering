@@ -1,0 +1,8 @@
+{
+  "geometry": "PRESENT/MODEL_DEFINED",
+  "force_law": "UNKNOWN",
+  "temperature_dependence": "UNKNOWN",
+  "aging": "UNKNOWN",
+  "dynamic_validation": "NOT_EXECUTED",
+  "status": "UNKNOWN"
+}

@@ -1,0 +1,26 @@
+{
+  "findings": [
+    {
+      "id": "FC-EVID-001",
+      "category": "E",
+      "finding": "Intersection semantic ownership is incomplete for the raw 189-overlap audit.",
+      "root_cause": "Insufficient mechanical-semantic evidence for every raw overlap.",
+      "design_failure_proven": false
+    },
+    {
+      "id": "FC-TOOL-001",
+      "category": "D",
+      "finding": "Real 3D MBD execution is unavailable in current runtime.",
+      "root_cause": "No usable PyChrono/Chrono runtime.",
+      "design_failure_proven": false
+    },
+    {
+      "id": "FC-PROP-001",
+      "category": "C",
+      "finding": "Released physical mass/inertia/friction/contact/material properties are missing.",
+      "root_cause": "Source property package not present in available evidence.",
+      "design_failure_proven": false
+    }
+  ],
+  "status": "OPEN"
+}

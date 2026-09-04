@@ -1,0 +1,11 @@
+{
+  "model_states": [
+    "UNLOCKED",
+    "TRANSITION",
+    "LOCKED",
+    "FAULT"
+  ],
+  "model_regression": "PASS",
+  "hardware_behavior": "UNKNOWN",
+  "status": "UNKNOWN_FOR_PHYSICAL_BEHAVIOR"
+}

@@ -1,0 +1,8 @@
+{
+  "positive_volume_intersections_total": 189,
+  "cross_body_intersections": 170,
+  "intra_body_intersections": 19,
+  "known_semantic_cross_body_intersections": 5,
+  "unscoped_cross_body_intersections": 165,
+  "note": "This raw pairwise B-rep overlap count is an audit metric only; it is not interchangeable with prior R4/R4.1 intersection scopes."
+}

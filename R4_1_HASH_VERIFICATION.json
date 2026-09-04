@@ -1,0 +1,9 @@
+{
+  "sha256_expected": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "sha256_before": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "sha256_after": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "match_before": true,
+  "match_after": true,
+  "mutation": false,
+  "status": "PASS"
+}

@@ -1,0 +1,7 @@
+{
+  "pychrono": "BLOCKED",
+  "real_mbd": "BLOCKED",
+  "convergence": "BLOCKED",
+  "environment_note": "Current runtime has no usable real 3D MBD engine; no full-MBD execution was performed.",
+  "status": "BLOCKED"
+}
