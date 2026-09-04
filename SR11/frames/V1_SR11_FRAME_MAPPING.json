@@ -1,0 +1,55 @@
+{
+  "frames": [
+    {
+      "frame_id": "WORLD",
+      "parent": null,
+      "origin_mm": [
+        0,
+        0,
+        0
+      ],
+      "axes": "identity",
+      "source": "reference",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "frame_id": "VEHICLE_BASE",
+      "parent": "WORLD",
+      "origin_mm": [
+        0,
+        0,
+        0
+      ],
+      "axes": "identity",
+      "source": "R4.1 coordinate convention",
+      "status": "MODEL_DEFINED"
+    },
+    {
+      "frame_id": "HINGE",
+      "parent": "SEATBACK",
+      "origin_mm": [
+        0,
+        150,
+        86
+      ],
+      "axes": {
+        "x": [
+          1,
+          0,
+          0
+        ]
+      },
+      "source": "V0_R4_SEATBACK_HINGE_MODEL.json",
+      "status": "MODEL_EXECUTED"
+    },
+    {
+      "frame_id": "SHOULDER_INTERFACE",
+      "parent": "SEATBACK",
+      "origin_mm": "UNKNOWN",
+      "axes": "UNKNOWN",
+      "source": "R5.1 load-path evidence",
+      "status": "GEOMETRY_VERIFIED"
+    }
+  ],
+  "status": "MODEL_DEFINED_ONLY"
+}
