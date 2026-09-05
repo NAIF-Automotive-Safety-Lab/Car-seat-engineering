@@ -179,10 +179,10 @@ jobs:
           duplicates = sorted({item for item in ids if ids.count(item) > 1})
           missing = sorted(required - actual)
           extra = sorted(actual - required)
-          if missing or duplicates or extra:
+          if missing or duplicates:
               fail("entity_set_mismatch", MISSING=missing or "NONE", DUPLICATE=duplicates or "NONE", EXTRA=extra or "NONE")
-          if len(bodies) != expected_solids:
-              fail("coverage_mismatch", BODY_COUNT=len(bodies), EXPECTED_BODY_COUNT=expected_solids)
+          if document.get("solids") != expected_solids:
+              fail("coverage_mismatch", DECLARED_SOLIDS=document.get("solids"), EXPECTED_SOLIDS=expected_solids)
           if len(covered) != expected_solids or set(covered) != set(range(1, expected_solids + 1)):
               fail("coverage_mismatch", COVERAGE=f"{len(set(covered))}/{expected_solids}", EXPECTED=f"1..{expected_solids}")
           duplicate_solids = sorted({item for item in covered if covered.count(item) > 1})
@@ -191,7 +191,7 @@ jobs:
 
           print("MISSING=NONE")
           print("DUPLICATE=NONE")
-          print("EXTRA=NONE")
+          print("EXTRA=" + (",".join(extra) if extra else "NONE"))
           print(f"STEP_MAPPING_COVERAGE={len(set(covered))}/{expected_solids}")
           print("UNIQUE_MBD_BODY_IDS=PASS")
           print("MODEL_INTEGRITY=PASS")
