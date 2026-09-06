@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-09-06T00:24:30.398864+00:00",
+  "package_root": "/home/ubuntu/Car-seat-engineering/V4_EVIDENCE",
+  "evidence_integrity": "All reported solver outputs are copied from real executions; no R4.1 FE/MBD outputs were generated.",
+  "baseline_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "files": {
+    "01_BASELINE/baseline.json": "b3fe4c509685a266e8cfa61b98b71d527e4750a17875efdacbf87a9fd4ea4efd",
+    "02_PHYSICAL_INPUTS/physical_input_register.json": "65c8745c19afbe8ca3d10fe9869b3d74b289f8d74743613197f1f10201163b84",
+    "03_FE_RUNTIME/beamcontact.cvg": "a1c0ef90899697cc7a6c2d79301b03e23d6c17849499eacca829e392cc28f70c",
+    "03_FE_RUNTIME/beamcontact.frd": "4a799603e39d95cc36c3c6be3e94010b717401a18fe54f74cfea764046c4cea6",
+    "03_FE_RUNTIME/beamcontact.inp": "931ec3e5a6ceded6a0c0529b6da5d160071ed4ed9294afafbbbf0418df3ccc8e",
+    "03_FE_RUNTIME/beamcontact.sta": "182bf7c2322bc2754b3815d276863e84da04c4931a24d9ba830b8c8f437b1bef",
+    "03_FE_RUNTIME/ccx.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "03_FE_RUNTIME/ccx.stdout": "53e1366120ab3b11f1be4b53320214e5e1315016de23487c097c4d5ff5843259",
+    "03_FE_RUNTIME/project_chrono_manifest.json": "cb490c790aa5106da63b8c2d5a1c72b2eee6ee01fcdb8b48a573f4987a2dd05e",
+    "03_FE_RUNTIME/solver_manifest.json": "2049d65ad2d6bb6b9809f389a2276252098df26425337624031bc848a6d5fba4",
+    "04_FE_MODEL/model_readiness.json": "8f2c17e918d678f0567e9b6dfafa0e39c3cc91fcbb6f0065572e4299b0405e6d",
+    "05_FE_01/execution.json": "dd00aa598977ed9a0759d9e42d40d48cda47972897b759128963692ae87d26db",
+    "06_FE_02/execution.json": "32f90d50fe80f7552b62b6238b78daa09ca36222061e1366c383628a29185b3e",
+    "07_FE_03/execution.json": "505f25a90651135f2b739be22cfd1a137a61c0fe2eb6ca7dd1380397637251ee",
+    "08_FE_04/execution.json": "2946c95e09648aaca5b82a5156cde4ac508dfad42cf0e7a7f9ba83a179307b15",
+    "09_FE_05/execution.json": "cc4695939c70e5e4852a28b6035e12a02f2aa7a8b8c31f81d35b77ae2a193707",
+    "10_FE_06/execution.json": "f36797ef26f4ee7312033d3be70a9ccbcd2d5510740a9831349fde5ed55c5405",
+    "11_FE_07/execution.json": "5e532f49536832f25c0ed368a6b403f1787e9be8ab8419b772a6331b21b2bb4a",
+    "12_FE_08/execution.json": "64b4aa8f73f8078c14f9d3f5be2f5bb466f2f168f7cb7a39ba48292fb399f83d",
+    "13_VALIDITY/validity.json": "717e0f182d1134083ec2c17203b263a6df73504cf307f2b9d99f43ef80ae828e",
+    "14_FAILURE/failure_determination.json": "d980ffb7944adc1ce7bff4a4a322a530c8d71f98cee81c914fad30258989fac2",
+    "15_ROOT_CAUSE/root_cause.json": "1b633fc67c4de73986c02dbe2dcc1c23b9e7194923f593e593d0cb5aa8e9e0cc",
+    "16_GATES/gates.json": "f05f9cee593937aba441637f0c2c9087319958374c95839003b5092518871902"
+  }
+}

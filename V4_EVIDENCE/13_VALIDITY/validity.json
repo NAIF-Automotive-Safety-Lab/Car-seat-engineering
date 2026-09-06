@@ -1,0 +1,4 @@
+{
+  "FE_VALIDITY": "BLOCKED",
+  "EXACT_CAUSE": "No R4.1 FE run exists; convergence, contact stability, energy, mass balance, reactions, and material response cannot be evaluated."
+}

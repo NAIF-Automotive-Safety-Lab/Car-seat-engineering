@@ -1,0 +1,13 @@
+{
+  "TEST_ID": "FE-02",
+  "STATUS": "BLOCKED",
+  "EXACT_CAUSE": "FE model is not ready because physical input closure is BLOCKED; execution was not attempted.",
+  "MODEL_HASH": null,
+  "INPUT_HASH": null,
+  "SOLVER": "CalculiX 2.21 available, but not invoked for R4.1",
+  "RETURN_CODE": null,
+  "CONVERGENCE": "NOT_EXECUTED",
+  "RESULT_FILES": [],
+  "KEY_RESULTS": null,
+  "ACCEPTANCE_CRITERIA": "Not evaluated; authoritative handoff inputs are incomplete."
+}

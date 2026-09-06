@@ -1,0 +1,14 @@
+{
+  "R4.1_BASELINE": "PASS",
+  "SEMANTIC_MAPPING": "PASS: 31 body records, 62/62 unique solids, critical identifiers present",
+  "PROJECT_CHRONO": "PASS: core and Cascade imports plus minimal system test",
+  "PHYSICAL_INPUT_CLOSURE": "BLOCKED",
+  "FE_RUNTIME": "PASS: CalculiX official nonlinear/contact smoke test",
+  "FE_MODEL": "BLOCKED",
+  "FE_EXECUTED": "BLOCKED",
+  "FE_CONVERGED": "BLOCKED",
+  "REAL_MBD": "BLOCKED",
+  "CAD_REPAIR": "NOT_AUTHORIZED",
+  "R4.2": "NOT_CREATED / NOT_AUTHORIZED",
+  "PROMOTION": "BLOCKED"
+}

@@ -1,0 +1,13 @@
+{
+  "PROJECT_CHRONO": "PASS",
+  "VERSION": "10.0.0",
+  "SOURCE_TAG": "10.0.0",
+  "PYTHON_ENV": "/tmp/chrono-build-env",
+  "INSTALL_TREE": "/tmp/chrono-install",
+  "PYCHRONO_CORE_IMPORT": "PASS",
+  "PYCHRONO_CASCADE_IMPORT": "PASS",
+  "MINIMAL_SYSTEM": "PASS",
+  "R4_1_MODEL_BUILD": "BLOCKED",
+  "R4_1_MODEL_BUILD_REASON": "MBD_BUILD_BLOCKED_BY_UNRESOLVED_PARAMETERS:mass,CG,inertia,density,friction_coefficient,contact_stiffness,contact_damping,restitution,absorber_Fx,absorber_Fv,vehicle_pulse,initial_velocity,joint_compliance,bolt_joint_stiffness",
+  "REAL_MBD_RESULTS": "NOT_GENERATED"
+}

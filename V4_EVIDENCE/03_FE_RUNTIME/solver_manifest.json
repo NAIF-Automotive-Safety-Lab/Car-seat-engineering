@@ -1,0 +1,24 @@
+{
+  "FE_RUNTIME": "PASS",
+  "SOLVER_NAME": "CalculiX CrunchiX",
+  "SOLVER_VERSION": "2.21",
+  "EXECUTABLE_PATH": "/usr/bin/ccx",
+  "RUNTIME_ENVIRONMENT": "Ubuntu 24.04 sandbox; installed apt package calculix-ccx 2.21-1",
+  "LICENSE_STATUS_IF_APPLICABLE": "Open-source package; no proprietary license required",
+  "RUN_COMMAND": "ccx -i beamcontact",
+  "RETURN_CODE": 0,
+  "SMOKE_TEST": "Official calculix-ccx-test beamcontact input; nonlinear geometric effects and Newton-Raphson reported by solver",
+  "SMOKE_TEST_OUTPUT": "Job finished; Nonlinear geometric effects are taken into account; Newton-Raphson iterative procedure is active",
+  "LOG": "ccx.stdout and ccx.stderr copied in this directory",
+  "OUTPUT_FILES": [
+    "beamcontact.cvg",
+    "beamcontact.frd",
+    "beamcontact.sta"
+  ],
+  "OUTPUT_HASH": {
+    "beamcontact.cvg": "a1c0ef90899697cc7a6c2d79301b03e23d6c17849499eacca829e392cc28f70c",
+    "beamcontact.frd": "4a799603e39d95cc36c3c6be3e94010b717401a18fe54f74cfea764046c4cea6",
+    "beamcontact.sta": "182bf7c2322bc2754b3815d276863e84da04c4931a24d9ba830b8c8f437b1bef"
+  },
+  "R4_1_USED": false
+}

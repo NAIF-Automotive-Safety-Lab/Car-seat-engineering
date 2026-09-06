@@ -1,0 +1,16 @@
+{
+  "FE_MODEL_READY": "BLOCKED",
+  "EXACT_CAUSE": "Physical input closure is blocked; required mass, CG, inertia, density, friction/contact law, absorber laws, joint compliance, and load inputs are UNKNOWN in the authoritative assumptions file.",
+  "GEOMETRY_PROVENANCE": "PASS: immutable R4.1 STEP and 62/62 B-Rep solids",
+  "MESH": "NOT_EXECUTED",
+  "MESH_QUALITY": "NOT_EXECUTED",
+  "ELEMENT_TYPES": "NOT_EXECUTED",
+  "MATERIAL_CARDS": "BLOCKED",
+  "CONTACT_DEFINITIONS": "MODEL_SPECIFICATION_ONLY; physical law missing",
+  "JOINT_DEFINITIONS": "MODEL_SPECIFICATION_ONLY; compliance missing",
+  "BOUNDARY_CONDITIONS": "BLOCKED",
+  "DYNAMIC_LOADS": "BLOCKED",
+  "MASS_PROPERTIES": "BLOCKED",
+  "COORDINATE_SYSTEM": "MODEL_MAPPING_AVAILABLE",
+  "UNIT_SYSTEM": "BLOCKED_FOR_FE"
+}

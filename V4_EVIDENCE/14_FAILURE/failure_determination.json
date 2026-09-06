@@ -1,0 +1,4 @@
+{
+  "MECHANICAL_FAILURE": "NOT_PROVEN",
+  "EVIDENCE": "No valid R4.1 FE execution; missing solver inputs are not a mechanical failure."
+}
