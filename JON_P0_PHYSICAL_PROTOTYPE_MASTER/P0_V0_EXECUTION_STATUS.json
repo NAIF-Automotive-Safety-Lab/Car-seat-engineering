@@ -1,0 +1,27 @@
+{
+  "P0-V0_CONFIGURATION": {
+    "P0-V0_SERIAL": "P0V0-20260906-001",
+    "CONFIGURATION_ID": "P0V0-CFG-001",
+    "R4_1_ARTIFACT": "R4.1/R4.1.step",
+    "R4_1_SHA256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "P0_SCOPE": "Exploratory fabrication and low-risk mechanical inspection only",
+    "R4_1_MUTATION": false
+  },
+  "FABRICATION_STATUS": "NOT_VERIFIED_IN_CURRENT_WORKSPACE",
+  "INSPECTION_STATUS": "NOT_EXECUTED",
+  "L1_STATUS": "NOT_EXECUTED",
+  "L2_STATUS": "NOT_EXECUTED",
+  "MEASUREMENTS": [],
+  "ANOMALIES": [],
+  "FAILURE_STATUS": "NOT_ASSESSED",
+  "EVIDENCE_HASHES": {
+    "geometry_extraction_pass1": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_GEOMETRY_EXTRACTION/B01_B06_extraction_pass1.json",
+    "geometry_second_pass": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_GEOMETRY_EXTRACTION/B01_B06_second_pass_verification.json",
+    "fabrication_evidence": [],
+    "inspection_evidence": [],
+    "motion_evidence": []
+  },
+  "NEXT_ALLOWED_LEVEL": "L1 only after fabricated/assembled article, calibrated inspection equipment, controlled drawings, and evidence package are supplied",
+  "PROHIBITIONS": ["No occupant testing", "No crash testing", "No FE/MBD", "No R4.2", "No R4.1 modification", "No design-validation claim"],
+  "NOTE": "P0-V0 READY is a geometry-access/exploratory-fabrication readiness state. It is not evidence that a physical article has been fabricated, assembled, inspected, or functionally tested."
+}
