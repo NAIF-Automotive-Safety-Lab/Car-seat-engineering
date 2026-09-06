@@ -1,0 +1,53 @@
+{
+  "status": "DEFINED_NOT_CORRELATED",
+  "correlation_chain": [
+    "COMPONENT_TEST",
+    "SUBSYSTEM_TEST",
+    "SLED",
+    "FE",
+    "VEHICLE_TEST"
+  ],
+  "coordinate_system": {
+    "common_frame": "TO_BE_CONTROLLED",
+    "origin": "RELEASED_DATUM_REQUIRED",
+    "axes": "RELEASED_DATUM_REQUIRED"
+  },
+  "time_base": {
+    "reference": "TEST_TRIGGER",
+    "synchronization": "REQUIRED"
+  },
+  "response_channels": [
+    "base acceleration",
+    "carriage x/v/a",
+    "seatback theta/omega/alpha",
+    "FL/FR or equivalent rail reactions",
+    "absorber force/displacement",
+    "end-stop reaction",
+    "lock state/reaction",
+    "occupant pelvis/torso/head motion"
+  ],
+  "correlation_metrics": [
+    "peak error",
+    "RMS error",
+    "phase/time-of-peak error",
+    "integral/energy error where physically meaningful",
+    "shape similarity",
+    "event timing error"
+  ],
+  "tolerance_strategy": "REQUIREMENT_DEFINED; no thresholds invented",
+  "model_update_rules": [
+    "update only after discrepancy is reproducible",
+    "identify parameter sensitivity before changing model",
+    "preserve baseline and version every update",
+    "do not tune to one channel while degrading others without documented rationale"
+  ],
+  "evidence_requirements": [
+    "raw FE output",
+    "raw test output",
+    "calibration records",
+    "input provenance",
+    "filter definitions",
+    "coordinate transform record",
+    "hashes"
+  ]
+}

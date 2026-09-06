@@ -1,0 +1,31 @@
+{
+  "R4.1_parent_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "R4.1_expected_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "V4_dependencies": [
+    "REAL_3D_MBD_EXECUTION",
+    "PHYSICAL_MATERIAL_PROPERTIES",
+    "MASS_CG_INERTIA",
+    "CONTACT_FRICTION_CHARACTERIZATION",
+    "ABSORBER_CHARACTERIZATION",
+    "VEHICLE_DATUM/HARDPOINTS",
+    "AUTHORITATIVE_DYNAMIC_INPUT"
+  ],
+  "V5_dependencies": [
+    "validated occupant/restraint model",
+    "ATD/occupant data",
+    "restraint geometry"
+  ],
+  "V6_dependencies": [
+    "instrumented sled",
+    "calibration",
+    "DAQ",
+    "test protocol"
+  ],
+  "V7_dependencies": [
+    "FE results",
+    "test results",
+    "common coordinates/time base",
+    "correlation criteria"
+  ],
+  "status": "OPEN"
+}

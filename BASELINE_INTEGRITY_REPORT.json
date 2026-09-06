@@ -1,0 +1,11 @@
+{
+  "artifact": "BASELINE_INTEGRITY_REPORT",
+  "contract_version": "0.1",
+  "authoritative_expected_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "authoritative_mutation_flag": false,
+  "independent_verification": "NOT_PERFORMED",
+  "verification_reason": "Baseline bytes/file were not supplied in this conversation/package; hash cannot be recomputed here.",
+  "required_check": "sha256(actual_R4.1_bytes)==authoritative_expected_sha256 AND mutation_flag==FALSE",
+  "on_mismatch": "STOP IMMEDIATELY",
+  "status": "ASSERTED_BY_AUTHORITY_NOT_INDEPENDENTLY_VERIFIED"
+}

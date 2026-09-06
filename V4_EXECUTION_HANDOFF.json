@@ -1,0 +1,580 @@
+{
+  "artifact": "V4_EXECUTION_HANDOFF",
+  "contract_version": "R4.1-HANDOFF-0.1",
+  "issued_by": "JON_CHATGPT / under Peter authority",
+  "execution_authority": "Manus-Tasks",
+  "baseline": {
+    "r4_1_sha256_asserted": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "r4_1_mutation": false,
+    "sha_status": "ASSERTED_BY_AUTHORITY / INDEPENDENT_VERIFICATION_PENDING",
+    "required_artifact_for_verification": "actual immutable R4.1 baseline artifact bytes/file"
+  },
+  "absolute_rules": [
+    "NO fabrication",
+    "NO silent defaults",
+    "NO baseline mutation",
+    "NO R4.2 creation",
+    "NO mechanical validation claim without evidence",
+    "NO CAD repair authorization"
+  ],
+  "required_physical_inputs": [
+    {
+      "parameter_id": "V4-GEOMETRY",
+      "value": null,
+      "unit": null,
+      "source": null,
+      "source_artifact": null,
+      "revision": null,
+      "provenance": null,
+      "status": "BLOCKED",
+      "evidence_required": true
+    },
+    {
+      "parameter_id": "V4-MATERIAL-CARD",
+      "value": null,
+      "unit": null,
+      "source": null,
+      "source_artifact": null,
+      "revision": null,
+      "provenance": null,
+      "status": "BLOCKED",
+      "evidence_required": true
+    },
+    {
+      "parameter_id": "V4-MASS-PROPERTIES",
+      "value": null,
+      "unit": null,
+      "source": null,
+      "source_artifact": null,
+      "revision": null,
+      "provenance": null,
+      "status": "BLOCKED",
+      "evidence_required": true
+    },
+    {
+      "parameter_id": "V4-FRICTION-CONTACT",
+      "value": null,
+      "unit": null,
+      "source": null,
+      "source_artifact": null,
+      "revision": null,
+      "provenance": null,
+      "status": "BLOCKED",
+      "evidence_required": true
+    },
+    {
+      "parameter_id": "V4-CONNECTIONS",
+      "value": null,
+      "unit": null,
+      "source": null,
+      "source_artifact": null,
+      "revision": null,
+      "provenance": null,
+      "status": "BLOCKED",
+      "evidence_required": true
+    },
+    {
+      "parameter_id": "V4-ABSORBER",
+      "value": null,
+      "unit": null,
+      "source": null,
+      "source_artifact": null,
+      "revision": null,
+      "provenance": null,
+      "status": "BLOCKED",
+      "evidence_required": true
+    },
+    {
+      "parameter_id": "V4-HARDPOINTS",
+      "value": null,
+      "unit": null,
+      "source": null,
+      "source_artifact": null,
+      "revision": null,
+      "provenance": null,
+      "status": "BLOCKED",
+      "evidence_required": true
+    },
+    {
+      "parameter_id": "V4-DYNAMIC-LOADS",
+      "value": null,
+      "unit": null,
+      "source": null,
+      "source_artifact": null,
+      "revision": null,
+      "provenance": null,
+      "status": "BLOCKED",
+      "evidence_required": true
+    }
+  ],
+  "required_source_evidence": [
+    "immutable R4.1 artifact",
+    "geometry/CAD provenance",
+    "material certification or authoritative material source",
+    "mass/CG/inertia source",
+    "joint/bolt/weld specification",
+    "friction/contact source",
+    "absorber F-x/F-v characterization source",
+    "hardpoint definition source",
+    "dynamic load source",
+    "solver/license/runtime evidence"
+  ],
+  "required_material_cards": {
+    "minimum_fields": [
+      "material_id",
+      "source",
+      "revision",
+      "model_name",
+      "units",
+      "density",
+      "elastic_properties",
+      "plasticity_parameters_if_used",
+      "failure_parameters_if_used",
+      "temperature_dependence_if_used",
+      "strain_rate_dependence_if_used",
+      "evidence_refs",
+      "sha256"
+    ],
+    "all_unsupplied_fields": "NULL/BLOCKED"
+  },
+  "mass_cg_inertia_requirements": {
+    "mass": null,
+    "mass_unit": null,
+    "cg_vector": null,
+    "cg_frame": null,
+    "inertia_tensor": null,
+    "inertia_frame": null,
+    "source": null,
+    "provenance": null,
+    "status": "BLOCKED"
+  },
+  "friction_contact_requirements": {
+    "friction_law": null,
+    "coefficient_or_parameterization": null,
+    "normal_contact_law": null,
+    "tangential_law": null,
+    "penalty_or_constraint_method": null,
+    "source": null,
+    "status": "BLOCKED"
+  },
+  "joint_bolt_weld_requirements": {
+    "joint_definitions": null,
+    "bolt_geometry_and_material": null,
+    "pretension_or_clamp": null,
+    "weld_type_geometry_and_strength_basis": null,
+    "failure_or_release_criteria": null,
+    "source": null,
+    "status": "BLOCKED"
+  },
+  "absorber_characterization_requirements": {
+    "F_x_data": null,
+    "F_v_data": null,
+    "hysteresis_data": null,
+    "temperature_data": null,
+    "aging_data": null,
+    "test_metadata": null,
+    "source": null,
+    "status": "BLOCKED"
+  },
+  "hardpoint_requirements": {
+    "hardpoint_ids": null,
+    "coordinates": null,
+    "reference_frame": null,
+    "tolerances": null,
+    "mounting_definition": null,
+    "source": null,
+    "status": "BLOCKED"
+  },
+  "dynamic_load_requirements": {
+    "load_channels": null,
+    "force_moment_definition": null,
+    "time_history": null,
+    "coordinate_system": null,
+    "sign_convention": null,
+    "sampling": null,
+    "source": null,
+    "status": "BLOCKED"
+  },
+  "solver_requirements": {
+    "solver_name": null,
+    "solver_version": null,
+    "executable_path": null,
+    "license_or_access_evidence": null,
+    "smoke_test_command": null,
+    "return_code": null,
+    "runtime_status": "BLOCKED",
+    "log_file": null,
+    "output_hash": null
+  },
+  "fe_model_requirements": [
+    "geometry provenance",
+    "mesh provenance and quality evidence",
+    "element types",
+    "material models",
+    "contact definitions",
+    "connections",
+    "boundary conditions",
+    "loads",
+    "units",
+    "coordinate systems",
+    "mass properties",
+    "energy accounting definitions"
+  ],
+  "fe_tests": [
+    {
+      "test_id": "FE-01",
+      "execution_definition_status": "HANDOFF_DEFINED",
+      "purpose": "Baseline/model ingestion integrity",
+      "required_artifacts": [
+        "actual R4.1 artifact",
+        "geometry/model input package"
+      ],
+      "preconditions": [
+        "baseline artifact available or baseline gate explicitly resolved"
+      ],
+      "actions": [
+        "read actual artifact bytes",
+        "recompute SHA-256",
+        "record ingest manifest",
+        "verify expected object/solid mapping where applicable",
+        "record any missing/duplicate geometry"
+      ],
+      "outputs": [
+        "baseline hash record",
+        "ingest log",
+        "mapping report",
+        "artifact hashes"
+      ],
+      "acceptance": [
+        "hash result explicitly equals MATCH/MISMATCH/UNAVAILABLE; no inference"
+      ],
+      "threshold_policy": "No numerical threshold may be invented; unsourced thresholds remain THRESHOLD_REQUIRED=TRUE.",
+      "failure_policy": "FAIL/NOT_VALIDATED/BLOCKED must preserve raw evidence and reason; no silent repair."
+    },
+    {
+      "test_id": "FE-02",
+      "execution_definition_status": "HANDOFF_DEFINED",
+      "purpose": "Mesh adequacy and integrity",
+      "required_artifacts": [
+        "validated geometry",
+        "mesh generation inputs"
+      ],
+      "preconditions": [
+        "GATE_R4_1_BASELINE=PASS",
+        "GATE_PHYSICAL_INPUTS=PASS",
+        "GATE_FE_RUNTIME=PASS"
+      ],
+      "actions": [
+        "generate/load mesh",
+        "report element types/counts/quality statistics",
+        "identify invalid or duplicate elements",
+        "retain mesh file/hash"
+      ],
+      "outputs": [
+        "mesh file",
+        "mesh-quality report",
+        "mesh hash"
+      ],
+      "acceptance": [
+        "all declared mesh acceptance rules pass; any unsourced numerical limit remains REQUIRED"
+      ],
+      "threshold_policy": "No numerical threshold may be invented; unsourced thresholds remain THRESHOLD_REQUIRED=TRUE.",
+      "failure_policy": "FAIL/NOT_VALIDATED/BLOCKED must preserve raw evidence and reason; no silent repair."
+    },
+    {
+      "test_id": "FE-03",
+      "execution_definition_status": "HANDOFF_DEFINED",
+      "purpose": "Material/constitutive implementation",
+      "required_artifacts": [
+        "authoritative material cards",
+        "validated units"
+      ],
+      "preconditions": [
+        "GATE_R4_1_BASELINE=PASS",
+        "GATE_PHYSICAL_INPUTS=PASS",
+        "GATE_FE_RUNTIME=PASS"
+      ],
+      "actions": [
+        "instantiate constitutive laws",
+        "record material-card hashes",
+        "verify required parameters are populated",
+        "run constitutive smoke checks without fabricating data"
+      ],
+      "outputs": [
+        "material assignment map",
+        "constitutive setup log",
+        "material hashes"
+      ],
+      "acceptance": [
+        "no required material field is silently defaulted; setup is reproducible"
+      ],
+      "threshold_policy": "No numerical threshold may be invented; unsourced thresholds remain THRESHOLD_REQUIRED=TRUE.",
+      "failure_policy": "FAIL/NOT_VALIDATED/BLOCKED must preserve raw evidence and reason; no silent repair."
+    },
+    {
+      "test_id": "FE-04",
+      "execution_definition_status": "HANDOFF_DEFINED",
+      "purpose": "Connections, joints, bolts, welds, contact",
+      "required_artifacts": [
+        "validated connection definitions",
+        "contact/friction source"
+      ],
+      "preconditions": [
+        "GATE_R4_1_BASELINE=PASS",
+        "GATE_PHYSICAL_INPUTS=PASS",
+        "GATE_FE_RUNTIME=PASS"
+      ],
+      "actions": [
+        "instantiate joints/bolts/welds/contact",
+        "record law/constraint formulation",
+        "check disconnected or over-constrained regions",
+        "retain setup evidence"
+      ],
+      "outputs": [
+        "connection map",
+        "contact map",
+        "constraint diagnostics"
+      ],
+      "acceptance": [
+        "all intended interfaces are represented and traceable; no unresolved connection defect"
+      ],
+      "threshold_policy": "No numerical threshold may be invented; unsourced thresholds remain THRESHOLD_REQUIRED=TRUE.",
+      "failure_policy": "FAIL/NOT_VALIDATED/BLOCKED must preserve raw evidence and reason; no silent repair."
+    },
+    {
+      "test_id": "FE-05",
+      "execution_definition_status": "HANDOFF_DEFINED",
+      "purpose": "Boundary conditions and dynamic loading",
+      "required_artifacts": [
+        "validated hardpoints",
+        "dynamic load histories",
+        "coordinate/sign conventions"
+      ],
+      "preconditions": [
+        "GATE_R4_1_BASELINE=PASS",
+        "GATE_PHYSICAL_INPUTS=PASS",
+        "GATE_FE_RUNTIME=PASS"
+      ],
+      "actions": [
+        "apply BCs and loads",
+        "record frames/units/time base",
+        "check load channel mapping",
+        "retain input hashes"
+      ],
+      "outputs": [
+        "BC manifest",
+        "load manifest",
+        "input hashes"
+      ],
+      "acceptance": [
+        "BC/load definitions complete and unambiguous"
+      ],
+      "threshold_policy": "No numerical threshold may be invented; unsourced thresholds remain THRESHOLD_REQUIRED=TRUE.",
+      "failure_policy": "FAIL/NOT_VALIDATED/BLOCKED must preserve raw evidence and reason; no silent repair."
+    },
+    {
+      "test_id": "FE-06",
+      "execution_definition_status": "HANDOFF_DEFINED",
+      "purpose": "Nonlinear dynamic execution and convergence",
+      "required_artifacts": [
+        "FE-01..FE-05 PASS/READY outputs",
+        "real solver"
+      ],
+      "preconditions": [
+        "GATE_R4_1_BASELINE=PASS",
+        "GATE_PHYSICAL_INPUTS=PASS",
+        "GATE_FE_RUNTIME=PASS"
+      ],
+      "actions": [
+        "execute nonlinear analysis",
+        "capture return code/logs",
+        "record convergence history/warnings/errors",
+        "retain restart/checkpoint evidence if available"
+      ],
+      "outputs": [
+        "solver log",
+        "convergence record",
+        "result files",
+        "output hashes"
+      ],
+      "acceptance": [
+        "actual execution completes under declared criteria; non-convergence is reported, not relabeled"
+      ],
+      "threshold_policy": "No numerical threshold may be invented; unsourced thresholds remain THRESHOLD_REQUIRED=TRUE.",
+      "failure_policy": "FAIL/NOT_VALIDATED/BLOCKED must preserve raw evidence and reason; no silent repair."
+    },
+    {
+      "test_id": "FE-07",
+      "execution_definition_status": "HANDOFF_DEFINED",
+      "purpose": "Mechanical response and failure-criterion evaluation",
+      "required_artifacts": [
+        "valid FE-06 results",
+        "sourced acceptance/failure criteria"
+      ],
+      "preconditions": [
+        "GATE_R4_1_BASELINE=PASS",
+        "GATE_PHYSICAL_INPUTS=PASS",
+        "GATE_FE_RUNTIME=PASS"
+      ],
+      "actions": [
+        "extract stress/strain/deformation/contact/connection responses",
+        "evaluate only sourced criteria",
+        "record pass/fail/not-evaluable per criterion"
+      ],
+      "outputs": [
+        "response datasets",
+        "failure evaluation record",
+        "evidence hashes"
+      ],
+      "acceptance": [
+        "mechanical failure CONFIRMED only if the four failure-gate conditions are satisfied"
+      ],
+      "threshold_policy": "No numerical threshold may be invented; unsourced thresholds remain THRESHOLD_REQUIRED=TRUE.",
+      "failure_policy": "FAIL/NOT_VALIDATED/BLOCKED must preserve raw evidence and reason; no silent repair."
+    },
+    {
+      "test_id": "FE-08",
+      "execution_definition_status": "HANDOFF_DEFINED",
+      "purpose": "Energy balance and failure/root-cause evidence",
+      "required_artifacts": [
+        "valid FE results",
+        "energy accounting schema",
+        "confirmed failure only for root-cause branch"
+      ],
+      "preconditions": [
+        "GATE_R4_1_BASELINE=PASS",
+        "GATE_PHYSICAL_INPUTS=PASS",
+        "GATE_FE_RUNTIME=PASS"
+      ],
+      "actions": [
+        "compute declared energy terms",
+        "run accounting checks",
+        "if failure confirmed, execute isolation/sensitivity tests across candidate cause classes",
+        "retain full evidence chain"
+      ],
+      "outputs": [
+        "energy ledger",
+        "balance diagnostics",
+        "root-cause record if applicable",
+        "evidence hashes"
+      ],
+      "acceptance": [
+        "energy accounting is internally traceable; root cause is CONFIRMED only with isolation evidence"
+      ],
+      "threshold_policy": "No numerical threshold may be invented; unsourced thresholds remain THRESHOLD_REQUIRED=TRUE.",
+      "failure_policy": "FAIL/NOT_VALIDATED/BLOCKED must preserve raw evidence and reason; no silent repair."
+    }
+  ],
+  "expected_evidence_outputs": [
+    "baseline ingestion record and actual hash result",
+    "physical input closure register",
+    "solver runtime evidence",
+    "model build manifest",
+    "mesh evidence",
+    "material evidence",
+    "contact evidence",
+    "connection evidence",
+    "boundary-condition evidence",
+    "convergence evidence",
+    "stress/strain evidence",
+    "deformation evidence",
+    "energy evidence",
+    "failure-criterion evaluation",
+    "failure/root-cause records if applicable",
+    "execution logs and output hashes"
+  ],
+  "failure_criteria": {
+    "mechanical_failure_confirmed_only_when": [
+      "measurable engineering criterion violated",
+      "reproducible evidence",
+      "physically interpretable behavior",
+      "numerical/model validity acceptable"
+    ],
+    "not_failures_by_themselves": [
+      "solver unavailable",
+      "missing data",
+      "setup-induced non-convergence",
+      "bad mesh",
+      "invalid contact definition",
+      "missing material card",
+      "missing boundary condition"
+    ]
+  },
+  "root_cause_evidence_requirements": {
+    "required_sequence": [
+      "confirm failure",
+      "enumerate candidate causes",
+      "run isolation/sensitivity evidence",
+      "assign disposition",
+      "retain evidence links"
+    ],
+    "candidate_classes": [
+      "GEOMETRY",
+      "MATERIAL",
+      "CONNECTION",
+      "CONTACT",
+      "BOUNDARY CONDITION",
+      "LOAD",
+      "ABSORBER",
+      "CONTROL",
+      "NUMERICAL MODELING"
+    ]
+  },
+  "gate_conditions": {
+    "GATE_R4_1_BASELINE": "actual hash matches authoritative SHA AND mutation=false",
+    "GATE_PHYSICAL_INPUTS": "all mandatory V4 inputs CLOSED with source/unit/provenance/evidence hash",
+    "GATE_FE_RUNTIME": "real solver executable and smoke-tested with non-fabricated logs",
+    "GATE_FE_MODEL": "all mandatory model artifacts validated",
+    "GATE_FE_EXECUTION": "FE-01..FE-08 execution records complete and traceable",
+    "GATE_FE_VALIDITY": "convergence/quality/failure evaluation evidence complete and no blocking validity issue"
+  },
+  "exact_blockers": [
+    {
+      "blocker_id": "BLOCKER-V4-BASELINE-ARTIFACT-UNAVAILABLE",
+      "description": "Actual immutable R4.1 bytes are not present for independent SHA-256 recomputation.",
+      "responsible_agent": "Manus-Tasks",
+      "dependency": "actual R4.1 artifact",
+      "unlock_condition": "actual bytes ingested and SHA result recorded"
+    },
+    {
+      "blocker_id": "BLOCKER-V4-PHYSICAL-INPUTS",
+      "description": "Required physical input closure is not present in authoritative state.",
+      "responsible_agent": "Manus-Tasks",
+      "dependency": "V4 required input register",
+      "unlock_condition": "all mandatory inputs CLOSED with provenance and evidence"
+    },
+    {
+      "blocker_id": "BLOCKER-V4-FE-RUNTIME",
+      "description": "No runtime evidence was supplied proving a real nonlinear FE solver is executable.",
+      "responsible_agent": "Manus-Tasks",
+      "dependency": "solver access/installation",
+      "unlock_condition": "runtime smoke test PASS with logs/output hash"
+    },
+    {
+      "blocker_id": "BLOCKER-V4-FE-MODEL",
+      "description": "FE model readiness cannot be established until physical inputs and runtime are closed.",
+      "responsible_agent": "Manus-Tasks",
+      "dependency": "physical inputs + real solver",
+      "unlock_condition": "mandatory model artifacts VALIDATED"
+    },
+    {
+      "blocker_id": "BLOCKER-V4-FE-EXECUTION",
+      "description": "No FE-01..FE-08 execution evidence exists in current authoritative state.",
+      "responsible_agent": "Manus-Tasks",
+      "dependency": "FE model ready",
+      "unlock_condition": "all eight execution records complete"
+    },
+    {
+      "blocker_id": "BLOCKER-V4-FE-VALIDITY",
+      "description": "No valid convergence/quality/failure-evaluation evidence exists yet.",
+      "responsible_agent": "Manus-Tasks",
+      "dependency": "FE execution artifacts",
+      "unlock_condition": "validity evidence complete"
+    }
+  ],
+  "prohibited_states_consumption": [
+    "BLOCKED",
+    "INVALID",
+    "UNVERIFIED"
+  ]
+}

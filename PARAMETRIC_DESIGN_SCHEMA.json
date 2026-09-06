@@ -1,0 +1,30 @@
+{
+  "status": "SCHEMA_ONLY",
+  "categories": [
+    "geometry",
+    "kinematic",
+    "mass",
+    "CG",
+    "inertia",
+    "material",
+    "friction",
+    "contact",
+    "connection",
+    "absorber",
+    "control",
+    "occupant",
+    "test"
+  ],
+  "parameter_object": {
+    "name": "string",
+    "value": "number|string|null",
+    "unit": "string|null",
+    "source": "SOURCE_VERIFIED|RELEASED|MEASURED|DERIVED|ASSUMED|UNKNOWN",
+    "provenance": "string|null",
+    "status": "VERIFIED|DEFINED|PROPOSED|ASSUMED|BLOCKED|NOT_TESTED",
+    "validation_state": "UNVALIDATED|TESTED|CORRELATED|VALIDATED",
+    "source_hash": "sha256|null",
+    "uncertainty": "string|null",
+    "scope": "string"
+  }
+}

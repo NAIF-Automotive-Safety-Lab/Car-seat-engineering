@@ -1,0 +1,83 @@
+{
+  "package": "SEAT_ENGINEERING_EXECUTABLE_CONTRACTS",
+  "package_version": "R4.1-CONTRACT-0.1",
+  "baseline": {
+    "sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "mutation": false
+  },
+  "authority_state": {
+    "V4": "BLOCKED_BY_EXECUTION_AND_INPUT_GAPS",
+    "V5": "DEFINED_NOT_VALIDATED",
+    "V6": "DEFINED_NOT_TESTED",
+    "V7": "DEFINED_NOT_CORRELATED",
+    "R4_2": "NOT_AUTHORIZED",
+    "PROMOTION": "BLOCKED"
+  },
+  "artifacts": [
+    {
+      "name": "AUTOMATIC_GATE_DEFINITION",
+      "path": "contracts/AUTOMATIC_GATE_DEFINITION.json",
+      "sha256": "af5a2ec6d70f262b589fa152b9d6f7cca74ac4db843d82b060f4a4c8e5acfb25"
+    },
+    {
+      "name": "BASELINE_INTEGRITY_REPORT",
+      "path": "contracts/BASELINE_INTEGRITY_REPORT.json",
+      "sha256": "35a921790874bf6e1ef16b2519e05606ad0547908ffaeaa0d8e1441cd988bfd5"
+    },
+    {
+      "name": "ENERGY_ACCOUNTING_CONTRACT",
+      "path": "contracts/ENERGY_ACCOUNTING_CONTRACT.json",
+      "sha256": "60152c3cf1bcfc78335cbf640858b45687ad3d939f596735a7831bb538e8c0c2"
+    },
+    {
+      "name": "EVIDENCE_SCHEMA",
+      "path": "contracts/EVIDENCE_SCHEMA.json",
+      "sha256": "b39033291edfe462c7ac7405de7603688559684a515b016f7d60fe6f952a4255"
+    },
+    {
+      "name": "FAULT_TEST_CONTRACT",
+      "path": "contracts/FAULT_TEST_CONTRACT.json",
+      "sha256": "437e25099f69500e6ef344b529b96dcdfe54c2f133087cf05bd0c92999ff75a6"
+    },
+    {
+      "name": "INPUT_PROVENANCE_SCHEMA",
+      "path": "contracts/INPUT_PROVENANCE_SCHEMA.json",
+      "sha256": "6d81f8d5c102ba40720b69d736e52c0100f52bfb737bd796c19c3c93ce0462da"
+    },
+    {
+      "name": "KINEMATIC_EXECUTION_CONTRACT",
+      "path": "contracts/KINEMATIC_EXECUTION_CONTRACT.json",
+      "sha256": "f09bca4d5fe043ada073f262d6f6a83bffc87873115d9d8e1b008809351a471e"
+    },
+    {
+      "name": "NEXT_ACTION_ENGINE",
+      "path": "contracts/NEXT_ACTION_ENGINE.json",
+      "sha256": "49a633e77f200403922b3d14329b0bca447aecc2349cd9cf82ea5628a648f394"
+    },
+    {
+      "name": "REQUIREMENTS_TRACEABILITY",
+      "path": "contracts/REQUIREMENTS_TRACEABILITY.json",
+      "sha256": "e55ba4adc3bcd15e2e703a3c9d8dd636e6a64a0032201860af2c7811bd11344d"
+    },
+    {
+      "name": "V4_DEPENDENCY_CONTRACT",
+      "path": "contracts/V4_DEPENDENCY_CONTRACT.json",
+      "sha256": "d114482faa43e4379324e388f69877c03d019ccb264e05aae4a4e8bc26491c0a"
+    },
+    {
+      "name": "V5_EXECUTION_CONTRACT",
+      "path": "contracts/V5_EXECUTION_CONTRACT.json",
+      "sha256": "d699a4bc15fa0fd1177396dc6bac52e307cb38a405966c80c7e83e0afd9b1a22"
+    },
+    {
+      "name": "V6_SLED_EXECUTION_CONTRACT",
+      "path": "contracts/V6_SLED_EXECUTION_CONTRACT.json",
+      "sha256": "7ba8e95986643843cde56034265cadaeed4d20d7510e789edd43cc49f74e2378"
+    },
+    {
+      "name": "V7_CORRELATION_ENGINE_CONTRACT",
+      "path": "contracts/V7_CORRELATION_ENGINE_CONTRACT.json",
+      "sha256": "75f52b660fb2abb9ce8ab216559c15bebb20c23c58a8d61b3e2dd78fbc3bca7f"
+    }
+  ]
+}

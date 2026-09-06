@@ -1,0 +1,79 @@
+{
+  "artifact": "V6_SLED_EXECUTION_CONTRACT",
+  "contract_version": "0.1",
+  "status": "IMPLEMENTATION_READY",
+  "states": [
+    "NOT_CONNECTED",
+    "NOT_CALIBRATED",
+    "READY",
+    "MEASURED",
+    "REJECTED",
+    "VALIDATED"
+  ],
+  "sensor_schema_fields": [
+    "sensor_id",
+    "sensor_type",
+    "location",
+    "axis",
+    "sampling_rate",
+    "synchronization",
+    "calibration_reference",
+    "measurement_range",
+    "expected_signal",
+    "data_format",
+    "timestamp_policy",
+    "coordinate_system",
+    "filtering_policy",
+    "channel_name",
+    "data_provenance",
+    "acceptance_criterion",
+    "state"
+  ],
+  "input_spec": {
+    "scenario_id": null,
+    "test_id": null,
+    "vehicle_or_rig_id": null,
+    "seat_configuration_id": null,
+    "acquisition_system_id": null,
+    "clock_reference": null,
+    "sampling_policy": null,
+    "filter_policy": null,
+    "sensor_manifest_ref": null,
+    "calibration_manifest_ref": null,
+    "state": "INPUT_REQUIRED"
+  },
+  "output_spec": {
+    "raw_data_ref": null,
+    "processed_data_ref": null,
+    "channel_manifest_ref": null,
+    "calibration_evidence_ref": null,
+    "sync_evidence_ref": null,
+    "qa_result": null,
+    "state": "NOT_TESTED"
+  },
+  "calibration_schema": {
+    "calibration_id": null,
+    "sensor_id": null,
+    "reference_standard": null,
+    "date": null,
+    "operator": null,
+    "pre_test_status": "NOT_CALIBRATED",
+    "post_test_status": "NOT_CALIBRATED",
+    "certificate_ref": null,
+    "traceability_ref": null
+  },
+  "data_quality_rules": [
+    "No MEASURED or VALIDATED state without raw-data provenance.",
+    "No VALIDATED state without calibration and synchronization evidence.",
+    "Reject duplicate channel names unless explicitly versioned.",
+    "Coordinate system and sign convention must be declared."
+  ],
+  "manus_execution_outputs": [
+    "sensor manifest",
+    "calibration records",
+    "raw synchronized data",
+    "processed data with transformation log",
+    "QA decision",
+    "evidence hashes"
+  ]
+}

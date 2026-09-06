@@ -1,0 +1,38 @@
+{
+  "artifact": "EVIDENCE_SCHEMA",
+  "contract_version": "0.1",
+  "record_fields": [
+    "evidence_id",
+    "evidence_type",
+    "requirement_refs",
+    "test_refs",
+    "source_uri",
+    "producer_agent",
+    "execution_id",
+    "timestamp_utc",
+    "file_name",
+    "sha256",
+    "status",
+    "validity",
+    "reviewer",
+    "review_timestamp",
+    "parent_evidence_refs"
+  ],
+  "valid_statuses": [
+    "VERIFIED",
+    "DEFINED",
+    "IMPLEMENTATION_READY",
+    "INPUT_REQUIRED",
+    "BLOCKED",
+    "NOT_TESTED",
+    "NOT_VALIDATED",
+    "INVALID",
+    "UNVERIFIED"
+  ],
+  "invalidation_rules": [
+    "missing hash",
+    "missing producer or source",
+    "broken requirement/test linkage",
+    "result consumed after INVALID/BLOCKED/UNVERIFIED"
+  ]
+}

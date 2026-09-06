@@ -1,0 +1,95 @@
+{
+  "status": "DEFINED_NOT_TESTED",
+  "measurement_architecture": [
+    {
+      "channel": "base_acceleration",
+      "location": "vehicle/base interface",
+      "axes": "vehicle coordinates",
+      "sensor": "accelerometer",
+      "sampling_requirement": "TBD_BY_TEST_PROTOCOL",
+      "calibration": "REQUIRED"
+    },
+    {
+      "channel": "carriage_displacement",
+      "location": "carriage/rail reference",
+      "sensor": "LVDT/encoder/optical or validated equivalent",
+      "sampling_requirement": "TBD",
+      "calibration": "REQUIRED"
+    },
+    {
+      "channel": "carriage_velocity",
+      "location": "derived from displacement or direct sensor",
+      "sensor": "TBD",
+      "sampling_requirement": "TBD",
+      "calibration": "REQUIRED"
+    },
+    {
+      "channel": "seatback_rotation",
+      "location": "hinge/seatback reference",
+      "sensor": "rotary encoder/IMU/optical",
+      "sampling_requirement": "TBD",
+      "calibration": "REQUIRED"
+    },
+    {
+      "channel": "rail_reaction_L",
+      "location": "left rail load path",
+      "sensor": "load cell/instrumented interface",
+      "sampling_requirement": "TBD",
+      "calibration": "REQUIRED"
+    },
+    {
+      "channel": "rail_reaction_R",
+      "location": "right rail load path",
+      "sensor": "load cell/instrumented interface",
+      "sampling_requirement": "TBD",
+      "calibration": "REQUIRED"
+    },
+    {
+      "channel": "absorber_force_L",
+      "location": "130L",
+      "sensor": "load transducer",
+      "sampling_requirement": "TBD",
+      "calibration": "REQUIRED"
+    },
+    {
+      "channel": "absorber_force_R",
+      "location": "130R",
+      "sensor": "load transducer",
+      "sampling_requirement": "TBD",
+      "calibration": "REQUIRED"
+    },
+    {
+      "channel": "endstop_reaction",
+      "location": "end-stop interface",
+      "sensor": "load/strain instrumentation",
+      "sampling_requirement": "TBD",
+      "calibration": "REQUIRED"
+    },
+    {
+      "channel": "lock_reaction/state",
+      "location": "Lock-170",
+      "sensor": "state + reaction instrumentation",
+      "sampling_requirement": "TBD",
+      "calibration": "REQUIRED"
+    },
+    {
+      "channel": "occupant_motion",
+      "location": "pelvis/torso/head references",
+      "sensor": "instrumented ATD or validated optical/inertial system",
+      "sampling_requirement": "TBD",
+      "calibration": "REQUIRED"
+    }
+  ],
+  "synchronization": {
+    "common_time_base": "REQUIRED",
+    "trigger": "COMMON_TRIGGER_REQUIRED",
+    "cross_channel_time_alignment": "MUST_BE_VERIFIED"
+  },
+  "provenance": {
+    "calibration_certificates": "REQUIRED",
+    "sensor_serials": "REQUIRED",
+    "DAQ_configuration": "REQUIRED",
+    "filtering": "MUST_BE_RECORDED"
+  },
+  "acceptance_criteria": "NOT_SPECIFIED; must come from test protocol/requirements, not invented."
+}

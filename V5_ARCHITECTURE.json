@@ -1,0 +1,84 @@
+{
+  "status": "DEFINED_NOT_VALIDATED",
+  "scope": "occupant + restraint architecture only; no safety-performance claim",
+  "occupant_reference_model": {
+    "status": "PROPOSED",
+    "frames": [
+      "PELVIS_FRAME",
+      "TORSO_FRAME",
+      "HEAD_REFERENCE_FRAME",
+      "SEAT_FRAME"
+    ],
+    "mass": "UNKNOWN",
+    "inertia": "UNKNOWN",
+    "anthropometry": "UNKNOWN",
+    "contact_model": "UNKNOWN"
+  },
+  "interfaces": [
+    {
+      "id": "OCC-PEL-PAN",
+      "from": "PELVIS",
+      "to": "SEAT_PAN/PELVIC_CONTROL",
+      "type": "contact/interface",
+      "status": "DEFINED"
+    },
+    {
+      "id": "OCC-TORSO-BACK",
+      "from": "TORSO",
+      "to": "SEATBACK",
+      "type": "contact/interface",
+      "status": "DEFINED"
+    },
+    {
+      "id": "OCC-HEAD-GUIDE",
+      "from": "HEAD",
+      "to": "HEAD_SUPPORT/GUIDE",
+      "type": "contact/interface",
+      "status": "DEFINED"
+    },
+    {
+      "id": "REST-BELT",
+      "from": "OCCUPANT",
+      "to": "RESTRAINT_INTERFACE",
+      "type": "restraint interaction",
+      "status": "DEFINED"
+    }
+  ],
+  "control_objectives": [
+    "control pelvis relative motion",
+    "control torso rotation/excursion",
+    "maintain head-support interaction within defined envelope",
+    "coordinate restraint-anchor motion with seat motion"
+  ],
+  "metrics": [
+    {
+      "name": "pelvis_relative_displacement",
+      "status": "REQUIREMENT_TO_BE_DEFINED"
+    },
+    {
+      "name": "torso_angle/excursion",
+      "status": "REQUIREMENT_TO_BE_DEFINED"
+    },
+    {
+      "name": "head_excursion",
+      "status": "REQUIREMENT_TO_BE_DEFINED"
+    },
+    {
+      "name": "restraint_load_history",
+      "status": "REQUIREMENT_TO_BE_DEFINED"
+    },
+    {
+      "name": "seatback_angle",
+      "status": "MODEL/MEASUREMENT_CHANNEL"
+    }
+  ],
+  "failure_modes": [
+    "pelvis submarining tendency",
+    "torso over-rotation",
+    "head-support separation",
+    "restraint anchorage overload",
+    "belt/seat kinematic mismatch",
+    "single-side degraded behavior"
+  ],
+  "evidence_boundary": "No HIC/Nij/chest/neck/pelvis safety claim without validated occupant/restraint model and appropriate test correlation."
+}

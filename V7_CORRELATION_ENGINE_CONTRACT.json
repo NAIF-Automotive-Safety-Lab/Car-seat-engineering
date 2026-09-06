@@ -1,0 +1,119 @@
+{
+  "artifact": "V7_CORRELATION_ENGINE_CONTRACT",
+  "contract_version": "0.1",
+  "status": "IMPLEMENTATION_READY",
+  "comparison_levels": [
+    "FE",
+    "COMPONENT_TEST",
+    "SUBSYSTEM_TEST",
+    "SLED",
+    "VEHICLE_TEST"
+  ],
+  "pipeline": [
+    {
+      "step": "time_alignment",
+      "status": "DEFINED",
+      "method": null,
+      "threshold_required": false
+    },
+    {
+      "step": "coordinate_alignment",
+      "status": "DEFINED",
+      "method": null,
+      "threshold_required": false
+    },
+    {
+      "step": "channel_mapping",
+      "status": "DEFINED",
+      "method": null,
+      "threshold_required": false
+    },
+    {
+      "step": "sampling_normalization",
+      "status": "DEFINED",
+      "method": null,
+      "threshold_required": false
+    },
+    {
+      "step": "filtering",
+      "status": "DEFINED",
+      "method": null,
+      "threshold_required": false
+    },
+    {
+      "step": "metric_calculation",
+      "status": "DEFINED",
+      "method": "metric registry",
+      "threshold_required": true
+    }
+  ],
+  "signal_comparisons": [
+    "displacement",
+    "velocity",
+    "acceleration",
+    "force",
+    "energy",
+    "rotation",
+    "timing"
+  ],
+  "metrics": [
+    {
+      "metric_id": "RMSE",
+      "formula": "sqrt(mean((y_model-y_ref)^2))",
+      "threshold_required": true,
+      "result": null
+    },
+    {
+      "metric_id": "NRMSE",
+      "formula": "RMSE / declared normalization scale",
+      "threshold_required": true,
+      "result": null
+    },
+    {
+      "metric_id": "PEAK_ERROR",
+      "formula": "abs(peak_model-peak_ref)/abs(peak_ref) when denominator valid",
+      "threshold_required": true,
+      "result": null
+    },
+    {
+      "metric_id": "PHASE_ERROR",
+      "formula": "declared phase/time lag metric",
+      "threshold_required": true,
+      "result": null
+    },
+    {
+      "metric_id": "CURVE_SIMILARITY",
+      "formula": "declared curve similarity metric",
+      "threshold_required": true,
+      "result": null
+    },
+    {
+      "metric_id": "ENERGY_DISCREPANCY",
+      "formula": "declared energy difference/ratio",
+      "threshold_required": true,
+      "result": null
+    },
+    {
+      "metric_id": "TIMING_DISCREPANCY",
+      "formula": "declared timing difference",
+      "threshold_required": true,
+      "result": null
+    }
+  ],
+  "acceptance_policy": "No threshold may be invented. Unsourced thresholds must remain THRESHOLD_REQUIRED=TRUE and cannot produce PASS.",
+  "correlation_record_fields": [
+    "correlation_id",
+    "source_level",
+    "reference_level",
+    "channel_map_ref",
+    "time_alignment_ref",
+    "coordinate_alignment_ref",
+    "sampling_ref",
+    "filter_ref",
+    "metric_results",
+    "threshold_source_refs",
+    "acceptance_decision",
+    "evidence_refs",
+    "status"
+  ]
+}

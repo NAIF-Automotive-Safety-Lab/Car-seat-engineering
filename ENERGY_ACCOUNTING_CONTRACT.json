@@ -1,0 +1,107 @@
+{
+  "artifact": "ENERGY_ACCOUNTING_CONTRACT",
+  "contract_version": "0.1",
+  "flow": [
+    "VEHICLE_INPUT",
+    "RAILS",
+    "RIDE-DOWN",
+    "ABSORBER",
+    "CARRIAGE",
+    "SEAT_PAN",
+    "PELVIS",
+    "TORSO",
+    "HEAD_SUPPORT",
+    "OCCUPANT"
+  ],
+  "terms": [
+    {
+      "term_id": "kinetic_energy",
+      "value": null,
+      "unit": null,
+      "source": null,
+      "equation": null,
+      "sign_convention": null,
+      "status": "INPUT_REQUIRED"
+    },
+    {
+      "term_id": "absorbed_energy",
+      "value": null,
+      "unit": null,
+      "source": null,
+      "equation": null,
+      "sign_convention": null,
+      "status": "INPUT_REQUIRED"
+    },
+    {
+      "term_id": "elastic_energy",
+      "value": null,
+      "unit": null,
+      "source": null,
+      "equation": null,
+      "sign_convention": null,
+      "status": "INPUT_REQUIRED"
+    },
+    {
+      "term_id": "plastic_dissipation",
+      "value": null,
+      "unit": null,
+      "source": null,
+      "equation": null,
+      "sign_convention": null,
+      "status": "INPUT_REQUIRED"
+    },
+    {
+      "term_id": "contact_work",
+      "value": null,
+      "unit": null,
+      "source": null,
+      "equation": null,
+      "sign_convention": null,
+      "status": "INPUT_REQUIRED"
+    },
+    {
+      "term_id": "friction_work",
+      "value": null,
+      "unit": null,
+      "source": null,
+      "equation": null,
+      "sign_convention": null,
+      "status": "INPUT_REQUIRED"
+    },
+    {
+      "term_id": "joint_work",
+      "value": null,
+      "unit": null,
+      "source": null,
+      "equation": null,
+      "sign_convention": null,
+      "status": "INPUT_REQUIRED"
+    },
+    {
+      "term_id": "residual_energy",
+      "value": null,
+      "unit": null,
+      "source": null,
+      "equation": null,
+      "sign_convention": null,
+      "status": "INPUT_REQUIRED"
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "ENE-BAL-001",
+      "definition": "input energy - accounted downstream energy = residual/imbalance",
+      "threshold": null,
+      "threshold_required": true,
+      "status": "DEFINED"
+    },
+    {
+      "check_id": "ENE-BAL-002",
+      "definition": "component-to-component work/energy transfer continuity",
+      "threshold": null,
+      "threshold_required": true,
+      "status": "DEFINED"
+    }
+  ],
+  "rule": "No numerical energy result is reported until actual executable/model/test data are supplied."
+}

@@ -1,0 +1,21 @@
+{
+  "open_engineering_questions": [
+    "What is the released occupant/ATD definition and anthropometry for the intended test condition?",
+    "What are the released restraint anchor locations and belt geometry?",
+    "What are the released material cards and strain-rate properties for structural components?",
+    "What are released mass/CG/inertia properties or traceable density definitions?",
+    "What is the approved friction/contact characterization and temperature range?",
+    "What is the measured absorber F-x/F-v/hysteresis characterization?",
+    "What vehicle datum/hardpoint package is authoritative?",
+    "What are the approved acceptance criteria for occupant and structural metrics?",
+    "What common coordinate system and trigger definition will be used across FE and sled?",
+    "What are the released test filter definitions and sampling requirements?"
+  ],
+  "unverified_assumptions": [
+    "No physical parameter has been promoted from UNKNOWN to verified.",
+    "No safety threshold has been invented.",
+    "No crash pulse has been invented.",
+    "No occupant response has been invented.",
+    "No FE correlation tolerance has been invented."
+  ]
+}

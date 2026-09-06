@@ -1,7 +1,15 @@
-# T-OCS Final GitHub Actions Workflow
+# T-OCS Parallel Engineering Development Package — V5/V6/V7
 
-Place `.github/workflows/tocs-mbd.yml` in the repository.
+Parent baseline: R4.1
+Parent SHA-256: fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68
 
-The workflow is fail-closed and does not synthesize MBD results. It verifies the frozen R4.1 STEP before expensive solver setup, builds Chrono 10.0.0 with Python + Cascade support because the current prebuilt Conda PyChrono distribution does not provide Cascade, runs a real smoke test, then requires a real SR11 execution manifest and non-empty raw solver output before `V1_STATUS=PASS`.
+This package advances Track-B only. It does not modify R4.1 and contains no FE/MBD/test results.
+All unknown physical inputs remain unknown; all thresholds remain TBD unless released by authoritative requirements.
 
-It does not modify R4.1 and does not create R4.2.
+States:
+- V5 = DEFINED_NOT_VALIDATED
+- V6 = DEFINED_NOT_TESTED
+- V7 = DEFINED_NOT_CORRELATED
+- V4 dependency = OPEN/BLOCKED
+- R4.2 = NOT_AUTHORIZED
+- Promotion = BLOCKED
