@@ -1,0 +1,896 @@
+{
+  "ARTIFACT": "/home/ubuntu/repo/R4.1/R4.1.step",
+  "SOURCE_SHA256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "STEP_READ": "IFSelect_ReturnStatus.IFSelect_RetDone",
+  "B_REP_STATUS": "PASS",
+  "SOLID_COUNT": 62,
+  "BODY_MAPPING": "PASS 62/62 unique solids",
+  "records": [
+    {
+      "ID": "B01",
+      "NAME": "dual-rail/carriage interface",
+      "BODY_ID": [
+        "RAIL_L",
+        "RAIL_R",
+        "CARRIAGE"
+      ],
+      "B_REP_REFERENCE": {
+        "step_solid_indices": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          36,
+          37,
+          38
+        ],
+        "components": [
+          "110L_Load_Path_A",
+          "110L_Load_Path_B",
+          "R4_Rail_L",
+          "110R_Load_Path_A",
+          "110R_Load_Path_B",
+          "R4_Rail_R",
+          "120_Carriage",
+          "R4_Carriage"
+        ]
+      },
+      "FEATURE_ID": "Unavailable as explicit STEP PMI feature; body/solid mapping used without inference",
+      "REFERENCE_FRAME": "RAIL_L_FRAME / RAIL_R_FRAME / CARRIAGE_FRAME",
+      "DATUM": "Unavailable unless explicit in source; no datum invented",
+      "COORDINATES": [
+        {
+          "solid_index": 6,
+          "bbox_mm": [
+            -224.0000001,
+            -240.0000001,
+            18.9999999,
+            -195.9999999,
+            240.0000001,
+            41.0000001
+          ]
+        },
+        {
+          "solid_index": 7,
+          "bbox_mm": [
+            -229.0000001,
+            -240.0000001,
+            42.4999999,
+            -190.9999999,
+            240.0000001,
+            47.5000001
+          ]
+        },
+        {
+          "solid_index": 8,
+          "bbox_mm": [
+            195.9999999,
+            -240.0000001,
+            18.9999999,
+            224.0000001,
+            240.0000001,
+            41.0000001
+          ]
+        },
+        {
+          "solid_index": 9,
+          "bbox_mm": [
+            190.9999999,
+            -240.0000001,
+            42.4999999,
+            229.0000001,
+            240.0000001,
+            47.5000001
+          ]
+        },
+        {
+          "solid_index": 10,
+          "bbox_mm": [
+            -225.0000001,
+            -180.0000001,
+            53.9999999,
+            225.0000001,
+            180.0000001,
+            78.0000001
+          ]
+        },
+        {
+          "solid_index": 36,
+          "bbox_mm": [
+            -229.0000001,
+            -240.0000001,
+            16.9999999,
+            -190.9999999,
+            240.0000001,
+            43.0000001
+          ]
+        },
+        {
+          "solid_index": 37,
+          "bbox_mm": [
+            190.9999999,
+            -240.0000001,
+            16.9999999,
+            229.0000001,
+            240.0000001,
+            43.0000001
+          ]
+        },
+        {
+          "solid_index": 38,
+          "bbox_mm": [
+            -225.0000001,
+            -180.0000001,
+            54.9999999,
+            225.0000001,
+            180.0000001,
+            61.0000001
+          ]
+        }
+      ],
+      "DIMENSIONS": "Bounding boxes from exact STEP kernel readback; not promoted as PMI dimensions",
+      "ORIENTATION": "Unavailable as explicit feature orientation; source body frames preserved",
+      "TRAVEL": "Unavailable in STEP artifact; not inferred",
+      "CLEARANCE": "Unavailable in STEP artifact; not inferred",
+      "PMI/TOLERANCE": "Unavailable in STEP artifact; not inferred",
+      "SOURCE_SHA256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "EXTRACTION_VERSION": "OCP STEPControl_Reader/TopExp_Explorer/BRepBndLib 1.0",
+      "EXTRACTION_DATE": "2026-09-06"
+    },
+    {
+      "ID": "B02",
+      "NAME": "seatback pivot/rotation-control",
+      "BODY_ID": [
+        "SEATBACK",
+        "ROT_CTRL_L",
+        "ROT_CTRL_R",
+        "HINGE"
+      ],
+      "B_REP_REFERENCE": {
+        "step_solid_indices": [
+          16,
+          17,
+          18,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "components": [
+          "160_Seatback_Frame",
+          "150L_Rotation_Link",
+          "150R_Rotation_Link",
+          "R4_Hinge_Shaft",
+          "R4_Hinge_Support_L",
+          "R4_Hinge_Support_R",
+          "R4_Hinge_Barrel_L",
+          "R4_Hinge_Barrel_R"
+        ]
+      },
+      "FEATURE_ID": "Unavailable as explicit STEP PMI feature; body/solid mapping used without inference",
+      "REFERENCE_FRAME": "SEATBACK_FRAME / ROT_CTRL_L_FRAME / ROT_CTRL_R_FRAME",
+      "DATUM": "Unavailable unless explicit in source; no datum invented",
+      "COORDINATES": [
+        {
+          "solid_index": 16,
+          "bbox_mm": [
+            -217.5000001,
+            140.73792933408666,
+            77.60571322202424,
+            217.5000001,
+            706.28467232199,
+            698.5000001
+          ]
+        },
+        {
+          "solid_index": 17,
+          "bbox_mm": [
+            -208.0000001,
+            113.20900239897658,
+            61.9999999,
+            -171.9999999,
+            191.79099760101772,
+            358.0000001
+          ]
+        },
+        {
+          "solid_index": 18,
+          "bbox_mm": [
+            171.9999999,
+            113.20900239898103,
+            61.9999999,
+            208.0000001,
+            191.79099760101772,
+            358.0000001
+          ]
+        },
+        {
+          "solid_index": 43,
+          "bbox_mm": [
+            -215.0000001,
+            139.9999999,
+            75.9999999,
+            215.0000001,
+            160.0000001,
+            96.0000001
+          ]
+        },
+        {
+          "solid_index": 44,
+          "bbox_mm": [
+            -224.5000001,
+            128.9999999,
+            58.4999999,
+            -179.4999999,
+            171.0000001,
+            113.5000001
+          ]
+        },
+        {
+          "solid_index": 45,
+          "bbox_mm": [
+            179.4999999,
+            128.9999999,
+            58.4999999,
+            224.5000001,
+            171.0000001,
+            113.5000001
+          ]
+        },
+        {
+          "solid_index": 46,
+          "bbox_mm": [
+            -227.5000001,
+            133.9999999,
+            69.9999999,
+            -182.4999999,
+            166.0000001,
+            102.0000001
+          ]
+        },
+        {
+          "solid_index": 47,
+          "bbox_mm": [
+            137.4999999,
+            133.9999999,
+            69.9999999,
+            182.5000001,
+            166.0000001,
+            102.0000001
+          ]
+        }
+      ],
+      "DIMENSIONS": "Bounding boxes from exact STEP kernel readback; not promoted as PMI dimensions",
+      "ORIENTATION": "Unavailable as explicit feature orientation; source body frames preserved",
+      "TRAVEL": "Unavailable in STEP artifact; not inferred",
+      "CLEARANCE": "Unavailable in STEP artifact; not inferred",
+      "PMI/TOLERANCE": "Unavailable in STEP artifact; not inferred",
+      "SOURCE_SHA256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "EXTRACTION_VERSION": "OCP STEPControl_Reader/TopExp_Explorer/BRepBndLib 1.0",
+      "EXTRACTION_DATE": "2026-09-06"
+    },
+    {
+      "ID": "B03",
+      "NAME": "ride-down/absorber interface",
+      "BODY_ID": [
+        "ABSORBER_L",
+        "ABSORBER_R",
+        "CARRIAGE"
+      ],
+      "B_REP_REFERENCE": {
+        "step_solid_indices": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          38
+        ],
+        "components": [
+          "130L_Absorber_A",
+          "130L_Absorber_B",
+          "130R_Absorber_A",
+          "130R_Absorber_B",
+          "120_Carriage",
+          "R4_Carriage"
+        ]
+      },
+      "FEATURE_ID": "Unavailable as explicit STEP PMI feature; body/solid mapping used without inference",
+      "REFERENCE_FRAME": "ABSORBER_L_FRAME / ABSORBER_R_FRAME / CARRIAGE_FRAME",
+      "DATUM": "Unavailable unless explicit in source; no datum invented",
+      "COORDINATES": [
+        {
+          "solid_index": 10,
+          "bbox_mm": [
+            -225.0000001,
+            -180.0000001,
+            53.9999999,
+            225.0000001,
+            180.0000001,
+            78.0000001
+          ]
+        },
+        {
+          "solid_index": 11,
+          "bbox_mm": [
+            -300.0000001,
+            -67.5000001,
+            -58.0000001,
+            -59.9999999,
+            67.5000001,
+            182.0000001
+          ]
+        },
+        {
+          "solid_index": 12,
+          "bbox_mm": [
+            -270.0000001,
+            -104.00000010000001,
+            -28.0000001,
+            -89.9999999,
+            -95.99999989999999,
+            152.0000001
+          ]
+        },
+        {
+          "solid_index": 13,
+          "bbox_mm": [
+            59.9999999,
+            -67.5000001,
+            -58.0000001,
+            300.0000001,
+            67.5000001,
+            182.0000001
+          ]
+        },
+        {
+          "solid_index": 14,
+          "bbox_mm": [
+            89.9999999,
+            -104.00000010000001,
+            -28.0000001,
+            270.0000001,
+            -95.99999989999999,
+            152.0000001
+          ]
+        },
+        {
+          "solid_index": 38,
+          "bbox_mm": [
+            -225.0000001,
+            -180.0000001,
+            54.9999999,
+            225.0000001,
+            180.0000001,
+            61.0000001
+          ]
+        }
+      ],
+      "DIMENSIONS": "Bounding boxes from exact STEP kernel readback; not promoted as PMI dimensions",
+      "ORIENTATION": "Unavailable as explicit feature orientation; source body frames preserved",
+      "TRAVEL": "Unavailable in STEP artifact; not inferred",
+      "CLEARANCE": "Unavailable in STEP artifact; not inferred",
+      "PMI/TOLERANCE": "Unavailable in STEP artifact; not inferred",
+      "SOURCE_SHA256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "EXTRACTION_VERSION": "OCP STEPControl_Reader/TopExp_Explorer/BRepBndLib 1.0",
+      "EXTRACTION_DATE": "2026-09-06"
+    },
+    {
+      "ID": "B04",
+      "NAME": "lock mating interface",
+      "BODY_ID": [
+        "LOCK_L",
+        "LOCK_R",
+        "SOURCE_LOCK_L",
+        "SOURCE_LOCK_R"
+      ],
+      "B_REP_REFERENCE": {
+        "step_solid_indices": [
+          19,
+          20,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56
+        ],
+        "components": [
+          "R4_170_L_Housing",
+          "R4_170_L_Pawl",
+          "R4_170_L_Capture",
+          "R4_170_L_Release",
+          "R4_170_R_Housing",
+          "R4_170_R_Pawl",
+          "R4_170_R_Capture",
+          "R4_170_R_Release",
+          "170_L_Housing_Source",
+          "170_R_Housing_Source"
+        ]
+      },
+      "FEATURE_ID": "Unavailable as explicit STEP PMI feature; body/solid mapping used without inference",
+      "REFERENCE_FRAME": "LOCK_L/LOCK_R frames",
+      "DATUM": "Unavailable unless explicit in source; no datum invented",
+      "COORDINATES": [
+        {
+          "solid_index": 19,
+          "bbox_mm": [
+            -232.0000001,
+            103.9999999,
+            82.9999999,
+            -147.9999999,
+            149.0000001,
+            167.0000001
+          ]
+        },
+        {
+          "solid_index": 20,
+          "bbox_mm": [
+            147.9999999,
+            103.9999999,
+            82.9999999,
+            232.0000001,
+            149.0000001,
+            167.0000001
+          ]
+        },
+        {
+          "solid_index": 49,
+          "bbox_mm": [
+            -212.0000001,
+            119.9999999,
+            95.9999999,
+            -167.9999999,
+            170.0000001,
+            154.0000001
+          ]
+        },
+        {
+          "solid_index": 50,
+          "bbox_mm": [
+            -198.0000001,
+            119.9999999,
+            123.9999999,
+            -181.9999999,
+            170.0000001,
+            142.0000001
+          ]
+        },
+        {
+          "solid_index": 51,
+          "bbox_mm": [
+            -196.0000001,
+            156.9999999,
+            108.9999999,
+            -183.9999999,
+            177.0000001,
+            141.0000001
+          ]
+        },
+        {
+          "solid_index": 52,
+          "bbox_mm": [
+            -195.0000001,
+            132.9999999,
+            151.9999999,
+            -184.9999999,
+            157.0000001,
+            164.0000001
+          ]
+        },
+        {
+          "solid_index": 53,
+          "bbox_mm": [
+            167.9999999,
+            119.9999999,
+            95.9999999,
+            212.0000001,
+            170.0000001,
+            154.0000001
+          ]
+        },
+        {
+          "solid_index": 54,
+          "bbox_mm": [
+            181.9999999,
+            119.9999999,
+            123.9999999,
+            198.0000001,
+            170.0000001,
+            142.0000001
+          ]
+        },
+        {
+          "solid_index": 55,
+          "bbox_mm": [
+            183.9999999,
+            156.9999999,
+            108.9999999,
+            196.0000001,
+            177.0000001,
+            141.0000001
+          ]
+        },
+        {
+          "solid_index": 56,
+          "bbox_mm": [
+            184.9999999,
+            132.9999999,
+            151.9999999,
+            195.0000001,
+            157.0000001,
+            164.0000001
+          ]
+        }
+      ],
+      "DIMENSIONS": "Bounding boxes from exact STEP kernel readback; not promoted as PMI dimensions",
+      "ORIENTATION": "Unavailable as explicit feature orientation; source body frames preserved",
+      "TRAVEL": "Unavailable in STEP artifact; not inferred",
+      "CLEARANCE": "Unavailable in STEP artifact; not inferred",
+      "PMI/TOLERANCE": "Unavailable in STEP artifact; not inferred",
+      "SOURCE_SHA256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "EXTRACTION_VERSION": "OCP STEPControl_Reader/TopExp_Explorer/BRepBndLib 1.0",
+      "EXTRACTION_DATE": "2026-09-06"
+    },
+    {
+      "ID": "B05",
+      "NAME": "rebound-control/stop interface",
+      "BODY_ID": [
+        "REBOUND_L",
+        "REBOUND_R",
+        "ENDSTOPS",
+        "CARRIAGE"
+      ],
+      "B_REP_REFERENCE": {
+        "step_solid_indices": [
+          10,
+          21,
+          22,
+          23,
+          24,
+          38,
+          39,
+          40,
+          41,
+          42
+        ],
+        "components": [
+          "180L_Rebound_A",
+          "180L_Rebound_B",
+          "180R_Rebound_A",
+          "180R_Rebound_B",
+          "R4_Endstop_L_Front",
+          "R4_Endstop_L_Rear",
+          "R4_Endstop_R_Front",
+          "R4_Endstop_R_Rear",
+          "120_Carriage",
+          "R4_Carriage"
+        ]
+      },
+      "FEATURE_ID": "Unavailable as explicit STEP PMI feature; body/solid mapping used without inference",
+      "REFERENCE_FRAME": "REBOUND/ENDSTOP frames",
+      "DATUM": "Unavailable unless explicit in source; no datum invented",
+      "COORDINATES": [
+        {
+          "solid_index": 10,
+          "bbox_mm": [
+            -225.0000001,
+            -180.0000001,
+            53.9999999,
+            225.0000001,
+            180.0000001,
+            78.0000001
+          ]
+        },
+        {
+          "solid_index": 21,
+          "bbox_mm": [
+            -245.0000001,
+            116.99999989999999,
+            -15.0000001,
+            -74.9999999,
+            133.0000001,
+            155.0000001
+          ]
+        },
+        {
+          "solid_index": 22,
+          "bbox_mm": [
+            -215.0000001,
+            78.4999999,
+            14.9999999,
+            -104.9999999,
+            85.5000001,
+            125.0000001
+          ]
+        },
+        {
+          "solid_index": 23,
+          "bbox_mm": [
+            74.9999999,
+            116.99999989999999,
+            -15.0000001,
+            245.0000001,
+            133.0000001,
+            155.0000001
+          ]
+        },
+        {
+          "solid_index": 24,
+          "bbox_mm": [
+            104.9999999,
+            78.4999999,
+            14.9999999,
+            215.0000001,
+            85.5000001,
+            125.0000001
+          ]
+        },
+        {
+          "solid_index": 38,
+          "bbox_mm": [
+            -225.0000001,
+            -180.0000001,
+            54.9999999,
+            225.0000001,
+            180.0000001,
+            61.0000001
+          ]
+        },
+        {
+          "solid_index": 39,
+          "bbox_mm": [
+            -235.0000001,
+            -258.0000001,
+            34.4999999,
+            -184.9999999,
+            -239.9999999,
+            89.5000001
+          ]
+        },
+        {
+          "solid_index": 40,
+          "bbox_mm": [
+            -235.0000001,
+            239.9999999,
+            34.4999999,
+            -184.9999999,
+            258.0000001,
+            89.5000001
+          ]
+        },
+        {
+          "solid_index": 41,
+          "bbox_mm": [
+            184.9999999,
+            -258.0000001,
+            34.4999999,
+            235.0000001,
+            -239.9999999,
+            89.5000001
+          ]
+        },
+        {
+          "solid_index": 42,
+          "bbox_mm": [
+            184.9999999,
+            239.9999999,
+            34.4999999,
+            235.0000001,
+            258.0000001,
+            89.5000001
+          ]
+        }
+      ],
+      "DIMENSIONS": "Bounding boxes from exact STEP kernel readback; not promoted as PMI dimensions",
+      "ORIENTATION": "Unavailable as explicit feature orientation; source body frames preserved",
+      "TRAVEL": "Unavailable in STEP artifact; not inferred",
+      "CLEARANCE": "Unavailable in STEP artifact; not inferred",
+      "PMI/TOLERANCE": "Unavailable in STEP artifact; not inferred",
+      "SOURCE_SHA256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "EXTRACTION_VERSION": "OCP STEPControl_Reader/TopExp_Explorer/BRepBndLib 1.0",
+      "EXTRACTION_DATE": "2026-09-06"
+    },
+    {
+      "ID": "B06",
+      "NAME": "fixture reaction boundary",
+      "BODY_ID": [
+        "BASE",
+        "RAIL_L",
+        "RAIL_R"
+      ],
+      "B_REP_REFERENCE": {
+        "step_solid_indices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          34,
+          35,
+          36,
+          37
+        ],
+        "components": [
+          "100_Vehicle_Interface_Base",
+          "100_Base_Hardpoint_Boss_FL",
+          "100_Base_Hardpoint_Boss_RL",
+          "100_Base_Hardpoint_Boss_FR",
+          "100_Base_Hardpoint_Boss_RR",
+          "210_Sensor_Mount_L",
+          "210_Sensor_Mount_R",
+          "110L_Load_Path_A",
+          "110L_Load_Path_B",
+          "R4_Rail_L",
+          "110R_Load_Path_A",
+          "110R_Load_Path_B",
+          "R4_Rail_R"
+        ]
+      },
+      "FEATURE_ID": "Unavailable as explicit STEP PMI feature; body/solid mapping used without inference",
+      "REFERENCE_FRAME": "BASE_FRAME / RAIL_L_FRAME / RAIL_R_FRAME",
+      "DATUM": "Unavailable unless explicit in source; no datum invented",
+      "COORDINATES": [
+        {
+          "solid_index": 1,
+          "bbox_mm": [
+            -250.0000001,
+            -260.0000001,
+            -1e-07,
+            250.0000001,
+            260.0000001,
+            16.0000001
+          ]
+        },
+        {
+          "solid_index": 2,
+          "bbox_mm": [
+            -228.0000001,
+            -218.0000001,
+            9.9999999,
+            -191.9999999,
+            -181.9999999,
+            24.0000001
+          ]
+        },
+        {
+          "solid_index": 3,
+          "bbox_mm": [
+            -228.0000001,
+            181.9999999,
+            9.9999999,
+            -191.9999999,
+            218.0000001,
+            24.0000001
+          ]
+        },
+        {
+          "solid_index": 4,
+          "bbox_mm": [
+            191.9999999,
+            -218.0000001,
+            9.9999999,
+            228.0000001,
+            -181.9999999,
+            24.0000001
+          ]
+        },
+        {
+          "solid_index": 5,
+          "bbox_mm": [
+            191.9999999,
+            181.9999999,
+            9.9999999,
+            228.0000001,
+            218.0000001,
+            24.0000001
+          ]
+        },
+        {
+          "solid_index": 6,
+          "bbox_mm": [
+            -224.0000001,
+            -240.0000001,
+            18.9999999,
+            -195.9999999,
+            240.0000001,
+            41.0000001
+          ]
+        },
+        {
+          "solid_index": 7,
+          "bbox_mm": [
+            -229.0000001,
+            -240.0000001,
+            42.4999999,
+            -190.9999999,
+            240.0000001,
+            47.5000001
+          ]
+        },
+        {
+          "solid_index": 8,
+          "bbox_mm": [
+            195.9999999,
+            -240.0000001,
+            18.9999999,
+            224.0000001,
+            240.0000001,
+            41.0000001
+          ]
+        },
+        {
+          "solid_index": 9,
+          "bbox_mm": [
+            190.9999999,
+            -240.0000001,
+            42.4999999,
+            229.0000001,
+            240.0000001,
+            47.5000001
+          ]
+        },
+        {
+          "solid_index": 34,
+          "bbox_mm": [
+            -141.0000001,
+            89.9999999,
+            110.9999999,
+            -118.9999999,
+            120.0000001,
+            129.0000001
+          ]
+        },
+        {
+          "solid_index": 35,
+          "bbox_mm": [
+            118.9999999,
+            89.9999999,
+            110.9999999,
+            141.0000001,
+            120.0000001,
+            129.0000001
+          ]
+        },
+        {
+          "solid_index": 36,
+          "bbox_mm": [
+            -229.0000001,
+            -240.0000001,
+            16.9999999,
+            -190.9999999,
+            240.0000001,
+            43.0000001
+          ]
+        },
+        {
+          "solid_index": 37,
+          "bbox_mm": [
+            190.9999999,
+            -240.0000001,
+            16.9999999,
+            229.0000001,
+            240.0000001,
+            43.0000001
+          ]
+        }
+      ],
+      "DIMENSIONS": "Bounding boxes from exact STEP kernel readback; not promoted as PMI dimensions",
+      "ORIENTATION": "Unavailable as explicit feature orientation; source body frames preserved",
+      "TRAVEL": "Unavailable in STEP artifact; not inferred",
+      "CLEARANCE": "Unavailable in STEP artifact; not inferred",
+      "PMI/TOLERANCE": "Unavailable in STEP artifact; not inferred",
+      "SOURCE_SHA256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "EXTRACTION_VERSION": "OCP STEPControl_Reader/TopExp_Explorer/BRepBndLib 1.0",
+      "EXTRACTION_DATE": "2026-09-06"
+    }
+  ]
+}
