@@ -1,0 +1,62 @@
+{
+  "artifact": "V4_DEPENDENCY_CONTRACT",
+  "contract_version": "0.1",
+  "status": "BLOCKED",
+  "required_inputs": [
+    "geometry/mesh definition",
+    "material evidence",
+    "contact definitions",
+    "connection/joint definitions",
+    "boundary conditions",
+    "solver identity/availability",
+    "analysis controls"
+  ],
+  "required_outputs": [
+    "mesh evidence",
+    "solver identity",
+    "material evidence",
+    "contact evidence",
+    "connection evidence",
+    "boundary-condition evidence",
+    "convergence evidence",
+    "stress/strain evidence",
+    "deformation evidence",
+    "energy evidence",
+    "failure criterion evaluation"
+  ],
+  "evidence_schema": [
+    {
+      "evidence_id": null,
+      "class": null,
+      "source_file": null,
+      "producer": null,
+      "execution_id": null,
+      "timestamp": null,
+      "hash": null,
+      "status": "INPUT_REQUIRED",
+      "validity": null,
+      "review_status": "NOT_VALIDATED"
+    }
+  ],
+  "failure_schema": {
+    "failure_id": null,
+    "stage": null,
+    "failure_type": null,
+    "message": null,
+    "input_state": null,
+    "recoverable": null,
+    "root_cause_ref": null,
+    "evidence_ref": null,
+    "status": "INPUT_REQUIRED"
+  },
+  "root_cause_schema": {
+    "root_cause_id": null,
+    "symptom": null,
+    "candidate_causes": [],
+    "tests": [],
+    "disposition": null,
+    "evidence_refs": [],
+    "status": "INPUT_REQUIRED"
+  },
+  "downstream_consumption_rule": "V5/V6/V7 MUST reject V4 results with BLOCKED, INVALID, or UNVERIFIED status."
+}

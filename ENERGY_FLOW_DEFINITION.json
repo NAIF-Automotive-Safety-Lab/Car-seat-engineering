@@ -1,0 +1,49 @@
+{
+  "status": "ARCHITECTURE_ONLY",
+  "chain": [
+    "VEHICLE_INPUT",
+    "RAIL_RESPONSE",
+    "RIDE-DOWN",
+    "ABSORBER",
+    "CARRIAGE",
+    "SEAT_PAN",
+    "PELVIS",
+    "TORSO",
+    "HEAD_SUPPORT",
+    "OCCUPANT"
+  ],
+  "interfaces": [
+    "vehicle/base -> rails",
+    "rails -> carriage",
+    "ride-down -> carriage",
+    "carriage -> seat pan",
+    "seat pan -> pelvis",
+    "seatback -> torso/head guidance",
+    "restraint -> occupant"
+  ],
+  "quantities": [
+    "input work",
+    "absorber work",
+    "friction work",
+    "contact work",
+    "kinetic energy change",
+    "rebound energy",
+    "residual energy"
+  ],
+  "equation_contract": "E_abs = integral(F dx) only when F and x are actual/traceable dynamic quantities.",
+  "timing_dependencies": [
+    "pulse onset",
+    "rail motion",
+    "absorber engagement",
+    "seatback rotation",
+    "restraint engagement",
+    "end-stop/lock events"
+  ],
+  "failure_modes": [
+    "energy bypass",
+    "premature end-stop engagement",
+    "unequal L/R dissipation",
+    "uncontrolled rebound",
+    "load-path discontinuity"
+  ]
+}

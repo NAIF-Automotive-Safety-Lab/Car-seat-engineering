@@ -1,0 +1,28 @@
+{
+  "package": "V4_EXECUTION_HANDOFF_R4_1",
+  "package_version": "0.1",
+  "files": [
+    {
+      "path": "HANDOFF_MANIFEST.json",
+      "sha256": "0fe47773f085db54ed5d53ad26c5d362be8892e96d98b5a97295a9b2e768936b",
+      "bytes": 752
+    },
+    {
+      "path": "JON_CONTRACT_AUDIT.json",
+      "sha256": "aeae48dbba630618ab30589e468215f2be61ee0ab55982effb1e0277d0796ab5",
+      "bytes": 7026
+    },
+    {
+      "path": "MANDATORY_FINAL_REPORT.json",
+      "sha256": "08eaae1bcce077838295c288dbd1f6e96070b2d4a8953d8e23506fd794da5d28",
+      "bytes": 769
+    },
+    {
+      "path": "V4_EXECUTION_HANDOFF.json",
+      "sha256": "6c61e11cd00e4f7344a145a03855b2798b214ef0563f36e7691e2bde0a7b63df",
+      "bytes": 18687
+    }
+  ],
+  "baseline_sha256_asserted": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "baseline_sha_status": "ASSERTED_BY_AUTHORITY / INDEPENDENT_VERIFICATION_PENDING"
+}

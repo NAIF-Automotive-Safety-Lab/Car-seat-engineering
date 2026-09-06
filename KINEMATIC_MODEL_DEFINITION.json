@@ -1,0 +1,44 @@
+{
+  "status": "DEFINED_NOT_EXECUTED",
+  "architecture": "SEATBACK -> 150L/150R -> CARRIAGE 120 -> 130L/130R -> 110L/110R -> VEHICLE BASE 100",
+  "signals": [
+    {
+      "name": "x(t)",
+      "meaning": "carriage longitudinal displacement",
+      "generation": "MBD or validated test sensor",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "name": "v(t)",
+      "meaning": "carriage longitudinal velocity",
+      "generation": "MBD or validated test derivation",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "name": "a(t)",
+      "meaning": "carriage longitudinal acceleration",
+      "generation": "MBD or validated test derivation",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "name": "theta(t)",
+      "meaning": "seatback rotation",
+      "generation": "MBD or validated test measurement",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "name": "FL(t)",
+      "meaning": "left ride-down/rail reaction or explicitly defined load channel",
+      "generation": "real MBD/test only",
+      "status": "NOT_EXECUTED"
+    },
+    {
+      "name": "FR(t)",
+      "meaning": "right ride-down/rail reaction or explicitly defined load channel",
+      "generation": "real MBD/test only",
+      "status": "NOT_EXECUTED"
+    }
+  ],
+  "constraints": "Do not equate geometric capability, model-defined DOF, or target stroke with measured dynamic response.",
+  "correlation": "Same frame/time convention required across MBD, FE, and sled."
+}

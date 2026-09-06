@@ -1,0 +1,136 @@
+{
+  "artifact": "KINEMATIC_EXECUTION_CONTRACT",
+  "contract_version": "0.1",
+  "architecture": {
+    "seatback": [
+      "150L",
+      "150R"
+    ],
+    "carriage": [
+      120
+    ],
+    "ride_down": [
+      "130L",
+      "130R"
+    ],
+    "dual_rails": [
+      "110L",
+      "110R"
+    ],
+    "vehicle_base": [
+      100
+    ]
+  },
+  "signals": [
+    {
+      "signal_id": "KIN-X",
+      "name": "x(t)",
+      "source": null,
+      "coordinate_system": null,
+      "sign_convention": null,
+      "reference_frame": null,
+      "unit": null,
+      "sampling_definition": null,
+      "integration_rule": null,
+      "differentiation_rule": null,
+      "measurement_source": null,
+      "model_source": null,
+      "validation_source": null,
+      "state": "INPUT_REQUIRED"
+    },
+    {
+      "signal_id": "KIN-V",
+      "name": "v(t)",
+      "source": null,
+      "coordinate_system": null,
+      "sign_convention": null,
+      "reference_frame": null,
+      "unit": null,
+      "sampling_definition": null,
+      "integration_rule": null,
+      "differentiation_rule": null,
+      "measurement_source": null,
+      "model_source": null,
+      "validation_source": null,
+      "state": "INPUT_REQUIRED"
+    },
+    {
+      "signal_id": "KIN-A",
+      "name": "a(t)",
+      "source": null,
+      "coordinate_system": null,
+      "sign_convention": null,
+      "reference_frame": null,
+      "unit": null,
+      "sampling_definition": null,
+      "integration_rule": null,
+      "differentiation_rule": null,
+      "measurement_source": null,
+      "model_source": null,
+      "validation_source": null,
+      "state": "INPUT_REQUIRED"
+    },
+    {
+      "signal_id": "KIN-THETA",
+      "name": "theta(t)",
+      "source": null,
+      "coordinate_system": null,
+      "sign_convention": null,
+      "reference_frame": null,
+      "unit": null,
+      "sampling_definition": null,
+      "integration_rule": null,
+      "differentiation_rule": null,
+      "measurement_source": null,
+      "model_source": null,
+      "validation_source": null,
+      "state": "INPUT_REQUIRED"
+    },
+    {
+      "signal_id": "KIN-FL",
+      "name": "FL(t)",
+      "source": null,
+      "coordinate_system": null,
+      "sign_convention": null,
+      "reference_frame": null,
+      "unit": null,
+      "sampling_definition": null,
+      "integration_rule": null,
+      "differentiation_rule": null,
+      "measurement_source": null,
+      "model_source": null,
+      "validation_source": null,
+      "state": "INPUT_REQUIRED"
+    },
+    {
+      "signal_id": "KIN-FR",
+      "name": "FR(t)",
+      "source": null,
+      "coordinate_system": null,
+      "sign_convention": null,
+      "reference_frame": null,
+      "unit": null,
+      "sampling_definition": null,
+      "integration_rule": null,
+      "differentiation_rule": null,
+      "measurement_source": null,
+      "model_source": null,
+      "validation_source": null,
+      "state": "INPUT_REQUIRED"
+    }
+  ],
+  "qa_controls": [
+    "explicit single authoritative time base",
+    "no double integration without drift control",
+    "coordinate transform log required",
+    "sign convention invariant checks",
+    "left/right identity checks",
+    "sampling synchronization check"
+  ],
+  "derivation_policy": {
+    "position_to_velocity": "declared numerical differentiation only",
+    "velocity_to_acceleration": "declared numerical differentiation only",
+    "acceleration_to_velocity": "single integration with baseline/drift control if used",
+    "velocity_to_position": "single integration with initial condition and drift control if used"
+  }
+}

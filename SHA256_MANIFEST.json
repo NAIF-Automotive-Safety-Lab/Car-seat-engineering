@@ -1,0 +1,66 @@
+{
+  "timestamp_utc": "2026-09-05T23:42:42.677194+00:00",
+  "parent_r4_1_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "artifacts": [
+    {
+      "artifact": "Energy/ENERGY_FLOW_DEFINITION.json",
+      "sha256": "2ad9da45052b1c4bf50cf0e02dd9d94f51a79aa600507de0e11abe604fc4790c",
+      "parent_r4_1_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+    },
+    {
+      "artifact": "Faults/FAULT_MATRIX.json",
+      "sha256": "076999ce91d8f0b1828ae67415b9f64de23859f35897137d8012ad230ea21962",
+      "parent_r4_1_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+    },
+    {
+      "artifact": "Gates/DEPENDENCIES_ON_V4.json",
+      "sha256": "db02d8935498de18b90a2d2ee33d8deb069963d24efe16b9eb17ead77bc8c574",
+      "parent_r4_1_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+    },
+    {
+      "artifact": "Interfaces/INTERFACE_DEFINITION.json",
+      "sha256": "f6e2914e8fdfd131639f42baebe5ffdff994489cd72ede827351e1955db5c481",
+      "parent_r4_1_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+    },
+    {
+      "artifact": "Interfaces/OPEN_ENGINEERING_QUESTIONS.json",
+      "sha256": "ba2b3196e35ca218912b6e130cc0410992fcba88f07ca4ef8a30224fcfa76ad9",
+      "parent_r4_1_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+    },
+    {
+      "artifact": "Kinematics/KINEMATIC_MODEL_DEFINITION.json",
+      "sha256": "0bc0f6effb577318109f841ee82a659955020ffb939c947c7f1360addb75a46e",
+      "parent_r4_1_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+    },
+    {
+      "artifact": "Parameters/PARAMETRIC_DESIGN_SCHEMA.json",
+      "sha256": "7826ab450337e0091ea013ec787b49553f5c47f58fa458691107e899ffa4b9c0",
+      "parent_r4_1_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+    },
+    {
+      "artifact": "README.md",
+      "sha256": "64f697af582756763ea8060f6526cf21d6e3b9a1444d0cc4693701fbb0a9f0e0",
+      "parent_r4_1_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+    },
+    {
+      "artifact": "V5_Occupant_Restraint/V5_ARCHITECTURE.json",
+      "sha256": "44505a126f26072ea0b304eb7f6ad3003fa2994290a5b4d62ff6698e8084830b",
+      "parent_r4_1_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+    },
+    {
+      "artifact": "V6_Instrumented_Sled/V6_ARCHITECTURE.json",
+      "sha256": "b1199e7b968593942b9ffbc025bffd997864a82b51f39fe32aa4df81bb8e82e8",
+      "parent_r4_1_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+    },
+    {
+      "artifact": "V7_FE_Correlation/V7_CORRELATION_ARCHITECTURE.json",
+      "sha256": "4fda2b5323be27351a5a874853ccb2674b7c323cb94bb48f242e8ca209beba1a",
+      "parent_r4_1_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+    },
+    {
+      "artifact": "manifests/EVIDENCE_STATUS.json",
+      "sha256": "21d3d0cede62623212cf3923a13be31577fb56154db7ab1060715b3d12362a17",
+      "parent_r4_1_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+    }
+  ]
+}

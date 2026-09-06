@@ -1,0 +1,74 @@
+{
+  "status": "DEFINED",
+  "common_interfaces": [
+    {
+      "id": "I1",
+      "from": "VEHICLE_BASE",
+      "to": "RAILS",
+      "parameters": [
+        "hardpoints",
+        "datum",
+        "interface stiffness"
+      ],
+      "status": "BLOCKED"
+    },
+    {
+      "id": "I2",
+      "from": "RAILS",
+      "to": "CARRIAGE",
+      "parameters": [
+        "guided motion",
+        "reactions",
+        "friction"
+      ],
+      "status": "DEFINED/UNVALIDATED"
+    },
+    {
+      "id": "I3",
+      "from": "CARRIAGE",
+      "to": "SEATBACK",
+      "parameters": [
+        "hinge axis",
+        "theta",
+        "limits",
+        "reactions"
+      ],
+      "status": "DEFINED/UNVALIDATED"
+    },
+    {
+      "id": "I4",
+      "from": "CARRIAGE",
+      "to": "ABSORBERS",
+      "parameters": [
+        "stroke",
+        "F-x",
+        "F-v",
+        "mount properties"
+      ],
+      "status": "BLOCKED"
+    },
+    {
+      "id": "I5",
+      "from": "SEATBACK",
+      "to": "RESTRAINT",
+      "parameters": [
+        "anchor motion",
+        "geometry",
+        "loads"
+      ],
+      "status": "BLOCKED"
+    },
+    {
+      "id": "I6",
+      "from": "OCCUPANT",
+      "to": "SEAT/RESTRAINT",
+      "parameters": [
+        "mass",
+        "anthropometry",
+        "contact",
+        "belt geometry"
+      ],
+      "status": "BLOCKED"
+    }
+  ]
+}

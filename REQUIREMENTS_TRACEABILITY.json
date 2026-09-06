@@ -1,0 +1,497 @@
+{
+  "artifact": "REQUIREMENTS_TRACEABILITY",
+  "version": "R4.1-CONTRACT-0.1",
+  "authority_state": {
+    "r4_1_baseline": "PASS",
+    "r4_1_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "r4_1_mutation": false,
+    "r4_2": "NOT_AUTHORIZED",
+    "promotion": "BLOCKED"
+  },
+  "allowed_statuses": [
+    "VERIFIED",
+    "DEFINED",
+    "IMPLEMENTATION_READY",
+    "INPUT_REQUIRED",
+    "BLOCKED",
+    "NOT_TESTED",
+    "NOT_VALIDATED"
+  ],
+  "requirements": [
+    {
+      "requirement_id": "REQ-V5-001",
+      "function": "Represent occupant using an explicitly specified computational representation",
+      "parameter_refs": [
+        "P-V5-REP"
+      ],
+      "interface_refs": [
+        "IF-V5-OCCUPANT"
+      ],
+      "model_refs": [
+        "MODEL-V5-OCCUPANT"
+      ],
+      "test_refs": [
+        "TEST-V5-READINESS"
+      ],
+      "evidence_refs": [
+        "EV-V5-INPUT-CLOSURE"
+      ],
+      "acceptance_criterion": "representation is non-null and source/provenance are present",
+      "verification_status": "DEFINED"
+    },
+    {
+      "requirement_id": "REQ-V5-002",
+      "function": "Supply traceable anthropometry without guessed values",
+      "parameter_refs": [
+        "P-V5-ANTHRO"
+      ],
+      "interface_refs": [
+        "IF-V5-OCCUPANT"
+      ],
+      "model_refs": [
+        "MODEL-V5-OCCUPANT"
+      ],
+      "test_refs": [
+        "TEST-V5-ANTHRO-INPUT"
+      ],
+      "evidence_refs": [
+        "EV-V5-ANTHRO-SOURCE"
+      ],
+      "acceptance_criterion": "source is explicit and validation state is closed",
+      "verification_status": "DEFINED"
+    },
+    {
+      "requirement_id": "REQ-V5-003",
+      "function": "Define occupant mass/CG/inertia from authoritative inputs",
+      "parameter_refs": [
+        "P-V5-MASS",
+        "P-V5-CG",
+        "P-V5-INERTIA"
+      ],
+      "interface_refs": [
+        "IF-V5-OCCUPANT"
+      ],
+      "model_refs": [
+        "MODEL-V5-OC-INERTIA"
+      ],
+      "test_refs": [
+        "TEST-V5-READINESS"
+      ],
+      "evidence_refs": [
+        "EV-V5-PHYSICS"
+      ],
+      "acceptance_criterion": "each critical field has value or explicit BLOCKED state; no guess",
+      "verification_status": "DEFINED"
+    },
+    {
+      "requirement_id": "REQ-V5-004",
+      "function": "Define occupant joints and DOF",
+      "parameter_refs": [
+        "P-V5-JOINTS",
+        "P-V5-DOF"
+      ],
+      "interface_refs": [
+        "IF-V5-JOINTS"
+      ],
+      "model_refs": [
+        "MODEL-V5-KINEMATICS"
+      ],
+      "test_refs": [
+        "TEST-V5-KINEMATICS"
+      ],
+      "evidence_refs": [
+        "EV-V5-KINEMATICS"
+      ],
+      "acceptance_criterion": "joint definitions and DOF are complete for intended model",
+      "verification_status": "DEFINED"
+    },
+    {
+      "requirement_id": "REQ-V5-005",
+      "function": "Define restraint and seat-contact interfaces",
+      "parameter_refs": [
+        "P-V5-RESTRAINT",
+        "P-V5-SEATCONTACT"
+      ],
+      "interface_refs": [
+        "IF-V5-REST",
+        "CONTACT"
+      ],
+      "model_refs": [
+        "MODEL-V5-INTERFACE"
+      ],
+      "test_refs": [
+        "TEST-V5-INTERFACE"
+      ],
+      "evidence_refs": [
+        "EV-V5-INTERFACE"
+      ],
+      "acceptance_criterion": "all required interfaces are mapped and sourced",
+      "verification_status": "DEFINED"
+    },
+    {
+      "requirement_id": "REQ-V5-006",
+      "function": "Define initial posture/velocity/boundary conditions",
+      "parameter_refs": [
+        "P-V5-INIT",
+        "P-V5-BC"
+      ],
+      "interface_refs": [
+        "IF-V5-BC"
+      ],
+      "model_refs": [
+        "MODEL-V5-INITIAL"
+      ],
+      "test_refs": [
+        "TEST-V5-INITIAL"
+      ],
+      "evidence_refs": [
+        "EV-V5-INITIAL"
+      ],
+      "acceptance_criterion": "closed with explicit source and units",
+      "verification_status": "DEFINED"
+    },
+    {
+      "requirement_id": "REQ-V5-007",
+      "function": "Define load and response channels",
+      "parameter_refs": [
+        "P-V5-LOAD",
+        "P-V5-RESP"
+      ],
+      "interface_refs": [
+        "IF-V5-CHANNELS"
+      ],
+      "model_refs": [
+        "MODEL-V5-CHANNELS"
+      ],
+      "test_refs": [
+        "TEST-V5-CHANNELS"
+      ],
+      "evidence_refs": [
+        "EV-V5-CHANNEL-MAP"
+      ],
+      "acceptance_criterion": "channel map is complete and unique",
+      "verification_status": "DEFINED"
+    },
+    {
+      "requirement_id": "REQ-V6-001",
+      "function": "Provide executable sled sensor and acquisition specification",
+      "parameter_refs": [
+        "P-V6-SENSOR-SPEC"
+      ],
+      "interface_refs": [
+        "IF-V6-SENSOR"
+      ],
+      "model_refs": [
+        "MODEL-V6-INSTRUMENTATION"
+      ],
+      "test_refs": [
+        "TEST-V6-SETUP"
+      ],
+      "evidence_refs": [
+        "EV-V6-SETUP"
+      ],
+      "acceptance_criterion": "all mandatory sensor fields are closed",
+      "verification_status": "DEFINED"
+    },
+    {
+      "requirement_id": "REQ-V6-002",
+      "function": "Enforce calibration and synchronization traceability",
+      "parameter_refs": [
+        "P-V6-CAL",
+        "SYNC"
+      ],
+      "interface_refs": [
+        "IF-V6-CAL"
+      ],
+      "model_refs": [
+        "MODEL-V6-DATA-ACQ"
+      ],
+      "test_refs": [
+        "TEST-V6-CAL-SYNC"
+      ],
+      "evidence_refs": [
+        "EV-V6-CAL-SYNC"
+      ],
+      "acceptance_criterion": "calibration reference and synchronization policy are explicit",
+      "verification_status": "DEFINED"
+    },
+    {
+      "requirement_id": "REQ-V6-003",
+      "function": "Define accepted sled data states and provenance",
+      "parameter_refs": [
+        "P-V6-DATA-STATE"
+      ],
+      "interface_refs": [
+        "IF-V6-DATA"
+      ],
+      "model_refs": [
+        "MODEL-V6-SLED-DATA"
+      ],
+      "test_refs": [
+        "TEST-V6-DATA-QA"
+      ],
+      "evidence_refs": [
+        "EV-V6-DATA-QA"
+      ],
+      "acceptance_criterion": "state transitions and provenance fields are machine-readable",
+      "verification_status": "DEFINED"
+    },
+    {
+      "requirement_id": "REQ-V7-001",
+      "function": "Correlate FE to physical hierarchy with explicit channel mapping",
+      "parameter_refs": [
+        "P-V7-MAP"
+      ],
+      "interface_refs": [
+        "IF-V7-CORRELATION"
+      ],
+      "model_refs": [
+        "MODEL-V7-CORRELATION"
+      ],
+      "test_refs": [
+        "TEST-V7-CORRELATION"
+      ],
+      "evidence_refs": [
+        "EV-V7-CORRELATION"
+      ],
+      "acceptance_criterion": "all compared channels have deterministic mappings",
+      "verification_status": "DEFINED"
+    },
+    {
+      "requirement_id": "REQ-V7-002",
+      "function": "Normalize time/coordinate/sampling/filtering before metric calculation",
+      "parameter_refs": [
+        "P-V7-NORM"
+      ],
+      "interface_refs": [
+        "IF-V7-PREPROCESS"
+      ],
+      "model_refs": [
+        "MODEL-V7-PREPROCESS"
+      ],
+      "test_refs": [
+        "TEST-V7-PREPROCESS"
+      ],
+      "evidence_refs": [
+        "EV-V7-PREPROCESS"
+      ],
+      "acceptance_criterion": "transform sequence is explicit and auditable",
+      "verification_status": "DEFINED"
+    },
+    {
+      "requirement_id": "REQ-V7-003",
+      "function": "Compute generic correlation metrics without fabricated thresholds",
+      "parameter_refs": [
+        "P-V7-METRICS"
+      ],
+      "interface_refs": [
+        "IF-V7-METRICS"
+      ],
+      "model_refs": [
+        "MODEL-V7-METRICS"
+      ],
+      "test_refs": [
+        "TEST-V7-METRICS"
+      ],
+      "evidence_refs": [
+        "EV-V7-METRICS"
+      ],
+      "acceptance_criterion": "metrics are computable; threshold remains REQUIRED when unsourced",
+      "verification_status": "DEFINED"
+    },
+    {
+      "requirement_id": "REQ-KIN-001",
+      "function": "Generate x(t), v(t), a(t), theta(t), FL(t), FR(t) with traceable frames/signs",
+      "parameter_refs": [
+        "P-KIN-SIGNFRAME"
+      ],
+      "interface_refs": [
+        "IF-KIN"
+      ],
+      "model_refs": [
+        "MODEL-KIN"
+      ],
+      "test_refs": [
+        "TEST-KIN"
+      ],
+      "evidence_refs": [
+        "EV-KIN"
+      ],
+      "acceptance_criterion": "each signal declares source/frame/sign/unit/time-base",
+      "verification_status": "DEFINED"
+    },
+    {
+      "requirement_id": "REQ-KIN-002",
+      "function": "Prevent numerical drift and coordinate/channel ambiguity",
+      "parameter_refs": [
+        "P-KIN-INTEGRATION"
+      ],
+      "interface_refs": [
+        "IF-KIN"
+      ],
+      "model_refs": [
+        "MODEL-KIN-QA"
+      ],
+      "test_refs": [
+        "TEST-KIN-QA"
+      ],
+      "evidence_refs": [
+        "EV-KIN-QA"
+      ],
+      "acceptance_criterion": "integration/differentiation and channel identity checks exist",
+      "verification_status": "DEFINED"
+    },
+    {
+      "requirement_id": "REQ-ENE-001",
+      "function": "Account for energy through vehicle-to-occupant path",
+      "parameter_refs": [
+        "P-ENE-TERMS"
+      ],
+      "interface_refs": [
+        "IF-ENE-FLOW"
+      ],
+      "model_refs": [
+        "MODEL-ENE"
+      ],
+      "test_refs": [
+        "TEST-ENE-CONSERVATION"
+      ],
+      "evidence_refs": [
+        "EV-ENE"
+      ],
+      "acceptance_criterion": "all defined terms have equations/source and accounting sign",
+      "verification_status": "DEFINED"
+    },
+    {
+      "requirement_id": "REQ-ENE-002",
+      "function": "Detect energy imbalance without inventing a numerical result",
+      "parameter_refs": [
+        "P-ENE-BAL"
+      ],
+      "interface_refs": [
+        "IF-ENE-BAL"
+      ],
+      "model_refs": [
+        "MODEL-ENE-BAL"
+      ],
+      "test_refs": [
+        "TEST-ENE-CONSERVATION"
+      ],
+      "evidence_refs": [
+        "EV-ENE-BAL"
+      ],
+      "acceptance_criterion": "imbalance is calculated only from actual inputs",
+      "verification_status": "DEFINED"
+    },
+    {
+      "requirement_id": "REQ-FLT-001",
+      "function": "Make fault modes testable and evidence-linked",
+      "parameter_refs": [
+        "P-FLT-ATTR"
+      ],
+      "interface_refs": [
+        "IF-FLT"
+      ],
+      "model_refs": [
+        "MODEL-FMEA"
+      ],
+      "test_refs": [
+        "TEST-FLT"
+      ],
+      "evidence_refs": [
+        "EV-FLT"
+      ],
+      "acceptance_criterion": "required attributes exist; unknown ratings remain explicit",
+      "verification_status": "DEFINED"
+    },
+    {
+      "requirement_id": "REQ-V4-001",
+      "function": "Deliver V4 evidence required to unlock downstream stages",
+      "parameter_refs": [
+        "P-V4-EVIDENCE"
+      ],
+      "interface_refs": [
+        "IF-V4"
+      ],
+      "model_refs": [
+        "MODEL-V4-EVIDENCE"
+      ],
+      "test_refs": [
+        "TEST-V4-CLOSURE"
+      ],
+      "evidence_refs": [
+        "EV-V4"
+      ],
+      "acceptance_criterion": "all minimum evidence classes are present and valid",
+      "verification_status": "DEFINED"
+    },
+    {
+      "requirement_id": "REQ-GATE-001",
+      "function": "Apply fail-closed gates",
+      "parameter_refs": [
+        "P-GATE-STATE"
+      ],
+      "interface_refs": [
+        "IF-GATE"
+      ],
+      "model_refs": [
+        "MODEL-GATE"
+      ],
+      "test_refs": [
+        "TEST-GATE-NEGATIVE"
+      ],
+      "evidence_refs": [
+        "EV-GATE"
+      ],
+      "acceptance_criterion": "unknown/missing/blocked/untested/assumed never evaluate PASS",
+      "verification_status": "DEFINED"
+    },
+    {
+      "requirement_id": "REQ-NEXT-001",
+      "function": "Identify highest-priority blocker automatically",
+      "parameter_refs": [
+        "P-NEXT-PRIORITY"
+      ],
+      "interface_refs": [
+        "IF-NEXT"
+      ],
+      "model_refs": [
+        "MODEL-NEXT"
+      ],
+      "test_refs": [
+        "TEST-NEXT"
+      ],
+      "evidence_refs": [
+        "EV-NEXT"
+      ],
+      "acceptance_criterion": "first unsatisfied blocker in defined priority order is returned",
+      "verification_status": "DEFINED"
+    },
+    {
+      "requirement_id": "REQ-BASE-001",
+      "function": "Protect immutable R4.1 baseline",
+      "parameter_refs": [
+        "P-R4-1-SHA"
+      ],
+      "interface_refs": [
+        "IF-BASELINE"
+      ],
+      "model_refs": [
+        "MODEL-BASELINE"
+      ],
+      "test_refs": [
+        "TEST-BASELINE-INTEGRITY"
+      ],
+      "evidence_refs": [
+        "EV-BASELINE"
+      ],
+      "acceptance_criterion": "actual hash equals authoritative hash and mutation false",
+      "verification_status": "DEFINED"
+    }
+  ],
+  "orphan_rules": [
+    "Every requirement_id must resolve to at least one function, parameter, interface, model, test, evidence, and acceptance criterion.",
+    "Every parameter/interface/model/test/evidence ID must be referenced by at least one requirement or dependency.",
+    "Unreferenced entities are ORPHAN and cause the owning readiness gate to FAIL."
+  ]
+}

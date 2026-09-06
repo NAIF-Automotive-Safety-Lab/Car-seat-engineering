@@ -1,0 +1,31 @@
+{
+  "artifact": "INPUT_PROVENANCE_SCHEMA",
+  "contract_version": "0.1",
+  "record_fields": [
+    "input_id",
+    "name",
+    "value",
+    "unit",
+    "source",
+    "source_version",
+    "provenance_type",
+    "acquisition_method",
+    "acquisition_timestamp",
+    "operator_or_agent",
+    "file_ref",
+    "sha256",
+    "validation_state",
+    "required",
+    "status"
+  ],
+  "provenance_types": [
+    "DESIGN_SOURCE",
+    "MEASUREMENT",
+    "SIMULATION",
+    "LITERATURE",
+    "STANDARD",
+    "USER_PROVIDED",
+    "DERIVED"
+  ],
+  "rule": "DERIVED inputs must cite all parent input IDs and derivation method."
+}

@@ -1,0 +1,185 @@
+{
+  "artifact": "AUTOMATIC_GATE_DEFINITION",
+  "contract_version": "0.1",
+  "evaluation_semantics": {
+    "PASS": "all mandatory predicates true",
+    "FAIL": "any mandatory predicate false",
+    "UNKNOWN": "treated as FAIL"
+  },
+  "gates": [
+    {
+      "gate_id": "GATE_R4_1_BASELINE",
+      "default": "FAIL",
+      "unknown_is_pass": false,
+      "missing_is_pass": false,
+      "blocked_is_pass": false,
+      "untested_is_pass": false,
+      "assumed_is_verified": false,
+      "required_inputs": [
+        "actual baseline bytes",
+        "expected SHA256",
+        "mutation indicator"
+      ],
+      "expression": "sha256(actual)==fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68 AND mutation==FALSE",
+      "decision": "FAIL"
+    },
+    {
+      "gate_id": "GATE_PHYSICAL_INPUTS",
+      "default": "FAIL",
+      "unknown_is_pass": false,
+      "missing_is_pass": false,
+      "blocked_is_pass": false,
+      "untested_is_pass": false,
+      "assumed_is_verified": false,
+      "required_inputs": [
+        "all mandatory physical input records"
+      ],
+      "expression": "all mandatory physical inputs CLOSED with source/unit/provenance",
+      "decision": "FAIL"
+    },
+    {
+      "gate_id": "GATE_FE_RUNTIME",
+      "default": "FAIL",
+      "unknown_is_pass": false,
+      "missing_is_pass": false,
+      "blocked_is_pass": false,
+      "untested_is_pass": false,
+      "assumed_is_verified": false,
+      "required_inputs": [
+        "solver identity",
+        "runtime availability evidence"
+      ],
+      "expression": "solver identity present AND executable runtime evidence present",
+      "decision": "FAIL"
+    },
+    {
+      "gate_id": "GATE_FE_MODEL",
+      "default": "FAIL",
+      "unknown_is_pass": false,
+      "missing_is_pass": false,
+      "blocked_is_pass": false,
+      "untested_is_pass": false,
+      "assumed_is_verified": false,
+      "required_inputs": [
+        "mesh",
+        "material",
+        "contacts",
+        "connections",
+        "BCs"
+      ],
+      "expression": "all mandatory FE model artifacts VALIDATED",
+      "decision": "FAIL"
+    },
+    {
+      "gate_id": "GATE_FE_EXECUTION",
+      "default": "FAIL",
+      "unknown_is_pass": false,
+      "missing_is_pass": false,
+      "blocked_is_pass": false,
+      "untested_is_pass": false,
+      "assumed_is_verified": false,
+      "required_inputs": [
+        "execution record",
+        "solver log",
+        "result artifacts"
+      ],
+      "expression": "execution completed and artifacts are traceable",
+      "decision": "FAIL"
+    },
+    {
+      "gate_id": "GATE_FE_VALIDITY",
+      "default": "FAIL",
+      "unknown_is_pass": false,
+      "missing_is_pass": false,
+      "blocked_is_pass": false,
+      "untested_is_pass": false,
+      "assumed_is_verified": false,
+      "required_inputs": [
+        "convergence",
+        "quality checks",
+        "failure evaluation"
+      ],
+      "expression": "validity evidence complete and no blocking validity issue",
+      "decision": "FAIL"
+    },
+    {
+      "gate_id": "GATE_V5_READINESS",
+      "default": "FAIL",
+      "unknown_is_pass": false,
+      "missing_is_pass": false,
+      "blocked_is_pass": false,
+      "untested_is_pass": false,
+      "assumed_is_verified": false,
+      "required_inputs": [
+        "V5 critical fields",
+        "V4 valid outputs"
+      ],
+      "expression": "all V5 critical inputs closed AND V4 consumed artifacts not BLOCKED/INVALID/UNVERIFIED",
+      "decision": "FAIL"
+    },
+    {
+      "gate_id": "GATE_V6_READINESS",
+      "default": "FAIL",
+      "unknown_is_pass": false,
+      "missing_is_pass": false,
+      "blocked_is_pass": false,
+      "untested_is_pass": false,
+      "assumed_is_verified": false,
+      "required_inputs": [
+        "sensor manifest",
+        "calibration",
+        "sync",
+        "test setup"
+      ],
+      "expression": "all mandatory setup fields closed AND calibration/sync ready",
+      "decision": "FAIL"
+    },
+    {
+      "gate_id": "GATE_V7_READINESS",
+      "default": "FAIL",
+      "unknown_is_pass": false,
+      "missing_is_pass": false,
+      "blocked_is_pass": false,
+      "untested_is_pass": false,
+      "assumed_is_verified": false,
+      "required_inputs": [
+        "FE results",
+        "test data",
+        "mapping",
+        "preprocessing"
+      ],
+      "expression": "all compared datasets valid and mapping/preprocessing complete",
+      "decision": "FAIL"
+    },
+    {
+      "gate_id": "GATE_R4_2_AUTHORIZATION",
+      "default": "FAIL",
+      "unknown_is_pass": false,
+      "missing_is_pass": false,
+      "blocked_is_pass": false,
+      "untested_is_pass": false,
+      "assumed_is_verified": false,
+      "required_inputs": [
+        "Peter authorization record"
+      ],
+      "expression": "explicit authorization exists AND all prerequisite gates PASS",
+      "decision": "FAIL"
+    },
+    {
+      "gate_id": "GATE_PROMOTION",
+      "default": "FAIL",
+      "unknown_is_pass": false,
+      "missing_is_pass": false,
+      "blocked_is_pass": false,
+      "untested_is_pass": false,
+      "assumed_is_verified": false,
+      "required_inputs": [
+        "R4.2 authorization",
+        "verification evidence",
+        "promotion decision"
+      ],
+      "expression": "explicit promotion authorization AND all required verification evidence PASS",
+      "decision": "FAIL"
+    }
+  ]
+}

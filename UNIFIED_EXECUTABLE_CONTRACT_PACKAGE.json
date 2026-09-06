@@ -1,0 +1,1949 @@
+{
+  "package": {
+    "package": "SEAT_ENGINEERING_EXECUTABLE_CONTRACTS",
+    "package_version": "R4.1-CONTRACT-0.1",
+    "baseline": {
+      "sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "mutation": false
+    },
+    "authority_state": {
+      "V4": "BLOCKED_BY_EXECUTION_AND_INPUT_GAPS",
+      "V5": "DEFINED_NOT_VALIDATED",
+      "V6": "DEFINED_NOT_TESTED",
+      "V7": "DEFINED_NOT_CORRELATED",
+      "R4_2": "NOT_AUTHORIZED",
+      "PROMOTION": "BLOCKED"
+    },
+    "artifacts": [
+      {
+        "name": "AUTOMATIC_GATE_DEFINITION",
+        "path": "contracts/AUTOMATIC_GATE_DEFINITION.json",
+        "sha256": "af5a2ec6d70f262b589fa152b9d6f7cca74ac4db843d82b060f4a4c8e5acfb25"
+      },
+      {
+        "name": "BASELINE_INTEGRITY_REPORT",
+        "path": "contracts/BASELINE_INTEGRITY_REPORT.json",
+        "sha256": "35a921790874bf6e1ef16b2519e05606ad0547908ffaeaa0d8e1441cd988bfd5"
+      },
+      {
+        "name": "ENERGY_ACCOUNTING_CONTRACT",
+        "path": "contracts/ENERGY_ACCOUNTING_CONTRACT.json",
+        "sha256": "60152c3cf1bcfc78335cbf640858b45687ad3d939f596735a7831bb538e8c0c2"
+      },
+      {
+        "name": "EVIDENCE_SCHEMA",
+        "path": "contracts/EVIDENCE_SCHEMA.json",
+        "sha256": "b39033291edfe462c7ac7405de7603688559684a515b016f7d60fe6f952a4255"
+      },
+      {
+        "name": "FAULT_TEST_CONTRACT",
+        "path": "contracts/FAULT_TEST_CONTRACT.json",
+        "sha256": "437e25099f69500e6ef344b529b96dcdfe54c2f133087cf05bd0c92999ff75a6"
+      },
+      {
+        "name": "INPUT_PROVENANCE_SCHEMA",
+        "path": "contracts/INPUT_PROVENANCE_SCHEMA.json",
+        "sha256": "6d81f8d5c102ba40720b69d736e52c0100f52bfb737bd796c19c3c93ce0462da"
+      },
+      {
+        "name": "KINEMATIC_EXECUTION_CONTRACT",
+        "path": "contracts/KINEMATIC_EXECUTION_CONTRACT.json",
+        "sha256": "f09bca4d5fe043ada073f262d6f6a83bffc87873115d9d8e1b008809351a471e"
+      },
+      {
+        "name": "NEXT_ACTION_ENGINE",
+        "path": "contracts/NEXT_ACTION_ENGINE.json",
+        "sha256": "49a633e77f200403922b3d14329b0bca447aecc2349cd9cf82ea5628a648f394"
+      },
+      {
+        "name": "REQUIREMENTS_TRACEABILITY",
+        "path": "contracts/REQUIREMENTS_TRACEABILITY.json",
+        "sha256": "e55ba4adc3bcd15e2e703a3c9d8dd636e6a64a0032201860af2c7811bd11344d"
+      },
+      {
+        "name": "V4_DEPENDENCY_CONTRACT",
+        "path": "contracts/V4_DEPENDENCY_CONTRACT.json",
+        "sha256": "d114482faa43e4379324e388f69877c03d019ccb264e05aae4a4e8bc26491c0a"
+      },
+      {
+        "name": "V5_EXECUTION_CONTRACT",
+        "path": "contracts/V5_EXECUTION_CONTRACT.json",
+        "sha256": "d699a4bc15fa0fd1177396dc6bac52e307cb38a405966c80c7e83e0afd9b1a22"
+      },
+      {
+        "name": "V6_SLED_EXECUTION_CONTRACT",
+        "path": "contracts/V6_SLED_EXECUTION_CONTRACT.json",
+        "sha256": "7ba8e95986643843cde56034265cadaeed4d20d7510e789edd43cc49f74e2378"
+      },
+      {
+        "name": "V7_CORRELATION_ENGINE_CONTRACT",
+        "path": "contracts/V7_CORRELATION_ENGINE_CONTRACT.json",
+        "sha256": "75f52b660fb2abb9ce8ab216559c15bebb20c23c58a8d61b3e2dd78fbc3bca7f"
+      }
+    ]
+  },
+  "contracts": {
+    "AUTOMATIC_GATE_DEFINITION": {
+      "artifact": "AUTOMATIC_GATE_DEFINITION",
+      "contract_version": "0.1",
+      "evaluation_semantics": {
+        "PASS": "all mandatory predicates true",
+        "FAIL": "any mandatory predicate false",
+        "UNKNOWN": "treated as FAIL"
+      },
+      "gates": [
+        {
+          "gate_id": "GATE_R4_1_BASELINE",
+          "default": "FAIL",
+          "unknown_is_pass": false,
+          "missing_is_pass": false,
+          "blocked_is_pass": false,
+          "untested_is_pass": false,
+          "assumed_is_verified": false,
+          "required_inputs": [
+            "actual baseline bytes",
+            "expected SHA256",
+            "mutation indicator"
+          ],
+          "expression": "sha256(actual)==fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68 AND mutation==FALSE",
+          "decision": "FAIL"
+        },
+        {
+          "gate_id": "GATE_PHYSICAL_INPUTS",
+          "default": "FAIL",
+          "unknown_is_pass": false,
+          "missing_is_pass": false,
+          "blocked_is_pass": false,
+          "untested_is_pass": false,
+          "assumed_is_verified": false,
+          "required_inputs": [
+            "all mandatory physical input records"
+          ],
+          "expression": "all mandatory physical inputs CLOSED with source/unit/provenance",
+          "decision": "FAIL"
+        },
+        {
+          "gate_id": "GATE_FE_RUNTIME",
+          "default": "FAIL",
+          "unknown_is_pass": false,
+          "missing_is_pass": false,
+          "blocked_is_pass": false,
+          "untested_is_pass": false,
+          "assumed_is_verified": false,
+          "required_inputs": [
+            "solver identity",
+            "runtime availability evidence"
+          ],
+          "expression": "solver identity present AND executable runtime evidence present",
+          "decision": "FAIL"
+        },
+        {
+          "gate_id": "GATE_FE_MODEL",
+          "default": "FAIL",
+          "unknown_is_pass": false,
+          "missing_is_pass": false,
+          "blocked_is_pass": false,
+          "untested_is_pass": false,
+          "assumed_is_verified": false,
+          "required_inputs": [
+            "mesh",
+            "material",
+            "contacts",
+            "connections",
+            "BCs"
+          ],
+          "expression": "all mandatory FE model artifacts VALIDATED",
+          "decision": "FAIL"
+        },
+        {
+          "gate_id": "GATE_FE_EXECUTION",
+          "default": "FAIL",
+          "unknown_is_pass": false,
+          "missing_is_pass": false,
+          "blocked_is_pass": false,
+          "untested_is_pass": false,
+          "assumed_is_verified": false,
+          "required_inputs": [
+            "execution record",
+            "solver log",
+            "result artifacts"
+          ],
+          "expression": "execution completed and artifacts are traceable",
+          "decision": "FAIL"
+        },
+        {
+          "gate_id": "GATE_FE_VALIDITY",
+          "default": "FAIL",
+          "unknown_is_pass": false,
+          "missing_is_pass": false,
+          "blocked_is_pass": false,
+          "untested_is_pass": false,
+          "assumed_is_verified": false,
+          "required_inputs": [
+            "convergence",
+            "quality checks",
+            "failure evaluation"
+          ],
+          "expression": "validity evidence complete and no blocking validity issue",
+          "decision": "FAIL"
+        },
+        {
+          "gate_id": "GATE_V5_READINESS",
+          "default": "FAIL",
+          "unknown_is_pass": false,
+          "missing_is_pass": false,
+          "blocked_is_pass": false,
+          "untested_is_pass": false,
+          "assumed_is_verified": false,
+          "required_inputs": [
+            "V5 critical fields",
+            "V4 valid outputs"
+          ],
+          "expression": "all V5 critical inputs closed AND V4 consumed artifacts not BLOCKED/INVALID/UNVERIFIED",
+          "decision": "FAIL"
+        },
+        {
+          "gate_id": "GATE_V6_READINESS",
+          "default": "FAIL",
+          "unknown_is_pass": false,
+          "missing_is_pass": false,
+          "blocked_is_pass": false,
+          "untested_is_pass": false,
+          "assumed_is_verified": false,
+          "required_inputs": [
+            "sensor manifest",
+            "calibration",
+            "sync",
+            "test setup"
+          ],
+          "expression": "all mandatory setup fields closed AND calibration/sync ready",
+          "decision": "FAIL"
+        },
+        {
+          "gate_id": "GATE_V7_READINESS",
+          "default": "FAIL",
+          "unknown_is_pass": false,
+          "missing_is_pass": false,
+          "blocked_is_pass": false,
+          "untested_is_pass": false,
+          "assumed_is_verified": false,
+          "required_inputs": [
+            "FE results",
+            "test data",
+            "mapping",
+            "preprocessing"
+          ],
+          "expression": "all compared datasets valid and mapping/preprocessing complete",
+          "decision": "FAIL"
+        },
+        {
+          "gate_id": "GATE_R4_2_AUTHORIZATION",
+          "default": "FAIL",
+          "unknown_is_pass": false,
+          "missing_is_pass": false,
+          "blocked_is_pass": false,
+          "untested_is_pass": false,
+          "assumed_is_verified": false,
+          "required_inputs": [
+            "Peter authorization record"
+          ],
+          "expression": "explicit authorization exists AND all prerequisite gates PASS",
+          "decision": "FAIL"
+        },
+        {
+          "gate_id": "GATE_PROMOTION",
+          "default": "FAIL",
+          "unknown_is_pass": false,
+          "missing_is_pass": false,
+          "blocked_is_pass": false,
+          "untested_is_pass": false,
+          "assumed_is_verified": false,
+          "required_inputs": [
+            "R4.2 authorization",
+            "verification evidence",
+            "promotion decision"
+          ],
+          "expression": "explicit promotion authorization AND all required verification evidence PASS",
+          "decision": "FAIL"
+        }
+      ]
+    },
+    "BASELINE_INTEGRITY_REPORT": {
+      "artifact": "BASELINE_INTEGRITY_REPORT",
+      "contract_version": "0.1",
+      "authoritative_expected_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "authoritative_mutation_flag": false,
+      "independent_verification": "NOT_PERFORMED",
+      "verification_reason": "Baseline bytes/file were not supplied in this conversation/package; hash cannot be recomputed here.",
+      "required_check": "sha256(actual_R4.1_bytes)==authoritative_expected_sha256 AND mutation_flag==FALSE",
+      "on_mismatch": "STOP IMMEDIATELY",
+      "status": "ASSERTED_BY_AUTHORITY_NOT_INDEPENDENTLY_VERIFIED"
+    },
+    "ENERGY_ACCOUNTING_CONTRACT": {
+      "artifact": "ENERGY_ACCOUNTING_CONTRACT",
+      "contract_version": "0.1",
+      "flow": [
+        "VEHICLE_INPUT",
+        "RAILS",
+        "RIDE-DOWN",
+        "ABSORBER",
+        "CARRIAGE",
+        "SEAT_PAN",
+        "PELVIS",
+        "TORSO",
+        "HEAD_SUPPORT",
+        "OCCUPANT"
+      ],
+      "terms": [
+        {
+          "term_id": "kinetic_energy",
+          "value": null,
+          "unit": null,
+          "source": null,
+          "equation": null,
+          "sign_convention": null,
+          "status": "INPUT_REQUIRED"
+        },
+        {
+          "term_id": "absorbed_energy",
+          "value": null,
+          "unit": null,
+          "source": null,
+          "equation": null,
+          "sign_convention": null,
+          "status": "INPUT_REQUIRED"
+        },
+        {
+          "term_id": "elastic_energy",
+          "value": null,
+          "unit": null,
+          "source": null,
+          "equation": null,
+          "sign_convention": null,
+          "status": "INPUT_REQUIRED"
+        },
+        {
+          "term_id": "plastic_dissipation",
+          "value": null,
+          "unit": null,
+          "source": null,
+          "equation": null,
+          "sign_convention": null,
+          "status": "INPUT_REQUIRED"
+        },
+        {
+          "term_id": "contact_work",
+          "value": null,
+          "unit": null,
+          "source": null,
+          "equation": null,
+          "sign_convention": null,
+          "status": "INPUT_REQUIRED"
+        },
+        {
+          "term_id": "friction_work",
+          "value": null,
+          "unit": null,
+          "source": null,
+          "equation": null,
+          "sign_convention": null,
+          "status": "INPUT_REQUIRED"
+        },
+        {
+          "term_id": "joint_work",
+          "value": null,
+          "unit": null,
+          "source": null,
+          "equation": null,
+          "sign_convention": null,
+          "status": "INPUT_REQUIRED"
+        },
+        {
+          "term_id": "residual_energy",
+          "value": null,
+          "unit": null,
+          "source": null,
+          "equation": null,
+          "sign_convention": null,
+          "status": "INPUT_REQUIRED"
+        }
+      ],
+      "checks": [
+        {
+          "check_id": "ENE-BAL-001",
+          "definition": "input energy - accounted downstream energy = residual/imbalance",
+          "threshold": null,
+          "threshold_required": true,
+          "status": "DEFINED"
+        },
+        {
+          "check_id": "ENE-BAL-002",
+          "definition": "component-to-component work/energy transfer continuity",
+          "threshold": null,
+          "threshold_required": true,
+          "status": "DEFINED"
+        }
+      ],
+      "rule": "No numerical energy result is reported until actual executable/model/test data are supplied."
+    },
+    "EVIDENCE_SCHEMA": {
+      "artifact": "EVIDENCE_SCHEMA",
+      "contract_version": "0.1",
+      "record_fields": [
+        "evidence_id",
+        "evidence_type",
+        "requirement_refs",
+        "test_refs",
+        "source_uri",
+        "producer_agent",
+        "execution_id",
+        "timestamp_utc",
+        "file_name",
+        "sha256",
+        "status",
+        "validity",
+        "reviewer",
+        "review_timestamp",
+        "parent_evidence_refs"
+      ],
+      "valid_statuses": [
+        "VERIFIED",
+        "DEFINED",
+        "IMPLEMENTATION_READY",
+        "INPUT_REQUIRED",
+        "BLOCKED",
+        "NOT_TESTED",
+        "NOT_VALIDATED",
+        "INVALID",
+        "UNVERIFIED"
+      ],
+      "invalidation_rules": [
+        "missing hash",
+        "missing producer or source",
+        "broken requirement/test linkage",
+        "result consumed after INVALID/BLOCKED/UNVERIFIED"
+      ]
+    },
+    "FAULT_TEST_CONTRACT": {
+      "artifact": "FAULT_TEST_CONTRACT",
+      "contract_version": "0.1",
+      "rating_rule": "No probability/severity/detectability values may be invented.",
+      "faults": [
+        {
+          "FAULT_ID": "FLT-001",
+          "COMPONENT": "LOCK",
+          "INITIATING_EVENT": null,
+          "FAILURE_MECHANISM": null,
+          "PHYSICAL_EFFECT": null,
+          "DETECTABLE_SIGNAL": null,
+          "DETECTION_METHOD": null,
+          "SAFE_STATE": null,
+          "DEGRADED_STATE": null,
+          "SEVERITY": null,
+          "OCCURRENCE": null,
+          "DETECTABILITY": null,
+          "REQUIRED_TEST": "TEST-FLT-001",
+          "EVIDENCE_REQUIRED": [
+            "failure mechanism evidence",
+            "detectable signal evidence",
+            "test evidence"
+          ],
+          "STATUS": "INPUT_REQUIRED",
+          "RATING_POLICY": "NULL/TO_BE_ESTABLISHED until sourced evidence exists"
+        },
+        {
+          "FAULT_ID": "FLT-002",
+          "COMPONENT": "LEFT_RAIL",
+          "INITIATING_EVENT": null,
+          "FAILURE_MECHANISM": null,
+          "PHYSICAL_EFFECT": null,
+          "DETECTABLE_SIGNAL": null,
+          "DETECTION_METHOD": null,
+          "SAFE_STATE": null,
+          "DEGRADED_STATE": null,
+          "SEVERITY": null,
+          "OCCURRENCE": null,
+          "DETECTABILITY": null,
+          "REQUIRED_TEST": "TEST-FLT-002",
+          "EVIDENCE_REQUIRED": [
+            "failure mechanism evidence",
+            "detectable signal evidence",
+            "test evidence"
+          ],
+          "STATUS": "INPUT_REQUIRED",
+          "RATING_POLICY": "NULL/TO_BE_ESTABLISHED until sourced evidence exists"
+        },
+        {
+          "FAULT_ID": "FLT-003",
+          "COMPONENT": "RIGHT_RAIL",
+          "INITIATING_EVENT": null,
+          "FAILURE_MECHANISM": null,
+          "PHYSICAL_EFFECT": null,
+          "DETECTABLE_SIGNAL": null,
+          "DETECTION_METHOD": null,
+          "SAFE_STATE": null,
+          "DEGRADED_STATE": null,
+          "SEVERITY": null,
+          "OCCURRENCE": null,
+          "DETECTABILITY": null,
+          "REQUIRED_TEST": "TEST-FLT-003",
+          "EVIDENCE_REQUIRED": [
+            "failure mechanism evidence",
+            "detectable signal evidence",
+            "test evidence"
+          ],
+          "STATUS": "INPUT_REQUIRED",
+          "RATING_POLICY": "NULL/TO_BE_ESTABLISHED until sourced evidence exists"
+        },
+        {
+          "FAULT_ID": "FLT-004",
+          "COMPONENT": "RIDE-DOWN",
+          "INITIATING_EVENT": null,
+          "FAILURE_MECHANISM": null,
+          "PHYSICAL_EFFECT": null,
+          "DETECTABLE_SIGNAL": null,
+          "DETECTION_METHOD": null,
+          "SAFE_STATE": null,
+          "DEGRADED_STATE": null,
+          "SEVERITY": null,
+          "OCCURRENCE": null,
+          "DETECTABILITY": null,
+          "REQUIRED_TEST": "TEST-FLT-004",
+          "EVIDENCE_REQUIRED": [
+            "failure mechanism evidence",
+            "detectable signal evidence",
+            "test evidence"
+          ],
+          "STATUS": "INPUT_REQUIRED",
+          "RATING_POLICY": "NULL/TO_BE_ESTABLISHED until sourced evidence exists"
+        },
+        {
+          "FAULT_ID": "FLT-005",
+          "COMPONENT": "ABSORBER",
+          "INITIATING_EVENT": null,
+          "FAILURE_MECHANISM": null,
+          "PHYSICAL_EFFECT": null,
+          "DETECTABLE_SIGNAL": null,
+          "DETECTION_METHOD": null,
+          "SAFE_STATE": null,
+          "DEGRADED_STATE": null,
+          "SEVERITY": null,
+          "OCCURRENCE": null,
+          "DETECTABILITY": null,
+          "REQUIRED_TEST": "TEST-FLT-005",
+          "EVIDENCE_REQUIRED": [
+            "failure mechanism evidence",
+            "detectable signal evidence",
+            "test evidence"
+          ],
+          "STATUS": "INPUT_REQUIRED",
+          "RATING_POLICY": "NULL/TO_BE_ESTABLISHED until sourced evidence exists"
+        },
+        {
+          "FAULT_ID": "FLT-006",
+          "COMPONENT": "SEATBACK",
+          "INITIATING_EVENT": null,
+          "FAILURE_MECHANISM": null,
+          "PHYSICAL_EFFECT": null,
+          "DETECTABLE_SIGNAL": null,
+          "DETECTION_METHOD": null,
+          "SAFE_STATE": null,
+          "DEGRADED_STATE": null,
+          "SEVERITY": null,
+          "OCCURRENCE": null,
+          "DETECTABILITY": null,
+          "REQUIRED_TEST": "TEST-FLT-006",
+          "EVIDENCE_REQUIRED": [
+            "failure mechanism evidence",
+            "detectable signal evidence",
+            "test evidence"
+          ],
+          "STATUS": "INPUT_REQUIRED",
+          "RATING_POLICY": "NULL/TO_BE_ESTABLISHED until sourced evidence exists"
+        },
+        {
+          "FAULT_ID": "FLT-007",
+          "COMPONENT": "JOINTS",
+          "INITIATING_EVENT": null,
+          "FAILURE_MECHANISM": null,
+          "PHYSICAL_EFFECT": null,
+          "DETECTABLE_SIGNAL": null,
+          "DETECTION_METHOD": null,
+          "SAFE_STATE": null,
+          "DEGRADED_STATE": null,
+          "SEVERITY": null,
+          "OCCURRENCE": null,
+          "DETECTABILITY": null,
+          "REQUIRED_TEST": "TEST-FLT-007",
+          "EVIDENCE_REQUIRED": [
+            "failure mechanism evidence",
+            "detectable signal evidence",
+            "test evidence"
+          ],
+          "STATUS": "INPUT_REQUIRED",
+          "RATING_POLICY": "NULL/TO_BE_ESTABLISHED until sourced evidence exists"
+        },
+        {
+          "FAULT_ID": "FLT-008",
+          "COMPONENT": "BOLTS",
+          "INITIATING_EVENT": null,
+          "FAILURE_MECHANISM": null,
+          "PHYSICAL_EFFECT": null,
+          "DETECTABLE_SIGNAL": null,
+          "DETECTION_METHOD": null,
+          "SAFE_STATE": null,
+          "DEGRADED_STATE": null,
+          "SEVERITY": null,
+          "OCCURRENCE": null,
+          "DETECTABILITY": null,
+          "REQUIRED_TEST": "TEST-FLT-008",
+          "EVIDENCE_REQUIRED": [
+            "failure mechanism evidence",
+            "detectable signal evidence",
+            "test evidence"
+          ],
+          "STATUS": "INPUT_REQUIRED",
+          "RATING_POLICY": "NULL/TO_BE_ESTABLISHED until sourced evidence exists"
+        },
+        {
+          "FAULT_ID": "FLT-009",
+          "COMPONENT": "WELDS",
+          "INITIATING_EVENT": null,
+          "FAILURE_MECHANISM": null,
+          "PHYSICAL_EFFECT": null,
+          "DETECTABLE_SIGNAL": null,
+          "DETECTION_METHOD": null,
+          "SAFE_STATE": null,
+          "DEGRADED_STATE": null,
+          "SEVERITY": null,
+          "OCCURRENCE": null,
+          "DETECTABILITY": null,
+          "REQUIRED_TEST": "TEST-FLT-009",
+          "EVIDENCE_REQUIRED": [
+            "failure mechanism evidence",
+            "detectable signal evidence",
+            "test evidence"
+          ],
+          "STATUS": "INPUT_REQUIRED",
+          "RATING_POLICY": "NULL/TO_BE_ESTABLISHED until sourced evidence exists"
+        },
+        {
+          "FAULT_ID": "FLT-010",
+          "COMPONENT": "CONTACT",
+          "INITIATING_EVENT": null,
+          "FAILURE_MECHANISM": null,
+          "PHYSICAL_EFFECT": null,
+          "DETECTABLE_SIGNAL": null,
+          "DETECTION_METHOD": null,
+          "SAFE_STATE": null,
+          "DEGRADED_STATE": null,
+          "SEVERITY": null,
+          "OCCURRENCE": null,
+          "DETECTABILITY": null,
+          "REQUIRED_TEST": "TEST-FLT-010",
+          "EVIDENCE_REQUIRED": [
+            "failure mechanism evidence",
+            "detectable signal evidence",
+            "test evidence"
+          ],
+          "STATUS": "INPUT_REQUIRED",
+          "RATING_POLICY": "NULL/TO_BE_ESTABLISHED until sourced evidence exists"
+        },
+        {
+          "FAULT_ID": "FLT-011",
+          "COMPONENT": "SENSORS",
+          "INITIATING_EVENT": null,
+          "FAILURE_MECHANISM": null,
+          "PHYSICAL_EFFECT": null,
+          "DETECTABLE_SIGNAL": null,
+          "DETECTION_METHOD": null,
+          "SAFE_STATE": null,
+          "DEGRADED_STATE": null,
+          "SEVERITY": null,
+          "OCCURRENCE": null,
+          "DETECTABILITY": null,
+          "REQUIRED_TEST": "TEST-FLT-011",
+          "EVIDENCE_REQUIRED": [
+            "failure mechanism evidence",
+            "detectable signal evidence",
+            "test evidence"
+          ],
+          "STATUS": "INPUT_REQUIRED",
+          "RATING_POLICY": "NULL/TO_BE_ESTABLISHED until sourced evidence exists"
+        },
+        {
+          "FAULT_ID": "FLT-012",
+          "COMPONENT": "ACTUATORS",
+          "INITIATING_EVENT": null,
+          "FAILURE_MECHANISM": null,
+          "PHYSICAL_EFFECT": null,
+          "DETECTABLE_SIGNAL": null,
+          "DETECTION_METHOD": null,
+          "SAFE_STATE": null,
+          "DEGRADED_STATE": null,
+          "SEVERITY": null,
+          "OCCURRENCE": null,
+          "DETECTABILITY": null,
+          "REQUIRED_TEST": "TEST-FLT-012",
+          "EVIDENCE_REQUIRED": [
+            "failure mechanism evidence",
+            "detectable signal evidence",
+            "test evidence"
+          ],
+          "STATUS": "INPUT_REQUIRED",
+          "RATING_POLICY": "NULL/TO_BE_ESTABLISHED until sourced evidence exists"
+        },
+        {
+          "FAULT_ID": "FLT-013",
+          "COMPONENT": "CONTROL_LOGIC",
+          "INITIATING_EVENT": null,
+          "FAILURE_MECHANISM": null,
+          "PHYSICAL_EFFECT": null,
+          "DETECTABLE_SIGNAL": null,
+          "DETECTION_METHOD": null,
+          "SAFE_STATE": null,
+          "DEGRADED_STATE": null,
+          "SEVERITY": null,
+          "OCCURRENCE": null,
+          "DETECTABILITY": null,
+          "REQUIRED_TEST": "TEST-FLT-013",
+          "EVIDENCE_REQUIRED": [
+            "failure mechanism evidence",
+            "detectable signal evidence",
+            "test evidence"
+          ],
+          "STATUS": "INPUT_REQUIRED",
+          "RATING_POLICY": "NULL/TO_BE_ESTABLISHED until sourced evidence exists"
+        }
+      ],
+      "test_record_fields": [
+        "FAULT_ID",
+        "test_id",
+        "setup_ref",
+        "stimulus_ref",
+        "instrumentation_ref",
+        "expected_detection",
+        "actual_observation",
+        "raw_data_ref",
+        "analysis_ref",
+        "evidence_ref",
+        "decision",
+        "status"
+      ]
+    },
+    "INPUT_PROVENANCE_SCHEMA": {
+      "artifact": "INPUT_PROVENANCE_SCHEMA",
+      "contract_version": "0.1",
+      "record_fields": [
+        "input_id",
+        "name",
+        "value",
+        "unit",
+        "source",
+        "source_version",
+        "provenance_type",
+        "acquisition_method",
+        "acquisition_timestamp",
+        "operator_or_agent",
+        "file_ref",
+        "sha256",
+        "validation_state",
+        "required",
+        "status"
+      ],
+      "provenance_types": [
+        "DESIGN_SOURCE",
+        "MEASUREMENT",
+        "SIMULATION",
+        "LITERATURE",
+        "STANDARD",
+        "USER_PROVIDED",
+        "DERIVED"
+      ],
+      "rule": "DERIVED inputs must cite all parent input IDs and derivation method."
+    },
+    "KINEMATIC_EXECUTION_CONTRACT": {
+      "artifact": "KINEMATIC_EXECUTION_CONTRACT",
+      "contract_version": "0.1",
+      "architecture": {
+        "seatback": [
+          "150L",
+          "150R"
+        ],
+        "carriage": [
+          120
+        ],
+        "ride_down": [
+          "130L",
+          "130R"
+        ],
+        "dual_rails": [
+          "110L",
+          "110R"
+        ],
+        "vehicle_base": [
+          100
+        ]
+      },
+      "signals": [
+        {
+          "signal_id": "KIN-X",
+          "name": "x(t)",
+          "source": null,
+          "coordinate_system": null,
+          "sign_convention": null,
+          "reference_frame": null,
+          "unit": null,
+          "sampling_definition": null,
+          "integration_rule": null,
+          "differentiation_rule": null,
+          "measurement_source": null,
+          "model_source": null,
+          "validation_source": null,
+          "state": "INPUT_REQUIRED"
+        },
+        {
+          "signal_id": "KIN-V",
+          "name": "v(t)",
+          "source": null,
+          "coordinate_system": null,
+          "sign_convention": null,
+          "reference_frame": null,
+          "unit": null,
+          "sampling_definition": null,
+          "integration_rule": null,
+          "differentiation_rule": null,
+          "measurement_source": null,
+          "model_source": null,
+          "validation_source": null,
+          "state": "INPUT_REQUIRED"
+        },
+        {
+          "signal_id": "KIN-A",
+          "name": "a(t)",
+          "source": null,
+          "coordinate_system": null,
+          "sign_convention": null,
+          "reference_frame": null,
+          "unit": null,
+          "sampling_definition": null,
+          "integration_rule": null,
+          "differentiation_rule": null,
+          "measurement_source": null,
+          "model_source": null,
+          "validation_source": null,
+          "state": "INPUT_REQUIRED"
+        },
+        {
+          "signal_id": "KIN-THETA",
+          "name": "theta(t)",
+          "source": null,
+          "coordinate_system": null,
+          "sign_convention": null,
+          "reference_frame": null,
+          "unit": null,
+          "sampling_definition": null,
+          "integration_rule": null,
+          "differentiation_rule": null,
+          "measurement_source": null,
+          "model_source": null,
+          "validation_source": null,
+          "state": "INPUT_REQUIRED"
+        },
+        {
+          "signal_id": "KIN-FL",
+          "name": "FL(t)",
+          "source": null,
+          "coordinate_system": null,
+          "sign_convention": null,
+          "reference_frame": null,
+          "unit": null,
+          "sampling_definition": null,
+          "integration_rule": null,
+          "differentiation_rule": null,
+          "measurement_source": null,
+          "model_source": null,
+          "validation_source": null,
+          "state": "INPUT_REQUIRED"
+        },
+        {
+          "signal_id": "KIN-FR",
+          "name": "FR(t)",
+          "source": null,
+          "coordinate_system": null,
+          "sign_convention": null,
+          "reference_frame": null,
+          "unit": null,
+          "sampling_definition": null,
+          "integration_rule": null,
+          "differentiation_rule": null,
+          "measurement_source": null,
+          "model_source": null,
+          "validation_source": null,
+          "state": "INPUT_REQUIRED"
+        }
+      ],
+      "qa_controls": [
+        "explicit single authoritative time base",
+        "no double integration without drift control",
+        "coordinate transform log required",
+        "sign convention invariant checks",
+        "left/right identity checks",
+        "sampling synchronization check"
+      ],
+      "derivation_policy": {
+        "position_to_velocity": "declared numerical differentiation only",
+        "velocity_to_acceleration": "declared numerical differentiation only",
+        "acceleration_to_velocity": "single integration with baseline/drift control if used",
+        "velocity_to_position": "single integration with initial condition and drift control if used"
+      }
+    },
+    "NEXT_ACTION_ENGINE": {
+      "artifact": "NEXT_ACTION_ENGINE",
+      "contract_version": "0.1",
+      "priority_order": [
+        "EVIDENCE_INTEGRITY",
+        "BASELINE_INTEGRITY",
+        "PHYSICAL_INPUTS",
+        "SOLVER_AVAILABILITY",
+        "FE_MODEL_READINESS",
+        "FE_EXECUTION",
+        "FE_VALIDATION",
+        "V5_READINESS",
+        "V6_TESTING",
+        "V7_CORRELATION",
+        "R4_2_AUTHORIZATION",
+        "PROMOTION"
+      ],
+      "selection_rule": "return first unsatisfied priority item; do not skip unresolved higher priority blockers",
+      "current_snapshot": [
+        {
+          "priority": 1,
+          "blocker_id": "BLOCKER-V4-EVIDENCE-INTEGRITY",
+          "blocker_description": "V4 execution/input-gap closure evidence is not present in the authoritative state; downstream validation cannot be claimed.",
+          "required_input": "V4 execution record + input-gap closure manifest + evidence hashes",
+          "responsible_agent": "Manus-Tasks",
+          "dependency": "V4 execution environment and complete inputs",
+          "unlock_condition": "V4 evidence package passes evidence integrity gate"
+        },
+        {
+          "priority": 3,
+          "blocker_id": "BLOCKER-V4-PHYSICAL-INPUTS",
+          "blocker_description": "Authoritative state says V4 has input gaps; exact missing inputs must be enumerated and closed.",
+          "required_input": "machine-readable V4 input-gap list with source/unit/provenance and closure state",
+          "responsible_agent": "Manus-Tasks",
+          "dependency": "V4_REQUIRED_INPUTS",
+          "unlock_condition": "all mandatory V4 inputs CLOSED"
+        }
+      ],
+      "return_schema": [
+        "BLOCKER_ID",
+        "BLOCKER_DESCRIPTION",
+        "REQUIRED_INPUT",
+        "RESPONSIBLE_AGENT",
+        "DEPENDENCY",
+        "UNLOCK_CONDITION"
+      ]
+    },
+    "REQUIREMENTS_TRACEABILITY": {
+      "artifact": "REQUIREMENTS_TRACEABILITY",
+      "version": "R4.1-CONTRACT-0.1",
+      "authority_state": {
+        "r4_1_baseline": "PASS",
+        "r4_1_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+        "r4_1_mutation": false,
+        "r4_2": "NOT_AUTHORIZED",
+        "promotion": "BLOCKED"
+      },
+      "allowed_statuses": [
+        "VERIFIED",
+        "DEFINED",
+        "IMPLEMENTATION_READY",
+        "INPUT_REQUIRED",
+        "BLOCKED",
+        "NOT_TESTED",
+        "NOT_VALIDATED"
+      ],
+      "requirements": [
+        {
+          "requirement_id": "REQ-V5-001",
+          "function": "Represent occupant using an explicitly specified computational representation",
+          "parameter_refs": [
+            "P-V5-REP"
+          ],
+          "interface_refs": [
+            "IF-V5-OCCUPANT"
+          ],
+          "model_refs": [
+            "MODEL-V5-OCCUPANT"
+          ],
+          "test_refs": [
+            "TEST-V5-READINESS"
+          ],
+          "evidence_refs": [
+            "EV-V5-INPUT-CLOSURE"
+          ],
+          "acceptance_criterion": "representation is non-null and source/provenance are present",
+          "verification_status": "DEFINED"
+        },
+        {
+          "requirement_id": "REQ-V5-002",
+          "function": "Supply traceable anthropometry without guessed values",
+          "parameter_refs": [
+            "P-V5-ANTHRO"
+          ],
+          "interface_refs": [
+            "IF-V5-OCCUPANT"
+          ],
+          "model_refs": [
+            "MODEL-V5-OCCUPANT"
+          ],
+          "test_refs": [
+            "TEST-V5-ANTHRO-INPUT"
+          ],
+          "evidence_refs": [
+            "EV-V5-ANTHRO-SOURCE"
+          ],
+          "acceptance_criterion": "source is explicit and validation state is closed",
+          "verification_status": "DEFINED"
+        },
+        {
+          "requirement_id": "REQ-V5-003",
+          "function": "Define occupant mass/CG/inertia from authoritative inputs",
+          "parameter_refs": [
+            "P-V5-MASS",
+            "P-V5-CG",
+            "P-V5-INERTIA"
+          ],
+          "interface_refs": [
+            "IF-V5-OCCUPANT"
+          ],
+          "model_refs": [
+            "MODEL-V5-OC-INERTIA"
+          ],
+          "test_refs": [
+            "TEST-V5-READINESS"
+          ],
+          "evidence_refs": [
+            "EV-V5-PHYSICS"
+          ],
+          "acceptance_criterion": "each critical field has value or explicit BLOCKED state; no guess",
+          "verification_status": "DEFINED"
+        },
+        {
+          "requirement_id": "REQ-V5-004",
+          "function": "Define occupant joints and DOF",
+          "parameter_refs": [
+            "P-V5-JOINTS",
+            "P-V5-DOF"
+          ],
+          "interface_refs": [
+            "IF-V5-JOINTS"
+          ],
+          "model_refs": [
+            "MODEL-V5-KINEMATICS"
+          ],
+          "test_refs": [
+            "TEST-V5-KINEMATICS"
+          ],
+          "evidence_refs": [
+            "EV-V5-KINEMATICS"
+          ],
+          "acceptance_criterion": "joint definitions and DOF are complete for intended model",
+          "verification_status": "DEFINED"
+        },
+        {
+          "requirement_id": "REQ-V5-005",
+          "function": "Define restraint and seat-contact interfaces",
+          "parameter_refs": [
+            "P-V5-RESTRAINT",
+            "P-V5-SEATCONTACT"
+          ],
+          "interface_refs": [
+            "IF-V5-REST",
+            "CONTACT"
+          ],
+          "model_refs": [
+            "MODEL-V5-INTERFACE"
+          ],
+          "test_refs": [
+            "TEST-V5-INTERFACE"
+          ],
+          "evidence_refs": [
+            "EV-V5-INTERFACE"
+          ],
+          "acceptance_criterion": "all required interfaces are mapped and sourced",
+          "verification_status": "DEFINED"
+        },
+        {
+          "requirement_id": "REQ-V5-006",
+          "function": "Define initial posture/velocity/boundary conditions",
+          "parameter_refs": [
+            "P-V5-INIT",
+            "P-V5-BC"
+          ],
+          "interface_refs": [
+            "IF-V5-BC"
+          ],
+          "model_refs": [
+            "MODEL-V5-INITIAL"
+          ],
+          "test_refs": [
+            "TEST-V5-INITIAL"
+          ],
+          "evidence_refs": [
+            "EV-V5-INITIAL"
+          ],
+          "acceptance_criterion": "closed with explicit source and units",
+          "verification_status": "DEFINED"
+        },
+        {
+          "requirement_id": "REQ-V5-007",
+          "function": "Define load and response channels",
+          "parameter_refs": [
+            "P-V5-LOAD",
+            "P-V5-RESP"
+          ],
+          "interface_refs": [
+            "IF-V5-CHANNELS"
+          ],
+          "model_refs": [
+            "MODEL-V5-CHANNELS"
+          ],
+          "test_refs": [
+            "TEST-V5-CHANNELS"
+          ],
+          "evidence_refs": [
+            "EV-V5-CHANNEL-MAP"
+          ],
+          "acceptance_criterion": "channel map is complete and unique",
+          "verification_status": "DEFINED"
+        },
+        {
+          "requirement_id": "REQ-V6-001",
+          "function": "Provide executable sled sensor and acquisition specification",
+          "parameter_refs": [
+            "P-V6-SENSOR-SPEC"
+          ],
+          "interface_refs": [
+            "IF-V6-SENSOR"
+          ],
+          "model_refs": [
+            "MODEL-V6-INSTRUMENTATION"
+          ],
+          "test_refs": [
+            "TEST-V6-SETUP"
+          ],
+          "evidence_refs": [
+            "EV-V6-SETUP"
+          ],
+          "acceptance_criterion": "all mandatory sensor fields are closed",
+          "verification_status": "DEFINED"
+        },
+        {
+          "requirement_id": "REQ-V6-002",
+          "function": "Enforce calibration and synchronization traceability",
+          "parameter_refs": [
+            "P-V6-CAL",
+            "SYNC"
+          ],
+          "interface_refs": [
+            "IF-V6-CAL"
+          ],
+          "model_refs": [
+            "MODEL-V6-DATA-ACQ"
+          ],
+          "test_refs": [
+            "TEST-V6-CAL-SYNC"
+          ],
+          "evidence_refs": [
+            "EV-V6-CAL-SYNC"
+          ],
+          "acceptance_criterion": "calibration reference and synchronization policy are explicit",
+          "verification_status": "DEFINED"
+        },
+        {
+          "requirement_id": "REQ-V6-003",
+          "function": "Define accepted sled data states and provenance",
+          "parameter_refs": [
+            "P-V6-DATA-STATE"
+          ],
+          "interface_refs": [
+            "IF-V6-DATA"
+          ],
+          "model_refs": [
+            "MODEL-V6-SLED-DATA"
+          ],
+          "test_refs": [
+            "TEST-V6-DATA-QA"
+          ],
+          "evidence_refs": [
+            "EV-V6-DATA-QA"
+          ],
+          "acceptance_criterion": "state transitions and provenance fields are machine-readable",
+          "verification_status": "DEFINED"
+        },
+        {
+          "requirement_id": "REQ-V7-001",
+          "function": "Correlate FE to physical hierarchy with explicit channel mapping",
+          "parameter_refs": [
+            "P-V7-MAP"
+          ],
+          "interface_refs": [
+            "IF-V7-CORRELATION"
+          ],
+          "model_refs": [
+            "MODEL-V7-CORRELATION"
+          ],
+          "test_refs": [
+            "TEST-V7-CORRELATION"
+          ],
+          "evidence_refs": [
+            "EV-V7-CORRELATION"
+          ],
+          "acceptance_criterion": "all compared channels have deterministic mappings",
+          "verification_status": "DEFINED"
+        },
+        {
+          "requirement_id": "REQ-V7-002",
+          "function": "Normalize time/coordinate/sampling/filtering before metric calculation",
+          "parameter_refs": [
+            "P-V7-NORM"
+          ],
+          "interface_refs": [
+            "IF-V7-PREPROCESS"
+          ],
+          "model_refs": [
+            "MODEL-V7-PREPROCESS"
+          ],
+          "test_refs": [
+            "TEST-V7-PREPROCESS"
+          ],
+          "evidence_refs": [
+            "EV-V7-PREPROCESS"
+          ],
+          "acceptance_criterion": "transform sequence is explicit and auditable",
+          "verification_status": "DEFINED"
+        },
+        {
+          "requirement_id": "REQ-V7-003",
+          "function": "Compute generic correlation metrics without fabricated thresholds",
+          "parameter_refs": [
+            "P-V7-METRICS"
+          ],
+          "interface_refs": [
+            "IF-V7-METRICS"
+          ],
+          "model_refs": [
+            "MODEL-V7-METRICS"
+          ],
+          "test_refs": [
+            "TEST-V7-METRICS"
+          ],
+          "evidence_refs": [
+            "EV-V7-METRICS"
+          ],
+          "acceptance_criterion": "metrics are computable; threshold remains REQUIRED when unsourced",
+          "verification_status": "DEFINED"
+        },
+        {
+          "requirement_id": "REQ-KIN-001",
+          "function": "Generate x(t), v(t), a(t), theta(t), FL(t), FR(t) with traceable frames/signs",
+          "parameter_refs": [
+            "P-KIN-SIGNFRAME"
+          ],
+          "interface_refs": [
+            "IF-KIN"
+          ],
+          "model_refs": [
+            "MODEL-KIN"
+          ],
+          "test_refs": [
+            "TEST-KIN"
+          ],
+          "evidence_refs": [
+            "EV-KIN"
+          ],
+          "acceptance_criterion": "each signal declares source/frame/sign/unit/time-base",
+          "verification_status": "DEFINED"
+        },
+        {
+          "requirement_id": "REQ-KIN-002",
+          "function": "Prevent numerical drift and coordinate/channel ambiguity",
+          "parameter_refs": [
+            "P-KIN-INTEGRATION"
+          ],
+          "interface_refs": [
+            "IF-KIN"
+          ],
+          "model_refs": [
+            "MODEL-KIN-QA"
+          ],
+          "test_refs": [
+            "TEST-KIN-QA"
+          ],
+          "evidence_refs": [
+            "EV-KIN-QA"
+          ],
+          "acceptance_criterion": "integration/differentiation and channel identity checks exist",
+          "verification_status": "DEFINED"
+        },
+        {
+          "requirement_id": "REQ-ENE-001",
+          "function": "Account for energy through vehicle-to-occupant path",
+          "parameter_refs": [
+            "P-ENE-TERMS"
+          ],
+          "interface_refs": [
+            "IF-ENE-FLOW"
+          ],
+          "model_refs": [
+            "MODEL-ENE"
+          ],
+          "test_refs": [
+            "TEST-ENE-CONSERVATION"
+          ],
+          "evidence_refs": [
+            "EV-ENE"
+          ],
+          "acceptance_criterion": "all defined terms have equations/source and accounting sign",
+          "verification_status": "DEFINED"
+        },
+        {
+          "requirement_id": "REQ-ENE-002",
+          "function": "Detect energy imbalance without inventing a numerical result",
+          "parameter_refs": [
+            "P-ENE-BAL"
+          ],
+          "interface_refs": [
+            "IF-ENE-BAL"
+          ],
+          "model_refs": [
+            "MODEL-ENE-BAL"
+          ],
+          "test_refs": [
+            "TEST-ENE-CONSERVATION"
+          ],
+          "evidence_refs": [
+            "EV-ENE-BAL"
+          ],
+          "acceptance_criterion": "imbalance is calculated only from actual inputs",
+          "verification_status": "DEFINED"
+        },
+        {
+          "requirement_id": "REQ-FLT-001",
+          "function": "Make fault modes testable and evidence-linked",
+          "parameter_refs": [
+            "P-FLT-ATTR"
+          ],
+          "interface_refs": [
+            "IF-FLT"
+          ],
+          "model_refs": [
+            "MODEL-FMEA"
+          ],
+          "test_refs": [
+            "TEST-FLT"
+          ],
+          "evidence_refs": [
+            "EV-FLT"
+          ],
+          "acceptance_criterion": "required attributes exist; unknown ratings remain explicit",
+          "verification_status": "DEFINED"
+        },
+        {
+          "requirement_id": "REQ-V4-001",
+          "function": "Deliver V4 evidence required to unlock downstream stages",
+          "parameter_refs": [
+            "P-V4-EVIDENCE"
+          ],
+          "interface_refs": [
+            "IF-V4"
+          ],
+          "model_refs": [
+            "MODEL-V4-EVIDENCE"
+          ],
+          "test_refs": [
+            "TEST-V4-CLOSURE"
+          ],
+          "evidence_refs": [
+            "EV-V4"
+          ],
+          "acceptance_criterion": "all minimum evidence classes are present and valid",
+          "verification_status": "DEFINED"
+        },
+        {
+          "requirement_id": "REQ-GATE-001",
+          "function": "Apply fail-closed gates",
+          "parameter_refs": [
+            "P-GATE-STATE"
+          ],
+          "interface_refs": [
+            "IF-GATE"
+          ],
+          "model_refs": [
+            "MODEL-GATE"
+          ],
+          "test_refs": [
+            "TEST-GATE-NEGATIVE"
+          ],
+          "evidence_refs": [
+            "EV-GATE"
+          ],
+          "acceptance_criterion": "unknown/missing/blocked/untested/assumed never evaluate PASS",
+          "verification_status": "DEFINED"
+        },
+        {
+          "requirement_id": "REQ-NEXT-001",
+          "function": "Identify highest-priority blocker automatically",
+          "parameter_refs": [
+            "P-NEXT-PRIORITY"
+          ],
+          "interface_refs": [
+            "IF-NEXT"
+          ],
+          "model_refs": [
+            "MODEL-NEXT"
+          ],
+          "test_refs": [
+            "TEST-NEXT"
+          ],
+          "evidence_refs": [
+            "EV-NEXT"
+          ],
+          "acceptance_criterion": "first unsatisfied blocker in defined priority order is returned",
+          "verification_status": "DEFINED"
+        },
+        {
+          "requirement_id": "REQ-BASE-001",
+          "function": "Protect immutable R4.1 baseline",
+          "parameter_refs": [
+            "P-R4-1-SHA"
+          ],
+          "interface_refs": [
+            "IF-BASELINE"
+          ],
+          "model_refs": [
+            "MODEL-BASELINE"
+          ],
+          "test_refs": [
+            "TEST-BASELINE-INTEGRITY"
+          ],
+          "evidence_refs": [
+            "EV-BASELINE"
+          ],
+          "acceptance_criterion": "actual hash equals authoritative hash and mutation false",
+          "verification_status": "DEFINED"
+        }
+      ],
+      "orphan_rules": [
+        "Every requirement_id must resolve to at least one function, parameter, interface, model, test, evidence, and acceptance criterion.",
+        "Every parameter/interface/model/test/evidence ID must be referenced by at least one requirement or dependency.",
+        "Unreferenced entities are ORPHAN and cause the owning readiness gate to FAIL."
+      ]
+    },
+    "V4_DEPENDENCY_CONTRACT": {
+      "artifact": "V4_DEPENDENCY_CONTRACT",
+      "contract_version": "0.1",
+      "status": "BLOCKED",
+      "required_inputs": [
+        "geometry/mesh definition",
+        "material evidence",
+        "contact definitions",
+        "connection/joint definitions",
+        "boundary conditions",
+        "solver identity/availability",
+        "analysis controls"
+      ],
+      "required_outputs": [
+        "mesh evidence",
+        "solver identity",
+        "material evidence",
+        "contact evidence",
+        "connection evidence",
+        "boundary-condition evidence",
+        "convergence evidence",
+        "stress/strain evidence",
+        "deformation evidence",
+        "energy evidence",
+        "failure criterion evaluation"
+      ],
+      "evidence_schema": [
+        {
+          "evidence_id": null,
+          "class": null,
+          "source_file": null,
+          "producer": null,
+          "execution_id": null,
+          "timestamp": null,
+          "hash": null,
+          "status": "INPUT_REQUIRED",
+          "validity": null,
+          "review_status": "NOT_VALIDATED"
+        }
+      ],
+      "failure_schema": {
+        "failure_id": null,
+        "stage": null,
+        "failure_type": null,
+        "message": null,
+        "input_state": null,
+        "recoverable": null,
+        "root_cause_ref": null,
+        "evidence_ref": null,
+        "status": "INPUT_REQUIRED"
+      },
+      "root_cause_schema": {
+        "root_cause_id": null,
+        "symptom": null,
+        "candidate_causes": [],
+        "tests": [],
+        "disposition": null,
+        "evidence_refs": [],
+        "status": "INPUT_REQUIRED"
+      },
+      "downstream_consumption_rule": "V5/V6/V7 MUST reject V4 results with BLOCKED, INVALID, or UNVERIFIED status."
+    },
+    "V5_EXECUTION_CONTRACT": {
+      "artifact": "V5_EXECUTION_CONTRACT",
+      "contract_version": "0.1",
+      "status": "IMPLEMENTATION_READY",
+      "execution_rule": "No critical field may be silently defaulted. Missing critical inputs keep V5_MODEL_READY=FAIL.",
+      "fields": [
+        {
+          "field_id": "V5-OCCUPANT_REPRESENTATION",
+          "name": "occupant_representation",
+          "value": null,
+          "state": "INPUT_REQUIRED",
+          "unit": null,
+          "source": null,
+          "provenance": null,
+          "required": true,
+          "validation_status": "INPUT_REQUIRED",
+          "description": "representation type and implementation identity; NULL only when blocked"
+        },
+        {
+          "field_id": "V5-ANTHROPOMETRY_SOURCE",
+          "name": "anthropometry_source",
+          "value": null,
+          "state": "INPUT_REQUIRED",
+          "unit": null,
+          "source": null,
+          "provenance": null,
+          "required": true,
+          "validation_status": "INPUT_REQUIRED",
+          "description": "authoritative source identifier; no guessed anthropometry"
+        },
+        {
+          "field_id": "V5-MASS",
+          "name": "mass",
+          "value": null,
+          "state": "INPUT_REQUIRED",
+          "unit": null,
+          "source": null,
+          "provenance": null,
+          "required": true,
+          "validation_status": "INPUT_REQUIRED",
+          "description": "numeric mass when supplied"
+        },
+        {
+          "field_id": "V5-CG",
+          "name": "CG",
+          "value": null,
+          "state": "INPUT_REQUIRED",
+          "unit": null,
+          "source": null,
+          "provenance": null,
+          "required": true,
+          "validation_status": "INPUT_REQUIRED",
+          "description": "CG vector in declared frame when supplied"
+        },
+        {
+          "field_id": "V5-INERTIA",
+          "name": "inertia",
+          "value": null,
+          "state": "INPUT_REQUIRED",
+          "unit": null,
+          "source": null,
+          "provenance": null,
+          "required": true,
+          "validation_status": "INPUT_REQUIRED",
+          "description": "mass inertia tensor in declared frame when supplied"
+        },
+        {
+          "field_id": "V5-JOINT_DEFINITIONS",
+          "name": "joint_definitions",
+          "value": null,
+          "state": "INPUT_REQUIRED",
+          "unit": null,
+          "source": null,
+          "provenance": null,
+          "required": true,
+          "validation_status": "INPUT_REQUIRED",
+          "description": "joint list with type, parent, child, axes, limits if applicable"
+        },
+        {
+          "field_id": "V5-DEGREES_OF_FREEDOM",
+          "name": "degrees_of_freedom",
+          "value": null,
+          "state": "INPUT_REQUIRED",
+          "unit": null,
+          "source": null,
+          "provenance": null,
+          "required": true,
+          "validation_status": "INPUT_REQUIRED",
+          "description": "explicit DOF set"
+        },
+        {
+          "field_id": "V5-PELVIS_REFERENCE",
+          "name": "pelvis_reference",
+          "value": null,
+          "state": "INPUT_REQUIRED",
+          "unit": null,
+          "source": null,
+          "provenance": null,
+          "required": true,
+          "validation_status": "INPUT_REQUIRED",
+          "description": "reference frame/marker definition"
+        },
+        {
+          "field_id": "V5-TORSO_REFERENCE",
+          "name": "torso_reference",
+          "value": null,
+          "state": "INPUT_REQUIRED",
+          "unit": null,
+          "source": null,
+          "provenance": null,
+          "required": true,
+          "validation_status": "INPUT_REQUIRED",
+          "description": "reference frame/marker definition"
+        },
+        {
+          "field_id": "V5-HEAD_REFERENCE",
+          "name": "head_reference",
+          "value": null,
+          "state": "INPUT_REQUIRED",
+          "unit": null,
+          "source": null,
+          "provenance": null,
+          "required": true,
+          "validation_status": "INPUT_REQUIRED",
+          "description": "reference frame/marker definition"
+        },
+        {
+          "field_id": "V5-RESTRAINT_INTERFACES",
+          "name": "restraint_interfaces",
+          "value": null,
+          "state": "INPUT_REQUIRED",
+          "unit": null,
+          "source": null,
+          "provenance": null,
+          "required": true,
+          "validation_status": "INPUT_REQUIRED",
+          "description": "belt/restraint attachment definitions"
+        },
+        {
+          "field_id": "V5-SEAT_CONTACT_INTERFACES",
+          "name": "seat_contact_interfaces",
+          "value": null,
+          "state": "INPUT_REQUIRED",
+          "unit": null,
+          "source": null,
+          "provenance": null,
+          "required": true,
+          "validation_status": "INPUT_REQUIRED",
+          "description": "contact definitions"
+        },
+        {
+          "field_id": "V5-INITIAL_POSTURE",
+          "name": "initial_posture",
+          "value": null,
+          "state": "INPUT_REQUIRED",
+          "unit": null,
+          "source": null,
+          "provenance": null,
+          "required": true,
+          "validation_status": "INPUT_REQUIRED",
+          "description": "pose state with frame"
+        },
+        {
+          "field_id": "V5-INITIAL_VELOCITY",
+          "name": "initial_velocity",
+          "value": null,
+          "state": "INPUT_REQUIRED",
+          "unit": null,
+          "source": null,
+          "provenance": null,
+          "required": true,
+          "validation_status": "INPUT_REQUIRED",
+          "description": "velocity state with frame and units"
+        },
+        {
+          "field_id": "V5-BOUNDARY_CONDITIONS",
+          "name": "boundary_conditions",
+          "value": null,
+          "state": "INPUT_REQUIRED",
+          "unit": null,
+          "source": null,
+          "provenance": null,
+          "required": true,
+          "validation_status": "INPUT_REQUIRED",
+          "description": "BC definitions"
+        },
+        {
+          "field_id": "V5-LOAD_CHANNELS",
+          "name": "load_channels",
+          "value": null,
+          "state": "INPUT_REQUIRED",
+          "unit": null,
+          "source": null,
+          "provenance": null,
+          "required": true,
+          "validation_status": "INPUT_REQUIRED",
+          "description": "input channel map"
+        },
+        {
+          "field_id": "V5-RESPONSE_CHANNELS",
+          "name": "response_channels",
+          "value": null,
+          "state": "INPUT_REQUIRED",
+          "unit": null,
+          "source": null,
+          "provenance": null,
+          "required": true,
+          "validation_status": "INPUT_REQUIRED",
+          "description": "response channel map"
+        }
+      ],
+      "readiness_gate": {
+        "gate_id": "GATE_V5_READINESS",
+        "expression": "ALL(required field.state IN {READY,MEASURED,VALIDATED} AND required field has source+provenance+unit where applicable)",
+        "pass_state": "PASS",
+        "else_state": "FAIL"
+      },
+      "manus_required_inputs": [
+        "V5-OCCUPANT_REPRESENTATION",
+        "V5-ANTHROPOMETRY_SOURCE",
+        "V5-MASS",
+        "V5-CG",
+        "V5-INERTIA",
+        "V5-JOINT_DEFINITIONS",
+        "V5-DEGREES_OF_FREEDOM",
+        "V5-PELVIS_REFERENCE",
+        "V5-TORSO_REFERENCE",
+        "V5-HEAD_REFERENCE",
+        "V5-RESTRAINT_INTERFACES",
+        "V5-SEAT_CONTACT_INTERFACES",
+        "V5-INITIAL_POSTURE",
+        "V5-INITIAL_VELOCITY",
+        "V5-BOUNDARY_CONDITIONS",
+        "V5-LOAD_CHANNELS",
+        "V5-RESPONSE_CHANNELS"
+      ],
+      "forbidden_actions": [
+        "guess anthropometry",
+        "substitute undocumented mass/CG/inertia",
+        "treat DEFINE as VALIDATED",
+        "consume V4 outputs with status BLOCKED/INVALID/UNVERIFIED"
+      ]
+    },
+    "V6_SLED_EXECUTION_CONTRACT": {
+      "artifact": "V6_SLED_EXECUTION_CONTRACT",
+      "contract_version": "0.1",
+      "status": "IMPLEMENTATION_READY",
+      "states": [
+        "NOT_CONNECTED",
+        "NOT_CALIBRATED",
+        "READY",
+        "MEASURED",
+        "REJECTED",
+        "VALIDATED"
+      ],
+      "sensor_schema_fields": [
+        "sensor_id",
+        "sensor_type",
+        "location",
+        "axis",
+        "sampling_rate",
+        "synchronization",
+        "calibration_reference",
+        "measurement_range",
+        "expected_signal",
+        "data_format",
+        "timestamp_policy",
+        "coordinate_system",
+        "filtering_policy",
+        "channel_name",
+        "data_provenance",
+        "acceptance_criterion",
+        "state"
+      ],
+      "input_spec": {
+        "scenario_id": null,
+        "test_id": null,
+        "vehicle_or_rig_id": null,
+        "seat_configuration_id": null,
+        "acquisition_system_id": null,
+        "clock_reference": null,
+        "sampling_policy": null,
+        "filter_policy": null,
+        "sensor_manifest_ref": null,
+        "calibration_manifest_ref": null,
+        "state": "INPUT_REQUIRED"
+      },
+      "output_spec": {
+        "raw_data_ref": null,
+        "processed_data_ref": null,
+        "channel_manifest_ref": null,
+        "calibration_evidence_ref": null,
+        "sync_evidence_ref": null,
+        "qa_result": null,
+        "state": "NOT_TESTED"
+      },
+      "calibration_schema": {
+        "calibration_id": null,
+        "sensor_id": null,
+        "reference_standard": null,
+        "date": null,
+        "operator": null,
+        "pre_test_status": "NOT_CALIBRATED",
+        "post_test_status": "NOT_CALIBRATED",
+        "certificate_ref": null,
+        "traceability_ref": null
+      },
+      "data_quality_rules": [
+        "No MEASURED or VALIDATED state without raw-data provenance.",
+        "No VALIDATED state without calibration and synchronization evidence.",
+        "Reject duplicate channel names unless explicitly versioned.",
+        "Coordinate system and sign convention must be declared."
+      ],
+      "manus_execution_outputs": [
+        "sensor manifest",
+        "calibration records",
+        "raw synchronized data",
+        "processed data with transformation log",
+        "QA decision",
+        "evidence hashes"
+      ]
+    },
+    "V7_CORRELATION_ENGINE_CONTRACT": {
+      "artifact": "V7_CORRELATION_ENGINE_CONTRACT",
+      "contract_version": "0.1",
+      "status": "IMPLEMENTATION_READY",
+      "comparison_levels": [
+        "FE",
+        "COMPONENT_TEST",
+        "SUBSYSTEM_TEST",
+        "SLED",
+        "VEHICLE_TEST"
+      ],
+      "pipeline": [
+        {
+          "step": "time_alignment",
+          "status": "DEFINED",
+          "method": null,
+          "threshold_required": false
+        },
+        {
+          "step": "coordinate_alignment",
+          "status": "DEFINED",
+          "method": null,
+          "threshold_required": false
+        },
+        {
+          "step": "channel_mapping",
+          "status": "DEFINED",
+          "method": null,
+          "threshold_required": false
+        },
+        {
+          "step": "sampling_normalization",
+          "status": "DEFINED",
+          "method": null,
+          "threshold_required": false
+        },
+        {
+          "step": "filtering",
+          "status": "DEFINED",
+          "method": null,
+          "threshold_required": false
+        },
+        {
+          "step": "metric_calculation",
+          "status": "DEFINED",
+          "method": "metric registry",
+          "threshold_required": true
+        }
+      ],
+      "signal_comparisons": [
+        "displacement",
+        "velocity",
+        "acceleration",
+        "force",
+        "energy",
+        "rotation",
+        "timing"
+      ],
+      "metrics": [
+        {
+          "metric_id": "RMSE",
+          "formula": "sqrt(mean((y_model-y_ref)^2))",
+          "threshold_required": true,
+          "result": null
+        },
+        {
+          "metric_id": "NRMSE",
+          "formula": "RMSE / declared normalization scale",
+          "threshold_required": true,
+          "result": null
+        },
+        {
+          "metric_id": "PEAK_ERROR",
+          "formula": "abs(peak_model-peak_ref)/abs(peak_ref) when denominator valid",
+          "threshold_required": true,
+          "result": null
+        },
+        {
+          "metric_id": "PHASE_ERROR",
+          "formula": "declared phase/time lag metric",
+          "threshold_required": true,
+          "result": null
+        },
+        {
+          "metric_id": "CURVE_SIMILARITY",
+          "formula": "declared curve similarity metric",
+          "threshold_required": true,
+          "result": null
+        },
+        {
+          "metric_id": "ENERGY_DISCREPANCY",
+          "formula": "declared energy difference/ratio",
+          "threshold_required": true,
+          "result": null
+        },
+        {
+          "metric_id": "TIMING_DISCREPANCY",
+          "formula": "declared timing difference",
+          "threshold_required": true,
+          "result": null
+        }
+      ],
+      "acceptance_policy": "No threshold may be invented. Unsourced thresholds must remain THRESHOLD_REQUIRED=TRUE and cannot produce PASS.",
+      "correlation_record_fields": [
+        "correlation_id",
+        "source_level",
+        "reference_level",
+        "channel_map_ref",
+        "time_alignment_ref",
+        "coordinate_alignment_ref",
+        "sampling_ref",
+        "filter_ref",
+        "metric_results",
+        "threshold_source_refs",
+        "acceptance_decision",
+        "evidence_refs",
+        "status"
+      ]
+    }
+  }
+}

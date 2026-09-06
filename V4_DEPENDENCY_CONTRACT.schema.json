@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "V4 Dependency Contract",
+  "type": "object",
+  "additionalProperties": true
+}

@@ -1,0 +1,129 @@
+{
+  "artifact": "JON_CONTRACT_AUDIT",
+  "contract_version": "R4.1-AUDIT-0.1",
+  "scope": "latest supplied seat_engineering_contracts_r4_1 package",
+  "audit_rule": "Report only missing critical field, inconsistent definition, broken dependency, ambiguous unit/coordinate system/acceptance condition, missing provenance requirement, or broken machine-readable gate. Do not rewrite non-blocking items.",
+  "findings": [
+    {
+      "finding_id": "AUDIT-BLOCK-001",
+      "type": "missing critical field / broken machine-readable traceability",
+      "artifact": "REQUIREMENTS_TRACEABILITY",
+      "description": "Parameter/interface/model/test/evidence IDs are referenced but no canonical registries define their required fields, status, provenance, units, or validation state. orphan_rules therefore cannot be mechanically enforced.",
+      "impact": "ORPHAN DETECTION AND TRACEABILITY CANNOT BE EXECUTED RELIABLY.",
+      "severity": "BLOCKING",
+      "disposition": "REQUIRES_CONTRACT_EXTENSION_BEFORE_TRUE_AUTOMATED_TRACEABILITY"
+    },
+    {
+      "finding_id": "AUDIT-BLOCK-002",
+      "type": "inconsistent definition / broken dependency",
+      "artifact": "NEXT_ACTION_ENGINE",
+      "description": "current_snapshot sets BLOCKER-V4-EVIDENCE-INTEGRITY as priority-1 while authoritative state declares EVIDENCE_INTEGRITY=PASS.",
+      "impact": "NEXT ACTION ENGINE can select a blocker that the authority has already closed, violating fail-closed decision consistency.",
+      "severity": "BLOCKING",
+      "disposition": "MANUS MUST BASE NEXT-ACTION ON AUTHORITATIVE GATE STATE; EVIDENCE_INTEGRITY BLOCKER MUST NOT BE ACTIVE WHEN GATE IS PASS"
+    },
+    {
+      "finding_id": "AUDIT-BLOCK-003",
+      "type": "missing critical field",
+      "artifact": "V4_DEPENDENCY_CONTRACT",
+      "description": "required_inputs are descriptive strings, not machine-readable parameter records with source/unit/provenance/status/evidence-hash fields.",
+      "impact": "physical input closure cannot be automatically evaluated.",
+      "severity": "BLOCKING",
+      "disposition": "USE V4_EXECUTION_HANDOFF INPUT REGISTER"
+    },
+    {
+      "finding_id": "AUDIT-BLOCK-004",
+      "type": "ambiguous acceptance condition",
+      "artifact": "V7_CORRELATION_ENGINE_CONTRACT",
+      "description": "time/coordinate/channel/sampling/filtering steps have method=null while marked DEFINED; no deterministic preprocessing method can be executed from the contract alone.",
+      "impact": "V7 is not truly executable-ready without method bindings.",
+      "severity": "BLOCKING_FOR_V7",
+      "disposition": "REQUIRES EXPLICIT METHOD BINDING BEFORE CORRELATION RUN"
+    },
+    {
+      "finding_id": "AUDIT-BLOCK-005",
+      "type": "ambiguous unit",
+      "artifact": "V6_SLED_EXECUTION_CONTRACT",
+      "description": "sampling_rate and measurement_range are declared as fields but their unit/dimensional schema is not enforced by the sensor record definition.",
+      "impact": "sensor configuration can be syntactically complete but dimensionally ambiguous.",
+      "severity": "BLOCKING_FOR_V6",
+      "disposition": "REQUIRES UNIT-ENFORCED SENSOR FIELD CONTRACT"
+    },
+    {
+      "finding_id": "AUDIT-BLOCK-006",
+      "type": "ambiguous coordinate system",
+      "artifact": "KINEMATIC_EXECUTION_CONTRACT",
+      "description": "signals reserve coordinate_system/reference_frame/sign_convention but leave all three null; this is acceptable as input-required state, but the contract does not define a closed enumeration or transform record schema.",
+      "impact": "automatic prevention of coordinate/sign mismatch is incomplete.",
+      "severity": "BLOCKING_FOR_EXECUTION",
+      "disposition": "REQUIRES EXPLICIT FRAME/TRANSFORM RECORD BEFORE KINEMATIC EXECUTION"
+    },
+    {
+      "finding_id": "AUDIT-BLOCK-007",
+      "type": "missing provenance requirement",
+      "artifact": "ENERGY_ACCOUNTING_CONTRACT",
+      "description": "energy terms require source/equation fields but there is no explicit evidence hash/provenance parent linkage per computed term.",
+      "impact": "energy ledger cannot be fully auditable at term level.",
+      "severity": "BLOCKING_FOR_AUDITABILITY",
+      "disposition": "BIND EACH TERM TO INPUT/EVIDENCE HASHES AND DERIVATION ID"
+    },
+    {
+      "finding_id": "AUDIT-BLOCK-008",
+      "type": "broken machine-readable gate",
+      "artifact": "AUTOMATIC_GATE_DEFINITION / R4_2_AUTHORIZATION",
+      "description": "GATE_R4_2_AUTHORIZATION requires explicit authorization AND all prerequisites, but the prerequisite semantics do not explicitly encode the stated condition that MECHANICAL_FAILURE_CONFIRMED and ROOT_CAUSE_CONFIRMED must both be true before authorization.",
+      "impact": "gate expression is underspecified relative to the master command.",
+      "severity": "BLOCKING_FOR_AUTHORIZATION",
+      "disposition": "PETER MUST RETAIN FINAL AUTHORIZATION; gate schema must include explicit failure/root-cause predicates"
+    }
+  ],
+  "non_findings": [
+    "No evidence of fabricated measurements/results was found in the inspected JSON package.",
+    "Baseline integrity report correctly states independent hashing was not performed.",
+    "No R4.2 artifact was found in the package."
+  ],
+  "documentation_debt_register": [
+    {
+      "artifact": "UNIFIED_EXECUTABLE_CONTRACT_PACKAGE.json",
+      "classification": "DERIVED",
+      "reason": "aggregates contract content; not an independent authority source",
+      "execution_requirement": "REQUIRED_FOR_EXECUTION",
+      "action": "retain as convenience aggregate; authoritative status comes from component contracts/manifest"
+    },
+    {
+      "artifact": "PACKAGE_MANIFEST.json",
+      "classification": "AUTHORITATIVE",
+      "reason": "package-level integrity and artifact hash manifest",
+      "execution_requirement": "REQUIRED_FOR_EXECUTION",
+      "action": "retain"
+    },
+    {
+      "artifact": "README.md",
+      "classification": "DERIVED",
+      "reason": "human orientation only; adds no executable state",
+      "execution_requirement": "REDUNDANT_FOR_EXECUTION",
+      "action": "retain for human use; must not drive gates"
+    },
+    {
+      "artifact": "schemas/*.schema.json",
+      "classification": "REQUIRED_FOR_EXECUTION",
+      "reason": "machine-readable validation wrappers for contract structure",
+      "execution_requirement": "REQUIRED_FOR_EXECUTION",
+      "action": "retain and validate against live records"
+    },
+    {
+      "artifact": "build_package.py",
+      "classification": "DERIVED",
+      "reason": "build tooling, not engineering truth",
+      "execution_requirement": "REDUNDANT_FOR_EXECUTION",
+      "action": "retain only as reproducibility tooling"
+    },
+    {
+      "artifact": "BASELINE_INTEGRITY_REPORT.json",
+      "classification": "AUTHORITATIVE",
+      "reason": "records independent verification state and stop condition",
+      "execution_requirement": "REQUIRED_FOR_EXECUTION",
+      "action": "retain; current state is pending actual artifact bytes"
+    }
+  ]
+}
