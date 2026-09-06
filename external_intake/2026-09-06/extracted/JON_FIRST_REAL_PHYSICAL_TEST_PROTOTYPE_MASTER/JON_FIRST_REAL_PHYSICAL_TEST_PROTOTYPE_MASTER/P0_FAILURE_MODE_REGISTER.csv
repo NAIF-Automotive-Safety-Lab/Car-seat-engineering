@@ -1,0 +1,9 @@
+id,mode,severity,evidence_status,detect,action
+FM-001,Rail binding/jam,HIGH,UNKNOWN until physical test,"displacement irregularity, rail reaction divergence, video, inspection","Stop test, unload, inspect alignment/runner/rail; do not force through jam."
+FM-002,Unintended lock release,HIGH,UNKNOWN until lock tests,170 state channel + high-speed video + carriage motion,Immediate safe stop; isolate trigger and lock components; retain all raw data.
+FM-003,Absorber mount misalignment,HIGH,UNKNOWN,"force asymmetry, lateral reaction, visual deformation","Stop, inspect clevis/pin/fixture, repeat alignment verification before next run."
+FM-004,Stop impact / over-travel,HIGH,UNKNOWN,"travel sensor, force spike, video, permanent deformation","Hard stop test, quarantine damaged component, inspect stop/rail/carriage."
+FM-005,Left/right load-path asymmetry,MEDIUM,UNKNOWN,S1 vs S2 reaction comparison,"Inspect datum alignment, joint preload, rail friction and absorber match."
+FM-006,Sensor saturation / invalid synchronization,MEDIUM,UNKNOWN,"DAQ audit, channel clipping, timebase comparison, calibration checks",Invalidate run for physical-input evidence; repair instrumentation and repeat.
+FM-007,Permanent structural deformation,HIGH,UNKNOWN,post-test dimensional survey and strain evidence where installed,Classify article as sacrificial or repairable; no reuse without review.
+FM-008,Joint preload drift / loosening,MEDIUM,UNKNOWN,"torque/preload audit, displacement drift, inspection",Replace/retorque per controlled procedure; do not silently reset.

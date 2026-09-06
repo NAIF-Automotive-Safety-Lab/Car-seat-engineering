@@ -1,0 +1,1215 @@
+{
+  "DOCUMENT": "JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER",
+  "VERSION": "P0-EXPLORATORY-1.0",
+  "DATE": "2026-09-06",
+  "AUTHORITY": {
+    "Peter_ChatGPT": "Authority / gates / authorization",
+    "JON_ChatGPT": "Design / innovation / engineering development",
+    "Manus-Tasks": "Execution / testing / validation / evidence"
+  },
+  "MISSION": "Build the first real physical test article to learn whether the R4.1 concept functions as intended; never treat design intent as measured success or failure.",
+  "R4_1": {
+    "PATH": "R4.1/R4.1.step",
+    "SHA256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "IMMUTABLE": true,
+    "MUTATION_ALLOWED": false
+  },
+  "P0_IDENTITY": {
+    "name": "P0",
+    "classification": "PROTOTYPE / TEST ARTICLE",
+    "production_status": "NOT PRODUCTION HARDWARE",
+    "r4_1_role": "independently testable physical derivative; not R4.2 and not a mutation of R4.1",
+    "primary_loop": "BUILD → TEST → MEASURE → LEARN → MODIFY → RETEST"
+  },
+  "JUDGMENT_DISCIPLINE": {
+    "allowed_classes": [
+      "CONFIRMED BY PHYSICAL TEST",
+      "CONFIRMED BY CALCULATION",
+      "SUPPORTED BY SIMULATION",
+      "ENGINEERING HYPOTHESIS",
+      "UNKNOWN"
+    ],
+    "prohibited_conclusions": [
+      "design success without requirement evidence",
+      "design failure without specified physical/calculated criterion",
+      "crash safety claim from P0 bench tests",
+      "occupant protection claim without qualified occupant testing"
+    ]
+  },
+  "GATE_MODEL": {
+    "GATE_1": "P0 exploratory build can be safely fabricated, assembled, modified and instrumented.",
+    "GATE_2": "P0 tests can produce valid physical evidence.",
+    "GATE_3": "Design requirements are validated by evidence. P0 is currently focused on Gate 1 → Gate 2.",
+    "rule": "Gate 3 failure cannot retroactively invalidate Gate 1 or Gate 2; it drives iteration."
+  },
+  "SOURCE_BASIS": {
+    "primary": "T_OCS_V7_Patent_Draft_Invention_Disclosure.pdf",
+    "stable_reference_numerals": [
+      "100",
+      "110L/110R",
+      "120",
+      "130",
+      "140",
+      "150L/150R",
+      "160",
+      "170",
+      "180",
+      "190",
+      "200",
+      "210"
+    ],
+    "source_supported_architecture": [
+      "bilateral longitudinal load paths",
+      "controlled longitudinal ride-down",
+      "mechanically distinct seatback rotation-control path",
+      "multi-state lock/trigger",
+      "rebound-control state",
+      "pelvic-control geometry",
+      "restraint interface",
+      "sensor/trigger interface"
+    ],
+    "source_warnings": [
+      "generated visuals are not verified CAD",
+      "source-study numbers are not T-OCS measurements",
+      "concept stroke/force values are not measured absorber performance"
+    ]
+  },
+  "SOURCE_REFERENCE_NOMINALS": [
+    {
+      "parameter": "rearward_stroke",
+      "value": 180,
+      "unit": "mm",
+      "classification": "DESIGN_REFERENCE",
+      "source": "V7/V5 engineering board p31; V5 drawing p28",
+      "do_not_use_as_test_result": true
+    },
+    {
+      "parameter": "total_travel",
+      "value": 210,
+      "unit": "mm",
+      "classification": "DESIGN_REFERENCE",
+      "source": "V7/V5 engineering board p31",
+      "do_not_use_as_test_result": true
+    },
+    {
+      "parameter": "seatback_rotation_envelope",
+      "value": "-10 to +25",
+      "unit": "deg",
+      "classification": "DESIGN_REFERENCE",
+      "source": "V5 engineering drawing p27/p28",
+      "do_not_use_as_test_result": true
+    },
+    {
+      "parameter": "rail_package_reference",
+      "value": "520",
+      "unit": "mm",
+      "classification": "DESIGN_REFERENCE",
+      "source": "V5 engineering drawing p27/p28/p31",
+      "do_not_use_as_test_result": true
+    },
+    {
+      "parameter": "side_package_reference",
+      "value": "560",
+      "unit": "mm",
+      "classification": "DESIGN_REFERENCE",
+      "source": "V5 engineering drawing p27/p28/p31",
+      "do_not_use_as_test_result": true
+    },
+    {
+      "parameter": "overall_height_reference",
+      "value": "1120",
+      "unit": "mm",
+      "classification": "DESIGN_REFERENCE",
+      "source": "V5 engineering drawing p27/p28",
+      "do_not_use_as_test_result": true
+    },
+    {
+      "parameter": "example_pulse_peak",
+      "value": 25.6,
+      "unit": "g",
+      "classification": "SOURCE_STUDY_EXAMPLE",
+      "source": "V7/V5 crash load path board p30; V7 p6",
+      "do_not_use_as_test_result": true
+    },
+    {
+      "parameter": "absorber_force_reference_per_side",
+      "value": "18-22",
+      "unit": "kN",
+      "classification": "SOURCE_DESIGN_TARGET",
+      "source": "V7/V5 energy absorber board p31; V7 p6",
+      "do_not_use_as_test_result": true
+    },
+    {
+      "parameter": "peak_damping_force_reference",
+      "value": "25-35",
+      "unit": "kN",
+      "classification": "SOURCE_DESIGN_TARGET",
+      "source": "V5 drawing p27/p30; V7 p6",
+      "do_not_use_as_test_result": true
+    },
+    {
+      "parameter": "concept_operating_temperature",
+      "value": "-40 to +80",
+      "unit": "degC",
+      "classification": "SOURCE_DESIGN_REFERENCE",
+      "source": "V5 drawing p29/p31",
+      "do_not_use_as_test_result": true
+    }
+  ],
+  "FIRST_PHYSICAL_ARTICLE": {
+    "article": "P0-E / V0 integrated exploratory mechanism",
+    "minimum_real_hardware": [
+      "100 base fixture",
+      "110L rail",
+      "110R rail",
+      "120 carriage",
+      "130 modular absorber interface",
+      "150L/150R links",
+      "160 seatback frame",
+      "170 lock module",
+      "180 rebound-control module",
+      "J hinge/pivot/fastener set",
+      "210 sensor panel"
+    ],
+    "required_features": [
+      "positive rail guidance",
+      "mechanical end stops",
+      "replaceable absorber",
+      "replaceable lock",
+      "replaceable rebound control",
+      "measurable S1/S2 reactions",
+      "measurable carriage displacement",
+      "measurable seatback angle",
+      "safe reset"
+    ],
+    "non_human": "No human occupant during initial P0 program. Any ATD/sled stage requires separate authorization after subsystem evidence."
+  },
+  "MODULAR_ARCHITECTURE": {
+    "principle": "TEST ONE VARIABLE AT A TIME when causality is the objective.",
+    "replaceable_modules": [
+      "130 absorber cartridge",
+      "170 lock internals/module",
+      "180 rebound module",
+      "150L/150R link geometry adapters",
+      "J joint/bushing/fastener stack"
+    ],
+    "adjustable_interfaces": [
+      "test fixture adapter plates",
+      "sensor mounts",
+      "safe stop locations where changing them does not invalidate the hypothesis"
+    ],
+    "sacrificial_components": [
+      "absorber cartridge",
+      "selected contact/stop inserts",
+      "experimental link or lock components where failure is expected and containment is adequate"
+    ]
+  },
+  "COMPONENTS": [
+    {
+      "id": "P0-001",
+      "ref": "100",
+      "name": "Vehicle/test-fixture interface base frame",
+      "class": [
+        "TEST-CRITICAL",
+        "TEST-FIXTURE",
+        "MODULAR"
+      ],
+      "role": "Anchors the P0 mechanism to a controlled bench or sled fixture and provides repeatable datum retention.",
+      "design_status": "R4.1-SIMPLIFIED + P0-TEST-FIXTURE",
+      "fabrication": "Welded/bolted fixture with replaceable interface plates; exact R4.1 hardpoint pattern is not assumed.",
+      "critical_controls": [
+        "fixture datum plane",
+        "anchor retention",
+        "anti-rotation",
+        "interchangeable adapter plates"
+      ]
+    },
+    {
+      "id": "P0-002",
+      "ref": "110L",
+      "name": "Left longitudinal rail/load path S1",
+      "class": [
+        "TEST-CRITICAL",
+        "AS-DESIGNED",
+        "INSTRUMENTED",
+        "REPLACEABLE"
+      ],
+      "role": "Guided longitudinal load path for the carriage.",
+      "design_status": "R4.1-SIMPLIFIED until native CAD geometry is extracted",
+      "fabrication": "Prototype rail using source geometry envelope; critical bore/axis coordinates from native CAD when exact replication is required.",
+      "critical_controls": [
+        "rail axis",
+        "parallelism",
+        "straightness",
+        "end stops",
+        "runner retention"
+      ]
+    },
+    {
+      "id": "P0-003",
+      "ref": "110R",
+      "name": "Right longitudinal rail/load path S2",
+      "class": [
+        "TEST-CRITICAL",
+        "AS-DESIGNED",
+        "INSTRUMENTED",
+        "REPLACEABLE"
+      ],
+      "role": "Second bilateral longitudinal load path for load sharing/torsional control.",
+      "design_status": "R4.1-SIMPLIFIED until native CAD geometry is extracted",
+      "fabrication": "Independent mirror/companion rail with separately measurable reaction path.",
+      "critical_controls": [
+        "rail axis",
+        "parallelism",
+        "load-sharing measurement",
+        "runner retention"
+      ]
+    },
+    {
+      "id": "P0-004",
+      "ref": "120",
+      "name": "Seat carriage",
+      "class": [
+        "TEST-CRITICAL",
+        "INSTRUMENTED",
+        "REPLACEABLE"
+      ],
+      "role": "Moving member translating on 110L/110R and carrying seat/absorber reactions.",
+      "design_status": "R4.1-SIMPLIFIED / experimentally strengthened where needed for instrumentation",
+      "fabrication": "Modular plate/frame with bolt-on absorber, lock and rail interfaces.",
+      "critical_controls": [
+        "datum structure",
+        "translation DOF",
+        "carriage stop interfaces",
+        "sensor targets"
+      ]
+    },
+    {
+      "id": "P0-005",
+      "ref": "130",
+      "name": "Ride-down energy-management cartridge interface",
+      "class": [
+        "TEST-CRITICAL",
+        "VARIABLE",
+        "REPLACEABLE",
+        "INSTRUMENTED"
+      ],
+      "role": "Allows interchangeable energy absorber configurations without changing the structural surrounding architecture.",
+      "design_status": "P0-EXPERIMENTAL interface implementing R4.1 function",
+      "fabrication": "Common clevis/pin interface; cartridge itself is a replaceable test article.",
+      "critical_controls": [
+        "axis alignment",
+        "stroke envelope",
+        "mounting stiffness",
+        "serial traceability"
+      ]
+    },
+    {
+      "id": "P0-006",
+      "ref": "140",
+      "name": "Pelvic-control / anti-submarining pan",
+      "class": [
+        "TEST-CRITICAL",
+        "AS-DESIGNED",
+        "REPLACEABLE"
+      ],
+      "role": "Carries the pelvic guidance/load-distribution geometry used in integrated mechanism studies.",
+      "design_status": "R4.1-SIMPLIFIED if required for bench article",
+      "fabrication": "Bolt-on pan to avoid destructive revision after first test.",
+      "critical_controls": [
+        "hinge axis",
+        "pan stop",
+        "surface geometry",
+        "attachment stiffness"
+      ]
+    },
+    {
+      "id": "P0-007",
+      "ref": "150L",
+      "name": "Left seatback rotation-control link",
+      "class": [
+        "TEST-CRITICAL",
+        "VARIABLE",
+        "REPLACEABLE",
+        "INSTRUMENTED"
+      ],
+      "role": "Independent mechanical rotation-control path on the left side.",
+      "design_status": "P0-VARIABLE",
+      "fabrication": "Replaceable link with selectable hole/adapter positions only where those positions remain within safe mechanism envelope.",
+      "critical_controls": [
+        "pivot axes",
+        "clearance",
+        "link load",
+        "stop engagement"
+      ]
+    },
+    {
+      "id": "P0-008",
+      "ref": "150R",
+      "name": "Right seatback rotation-control link",
+      "class": [
+        "TEST-CRITICAL",
+        "VARIABLE",
+        "REPLACEABLE",
+        "INSTRUMENTED"
+      ],
+      "role": "Independent mechanical rotation-control path on the right side.",
+      "design_status": "P0-VARIABLE",
+      "fabrication": "Independent counterpart to 150L; left/right loads measured separately where practical.",
+      "critical_controls": [
+        "pivot axes",
+        "clearance",
+        "link load",
+        "symmetry"
+      ]
+    },
+    {
+      "id": "P0-009",
+      "ref": "160",
+      "name": "Seatback frame",
+      "class": [
+        "TEST-CRITICAL",
+        "INSTRUMENTED",
+        "REPLACEABLE"
+      ],
+      "role": "Carries torso/head support geometry and the independent rotation-control interfaces.",
+      "design_status": "R4.1-SIMPLIFIED / P0-STRUCTURAL TEST ARTICLE",
+      "fabrication": "Rigid test frame with replaceable local brackets for 150L/150R and 170/180 as applicable.",
+      "critical_controls": [
+        "hinge axis",
+        "link attachment",
+        "frame stiffness",
+        "instrumentation mounts"
+      ]
+    },
+    {
+      "id": "P0-010",
+      "ref": "170",
+      "name": "Multi-state lock/trigger module",
+      "class": [
+        "TEST-CRITICAL",
+        "VARIABLE",
+        "REPLACEABLE",
+        "INSTRUMENTED"
+      ],
+      "role": "Tests the mechanical state transition architecture: normal, armed/capture, ride-down, rebound-control, secure/end state as applicable to the embodiment.",
+      "design_status": "P0-VARIABLE",
+      "fabrication": "Modular lock body with replaceable locking/trigger internals and state sensor target.",
+      "critical_controls": [
+        "positive engagement",
+        "no unintended release",
+        "trigger repeatability",
+        "manual reset"
+      ]
+    },
+    {
+      "id": "P0-011",
+      "ref": "180",
+      "name": "Rebound-control module",
+      "class": [
+        "TEST-CRITICAL",
+        "VARIABLE",
+        "REPLACEABLE",
+        "INSTRUMENTED"
+      ],
+      "role": "Controls reverse carriage motion after primary travel.",
+      "design_status": "P0-VARIABLE",
+      "fabrication": "Interchangeable directional-damping or mechanical-control cartridge/stop embodiment.",
+      "critical_controls": [
+        "directionality",
+        "engagement point",
+        "reverse travel",
+        "secondary excursion"
+      ]
+    },
+    {
+      "id": "P0-012",
+      "ref": "190",
+      "name": "Occupant-restraint interface test mount",
+      "class": [
+        "TEST-CRITICAL",
+        "INSTRUMENTED",
+        "TEST-FIXTURE"
+      ],
+      "role": "Preserves the restraint load-path interface for non-human bench/sled studies without making a production anchorage claim.",
+      "design_status": "R4.1-SIMPLIFIED + P0-TEST-FIXTURE",
+      "fabrication": "Qualified test anchor hardware or vehicle-equivalent fixture only; no improvised occupant restraint attachment.",
+      "critical_controls": [
+        "retention rating",
+        "load introduction",
+        "clearance",
+        "independent certification"
+      ]
+    },
+    {
+      "id": "P0-013",
+      "ref": "200",
+      "name": "Torso/head guidance test geometry",
+      "class": [
+        "VARIABLE",
+        "TEST-CRITICAL",
+        "REPLACEABLE"
+      ],
+      "role": "Provides modular non-occupant surrogate/guide surfaces where trajectory interaction must be studied.",
+      "design_status": "P0-EXPERIMENTAL",
+      "fabrication": "Interchangeable rigid/compliant guide plates or surrogate interface; no human-contact use.",
+      "critical_controls": [
+        "clearance",
+        "mount stiffness",
+        "replaceability"
+      ]
+    },
+    {
+      "id": "P0-014",
+      "ref": "210",
+      "name": "Sensor/trigger interface panel",
+      "class": [
+        "INSTRUMENTED",
+        "REPLACEABLE",
+        "TEST-FIXTURE"
+      ],
+      "role": "Carries fixed sensor datums, connector routing, trigger targets and synchronization hardware.",
+      "design_status": "P0-TEST-FIXTURE",
+      "fabrication": "Rigid panel isolated from intended moving DOFs; strain-relieved harnesses.",
+      "critical_controls": [
+        "datum repeatability",
+        "cable slack",
+        "connector retention",
+        "time synchronization"
+      ]
+    },
+    {
+      "id": "P0-015",
+      "ref": "J",
+      "name": "Hinge/pivot/bushing/fastener set",
+      "class": [
+        "TEST-CRITICAL",
+        "VARIABLE",
+        "REPLACEABLE",
+        "INSTRUMENTED"
+      ],
+      "role": "Creates controlled joint interfaces whose compliance, friction and preload effects can be characterized.",
+      "design_status": "P0-VARIABLE",
+      "fabrication": "Replaceable pins/bushings/washers/fasteners with traceable lot and preload method.",
+      "critical_controls": [
+        "fit/clearance",
+        "preload",
+        "friction state",
+        "joint rotation"
+      ]
+    }
+  ],
+  "INSTRUMENTATION": [
+    {
+      "id": "INS-01",
+      "measurement": "Carriage longitudinal displacement x(t)",
+      "sensor": "Linear displacement transducer or optical/laser displacement system",
+      "location": "Carriage relative to fixed rail/base datum",
+      "frame": "P0 longitudinal +X axis defined from rail travel direction",
+      "rate_basis": "Select full-scale range > maximum safe bench stroke; resolution sufficient to resolve smallest planned variant difference; exact range set after measured/fixture envelope survey",
+      "sampling": "Quasi-static >=1 kS/s; dynamic >=20 kS/s unless the validated signal bandwidth requires higher",
+      "calibration": "Traceable calibration before campaign; zero/span check every test day",
+      "uncertainty": "Document full measurement uncertainty budget; propagate to velocity/energy where derived",
+      "raw": "CSV with UTC/local test timestamp, channel ID, units, calibration ID"
+    },
+    {
+      "id": "INS-02",
+      "measurement": "Rail reaction S1",
+      "sensor": "Load cell or instrumented load path",
+      "location": "Left rail/base interface or in-line reaction path",
+      "frame": "+X longitudinal force sign positive in forward travel direction",
+      "rate_basis": "Full scale above verified structural test envelope with overload protection",
+      "sampling": ">=20 kS/s for controlled dynamic tests; lower may be used for quasi-static",
+      "calibration": "Traceable force calibration; shunt/zero check as applicable",
+      "uncertainty": "Report calibrated force uncertainty and installation compliance",
+      "raw": "CSV + calibration certificate + mounting configuration"
+    },
+    {
+      "id": "INS-03",
+      "measurement": "Rail reaction S2",
+      "sensor": "Load cell or instrumented load path",
+      "location": "Right rail/base interface",
+      "frame": "Same P0 frame as S1",
+      "rate_basis": "Same basis as INS-02",
+      "sampling": ">=20 kS/s dynamic",
+      "calibration": "Traceable force calibration",
+      "uncertainty": "Report independently so load asymmetry can be computed",
+      "raw": "CSV + calibration certificate"
+    },
+    {
+      "id": "INS-04",
+      "measurement": "Absorber force",
+      "sensor": "In-line force transducer or instrumented actuator/load frame",
+      "location": "Coaxial with 130 cartridge on each tested side",
+      "frame": "Force positive in absorber compression/loading direction defined by cartridge datum",
+      "rate_basis": "Range shall exceed verified design-reference force envelope; do not use 18-22 or 25-35 kN as guaranteed test values",
+      "sampling": ">=20 kS/s dynamic; >=1 kS/s quasi-static",
+      "calibration": "Traceable force calibration; alignment verification",
+      "uncertainty": "Include force cell, alignment, fixture compliance and DAQ uncertainty",
+      "raw": "CSV + cartridge serial + mounting geometry"
+    },
+    {
+      "id": "INS-05",
+      "measurement": "Seatback angle theta(t)",
+      "sensor": "Rotary encoder/angular transducer or calibrated inertial angle system",
+      "location": "Seatback frame relative to carriage/base reference",
+      "frame": "Positive rotation direction defined by right-hand rule about seatback hinge axis",
+      "rate_basis": "Range shall cover full safe P0 envelope with mechanical over-travel protection",
+      "sampling": ">=20 kS/s dynamic",
+      "calibration": "Angular zero and scale verification before each test block",
+      "uncertainty": "Report angular uncertainty and drift",
+      "raw": "CSV + calibration record"
+    },
+    {
+      "id": "INS-06",
+      "measurement": "Seat acceleration",
+      "sensor": "Triaxial or axis-aligned accelerometer",
+      "location": "Rigid carriage mass/fixture datum near reference CG of moving assembly",
+      "frame": "Axes co-located/aligned to P0 frame as surveyed",
+      "rate_basis": "Range selected from pre-test measured dynamic envelope with overload margin; no crash-pulse assumption",
+      "sampling": ">=20 kS/s minimum, higher if validated bandwidth requires",
+      "calibration": "Traceable calibration + polarity/orientation verification",
+      "uncertainty": "Include mounting resonance/axis misalignment in uncertainty discussion",
+      "raw": "CSV + orientation survey + calibration"
+    },
+    {
+      "id": "INS-07",
+      "measurement": "Joint deformation/compliance",
+      "sensor": "LVDT/encoder/optical displacement + force/moment channel",
+      "location": "Across each characterization joint interface",
+      "frame": "Local joint coordinate system tied to P0 datums",
+      "rate_basis": "Chosen to resolve measured elastic/clearance range",
+      "sampling": ">=1 kS/s quasi-static; >=20 kS/s dynamic",
+      "calibration": "Traceable displacement and force calibration",
+      "uncertainty": "Report fixture compliance separation",
+      "raw": "CSV + joint configuration ID"
+    },
+    {
+      "id": "INS-08",
+      "measurement": "Lock state",
+      "sensor": "Discrete state switch/encoder/proximity target + high-speed video",
+      "location": "170 lock body and trigger member",
+      "frame": "State is categorical, synchronized to global DAQ time base",
+      "rate_basis": "State transition faster than required identification bandwidth",
+      "sampling": ">=20 kS/s digital timestamping",
+      "calibration": "Functional state verification pre/post test",
+      "uncertainty": "Transition-time uncertainty from sensor/DAQ/video synchronization",
+      "raw": "Digital state channel + video timecode"
+    },
+    {
+      "id": "INS-09",
+      "measurement": "Temperature of absorber",
+      "sensor": "Thermocouple/RTD",
+      "location": "Representative absorber body and/or fluid/ambient points permitted by supplier",
+      "frame": "Temperature channels are scalar with location metadata",
+      "rate_basis": "Range covers qualified lab conditions; exact bounds per absorber supplier test capability",
+      "sampling": ">=100 S/s during transients; slower soak logging acceptable",
+      "calibration": "Traceable temperature calibration",
+      "uncertainty": "Sensor + placement + soak uncertainty",
+      "raw": "CSV + soak log"
+    },
+    {
+      "id": "INS-10",
+      "measurement": "High-speed kinematics",
+      "sensor": "High-speed camera system + fixed fiducials",
+      "location": "Side and/or rear view with whole mechanism and target joints visible",
+      "frame": "Camera calibration transforms to P0 coordinates",
+      "rate_basis": "Frame rate selected from measured motion frequency so event transition/stroke/rotation are temporally resolved",
+      "sampling": ">=1000 fps only as an initial planning floor; final rate determined from pre-test motion measurement and shutter/lighting requirements",
+      "calibration": "Lens/distortion calibration + spatial scale + timebase sync",
+      "uncertainty": "Pixel-to-length/angle transformation and frame-time uncertainty",
+      "raw": "Original image sequence + calibration file + time sync record"
+    }
+  ],
+  "TEST_ARTICLES": [
+    {
+      "id": "P0-A",
+      "purpose": "mass/CG/inertia and static property acquisition fixture",
+      "variable": "none",
+      "evidence": "physical mass properties of exact configuration"
+    },
+    {
+      "id": "P0-B",
+      "purpose": "interface/contact characterization fixture",
+      "variable": "surface/contact pair and normal load",
+      "evidence": "friction/contact stiffness/contact damping/restitution"
+    },
+    {
+      "id": "P0-C",
+      "purpose": "absorber characterization fixture",
+      "variable": "absorber cartridge/rate/temperature",
+      "evidence": "F-x/F-v/hysteresis/temperature/cycling"
+    },
+    {
+      "id": "P0-D",
+      "purpose": "joint/fastener/lock characterization fixture",
+      "variable": "joint/fastener/lock configuration",
+      "evidence": "joint stiffness/compliance/preload/state transitions"
+    },
+    {
+      "id": "P0-E",
+      "purpose": "integrated exploratory seat mechanism",
+      "variable": "one module at a time, then best documented combination",
+      "evidence": "translation, load sharing, rotation control, rebound, integrated dynamics"
+    }
+  ],
+  "TEST_MATRIX": [
+    {
+      "id": "P0-T01",
+      "level": 1,
+      "article": "P0-E",
+      "hypothesis": "The assembled mechanism can be measured, inspected and reset repeatedly without hidden interference.",
+      "objective": "Dimensional/clearance verification, datum survey, end-stop and sensor routing check.",
+      "load": "None / inspection only",
+      "boundary": "Fixture fully secured; mechanism unloaded",
+      "output": "Inspection report, clearance map, as-built configuration",
+      "criterion": "No uncontrolled interference; all critical interfaces positively retained; deviations logged."
+    },
+    {
+      "id": "P0-T02",
+      "level": 2,
+      "article": "P0-E",
+      "hypothesis": "The intended translation DOF exists and is repeatable under manual/mechanical actuation.",
+      "objective": "Demonstrate guided travel, lock states, stop engagement and reset.",
+      "load": "Manual or controlled low-force actuation within safe envelope",
+      "boundary": "Hard stops installed",
+      "output": "Travel x(t), state sequence, interference observations",
+      "criterion": "Continuous guided motion through intended envelope; no binding or unintended release."
+    },
+    {
+      "id": "P0-T03",
+      "level": 3,
+      "article": "P0-E",
+      "hypothesis": "The bilateral rails carry repeatable reactions without pathological load asymmetry caused by installation.",
+      "objective": "Quasi-static translation/load path check.",
+      "load": "Incremental controlled load; exact ceiling set after fixture proof review",
+      "boundary": "Base fixed; carriage constrained to intended DOF",
+      "output": "S1/S2 reactions, displacement, asymmetry",
+      "criterion": "Response is repeatable and within pre-approved fixture/load limits; unexplained asymmetry triggers inspection."
+    },
+    {
+      "id": "P0-T04",
+      "level": 3,
+      "article": "P0-B",
+      "hypothesis": "Each structurally relevant sliding/contact interface has a measurable configuration-specific friction law.",
+      "objective": "Identify static/kinetic friction under P0 surface state.",
+      "load": "Controlled normal preload and sliding motion",
+      "boundary": "Interface-specific fixture",
+      "output": "mu vs preload/velocity/temp as applicable",
+      "criterion": "Repeatable identification with uncertainty and no fixture slip/secondary contact."
+    },
+    {
+      "id": "P0-T05",
+      "level": 3,
+      "article": "P0-B",
+      "hypothesis": "Mechanical stops/contact pairs have identifiable force-displacement behavior in the operating region.",
+      "objective": "Identify normal contact stiffness.",
+      "load": "Controlled compression/impact below fixture proof limit",
+      "boundary": "Contact-specific fixture",
+      "output": "F-x law and fit residual",
+      "criterion": "Stable configuration-specific law with stated validity range; no extrapolated closure."
+    },
+    {
+      "id": "P0-T06",
+      "level": 3,
+      "article": "P0-B",
+      "hypothesis": "Mechanical contact damping is measurable and separable from structural compliance.",
+      "objective": "Identify damping for selected contact pair.",
+      "load": "Repeated controlled impacts",
+      "boundary": "Contact pair isolated in fixture",
+      "output": "F-x-v-t and energy loss",
+      "criterion": "Repeatable damping identification over tested range."
+    },
+    {
+      "id": "P0-T07",
+      "level": 3,
+      "article": "P0-B",
+      "hypothesis": "Restitution/rebound of the selected stop/contact pair is measurable and controllable.",
+      "objective": "Identify rebound ratio versus approach condition.",
+      "load": "Controlled impact velocities established by pre-test setup qualification",
+      "boundary": "No secondary contacts",
+      "output": "Approach/rebound velocities, force, video",
+      "criterion": "Valid runs free of fixture motion and secondary impacts."
+    },
+    {
+      "id": "P0-T08",
+      "level": 3,
+      "article": "P0-C",
+      "hypothesis": "The selected absorber cartridge produces a reproducible force-stroke relation.",
+      "objective": "Measure F-x, hysteresis and end behavior.",
+      "load": "Quasi-static and controlled dynamic profiles within verified fixture capacity",
+      "boundary": "Coaxial alignment, protected end stops",
+      "output": "F(x), work, hysteresis, serial-specific curve",
+      "criterion": "Curve traceable to exact cartridge serial/configuration; no generic curve substitution."
+    },
+    {
+      "id": "P0-T09",
+      "level": 4,
+      "article": "P0-C",
+      "hypothesis": "The absorber response depends measurably on stroke rate within the intended operating domain.",
+      "objective": "Identify F(x,v,T) rate dependence.",
+      "load": "Defined rate sweep inside qualified equipment envelope",
+      "boundary": "Same cartridge and mounting configuration",
+      "output": "F-x-v-t-T map",
+      "criterion": "No fit used outside measured domain; repeatable trends."
+    },
+    {
+      "id": "P0-T10",
+      "level": 3,
+      "article": "P0-C",
+      "hypothesis": "Temperature alters absorber response and must be retained as a configuration variable where relevant.",
+      "objective": "Characterize temperature sensitivity.",
+      "load": "Same mechanical profile at controlled temperatures",
+      "boundary": "Thermal soak and safe temperature limits",
+      "output": "Force/work/hysteresis vs temperature",
+      "criterion": "Temperature state verified before each run; no inferred values between tested conditions without model disclosure."
+    },
+    {
+      "id": "P0-T11",
+      "level": 3,
+      "article": "P0-D",
+      "hypothesis": "Joint/fastener stiffness and preload measurably affect system compliance.",
+      "objective": "Identify joint stiffness and preload sensitivity.",
+      "load": "Controlled axial/shear excitation and preload states",
+      "boundary": "Joint-specific fixture",
+      "output": "F-x-preload law, deformation",
+      "criterion": "Fixture compliance separated or quantified; exact fastener stack recorded."
+    },
+    {
+      "id": "P0-T12",
+      "level": 3,
+      "article": "P0-D",
+      "hypothesis": "Rotation-control joints have measurable clearance, friction and elastic compliance.",
+      "objective": "Identify 150L/150R and hinge compliance.",
+      "load": "Controlled moment/force sweeps",
+      "boundary": "Local joint DOF isolated",
+      "output": "M-alpha and/or F-x hysteresis",
+      "criterion": "Repeatable joint map; left/right differences retained."
+    },
+    {
+      "id": "P0-T13",
+      "level": 2,
+      "article": "P0-D",
+      "hypothesis": "170 can transition between intended mechanical states repeatedly without unintended release.",
+      "objective": "Exercise normal -> armed/capture -> ride-down/release -> rebound/end states as implemented.",
+      "load": "Controlled trigger/force/acceleration surrogate, not a crash pulse",
+      "boundary": "Restraint path not relied upon for human safety; no occupant",
+      "output": "State timeline, trigger threshold/latency, release cases",
+      "criterion": "Intended transition repeatable; all unintended release/fault cases recorded."
+    },
+    {
+      "id": "P0-T14",
+      "level": 3,
+      "article": "P0-E",
+      "hypothesis": "The integrated carriage translates through the intended guided path without binding.",
+      "objective": "Integrated low-load translation and stop test.",
+      "load": "Incrementally increased controlled load",
+      "boundary": "All stops/retention active",
+      "output": "x(t), S1/S2, state, video",
+      "criterion": "No binding/jam; stop engagement reproducible; any damage triggers teardown."
+    },
+    {
+      "id": "P0-T15",
+      "level": 3,
+      "article": "P0-E",
+      "hypothesis": "Seatback rotation-control remains mechanically distinct from longitudinal energy path.",
+      "objective": "Test 150L/150R while longitudinal carriage motion is separately controlled/isolated.",
+      "load": "Controlled seatback moment",
+      "boundary": "Carriage locked for isolation test, then repeat with translation permitted",
+      "output": "theta(t), link loads, hinge reaction",
+      "criterion": "Measurable distinct reaction path and no unintended coupling beyond documented joint compliance."
+    },
+    {
+      "id": "P0-T16",
+      "level": 3,
+      "article": "P0-E",
+      "hypothesis": "The rebound-control module measurably limits reverse travel after primary translation.",
+      "objective": "Test reverse motion control.",
+      "load": "Controlled release/return from bounded primary stroke",
+      "boundary": "End stops and containment active",
+      "output": "reverse x(t), v(t), force, state",
+      "criterion": "Reverse motion remains bounded and controlled; no uncontrolled return or secondary interference."
+    },
+    {
+      "id": "P0-T17",
+      "level": 4,
+      "article": "P0-A/B/C/D/E",
+      "hypothesis": "Changing one controlled design variable changes the measured mechanism response in the expected direction without confounding from other changes.",
+      "objective": "A/B comparison using one-variable-at-a-time variant rule.",
+      "load": "Same approved dynamic test command",
+      "boundary": "Same hardware except defined variable",
+      "output": "paired response metrics and effect estimate",
+      "criterion": "Configuration, serial, setup and calibration matched; otherwise mark MULTIVARIABLE COMPARISON."
+    },
+    {
+      "id": "P0-T18",
+      "level": 4,
+      "article": "P0-E",
+      "hypothesis": "The integrated mechanism can repeat controlled dynamic events while preserving traceable state, force, displacement and rotation measurements.",
+      "objective": "First integrated controlled dynamic screening; no occupant.",
+      "load": "Laboratory-controlled dynamic excitation only; vehicle pulse is not assumed",
+      "boundary": "Containment fixture, hard stops, safe load ceiling",
+      "output": "full synchronized DAQ + video + post-test inspection",
+      "criterion": "All channels valid, synchronization verified, no uncontrolled release, complete evidence package."
+    },
+    {
+      "id": "P0-T19",
+      "level": 1,
+      "article": "P0-E",
+      "hypothesis": "Post-test inspection can distinguish elastic recovery from permanent change and make the article reusable or sacrificial by rule.",
+      "objective": "Teardown, dimensional reinspection, damage classification, reset decision.",
+      "load": "Inspection",
+      "boundary": "After each dynamic test",
+      "output": "damage map, permanent deformation, replacement decision",
+      "criterion": "No reuse without documented inspection acceptance."
+    }
+  ],
+  "VARIANT_MATRIX": [
+    {
+      "config": "P0-A",
+      "name": "Baseline mechanism",
+      "hypothesis": "Establish reference function and measurement repeatability.",
+      "control": "Fixed baseline absorber, baseline lock, baseline rebound and baseline joint stack.",
+      "single_variable": "None; this is the control configuration.",
+      "primary_tests": [
+        "P0-T02",
+        "P0-T03",
+        "P0-T14",
+        "P0-T15",
+        "P0-T16",
+        "P0-T18"
+      ],
+      "change_rule": "No design change during baseline campaign except safety repair that is logged separately."
+    },
+    {
+      "config": "P0-B",
+      "name": "Alternative absorber",
+      "hypothesis": "Absorber characteristic is a causal driver of carriage force/displacement response.",
+      "control": "All structural geometry, lock, rebound, joints and test command held constant.",
+      "single_variable": "Replace 130 cartridge only.",
+      "primary_tests": [
+        "P0-T08",
+        "P0-T09",
+        "P0-T10",
+        "P0-T17",
+        "P0-T18"
+      ],
+      "change_rule": "Only cartridge serial/specification changes; mounting interface remains invariant."
+    },
+    {
+      "config": "P0-C",
+      "name": "Alternative lock",
+      "hypothesis": "Lock strategy changes transition timing/state robustness without changing absorber law.",
+      "control": "Same absorber cartridge, rails, joints, rebound and test command.",
+      "single_variable": "Replace/modify 170 module only.",
+      "primary_tests": [
+        "P0-T13",
+        "P0-T17",
+        "P0-T18"
+      ],
+      "change_rule": "Only 170 is changed; any trigger hardware change must be recorded as part of the same controlled variable."
+    },
+    {
+      "config": "P0-D",
+      "name": "Alternative rebound control",
+      "hypothesis": "Rebound-control strategy changes reverse excursion while primary forward path remains comparable.",
+      "control": "Same absorber, lock, rail, joint and test command.",
+      "single_variable": "Replace/modify 180 only.",
+      "primary_tests": [
+        "P0-T16",
+        "P0-T17",
+        "P0-T18"
+      ],
+      "change_rule": "Only 180 changes."
+    },
+    {
+      "config": "P0-E",
+      "name": "Integrated exploratory configuration",
+      "hypothesis": "The combined architecture can operate as a coupled mechanism with measurable bilateral translation, independent rotation-control and rebound control.",
+      "control": "Use the best documented preceding component options, each with provenance.",
+      "single_variable": "None; this is intentionally MULTIVARIABLE and is not used for causal attribution.",
+      "primary_tests": [
+        "P0-T14",
+        "P0-T15",
+        "P0-T16",
+        "P0-T18",
+        "P0-T19"
+      ],
+      "change_rule": "Configuration manifest freezes the exact selected components and serials before each test."
+    }
+  ],
+  "R4_1_TRACEABILITY": [
+    {
+      "feature": "Bilateral longitudinal load paths",
+      "source_ref": "110L/110R",
+      "p0": [
+        "P0-002",
+        "P0-003",
+        "P0-004"
+      ],
+      "evidence": [
+        "INS-02",
+        "INS-03",
+        "INS-01",
+        "P0-T03",
+        "P0-T14"
+      ],
+      "future_model": "Independent S1/S2 reactions and carriage translation"
+    },
+    {
+      "feature": "Controlled ride-down energy path",
+      "source_ref": "130",
+      "p0": [
+        "P0-005"
+      ],
+      "evidence": [
+        "INS-01",
+        "INS-04",
+        "P0-T08",
+        "P0-T09",
+        "P0-T18"
+      ],
+      "future_model": "F(x,v,T) absorber and carriage force path"
+    },
+    {
+      "feature": "Independent seatback rotation control",
+      "source_ref": "150L/150R",
+      "p0": [
+        "P0-007",
+        "P0-008",
+        "P0-009"
+      ],
+      "evidence": [
+        "INS-05",
+        "INS-07",
+        "P0-T12",
+        "P0-T15"
+      ],
+      "future_model": "Rotation path compliance and load law"
+    },
+    {
+      "feature": "State transition / lock",
+      "source_ref": "170",
+      "p0": [
+        "P0-010"
+      ],
+      "evidence": [
+        "INS-08",
+        "P0-T13",
+        "P0-T18"
+      ],
+      "future_model": "Discrete state machine validation and trigger law"
+    },
+    {
+      "feature": "Rebound control",
+      "source_ref": "180",
+      "p0": [
+        "P0-011"
+      ],
+      "evidence": [
+        "INS-01",
+        "INS-04",
+        "INS-08",
+        "P0-T16",
+        "P0-T18"
+      ],
+      "future_model": "Reverse-motion control law"
+    },
+    {
+      "feature": "Pelvic-control geometry",
+      "source_ref": "140",
+      "p0": [
+        "P0-006"
+      ],
+      "evidence": [
+        "P0-T01",
+        "P0-T14",
+        "P0-T18"
+      ],
+      "future_model": "Geometry-only until qualified occupant/ATD program"
+    },
+    {
+      "feature": "Restraint interface availability",
+      "source_ref": "190",
+      "p0": [
+        "P0-012"
+      ],
+      "evidence": [
+        "fixture inspection and load verification only; no occupant test in P0 early levels"
+      ],
+      "future_model": "Later sled ATD integration only after subsystem gates"
+    },
+    {
+      "feature": "Sensor/trigger interface",
+      "source_ref": "210",
+      "p0": [
+        "P0-014"
+      ],
+      "evidence": [
+        "all synchronized DAQ tests"
+      ],
+      "future_model": "MBD/FE signal mapping and physical correlation"
+    }
+  ],
+  "CHANGE_CONTROL": {
+    "required_fields": [
+      "DESIGN_REV",
+      "TEST_ARTICLE_SERIAL",
+      "CONFIGURATION_ID",
+      "CHANGE_LIST",
+      "RATIONALE",
+      "EXPECTED_EFFECT",
+      "AFFECTED_R4_1_FEATURES",
+      "AFFECTS_CORRELATION_YN",
+      "AUTHORIZATION"
+    ],
+    "rule": "No physical revision may be silently substituted into an A/B comparison. Every change gets a unique revision and serial/configuration manifest."
+  },
+  "FAILURE_MODE_REGISTER": [
+    {
+      "id": "FM-001",
+      "mode": "Rail binding/jam",
+      "severity": "HIGH",
+      "evidence_status": "UNKNOWN until physical test",
+      "detect": "displacement irregularity, rail reaction divergence, video, inspection",
+      "action": "Stop test, unload, inspect alignment/runner/rail; do not force through jam."
+    },
+    {
+      "id": "FM-002",
+      "mode": "Unintended lock release",
+      "severity": "HIGH",
+      "evidence_status": "UNKNOWN until lock tests",
+      "detect": "170 state channel + high-speed video + carriage motion",
+      "action": "Immediate safe stop; isolate trigger and lock components; retain all raw data."
+    },
+    {
+      "id": "FM-003",
+      "mode": "Absorber mount misalignment",
+      "severity": "HIGH",
+      "evidence_status": "UNKNOWN",
+      "detect": "force asymmetry, lateral reaction, visual deformation",
+      "action": "Stop, inspect clevis/pin/fixture, repeat alignment verification before next run."
+    },
+    {
+      "id": "FM-004",
+      "mode": "Stop impact / over-travel",
+      "severity": "HIGH",
+      "evidence_status": "UNKNOWN",
+      "detect": "travel sensor, force spike, video, permanent deformation",
+      "action": "Hard stop test, quarantine damaged component, inspect stop/rail/carriage."
+    },
+    {
+      "id": "FM-005",
+      "mode": "Left/right load-path asymmetry",
+      "severity": "MEDIUM",
+      "evidence_status": "UNKNOWN",
+      "detect": "S1 vs S2 reaction comparison",
+      "action": "Inspect datum alignment, joint preload, rail friction and absorber match."
+    },
+    {
+      "id": "FM-006",
+      "mode": "Sensor saturation / invalid synchronization",
+      "severity": "MEDIUM",
+      "evidence_status": "UNKNOWN",
+      "detect": "DAQ audit, channel clipping, timebase comparison, calibration checks",
+      "action": "Invalidate run for physical-input evidence; repair instrumentation and repeat."
+    },
+    {
+      "id": "FM-007",
+      "mode": "Permanent structural deformation",
+      "severity": "HIGH",
+      "evidence_status": "UNKNOWN",
+      "detect": "post-test dimensional survey and strain evidence where installed",
+      "action": "Classify article as sacrificial or repairable; no reuse without review."
+    },
+    {
+      "id": "FM-008",
+      "mode": "Joint preload drift / loosening",
+      "severity": "MEDIUM",
+      "evidence_status": "UNKNOWN",
+      "detect": "torque/preload audit, displacement drift, inspection",
+      "action": "Replace/retorque per controlled procedure; do not silently reset."
+    }
+  ],
+  "DATA_ACQUISITION": {
+    "global_sync": "Common DAQ timebase for force/displacement/angle/acceleration/state channels; high-speed video time-synchronized to DAQ.",
+    "raw_data_principle": "Never overwrite raw data. Store original files read-only and generate reduced data as new artifacts.",
+    "minimum_record": [
+      "test_id",
+      "article_id",
+      "design_rev",
+      "serial",
+      "configuration_id",
+      "date_time",
+      "operator",
+      "fixture_id",
+      "sensor_id",
+      "calibration_id",
+      "channel_mapping",
+      "sampling",
+      "units",
+      "raw_file_hash",
+      "video_file_hash_if_used"
+    ],
+    "reduction_principles": [
+      "derive velocity only from calibrated displacement or validated inertial measurement",
+      "calculate work from measured force-displacement data",
+      "retain filter specification and version",
+      "never fill missing segments silently",
+      "report uncertainty with every derived physical input"
+    ]
+  },
+  "SAFETY": {
+    "test_boundary": "Bench/subsystem controlled testing only until physical evidence supports escalation.",
+    "occupant": "Prohibited in early P0 levels.",
+    "hard_stops": "Mandatory before dynamic tests.",
+    "load_limit": "Defined from fixture proof test and component certification; not invented from source target forces.",
+    "failure_containment": "Guarding/secondary retention around moving or potentially ejecting components.",
+    "stop_criteria": [
+      "unexpected lock release",
+      "rail jam/binding",
+      "fixture movement",
+      "sensor failure affecting safety decision",
+      "structural crack/permanent deformation",
+      "over-travel",
+      "uncontrolled rebound",
+      "load above pre-approved test ceiling"
+    ]
+  },
+  "DEV006": {
+    "exact_fabrication": "DEV-006-FABRICATION-EXACT remains separate and requires native CAD extraction.",
+    "exploratory_fabrication": "P0-EXPLORATORY-FABRICATION may use documented local deviations while keeping architecture and interfaces testable.",
+    "rule": "Do not label exploratory local dimensions as exact R4.1 dimensions."
+  },
+  "PHYSICAL_INPUT_CLOSURE_BRIDGE": {
+    "mass": "P0-A physical measurement of exact article; CAD-derived mass remains a cross-check only.",
+    "CG": "P0-A balance/reaction measurement on exact article.",
+    "inertia": "P0-A rotational inertia fixture on exact article.",
+    "density": "material coupon/lot measurement or certified material data for each relevant P0 material.",
+    "vehicle_pulse": "external qualified sled/vehicle source; not invented by P0 bench article.",
+    "initial_velocity": "external test command/vehicle source with independent measurement.",
+    "bolt_stiffness": "P0-D controlled joint/fastener characterization.",
+    "friction": "P0-B interface-specific test.",
+    "contact_stiffness": "P0-B interface-specific test.",
+    "contact_damping": "P0-B interface-specific test.",
+    "restitution": "P0-B interface-specific impact test.",
+    "absorber_Fx": "P0-C cartridge characterization.",
+    "absorber_Fv": "P0-C rate sweep characterization.",
+    "joint_compliance": "P0-D joint characterization."
+  },
+  "MANUS_HANDOFF": {
+    "every_result_must_include": [
+      "VALUE",
+      "UNIT",
+      "SOURCE_ID",
+      "REVISION",
+      "DATE",
+      "SHA256",
+      "PROVENANCE",
+      "CONFIGURATION_MAPPING",
+      "VALIDATION_STATUS"
+    ],
+    "no_close_rule": "P0 evidence does not itself authorize R4.1 mutation or R4.2 creation. Manus validates physical evidence; Peter controls gates."
+  },
+  "STATUS": "DESIGN/PROTOTYPE ENGINEERING AUTHORIZED; PHYSICAL TESTING TO PROCEED THROUGH CONTROLLED LEVELS; DESIGN VALIDATION NOT CLAIMED"
+}

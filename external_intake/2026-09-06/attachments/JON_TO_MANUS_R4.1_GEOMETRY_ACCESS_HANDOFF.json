@@ -1,0 +1,134 @@
+{
+  "HANDOFF_TYPE": "AUTHORITATIVE_GEOMETRY_ACCESS_AND_EXTRACTION",
+  "HANDOFF_VERSION": "1.0",
+  "AUTHORITY": "JON_CHATGPT",
+  "EXECUTION_AUTHORITY": "MANUS",
+  "REVIEW_AUTHORITY": "PETER",
+  "R4_1_SHA256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "REQUIRED_ARTIFACT": "R4.1/R4.1.step",
+  "B01": {
+    "ID": "B01",
+    "NAME": "dual-rail/carriage interface",
+    "EXTRACTION_SCOPE": "Extract the authoritative interface geometry exactly as represented in the matched R4.1 artifact; preserve all interface-relevant bodies, mating faces, holes/features, datums, and orientation needed to locate the interface in P0 fabrication."
+  },
+  "B02": {
+    "ID": "B02",
+    "NAME": "seatback pivot/rotation-control",
+    "EXTRACTION_SCOPE": "Extract the authoritative pivot and rotation-control geometry exactly as represented in the matched R4.1 artifact; preserve pivot axis references, mating features, stops/controls, datums, and orientation."
+  },
+  "B03": {
+    "ID": "B03",
+    "NAME": "ride-down/absorber interface",
+    "EXTRACTION_SCOPE": "Extract the authoritative ride-down/absorber interface geometry exactly as represented in the matched R4.1 artifact; preserve mounting/mating features, load-path interface geometry, datums, and orientation."
+  },
+  "B04": {
+    "ID": "B04",
+    "NAME": "lock mating interface",
+    "EXTRACTION_SCOPE": "Extract the authoritative lock mating interface geometry exactly as represented in the matched R4.1 artifact; preserve mating geometry, engagement features, datums, and orientation."
+  },
+  "B05": {
+    "ID": "B05",
+    "NAME": "rebound-control/stop interface",
+    "EXTRACTION_SCOPE": "Extract the authoritative rebound-control/stop interface geometry exactly as represented in the matched R4.1 artifact; preserve stop/rebound contact geometry, datums, and orientation."
+  },
+  "B06": {
+    "ID": "B06",
+    "NAME": "fixture reaction boundary",
+    "EXTRACTION_SCOPE": "Extract the authoritative fixture reaction boundary geometry exactly as represented in the matched R4.1 artifact; preserve reaction/contact boundary features, datums, and orientation."
+  },
+  "EXTRACTION_REQUIREMENTS": {
+    "SOURCE_RULE": "Use only the exact artifact whose SHA256 matches R4_1_SHA256.",
+    "RECOVERY_SOURCES": [
+      "repository",
+      "committed revision history",
+      "evidence package",
+      "backup/archive",
+      "mounted project storage",
+      "known project artifact locations"
+    ],
+    "SEARCH_RULES": [
+      "Perform deterministic recovery only from legitimate controlled project sources already established.",
+      "Do not broaden into generic web search.",
+      "Do not reconstruct the STEP file.",
+      "Do not use a different revision.",
+      "Do not use a visually equivalent STEP or proxy geometry.",
+      "Do not infer, estimate, repair, reverse-engineer, or invent missing geometry."
+    ],
+    "TARGET_RESULT": "The recovered file must be byte-for-byte identified by the required SHA256 before any B01-B06 extraction is accepted.",
+    "FEATURE_RECORD_FIELDS": [
+      "BODY_ID",
+      "B_REP_REFERENCE",
+      "COORDINATE_SYSTEM",
+      "DATUM",
+      "GEOMETRY",
+      "ORIENTATION",
+      "TRAVEL",
+      "CLEARANCE",
+      "PMI/TOLERANCE",
+      "SOURCE_SHA256",
+      "EXTRACTION_VERSION",
+      "EXTRACTION_DATE"
+    ],
+    "MISSING_DATA_RULE": "If a required field is not explicitly recoverable from the matched artifact, record it as unavailable; do not manufacture a value or substitute another source."
+  },
+  "VERIFICATION_REQUIREMENTS": {
+    "SHA_VERIFICATION": {
+      "METHOD": "Independent SHA256 calculation on the recovered R4.1/R4.1.step file.",
+      "PASS_CONDITION": "Calculated SHA256 exactly equals fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+    },
+    "EXTRACTION_VERIFICATION": {
+      "METHOD": "Independent second verification pass after initial B01-B06 extraction.",
+      "CHECKS": [
+        "Confirm each B01-B06 feature is traceable to the matched source artifact.",
+        "Confirm BODY_ID and B_REP_REFERENCE identify the extracted source entities without ambiguity.",
+        "Confirm coordinate system, datum, orientation, travel, clearance, and PMI/tolerance fields were preserved exactly where present.",
+        "Confirm no substitute geometry, inferred dimensions, or cross-revision data entered the extraction.",
+        "Confirm SOURCE_SHA256 equals the authoritative R4_1_SHA256 for every accepted feature record.",
+        "Confirm extraction output is internally consistent and reproducible from the same source artifact."
+      ]
+    },
+    "ACCEPTANCE_RULE": "Only a recovered artifact with exact SHA match followed by successful independent verification of all B01-B06 may be used to unblock P0-V0 exploratory fabrication."
+  },
+  "P0_TARGETS": {
+    "CURRENT_ARCHITECTURE": "FROZEN",
+    "CONCEPT_STATUS": "Accepted exploratory architecture; not under redesign in this handoff.",
+    "UNBLOCK_CONDITION": "B01-B06 extracted and independently verified from the exact SHA-matched artifact.",
+    "SUCCESS_STATE": "P0-V0_BUILD_STATUS = READY",
+    "SUCCESS_SCOPE": "EXPLORATORY FABRICATION ONLY",
+    "EXPLICIT_NON_IMPLICATIONS": [
+      "R4.1_EXACT_FABRICATION = READY",
+      "DESIGN_VALIDATED"
+    ],
+    "FAILURE_STATE": [
+      "P0-V0_BUILD_STATUS = BLOCKED",
+      "R4.1_GEOMETRY_ACCESS_STATUS = BLOCKED"
+    ]
+  },
+  "R4.1_TRACEABILITY_REQUIREMENTS": {
+    "IDENTITY": {
+      "REQUIRED_ARTIFACT": "R4.1/R4.1.step",
+      "REQUIRED_SHA256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "SHA_ROLE": "Immutable source identity; filename alone is insufficient."
+    },
+    "LINEAGE": [
+      "Record the exact controlled-project source location from which the artifact was recovered.",
+      "Record the exact artifact path/name used for SHA verification.",
+      "Record the computed SHA256 result.",
+      "Record extraction version and extraction date.",
+      "Maintain a direct trace from every B01-B06 record to the matched source artifact and source B-rep/body reference."
+    ],
+    "NO_BYPASS": [
+      "No geometry may be accepted solely because it looks correct.",
+      "No geometry from another revision may be merged into this extraction.",
+      "No inferred dimensions, coordinates, tolerances, travel values, or clearances may be promoted to authoritative data.",
+      "No reconstruction is permitted when the authoritative artifact is absent or SHA-mismatched."
+    ],
+    "FINAL_HANDOFF_TO_PETER": "Return the recovery result, SHA result, source location, B01-B06 extraction records, and independent verification result for Peter review."
+  },
+  "MANUS_REQUIRED_RECOVERY_RESULT_ENUM": [
+    "FOUND + SHA MATCH",
+    "FOUND + SHA MISMATCH",
+    "NOT FOUND"
+  ],
+  "STOP_RULE": "If the artifact is absent or SHA-mismatched, stop immediately after recording the exact artifact searched, exact locations searched, exact SHA result, and exact owner/action required to make the authoritative artifact available. Do not create substitute geometry."
+}

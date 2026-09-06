@@ -1,0 +1,6 @@
+﻿FUTURE_MODEL,MANUS_DESTINATION,MEASURED_EVIDENCE,ORIGINAL_CONCEPT,P0,R4_1_TARGET,SOURCE_REF
+MBD rail/joint/absorber parameters,physical_input_register + evidence package,"Rail reactions, carriage x(t), absorber F-x/F-v",Dual-rail ride-down carriage,P0-002/P0-003/P0-004/P0-005,110L/110R + 120 + 130,"V7 p2,p5,p15,p16"
+MBD rotation constraint and FE load path,joint_compliance / rotation-control evidence,"seatback angle, link loads, hinge compliance",Distinct seatback rotation-control path,P0-007/P0-008/P0-009,150L/150R + 160,"V7 p3,p4,p5,p15,p18"
+MBD event logic / joint states,state-transition evidence,state/time/acceleration/return travel,Multi-state lock / event sequence,P0-010/P0-011,170 + 180,"V7 p2,p4,p17,p22"
+ATD/contact representation,configuration + later sled evidence,"pan load path, geometry survey; occupant/ATD later",Pelvic anti-submarining geometry,P0-006,140,"V7 p2,p4,p15,p18"
+sled restraint model,restraint interface configuration,anchor load/geometry and functional availability in non-occupant tests,Occupant restraint path remains available,P0-012,190,"V7 p3,p5,p18"

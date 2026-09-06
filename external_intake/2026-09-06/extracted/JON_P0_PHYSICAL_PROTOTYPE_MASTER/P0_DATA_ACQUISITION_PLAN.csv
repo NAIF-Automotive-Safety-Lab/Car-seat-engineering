@@ -1,0 +1,8 @@
+﻿STAGE,REQUIRED,FORMAT,EVIDENCE,HASH
+Pre-test configuration lock,"P0 revision, component serials, absorber serials, fastener lots, fixture revision, sensor IDs, calibration revisions, ambient conditions",JSON manifest,configuration_manifest.json,SHA256
+DAQ setup,"channel map, sample rates, filters, gains, trigger, timebase, wiring map",CSV + JSON,daq_setup.json + channel_map.csv,SHA256
+Raw dynamic data,all synchronized channels with units and engineering conversions deferred to metadata,Binary native + exported CSV,raw/,SHA256 per raw file
+Video,original high-speed video + lens calibration + trigger timestamp,Native video + JSON metadata,video/,SHA256
+Reduction,"calibration factors, zeroing, filtering, derived velocity/energy, uncertainty propagation",script/versioned notebook + CSV,reduced/,SHA256
+Inspection,"before/after photos, dimensional recheck, crack/deformation/leakage findings",JPG/PNG + inspection JSON,inspection/,SHA256
+Manus handoff,"VALUE, UNIT, SOURCE_ID, REVISION, DATE, SHA256, PROVENANCE, CONFIGURATION_MAPPING, VALIDATION_STATUS",canonical JSON artifact per input,manus_submission/,SHA256

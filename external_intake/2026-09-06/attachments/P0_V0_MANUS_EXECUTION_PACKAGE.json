@@ -1,0 +1,594 @@
+{
+  "package_id": "P0_V0_MANUS_EXECUTION_PACKAGE",
+  "package_version": "0.1-exploratory",
+  "status": "P0-V0_BUILD_STATUS = PARTIALLY_READY",
+  "mission": "BUILD -> TEST -> MEASURE -> LEARN -> MODIFY -> RETEST",
+  "scope": "FIRST_REAL_PHYSICAL_TEST ARTICLE; exploratory mechanism hardware only; not production-seat validation; no human/occupant testing",
+  "authority_refs": {
+    "r4_1_immutable_reference": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "controlled_input_contract": "EXISTING_14_INPUT_CONTRACT__DO_NOT_REDEFINE",
+    "p0_design_basis": "ORIGINAL_P0_DESIGN__REQUIRED_AS_AUTHORITATIVE_SOURCE",
+    "execution_rule": "Use P0 design intent where explicit; use CAD extraction where geometry is authority-critical; never replace missing evidence with assumptions."
+  },
+  "source_state": {
+    "p0_design_native_file_available_in_current_execution_workspace": false,
+    "r4_1_native_geometry_available_in_current_execution_workspace": false,
+    "consequence": "The exploratory architecture and test interfaces can be defined, but geometry that changes kinematics, load path, joint alignment, absorber alignment, lock engagement, rebound stops, or fixture safety boundary remains blocked pending authoritative extraction."
+  },
+  "critical_geometry_classes": {
+    "CLASS_A": {
+      "rule": "Must come from R4.1/native CAD or controlled drawing.",
+      "items": [
+        "rail centerline spacing and rail mounting datum",
+        "carriage-to-rail interface geometry",
+        "seatback rotational pivot axis location/orientation",
+        "ride-down mechanism reaction/load-path attachment coordinates",
+        "absorber interface axis and attachment geometry where it determines engagement kinematics",
+        "lock engagement geometry, datum and travel where it determines state transition",
+        "rebound-control stop/engagement geometry where it limits travel",
+        "primary fixture attachment coordinates that establish boundary conditions",
+        "any joint geometry whose axis location or constraint direction changes the mechanism"
+      ]
+    },
+    "CLASS_B": {
+      "rule": "May be defined from P0 design intent for exploratory hardware without asserting production equivalence.",
+      "items": [
+        "modular cartridge architecture",
+        "replaceable absorber cassette concept",
+        "replaceable lock/rebound module concept",
+        "surrogate/instrumented mass concept in place of occupant geometry",
+        "sensor bracket strategy",
+        "service-access and inspection features"
+      ]
+    },
+    "CLASS_C": {
+      "rule": "May be locally adjustable or fixture-controlled, provided adjustment does not silently alter the controlled hypothesis.",
+      "items": [
+        "fixture leveling/alignment",
+        "sensor bracket clocking and zeroing",
+        "replaceable module shimming within a controlled datum scheme",
+        "instrument cable routing/support",
+        "non-kinematic access covers and guards"
+      ]
+    },
+    "CLASS_D": {
+      "rule": "Not required for the first mechanism test.",
+      "items": [
+        "production trim geometry",
+        "production upholstery/foam details not involved in load path",
+        "production appearance features",
+        "vehicle integration details outside the defined fixture boundary"
+      ]
+    }
+  },
+  "build_definition": {
+    "architecture": [
+      "dual rail concept",
+      "carriage",
+      "ride-down mechanism",
+      "absorber interface",
+      "seatback rotational-control mechanism",
+      "lock mechanism",
+      "rebound-control mechanism",
+      "relevant joints",
+      "structural interfaces",
+      "instrumentation mounting"
+    ],
+    "part_table": [
+      {
+        "PART_ID": "P0V0-100",
+        "FUNCTION": "Primary dual-rail support and fixed reaction interface",
+        "MATERIAL_CLASS": "STRUCTURAL_METAL__SELECT_FROM_P0_DESIGN/MANUFACTURING_REQUIREMENTS",
+        "MANUFACTURING_METHOD": "CUT/MACHINED/FABRICATED STRUCTURAL ASSEMBLY",
+        "NOMINAL_GEOMETRY": "Two parallel linear guide elements supporting a removable carriage; exact layout CAD-controlled.",
+        "CRITICAL_DIMENSIONS": "CAD_EXTRACTION_REQUIRED",
+        "INTERFACE": "Vehicle/fixture reaction structure; carriage running interfaces",
+        "FASTENERS": "Bolted serviceable joints; exact size/grade CAD/drawing controlled",
+        "ADJUSTMENTS": "CLASS-C alignment provisions only; no free alteration of rail spacing",
+        "REPLACEABILITY": "YES",
+        "INSTRUMENTATION": "Optional rail reaction/load sensing only where required by test objective",
+        "SOURCE": "P0 design intent + R4.1/native CAD required for dimensions",
+        "CONFIDENCE": "SECONDARY_DESCRIPTOR_ONLY",
+        "R4.1_TRACEABILITY": "Direct architecture trace; geometry correlation blocked pending authoritative extraction",
+        "P0_DEVIATION": "Exploratory support may use fabrication-friendly construction while preserving rail axis, reaction path and carriage DOF"
+      },
+      {
+        "PART_ID": "P0V0-200",
+        "FUNCTION": "Movable carriage transmitting load between rails and ride-down/seat structure",
+        "MATERIAL_CLASS": "STRUCTURAL_METAL",
+        "MANUFACTURING_METHOD": "MACHINED/FABRICATED PLATE AND BOX/FRAME ASSEMBLY",
+        "NOMINAL_GEOMETRY": "Rigid bridge/frame spanning both rails with bolted modular top interfaces.",
+        "CRITICAL_DIMENSIONS": "CAD_EXTRACTION_REQUIRED for rail interface and datum-critical attachment locations",
+        "INTERFACE": "Rail runners; ride-down module; seatback module; sensor brackets",
+        "FASTENERS": "Bolted modular interfaces; exact specification from controlled design/inspection",
+        "ADJUSTMENTS": "Service slots only where explicitly approved; datums remain fixed",
+        "REPLACEABILITY": "YES",
+        "INSTRUMENTATION": "Acceleration mounting point; displacement target/reference; optional interface load cell provision",
+        "SOURCE": "P0 design intent; geometry authority pending CAD extraction",
+        "CONFIDENCE": "SECONDARY_DESCRIPTOR_ONLY",
+        "R4.1_TRACEABILITY": "Load-path role traceable; exact geometry not yet correlated",
+        "P0_DEVIATION": "Fabrication may prioritize modular access and sensor mounting over production packaging"
+      },
+      {
+        "PART_ID": "P0V0-300",
+        "FUNCTION": "Ride-down load-path module controlling primary translation response",
+        "MATERIAL_CLASS": "STRUCTURAL_METAL + REPLACEABLE TEST ELEMENTS",
+        "MANUFACTURING_METHOD": "BOLTED CASSETTE/MODULE",
+        "NOMINAL_GEOMETRY": "Replaceable reaction-to-carriage module arranged so controlled translation occurs along the rail axis.",
+        "CRITICAL_DIMENSIONS": "CAD_EXTRACTION_REQUIRED for anchor points and alignment; test-module envelope may be fixture-defined",
+        "INTERFACE": "Carriage on one side; fixed reaction structure/absorber interface on the other",
+        "FASTENERS": "High-integrity bolted joints; exact size/grade from controlled design",
+        "ADJUSTMENTS": "Stroke/engagement settings only where explicitly defined by test plan",
+        "REPLACEABILITY": "YES",
+        "INSTRUMENTATION": "In-line force measurement; carriage displacement; carriage acceleration",
+        "SOURCE": "P0 design intent",
+        "CONFIDENCE": "SECONDARY_DESCRIPTOR_ONLY",
+        "R4.1_TRACEABILITY": "Mechanism hypothesis direct; production geometry correlation pending",
+        "P0_DEVIATION": "Cassette-style construction is permitted to accelerate swap-and-retest iterations"
+      },
+      {
+        "PART_ID": "P0V0-310",
+        "FUNCTION": "Replaceable absorber interface cassette",
+        "MATERIAL_CLASS": "STRUCTURAL_METAL + SELECTED ABSORBER",
+        "MANUFACTURING_METHOD": "MACHINED/FABRICATED BOLTED CASSETTE",
+        "NOMINAL_GEOMETRY": "Rigid absorber mounts with datum-controlled alignment and service access.",
+        "CRITICAL_DIMENSIONS": "CAD_EXTRACTION_REQUIRED for absorber axis, mount spacing, and stroke envelope",
+        "INTERFACE": "Ride-down module to absorber; absorber to reaction structure or carriage per P0 architecture",
+        "FASTENERS": "Bolted, replaceable, positively retained",
+        "ADJUSTMENTS": "Controlled shim/slot provision only if it preserves absorber axis",
+        "REPLACEABILITY": "YES",
+        "INSTRUMENTATION": "Absorber force and stroke measurement interfaces",
+        "SOURCE": "P0 design intent + controlled absorber data from 14-input contract",
+        "CONFIDENCE": "SECONDARY_DESCRIPTOR_ONLY",
+        "R4.1_TRACEABILITY": "Absorber role direct; exact interface correlation pending",
+        "P0_DEVIATION": "Test cassette optimized for rapid absorber changes"
+      },
+      {
+        "PART_ID": "P0V0-400",
+        "FUNCTION": "Seatback rotational-control structure",
+        "MATERIAL_CLASS": "STRUCTURAL_METAL",
+        "MANUFACTURING_METHOD": "FABRICATED/MACHINED BRACKET AND FRAME",
+        "NOMINAL_GEOMETRY": "Seatback surrogate/frame mounted to carriage with one controlled rotational axis and replaceable control module.",
+        "CRITICAL_DIMENSIONS": "CAD_EXTRACTION_REQUIRED for pivot axis and any control-link geometry affecting rotation",
+        "INTERFACE": "Carriage; pivot joints; lock; rebound-control module; surrogate mass interface",
+        "FASTENERS": "Bolted modular joints",
+        "ADJUSTMENTS": "Controlled rotational stop/fixture adjustments only",
+        "REPLACEABILITY": "YES for control module; pivot axis is not an ad-hoc adjustment",
+        "INSTRUMENTATION": "Rotational encoder/IMU; joint deformation access",
+        "SOURCE": "P0 design intent",
+        "CONFIDENCE": "SECONDARY_DESCRIPTOR_ONLY",
+        "R4.1_TRACEABILITY": "Rotational-control function direct; axis geometry pending",
+        "P0_DEVIATION": "Use rigid surrogate seatback frame rather than production trim"
+      },
+      {
+        "PART_ID": "P0V0-500",
+        "FUNCTION": "Lock-state transition module",
+        "MATERIAL_CLASS": "MACHINED/MEDIUM-HIGH-STRENGTH METAL",
+        "MANUFACTURING_METHOD": "MACHINED COMPONENTS + BOLTED BRACKET",
+        "NOMINAL_GEOMETRY": "Positive-state mechanism with observable locked/unlocked states; replaceable cartridge preferred.",
+        "CRITICAL_DIMENSIONS": "CAD_EXTRACTION_REQUIRED for mating surfaces, engagement travel and release geometry",
+        "INTERFACE": "Seatback rotational structure and fixed/carriage reaction structure as defined by P0",
+        "FASTENERS": "Bolted serviceable mounting",
+        "ADJUSTMENTS": "Controlled preload/actuation setup only",
+        "REPLACEABILITY": "YES",
+        "INSTRUMENTATION": "State sensor/limit switch plus visual inspection window",
+        "SOURCE": "P0 design intent",
+        "CONFIDENCE": "SECONDARY_DESCRIPTOR_ONLY",
+        "R4.1_TRACEABILITY": "Lock-state hypothesis direct; detailed engagement correlation pending",
+        "P0_DEVIATION": "Instrumented, serviceable lock cartridge permitted for exploratory testing"
+      },
+      {
+        "PART_ID": "P0V0-600",
+        "FUNCTION": "Rebound-control module limiting secondary excursion without preventing intended primary motion",
+        "MATERIAL_CLASS": "STRUCTURAL_METAL + REPLACEABLE STOP/ELEMENT",
+        "MANUFACTURING_METHOD": "BOLTED REPLACEABLE MODULE",
+        "NOMINAL_GEOMETRY": "Directional secondary-motion restraint/stop aligned to the rebound path.",
+        "CRITICAL_DIMENSIONS": "CAD_EXTRACTION_REQUIRED for stop location, engagement direction and allowable excursion",
+        "INTERFACE": "Seatback/carriage moving structure to reaction structure",
+        "FASTENERS": "Bolted serviceable joints",
+        "ADJUSTMENTS": "Controlled stop position only where fixture/test plan defines it",
+        "REPLACEABILITY": "YES",
+        "INSTRUMENTATION": "Rebound displacement; contact event/state sensing where practical",
+        "SOURCE": "P0 design intent",
+        "CONFIDENCE": "SECONDARY_DESCRIPTOR_ONLY",
+        "R4.1_TRACEABILITY": "Rebound-control role direct; exact geometry pending",
+        "P0_DEVIATION": "Replaceable stop element used for iterative tuning"
+      },
+      {
+        "PART_ID": "P0V0-700",
+        "FUNCTION": "Relevant structural and rotational joints",
+        "MATERIAL_CLASS": "CONTROLLED JOINT HARDWARE / BUSHINGS / BEARINGS AS SPECIFIED",
+        "MANUFACTURING_METHOD": "MACHINED/FIT ASSEMBLY",
+        "NOMINAL_GEOMETRY": "One clearly defined axis per intended DOF; all unintended DOF constrained.",
+        "CRITICAL_DIMENSIONS": "CAD_EXTRACTION_REQUIRED where axis location, offset, compliance or stop condition changes kinematics",
+        "INTERFACE": "Carriage, seatback frame, lock, absorber and rebound modules",
+        "FASTENERS": "Controlled joint hardware; exact specification from design evidence",
+        "ADJUSTMENTS": "Preload/clearance only under controlled inspection/test procedure",
+        "REPLACEABILITY": "YES",
+        "INSTRUMENTATION": "Joint deformation measurement access at critical joints",
+        "SOURCE": "P0 design intent + 14-input contract joint compliance",
+        "CONFIDENCE": "SECONDARY_DESCRIPTOR_ONLY",
+        "R4.1_TRACEABILITY": "Joint function direct; compliance correlation pending controlled geometry/evidence",
+        "P0_DEVIATION": "Testable service joints favored over permanent construction"
+      },
+      {
+        "PART_ID": "P0V0-800",
+        "FUNCTION": "Instrumented surrogate mass / inertial loading representation",
+        "MATERIAL_CLASS": "STRUCTURAL MASS SIMULATOR",
+        "MANUFACTURING_METHOD": "FABRICATED/MACHINED BLOCK OR FRAME",
+        "NOMINAL_GEOMETRY": "Rigid surrogate attached to the mechanism at the controlled P0 load interface; occupant trim geometry omitted.",
+        "CRITICAL_DIMENSIONS": "MASS/CG/INERTIA must be taken from controlled source; physical envelope non-critical if it does not contact mechanism",
+        "INTERFACE": "Seatback/carriage load introduction point per P0 design",
+        "FASTENERS": "Bolted positive retention",
+        "ADJUSTMENTS": "Mass property configuration only by controlled interchangeable weights/inserts",
+        "REPLACEABILITY": "YES",
+        "INSTRUMENTATION": "3-axis acceleration; optional local load path sensing",
+        "SOURCE": "Existing controlled SOURCE contract: mass/CG/inertia",
+        "CONFIDENCE": "SECONDARY_DESCRIPTOR_ONLY",
+        "R4.1_TRACEABILITY": "Mass-property trace direct to controlled input contract; physical attachment geometry pending P0 CAD",
+        "P0_DEVIATION": "Surrogate replaces human occupant; no human testing"
+      },
+      {
+        "PART_ID": "P0V0-900",
+        "FUNCTION": "Instrumentation mounting and protection",
+        "MATERIAL_CLASS": "LIGHT STRUCTURAL METAL / POLYMER PROTECTION",
+        "MANUFACTURING_METHOD": "BENT/MACHINED BRACKETS",
+        "NOMINAL_GEOMETRY": "Rigid, low-compliance brackets placed outside moving/contact envelopes and accessible for service.",
+        "CRITICAL_DIMENSIONS": "TBD-BY-TEST-FIXTURE for clearance; sensor datum locations must be controlled",
+        "INTERFACE": "Carriage, seatback frame, joints, absorber and fixture",
+        "FASTENERS": "Bolted/removable",
+        "ADJUSTMENTS": "Sensor alignment and clocking",
+        "REPLACEABILITY": "YES",
+        "INSTRUMENTATION": "Mounts for force, displacement, acceleration, rotation, joint deformation, lock-state and absorber measurements",
+        "SOURCE": "Test objective / instrumentation access requirement",
+        "CONFIDENCE": "SECONDARY_DESCRIPTOR_ONLY",
+        "R4.1_TRACEABILITY": "Measurement architecture only; no production relevance claim",
+        "P0_DEVIATION": "Explicit instrumentation-first packaging"
+      }
+    ]
+  },
+  "fixture_definition": {
+    "fixture_id": "P0V0-FIX-01",
+    "minimum_boundary_condition": "Rigid reaction frame reproducing only the intended mechanism boundary conditions; no vehicle crash pulse reproduction in V0",
+    "attachment_points": "CAD_EXTRACTION_REQUIRED where attachment coordinates are part of R4.1/P0 load path",
+    "reaction_path": "Fixed frame -> defined mechanism reaction interface -> dual rails/carriage -> ride-down module -> controlled moving structure",
+    "constraint_direction": "Primary translation constrained/guided along rail axis; rotational DOF only where P0 mechanism explicitly requires it",
+    "allowed_DOF": [
+      "controlled rail-axis translation",
+      "seatback rotation only if defined by P0 mechanism"
+    ],
+    "forbidden_DOF": [
+      "unintended lateral translation",
+      "unintended vertical translation",
+      "unintended yaw/pitch/roll",
+      "structural slip at reaction interfaces"
+    ],
+    "load_introduction": "Controlled actuator/test-machine input into the mechanism or surrogate boundary; exact loading waveform/rate shall be selected from the dedicated test plan and not inferred as a crash pulse",
+    "inspection_access": "Full visual and dimensional access to rails, joints, absorber, lock and rebound interfaces",
+    "instrumentation_access": "All sensors, targets, cables and data acquisition interfaces reachable without entering the primary moving/load path",
+    "safety_containment": "Physical guarding/containment around moving components and released-energy paths; positive fixture anchorage; remote operation for dynamic tests; test abort capability",
+    "fixture_gate": "Do not run dynamic testing until restraint, travel limits, release-energy containment and sensor protection are verified by inspection."
+  },
+  "instrumentation_plan": [
+    {
+      "channel_id": "CH-F01",
+      "measurement": "primary mechanism force",
+      "location": "in-line with controlled ride-down load path",
+      "access": "external",
+      "protection": "shielded from direct contact/debris",
+      "evidence_required": "sensor calibration/verification"
+    },
+    {
+      "channel_id": "CH-X01",
+      "measurement": "carriage primary displacement",
+      "location": "rail-axis displacement reference",
+      "access": "external",
+      "protection": "clear optical/linear sensing path",
+      "evidence_required": "scale/zero verification"
+    },
+    {
+      "channel_id": "CH-A01",
+      "measurement": "carriage/seat structure acceleration",
+      "location": "rigid structural datum near mechanism mass centroid",
+      "access": "top/side service surface",
+      "protection": "guarded and strain-relieved wiring",
+      "evidence_required": "sensor calibration/axis orientation check"
+    },
+    {
+      "channel_id": "CH-R01",
+      "measurement": "seatback rotation",
+      "location": "pivot-referenced encoder/gyro location",
+      "access": "external",
+      "protection": "protected from impact and cable snag",
+      "evidence_required": "angle-zero and sign check"
+    },
+    {
+      "channel_id": "CH-J01",
+      "measurement": "joint deformation/compliance",
+      "location": "critical joint identified in P0 load path",
+      "access": "direct visual/probe access",
+      "protection": "no obstruction of joint travel",
+      "evidence_required": "zero/load reference verification"
+    },
+    {
+      "channel_id": "CH-L01",
+      "measurement": "lock state",
+      "location": "positive locked/unlocked state detection point",
+      "access": "external and visual",
+      "protection": "mechanically guarded",
+      "evidence_required": "state-transition verification"
+    },
+    {
+      "channel_id": "CH-AB-F01",
+      "measurement": "absorber force",
+      "location": "absorber load axis or equivalent calibrated interface",
+      "access": "external",
+      "protection": "shielded",
+      "evidence_required": "force calibration/chain verification"
+    },
+    {
+      "channel_id": "CH-AB-X01",
+      "measurement": "absorber stroke",
+      "location": "parallel to absorber travel axis",
+      "access": "external",
+      "protection": "guarded from hard stop",
+      "evidence_required": "stroke-zero verification"
+    },
+    {
+      "channel_id": "CH-RB01",
+      "measurement": "rebound excursion",
+      "location": "secondary motion reference",
+      "access": "external",
+      "protection": "guarded",
+      "evidence_required": "travel-zero verification"
+    }
+  ],
+  "test_matrix": [
+    {
+      "TEST_ID": "P0V0-T01",
+      "objective": "Assembly/alignment verification",
+      "configuration": "P0V0-A",
+      "mode": "static/manual/low-energy controlled movement",
+      "hypotheses": ["H1", "H4", "H5", "H7"],
+      "required_observations": "free translation, intended rotation only, lock-state indication, absence of unintended DOF",
+      "data": "position, angle, lock state, inspection record",
+      "decision": "Any unintended DOF or uncontrolled state transition blocks dynamic testing and triggers geometry/joint correction."
+    },
+    {
+      "TEST_ID": "P0V0-T02",
+      "objective": "Controlled translation mechanism identification",
+      "configuration": "P0V0-A",
+      "mode": "controlled actuator motion; no crash pulse",
+      "hypotheses": ["H1", "H7"],
+      "required_observations": "translation trajectory, reaction force, repeatability, guide behavior",
+      "data": "force-displacement-time histories + inspection",
+      "decision": "Mechanism is identified only when measured translation follows the commanded path without unintended constraint/release events."
+    },
+    {
+      "TEST_ID": "P0V0-T03",
+      "objective": "Ride-down load-path verification",
+      "configuration": "P0V0-A",
+      "mode": "controlled loading",
+      "hypotheses": ["H2", "H7"],
+      "required_observations": "load transfer path and structural/joint response",
+      "data": "force, displacement, acceleration, joint response",
+      "decision": "Load must be measurable through the intended path; any bypass path or uncontrolled deformation becomes a design issue."
+    },
+    {
+      "TEST_ID": "P0V0-T04",
+      "objective": "Absorber engagement and response",
+      "configuration": "P0V0-A then module-swap variants",
+      "mode": "controlled loading",
+      "hypotheses": ["H3", "H7"],
+      "required_observations": "engagement onset, absorber force/stroke, load-path continuity",
+      "data": "absorber force/stroke + system force/displacement",
+      "decision": "Engagement must be observable and attributable to the intended interface; otherwise stop and correct geometry/alignment."
+    },
+    {
+      "TEST_ID": "P0V0-T05",
+      "objective": "Independent seatback rotation control",
+      "configuration": "P0V0-A",
+      "mode": "controlled rotation",
+      "hypotheses": ["H4", "H7"],
+      "required_observations": "rotation about intended axis, control response, joint deformation",
+      "data": "angle/time + joint response + force where instrumented",
+      "decision": "Rotation is accepted as controlled only when unintended coupled DOF are absent and the intended control element affects the measured response."
+    },
+    {
+      "TEST_ID": "P0V0-T06",
+      "objective": "Lock-state transition identification",
+      "configuration": "P0V0-A",
+      "mode": "controlled state transitions",
+      "hypotheses": ["H5", "H7"],
+      "required_observations": "locked/unlocked state, release/re-engagement repeatability",
+      "data": "lock-state channel + displacement/angle + visual inspection",
+      "decision": "Every state transition must be recorded and attributable; ambiguous state is a failure of the test article, not a subjective pass."
+    },
+    {
+      "TEST_ID": "P0V0-T07",
+      "objective": "Rebound control identification",
+      "configuration": "P0V0-A",
+      "mode": "controlled return/rebound event",
+      "hypotheses": ["H6", "H7"],
+      "required_observations": "primary motion completion followed by bounded secondary excursion",
+      "data": "rebound displacement, force/contact state, seatback angle",
+      "decision": "Rebound-control element must engage only in its intended regime and must not defeat primary motion."
+    },
+    {
+      "TEST_ID": "P0V0-T08",
+      "objective": "Repeatability and configuration discrimination",
+      "configuration": "P0V0-A versus defined replacement module configuration",
+      "mode": "same controlled test sequence",
+      "hypotheses": ["H1", "H2", "H3", "H5", "H6", "H7"],
+      "required_observations": "repeatability and measurable response change attributable to the swapped module",
+      "data": "full synchronized channel set + configuration ID",
+      "decision": "A module change is considered informative only when the measured change exceeds documented test repeatability/measurement uncertainty from the same setup. No invented threshold is permitted."
+    }
+  ],
+  "configuration_control": {
+    "baseline": {
+      "CONFIG_ID": "P0V0-A",
+      "definition": "Baseline build using one controlled ride-down/absorber/lock/rebound module set",
+      "rule": "Freeze geometry, fastener state, sensor setup and fixture alignment before baseline data collection."
+    },
+    "variant": {
+      "CONFIG_ID": "P0V0-B",
+      "definition": "Same article and fixture with exactly one replaceable experimental module changed",
+      "rule": "Record changed PART_ID, serial/lot, setting, mass properties if affected, and re-zero relevant sensors."
+    },
+    "additional_variants": "P0V0-C, P0V0-D... only when one controlled change per configuration is documented"
+  },
+  "assembly_structure": {
+    "A0": "Fixture and reaction frame",
+    "A1": "Dual rails and fixed supports",
+    "A2": "Carriage and rail interfaces",
+    "A3": "Ride-down cassette",
+    "A4": "Absorber cassette",
+    "A5": "Seatback rotational frame/pivot",
+    "A6": "Lock cartridge",
+    "A7": "Rebound-control cartridge",
+    "A8": "Surrogate mass",
+    "A9": "Instrumentation and protection",
+    "assembly_rule": "Install and inspect fixed datum structure first; install moving mechanism second; install replaceable experimental modules third; install/verify sensors last."
+  },
+  "BOM": [
+    "P0V0-100",
+    "P0V0-200",
+    "P0V0-300",
+    "P0V0-310",
+    "P0V0-400",
+    "P0V0-500",
+    "P0V0-600",
+    "P0V0-700",
+    "P0V0-800",
+    "P0V0-900",
+    "controlled fasteners and joint hardware per authoritative drawings/inspection",
+    "controlled instrumentation set per instrumentation plan",
+    "safety guarding/containment appropriate to test energy"
+  ],
+  "manufacturing_and_inspection_rules": [
+    "Every Class-A feature must be released from authoritative geometry before fabrication.",
+    "No fabricated number may be back-filled from guesswork.",
+    "Critical mating faces, joint axes, absorber axes, lock engagement faces and rail alignment datums require dimensional inspection before assembly.",
+    "All structural fasteners require traceable specification and assembly record.",
+    "All replaceable modules receive unique configuration/serial identification.",
+    "Sensor datums, zero offsets, axis orientation and calibration state are recorded before each configuration baseline.",
+    "Any feature marked TBD-BY-CAD, TBD-BY-INSPECTION or TBD-BY-TEST-FIXTURE remains visibly unresolved until that evidence exists."
+  ],
+  "inspection_checklist": [
+    "Verify rail spacing/alignment against authoritative CAD/drawing.",
+    "Verify carriage running interfaces and free travel.",
+    "Verify ride-down reaction/load-path attachment geometry.",
+    "Verify absorber axis, mount geometry, stroke envelope and positive retention.",
+    "Verify seatback pivot axis and allowed rotational DOF.",
+    "Verify lock engagement/release geometry and state sensing.",
+    "Verify rebound-control direction, stop/engagement condition and travel envelope.",
+    "Verify no unintended joint looseness or free DOF.",
+    "Verify surrogate mass, CG/inertia against controlled input evidence.",
+    "Verify all sensors are accessible, protected, calibrated/verified and zeroed.",
+    "Verify fixture anchorage, reaction path, guards, containment and abort provisions.",
+    "Freeze configuration ID before test."
+  ],
+  "data_format": {
+    "record_id": "UUID_or_controlled_test_record_ID",
+    "required_metadata": [
+      "CONFIG_ID",
+      "TEST_ID",
+      "R4_1_REFERENCE_ID",
+      "P0_DESIGN_SOURCE_ID",
+      "fixture_id",
+      "article_serial",
+      "module_serials",
+      "sensor_serials",
+      "calibration_state",
+      "test_operator",
+      "date_time",
+      "environmental_conditions_if_relevant",
+      "assembly_inspection_record",
+      "initial_configuration_state"
+    ],
+    "channels": "time-synchronized raw channels with engineering units and channel definitions",
+    "files": [
+      "raw_data",
+      "processed_data",
+      "configuration_record",
+      "inspection_record",
+      "photos/video where useful for state/event verification",
+      "test_log"
+    ],
+    "rule": "Never overwrite raw data. Every processed result must retain lineage to raw data and CONFIG_ID."
+  },
+  "acceptance_identification_rules": {
+    "principle": "Evidence-based mechanism identification; no subjective appearance criteria.",
+    "functional_acceptance": "A mechanism function is only accepted for the exploratory objective when the required measured state/trajectory/event is observed and the inspection record shows no disqualifying structural or kinematic anomaly.",
+    "repeatability": "Use repeated baseline runs to characterize setup repeatability before treating a module swap as causal.",
+    "change_attribution": "One controlled module change per configuration; identical fixture/sensor setup wherever possible.",
+    "r4_1_boundary": "If geometry differs materially from R4.1, report result as P0_EXPLORATORY_ONLY and do not claim direct R4.1 validation."
+  },
+  "decision_loop": {
+    "required_sequence": [
+      "OBSERVATION",
+      "RESULT",
+      "HYPOTHESIS STATUS",
+      "DESIGN CHANGE",
+      "NEXT CONFIGURATION"
+    ],
+    "hypothesis_status_values": [
+      "SUPPORTED_BY_MEASURED_EVIDENCE",
+      "PARTIALLY_SUPPORTED",
+      "NOT_SUPPORTED_BY_TEST",
+      "INCONCLUSIVE_DUE_TO_INSTRUMENTATION_OR_FIXTURE",
+      "BLOCKED_BY_AUTHORITATIVE_GEOMETRY"
+    ],
+    "rule": "The status must be tied to recorded measurements and inspection evidence; theoretical dislike is not a failure mode and subjective appearance is not a success criterion."
+  },
+  "r4_1_correlation_labels": {
+    "DIRECT_R4.1_RELEVANCE": "Use only where the tested geometry/interface is directly traceable to authoritative R4.1 evidence.",
+    "P0_EXPLORATORY_ONLY": "Use whenever the physical article intentionally deviates from R4.1 geometry/material/packaging in a way that affects correlation."
+  },
+  "exact_features_preventing_full_fabrication_release": [
+    {
+      "feature": "dual-rail spacing and carriage running-interface geometry",
+      "status": "BLOCKED_PENDING_AUTHORITATIVE_GEOMETRY",
+      "reason": "Changes translation kinematics and alignment."
+    },
+    {
+      "feature": "seatback pivot axis location/orientation and related rotational-control attachment coordinates",
+      "status": "BLOCKED_PENDING_AUTHORITATIVE_GEOMETRY",
+      "reason": "Changes rotational kinematics and load path."
+    },
+    {
+      "feature": "ride-down reaction and absorber attachment coordinates/alignment",
+      "status": "BLOCKED_PENDING_AUTHORITATIVE_GEOMETRY",
+      "reason": "Changes load path and absorber engagement."
+    },
+    {
+      "feature": "lock engagement/release mating geometry and travel",
+      "status": "BLOCKED_PENDING_AUTHORITATIVE_GEOMETRY",
+      "reason": "Changes lock-state transition and safety behavior."
+    },
+    {
+      "feature": "rebound-control stop/engagement geometry and allowable secondary travel",
+      "status": "BLOCKED_PENDING_AUTHORITATIVE_GEOMETRY",
+      "reason": "Changes rebound behavior and safety boundary."
+    },
+    {
+      "feature": "primary fixture attachment coordinates where they define the intended reaction boundary",
+      "status": "BLOCKED_PENDING_AUTHORITATIVE_GEOMETRY",
+      "reason": "Changes boundary conditions and therefore invalidates the mechanism test if guessed."
+    }
+  ],
+  "build_readiness_gate": {
+    "ready_conditions": [
+      "All test-critical Class-A geometry above is extracted or otherwise released from authoritative source.",
+      "All interfaces and fastener specifications affecting the test are defined.",
+      "All replaceable/adjustable modules are identified and their datums are controlled.",
+      "Fixture boundary conditions and safety containment are physically defined.",
+      "Instrumentation locations, access and protection are implemented.",
+      "Unresolved Class-D items are documented as non-blocking.",
+      "Every intentional P0 deviation is recorded before fabrication."
+    ],
+    "non_blocking_unknowns": "Production trim, upholstery, vehicle integration and other Class-D details do not block mechanism fabrication."
+  },
+  "handoff_instruction_to_manus": "EXECUTE fabrication planning and build preparation from this package. Do not redesign the P0 concept. Do not redefine the 14-input contract. Do not infer missing Class-A geometry. Extract authoritative geometry, close the named blockers, then release only the affected components for fabrication."
+}

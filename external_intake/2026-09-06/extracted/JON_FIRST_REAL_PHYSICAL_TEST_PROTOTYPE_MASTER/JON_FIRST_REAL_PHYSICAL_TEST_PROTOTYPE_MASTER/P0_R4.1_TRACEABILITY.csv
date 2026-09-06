@@ -1,0 +1,9 @@
+feature,source_ref,p0,evidence,future_model
+Bilateral longitudinal load paths,110L/110R,"['P0-002', 'P0-003', 'P0-004']","['INS-02', 'INS-03', 'INS-01', 'P0-T03', 'P0-T14']",Independent S1/S2 reactions and carriage translation
+Controlled ride-down energy path,130,['P0-005'],"['INS-01', 'INS-04', 'P0-T08', 'P0-T09', 'P0-T18']","F(x,v,T) absorber and carriage force path"
+Independent seatback rotation control,150L/150R,"['P0-007', 'P0-008', 'P0-009']","['INS-05', 'INS-07', 'P0-T12', 'P0-T15']",Rotation path compliance and load law
+State transition / lock,170,['P0-010'],"['INS-08', 'P0-T13', 'P0-T18']",Discrete state machine validation and trigger law
+Rebound control,180,['P0-011'],"['INS-01', 'INS-04', 'INS-08', 'P0-T16', 'P0-T18']",Reverse-motion control law
+Pelvic-control geometry,140,['P0-006'],"['P0-T01', 'P0-T14', 'P0-T18']",Geometry-only until qualified occupant/ATD program
+Restraint interface availability,190,['P0-012'],['fixture inspection and load verification only; no occupant test in P0 early levels'],Later sled ATD integration only after subsystem gates
+Sensor/trigger interface,210,['P0-014'],['all synchronized DAQ tests'],MBD/FE signal mapping and physical correlation

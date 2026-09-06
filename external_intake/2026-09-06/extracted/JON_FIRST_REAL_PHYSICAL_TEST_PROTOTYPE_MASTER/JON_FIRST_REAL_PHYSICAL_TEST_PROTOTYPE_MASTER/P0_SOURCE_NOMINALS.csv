@@ -1,0 +1,11 @@
+parameter,value,unit,classification,source,do_not_use_as_test_result
+rearward_stroke,180,mm,DESIGN_REFERENCE,V7/V5 engineering board p31; V5 drawing p28,True
+total_travel,210,mm,DESIGN_REFERENCE,V7/V5 engineering board p31,True
+seatback_rotation_envelope,-10 to +25,deg,DESIGN_REFERENCE,V5 engineering drawing p27/p28,True
+rail_package_reference,520,mm,DESIGN_REFERENCE,V5 engineering drawing p27/p28/p31,True
+side_package_reference,560,mm,DESIGN_REFERENCE,V5 engineering drawing p27/p28/p31,True
+overall_height_reference,1120,mm,DESIGN_REFERENCE,V5 engineering drawing p27/p28,True
+example_pulse_peak,25.6,g,SOURCE_STUDY_EXAMPLE,V7/V5 crash load path board p30; V7 p6,True
+absorber_force_reference_per_side,18-22,kN,SOURCE_DESIGN_TARGET,V7/V5 energy absorber board p31; V7 p6,True
+peak_damping_force_reference,25-35,kN,SOURCE_DESIGN_TARGET,V5 drawing p27/p30; V7 p6,True
+concept_operating_temperature,-40 to +80,degC,SOURCE_DESIGN_REFERENCE,V5 drawing p29/p31,True
