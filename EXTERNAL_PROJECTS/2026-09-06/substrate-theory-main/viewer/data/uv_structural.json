@@ -1,0 +1,36 @@
+{
+  "label": "UV completion ε scaling (gravity/EM hierarchy)",
+  "epsilon_observed": 4.185462214731958e-23,
+  "N_cycle": 2.3892223814139514e+22,
+  "best_match": "1/N (1D Möbius cycle)",
+  "candidates": [
+    {
+      "scaling": "1/N",
+      "topology": "1D Möbius azimuthal cycle",
+      "epsilon_predicted": 4.185462214731958e-23,
+      "epsilon_observed": 4.185462214731958e-23,
+      "fractional_error": 0.0,
+      "log10_ratio": 0.0,
+      "is_exact": true
+    },
+    {
+      "scaling": "1/N^(2/3)",
+      "topology": "2D surface",
+      "epsilon_predicted": 1.2054863128003732e-15,
+      "epsilon_observed": 4.185462214731958e-23,
+      "fractional_error": 28801747.79030831,
+      "log10_ratio": 7.459418858138502,
+      "is_exact": false
+    },
+    {
+      "scaling": "1/sqrt(N)",
+      "topology": "3D bulk",
+      "epsilon_predicted": 6.469514830906533e-12,
+      "epsilon_observed": 4.185462214731958e-23,
+      "fractional_error": 154571096307.91385,
+      "log10_ratio": 11.189128287207751,
+      "is_exact": false
+    }
+  ],
+  "verdict": "Only 1/N (1D Möbius azimuthal cycle) reproduces ε to all printed digits. 3D bulk fails by 10¹¹, 2D surface by 10⁸. Sharp falsifiable structural commitment."
+}

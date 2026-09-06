@@ -1,0 +1,15 @@
+*.egg
+*.egg-info
+*.pyc
+psgnets/#*
+psgnets/*.pyc
+*env
+*.*~
+*.py.swp
+*.swp
+*/.ipynb_checkpoints/*
+build
+build/*
+.vscode
+results/
+notebooks/*

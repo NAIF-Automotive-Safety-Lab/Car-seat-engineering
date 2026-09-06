@@ -1,0 +1,50 @@
+# Copyright 2025-2026 Dimensional Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+from pydantic import ValidationError
+import pytest
+
+from dimos.core.global_config import GlobalConfig
+
+
+class TestGlobalConfigSecurityDefaults:
+    """Network services must bind to localhost by default (not 0.0.0.0)."""
+
+    def test_listen_host_defaults_to_localhost(self) -> None:
+        config = GlobalConfig()
+        assert config.listen_host == "127.0.0.1", (
+            f"listen_host must default to 127.0.0.1, got {config.listen_host}"
+        )
+
+
+def test_python_is_the_default_engine_without_rust_thread_configuration() -> None:
+    config = GlobalConfig.model_validate({})
+
+    assert config.record_engine == "python"
+    assert config.record_encoding_threads is None
+
+
+def test_mcap_requires_rust() -> None:
+    with pytest.raises(ValidationError, match="MCAP recording requires --record-engine rust"):
+        GlobalConfig.model_validate({"record": "mcap"})
+
+    assert GlobalConfig.model_validate({"record": "mcap", "record_engine": "rust"}).record == "mcap"
+
+
+def test_encoding_threads_require_rust() -> None:
+    with pytest.raises(ValidationError, match="valid only with --record-engine rust"):
+        GlobalConfig.model_validate({"record_encoding_threads": 8})
+
+    config = GlobalConfig.model_validate({"record_engine": "rust", "record_encoding_threads": 8})
+    assert config.record_encoding_threads == 8

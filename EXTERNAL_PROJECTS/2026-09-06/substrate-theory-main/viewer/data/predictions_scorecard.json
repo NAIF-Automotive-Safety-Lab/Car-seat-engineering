@@ -1,0 +1,196 @@
+{
+  "predictions": [
+    {
+      "label": "σ_QCD from K(ξ) running",
+      "predicted": "0.180 GeV²",
+      "observed": "0.180",
+      "error_pct": 0.0,
+      "category": "A",
+      "sector": "hadronic"
+    },
+    {
+      "label": "Light meson a₂(1320)",
+      "predicted": "1316.06 MeV",
+      "observed": "1318.0",
+      "error_pct": -0.15,
+      "category": "B",
+      "sector": "hadronic"
+    },
+    {
+      "label": "Light meson ρ₃(1690)",
+      "predicted": "1692.03 MeV",
+      "observed": "1688.8",
+      "error_pct": 0.19,
+      "category": "B",
+      "sector": "hadronic"
+    },
+    {
+      "label": "Light meson a₄(2040)",
+      "predicted": "1998.49 MeV",
+      "observed": "1995.0",
+      "error_pct": 0.17,
+      "category": "B",
+      "sector": "hadronic"
+    },
+    {
+      "label": "f_K (cosh formula)",
+      "predicted": "110.03 MeV",
+      "observed": "110.0",
+      "error_pct": 0.03,
+      "category": "B",
+      "sector": "decay"
+    },
+    {
+      "label": "Hyperon Σ",
+      "predicted": "1183.91 MeV",
+      "observed": "1193.15",
+      "error_pct": -0.77,
+      "category": "C",
+      "sector": "hadronic"
+    },
+    {
+      "label": "Hyperon Ξ",
+      "predicted": "1332.12 MeV",
+      "observed": "1318.28",
+      "error_pct": 1.05,
+      "category": "C",
+      "sector": "hadronic"
+    },
+    {
+      "label": "Hyperon Ω",
+      "predicted": "1697.37 MeV",
+      "observed": "1672.45",
+      "error_pct": 1.49,
+      "category": "C",
+      "sector": "hadronic"
+    },
+    {
+      "label": "Δ(1232) baryon",
+      "predicted": "1252.72 MeV",
+      "observed": "1232.0",
+      "error_pct": 1.68,
+      "category": "C",
+      "sector": "hadronic"
+    },
+    {
+      "label": "Hydrogen E_1s (substrate Maxwell)",
+      "predicted": "−13.569 eV",
+      "observed": "−13.6057",
+      "error_pct": 0.27,
+      "category": "A",
+      "sector": "atomic"
+    },
+    {
+      "label": "Hydrogen E_2s",
+      "predicted": "−3.400 eV",
+      "observed": "−3.4014",
+      "error_pct": 0.05,
+      "category": "A",
+      "sector": "atomic"
+    },
+    {
+      "label": "g_A (substrate ChPT)",
+      "predicted": "1.302",
+      "observed": "1.276",
+      "error_pct": 2.06,
+      "category": "B",
+      "sector": "weak"
+    },
+    {
+      "label": "Nucleon μ_p (Airy mass)",
+      "predicted": "+2.838 μ_N",
+      "observed": "+2.793",
+      "error_pct": 1.6,
+      "category": "C",
+      "sector": "magnetic"
+    },
+    {
+      "label": "Nucleon μ_n (Airy mass)",
+      "predicted": "−1.892 μ_N",
+      "observed": "−1.913",
+      "error_pct": 1.11,
+      "category": "C",
+      "sector": "magnetic"
+    },
+    {
+      "label": "N-Δ chromomagnetic",
+      "predicted": "313.80 MeV",
+      "observed": "293.7",
+      "error_pct": 6.84,
+      "category": "B",
+      "sector": "hadronic"
+    },
+    {
+      "label": "m_d − m_u (Möbius α×m_K)",
+      "predicted": "2.413 MeV",
+      "observed": "2.5",
+      "error_pct": -3.48,
+      "category": "B",
+      "sector": "isospin"
+    },
+    {
+      "label": "f_π = ½σξ",
+      "predicted": "91.22 MeV",
+      "observed": "92.4",
+      "error_pct": -1.28,
+      "category": "B",
+      "sector": "decay"
+    },
+    {
+      "label": "Deuteron B_d (coupled S-D)",
+      "predicted": "2.577 MeV",
+      "observed": "2.224",
+      "error_pct": 15.88,
+      "category": "B",
+      "sector": "nuclear"
+    },
+    {
+      "label": "Proton r_p (3D + pion lit)",
+      "predicted": "0.806 fm",
+      "observed": "0.841",
+      "error_pct": -4.15,
+      "category": "A",
+      "sector": "nuclear"
+    },
+    {
+      "label": "0++ glueball (3/4 hybrid)",
+      "predicted": "1657 MeV",
+      "observed": "1730",
+      "error_pct": -4.22,
+      "category": "B",
+      "sector": "hadronic"
+    },
+    {
+      "label": "BBN Y_p (substrate Z)",
+      "predicted": "0.2407",
+      "observed": "0.245",
+      "error_pct": -1.96,
+      "category": "A",
+      "sector": "cosmological"
+    },
+    {
+      "label": "BBN D/H",
+      "predicted": "2.60×10⁻⁵",
+      "observed": "2.55×10⁻⁵",
+      "error_pct": 2.0,
+      "category": "A",
+      "sector": "cosmological"
+    },
+    {
+      "label": "τ_n (substrate Δm)",
+      "predicted": "893.9 s",
+      "observed": "879.4",
+      "error_pct": 1.65,
+      "category": "C",
+      "sector": "weak"
+    }
+  ],
+  "summary": {
+    "total": 23,
+    "category_A_real_substrate_geometry": 6,
+    "category_B_substrate_derived_formula": 10,
+    "category_C_inherited_with_substrate_inputs": 7,
+    "max_abs_error_pct": 15.88,
+    "mean_abs_error_pct": 2.2643478260869565
+  }
+}

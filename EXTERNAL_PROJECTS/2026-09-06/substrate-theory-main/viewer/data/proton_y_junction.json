@@ -1,0 +1,34 @@
+{
+  "label": "Proton Y-junction (uud) at QCD scale",
+  "R0_fm": 0.46510419937065955,
+  "xi_QCD_fm": 0.2,
+  "sigma_GeV2": 0.18,
+  "charge_radius_fm": 0.808,
+  "quarks": [
+    {
+      "x_fm": 0.46510419937065955,
+      "y_fm": 0.0,
+      "z_fm": 0.0,
+      "charge_e": 0.6666666666666666,
+      "kind": "u",
+      "kink_width_fm": 0.2
+    },
+    {
+      "x_fm": -0.2325520996853297,
+      "y_fm": 0.4027920520618135,
+      "z_fm": 0.0,
+      "charge_e": 0.6666666666666666,
+      "kind": "u",
+      "kink_width_fm": 0.2
+    },
+    {
+      "x_fm": -0.23255209968532997,
+      "y_fm": -0.40279205206181334,
+      "z_fm": 0.0,
+      "charge_e": -0.3333333333333333,
+      "kind": "d",
+      "kink_width_fm": 0.2
+    }
+  ],
+  "comment": "Three kinks at distance R₀ = 1/√σ from a substrate Y-junction vertex. Strings of tension σ_QCD link each quark to the centre. Total charge +1 = (2/3)+(2/3)+(-1/3) from Möbius half-flux."
+}
