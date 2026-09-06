@@ -1,0 +1,35 @@
+{
+  "INPUT_ID": "initial_velocity",
+  "CATEGORY": "SOURCE_DATA_REQUIRED",
+  "MANDATORY_FIELDS": [
+    "VALUE",
+    "UNIT",
+    "SOURCE_ID",
+    "REVISION",
+    "DATE",
+    "SHA256",
+    "PROVENANCE",
+    "CONFIGURATION_MAPPING",
+    "VALIDATION_STATUS"
+  ],
+  "VALUE": null,
+  "UNIT": null,
+  "SOURCE_ID": null,
+  "REVISION": null,
+  "DATE": null,
+  "SHA256": null,
+  "PROVENANCE": null,
+  "CONFIGURATION_MAPPING": null,
+  "VALIDATION_STATUS": "NOT_SUBMITTED",
+  "EXACT_FILENAME": "initial_velocity.json",
+  "ACCEPTED_FORMAT": [
+    "JSON",
+    "CSV",
+    "PDF"
+  ],
+  "EXPECTED_UNIT": "m/s",
+  "MAPPING_TARGET": "R4.1 initial-condition/load-case definition",
+  "REQUIRED_SOURCE_OR_TEST": "Released initial-condition record linked to pulse",
+  "ACCEPTANCE_RULE": "PASS only if every mandatory field is present, non-null, internally consistent, hash-valid, revision/date present, and CONFIGURATION_MAPPING explicitly targets immutable R4.1 SHA fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68. FAIL otherwise.",
+  "REJECTION_RULE": "Reject if provenance, revision, date, SHA256, units, value, or R4.1 mapping is missing; reject if hash does not match supplied artifact; reject if status is inferred, defaulted, interpolated, synthesized, or assumed."
+}

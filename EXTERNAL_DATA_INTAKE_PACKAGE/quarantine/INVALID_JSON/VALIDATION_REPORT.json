@@ -1,0 +1,27 @@
+{
+  "status": "REJECTED_INVALID_JSON",
+  "artifacts": [
+    {
+      "file": "EXTERNAL_DATA_INTAKE_PACKAGE/quarantine/INVALID_JSON/EXTERNAL_DATA_INGESTION_AUDIT.json",
+      "sha256": "dcbf23d43845ccce93c5032fefc17b232a1847cbaeaa605f3e69038bf4c38aec",
+      "bytes": 5265,
+      "json_valid": false,
+      "reason": "JSONDecodeError: Extra data: line 127 column 1 (char 5264)"
+    },
+    {
+      "file": "EXTERNAL_DATA_INTAKE_PACKAGE/quarantine/INVALID_JSON/PHYSICAL_INPUT_CLOSURE_MATRIX.json",
+      "sha256": "4c7e9f2f5281a9c89037fe48dd9c20dfed912804cef61a2d81a4fe83c025d58f",
+      "bytes": 5050,
+      "json_valid": false,
+      "reason": "JSONDecodeError: Extra data: line 122 column 1 (char 5049)"
+    },
+    {
+      "file": "EXTERNAL_DATA_INTAKE_PACKAGE/quarantine/INVALID_JSON/REJECTED_ARTIFACTS_REGISTER.json",
+      "sha256": "d57db910f0b7f5c89d5495cc434662309a02e29e722babc07a2146478d0a7d05",
+      "bytes": 4982,
+      "json_valid": false,
+      "reason": "JSONDecodeError: Extra data: line 119 column 1 (char 4981)"
+    }
+  ],
+  "action": "Preserved byte-for-byte; not admitted to canonical intake"
+}

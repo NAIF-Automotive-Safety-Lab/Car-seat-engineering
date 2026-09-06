@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "VALUE",
+    "UNIT",
+    "SOURCE_ID",
+    "REVISION",
+    "DATE",
+    "SHA256",
+    "PROVENANCE",
+    "CONFIGURATION_MAPPING",
+    "VALIDATION_STATUS"
+  ],
+  "properties": {
+    "VALUE": {},
+    "UNIT": {},
+    "SOURCE_ID": {},
+    "REVISION": {},
+    "DATE": {},
+    "SHA256": {},
+    "PROVENANCE": {},
+    "CONFIGURATION_MAPPING": {},
+    "VALIDATION_STATUS": {}
+  },
+  "additionalProperties": true
+}
