@@ -1,0 +1,49 @@
+{
+  "STATUS": "CANDIDATE_SET_ONLY",
+  "REVERSE_MOTION_PRINCIPLE": "Restrict/control reverse carriage travel after primary stroke",
+  "DAMPING_COEFFICIENT": "UNDEFINED",
+  "STROKE_REFERENCE": "180 mm DESIGN TARGET ONLY",
+  "RESET": "Must be defined on selected hardware candidate",
+  "MEASUREMENT_VARIABLES": [
+    "reverse displacement",
+    "reverse velocity",
+    "control force",
+    "secondary excursion",
+    "state"
+  ],
+  "OPTIONS": [
+    {
+      "OPTION_ID": "R180-A",
+      "ARCHITECTURE": "Bidirectional damping element",
+      "SOURCE_BASIS": "P0/V5/V7 rebound concept",
+      "SELECTION_CRITERIA": [
+        "reverse-motion control",
+        "repeatability",
+        "temperature sensitivity",
+        "reset"
+      ]
+    },
+    {
+      "OPTION_ID": "R180-B",
+      "ARCHITECTURE": "Directional friction/lock element",
+      "SOURCE_BASIS": "V7 rebound-control concept",
+      "SELECTION_CRITERIA": [
+        "reverse-motion suppression",
+        "wear",
+        "binding",
+        "repeatability"
+      ]
+    },
+    {
+      "OPTION_ID": "R180-C",
+      "ARCHITECTURE": "Mechanical stop + controlled compliance",
+      "SOURCE_BASIS": "V5/V7 stop/rebound concept",
+      "SELECTION_CRITERIA": [
+        "containment",
+        "stop load",
+        "rebound",
+        "repeatability"
+      ]
+    }
+  ]
+}

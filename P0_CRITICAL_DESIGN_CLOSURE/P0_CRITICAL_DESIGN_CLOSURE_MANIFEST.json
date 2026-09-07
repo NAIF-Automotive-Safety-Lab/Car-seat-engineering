@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-09-07T01:37:37.856420+00:00",
+  "R4_1_SHA256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "artifacts": [
+    {
+      "file": "P0_CLOSURE_DECISION.json",
+      "sha256": "a801d5b1db3aeac223c1e63589a536309c4a404e3778e650072cf6d52cbf1d05",
+      "size_bytes": 1603
+    },
+    {
+      "file": "P0_CRITICAL_DESIGN_CLOSURE.json",
+      "sha256": "a801d5b1db3aeac223c1e63589a536309c4a404e3778e650072cf6d52cbf1d05",
+      "size_bytes": 1603
+    },
+    {
+      "file": "P0_CRITICAL_DESIGN_CLOSURE.md",
+      "sha256": "a23522f843b7cb0ea47bae08a2d188ac0629a306fd052e8f9c653eeba8b0c820",
+      "size_bytes": 2224
+    },
+    {
+      "file": "P0_CRITICAL_DESIGN_CLOSURE_AUTHORITY.json",
+      "sha256": "8071c528df96b971eaf651941f20960aacc0d1b58b16bf3a174cefa6eb5a6115",
+      "size_bytes": 20217
+    },
+    {
+      "file": "P0_INSTRUMENT_INTERFACE_CONTROL.json",
+      "sha256": "7957ab1c651da8c9243cd8636545c6a8826758e8475c91167149ea06e0149d0e",
+      "size_bytes": 2414
+    },
+    {
+      "file": "P0_INTERFACES_AND_DATUMS.json",
+      "sha256": "96c347e685c15b0d375ed415a9531209251e7154f79da1342312ba4fd93d092d",
+      "size_bytes": 8884
+    },
+    {
+      "file": "P0_LOCK_170_SELECTED_CONFIGURATION.json",
+      "sha256": "a7d381ee1c07a13f94bfe34fc60b3b84944413186bc2a0009a91419b6fc5c809",
+      "size_bytes": 1700
+    },
+    {
+      "file": "P0_MATERIAL_FASTENER_CONTROL.json",
+      "sha256": "e1f25ffc1751b0e83fc329ec8b82a36da178d51815f68aeea622c4bf1415ad94",
+      "size_bytes": 1726
+    },
+    {
+      "file": "P0_REBOUND_180_SELECTED_CONFIGURATION.json",
+      "sha256": "b26bdb54827ada25b2384423523f56a246518c944f4f31df18fb5bc4ef398f4b",
+      "size_bytes": 1313
+    },
+    {
+      "file": "P0_SAFE_ENDSTOP_CONTROL.json",
+      "sha256": "214f2715d3b5f285a4581c5f107820c8c45287e756eaeeda6d89b22db589d45d",
+      "size_bytes": 888
+    }
+  ]
+}

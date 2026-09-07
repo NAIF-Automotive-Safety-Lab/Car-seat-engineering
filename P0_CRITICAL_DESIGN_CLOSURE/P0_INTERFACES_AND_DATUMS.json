@@ -1,0 +1,204 @@
+{
+  "interfaces": [
+    {
+      "INTERFACE_ID": "IF-001",
+      "FROM": "100",
+      "TO": "110L/110R",
+      "TYPE": "Structural rail attachment",
+      "FUNCTION": "Transfer longitudinal/lateral/vertical reaction into bilateral rails",
+      "DATUM": "Authoritative R4.1 datum required",
+      "MATING": "Defined by native geometry; exact hole/edge locations not released",
+      "INSPECTION": "Hole/edge pattern, flatness, position, anti-rotation",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "INTERFACE_ID": "IF-002",
+      "FROM": "110L/110R",
+      "TO": "120",
+      "TYPE": "Guided carriage interface",
+      "FUNCTION": "Permit controlled longitudinal translation while constraining transverse/rotational motion",
+      "DATUM": "Rail axes from R4.1 native CAD required",
+      "MATING": "Guide/runner mating surfaces; exact clearances not released",
+      "INSPECTION": "Parallelism, spacing, guide engagement, full-travel clearance",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "INTERFACE_ID": "IF-003",
+      "FROM": "120",
+      "TO": "130L/R",
+      "TYPE": "Absorber clevis interface",
+      "FUNCTION": "Transmit carriage motion into energy-management elements",
+      "DATUM": "Absorber axis and carriage datum required",
+      "MATING": "Replaceable clevis/pin or equivalent source-defined interface",
+      "INSPECTION": "Axis alignment, pin fit, mounting pattern, stroke envelope",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "INTERFACE_ID": "IF-004",
+      "FROM": "160",
+      "TO": "150L/R",
+      "TYPE": "Rotation-control link interface",
+      "FUNCTION": "Independent seatback rotation-control path",
+      "DATUM": "Hinge/rotation datum required",
+      "MATING": "Pinned/bolted link interface per released geometry",
+      "INSPECTION": "Axis coincidence, link clearance, stop engagement",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "INTERFACE_ID": "IF-005",
+      "FROM": "160",
+      "TO": "J",
+      "TYPE": "Seatback hinge/pivot",
+      "FUNCTION": "Seatback rotational DOF",
+      "DATUM": "Pivot axis/center from native R4.1 required",
+      "MATING": "Hinge shaft/bearing/clevis stack; exact geometry not released",
+      "INSPECTION": "Pivot axis, radial/axial retention, rotation limits",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "INTERFACE_ID": "IF-006",
+      "FROM": "170",
+      "TO": "160/120",
+      "TYPE": "State/lock capture interface",
+      "FUNCTION": "Change mechanical constraint state and retain locked DOF",
+      "DATUM": "Lock engagement datum required",
+      "MATING": "Candidate mechanism only; final architecture not selected by authority",
+      "INSPECTION": "Positive engagement, reverse-load retention, release/reset",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "INTERFACE_ID": "IF-007",
+      "FROM": "180",
+      "TO": "120/110",
+      "TYPE": "Rebound-control interface",
+      "FUNCTION": "Control reverse carriage motion",
+      "DATUM": "Reverse-travel datum required",
+      "MATING": "Candidate module only; exact implementation not selected",
+      "INSPECTION": "Directionality, reset, secondary travel, engagement point",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "INTERFACE_ID": "IF-008",
+      "FROM": "210",
+      "TO": "100/120/130/170/180",
+      "TYPE": "Instrumentation interface",
+      "FUNCTION": "Measured x(t), theta(t), L/R reactions, absorber state, lock state",
+      "DATUM": "Test-fixture datum required",
+      "MATING": "Sensor mounts must be mechanically isolated from functional interfaces",
+      "INSPECTION": "Alignment, fastener retention, cable clearance, calibration ID",
+      "STATUS": "BLOCKED"
+    }
+  ],
+  "geometry_control": [
+    {
+      "PART": "100",
+      "EXACT_R4_1_GEOMETRY": "NOT_CLOSED",
+      "CONCEPT_GEOMETRY_ALLOWED": "REFERENCE_ONLY",
+      "DATUM": "NOT_PROVEN",
+      "MATING_CONDITION": "FUNCTIONALLY_DEFINED; EXACT_GEOMETRY_NOT_RELEASED",
+      "INSPECTION_REQUIREMENT": "Verify against authoritative R4.1 native CAD/PMI/drawing before fabrication",
+      "EVIDENCE_SOURCE": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv / native R4.1 CAD required",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART": "110L",
+      "EXACT_R4_1_GEOMETRY": "NOT_CLOSED",
+      "CONCEPT_GEOMETRY_ALLOWED": "REFERENCE_ONLY",
+      "DATUM": "NOT_PROVEN",
+      "MATING_CONDITION": "FUNCTIONALLY_DEFINED; EXACT_GEOMETRY_NOT_RELEASED",
+      "INSPECTION_REQUIREMENT": "Verify against authoritative R4.1 native CAD/PMI/drawing before fabrication",
+      "EVIDENCE_SOURCE": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv / native R4.1 CAD required",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART": "110R",
+      "EXACT_R4_1_GEOMETRY": "NOT_CLOSED",
+      "CONCEPT_GEOMETRY_ALLOWED": "REFERENCE_ONLY",
+      "DATUM": "NOT_PROVEN",
+      "MATING_CONDITION": "FUNCTIONALLY_DEFINED; EXACT_GEOMETRY_NOT_RELEASED",
+      "INSPECTION_REQUIREMENT": "Verify against authoritative R4.1 native CAD/PMI/drawing before fabrication",
+      "EVIDENCE_SOURCE": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv / native R4.1 CAD required",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART": "120",
+      "EXACT_R4_1_GEOMETRY": "NOT_CLOSED",
+      "CONCEPT_GEOMETRY_ALLOWED": "REFERENCE_ONLY",
+      "DATUM": "NOT_PROVEN",
+      "MATING_CONDITION": "FUNCTIONALLY_DEFINED; EXACT_GEOMETRY_NOT_RELEASED",
+      "INSPECTION_REQUIREMENT": "Verify against authoritative R4.1 native CAD/PMI/drawing before fabrication",
+      "EVIDENCE_SOURCE": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv / native R4.1 CAD required",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART": "130L/R",
+      "EXACT_R4_1_GEOMETRY": "NOT_CLOSED",
+      "CONCEPT_GEOMETRY_ALLOWED": "REFERENCE_ONLY",
+      "DATUM": "NOT_PROVEN",
+      "MATING_CONDITION": "FUNCTIONALLY_DEFINED; EXACT_GEOMETRY_NOT_RELEASED",
+      "INSPECTION_REQUIREMENT": "Verify against authoritative R4.1 native CAD/PMI/drawing before fabrication",
+      "EVIDENCE_SOURCE": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv / native R4.1 CAD required",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART": "150L/R",
+      "EXACT_R4_1_GEOMETRY": "NOT_CLOSED",
+      "CONCEPT_GEOMETRY_ALLOWED": "REFERENCE_ONLY",
+      "DATUM": "NOT_PROVEN",
+      "MATING_CONDITION": "FUNCTIONALLY_DEFINED; EXACT_GEOMETRY_NOT_RELEASED",
+      "INSPECTION_REQUIREMENT": "Verify against authoritative R4.1 native CAD/PMI/drawing before fabrication",
+      "EVIDENCE_SOURCE": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv / native R4.1 CAD required",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART": "160",
+      "EXACT_R4_1_GEOMETRY": "NOT_CLOSED",
+      "CONCEPT_GEOMETRY_ALLOWED": "REFERENCE_ONLY",
+      "DATUM": "NOT_PROVEN",
+      "MATING_CONDITION": "FUNCTIONALLY_DEFINED; EXACT_GEOMETRY_NOT_RELEASED",
+      "INSPECTION_REQUIREMENT": "Verify against authoritative R4.1 native CAD/PMI/drawing before fabrication",
+      "EVIDENCE_SOURCE": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv / native R4.1 CAD required",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART": "170",
+      "EXACT_R4_1_GEOMETRY": "NOT_CLOSED",
+      "CONCEPT_GEOMETRY_ALLOWED": "REFERENCE_ONLY",
+      "DATUM": "NOT_PROVEN",
+      "MATING_CONDITION": "FUNCTIONALLY_DEFINED; EXACT_GEOMETRY_NOT_RELEASED",
+      "INSPECTION_REQUIREMENT": "Verify against authoritative R4.1 native CAD/PMI/drawing before fabrication",
+      "EVIDENCE_SOURCE": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv / native R4.1 CAD required",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART": "180",
+      "EXACT_R4_1_GEOMETRY": "NOT_CLOSED",
+      "CONCEPT_GEOMETRY_ALLOWED": "REFERENCE_ONLY",
+      "DATUM": "NOT_PROVEN",
+      "MATING_CONDITION": "FUNCTIONALLY_DEFINED; EXACT_GEOMETRY_NOT_RELEASED",
+      "INSPECTION_REQUIREMENT": "Verify against authoritative R4.1 native CAD/PMI/drawing before fabrication",
+      "EVIDENCE_SOURCE": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv / native R4.1 CAD required",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART": "J",
+      "EXACT_R4_1_GEOMETRY": "NOT_CLOSED",
+      "CONCEPT_GEOMETRY_ALLOWED": "REFERENCE_ONLY",
+      "DATUM": "NOT_PROVEN",
+      "MATING_CONDITION": "FUNCTIONALLY_DEFINED; EXACT_GEOMETRY_NOT_RELEASED",
+      "INSPECTION_REQUIREMENT": "Verify against authoritative R4.1 native CAD/PMI/drawing before fabrication",
+      "EVIDENCE_SOURCE": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv / native R4.1 CAD required",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART": "210",
+      "EXACT_R4_1_GEOMETRY": "NOT_CLOSED",
+      "CONCEPT_GEOMETRY_ALLOWED": "REFERENCE_ONLY",
+      "DATUM": "NOT_PROVEN",
+      "MATING_CONDITION": "FUNCTIONALLY_DEFINED; EXACT_GEOMETRY_NOT_RELEASED",
+      "INSPECTION_REQUIREMENT": "Verify against authoritative R4.1 native CAD/PMI/drawing before fabrication",
+      "EVIDENCE_SOURCE": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv / native R4.1 CAD required",
+      "STATUS": "BLOCKED"
+    }
+  ]
+}

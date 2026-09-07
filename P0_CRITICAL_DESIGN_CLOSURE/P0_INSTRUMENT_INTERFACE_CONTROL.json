@@ -1,0 +1,78 @@
+{
+  "STATUS": "DEFINED_NOT_RELEASED",
+  "MINIMUM_CHANNELS": [
+    {
+      "CHANNEL": "X",
+      "MEASUREMENT": "carriage displacement x(t)",
+      "MOUNTING": "carriage-to-fixed datum; avoid measuring fixture compliance as carriage motion",
+      "CALIBRATION": "traceable displacement calibration",
+      "STATUS": "DEFINED"
+    },
+    {
+      "CHANNEL": "THETA",
+      "MEASUREMENT": "seatback angle theta(t)",
+      "MOUNTING": "independent seatback angular measurement referenced to fixed fixture/vehicle datum",
+      "CALIBRATION": "angle calibration",
+      "STATUS": "DEFINED"
+    },
+    {
+      "CHANNEL": "S1",
+      "MEASUREMENT": "left rail/load-path reaction",
+      "MOUNTING": "structural load path, not cosmetic member",
+      "CALIBRATION": "traceable force calibration",
+      "STATUS": "DEFINED"
+    },
+    {
+      "CHANNEL": "S2",
+      "MEASUREMENT": "right rail/load-path reaction",
+      "MOUNTING": "structural load path, not cosmetic member",
+      "CALIBRATION": "traceable force calibration",
+      "STATUS": "DEFINED"
+    },
+    {
+      "CHANNEL": "ABS_F",
+      "MEASUREMENT": "absorber force",
+      "MOUNTING": "inline with absorber load path",
+      "CALIBRATION": "traceable load cell calibration",
+      "STATUS": "DEFINED"
+    },
+    {
+      "CHANNEL": "ABS_X",
+      "MEASUREMENT": "absorber stroke/displacement",
+      "MOUNTING": "absorber axis",
+      "CALIBRATION": "traceable displacement calibration",
+      "STATUS": "DEFINED"
+    },
+    {
+      "CHANNEL": "LOCK",
+      "MEASUREMENT": "mechanical lock state",
+      "MOUNTING": "independent state sensor target, no load-path substitution",
+      "CALIBRATION": "state-sensor verification",
+      "STATUS": "DEFINED"
+    },
+    {
+      "CHANNEL": "TEMP",
+      "MEASUREMENT": "absorber/component temperature",
+      "MOUNTING": "representative thermal location",
+      "CALIBRATION": "traceable temperature calibration",
+      "STATUS": "DEFINED"
+    },
+    {
+      "CHANNEL": "VIDEO",
+      "MEASUREMENT": "synchronized visual evidence",
+      "MOUNTING": "external high-speed camera(s)",
+      "CALIBRATION": "time synchronization and geometric scale verification",
+      "STATUS": "DEFINED"
+    }
+  ],
+  "DAQ_REQUIREMENTS": [
+    "common timebase",
+    "channel ID map",
+    "calibration IDs",
+    "raw immutable data",
+    "configuration ID",
+    "serial IDs",
+    "SHA-256"
+  ],
+  "PHYSICAL_VALIDATION": "NOT_DONE"
+}

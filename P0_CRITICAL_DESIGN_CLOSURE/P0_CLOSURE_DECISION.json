@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-09-07T01:37:37.856420+00:00",
+  "PRE_FABRICATION_STATUS": "PRE_FABRICATION_BLOCKED",
+  "GAPS": {
+    "GAP-001": "BLOCKED — authoritative native critical geometry not recovered/released",
+    "GAP-003": "BLOCKED — exact fixture interface/datum not released",
+    "GAP-004": "BLOCKED — exact joint/hinge/pivot interfaces not released",
+    "GAP-005": "BLOCKED — fabrication-grade material identity not released",
+    "GAP-006": "BLOCKED — fastener identity/preload not released",
+    "GAP-007": "BLOCKED — lock remains controlled candidate set; no final selection authorized",
+    "GAP-008": "BLOCKED — rebound remains controlled candidate set; no final selection authorized",
+    "GAP-009": "DEFINED_NOT_RELEASED — instrumentation architecture defined; exact mounts depend on controlled geometry",
+    "GAP-010": "DEFINED_NOT_RELEASED — safe-end-stop requirements defined; exact physical geometry not released",
+    "GAP-011": "BLOCKED — exact absorber/module selection/serial not established"
+  },
+  "NON_BLOCKING_DEFERRED": {
+    "vehicle_pulse": "DEFERRED",
+    "initial_velocity": "DEFERRED",
+    "friction_law": "DEFERRED_TO_COMPONENT_TEST",
+    "restitution": "DEFERRED_TO_COMPONENT_TEST",
+    "contact_damping": "DEFERRED_TO_COMPONENT_TEST",
+    "FE_material_cards": "DEFERRED",
+    "occupant_ATD": "DEFERRED",
+    "vehicle_compatibility": "DEFERRED"
+  },
+  "CRITICAL_RULE": "Buildability preparation may proceed, but exact manufacturing release cannot be issued until the critical geometry/interface/material/fastener/module evidence gaps are closed."
+}

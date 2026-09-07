@@ -1,0 +1,20 @@
+{
+  "STATUS": "BLOCKED_UNTIL_EXACT_R4_1_GEOMETRY_AND_FIXTURE_ARE_RELEASED",
+  "PURPOSE": "Prevent uncontrolled overtravel and protect test instrumentation during development testing",
+  "REQUIREMENTS": [
+    "Physical positive stop, not a software/dimension-only limit",
+    "Bilateral containment where applicable",
+    "Controlled contact direction",
+    "Replaceable sacrificial contact insert permitted",
+    "Mechanical overtravel containment independent of instrumentation",
+    "No assumption of stop force capacity without material/contact evidence",
+    "Stroke target 180 mm remains a design target, not physical validation"
+  ],
+  "INSPECTION": [
+    "full-travel manual inspection",
+    "clearance inspection",
+    "positive stop engagement",
+    "retention/containment inspection"
+  ],
+  "DYNAMIC_TEST_RELEASE": "Requires pre-approved load ceiling and containment evidence"
+}

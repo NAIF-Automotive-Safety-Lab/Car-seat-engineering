@@ -1,0 +1,62 @@
+{
+  "MATERIAL_STATUS": "NOT_RELEASED",
+  "RULE": "No concept-board grade becomes released manufacturing material without controlled source.",
+  "FABRICATION_CRITICAL_MATERIAL_RECORDS": [
+    {
+      "PART_GROUP": "100/110/120/160",
+      "IDENTITY": "RELEASED_GRADE_REQUIRED",
+      "SOURCE": "Native drawing/BOM/MTR",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART_GROUP": "130",
+      "IDENTITY": "EXACT_SERIALIZED_MODULE_REQUIRED",
+      "SOURCE": "Supplier/test article record",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART_GROUP": "170",
+      "IDENTITY": "SELECTED_LOCK_HARDWARE_REQUIRED",
+      "SOURCE": "Controlled design/test configuration",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART_GROUP": "180",
+      "IDENTITY": "SELECTED_REBOUND_HARDWARE_REQUIRED",
+      "SOURCE": "Controlled design/test configuration",
+      "STATUS": "BLOCKED"
+    }
+  ],
+  "FASTENER_CONTROL": [
+    {
+      "USE": "Rail/base attachment",
+      "IDENTITY": "Exact fastener part number/size/grade required",
+      "PRELOAD": "SOURCE_REQUIRED",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "USE": "Hinge/link stack",
+      "IDENTITY": "Exact fastener/retainer required",
+      "PRELOAD": "SOURCE_REQUIRED",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "USE": "Absorber clevis",
+      "IDENTITY": "Exact pin/bolt hardware required",
+      "PRELOAD": "SOURCE_REQUIRED",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "USE": "Lock mount",
+      "IDENTITY": "Exact fastener/retainer required",
+      "PRELOAD": "SOURCE_REQUIRED",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "USE": "Sensor mounts",
+      "IDENTITY": "Controlled instrumentation hardware",
+      "PRELOAD": "SOURCE_REQUIRED",
+      "STATUS": "BLOCKED"
+    }
+  ]
+}

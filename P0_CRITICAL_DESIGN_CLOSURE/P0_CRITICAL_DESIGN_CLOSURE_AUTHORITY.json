@@ -1,0 +1,543 @@
+{
+  "AUTHORITY_FILE": "P0_CRITICAL_DESIGN_CLOSURE_AUTHORITY.json",
+  "timestamp": "2026-09-07T01:37:37.856420+00:00",
+  "R4_1": {
+    "STATUS": "FROZEN",
+    "SHA256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "MUTATION_ALLOWED": false
+  },
+  "R4_2": {
+    "STATUS": "NOT_AUTHORIZED"
+  },
+  "FABRICATION_RELEASE": {
+    "STATUS": "NOT_AUTHORIZED"
+  },
+  "CORE_CONFIGURATION": [
+    "100",
+    "110L",
+    "110R",
+    "120",
+    "130L/R",
+    "150L/R",
+    "160",
+    "170",
+    "180",
+    "J",
+    "210"
+  ],
+  "OPTIONAL_EXTENSION": [
+    "140",
+    "190",
+    "200"
+  ],
+  "DESIGN_CLOSURE": {
+    "timestamp": "2026-09-07T01:37:37.856420+00:00",
+    "PRE_FABRICATION_STATUS": "PRE_FABRICATION_BLOCKED",
+    "GAPS": {
+      "GAP-001": "BLOCKED — authoritative native critical geometry not recovered/released",
+      "GAP-003": "BLOCKED — exact fixture interface/datum not released",
+      "GAP-004": "BLOCKED — exact joint/hinge/pivot interfaces not released",
+      "GAP-005": "BLOCKED — fabrication-grade material identity not released",
+      "GAP-006": "BLOCKED — fastener identity/preload not released",
+      "GAP-007": "BLOCKED — lock remains controlled candidate set; no final selection authorized",
+      "GAP-008": "BLOCKED — rebound remains controlled candidate set; no final selection authorized",
+      "GAP-009": "DEFINED_NOT_RELEASED — instrumentation architecture defined; exact mounts depend on controlled geometry",
+      "GAP-010": "DEFINED_NOT_RELEASED — safe-end-stop requirements defined; exact physical geometry not released",
+      "GAP-011": "BLOCKED — exact absorber/module selection/serial not established"
+    },
+    "NON_BLOCKING_DEFERRED": {
+      "vehicle_pulse": "DEFERRED",
+      "initial_velocity": "DEFERRED",
+      "friction_law": "DEFERRED_TO_COMPONENT_TEST",
+      "restitution": "DEFERRED_TO_COMPONENT_TEST",
+      "contact_damping": "DEFERRED_TO_COMPONENT_TEST",
+      "FE_material_cards": "DEFERRED",
+      "occupant_ATD": "DEFERRED",
+      "vehicle_compatibility": "DEFERRED"
+    },
+    "CRITICAL_RULE": "Buildability preparation may proceed, but exact manufacturing release cannot be issued until the critical geometry/interface/material/fastener/module evidence gaps are closed."
+  },
+  "LOCK170": {
+    "STATUS": "CANDIDATE_SET_ONLY",
+    "SAFE_DEFAULT_STATE": "Mechanical retention state; exact fail-safe implementation NOT PROVEN",
+    "ENGAGEMENT_LOGIC": "Candidate-specific; must demonstrate positive capture and blocked intended DOF",
+    "RELEASE_RESET": "Must be mechanically defined and tested for selected candidate",
+    "TIMING_FIREWALL": {
+      ">=2.5 g": "DESIGN_REFERENCE_ONLY",
+      "<20 ms": "DESIGN_REFERENCE_ONLY"
+    },
+    "BENCH_VERIFICATION": [
+      "unlocked motion",
+      "engagement",
+      "locked reverse-load hold",
+      "release/reset",
+      "fault/missed engagement",
+      "repeatability"
+    ],
+    "OPTIONS": [
+      {
+        "OPTION_ID": "L170-A",
+        "ARCHITECTURE": "Mechanical pawl + capture",
+        "SOURCE_BASIS": "P0/V6/V7 multi-state lock architecture",
+        "SELECTION_CRITERIA": [
+          "positive engagement",
+          "reverse-load retention",
+          "fault tolerance",
+          "repeatability",
+          "service/reset"
+        ],
+        "FINAL_SELECTION": "NOT_AUTHORIZED"
+      },
+      {
+        "OPTION_ID": "L170-B",
+        "ARCHITECTURE": "Lock pin + capture pocket",
+        "SOURCE_BASIS": "P0/V6/V7 lock-pin concept",
+        "SELECTION_CRITERIA": [
+          "alignment",
+          "capture",
+          "reverse-load retention",
+          "wear",
+          "release/reset"
+        ],
+        "FINAL_SELECTION": "NOT_AUTHORIZED"
+      },
+      {
+        "OPTION_ID": "L170-C",
+        "ARCHITECTURE": "Inertia-driven pawl/cam",
+        "SOURCE_BASIS": "P0/V6 inertial mass/cam/pawl concept",
+        "SELECTION_CRITERIA": [
+          "trigger repeatability",
+          "false-trigger resistance",
+          "latency",
+          "fail-safe",
+          "reset"
+        ],
+        "FINAL_SELECTION": "NOT_AUTHORIZED"
+      }
+    ]
+  },
+  "REBOUND180": {
+    "STATUS": "CANDIDATE_SET_ONLY",
+    "REVERSE_MOTION_PRINCIPLE": "Restrict/control reverse carriage travel after primary stroke",
+    "DAMPING_COEFFICIENT": "UNDEFINED",
+    "STROKE_REFERENCE": "180 mm DESIGN TARGET ONLY",
+    "RESET": "Must be defined on selected hardware candidate",
+    "MEASUREMENT_VARIABLES": [
+      "reverse displacement",
+      "reverse velocity",
+      "control force",
+      "secondary excursion",
+      "state"
+    ],
+    "OPTIONS": [
+      {
+        "OPTION_ID": "R180-A",
+        "ARCHITECTURE": "Bidirectional damping element",
+        "SOURCE_BASIS": "P0/V5/V7 rebound concept",
+        "SELECTION_CRITERIA": [
+          "reverse-motion control",
+          "repeatability",
+          "temperature sensitivity",
+          "reset"
+        ]
+      },
+      {
+        "OPTION_ID": "R180-B",
+        "ARCHITECTURE": "Directional friction/lock element",
+        "SOURCE_BASIS": "V7 rebound-control concept",
+        "SELECTION_CRITERIA": [
+          "reverse-motion suppression",
+          "wear",
+          "binding",
+          "repeatability"
+        ]
+      },
+      {
+        "OPTION_ID": "R180-C",
+        "ARCHITECTURE": "Mechanical stop + controlled compliance",
+        "SOURCE_BASIS": "V5/V7 stop/rebound concept",
+        "SELECTION_CRITERIA": [
+          "containment",
+          "stop load",
+          "rebound",
+          "repeatability"
+        ]
+      }
+    ]
+  },
+  "INTERFACES": [
+    {
+      "INTERFACE_ID": "IF-001",
+      "FROM": "100",
+      "TO": "110L/110R",
+      "TYPE": "Structural rail attachment",
+      "FUNCTION": "Transfer longitudinal/lateral/vertical reaction into bilateral rails",
+      "DATUM": "Authoritative R4.1 datum required",
+      "MATING": "Defined by native geometry; exact hole/edge locations not released",
+      "INSPECTION": "Hole/edge pattern, flatness, position, anti-rotation",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "INTERFACE_ID": "IF-002",
+      "FROM": "110L/110R",
+      "TO": "120",
+      "TYPE": "Guided carriage interface",
+      "FUNCTION": "Permit controlled longitudinal translation while constraining transverse/rotational motion",
+      "DATUM": "Rail axes from R4.1 native CAD required",
+      "MATING": "Guide/runner mating surfaces; exact clearances not released",
+      "INSPECTION": "Parallelism, spacing, guide engagement, full-travel clearance",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "INTERFACE_ID": "IF-003",
+      "FROM": "120",
+      "TO": "130L/R",
+      "TYPE": "Absorber clevis interface",
+      "FUNCTION": "Transmit carriage motion into energy-management elements",
+      "DATUM": "Absorber axis and carriage datum required",
+      "MATING": "Replaceable clevis/pin or equivalent source-defined interface",
+      "INSPECTION": "Axis alignment, pin fit, mounting pattern, stroke envelope",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "INTERFACE_ID": "IF-004",
+      "FROM": "160",
+      "TO": "150L/R",
+      "TYPE": "Rotation-control link interface",
+      "FUNCTION": "Independent seatback rotation-control path",
+      "DATUM": "Hinge/rotation datum required",
+      "MATING": "Pinned/bolted link interface per released geometry",
+      "INSPECTION": "Axis coincidence, link clearance, stop engagement",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "INTERFACE_ID": "IF-005",
+      "FROM": "160",
+      "TO": "J",
+      "TYPE": "Seatback hinge/pivot",
+      "FUNCTION": "Seatback rotational DOF",
+      "DATUM": "Pivot axis/center from native R4.1 required",
+      "MATING": "Hinge shaft/bearing/clevis stack; exact geometry not released",
+      "INSPECTION": "Pivot axis, radial/axial retention, rotation limits",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "INTERFACE_ID": "IF-006",
+      "FROM": "170",
+      "TO": "160/120",
+      "TYPE": "State/lock capture interface",
+      "FUNCTION": "Change mechanical constraint state and retain locked DOF",
+      "DATUM": "Lock engagement datum required",
+      "MATING": "Candidate mechanism only; final architecture not selected by authority",
+      "INSPECTION": "Positive engagement, reverse-load retention, release/reset",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "INTERFACE_ID": "IF-007",
+      "FROM": "180",
+      "TO": "120/110",
+      "TYPE": "Rebound-control interface",
+      "FUNCTION": "Control reverse carriage motion",
+      "DATUM": "Reverse-travel datum required",
+      "MATING": "Candidate module only; exact implementation not selected",
+      "INSPECTION": "Directionality, reset, secondary travel, engagement point",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "INTERFACE_ID": "IF-008",
+      "FROM": "210",
+      "TO": "100/120/130/170/180",
+      "TYPE": "Instrumentation interface",
+      "FUNCTION": "Measured x(t), theta(t), L/R reactions, absorber state, lock state",
+      "DATUM": "Test-fixture datum required",
+      "MATING": "Sensor mounts must be mechanically isolated from functional interfaces",
+      "INSPECTION": "Alignment, fastener retention, cable clearance, calibration ID",
+      "STATUS": "BLOCKED"
+    }
+  ],
+  "GEOMETRY_CONTROL": [
+    {
+      "PART": "100",
+      "EXACT_R4_1_GEOMETRY": "NOT_CLOSED",
+      "CONCEPT_GEOMETRY_ALLOWED": "REFERENCE_ONLY",
+      "DATUM": "NOT_PROVEN",
+      "MATING_CONDITION": "FUNCTIONALLY_DEFINED; EXACT_GEOMETRY_NOT_RELEASED",
+      "INSPECTION_REQUIREMENT": "Verify against authoritative R4.1 native CAD/PMI/drawing before fabrication",
+      "EVIDENCE_SOURCE": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv / native R4.1 CAD required",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART": "110L",
+      "EXACT_R4_1_GEOMETRY": "NOT_CLOSED",
+      "CONCEPT_GEOMETRY_ALLOWED": "REFERENCE_ONLY",
+      "DATUM": "NOT_PROVEN",
+      "MATING_CONDITION": "FUNCTIONALLY_DEFINED; EXACT_GEOMETRY_NOT_RELEASED",
+      "INSPECTION_REQUIREMENT": "Verify against authoritative R4.1 native CAD/PMI/drawing before fabrication",
+      "EVIDENCE_SOURCE": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv / native R4.1 CAD required",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART": "110R",
+      "EXACT_R4_1_GEOMETRY": "NOT_CLOSED",
+      "CONCEPT_GEOMETRY_ALLOWED": "REFERENCE_ONLY",
+      "DATUM": "NOT_PROVEN",
+      "MATING_CONDITION": "FUNCTIONALLY_DEFINED; EXACT_GEOMETRY_NOT_RELEASED",
+      "INSPECTION_REQUIREMENT": "Verify against authoritative R4.1 native CAD/PMI/drawing before fabrication",
+      "EVIDENCE_SOURCE": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv / native R4.1 CAD required",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART": "120",
+      "EXACT_R4_1_GEOMETRY": "NOT_CLOSED",
+      "CONCEPT_GEOMETRY_ALLOWED": "REFERENCE_ONLY",
+      "DATUM": "NOT_PROVEN",
+      "MATING_CONDITION": "FUNCTIONALLY_DEFINED; EXACT_GEOMETRY_NOT_RELEASED",
+      "INSPECTION_REQUIREMENT": "Verify against authoritative R4.1 native CAD/PMI/drawing before fabrication",
+      "EVIDENCE_SOURCE": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv / native R4.1 CAD required",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART": "130L/R",
+      "EXACT_R4_1_GEOMETRY": "NOT_CLOSED",
+      "CONCEPT_GEOMETRY_ALLOWED": "REFERENCE_ONLY",
+      "DATUM": "NOT_PROVEN",
+      "MATING_CONDITION": "FUNCTIONALLY_DEFINED; EXACT_GEOMETRY_NOT_RELEASED",
+      "INSPECTION_REQUIREMENT": "Verify against authoritative R4.1 native CAD/PMI/drawing before fabrication",
+      "EVIDENCE_SOURCE": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv / native R4.1 CAD required",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART": "150L/R",
+      "EXACT_R4_1_GEOMETRY": "NOT_CLOSED",
+      "CONCEPT_GEOMETRY_ALLOWED": "REFERENCE_ONLY",
+      "DATUM": "NOT_PROVEN",
+      "MATING_CONDITION": "FUNCTIONALLY_DEFINED; EXACT_GEOMETRY_NOT_RELEASED",
+      "INSPECTION_REQUIREMENT": "Verify against authoritative R4.1 native CAD/PMI/drawing before fabrication",
+      "EVIDENCE_SOURCE": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv / native R4.1 CAD required",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART": "160",
+      "EXACT_R4_1_GEOMETRY": "NOT_CLOSED",
+      "CONCEPT_GEOMETRY_ALLOWED": "REFERENCE_ONLY",
+      "DATUM": "NOT_PROVEN",
+      "MATING_CONDITION": "FUNCTIONALLY_DEFINED; EXACT_GEOMETRY_NOT_RELEASED",
+      "INSPECTION_REQUIREMENT": "Verify against authoritative R4.1 native CAD/PMI/drawing before fabrication",
+      "EVIDENCE_SOURCE": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv / native R4.1 CAD required",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART": "170",
+      "EXACT_R4_1_GEOMETRY": "NOT_CLOSED",
+      "CONCEPT_GEOMETRY_ALLOWED": "REFERENCE_ONLY",
+      "DATUM": "NOT_PROVEN",
+      "MATING_CONDITION": "FUNCTIONALLY_DEFINED; EXACT_GEOMETRY_NOT_RELEASED",
+      "INSPECTION_REQUIREMENT": "Verify against authoritative R4.1 native CAD/PMI/drawing before fabrication",
+      "EVIDENCE_SOURCE": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv / native R4.1 CAD required",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART": "180",
+      "EXACT_R4_1_GEOMETRY": "NOT_CLOSED",
+      "CONCEPT_GEOMETRY_ALLOWED": "REFERENCE_ONLY",
+      "DATUM": "NOT_PROVEN",
+      "MATING_CONDITION": "FUNCTIONALLY_DEFINED; EXACT_GEOMETRY_NOT_RELEASED",
+      "INSPECTION_REQUIREMENT": "Verify against authoritative R4.1 native CAD/PMI/drawing before fabrication",
+      "EVIDENCE_SOURCE": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv / native R4.1 CAD required",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART": "J",
+      "EXACT_R4_1_GEOMETRY": "NOT_CLOSED",
+      "CONCEPT_GEOMETRY_ALLOWED": "REFERENCE_ONLY",
+      "DATUM": "NOT_PROVEN",
+      "MATING_CONDITION": "FUNCTIONALLY_DEFINED; EXACT_GEOMETRY_NOT_RELEASED",
+      "INSPECTION_REQUIREMENT": "Verify against authoritative R4.1 native CAD/PMI/drawing before fabrication",
+      "EVIDENCE_SOURCE": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv / native R4.1 CAD required",
+      "STATUS": "BLOCKED"
+    },
+    {
+      "PART": "210",
+      "EXACT_R4_1_GEOMETRY": "NOT_CLOSED",
+      "CONCEPT_GEOMETRY_ALLOWED": "REFERENCE_ONLY",
+      "DATUM": "NOT_PROVEN",
+      "MATING_CONDITION": "FUNCTIONALLY_DEFINED; EXACT_GEOMETRY_NOT_RELEASED",
+      "INSPECTION_REQUIREMENT": "Verify against authoritative R4.1 native CAD/PMI/drawing before fabrication",
+      "EVIDENCE_SOURCE": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv / native R4.1 CAD required",
+      "STATUS": "BLOCKED"
+    }
+  ],
+  "MATERIAL_FASTENER": {
+    "MATERIAL_STATUS": "NOT_RELEASED",
+    "RULE": "No concept-board grade becomes released manufacturing material without controlled source.",
+    "FABRICATION_CRITICAL_MATERIAL_RECORDS": [
+      {
+        "PART_GROUP": "100/110/120/160",
+        "IDENTITY": "RELEASED_GRADE_REQUIRED",
+        "SOURCE": "Native drawing/BOM/MTR",
+        "STATUS": "BLOCKED"
+      },
+      {
+        "PART_GROUP": "130",
+        "IDENTITY": "EXACT_SERIALIZED_MODULE_REQUIRED",
+        "SOURCE": "Supplier/test article record",
+        "STATUS": "BLOCKED"
+      },
+      {
+        "PART_GROUP": "170",
+        "IDENTITY": "SELECTED_LOCK_HARDWARE_REQUIRED",
+        "SOURCE": "Controlled design/test configuration",
+        "STATUS": "BLOCKED"
+      },
+      {
+        "PART_GROUP": "180",
+        "IDENTITY": "SELECTED_REBOUND_HARDWARE_REQUIRED",
+        "SOURCE": "Controlled design/test configuration",
+        "STATUS": "BLOCKED"
+      }
+    ],
+    "FASTENER_CONTROL": [
+      {
+        "USE": "Rail/base attachment",
+        "IDENTITY": "Exact fastener part number/size/grade required",
+        "PRELOAD": "SOURCE_REQUIRED",
+        "STATUS": "BLOCKED"
+      },
+      {
+        "USE": "Hinge/link stack",
+        "IDENTITY": "Exact fastener/retainer required",
+        "PRELOAD": "SOURCE_REQUIRED",
+        "STATUS": "BLOCKED"
+      },
+      {
+        "USE": "Absorber clevis",
+        "IDENTITY": "Exact pin/bolt hardware required",
+        "PRELOAD": "SOURCE_REQUIRED",
+        "STATUS": "BLOCKED"
+      },
+      {
+        "USE": "Lock mount",
+        "IDENTITY": "Exact fastener/retainer required",
+        "PRELOAD": "SOURCE_REQUIRED",
+        "STATUS": "BLOCKED"
+      },
+      {
+        "USE": "Sensor mounts",
+        "IDENTITY": "Controlled instrumentation hardware",
+        "PRELOAD": "SOURCE_REQUIRED",
+        "STATUS": "BLOCKED"
+      }
+    ]
+  },
+  "SAFE_ENDSTOP": {
+    "STATUS": "BLOCKED_UNTIL_EXACT_R4_1_GEOMETRY_AND_FIXTURE_ARE_RELEASED",
+    "PURPOSE": "Prevent uncontrolled overtravel and protect test instrumentation during development testing",
+    "REQUIREMENTS": [
+      "Physical positive stop, not a software/dimension-only limit",
+      "Bilateral containment where applicable",
+      "Controlled contact direction",
+      "Replaceable sacrificial contact insert permitted",
+      "Mechanical overtravel containment independent of instrumentation",
+      "No assumption of stop force capacity without material/contact evidence",
+      "Stroke target 180 mm remains a design target, not physical validation"
+    ],
+    "INSPECTION": [
+      "full-travel manual inspection",
+      "clearance inspection",
+      "positive stop engagement",
+      "retention/containment inspection"
+    ],
+    "DYNAMIC_TEST_RELEASE": "Requires pre-approved load ceiling and containment evidence"
+  },
+  "INSTRUMENTATION": {
+    "STATUS": "DEFINED_NOT_RELEASED",
+    "MINIMUM_CHANNELS": [
+      {
+        "CHANNEL": "X",
+        "MEASUREMENT": "carriage displacement x(t)",
+        "MOUNTING": "carriage-to-fixed datum; avoid measuring fixture compliance as carriage motion",
+        "CALIBRATION": "traceable displacement calibration",
+        "STATUS": "DEFINED"
+      },
+      {
+        "CHANNEL": "THETA",
+        "MEASUREMENT": "seatback angle theta(t)",
+        "MOUNTING": "independent seatback angular measurement referenced to fixed fixture/vehicle datum",
+        "CALIBRATION": "angle calibration",
+        "STATUS": "DEFINED"
+      },
+      {
+        "CHANNEL": "S1",
+        "MEASUREMENT": "left rail/load-path reaction",
+        "MOUNTING": "structural load path, not cosmetic member",
+        "CALIBRATION": "traceable force calibration",
+        "STATUS": "DEFINED"
+      },
+      {
+        "CHANNEL": "S2",
+        "MEASUREMENT": "right rail/load-path reaction",
+        "MOUNTING": "structural load path, not cosmetic member",
+        "CALIBRATION": "traceable force calibration",
+        "STATUS": "DEFINED"
+      },
+      {
+        "CHANNEL": "ABS_F",
+        "MEASUREMENT": "absorber force",
+        "MOUNTING": "inline with absorber load path",
+        "CALIBRATION": "traceable load cell calibration",
+        "STATUS": "DEFINED"
+      },
+      {
+        "CHANNEL": "ABS_X",
+        "MEASUREMENT": "absorber stroke/displacement",
+        "MOUNTING": "absorber axis",
+        "CALIBRATION": "traceable displacement calibration",
+        "STATUS": "DEFINED"
+      },
+      {
+        "CHANNEL": "LOCK",
+        "MEASUREMENT": "mechanical lock state",
+        "MOUNTING": "independent state sensor target, no load-path substitution",
+        "CALIBRATION": "state-sensor verification",
+        "STATUS": "DEFINED"
+      },
+      {
+        "CHANNEL": "TEMP",
+        "MEASUREMENT": "absorber/component temperature",
+        "MOUNTING": "representative thermal location",
+        "CALIBRATION": "traceable temperature calibration",
+        "STATUS": "DEFINED"
+      },
+      {
+        "CHANNEL": "VIDEO",
+        "MEASUREMENT": "synchronized visual evidence",
+        "MOUNTING": "external high-speed camera(s)",
+        "CALIBRATION": "time synchronization and geometric scale verification",
+        "STATUS": "DEFINED"
+      }
+    ],
+    "DAQ_REQUIREMENTS": [
+      "common timebase",
+      "channel ID map",
+      "calibration IDs",
+      "raw immutable data",
+      "configuration ID",
+      "serial IDs",
+      "SHA-256"
+    ],
+    "PHYSICAL_VALIDATION": "NOT_DONE"
+  },
+  "COUNTER_18": {
+    "ASSERTED_TOTAL": 836,
+    "AUDITABLE_SUBTOTAL": 818,
+    "DELTA": 18,
+    "IDENTITY_STATUS": "UNRESOLVED",
+    "RULE": "No distribution or identity assignment without the original 836-row engineering ledger."
+  },
+  "PHYSICAL_EVIDENCE": {
+    "MEASUREMENTS": 0,
+    "TEST_RESULTS": 0,
+    "SAFETY_VALIDATION": false
+  },
+  "FINAL_GATE": "PRE_FABRICATION_BLOCKED"
+}

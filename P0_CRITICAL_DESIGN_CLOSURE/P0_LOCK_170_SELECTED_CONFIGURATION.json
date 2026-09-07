@@ -1,0 +1,59 @@
+{
+  "STATUS": "CANDIDATE_SET_ONLY",
+  "SAFE_DEFAULT_STATE": "Mechanical retention state; exact fail-safe implementation NOT PROVEN",
+  "ENGAGEMENT_LOGIC": "Candidate-specific; must demonstrate positive capture and blocked intended DOF",
+  "RELEASE_RESET": "Must be mechanically defined and tested for selected candidate",
+  "TIMING_FIREWALL": {
+    ">=2.5 g": "DESIGN_REFERENCE_ONLY",
+    "<20 ms": "DESIGN_REFERENCE_ONLY"
+  },
+  "BENCH_VERIFICATION": [
+    "unlocked motion",
+    "engagement",
+    "locked reverse-load hold",
+    "release/reset",
+    "fault/missed engagement",
+    "repeatability"
+  ],
+  "OPTIONS": [
+    {
+      "OPTION_ID": "L170-A",
+      "ARCHITECTURE": "Mechanical pawl + capture",
+      "SOURCE_BASIS": "P0/V6/V7 multi-state lock architecture",
+      "SELECTION_CRITERIA": [
+        "positive engagement",
+        "reverse-load retention",
+        "fault tolerance",
+        "repeatability",
+        "service/reset"
+      ],
+      "FINAL_SELECTION": "NOT_AUTHORIZED"
+    },
+    {
+      "OPTION_ID": "L170-B",
+      "ARCHITECTURE": "Lock pin + capture pocket",
+      "SOURCE_BASIS": "P0/V6/V7 lock-pin concept",
+      "SELECTION_CRITERIA": [
+        "alignment",
+        "capture",
+        "reverse-load retention",
+        "wear",
+        "release/reset"
+      ],
+      "FINAL_SELECTION": "NOT_AUTHORIZED"
+    },
+    {
+      "OPTION_ID": "L170-C",
+      "ARCHITECTURE": "Inertia-driven pawl/cam",
+      "SOURCE_BASIS": "P0/V6 inertial mass/cam/pawl concept",
+      "SELECTION_CRITERIA": [
+        "trigger repeatability",
+        "false-trigger resistance",
+        "latency",
+        "fail-safe",
+        "reset"
+      ],
+      "FINAL_SELECTION": "NOT_AUTHORIZED"
+    }
+  ]
+}
