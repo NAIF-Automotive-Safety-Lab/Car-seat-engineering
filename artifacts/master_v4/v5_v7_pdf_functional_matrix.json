@@ -1,0 +1,29 @@
+{
+  "status": "REFERENCE_ONLY_PARTIAL_STANDARDS_ALIGNMENT",
+  "source": {
+    "file": "نماذجV5-V7.pdf",
+    "pages": 15,
+    "text_extraction_lines": 0,
+    "embedded_content": "image-only JPEG boards",
+    "classification": "REFERENCE_DESIGN_INTENT"
+  },
+  "requirements": [
+    {"id":"V5F-01","pages":[1,2,3,4,5],"function":"integrated seat with bilateral rails, energy path, seatback path and restraint interface","standards":["FMVSS 207","UNECE R17"],"mapping":"PARTIAL","evidence":"native assembly, joints, hardpoints, interference and seat/rail strength"},
+    {"id":"V5F-02","pages":[6],"function":"positive lock/unlock and trigger sequence","standards":["FMVSS 207","UNECE R17"],"mapping":"PARTIAL","evidence":"state cycles, load hold, unintended release, reset and fault tests"},
+    {"id":"V5F-03","pages":[7,13],"function":"replaceable absorber with measurable force-stroke law","standards":[],"mapping":"NO_DIRECT_STANDARD","evidence":"calibrated force/displacement, hysteresis, temperature, cycling and serial traceability"},
+    {"id":"V5F-04","pages":[7,9,10],"function":"rail guidance, retention, end stops and connection details","standards":["FMVSS 207","UNECE R17"],"mapping":"PARTIAL","evidence":"parallelism, straightness, retention, stop-load and left/right reactions"},
+    {"id":"V5F-05","pages":[7,9,10,12],"function":"weld/join/material definition for load transfer","standards":["FMVSS 207","UNECE R17"],"mapping":"PARTIAL","evidence":"released joining specification, certificates and inspection"},
+    {"id":"V5F-06","pages":[8,14,15],"function":"time-dependent sequence from detection to energy management and rebound","standards":["ISO 6487","SAE J211/1"],"mapping":"MEASUREMENT_ALIGNMENT_NOT_PERFORMANCE_COMPLIANCE","evidence":"state-machine thresholds, latency, synchronized channels and acceptance limits"},
+    {"id":"V5F-07","pages":[8],"function":"separate force/time/load-path measurement","standards":["ISO 6487","SAE J211/1"],"mapping":"MEASUREMENT_ALIGNMENT","evidence":"calibration, CFC/filter, timebase, uncertainty and raw-data hash"},
+    {"id":"V5F-08","pages":[9,10,12,13],"function":"controlled envelope, datums, dimensions, tolerances and interfaces","standards":["FMVSS 207","FMVSS 210","UNECE R14","UNECE R17"],"mapping":"PARTIAL","evidence":"native CAD, PMI/GD&T, tolerance stack and inspection"},
+    {"id":"V5F-09","pages":[10,11,12],"function":"serviceable assembly decomposition and replaceable modules","standards":["UNECE R17"],"mapping":"PARTIAL","evidence":"BOM, mating conditions, fastener identity/preload, revision and service analysis"},
+    {"id":"V5F-10","pages":[11,12],"function":"rear-seat packaging, occupant accommodation and restraint integration","standards":["FMVSS 210","FMVSS 202a","UNECE R14","UNECE R17","UNECE R25"],"mapping":"INTERFACE_RELEVANCE","evidence":"vehicle hardpoints, belt route, occupant clearance and applicable regulatory configuration"},
+    {"id":"V5F-11","pages":[13],"function":"package dimensions, phase bands, state table and force-stroke references","standards":["FMVSS 207","ISO 6487"],"mapping":"REFERENCE_ONLY","evidence":"source drawing revision, tolerances, state acceptance limits and calibrated dynamic data"},
+    {"id":"V5F-12","pages":[14,15],"function":"sensor/actuator integration and occupant trajectory control concept","standards":["ISO 6487","SAE J211/1","FMVSS 202a"],"mapping":"PARTIAL","evidence":"sensor calibration, actuator fail-safe, ATD/sled evidence and post-test inspection"}
+  ],
+  "visible_reference_values_not_compliance": ["1120 mm","560 mm","520 mm","460 mm","force-stroke curves","phase timing bands","material/finish tables","production-ready board labels","CAD format icons","0-400 ms crash sequence"],
+  "release_gate": "STOP_RELEASE",
+  "native_cad_present": false,
+  "raw_measurements_present": false,
+  "calibration_certificates_present": false
+}
