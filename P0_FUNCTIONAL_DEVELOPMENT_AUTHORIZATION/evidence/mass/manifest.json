@@ -1,0 +1,27 @@
+{
+  "DOCUMENT": "MASS_EVIDENCE_MANIFEST",
+  "INPUT_ID": "mass",
+  "STATUS": "OPEN",
+  "SOURCE_EVIDENCE_FOUND": false,
+  "R4_1_SHA256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "CONFIGURATION_ID": "P0-FD-CFG-001",
+  "ARTICLE_SERIAL": "P0FD-20260907-001",
+  "files": {
+    "reports/mass_properties.json": "aa7069665b503e5189cc115307e7794cf822ea900c8e363705ba6a115928e911"
+  },
+  "raw_files": [],
+  "required_before_close": [
+    "VALUE",
+    "UNIT",
+    "SOURCE_ID",
+    "REVISION",
+    "DATE",
+    "SHA256",
+    "PROVENANCE",
+    "CONFIGURATION_MAPPING",
+    "VALIDATION_STATUS",
+    "calibration or released-source basis",
+    "uncertainty/tolerance basis"
+  ],
+  "close_authority": "secure validator only"
+}
