@@ -1,0 +1,51 @@
+{
+  "status": "PARTIAL",
+  "generated_at": "2026-09-07T04:52:44.539667+00:00",
+  "dependencies": [
+    {
+      "name": "OpenCascade/OCP",
+      "version": "8.0.1.0.0 Python binding",
+      "status": "VERIFIED",
+      "use": "R4.1 STEP/B-Rep"
+    },
+    {
+      "name": "Project Chrono",
+      "version": "10.0.0",
+      "commit": "9faf13dd8f1128dd75ed233a9627027b0422c3f7",
+      "status": "VERIFIED",
+      "use": "core dynamics smoke"
+    },
+    {
+      "name": "Gmsh",
+      "version": "4.15.2",
+      "commit": "657c8e915f60405e6cad0c8ec7faf812bfff1a60",
+      "status": "VERIFIED",
+      "use": "synthetic mesh smoke only"
+    },
+    {
+      "name": "CalculiX",
+      "commit": "3593817a4a7658eb8af9e9827fbe98f9552fbd44",
+      "status": "VERIFIED",
+      "use": "synthetic solver smoke only"
+    },
+    {
+      "name": "STEPcode",
+      "version": "0.8.2",
+      "commit": "5cf8fc1a8907983365b233280f128566956713fa",
+      "status": "VERIFIED_BUILD",
+      "use": "independent STEP semantic layer; project run pending"
+    },
+    {
+      "name": "step-p21",
+      "commit": "2baab1148970a4a328429a0a5f1e459c979e77ba",
+      "status": "BLOCKED",
+      "use": "Part-21 parser",
+      "reason": "build stopped by explicit user stop"
+    },
+    {
+      "name": "Chrono Cascade",
+      "status": "BLOCKED",
+      "reason": "OCCT 7.9.2 build stopped before install"
+    }
+  ]
+}

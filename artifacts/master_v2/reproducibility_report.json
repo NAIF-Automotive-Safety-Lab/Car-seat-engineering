@@ -1,0 +1,17 @@
+{
+  "status": "PARTIAL",
+  "verified_replays": [
+    "R4.1 STEP validator",
+    "OCP B-Rep inventory",
+    "repository regression suite",
+    "Gmsh synthetic smoke",
+    "CalculiX synthetic smoke"
+  ],
+  "blocked_replays": [
+    "V7 CAD audit",
+    "V7 CAE",
+    "step-p21 project parse",
+    "Chrono Cascade SR11 adapter"
+  ],
+  "source_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+}

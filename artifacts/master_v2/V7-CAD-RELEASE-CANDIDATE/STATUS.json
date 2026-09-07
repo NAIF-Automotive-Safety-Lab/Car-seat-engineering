@@ -1,0 +1,7 @@
+{
+  "status": "BLOCKED_RELEASE_CANDIDATE",
+  "authorization": "NOT_AUTHORIZED",
+  "reason": "V7 native CAD and critical evidence absent",
+  "revision": "V7-CANDIDATE-BLOCKED-001",
+  "source_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+}

@@ -1,0 +1,17 @@
+{
+  "package_id": "V7-PROTOTYPE-RELEASE-PACKAGE-BLOCKED-001",
+  "status": "BLOCKED_RELEASE",
+  "design_candidate": "V7",
+  "baseline": "V5",
+  "authorization": "NOT_AUTHORIZED_FOR_MANUFACTURER_HANDOFF",
+  "revision": "V7-CANDIDATE-BLOCKED-001",
+  "sections": {
+    "A_design": {"status": "BLOCKED", "required": ["V7 CAD", "STEP export", "drawings", "master assembly", "component files", "BOM"]},
+    "B_engineering": {"status": "BLOCKED", "required": ["materials", "interfaces", "tolerances", "critical loads", "design intent"]},
+    "C_manufacturing": {"status": "BLOCKED", "required": ["manufacturing processes", "joining definitions", "assembly method", "special operations"]},
+    "D_validation": {"status": "PARTIAL", "available": ["R4.1 OCP B-Rep evidence", "synthetic Gmsh smoke", "synthetic CalculiX smoke", "Chrono core smoke"], "blocked": ["V7 CAE evidence", "physical validation"]},
+    "E_evidence": {"status": "PARTIAL", "available": ["R4.1 source SHA", "validator outputs", "repository tests"], "blocked": ["V7 claim-to-source traceability"]}
+  },
+  "source_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "next_action": "Supply released V7 native CAD and authoritative engineering records; rerun the full gate."
+}

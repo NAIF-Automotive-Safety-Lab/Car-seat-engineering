@@ -1,0 +1,21 @@
+{
+  "status": "STOP_RELEASE",
+  "gates": {
+    "A_repository": "VERIFIED_PARTIAL",
+    "B_dependencies": "PARTIAL",
+    "C_evidence": "VERIFIED_FOR_R4_1",
+    "D_CAD": "BLOCKED_FOR_V7",
+    "E_features": "BLOCKED",
+    "F_PMI": "NOT_PRESENT_OR_NOT_RECOVERED",
+    "G_traceability": "PARTIAL",
+    "H_physics": "PARTIAL",
+    "I_physical_evidence": "BLOCKED",
+    "J_gap_closure": "BLOCKED",
+    "K_reproducibility": "PARTIAL",
+    "L_zero_bypass": "VERIFIED_FOR_PIPELINE_NOT_V7_RELEASE"
+  },
+  "critical_gap_count": 181,
+  "manufacturability_critical_gap_count": 14,
+  "prototype_release": "NOT_AUTHORIZED",
+  "next_action": "Provide released V7 source package and engineering records; then rerun audit"
+}

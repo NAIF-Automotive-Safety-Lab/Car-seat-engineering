@@ -1,0 +1,8 @@
+{
+  "status": "VERIFIED_CORE_PARTIAL",
+  "source": "artifacts/pychrono_smoke.json",
+  "core": "VERIFIED",
+  "cascade": "BLOCKED",
+  "v7_analysis": "BLOCKED",
+  "reason": "No V7 physics inputs or Cascade STEP path"
+}

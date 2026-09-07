@@ -1,0 +1,55 @@
+{
+  "status": "VERIFIED_PARTIAL",
+  "repository": "/home/ubuntu/car-seat-engineering",
+  "git_revision": "006ae8d65f3ef31fb2933dd9e9459838929439fd",
+  "platform": "Linux-6.18.38+-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "detected": {
+    "ocp": "BLOCKED",
+    "r41_step": {
+      "status": "VERIFIED",
+      "path": "/home/ubuntu/car-seat-engineering/R4.1/R4.1.step",
+      "sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "size_bytes": 1220000
+    },
+    "project_chrono_core": {
+      "status": "VERIFIED",
+      "source_commit": "9faf13dd8f1128dd75ed233a9627027b0422c3f7"
+    },
+    "gmsh": {
+      "status": "VERIFIED",
+      "version": "4.15.2",
+      "binary": "/home/ubuntu/third_party/gmsh-install-4.15.2/bin/gmsh"
+    },
+    "calculix": {
+      "status": "VERIFIED",
+      "binary": "/home/ubuntu/third_party/calculix/src/CalculiX"
+    },
+    "stepcode": {
+      "status": "VERIFIED",
+      "version": "0.8.2"
+    },
+    "occt_7_9_2": {
+      "status": "BLOCKED",
+      "version": "7.9.2"
+    },
+    "pychrono_cascade": {
+      "status": "BLOCKED",
+      "reason": "OCCT build was stopped before installation"
+    }
+  },
+  "missing_or_unverified": [
+    "V7 native CAD payload",
+    "released V7 BOM",
+    "released materials",
+    "released PMI/GD&T",
+    "tolerances",
+    "physical measurements",
+    "V7-specific CAE inputs"
+  ],
+  "compatibility_risks": [
+    "R4.1 is not evidence that V7 is geometrically released",
+    "synthetic engine smoke outputs are not project CAE evidence",
+    "no external CAD-AI Engineering OS repository was present locally; its public code was inspected as a reference only"
+  ]
+}
