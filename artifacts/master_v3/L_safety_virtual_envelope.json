@@ -1,0 +1,16 @@
+{
+  "status": "BLOCKED_V7_INPUTS",
+  "analysis_domains": [
+    "containment",
+    "retention",
+    "secondary_motion",
+    "pinch_crush",
+    "rebound",
+    "stop_loads",
+    "component_failure",
+    "occupant_interaction",
+    "structural_load_paths"
+  ],
+  "virtual_pre_screen": "AVAILABLE_AS_INTERFACE_ONLY",
+  "physical_validation": "NOT_PERFORMED"
+}

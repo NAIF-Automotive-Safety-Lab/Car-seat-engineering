@@ -1,0 +1,26 @@
+{
+  "status": "READY",
+  "derivations": [
+    {
+      "derivation_id": "mass_from_volume_density",
+      "formula": "m = V * rho",
+      "inputs": [
+        "authoritative volume",
+        "authoritative density"
+      ],
+      "output_evidence_class": "CALCULATED",
+      "uncertainty_propagation": "interval or distribution required",
+      "status": "AVAILABLE_NOT_EXECUTED_FOR_V7"
+    },
+    {
+      "derivation_id": "inertia_from_CAD_mass_properties",
+      "formula": "CAD mass-property integration",
+      "inputs": [
+        "released V7 B-Rep",
+        "released density"
+      ],
+      "output_evidence_class": "DERIVED_FROM_CAD",
+      "status": "BLOCKED_V7_PAYLOAD"
+    }
+  ]
+}

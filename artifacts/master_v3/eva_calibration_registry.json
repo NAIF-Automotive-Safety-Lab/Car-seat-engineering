@@ -1,0 +1,33 @@
+{
+  "status": "TEST_REQUIRED",
+  "records": [
+    {
+      "test_id": "T01_vehicle_pulse_and_acceleration",
+      "status": "TEST_REQUIRED",
+      "raw_test_data_sha256": null,
+      "pre_test_model_preserved": true,
+      "next_action": "import calibrated raw data"
+    },
+    {
+      "test_id": "T02_absorber_force_stroke",
+      "status": "TEST_REQUIRED",
+      "raw_test_data_sha256": null,
+      "pre_test_model_preserved": true,
+      "next_action": "import calibrated raw data"
+    },
+    {
+      "test_id": "T03_joint_and_lock_characterization",
+      "status": "TEST_REQUIRED",
+      "raw_test_data_sha256": null,
+      "pre_test_model_preserved": true,
+      "next_action": "import calibrated raw data"
+    },
+    {
+      "test_id": "T04_material_and_fastener_certificate_review",
+      "status": "TEST_REQUIRED",
+      "raw_test_data_sha256": null,
+      "pre_test_model_preserved": true,
+      "next_action": "import calibrated raw data"
+    }
+  ]
+}

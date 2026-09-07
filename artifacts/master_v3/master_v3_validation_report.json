@@ -1,0 +1,22 @@
+{
+  "status": "PARTIAL",
+  "eva_runtime": "VERIFIED_SOFTWARE_CONTRACTS",
+  "source_discovery": "VERIFIED_PARTIAL",
+  "document_extraction": "VERIFIED_SOFTWARE_CONTRACTS",
+  "derivation": "VERIFIED_SOFTWARE_CONTRACTS",
+  "uncertainty": "VERIFIED_SOFTWARE_CONTRACTS",
+  "virtual_experiments": "VERIFIED_SYNTHETIC_ONLY",
+  "sensitivity": "VERIFIED_SYNTHETIC_ONLY",
+  "test_prioritization": "CANDIDATE_TEST_PLAN",
+  "calibration": "TEST_REQUIRED",
+  "eva_tests": "27 passed",
+  "physical_measurements": 0,
+  "v7_validation": "BLOCKED",
+  "false_closure": false,
+  "remaining_critical_blockers": [
+    "V7 native CAD",
+    "authoritative V7 engineering records",
+    "physical data",
+    "V7 CAE inputs and thresholds"
+  ]
+}

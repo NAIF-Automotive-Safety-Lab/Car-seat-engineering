@@ -1,0 +1,11 @@
+{
+  "status": "NOT_RUN_FOR_V7",
+  "classification": "ROBUSTNESS_EVIDENCE_IS_DISTINCT_FROM_PHYSICAL_VALIDATION",
+  "project_results": [],
+  "synthetic_results": [
+    {
+      "id": "EVA-SYNTHETIC-001",
+      "status": "SYNTHETIC_TEST_DATA"
+    }
+  ]
+}

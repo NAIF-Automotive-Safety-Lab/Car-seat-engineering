@@ -1,0 +1,54 @@
+{
+  "status": "VERIFIED_SOFTWARE_ONLY",
+  "experiments": [
+    {
+      "experiment_id": "EVA-SYNTHETIC-001",
+      "configuration_id": "a9eaa3fc6041f67f5a24f0c9ffb4b41b2ba12e23c0b3843014425d343ea0d9a2",
+      "inputs": [
+        {
+          "parameter": "x",
+          "value": 0.0,
+          "result": 0.0
+        },
+        {
+          "parameter": "x",
+          "value": 0.5,
+          "result": 0.25
+        },
+        {
+          "parameter": "x",
+          "value": 1.0,
+          "result": 1.0
+        }
+      ],
+      "input_provenance": [
+        "SYNTHETIC_TEST_DATA"
+      ],
+      "solver": "EVA_DETERMINISTIC",
+      "solver_version": "0.1.0",
+      "results": [
+        {
+          "parameter": "x",
+          "value": 0.0,
+          "result": 0.0
+        },
+        {
+          "parameter": "x",
+          "value": 0.5,
+          "result": 0.25
+        },
+        {
+          "parameter": "x",
+          "value": 1.0,
+          "result": 1.0
+        }
+      ],
+      "failure_state": null,
+      "runtime_status": "VERIFIED",
+      "evidence_class": "SIMULATED",
+      "test_data_class": "SYNTHETIC_TEST_DATA"
+    }
+  ],
+  "project_experiments": [],
+  "rule": "Synthetic experiments never enter project validation evidence"
+}

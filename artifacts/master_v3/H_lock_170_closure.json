@@ -1,0 +1,23 @@
+{
+  "status": "BLOCKED",
+  "candidates": [
+    "L170-A",
+    "L170-B",
+    "L170-C"
+  ],
+  "virtual_ranking": "NOT_RUN_V7_INPUTS_ABSENT",
+  "physical_status": "TEST_REQUIRED",
+  "final_selection": "NOT_AUTHORIZED",
+  "thresholds": {
+    "acceleration": {
+      "value": 2.5,
+      "unit": "g",
+      "classification": "TARGET_OR_REQUIREMENT_UNVERIFIED"
+    },
+    "response_time": {
+      "value": 20,
+      "unit": "ms",
+      "classification": "TARGET_OR_REQUIREMENT_UNVERIFIED"
+    }
+  }
+}

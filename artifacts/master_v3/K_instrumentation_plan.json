@@ -1,0 +1,33 @@
+{
+  "status": "CALIBRATION_READY",
+  "physical_measurements": 0,
+  "sensor_map": [],
+  "channels": [
+    "base_acceleration",
+    "carriage_xva",
+    "seatback_theta_omega_alpha",
+    "rail_reactions",
+    "absorber_force_displacement",
+    "lock_state",
+    "occupant_motion"
+  ],
+  "sampling_requirements": "TO BE RELEASED BY TEST AUTHORITY",
+  "synchronization": "TEST_TRIGGER_REQUIRED",
+  "calibration_requirements": "sensor-specific certificates required",
+  "raw_data_schema": [
+    "sensor_id",
+    "calibration",
+    "sampling",
+    "units",
+    "timestamp",
+    "test_id",
+    "raw_data_sha256"
+  ],
+  "acceptance_metrics": [
+    "peak",
+    "RMS",
+    "phase/time-of-peak",
+    "energy where meaningful",
+    "event timing"
+  ]
+}

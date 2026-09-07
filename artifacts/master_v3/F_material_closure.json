@@ -1,0 +1,95 @@
+{
+  "status": "UNVERIFIED",
+  "gaps": [
+    {
+      "gap_id": "F01",
+      "evidence_search": "project sources searched",
+      "candidate_sources": [],
+      "derived_properties": [],
+      "bounds": null,
+      "sensitivity": "NOT_RUN",
+      "physical_characterization": "REQUIRED",
+      "minimum_human_input": "material certificate or controlled datasheet"
+    },
+    {
+      "gap_id": "F02",
+      "evidence_search": "project sources searched",
+      "candidate_sources": [],
+      "derived_properties": [],
+      "bounds": null,
+      "sensitivity": "NOT_RUN",
+      "physical_characterization": "REQUIRED",
+      "minimum_human_input": "material certificate or controlled datasheet"
+    },
+    {
+      "gap_id": "F03",
+      "evidence_search": "project sources searched",
+      "candidate_sources": [],
+      "derived_properties": [],
+      "bounds": null,
+      "sensitivity": "NOT_RUN",
+      "physical_characterization": "REQUIRED",
+      "minimum_human_input": "material certificate or controlled datasheet"
+    },
+    {
+      "gap_id": "F04",
+      "evidence_search": "project sources searched",
+      "candidate_sources": [],
+      "derived_properties": [],
+      "bounds": null,
+      "sensitivity": "NOT_RUN",
+      "physical_characterization": "REQUIRED",
+      "minimum_human_input": "material certificate or controlled datasheet"
+    },
+    {
+      "gap_id": "F05",
+      "evidence_search": "project sources searched",
+      "candidate_sources": [],
+      "derived_properties": [],
+      "bounds": null,
+      "sensitivity": "NOT_RUN",
+      "physical_characterization": "REQUIRED",
+      "minimum_human_input": "material certificate or controlled datasheet"
+    },
+    {
+      "gap_id": "F06",
+      "evidence_search": "project sources searched",
+      "candidate_sources": [],
+      "derived_properties": [],
+      "bounds": null,
+      "sensitivity": "NOT_RUN",
+      "physical_characterization": "REQUIRED",
+      "minimum_human_input": "material certificate or controlled datasheet"
+    },
+    {
+      "gap_id": "F07",
+      "evidence_search": "project sources searched",
+      "candidate_sources": [],
+      "derived_properties": [],
+      "bounds": null,
+      "sensitivity": "NOT_RUN",
+      "physical_characterization": "REQUIRED",
+      "minimum_human_input": "material certificate or controlled datasheet"
+    },
+    {
+      "gap_id": "F08",
+      "evidence_search": "project sources searched",
+      "candidate_sources": [],
+      "derived_properties": [],
+      "bounds": null,
+      "sensitivity": "NOT_RUN",
+      "physical_characterization": "REQUIRED",
+      "minimum_human_input": "material certificate or controlled datasheet"
+    },
+    {
+      "gap_id": "F09",
+      "evidence_search": "project sources searched",
+      "candidate_sources": [],
+      "derived_properties": [],
+      "bounds": null,
+      "sensitivity": "NOT_RUN",
+      "physical_characterization": "REQUIRED",
+      "minimum_human_input": "material certificate or controlled datasheet"
+    }
+  ]
+}
