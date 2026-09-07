@@ -1,0 +1,12 @@
+{
+  "EXPECTED_SHA256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "CURRENT_CALCULATED_SHA256": "NOT_AVAILABLE",
+  "HISTORICAL_SHA_MATCH": "YES",
+  "CURRENT_BYTE_LEVEL_SHA_MATCH": "NOT_RECOMPUTED",
+  "HISTORICAL_SOLIDS": 62,
+  "CURRENT_RECOMPUTED_SOLIDS": "NOT_EXECUTED",
+  "BREP": "HISTORICALLY_VALIDATED",
+  "MUTATION": "HISTORICALLY_FALSE",
+  "AUTHENTICITY_STATUS": "PARTIAL",
+  "REASON": "Exact STEP payload is searchable and its syntax/content is directly retrievable, but the current execution runtime has no byte-addressable copy for an independent SHA-256 recomputation."
+}

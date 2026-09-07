@@ -1,0 +1,12 @@
+{
+  "FINAL_STATUS": "NOT_RECOVERED_AFTER_EXHAUSTIVE_TRACE",
+  "INTERPRETATION": "The exact native STEP is discoverable and content-searchable in the authoritative File Library, but the exact byte payload is not mounted into the current execution environment, so independent byte-level authenticity and deterministic extraction cannot be completed.",
+  "NOT_A_SUBSTITUTE_FAILURE": "No alternate revision, proxy STEP, mesh, report, or reconstructed geometry was accepted.",
+  "EXACT_NEXT_ACCESS_REQUIRED": {
+    "artifact": "R4.1/R4.1.step",
+    "required_sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "required_delivery": "byte-addressable local/mounted artifact or connector export preserving exact bytes",
+    "owner": "Manus/project artifact storage administrator",
+    "blocking_gate": "Current deterministic extraction and independent authenticity gate"
+  }
+}

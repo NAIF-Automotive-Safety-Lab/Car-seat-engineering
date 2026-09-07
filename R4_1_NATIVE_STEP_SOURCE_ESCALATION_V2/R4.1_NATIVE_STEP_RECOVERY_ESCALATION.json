@@ -1,0 +1,39 @@
+{
+  "priority_order": [
+    {
+      "location": "File Library / source artifact index",
+      "status": "FOUND_INDEXED_PAYLOAD",
+      "evidence_ref": "file_00000000719c82109a9629b5f23950df"
+    },
+    {
+      "location": "Original artifact path",
+      "status": "REFERENCED_ONLY",
+      "path": "R4.1/R4.1.step"
+    },
+    {
+      "location": "Manus task artifact store",
+      "status": "HISTORICAL_PATH_REFERENCED",
+      "paths": [
+        "/mnt/data/T_OCS_MBD_AGENT/geometry/T_OCS_V0_R4_1_SHOULDER_REPAIR.step",
+        "/mnt/data/r51_fresh/T_OCS_V0_R4_1_SHOULDER_REPAIR.step"
+      ]
+    },
+    {
+      "location": "Repository/Git LFS/releases",
+      "status": "NOT_DIRECTLY_ACCESSIBLE_FROM_CURRENT_FILE_SEARCH",
+      "note": "No direct repository connector available in this task."
+    },
+    {
+      "location": "Archived engineering package",
+      "status": "REFERENCED_BY_HISTORICAL_RECORDS",
+      "artifact": "V1_SR4_PACKAGE_INTEGRITY.json"
+    },
+    {
+      "location": "External artifact location",
+      "status": "NOT_USED",
+      "note": "No external web/source substituted."
+    }
+  ],
+  "last_known_authoritative_location": "R4.1/R4.1.step (project logical location), with historical physical paths /mnt/data/T_OCS_MBD_AGENT/geometry/... and /mnt/data/r51_fresh/...",
+  "recovery_result": "INDEXED_PAYLOAD_FOUND_BUT_EXECUTION_PAYLOAD_NOT_MOUNTED"
+}

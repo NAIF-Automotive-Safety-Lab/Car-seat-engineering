@@ -1,0 +1,158 @@
+{
+  "timestamp": "2026-09-07T01:56:37.909348+00:00",
+  "target": {
+    "path": "R4.1/R4.1.step",
+    "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "mutation_allowed": false
+  },
+  "payload_discovery": {
+    "file_ref": "file_00000000719c82109a9629b5f23950df",
+    "filename": "T_OCS_V0_R4_1_SHOULDER_REPAIR.step",
+    "indexed_as_source_file": true,
+    "content_retrievable_by_file_search": true,
+    "header_present": true,
+    "footer_present": true,
+    "native_step_format": "ISO-10303-21 / AUTOMOTIVE_DESIGN",
+    "source_timestamp": "2026-09-03T23:14:19Z",
+    "header_file_name_timestamp": "2026-09-03T23:12:53",
+    "asserted_authoritative_path": "R4.1/R4.1.step",
+    "asserted_sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "current_runtime_local_payload": false,
+    "current_runtime_sha_recalculation": false,
+    "current_runtime_file_size": "NOT_AVAILABLE",
+    "current_runtime_binary_export": "NOT_AVAILABLE",
+    "status": "INDEXED_PAYLOAD_RECOVERED_FOR_FORENSIC_READ, NOT BYTE-ADDRESSABLE IN EXECUTION RUNTIME"
+  },
+  "source_chain": [
+    {
+      "artifact": "R4_1_BASELINE_LOCK.json",
+      "file_ref": "file_000000005b08821085a0c264d1f2b6da",
+      "timestamp": "2026-09-04T00:29:54Z",
+      "source_path": "geometry/T_OCS_V0_R4_1_SHOULDER_REPAIR.step",
+      "relationship": "baseline lock",
+      "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "solids": 62,
+      "status": "HISTORICAL_VERIFICATION_RECORD"
+    },
+    {
+      "artifact": "V1_R4_1_BASELINE_LOCK.json",
+      "file_ref": "file_000000000dec8246a60ac326340caf0e",
+      "timestamp": "2026-09-04T00:33:58Z",
+      "source_path": "/mnt/data/T_OCS_MBD_AGENT/geometry/T_OCS_V0_R4_1_SHOULDER_REPAIR.step",
+      "relationship": "baseline verification",
+      "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "solids": 62,
+      "status": "HISTORICAL_VERIFICATION_RECORD"
+    },
+    {
+      "artifact": "R4_1_BASELINE_LOCK(1).json",
+      "file_ref": "file_00000000c34c81f8a500bf85915df839",
+      "timestamp": "2026-09-04T23:10:23Z",
+      "source_path": "/mnt/data/r51_fresh/T_OCS_V0_R4_1_SHOULDER_REPAIR.step",
+      "relationship": "baseline lock",
+      "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "solids": 62,
+      "status": "HISTORICAL_VERIFICATION_RECORD"
+    },
+    {
+      "artifact": "R4_1_BASELINE_LOCK(2).json",
+      "file_ref": "file_000000007b6c8246a4188109ac011c96",
+      "timestamp": "2026-09-04T23:15:53Z",
+      "source_path": "/mnt/data/r51_fresh/T_OCS_V0_R4_1_SHOULDER_REPAIR.step",
+      "relationship": "baseline lock repeat",
+      "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "solids": 62,
+      "status": "HISTORICAL_VERIFICATION_RECORD"
+    },
+    {
+      "artifact": "V1_SR4_PACKAGE_INTEGRITY.json",
+      "file_ref": "file_00000000435882469d30b6274b56329a",
+      "timestamp": "2026-09-04T00:17:46Z",
+      "source_path": "geometry/T_OCS_V0_R4_1_SHOULDER_REPAIR.step",
+      "relationship": "package integrity",
+      "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "solids": 62,
+      "status": "HISTORICAL_VERIFICATION_RECORD"
+    },
+    {
+      "artifact": "V4_FINAL_ENGINEERING_REPORT.md",
+      "file_ref": "file_00000000fe68824681d4b4dce099dc67",
+      "timestamp": "2026-09-05T23:19:35Z",
+      "source_path": "R4.1/R4.1.step",
+      "relationship": "engineering gate report",
+      "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "solids": 62,
+      "status": "HISTORICAL_ENGINEERING_REPORT"
+    },
+    {
+      "artifact": "R5_1_FINAL_REPORT.md",
+      "file_ref": "file_0000000041e08243b7bc7187b96c8832",
+      "timestamp": "2026-09-03T22:25:32Z",
+      "source_path": "R4.1/R4.1.step",
+      "relationship": "downstream verification/report history",
+      "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "solids": 62,
+      "status": "HISTORICAL_ENGINEERING_REPORT"
+    },
+    {
+      "artifact": "P0_DEV006_MANUS_EXTRACTION_REQUEST.csv",
+      "file_ref": "file_00000000a99082469a95d99cb6e33103",
+      "timestamp": "2026-09-06T01:42:04Z",
+      "source_path": "R4.1/R4.1.step",
+      "relationship": "required extraction source",
+      "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "solids": "EXPECTED 62",
+      "status": "CONTROLLED_EXTRACTION_REQUEST"
+    }
+  ],
+  "structural_checks": [
+    {
+      "check": "STEP_HEADER",
+      "result": "PASS",
+      "evidence": "ISO-10303-21; HEADER; FILE_DESCRIPTION; FILE_SCHEMA AUTOMOTIVE_DESIGN",
+      "source_file_ref": "file_00000000719c82109a9629b5f23950df"
+    },
+    {
+      "check": "STEP_FOOTER",
+      "result": "PASS",
+      "evidence": "ENDSEC; END-ISO-10303-21;",
+      "source_file_ref": "file_00000000719c82109a9629b5f23950df"
+    },
+    {
+      "check": "ASSEMBLY_USAGE",
+      "result": "PASS",
+      "evidence": "NEXT_ASSEMBLY_USAGE_OCCURRENCE records are present; final record shown as 62 in the indexed payload",
+      "source_file_ref": "file_00000000719c82109a9629b5f23950df"
+    },
+    {
+      "check": "GLOBAL_UNITS",
+      "result": "PASS",
+      "evidence": "GLOBAL_UNIT_ASSIGNED_CONTEXT uses millimetre/radian/steradian in indexed payload",
+      "source_file_ref": "file_00000000719c82109a9629b5f23950df"
+    },
+    {
+      "check": "BREP_STRUCTURE",
+      "result": "PASS",
+      "evidence": "MANIFOLD_SOLID_BREP / CLOSED_SHELL / ADVANCED_FACE records present",
+      "source_file_ref": "file_00000000719c82109a9629b5f23950df"
+    },
+    {
+      "check": "HISTORICAL_SHA",
+      "result": "PASS",
+      "evidence": "Historical control records repeatedly assert exact required SHA",
+      "source_file_ref": "file_00000000719c82109a9629b5f23950df"
+    },
+    {
+      "check": "CURRENT_SHA",
+      "result": "BLOCKED",
+      "evidence": "Current runtime cannot access raw payload bytes to recompute SHA",
+      "source_file_ref": "file_00000000719c82109a9629b5f23950df"
+    },
+    {
+      "check": "CURRENT_SOLID_COUNT",
+      "result": "HISTORICAL_ONLY",
+      "evidence": "62 solids is supported by historical executable records; not freshly recomputed in this runtime",
+      "source_file_ref": "file_00000000719c82109a9629b5f23950df"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "artifact": "R4_1_BASELINE_LOCK.json",
+    "file_ref": "file_000000005b08821085a0c264d1f2b6da",
+    "timestamp": "2026-09-04T00:29:54Z",
+    "source_path": "geometry/T_OCS_V0_R4_1_SHOULDER_REPAIR.step",
+    "relationship": "baseline lock",
+    "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "solids": 62,
+    "status": "HISTORICAL_VERIFICATION_RECORD"
+  },
+  {
+    "artifact": "V1_R4_1_BASELINE_LOCK.json",
+    "file_ref": "file_000000000dec8246a60ac326340caf0e",
+    "timestamp": "2026-09-04T00:33:58Z",
+    "source_path": "/mnt/data/T_OCS_MBD_AGENT/geometry/T_OCS_V0_R4_1_SHOULDER_REPAIR.step",
+    "relationship": "baseline verification",
+    "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "solids": 62,
+    "status": "HISTORICAL_VERIFICATION_RECORD"
+  },
+  {
+    "artifact": "R4_1_BASELINE_LOCK(1).json",
+    "file_ref": "file_00000000c34c81f8a500bf85915df839",
+    "timestamp": "2026-09-04T23:10:23Z",
+    "source_path": "/mnt/data/r51_fresh/T_OCS_V0_R4_1_SHOULDER_REPAIR.step",
+    "relationship": "baseline lock",
+    "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "solids": 62,
+    "status": "HISTORICAL_VERIFICATION_RECORD"
+  },
+  {
+    "artifact": "R4_1_BASELINE_LOCK(2).json",
+    "file_ref": "file_000000007b6c8246a4188109ac011c96",
+    "timestamp": "2026-09-04T23:15:53Z",
+    "source_path": "/mnt/data/r51_fresh/T_OCS_V0_R4_1_SHOULDER_REPAIR.step",
+    "relationship": "baseline lock repeat",
+    "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "solids": 62,
+    "status": "HISTORICAL_VERIFICATION_RECORD"
+  },
+  {
+    "artifact": "V1_SR4_PACKAGE_INTEGRITY.json",
+    "file_ref": "file_00000000435882469d30b6274b56329a",
+    "timestamp": "2026-09-04T00:17:46Z",
+    "source_path": "geometry/T_OCS_V0_R4_1_SHOULDER_REPAIR.step",
+    "relationship": "package integrity",
+    "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "solids": 62,
+    "status": "HISTORICAL_VERIFICATION_RECORD"
+  },
+  {
+    "artifact": "V4_FINAL_ENGINEERING_REPORT.md",
+    "file_ref": "file_00000000fe68824681d4b4dce099dc67",
+    "timestamp": "2026-09-05T23:19:35Z",
+    "source_path": "R4.1/R4.1.step",
+    "relationship": "engineering gate report",
+    "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "solids": 62,
+    "status": "HISTORICAL_ENGINEERING_REPORT"
+  },
+  {
+    "artifact": "R5_1_FINAL_REPORT.md",
+    "file_ref": "file_0000000041e08243b7bc7187b96c8832",
+    "timestamp": "2026-09-03T22:25:32Z",
+    "source_path": "R4.1/R4.1.step",
+    "relationship": "downstream verification/report history",
+    "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "solids": 62,
+    "status": "HISTORICAL_ENGINEERING_REPORT"
+  },
+  {
+    "artifact": "P0_DEV006_MANUS_EXTRACTION_REQUEST.csv",
+    "file_ref": "file_00000000a99082469a95d99cb6e33103",
+    "timestamp": "2026-09-06T01:42:04Z",
+    "source_path": "R4.1/R4.1.step",
+    "relationship": "required extraction source",
+    "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "solids": "EXPECTED 62",
+    "status": "CONTROLLED_EXTRACTION_REQUEST"
+  }
+]
