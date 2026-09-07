@@ -1,9 +1,9 @@
 {
-  "status": "BLOCKED",
-  "verified": ["OCP/OpenCascade STEP read", "OCP/OpenCascade B-Rep inventory", "artifact SHA and immutable copy"],
-  "blocked": ["pychrono.core dynamic runtime", "Gmsh", "CalculiX"],
+  "status": "PARTIAL",
+  "verified": ["OCP/OpenCascade STEP read", "OCP/OpenCascade B-Rep inventory", "artifact SHA and immutable copy", "Project Chrono 10.0.0 pychrono.core binding", "Chrono system/body/joint/solver/reaction smoke test"],
+  "blocked": ["Chrono Cascade adapter path", "Gmsh", "CalculiX"],
   "not_available": ["STEPcode executable binding", "step-p21 executable binding", "PMI/GD&T extraction", "deterministic feature recognition"],
-  "chrono": {"runtime_available": false, "status": "BLOCKED", "reason": "pychrono.core import unavailable"},
-  "solver_execution_performed": false,
+  "chrono": {"runtime_available": true, "status": "VERIFIED", "source_commit": "9faf13dd8f1128dd75ed233a9627027b0422c3f7", "binding": "pychrono.core", "smoke_artifact": "artifacts/pychrono_smoke.json", "sr11_adapter_status": "BLOCKED", "sr11_adapter_reason": "pychrono.cascade not built; existing adapter requires Cascade for STEP loading"},
+  "solver_execution_performed": true,
   "production_ready": false
 }

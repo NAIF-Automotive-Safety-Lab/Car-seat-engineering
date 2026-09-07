@@ -11,7 +11,7 @@ EERE is a repository-native, evidence-first layer around the existing Car Seat E
 | Feature extraction | Not implemented | NOT_AVAILABLE |
 | PMI/GD&T | Not implemented; no absence inference | NOT_AVAILABLE |
 | STEPcode / step-p21 comparison | No executable bindings detected | NOT_AVAILABLE |
-| Chrono dynamics | Existing adapter retained; `pychrono.core` unavailable | BLOCKED |
+| Chrono dynamics | Project Chrono 10.0.0 compiled binding; smoke-tested core system/body/joint/solver/reaction path | VERIFIED |
 | FE/CAM | No Gmsh or CalculiX executable detected | BLOCKED |
 | Traceability graph | Existing project manifests remain authoritative; EERE graph layer pending | NOT_AVAILABLE |
 

@@ -1,0 +1,46 @@
+{
+  "status": "VERIFIED",
+  "project": "Project Chrono",
+  "version": "10.0.0",
+  "source_url": "https://github.com/projectchrono/chrono.git",
+  "source_commit": "9faf13dd8f1128dd75ed233a9627027b0422c3f7",
+  "license": "BSD-3-Clause",
+  "platform": "Linux x86_64",
+  "python": "3.12.3",
+  "compiler": "GNU 13.3.0",
+  "cmake": "3.28.3",
+  "swig": "4.2.0",
+  "build_type": "Release",
+  "generator": "Unix Makefiles",
+  "cmake_options": {
+    "CH_ENABLE_MODULE_PYTHON": true,
+    "CH_ENABLE_MODULE_CASCADE": false,
+    "CH_ENABLE_MODULE_IRRLICHT": false,
+    "CH_ENABLE_MODULE_VSG": false,
+    "CH_ENABLE_MODULE_VEHICLE": false,
+    "CH_ENABLE_MODULE_FEA": false,
+    "CH_ENABLE_MODULE_FSI": false,
+    "CH_ENABLE_MODULE_SENSOR": false,
+    "CH_ENABLE_MODULE_ROBOT": false,
+    "CH_ENABLE_MODULE_POSTPROCESS": false,
+    "CH_ENABLE_MODULE_PARDISO_MKL": false
+  },
+  "build_root": "/home/ubuntu/third_party/chrono-build-10.0.0",
+  "pythonpath": "/home/ubuntu/third_party/chrono-build-10.0.0/bin",
+  "ld_library_path": "/home/ubuntu/third_party/chrono-build-10.0.0/lib",
+  "compiled_modules": [
+    {"path": "bin/pychrono/_core.so", "status": "VERIFIED", "sha256": "ddac0900a002c55a408d7c497ee6d88e4c4ef1b56e90b18eecad8b97319003c9"},
+    {"path": "bin/pychrono/_fea.so", "status": "BUILT_NOT_USED"},
+    {"path": "bin/pychrono/_robot.so", "status": "BUILT_NOT_USED"}
+  ],
+  "verification": {
+    "import_pychrono": "PASS",
+    "import_pychrono_core": "PASS",
+    "compiled_core_present": "PASS",
+    "system_creation": "PASS",
+    "body_creation": "PASS",
+    "joint_creation": "PASS",
+    "solver_step": "PASS",
+    "reaction_extraction": "PASS"
+  }
+}

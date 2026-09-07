@@ -1,0 +1,21 @@
+{
+  "status": "VERIFIED",
+  "source_url": "https://github.com/projectchrono/chrono.git",
+  "version": "10.0.0",
+  "source_commit": "9faf13dd8f1128dd75ed233a9627027b0422c3f7",
+  "configuration": "Release Unix Makefiles; CH_ENABLE_MODULE_PYTHON=ON",
+  "build_command": "cmake --build /home/ubuntu/third_party/chrono-build-10.0.0 --parallel 4",
+  "build_exit_code": 0,
+  "compiled_core": "/home/ubuntu/third_party/chrono-build-10.0.0/bin/pychrono/_core.so",
+  "compiled_core_sha256": "ddac0900a002c55a408d7c497ee6d88e4c4ef1b56e90b18eecad8b97319003c9",
+  "smoke_test": "artifacts/pychrono_smoke.json",
+  "smoke_status": "PASS",
+  "core_import": "PASS",
+  "system_creation": "PASS",
+  "body_creation": "PASS",
+  "joint_creation": "PASS",
+  "solver_execution": "PASS",
+  "reaction_extraction": "PASS",
+  "adapter_status": "BLOCKED",
+  "adapter_blocker": "pychrono.cascade was not built; existing SR11 adapter requires Cascade for STEP loading"
+}

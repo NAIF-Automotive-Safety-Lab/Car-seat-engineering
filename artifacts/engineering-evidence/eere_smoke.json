@@ -10,9 +10,9 @@
     "sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
     "media_type": "model/step",
     "extension": ".step",
-    "acquisition_timestamp": "2026-09-07T03:39:09.838436+00:00",
+    "acquisition_timestamp": "2026-09-07T04:02:42.287469+00:00",
     "tool_version": "EERE-0.1.0",
-    "repository_revision": "0c65ad2cffdb249161542b97a29bbae6dbafba21",
+    "repository_revision": "9c86204d5f105473c9f75da2ef4c5d2649cdd0a4",
     "status": "VERIFIED"
   },
   "forensic": {
@@ -87,7 +87,7 @@
   "brep": {
     "status": "PASS",
     "source_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
-    "extraction_timestamp": "2026-09-07T03:39:11.426960+00:00",
+    "extraction_timestamp": "2026-09-07T04:02:43.624029+00:00",
     "kernel": "OCP/OpenCascade",
     "kernel_version": "cadquery-ocp 8.0.1.0.0 (environment evidence)",
     "deterministic": true,
@@ -135,8 +135,11 @@
         "reason": "No executable step-p21 parser detected"
       },
       "pychrono_core": {
-        "status": "BLOCKED",
-        "reason": "pychrono.core import unavailable"
+        "status": "VERIFIED",
+        "package_file": "/home/ubuntu/third_party/chrono-build-10.0.0/bin/pychrono/__init__.py",
+        "core_file": "/home/ubuntu/third_party/chrono-build-10.0.0/bin/pychrono/core.py",
+        "compiled_core_present": true,
+        "system_class_present": true
       },
       "gmsh": {
         "status": "NOT_AVAILABLE",
@@ -149,6 +152,6 @@
     },
     "platform": "Linux-6.18.38+-x86_64-with-glibc2.39",
     "python": "3.12.3",
-    "checked_at": "2026-09-07T03:39:11.570745+00:00"
+    "checked_at": "2026-09-07T04:02:44.129013+00:00"
   }
 }

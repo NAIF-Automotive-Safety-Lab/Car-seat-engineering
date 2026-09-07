@@ -2,11 +2,11 @@
 
 ## INSTALLED
 
-The first EERE layer is installed in the repository under `engineering_recovery/` and `tools/eere_run.py`. The environment contains `cadquery-ocp 8.0.1.0.0` and `pytest 9.1.1`. The implementation uses the existing OCP binding rather than replacing the project architecture or vendoring OCCT.
+The first EERE layer is installed in the repository under `engineering_recovery/` and `tools/eere_run.py`. The environment contains `cadquery-ocp 8.0.1.0.0` and `pytest 9.1.1`. The implementation uses the existing OCP binding rather than replacing the project architecture or vendoring OCCT. Project Chrono 10.0.0 was built from source commit `9faf13dd8f1128dd75ed233a9627027b0422c3f7` with GCC, CMake, and SWIG.
 
 ## VERIFIED
 
-`python3 tools/eere_run.py` completed successfully. It created a read-only immutable copy of `R4.1/R4.1.step`, generated a byte-identity manifest, scanned the STEP exchange structure, imported the model through OCP, and counted 62 solids.
+`python3 tools/eere_run.py` completed successfully. It created a read-only immutable copy of `R4.1/R4.1.step`, generated a byte-identity manifest, scanned the STEP exchange structure, imported the model through OCP, and counted 62 solids. With the pinned Chrono build environment, the same runner reports `pychrono_core=VERIFIED`.
 
 ## FAILED
 
@@ -14,7 +14,7 @@ The initial EERE smoke execution exposed three OCP 8 binding API differences. Th
 
 ## BLOCKED
 
-`pychrono.core` is not available. The similarly named PyPI package does not provide the required Chrono bindings and is not accepted as a runtime. Gmsh and CalculiX are also unavailable.
+Gmsh and CalculiX are unavailable. The earlier similarly named PyPI package did not provide the required Chrono binding; it was not accepted. The real binding is now built and verified separately.
 
 ## NOT_AVAILABLE
 

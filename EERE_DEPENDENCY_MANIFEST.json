@@ -7,7 +7,8 @@
   "dependencies": [
     {"name": "cadquery-ocp", "version": "8.0.1.0.0", "status": "VERIFIED", "role": "STEP/B-Rep kernel binding"},
     {"name": "pytest", "version": "9.1.1", "status": "VERIFIED", "role": "test runner"},
-    {"name": "pychrono.core", "version": null, "status": "BLOCKED", "role": "Chrono dynamics", "reason": "required module unavailable; similarly named pychrono package does not provide pychrono.core"},
+    {"name": "pychrono.core", "version": "10.0.0", "status": "VERIFIED", "role": "Chrono dynamics", "source_commit": "9faf13dd8f1128dd75ed233a9627027b0422c3f7", "binding_sha256": "ddac0900a002c55a408d7c497ee6d88e4c4ef1b56e90b18eecad8b97319003c9"},
+    {"name": "pychrono.cascade", "version": null, "status": "BLOCKED", "role": "Existing SR11 STEP/Cascade adapter", "reason": "not built; requires additional Cascade/pythonocc integration"},
     {"name": "STEPcode", "version": null, "status": "NOT_AVAILABLE", "role": "independent STEP semantic parser"},
     {"name": "step-p21", "version": null, "status": "NOT_AVAILABLE", "role": "ISO-10303-21 forensic parser"},
     {"name": "gmsh", "version": null, "status": "NOT_AVAILABLE", "role": "mesh generation"},

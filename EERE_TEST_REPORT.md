@@ -10,12 +10,17 @@
 | STEP forensic reproducibility test | PASS |
 | B-Rep reproducibility and validity test | PASS |
 | Existing repository static integrity tests | PASS |
+| `tools/run_pychrono_smoke.sh` with Chrono 10.0.0 build tree | PASS; compiled `pychrono.core`, system, body, revolute joint, solver step, and reaction extraction |
 
 Generated evidence is under `artifacts/engineering-evidence/`, including `artifact_manifest.json`, `step_forensic_report.json`, `brep_validation.json`, `runtime_status.json`, and `eere_smoke.json`.
 
+## VERIFIED
+
+The real PyChrono binding was built from Project Chrono tag `10.0.0`, source commit `9faf13dd8f1128dd75ed233a9627027b0422c3f7`. The smoke artifact records `import=PASS`, `compiled_core_present=true`, system/body/joint creation, a 10 ms solver advance, and reaction extraction. This is a runtime smoke result, not a car-seat dynamics validation result.
+
 ## BLOCKED
 
-Chrono runtime smoke is blocked because `pychrono.core` cannot be imported. No dynamic system, body, joint, or solver result is claimed.
+Gmsh and CalculiX remain unavailable. No FE or manufacturing solver result is claimed.
 
 ## NOT_AVAILABLE
 

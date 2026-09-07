@@ -22,6 +22,24 @@ def command_available(name: str) -> bool:
     return shutil.which(name) is not None
 
 
+def chrono_runtime_status() -> dict[str, object]:
+    try:
+        import pychrono as chrono
+        import pychrono.core as core
+
+        core_file = Path(core.__file__).resolve()
+        compiled = core_file.with_name("_core.so").is_file()
+        return {
+            "status": "VERIFIED" if compiled and hasattr(core, "ChSystemNSC") else "INSTALLED_UNVERIFIED",
+            "package_file": str(Path(chrono.__file__).resolve()),
+            "core_file": str(core_file),
+            "compiled_core_present": compiled,
+            "system_class_present": hasattr(core, "ChSystemNSC"),
+        }
+    except Exception as exc:
+        return {"status": "BLOCKED", "reason": f"{type(exc).__name__}: {exc}"}
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--step", default=str(ROOT / "R4.1" / "R4.1.step"))
@@ -41,7 +59,7 @@ def main() -> int:
             "ocp": {"status": "VERIFIED", "reason": "B-Rep report completed"},
             "stepcode": {"status": "NOT_AVAILABLE", "reason": "No executable stepcode binding detected"},
             "step_p21": {"status": "NOT_AVAILABLE", "reason": "No executable step-p21 parser detected"},
-            "pychrono_core": {"status": "BLOCKED", "reason": "pychrono.core import unavailable"},
+            "pychrono_core": chrono_runtime_status(),
             "gmsh": {"status": "NOT_AVAILABLE", "reason": "executable not found"},
             "calculix": {"status": "NOT_AVAILABLE", "reason": "executable not found"},
         },
