@@ -1,0 +1,908 @@
+T-OCS V7.0 | V7 ENHANCEMENT ADDENDUM
+
+
+
+
+                                                                      T-OCS V7.0
+                        PATENT PREPARATION - V7 ENHANCEMENT ADDENDUM
+  Versioning: V5 = concept disclosure; V6 = narrowed claim architecture; V7 = consolidated package + stable reference
+  architecture + claim redline + evidence discipline.
+
+
+
+
+Technical patent-preparation addendum; not legal advice or certification.                                               Page 1
+T-OCS V7.0 | V7 ENHANCEMENT ADDENDUM
+
+
+
+
+  V7-1. Stable CAD / Patent Reference Numerals
+  Use the same reference numbers in CAD, patent drawings, claim text, test procedures and FEA reports. This prevents the
+  common failure in which the same component receives different names across drawings and claims.
+
+Ref.                      Element                                           Claim / test role
+
+100                       Vehicle interface / base frame                    Vehicle hardpoint load transfer.
+
+110L/110R                 Longitudinal load paths S1/S2                     Bilateral guidance, load sharing, torsional control.
+
+120                       Seat carriage                                     Seat-to-rail/absorber interface.
+
+130                       Ride-down energy-management module                Controlled longitudinal displacement and energy dissipation.
+
+140                       Pelvic-control / anti-submarining pan             Pelvis trajectory and load distribution.
+
+150L/150R                 Seatback rotation-control links                   Independent rotation-limiting path.
+
+160                       Seatback frame                                    Torso/head structural support.
+
+170                       Multi-state lock                                  Normal / armed / ride-down / rebound / secure state transitions.
+
+180                       Rebound-control module                            Reverse-motion control.
+
+190                       Occupant restraint interface                      Seat-belt/airbag interface.
+
+200                       Torso/head guidance                               Distributed trajectory control.
+
+210                       Sensor/trigger interface                          Acceleration/position/state recognition and measurement.
+
+   This numbering should be frozen before any formal patent-drawing redraw.
+
+
+
+
+Technical patent-preparation addendum; not legal advice or certification.                                                                      Page 2
+T-OCS V7.0 | V7 ENHANCEMENT ADDENDUM
+
+
+
+
+  V7-2. Claim Redline - What Is Actually Protected
+  The strongest V7 independent claim is intentionally narrower than a generic "energy attenuating seat" claim. The limiting
+  combination is: bilateral longitudinal load paths + controlled longitudinal ride-down + mechanically distinct seatback rotation
+  control + event-dependent state transitions + rebound-control state + continued restraint availability.
+
+  Proposed independent apparatus claim:
+  1. A vehicle seat system comprising a seat carriage coupled to a vehicle structure through first and second laterally separated
+     longitudinal load paths; a first energy-management path configured to permit controlled longitudinal displacement of the seat
+     carriage during a dynamic event; a second mechanically distinct seatback-rotation control path configured to limit seatback
+     rotation independently from the controlled longitudinal displacement; and a state-transition mechanism configured to change a
+     mechanical constraint state in response to detection or determination of the dynamic event, including an armed state, a
+     ride-down state and a rebound-control state, wherein transition to the rebound-control state is associated with a travel or
+     kinematic condition of the seat carriage and an occupant restraint path remains operable during the ride-down state.
+  This structure is designed to avoid claiming the known individual blocks separately. Current Google Patents records show substantial prior-art coverage of
+  generic energy-attenuating seats, rail/absorber/locking combinations, inertia-operated locks and anti-submarining seat-pan mechanisms.
+  ■cite■turn175858search3■turn175858search1■turn175858search0■turn175858search2■
+
+
+
+
+Technical patent-preparation addendum; not legal advice or certification.                                                                                 Page 3
+T-OCS V7.0 | V7 ENHANCEMENT ADDENDUM
+
+
+
+
+  V7-3. Dependent Claim Families
+  The dependent claims should preserve optional implementations without weakening the independent architecture:
+
+  2. The system of claim 1, wherein the energy-management path is present on each longitudinal load path.
+
+  3. The system of claim 1, wherein the rotation-control path comprises bilateral links, dampers, torsion elements, hard stops or
+     combinations thereof.
+
+  4. The system of claim 1, wherein the transition condition uses seat acceleration, vehicle acceleration, seat travel, seatback
+     rotation or a combination thereof.
+
+  5. The system of claim 1, wherein rebound control applies directional damping, friction or mechanical locking.
+
+  6. The system of claim 1, further comprising pelvic-control geometry configured to reduce forward pelvic migration while
+     distributing contact load over a seat-pan region.
+
+  7. The system of claim 1, wherein the energy-management path includes a replaceable cartridge characterized by a force-stroke
+     relationship with at least two resistance regions.
+
+  8. The system of claim 1, wherein left and right load-path reactions are separately measurable or separately modelable.
+
+  9. The system of claim 1, wherein the same state-transition logic is used in front-row and rear-row packaging embodiments.
+
+
+
+
+Technical patent-preparation addendum; not legal advice or certification.                                                           Page 4
+T-OCS V7.0 | V7 ENHANCEMENT ADDENDUM
+
+
+
+
+  V7-4. Mechanical Interaction - The Critical Novelty Candidate
+  The key engineering relationship is not any single component. It is the controlled separation of functions:
+
+Function                          Primary path                              Control relationship
+
+Ride-down                         LP-C / absorber 130                       Seat carriage translation is allowed and dissipative work is generated.
+
+Seatback rotation                 LP-B / links 150L/150R                    Rotation is limited by a mechanically distinct path.
+
+State transition                  170                                       The active constraint/load path changes with event state.
+
+Rebound                           180                                       Reverse travel is controlled after the primary stroke.
+
+Occupant restraint                190                                       Remains operable independent of optional ride-down release.
+
+Pelvis control                    140                                       Forward migration is limited while contact load is distributed.
+
+   This is substantially more defensible than calling the entire arrangement a "gravity seat." The effective-force expression
+   g_eff(t)=g-a_seat(t) remains an inertial-frame interpretation only, consistent with the V6 disclosure.
+   ■filecite■turn11file0■L727-L729■
+
+
+
+
+Technical patent-preparation addendum; not legal advice or certification.                                                                             Page 5
+T-OCS V7.0 | V7 ENHANCEMENT ADDENDUM
+
+
+
+
+  V7-5. Evidence Discipline - Source Result vs. T-OCS Result
+Item                                           Source status                                  T-OCS status
+
+25.6 g scaled pulse                            Used in NHTSA/SAE research simulation          Design-study input only until T-OCS validates a specific pulse.
+
+47.5 deg -> 24 deg seatback rotation           Reported in the 2025 strengthened-seat model   Not a T-OCS performance claim.
+
+HIC / Nij reductions                           Source-model predictions                       Not T-OCS evidence until validated.
+
+180 mm stroke                                  Concept-board design target                    Not a measured crash result.
+
+18-22 kN force range                           Concept-board design target                    Not measured absorber performance.
+
+Generated CAD figures                          Concept visualization                          Not manufacturing release.
+
+Patent novelty                                 Open legal question                            Requires professional search + claim chart.
+
+   The V6 source already imposed this separation, including the warning that source-study numbers should not be copied into claims
+   as T-OCS promises. ■filecite■turn11file0■L658-L658■
+
+
+
+
+Technical patent-preparation addendum; not legal advice or certification.                                                                               Page 6
+T-OCS V7.0 | V7 ENHANCEMENT ADDENDUM
+
+
+
+
+  V7-6. THOR-05F / NHTSA Methodology - Correct Scope
+  The 2023 THOR-05F material is used as a methodology benchmark for rigorous occupant-safety experimentation: defined
+  seating posture, instrumentation, calibration/qualification, repeated checks and post-test inspection. It is not claimed as the
+  T-OCS mechanism.
+
+  The 2025 rear-impact work compares THOR-50M, BioRID-II and PMHS and explicitly notes limitations from sample size and
+  differences between sled and full-vehicle conditions. This supports a staged validation plan rather than a single simulation claim.
+  ■filecite■turn5file4■L499-L503■
+  The PMHS material also shows that injury-related seat design cannot be reduced to one scalar force: the reported summary links
+  fracture distribution to seatback properties and describes combined thoracic loading and pelvic off-axis rotation.
+  ■filecite■turn5file3■L458-L458■
+
+
+
+
+Technical patent-preparation addendum; not legal advice or certification.                                                           Page 7
+T-OCS V7.0 | V7 ENHANCEMENT ADDENDUM
+
+
+
+
+  V7-7. Validation Gates Mapped to Claims
+Gate                     Primary evidence                                          Claims supported
+
+V0 CAD                   DOF, interference, travel and envelope checks             1-3, 7-9
+
+V1 MBD                   Seat translation, rotation and state trajectories         1-5
+
+V2 Absorber              F-x, hysteresis, temperature and cycling                  7
+
+V3 Lock                  State transition, unintended release, fail-safe           1, 4, 5
+
+V4 Sled                  ATD motion, seat loads, high-speed kinematics             1-9
+
+V5 FE/HBM                Correlation and injury metrics                            1-9 (evidence only)
+
+V6 Full vehicle          Vehicle-level safety/compliance                           all, subject to actual test
+
+  The V6 package already defines these gates and observables. ■filecite■turn11file0■L731-L731■
+
+
+
+
+Technical patent-preparation addendum; not legal advice or certification.                                        Page 8
+T-OCS V7.0 | V7 ENHANCEMENT ADDENDUM
+
+
+
+
+  V7-8. Final Engineering / Patent Position
+  Defensible inventive center: event-dependent mechanical state transitions that coordinate a controlled longitudinal ride-down
+  path with a mechanically distinct seatback-rotation control path, bilateral load transfer and explicit rebound control, while
+  maintaining the occupant restraint path.
+
+  Prior-art weakness: generic rails, energy absorbers, inertial locks, seatback hinges and anti-submarining devices should not be
+  presented as individually novel. Current Google Patents screening supports this warning.
+  ■cite■turn175858search3■turn175858search1■turn175858search0■turn175858search2■
+  Next technical requirement: freeze the stable reference architecture and build a true parametric CAD assembly so that every
+  claim element is represented by a real part, joint, travel limit, material definition and measurable test variable.
+
+  Legal requirement: before filing, a patent professional should perform a comprehensive novelty/inventive-step search, verify
+  written-description support, and finalize claim language and drawings.
+
+
+
+
+Technical patent-preparation addendum; not legal advice or certification.                                                         Page 9
+T-OCS V6.0 | Patent Preparation Draft                                                                         NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+                                                                      T-OCS V6.0
+                        TIME-PROGRAMMABLE OCCUPANT CONTROL SEAT
+
+                                             Patent Preparation Draft & Invention Disclosure - V6.0
+
+
+
+  Engineering focus: time-dependent state transitions + decoupled ride-down and seatback-rotation control + redundant bilateral load paths +
+  explicit rebound management + occupant trajectory management.
+
+
+
+
+                                      Inventor: [TO BE SUPPLIED]        Applicant/Assignee: [TO BE SUPPLIED]
+                                       Priority/Filing data: [TO BE SUPPLIED]       Docket: T-OCS-V6-PAT-001
+                                                               Version: V6.0 | 2026-09-02
+
+
+
+
+  Ruthless status: V6 is materially stronger than V5 as a patent-preparation package because it removes weak "artificial gravity" framing from
+  the core claims, narrows the inventive center around specific mechanical relationships, and maps each claimed feature to a physical/CAE
+  observable. It still is not a patent grant, not a legal opinion, and not a validated safety system.
+
+
+
+
+  Key rule: never present a target, illustrative curve, or generated CAD visualization as a measured crash result.
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                                     Page 1
+T-OCS V6.0 | Patent Preparation Draft                                                                           NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+  1. Executive Summary
+  The V6 disclosure treats the invention as a vehicle-seat architecture that controls occupant trajectory and the time-history of
+  force/energy transfer. The system uses a mechanically distinct ride-down path for controlled seat translation and a separate
+  rotation-control path for the seatback. A multi-state mechanism changes the seat between normal, armed/capture, ride-down,
+  rebound-control and secure states. The intended benefit is not creation of a new gravitational field; the effective-gravity
+  language is retained only as an inertial-frame interpretation.
+  V6 inventive center: a coordinated combination of state transition, seat translation, independent seatback rotation control, redundant bilateral
+  load paths, and explicit rebound control.
+
+  The original project materials support this engineering direction. The V5 design report defines a dual-rail carriage, staged
+  compliance, rotation control, pelvic anti-submarining geometry, and dedicated rebound control, while explicitly classifying the
+  geometry as a research prototype. ■filecite■turn9file0■L681-L681■
+
+  The supplied 2025 NHTSA/SAE rear-impact study is especially relevant: it reported collapse-like kinematics at a 25.6 g scaled
+  pulse and a reduction in seatback rotation from 47.5 degrees to 24 degrees in a strengthened model, with reduced ramping
+  and lower modeled HIC/Nij in that simulation. These values belong to that specific research model and are not claimed as
+  T-OCS performance guarantees. ■filecite■turn5file5■L526-L530■ ■filecite■turn5file5■L542-L552■
+
+  The THOR-05F material is used only to learn validation discipline. It documents extensive instrumentation, repeated
+  qualification, explicit seating procedures, and post-test inspection/requalification; those methods inform the validation plan but
+  are not claimed as T-OCS technology. ■filecite■turn2file4■L286-L299■
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                                        Page 2
+T-OCS V6.0 | Patent Preparation Draft                                                                                                     NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+  2. Ruthless Patentability Assessment - What V6 Must Avoid
+  The V5 claim direction was still too vulnerable if interpreted broadly as "vehicle seat + rail + absorber + inertial lock." The
+  current Google Patents landscape contains direct disclosures covering important blocks of that combination.
+
+   Feature                                   Prior-art pressure                       V6 treatment
+
+   Rail-based longitudinal energy aVtteernyuhaitgiohn                                 Not claimed alone; tied to time-dependent state logic and a distinct rotation-control path.
+
+   Rotary/track energy attenuation Very high                                          Not claimed as the inventive center.
+
+   Crash-triggered rail release + abVseorrybehrigh                                    Not claimed as the sole novelty; used only as a dependent/alternative implementation.
+
+   Inertial pawl/cam lock                    High                                     Not claimed generically; tied to the T-OCS multi-state architecture.
+
+   Anti-submarining geometry                 High                                     Dependent feature only; linked to bilateral load-path and occupant-trajectory control.
+
+   Front/rear modular packaging              Low novelty by itself                    Embodiment/application layer, not core novelty.
+
+   Decoupled translation-energy paPtohtevns.tiasellyatdbiafcekre-rnotiatiionng path   Core independent-claim limitation.
+
+   Explicit rebound-control state aftPeortreidnetia-dlloywdnifferentiating in com Cb ionraet iloi m
+                                                                                                  n itation / dependent claim family.
+
+   State transition tied to dynamic sPtoatenatinadlymdeifafesruernatbialetinsgeat vari aCbolerse limitation, with physical observables.
+
+
+
+  Prior-art anchors verified from Google Patents: US20200231073A1 discloses track-based energy attenuation with independently pivotable seat
+  pan/back and rotary attenuation; WO2021197809A1 discloses a rail pair, crash-triggered release, energy absorber and locking device; US4634182A
+  covers inertia-operated recliner locking; US6050635A covers anti-submarining seat-pan structure.
+  ■cite■turn992619search0■turn464299search0■turn992619search1■turn992619search2■
+
+  Critical conclusion: the claim should not say or imply that T-OCS is novel merely because it uses rails, a damper, an inertial trigger, a
+  cam/pawl, a seatback hinge, or anti-submarining features. Those are crowded elements.
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                                                                  Page 3
+T-OCS V6.0 | Patent Preparation Draft                                                                               NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+  3. V6 Claim Architecture - Narrower and Harder to Attack
+  The V6 claim family is organized around relationships that must occur together. The intended protection is not a parts shopping
+  list; it is the architecture and sequence by which the parts interact.
+
+  Independent apparatus claim - proposed center:
+  1. A vehicle seat system comprising a seat pan and a seatback coupled to a vehicle structure through at least two laterally
+    separated longitudinal load paths; a first energy-management path configured to permit controlled longitudinal displacement
+    of a seat carriage relative to the vehicle structure during a dynamic event; a second mechanically distinct seatback-rotation
+    control path configured to limit seatback rotation independently of the controlled longitudinal displacement; and a
+    state-transition mechanism configured to place the seat system, in response to a detected or predetermined dynamic event,
+    through at least an armed state, a ride-down state, and a rebound-control state, wherein transition from the ride-down state
+    to the rebound-control state is associated with a defined travel or kinematic condition and the occupant restraint path remains
+    operable independently of the first energy-management path.
+
+  Why this is stronger: it forces the examiner to confront the combination of (i) bilateral load paths, (ii) controlled translation, (iii) a separate
+  rotation-control path, and (iv) an explicit rebound transition tied to an actual kinematic condition. It does not depend on the phrase "effective
+  gravity."
+
+  Independent method claim - proposed center:
+  16. A method of managing occupant motion in a vehicle seat comprising maintaining a secured operating state during ordinary
+    use; detecting or determining a dynamic event; transitioning to an armed or capture state; permitting controlled seat
+    translation through a characterized energy-management path; independently limiting seatback rotation through a distinct
+    mechanical path; changing to a rebound-control state after a predetermined travel or kinematic condition; and maintaining an
+    occupant restraint path during the translation and rebound-control states.
+
+  Independent cartridge claim - proposed center:
+  21. A serviceable seat energy-management cartridge comprising a guided moving member, a progressive resistance
+    assembly, a damping valve assembly, a first seat-side interface and a second vehicle-side interface, the cartridge being
+    configured for placement in a longitudinal seat load path and characterized by a force-stroke relationship having at least a
+    first lower-resistance region, a second energy-absorption region, and a third end-control region, wherein a separate
+    seatback-rotation control path can operate without requiring the cartridge to become the structural seatback hinge.
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                                                Page 4
+T-OCS V6.0 | Patent Preparation Draft                                                                 NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+  4. Proposed Dependent Claims - V6 Candidate Set
+  2. The system of claim 1, wherein the first energy-management path is provided on each of the left and right longitudinal load
+     paths.
+
+  3. The system of claim 1, wherein the second seatback-rotation control path comprises bilateral links, dampers, torsion
+     elements, hard stops, a locking interface, or a combination thereof.
+
+  4. The system of claim 1, wherein the state-transition mechanism includes a normal-driving state before event recognition.
+
+  5. The system of claim 1, wherein the ride-down state permits a bounded seat stroke while the restraint path remains
+     structurally available.
+
+  6. The system of claim 1, wherein the rebound-control state applies directional damping, friction, mechanical locking, or a
+     combination thereof against reverse seat motion.
+
+  7. The system of claim 1, wherein the transition to ride-down depends on a measured or mechanically inferred seat
+     acceleration, vehicle acceleration, seat travel, seatback rotation, or combination thereof.
+
+  8. The system of claim 1, wherein a pelvic control surface is configured to resist forward pelvic migration while distributing
+     contact load across a seat-pan region.
+
+  9. The system of claim 1, wherein torso guidance surfaces are compliant and configured to guide motion without constituting a
+     concentrated rigid impact surface.
+
+  10. The system of claim 1, wherein the seatback rotation-control path has a limiting function that is mechanically independent
+    from the force-stroke response of the longitudinal energy-management path.
+
+  11. The system of claim 1, wherein the two longitudinal load paths are independently instrumentable or independently
+    modelable for comparison of reaction loads.
+
+  12. The system of claim 1, wherein the energy-management path comprises a replaceable cartridge.
+
+  13. The system of claim 12, wherein the replaceable cartridge comprises hydraulic, pneumatic, viscoelastic, frictional,
+    metallic-crush, composite-crush or hybrid energy dissipation.
+
+  14. The system of claim 1, wherein the seat is configurable as a front-row seat or a rear-row seat without changing the
+    state-transition logic.
+
+  15. The system of claim 14, wherein the rear-row seat is implemented as an independently moving 2+1 module or as three
+    independently managed seat modules.
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                           Page 5
+T-OCS V6.0 | Patent Preparation Draft                                                                                                                 NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+  5. V6 Additional Development Package - Engineering Additions
+   Addition                           Engineering change                                         Purpose / problem addressed                                               Claim relevance
+
+   Temporal state machine             Explicit S0/S1/S2/S3/S4/S5 states with transitTiounrnss. "time" from a slogan into a controllable mechanicaCl osrtea.te variable.
+
+   Decoupled rotation path            Separate rotation-control linkage from ride-doAwvnoiadbsstohrebefar.lse choice between making the whole seat Crigoirde.and allowing collapse/rampin
+
+   Dual bilateral load paths          Left/right rails + independent reaction routes.Redundancy, torsional stability, measurable load sharingC.ore/dependent.
+
+   Rebound-control phase              Directional damper/lock after primary stroke. Reduces secondary excursion and interior-contact risk. Core/dependent.
+
+   Serviceable absorber cartriRdegpelaceable characterized module.                               Enables repeatable component testing and post-event reCpalartcriedm
+                                                                                                                                                                   ge nctl.aim family.
+
+   Pelvis control geometry            Distributed anti-submarining bowl + load-gui dCinognstruorlfsacfoersw.ard pelvic migration without a hard point coDnetapcet.ndent.
+
+   Instrumentation interfaces Seat travel, rotation, hardpoint, belt and reactCiorne-aloteasdamdei ar escutr eb m
+                                                                                                                r i degnet lfor ocm
+                                                                                                                                  a t i colnasi m
+                                                                                                                                                . limitations to validatioDnisecvliodseunrcee/.enablement support.
+
+   Front/rear modularity              Common logic with different packaging modu Sleusp. ports commercial scalability without making seat couEnmt tbhoedinmventt.ive feature.
+
+
+
+
+  The V6 engineering basis matches the source design package: dual-rail ride-down, progressive absorption, separate rotation
+  control, pelvic anti-submarining, rebound control and explicit CAE observables. ■filecite■turn5file0■L355-L365■
+  ■filecite■turn5file0■L381-L383■
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                                                                                         Page 6
+T-OCS V6.0 | Patent Preparation Draft                                                                          NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+  6. Detailed Mechanism Disclosure
+  A. Dual-rail ride-down carriage: the seat carriage translates relative to the vehicle structure through a guided path. Each side
+  carries a defined portion of the reaction load and can include an absorber or a redundant structural path.
+
+  B. Independent seatback rotation control: the seatback frame is constrained by a separate bilateral path that can include
+  links, dampers, torsional elements or hard stops. This path is intentionally not identical to the energy-stroke path.
+
+  C. Multi-state lock: the lock mechanism is disclosed generically to permit cam/pawl, wedge, dog-clutch, pin, ratchet or
+  equivalent constructions. The inventive point is its state coordination with ride-down and rebound, not the existence of an
+  inertial pawl itself.
+
+  D. Energy absorber: the replaceable cartridge is characterized by F(x), F(t), hysteresis and temperature response. The design
+  package uses the nominal 180 mm concept stroke, but this remains a design assumption until derived from a vehicle-specific
+  crash pulse and validated energy balance. ■filecite■turn5file0■L365-L370■
+
+  E. Occupant trajectory: the system is disclosed as a coupled seat + restraint + occupant problem. The CAE observables
+  include seat travel, seatback rotation, head excursion, pelvis travel/rotation, reaction forces and absorber work.
+  F. Effective-gravity language: the equation g_eff(t)=g-a_seat(t) is retained as an inertial-frame interpretation only. It must not be described
+  as a local gravitational field generator. ■filecite■turn9file0■L655-L655■
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                                      Page 7
+T-OCS V6.0 | Patent Preparation Draft                                                                                                            NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+  7. Temporal State Machine - Turning "Time" into the Invention
+   State                      Illustrative interval      Mechanical action                                                          Observable evidence
+
+   S0 Normal                  Before event               Seat adjustment / conventional restraint.                                  Position, lock state.
+
+   S1 Armed/Capture           Early event                Trigger prepares controlled release while primary restra iTnrtigregm
+                                                                                                                            erasintaste
+                                                                                                                                      a,v aiclacbe le.r ation.
+
+   S2 Ride-down               Primary stroke             Seat translates along dual rails; absorber enters charac tTeraizveedl, faobrcseo-rsbteror kfoerrceeg, iroanil. reaction.
+
+   S3 Rotation control        During ride-down           Distinct path limits seatback rotation.                                    Back angle, torque, side-link load.
+
+   S4 Rebound control         After primary stroke       Directional damping/locking limits reverse motion.                         Reverse velocity, damper force.
+
+   S5 Secure                  Post-event                 System reaches end-stop/secure/service condition.                          Residual travel, lock state, inspection condition.
+
+  The key drafting point is that the exact milliseconds are not the invention by themselves. The invention is the mechanical consequence of a
+  time/event sequence: the seat changes state and therefore changes which force path is active. This makes the disclosure more defensible
+  than claiming a fixed "0-400 ms" recipe.
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                                                                            Page 8
+T-OCS V6.0 | Patent Preparation Draft                                                                             NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+  8. Claim-to-Validation Matrix
+   Claim limitation                                 Physical / CAE observable                                     Validation stage
+
+   Controlled longitudinal displacement             Seat travel x(t), velocity, absorber F-x                      V1 reduced-order -> V2 component -> V4 sled
+
+   Separate rotation-control path                   Seatback angle theta(t), link loads, hinge moment             V1 -> V4 -> V5 FE/HBM
+
+   Bilateral load paths                             S1/S2 reactions, asymmetry, torsional response                V0 CAD -> V1 MBD -> V4/V5
+
+   Rebound-control state                            Reverse travel/velocity, damping force, secondary excursion   V1 -> V4
+
+   Restraint path remains operable                  Belt force/timing and anchorage loads                         V4/V5
+
+   Pelvic trajectory control                        Pelvis x/z, rotation, submarining metrics                     V4/V5
+
+   Absorber characterization                        F-x, hysteresis, temp sensitivity, cycle repeatability        V2 component test
+
+   Structural integrity                             Plastic strain, buckling, joint/bolt utilization              V5 FE + physical component tests
+
+   Vehicle-level safety                             ATD/HBM injury metrics + compliance                           V6 full-vehicle
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                                         Page 9
+T-OCS V6.0 | Patent Preparation Draft                                                                NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+  9. Source-Derived Engineering Basis
+  The supplied THOR-05F material provides a model for professional validation discipline rather than a technology source for the
+  invention. It shows that advanced occupant testing requires extensive instrumentation, defined seating posture,
+  calibration/qualification, repeated checks and post-test inspection. ■filecite■turn2file4■L286-L299■
+
+  The supplied PMHS rear-facing frontal study is particularly useful because it shows why a single scalar force target is
+  inadequate: rib fracture distribution depended on seatback properties and combined thoracic loading, while pelvic outward
+  deformation was associated with off-axis rotations. ■filecite■turn5file3■L458-L458■
+
+  The 2025 NHTSA/SAE biofidelity work also emphasizes the distinction between sled and full-vehicle conditions and the limited
+  injury conclusions possible from a small sample. ■filecite■turn5file4■L499-L503■
+
+  The FMVSS 214 laboratory procedure in the supplied document is treated as a methodological reference for side-impact test
+  discipline, not as a universal frontal/rear seat design limit. The document itself states that an OVSC laboratory test procedure is
+  not itself a regulation or NHTSA interpretation. ■filecite■turn5file2■L378-L378■
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                          Page 10
+T-OCS V6.0 | Patent Preparation Draft                                                                        NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+  10. Rear-Seat Embodiments - 2+1 and 3-Seat
+  2+1: two outboard T-OCS modules can use dedicated carriage/absorber/load paths; the center seat can use a narrower or
+  shared structural architecture while preserving independent occupant restraint and appropriate egress/packaging.
+
+  3-seat: three independently managed modules can share selected cross-members while keeping independent
+  absorption/locking functions. The claim set should not require exactly three seats; seat count is packaging, not the inventive
+  center.
+
+  Commercial rationale: the same state-transition logic can be packaged into sedan, SUV, crossover, MPV and
+  autonomous-vehicle interiors. That gives the manufacturer a platform architecture rather than a single seat SKU.
+  Ruthless caveat: the industrial-design renderings are design-intent visualizations. They do not prove H-point compliance, belt anchorage
+  compliance, occupant clearance, manufacturability, or crash performance.
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                                     Page 11
+T-OCS V6.0 | Patent Preparation Draft                                                                     NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+  11. Front-Seat Embodiment
+  For a front driver/passenger seat, the same T-OCS architecture can be packaged under the seat structure, but vehicle-specific
+  constraints become much tighter: steering-column and pedal clearance, airbag interaction, seat-track hardpoints, wiring,
+  service access, and regulatory requirements must be resolved. The THOR-05F research material illustrates why
+  lower-extremity and thorax loading must be evaluated together rather than reduced to one scalar measure.
+  ■filecite■turn2file4■L294-L299■
+  The patent should therefore protect the mechanism family rather than a single front/rear geometry. Front and rear packaging are embodiments
+  of the same temporal architecture.
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                                Page 12
+T-OCS V6.0 | Patent Preparation Draft                                                            NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+  12. Safety / Fail-Safe Disclosure
+  The primary occupant restraint path remains available even if the optional ride-down trigger does not arm. The system should
+  default to a mechanically safe state when trigger, sensor, actuator, or power availability is lost.
+
+  Required design reviews before any human-subject or vehicle-crash use:
+  • Single-point failure and common-cause failure analysis for the lock/trigger.
+
+  • Mechanical stop analysis at both stroke ends.
+
+  • Over-travel and jam analysis for both rails.
+
+  • Asymmetric-load analysis for one-sided absorber or link degradation.
+
+  • Temperature and contamination sensitivity of seals, springs, damping fluid and locks.
+
+  • Belt/airbag interaction and anchorage load validation.
+
+  • Post-crash inspection/replacement rules for serviceable absorber cartridges.
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                     Page 13
+T-OCS V6.0 | Patent Preparation Draft                                                                                    NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+  13. Patent Figure Set - Latest T-OCS Development Boards
+  The following figures document the evolving design embodiments. They should be redrawn as consistent patent figures before filing, with
+  stable reference numerals and without relying on decorative labels or rendered colors as the only disclosure.
+
+
+
+
+                                                     FIG. 1 - Concept architecture and effective-force interpretation.
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                                        Page 14
+T-OCS V6.0 | Patent Preparation Draft                                                                            NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+                                 FIG. 2 - T-OCS V5/V6 system architecture with multi-DOF mechanism and time-phased strategy.
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                                Page 15
+T-OCS V6.0 | Patent Preparation Draft                                                                                  NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+                                                   FIG. 3 - Bilingual exploded CAD and industrial-development board.
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                                      Page 16
+T-OCS V6.0 | Patent Preparation Draft                                                                               NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+                                                       FIG. 4 - Detailed CAD engineering / manufacturing concept.
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                                   Page 17
+T-OCS V6.0 | Patent Preparation Draft                                                                                  NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+                                                   FIG. 5 - Industrial rear-seat design: 2+1 and 3-seat embodiments.
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                                      Page 18
+T-OCS V6.0 | Patent Preparation Draft                                                                                NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+                                                       FIG. 6 - Engineering drawing and vehicle-integration board.
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                                    Page 19
+T-OCS V6.0 | Patent Preparation Draft                                                                          NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+                                                                FIG. 7 - Crash Load Path Analysis, 0-400 ms.
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                              Page 20
+T-OCS V6.0 | Patent Preparation Draft                                                                           NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+                                                          FIG. 8 - Energy absorption + Lock/Unlock mechanism.
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                               Page 21
+T-OCS V6.0 | Patent Preparation Draft                                                                                    NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+                                                 FIG. 9 - Detailed energy absorber module / valve / cartridge package.
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                                        Page 22
+T-OCS V6.0 | Patent Preparation Draft                                                                                                NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+  14. Prior-Art Source Map - Google Patents Screening
+   Reference                                   Relevant disclosure                                                          V6 risk / treatment
+
+   US20200231073A1 / US11007912B2 Energy-attenuating seat; track-based energy attenuation; indepen dHeingthly. pAivoitdabclleaipmain/gbgaeckn;eroictarrayila+ttaebnsuoartbioenr.+ piv ot.
+
+   EP3911536A1 / B1                            Related energy-attenuating seat family with rotary attenuation.              High. Same caution.
+
+   WO2021197809A1 / US12151595B2 Sfaematilyrail pair + energy absorber + locking device; crash-triggered reVlerayseh ig
+                                                                                                                      ahn .d Acvoonitdrogllendem
+                                                                                                                                               ricovraeim
+                                                                                                                                                        l-renlet.ase/absorber cla ims.
+
+   US4634182A                                  Inertial recliner lock using pendulum/pawl/cam.                              High for generic inertial lock.
+
+   US6050635A                                  Anti-submarining seat-pan structure.                                         High for generic anti-submarining feature.
+
+   US5125598A                                  Pivoting energy-attenuating seat with crash-induced seat-pan mot ioMne. dium-high for generic pivoting attenuation.
+
+
+
+  Google Patents screening is a prior-art search aid, not a legal novelty or infringement opinion. Google itself notes that legal-status information is not a
+  legal conclusion. ■cite■turn992619search0■turn464299search0■
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                                                                   Page 23
+T-OCS V6.0 | Patent Preparation Draft                                                                                                    NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+  15. V5 -> V6 Claim-Strategy Changes
+   V5 tendency                                           V6 correction                                                          Why
+
+   "Effective gravity" as novelty hook                   Removed from independent-claim center.                                 Prevents attack on a physically misleading framin g.
+
+   Broad rail + absorber + lock combination              Narrowed to specific relationships and state transitions.              Known blocks already disclosed.
+
+   Generic inertial lock                                 Dependent embodiment only.                                             Classic prior art exists.
+
+   Seat rotation and translation treated together Explicitly separated into two mechanical paths.                               Creates a clearer architectural distinction.
+
+   Rebound mentioned as a phase                          Rebound tied to a defined travel/kinematic transition and diTreucrntisonpahlacsoenitnrotol. a claim limitation.
+
+   2+1 / 3-seat as novelty                               Packaging embodiments only.                                            Seat count is unlikely to carry novelty.
+
+   Illustrative performance numbers                      Tagged as targets or source-specific values.                           Avoids false performance claims.
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                                                                   Page 24
+T-OCS V6.0 | Patent Preparation Draft                                                               NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+  16. Pre-Filing Gate - Do Not Skip
+  • Confirm the true earliest conception date and preserve dated CAD files, notebooks, sketches and revisions.
+
+  • Identify every public disclosure already made and obtain patent counsel advice on priority, foreign rights and any applicable
+  grace-period rules.
+
+  • Run a professional novelty and inventive-step search beyond the preliminary Google Patents screen.
+
+  • Create a claim chart mapping each V6 limitation against each relevant prior-art document.
+
+  • Convert visual boards into consistent patent drawings with stable reference numerals.
+
+  • Replace every nominal CAD dimension with a vehicle-package value, measured prototype value, or explicit assumption.
+
+  • Perform V0 CAD integrity and interference review.
+
+  • Perform V1 multibody dynamic screening.
+
+  • Characterize V2 absorber F-x/hysteresis/temperature/cycling.
+
+  • Bench-test V3 lock/trigger including fault and unintended-release cases.
+
+  • Run V4 sled tests with appropriate ATDs and high-speed video.
+
+  • Correlate V5 FE/HBM models to physical data before making injury-reduction claims.
+
+  • Use full-vehicle testing for V6 vehicle-level compliance and safety evidence.
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                        Page 25
+T-OCS V6.0 | Patent Preparation Draft                                                                            NON-LEGAL / RESEARCH DOCUMENT
+
+
+
+
+  17. References Used in V6
+  Uploaded engineering sources:
+  1. 15874-SAE GIM 2023 THOR05F for distrib - Evaluation of THOR-05F in a Full Vehicle Crash Series. ■filecite■turn2file4■
+
+  2. 16616-Tesny_SAE 2025 GI Prelimin Biofidelity Asses_2 - A Preliminary Biofidelity Assessment of THOR and BioRID in a Moderate-Speed Rear
+  Impact Sled Test. ■filecite■turn5file4■
+
+  3. 16616-Greb_SAE 2025 Seat Assess In Standard Rear I - Seat Assessment in Standardized Rear Impact Virtual Testing. ■filecite■turn5file5■
+
+  4. Thoracic and pelvic responses and injuries to PMHS in rear-facing seat configurations in high-speed frontal impacts. ■filecite■turn5file3■
+
+  5. TP-214D-09 - Laboratory Test Procedure for FMVSS No. 214, Dynamic Side Impact Protection. ■filecite■turn5file2■
+
+  6. T-OCS V5.0 Engineering Report and Design Parameters. ■filecite■turn5file0■turn5file1■
+
+  Google Patents prior-art screening:
+  US20200231073A1 - Energy attenuating vehicle seat assembly. ■cite■turn992619search0■
+
+  EP3911536A1 - An energy attenuating vehicle seat assembly. ■cite■turn464299search1■
+
+  WO2021197809A1 - Seat rail pair for longitudinal adjustment of a vehicle seat and energy absorber and locking device. ■cite■turn464299search0■
+
+  US4634182A - Seatback recliner mechanism and inertia operated lock. ■cite■turn992619search1■
+
+  US6050635A - Seat pan of an automobile vehicle seat including an anti-sub-marining device. ■cite■turn992619search2■
+
+  US5125598A - Pivoting energy attenuating seat. ■cite■turn464299search2
+
+
+
+
+Draft for inventor + patent counsel + engineering review; not a filing or certification.                                                          Page 26
+

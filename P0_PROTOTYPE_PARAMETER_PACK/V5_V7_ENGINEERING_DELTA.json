@@ -1,0 +1,93 @@
+{
+  "DOCUMENT": "V5_V7_ENGINEERING_DELTA",
+  "records": [
+    {
+      "PARAMETER_OR_FUNCTION": "bilateral longitudinal load paths",
+      "V5_STATE": "concept disclosure / less consolidated",
+      "V7_STATE": "consolidated/narrowed architecture or explicit reference discipline",
+      "ADDED": false,
+      "REMOVED": false,
+      "MODIFIED": true,
+      "UNCHANGED": false,
+      "SOURCE": "T_OCS_V5.0 / T_OCS_V7.0",
+      "ENGINEERING_SIGNIFICANCE": "Traceability and architecture clarification; not physical validation."
+    },
+    {
+      "PARAMETER_OR_FUNCTION": "controlled ride-down",
+      "V5_STATE": "concept disclosure / less consolidated",
+      "V7_STATE": "consolidated/narrowed architecture or explicit reference discipline",
+      "ADDED": false,
+      "REMOVED": false,
+      "MODIFIED": true,
+      "UNCHANGED": false,
+      "SOURCE": "T_OCS_V5.0 / T_OCS_V7.0",
+      "ENGINEERING_SIGNIFICANCE": "Traceability and architecture clarification; not physical validation."
+    },
+    {
+      "PARAMETER_OR_FUNCTION": "separate seatback rotation-control path",
+      "V5_STATE": "concept disclosure / less consolidated",
+      "V7_STATE": "consolidated/narrowed architecture or explicit reference discipline",
+      "ADDED": false,
+      "REMOVED": false,
+      "MODIFIED": true,
+      "UNCHANGED": false,
+      "SOURCE": "T_OCS_V5.0 / T_OCS_V7.0",
+      "ENGINEERING_SIGNIFICANCE": "Traceability and architecture clarification; not physical validation."
+    },
+    {
+      "PARAMETER_OR_FUNCTION": "event-dependent state transitions",
+      "V5_STATE": "concept disclosure / less consolidated",
+      "V7_STATE": "consolidated/narrowed architecture or explicit reference discipline",
+      "ADDED": false,
+      "REMOVED": false,
+      "MODIFIED": true,
+      "UNCHANGED": false,
+      "SOURCE": "T_OCS_V5.0 / T_OCS_V7.0",
+      "ENGINEERING_SIGNIFICANCE": "Traceability and architecture clarification; not physical validation."
+    },
+    {
+      "PARAMETER_OR_FUNCTION": "rebound-control state",
+      "V5_STATE": "concept disclosure / less consolidated",
+      "V7_STATE": "consolidated/narrowed architecture or explicit reference discipline",
+      "ADDED": false,
+      "REMOVED": false,
+      "MODIFIED": true,
+      "UNCHANGED": false,
+      "SOURCE": "T_OCS_V5.0 / T_OCS_V7.0",
+      "ENGINEERING_SIGNIFICANCE": "Traceability and architecture clarification; not physical validation."
+    },
+    {
+      "PARAMETER_OR_FUNCTION": "pelvic-control geometry",
+      "V5_STATE": "concept disclosure / less consolidated",
+      "V7_STATE": "consolidated/narrowed architecture or explicit reference discipline",
+      "ADDED": false,
+      "REMOVED": false,
+      "MODIFIED": true,
+      "UNCHANGED": false,
+      "SOURCE": "T_OCS_V5.0 / T_OCS_V7.0",
+      "ENGINEERING_SIGNIFICANCE": "Traceability and architecture clarification; not physical validation."
+    },
+    {
+      "PARAMETER_OR_FUNCTION": "stable reference numerals",
+      "V5_STATE": "not frozen in shown source",
+      "V7_STATE": "consolidated/narrowed architecture or explicit reference discipline",
+      "ADDED": true,
+      "REMOVED": false,
+      "MODIFIED": true,
+      "UNCHANGED": false,
+      "SOURCE": "T_OCS_V5.0 / T_OCS_V7.0",
+      "ENGINEERING_SIGNIFICANCE": "Traceability and architecture clarification; not physical validation."
+    },
+    {
+      "PARAMETER_OR_FUNCTION": "evidence discipline",
+      "V5_STATE": "concept disclosure / less consolidated",
+      "V7_STATE": "consolidated/narrowed architecture or explicit reference discipline",
+      "ADDED": true,
+      "REMOVED": false,
+      "MODIFIED": true,
+      "UNCHANGED": false,
+      "SOURCE": "T_OCS_V5.0 / T_OCS_V7.0",
+      "ENGINEERING_SIGNIFICANCE": "Traceability and architecture clarification; not physical validation."
+    }
+  ]
+}

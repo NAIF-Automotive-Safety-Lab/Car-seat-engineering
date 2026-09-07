@@ -1,0 +1,119 @@
+{
+  "DOCUMENT": "V5_V7_NOT_FOUND_REGISTER",
+  "R4_1_SHA256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "records": [
+    {
+      "ITEM": "physical mass",
+      "STATUS": "NOT_FOUND",
+      "PHYSICAL_RESULT": "NOT_FOUND",
+      "CAN_BE_USED_AS_PHYSICAL_EVIDENCE": false,
+      "REQUIRED_NEXT_STEP": "Provide authoritative released record or real calibrated physical test evidence."
+    },
+    {
+      "ITEM": "physical CG",
+      "STATUS": "NOT_FOUND",
+      "PHYSICAL_RESULT": "NOT_FOUND",
+      "CAN_BE_USED_AS_PHYSICAL_EVIDENCE": false,
+      "REQUIRED_NEXT_STEP": "Provide authoritative released record or real calibrated physical test evidence."
+    },
+    {
+      "ITEM": "physical inertia",
+      "STATUS": "NOT_FOUND",
+      "PHYSICAL_RESULT": "NOT_FOUND",
+      "CAN_BE_USED_AS_PHYSICAL_EVIDENCE": false,
+      "REQUIRED_NEXT_STEP": "Provide authoritative released record or real calibrated physical test evidence."
+    },
+    {
+      "ITEM": "validated density mapping",
+      "STATUS": "NOT_FOUND",
+      "PHYSICAL_RESULT": "NOT_FOUND",
+      "CAN_BE_USED_AS_PHYSICAL_EVIDENCE": false,
+      "REQUIRED_NEXT_STEP": "Provide authoritative released record or real calibrated physical test evidence."
+    },
+    {
+      "ITEM": "validated friction",
+      "STATUS": "NOT_FOUND",
+      "PHYSICAL_RESULT": "NOT_FOUND",
+      "CAN_BE_USED_AS_PHYSICAL_EVIDENCE": false,
+      "REQUIRED_NEXT_STEP": "Provide authoritative released record or real calibrated physical test evidence."
+    },
+    {
+      "ITEM": "validated contact stiffness",
+      "STATUS": "NOT_FOUND",
+      "PHYSICAL_RESULT": "NOT_FOUND",
+      "CAN_BE_USED_AS_PHYSICAL_EVIDENCE": false,
+      "REQUIRED_NEXT_STEP": "Provide authoritative released record or real calibrated physical test evidence."
+    },
+    {
+      "ITEM": "validated contact damping",
+      "STATUS": "NOT_FOUND",
+      "PHYSICAL_RESULT": "NOT_FOUND",
+      "CAN_BE_USED_AS_PHYSICAL_EVIDENCE": false,
+      "REQUIRED_NEXT_STEP": "Provide authoritative released record or real calibrated physical test evidence."
+    },
+    {
+      "ITEM": "validated restitution",
+      "STATUS": "NOT_FOUND",
+      "PHYSICAL_RESULT": "NOT_FOUND",
+      "CAN_BE_USED_AS_PHYSICAL_EVIDENCE": false,
+      "REQUIRED_NEXT_STEP": "Provide authoritative released record or real calibrated physical test evidence."
+    },
+    {
+      "ITEM": "measured absorber Fx",
+      "STATUS": "NOT_FOUND",
+      "PHYSICAL_RESULT": "NOT_FOUND",
+      "CAN_BE_USED_AS_PHYSICAL_EVIDENCE": false,
+      "REQUIRED_NEXT_STEP": "Provide authoritative released record or real calibrated physical test evidence."
+    },
+    {
+      "ITEM": "measured absorber Fv",
+      "STATUS": "NOT_FOUND",
+      "PHYSICAL_RESULT": "NOT_FOUND",
+      "CAN_BE_USED_AS_PHYSICAL_EVIDENCE": false,
+      "REQUIRED_NEXT_STEP": "Provide authoritative released record or real calibrated physical test evidence."
+    },
+    {
+      "ITEM": "validated vehicle pulse",
+      "STATUS": "NOT_FOUND",
+      "PHYSICAL_RESULT": "NOT_FOUND",
+      "CAN_BE_USED_AS_PHYSICAL_EVIDENCE": false,
+      "REQUIRED_NEXT_STEP": "Provide authoritative released record or real calibrated physical test evidence."
+    },
+    {
+      "ITEM": "validated initial velocity",
+      "STATUS": "NOT_FOUND",
+      "PHYSICAL_RESULT": "NOT_FOUND",
+      "CAN_BE_USED_AS_PHYSICAL_EVIDENCE": false,
+      "REQUIRED_NEXT_STEP": "Provide authoritative released record or real calibrated physical test evidence."
+    },
+    {
+      "ITEM": "validated joint compliance",
+      "STATUS": "NOT_FOUND",
+      "PHYSICAL_RESULT": "NOT_FOUND",
+      "CAN_BE_USED_AS_PHYSICAL_EVIDENCE": false,
+      "REQUIRED_NEXT_STEP": "Provide authoritative released record or real calibrated physical test evidence."
+    },
+    {
+      "ITEM": "validated bolt stiffness",
+      "STATUS": "NOT_FOUND",
+      "PHYSICAL_RESULT": "NOT_FOUND",
+      "CAN_BE_USED_AS_PHYSICAL_EVIDENCE": false,
+      "REQUIRED_NEXT_STEP": "Provide authoritative released record or real calibrated physical test evidence."
+    },
+    {
+      "ITEM": "released GD&T",
+      "STATUS": "NOT_FOUND",
+      "PHYSICAL_RESULT": "NOT_FOUND",
+      "CAN_BE_USED_AS_PHYSICAL_EVIDENCE": false,
+      "REQUIRED_NEXT_STEP": "Provide authoritative released record or real calibrated physical test evidence."
+    },
+    {
+      "ITEM": "released manufacturing BOM",
+      "STATUS": "NOT_FOUND",
+      "PHYSICAL_RESULT": "NOT_FOUND",
+      "CAN_BE_USED_AS_PHYSICAL_EVIDENCE": false,
+      "REQUIRED_NEXT_STEP": "Provide authoritative released record or real calibrated physical test evidence."
+    }
+  ],
+  "RULE": "Absence of evidence is explicit; no zero or inferred value is inserted."
+}
