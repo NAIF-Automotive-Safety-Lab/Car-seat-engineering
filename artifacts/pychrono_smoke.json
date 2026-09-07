@@ -1,9 +1,9 @@
 {
-  "timestamp_utc": "2026-09-07T03:26:27Z",
+  "timestamp_utc": "2026-09-07T03:27:12Z",
   "engine": "pychrono",
   "host": "Linux-6.18.38+-x86_64-with-glibc2.39",
   "arch": "x86_64",
   "status": "FAIL",
-  "error": "ModuleNotFoundError: No module named 'pychrono'",
-  "traceback": "Traceback (most recent call last):\n  File \"/home/ubuntu/car-seat-engineering/pychrono_smoke_test.py\", line 11, in main\n    import pychrono.core as chrono\nModuleNotFoundError: No module named 'pychrono'\n"
+  "error": "ModuleNotFoundError: No module named 'pychrono.core'",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/ubuntu/car-seat-engineering/pychrono_smoke_test.py\", line 11, in main\n    import pychrono.core as chrono\nModuleNotFoundError: No module named 'pychrono.core'\n"
 }

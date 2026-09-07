@@ -56,7 +56,7 @@ The two validator failures found during audit were stale absolute-path defects (
 
 ## MISSING_DEPENDENCIES
 
-- `pychrono` — required for dynamic SR11 execution and reaction extraction.
+- `pychrono.core` from the real Chrono Python bindings — required for dynamic SR11 execution and reaction extraction. The similarly named PyPI package installed during the restoration attempt does not provide `pychrono.core` and is not accepted as the engine.
 - `gmsh` — not available for mesh generation.
 - `calculix`/`ccx` — not available for FE solving.
 
@@ -74,7 +74,7 @@ The STEP file is now locally byte-addressable and independently verified, but th
 - `python3 validate_model_integrity.py`: **PASS**.
 - `python3 validate_sr11_adapter.py`: **PASS**.
 - `python3 -m pytest -q tests`: **6 passed**.
-- `python3 pychrono_smoke_test.py`: **FAIL — missing `pychrono`**, recorded as a blocker.
+- `python3 pychrono_smoke_test.py`: **FAIL — `pychrono.core` unavailable**, recorded as a blocker. The installed package named `pychrono` is not the required Chrono binding.
 - Unscoped `pytest -q`: **not authoritative**; it collects unrelated external projects and fails during collection.
 
 ## PRODUCTION_READINESS
