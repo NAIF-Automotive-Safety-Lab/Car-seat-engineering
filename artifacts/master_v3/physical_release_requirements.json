@@ -1,0 +1,374 @@
+{
+  "source": "/home/ubuntu/car-seat-engineering/artifacts/master_v3/comprehensive_gap_register_v3.json",
+  "source_status": "PARTIAL_WITH_EXPLICIT_BLOCKERS",
+  "total_gap_count": 181,
+  "category_counts": {
+    "A": 12,
+    "B": 20,
+    "C": 17,
+    "D": 10,
+    "E": 11,
+    "F": 9,
+    "G": 11,
+    "H": 12,
+    "I": 11,
+    "J": 11,
+    "K": 12,
+    "L": 10,
+    "M": 11,
+    "N": 10,
+    "O": 14
+  },
+  "physical_release_gap_count": 101,
+  "physical_measurements_current": 0,
+  "release_status": "BLOCKED",
+  "release_blockers": [
+    "released V7 native CAD and authoritative interfaces",
+    "released BOM and material/fastener evidence",
+    "calibrated physical measurements with raw-data hashes",
+    "V7-specific CAE inputs and acceptance thresholds"
+  ],
+  "requirements": [
+    {
+      "category": "E",
+      "label": "joints/hinges and compliance",
+      "gap_count": 11,
+      "gap_ids": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06",
+        "E07",
+        "E08",
+        "E09",
+        "E10",
+        "E11"
+      ],
+      "current_statuses": [
+        "BLOCKED"
+      ],
+      "physical_test_required_count": 0,
+      "minimum_test_definitions": [],
+      "closure_paths": [
+        "evidence -> derive/bound -> virtual experiment -> sensitivity -> prioritized test -> calibration -> validation"
+      ],
+      "blocking_dependencies": [
+        "released V7 source package"
+      ],
+      "required_evidence": [
+        "released V7 CAD/document/test evidence"
+      ],
+      "next_actions": [
+        "obtain authoritative V7 evidence and rerun audit"
+      ]
+    },
+    {
+      "category": "F",
+      "label": "materials and characterization",
+      "gap_count": 9,
+      "gap_ids": [
+        "F01",
+        "F02",
+        "F03",
+        "F04",
+        "F05",
+        "F06",
+        "F07",
+        "F08",
+        "F09"
+      ],
+      "current_statuses": [
+        "BLOCKED"
+      ],
+      "physical_test_required_count": 9,
+      "minimum_test_definitions": [
+        "smallest calibrated test that resolves the stated uncertainty"
+      ],
+      "closure_paths": [
+        "evidence -> derive/bound -> virtual experiment -> sensitivity -> prioritized test -> calibration -> validation"
+      ],
+      "blocking_dependencies": [
+        "released V7 source package"
+      ],
+      "required_evidence": [
+        "released V7 CAD/document/test evidence"
+      ],
+      "next_actions": [
+        "obtain authoritative V7 evidence and rerun audit"
+      ]
+    },
+    {
+      "category": "G",
+      "label": "fasteners, preload, and joint stiffness",
+      "gap_count": 11,
+      "gap_ids": [
+        "G01",
+        "G02",
+        "G03",
+        "G04",
+        "G05",
+        "G06",
+        "G07",
+        "G08",
+        "G09",
+        "G10",
+        "G11"
+      ],
+      "current_statuses": [
+        "BLOCKED"
+      ],
+      "physical_test_required_count": 11,
+      "minimum_test_definitions": [
+        "smallest calibrated test that resolves the stated uncertainty"
+      ],
+      "closure_paths": [
+        "evidence -> derive/bound -> virtual experiment -> sensitivity -> prioritized test -> calibration -> validation"
+      ],
+      "blocking_dependencies": [
+        "released V7 source package"
+      ],
+      "required_evidence": [
+        "released V7 CAD/document/test evidence"
+      ],
+      "next_actions": [
+        "obtain authoritative V7 evidence and rerun audit"
+      ]
+    },
+    {
+      "category": "H",
+      "label": "Lock-170 dynamics and physical response",
+      "gap_count": 12,
+      "gap_ids": [
+        "H01",
+        "H02",
+        "H03",
+        "H04",
+        "H05",
+        "H06",
+        "H07",
+        "H08",
+        "H09",
+        "H10",
+        "H11",
+        "H12"
+      ],
+      "current_statuses": [
+        "BLOCKED"
+      ],
+      "physical_test_required_count": 12,
+      "minimum_test_definitions": [
+        "smallest calibrated test that resolves the stated uncertainty"
+      ],
+      "closure_paths": [
+        "evidence -> derive/bound -> virtual experiment -> sensitivity -> prioritized test -> calibration -> validation"
+      ],
+      "blocking_dependencies": [
+        "released V7 source package"
+      ],
+      "required_evidence": [
+        "released V7 CAD/document/test evidence"
+      ],
+      "next_actions": [
+        "obtain authoritative V7 evidence and rerun audit"
+      ]
+    },
+    {
+      "category": "I",
+      "label": "Rebound-180 dynamics and stop behavior",
+      "gap_count": 11,
+      "gap_ids": [
+        "I01",
+        "I02",
+        "I03",
+        "I04",
+        "I05",
+        "I06",
+        "I07",
+        "I08",
+        "I09",
+        "I10",
+        "I11"
+      ],
+      "current_statuses": [
+        "BLOCKED"
+      ],
+      "physical_test_required_count": 11,
+      "minimum_test_definitions": [
+        "smallest calibrated test that resolves the stated uncertainty"
+      ],
+      "closure_paths": [
+        "evidence -> derive/bound -> virtual experiment -> sensitivity -> prioritized test -> calibration -> validation"
+      ],
+      "blocking_dependencies": [
+        "released V7 source package"
+      ],
+      "required_evidence": [
+        "released V7 CAD/document/test evidence"
+      ],
+      "next_actions": [
+        "obtain authoritative V7 evidence and rerun audit"
+      ]
+    },
+    {
+      "category": "J",
+      "label": "absorber force/displacement/rate behavior",
+      "gap_count": 11,
+      "gap_ids": [
+        "J01",
+        "J02",
+        "J03",
+        "J04",
+        "J05",
+        "J06",
+        "J07",
+        "J08",
+        "J09",
+        "J10",
+        "J11"
+      ],
+      "current_statuses": [
+        "BLOCKED"
+      ],
+      "physical_test_required_count": 11,
+      "minimum_test_definitions": [
+        "smallest calibrated test that resolves the stated uncertainty"
+      ],
+      "closure_paths": [
+        "evidence -> derive/bound -> virtual experiment -> sensitivity -> prioritized test -> calibration -> validation"
+      ],
+      "blocking_dependencies": [
+        "released V7 source package"
+      ],
+      "required_evidence": [
+        "released V7 CAD/document/test evidence"
+      ],
+      "next_actions": [
+        "obtain authoritative V7 evidence and rerun audit"
+      ]
+    },
+    {
+      "category": "K",
+      "label": "instrumentation and calibration",
+      "gap_count": 12,
+      "gap_ids": [
+        "K01",
+        "K02",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K07",
+        "K08",
+        "K09",
+        "K10",
+        "K11",
+        "K12"
+      ],
+      "current_statuses": [
+        "BLOCKED"
+      ],
+      "physical_test_required_count": 12,
+      "minimum_test_definitions": [
+        "smallest calibrated test that resolves the stated uncertainty"
+      ],
+      "closure_paths": [
+        "evidence -> derive/bound -> virtual experiment -> sensitivity -> prioritized test -> calibration -> validation"
+      ],
+      "blocking_dependencies": [
+        "released V7 source package"
+      ],
+      "required_evidence": [
+        "released V7 CAD/document/test evidence"
+      ],
+      "next_actions": [
+        "obtain authoritative V7 evidence and rerun audit"
+      ]
+    },
+    {
+      "category": "L",
+      "label": "safety, containment, retention, and failure modes",
+      "gap_count": 10,
+      "gap_ids": [
+        "L01",
+        "L02",
+        "L03",
+        "L04",
+        "L05",
+        "L06",
+        "L07",
+        "L08",
+        "L09",
+        "L10"
+      ],
+      "current_statuses": [
+        "BLOCKED"
+      ],
+      "physical_test_required_count": 10,
+      "minimum_test_definitions": [
+        "smallest calibrated test that resolves the stated uncertainty"
+      ],
+      "closure_paths": [
+        "evidence -> derive/bound -> virtual experiment -> sensitivity -> prioritized test -> calibration -> validation"
+      ],
+      "blocking_dependencies": [
+        "released V7 source package"
+      ],
+      "required_evidence": [
+        "released V7 CAD/document/test evidence"
+      ],
+      "next_actions": [
+        "obtain authoritative V7 evidence and rerun audit"
+      ]
+    },
+    {
+      "category": "O",
+      "label": "physical input acquisition",
+      "gap_count": 14,
+      "gap_ids": [
+        "O01",
+        "O02",
+        "O03",
+        "O04",
+        "O05",
+        "O06",
+        "O07",
+        "O08",
+        "O09",
+        "O10",
+        "O11",
+        "O12",
+        "O13",
+        "O14"
+      ],
+      "current_statuses": [
+        "BLOCKED"
+      ],
+      "physical_test_required_count": 14,
+      "minimum_test_definitions": [
+        "smallest calibrated test that resolves the stated uncertainty"
+      ],
+      "closure_paths": [
+        "evidence -> derive/bound -> virtual experiment -> sensitivity -> prioritized test -> calibration -> validation"
+      ],
+      "blocking_dependencies": [
+        "released V7 source package"
+      ],
+      "required_evidence": [
+        "released V7 CAD/document/test evidence"
+      ],
+      "next_actions": [
+        "obtain authoritative V7 evidence and rerun audit"
+      ]
+    }
+  ],
+  "minimum_release_evidence": [
+    "V7 native CAD/STEP with SHA-256 and deterministic STEP/B-Rep audit",
+    "released BOM, materials, fastener, joining, PMI/GD&T, dimensions, and tolerances",
+    "joint/hinge/lock/rebound/absorber characterization where sensitivity requires it",
+    "calibrated instrumentation plan and imported raw measurements",
+    "V7 CAE model inputs, solver configuration, output artifact hashes, and limitations",
+    "evidence graph links from source to parameter/CAD entity/feature/part/interface/joint/material/physics/test/measurement/result"
+  ]
+}
