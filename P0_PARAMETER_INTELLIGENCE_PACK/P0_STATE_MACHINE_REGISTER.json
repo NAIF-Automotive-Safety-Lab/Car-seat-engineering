@@ -1,0 +1,41 @@
+{
+  "DOCUMENT": "P0_STATE_MACHINE_REGISTER",
+  "records": [
+    {
+      "FROM": "normal/secure",
+      "TO": "armed",
+      "TRIGGER": "event detection/arming condition; numeric threshold not stated",
+      "MECHANICAL_CHANGE": "constraint state changes",
+      "OBSERVABLE": "lock state",
+      "SOURCE": "V7-2/V7-3",
+      "STATUS": "DISCLOSED_CONCEPT"
+    },
+    {
+      "FROM": "armed",
+      "TO": "ride-down",
+      "TRIGGER": "dynamic event / primary stroke",
+      "MECHANICAL_CHANGE": "controlled carriage translation and absorber engagement",
+      "OBSERVABLE": "travel, force, rail reactions",
+      "SOURCE": "V7-5/V7-6",
+      "STATUS": "DISCLOSED_CONCEPT"
+    },
+    {
+      "FROM": "ride-down",
+      "TO": "rebound",
+      "TRIGGER": "after primary stroke",
+      "MECHANICAL_CHANGE": "directional damping/locking",
+      "OBSERVABLE": "reverse velocity/secondary excursion",
+      "SOURCE": "V7-4/V7-6",
+      "STATUS": "DISCLOSED_CONCEPT"
+    },
+    {
+      "FROM": "rebound",
+      "TO": "secure",
+      "TRIGGER": "secure-state condition; numeric rule not stated",
+      "MECHANICAL_CHANGE": "secure/capture constraint",
+      "OBSERVABLE": "lock/capture state",
+      "SOURCE": "V7-2/V7-3",
+      "STATUS": "PROPOSED_NOT_IMPLEMENTED"
+    }
+  ]
+}

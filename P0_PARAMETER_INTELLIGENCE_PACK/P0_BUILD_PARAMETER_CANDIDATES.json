@@ -1,0 +1,136 @@
+{
+  "DOCUMENT": "P0_BUILD_PARAMETER_CANDIDATES",
+  "MINIMUM_PARAMETER_SET": {
+    "status": "PARTIAL_AND_EXTERNAL_REQUIRED",
+    "items": [
+      "immutable R4.1 geometry/configuration mapping",
+      "released interface/build definition",
+      "actual material/process/deviation records",
+      "controlled datums and assembly state",
+      "implemented rail/carriage/lock/rotation/rebound mechanism definition"
+    ],
+    "rule": "No missing numeric value is invented; functional equivalence requires actual material/process evidence."
+  },
+  "records": [
+    {
+      "PARAMETER": "exact released interface dimensions",
+      "SOURCE": "V5/V7 or external evidence required",
+      "VALUE": null,
+      "UNIT": "NOT_STATED",
+      "WHY_REQUIRED": "required to establish build geometry",
+      "WHAT_IT_CONTROLS": "base/rails/carriage interfaces",
+      "P0_PRIORITY": "P0-CORE",
+      "CAN_BUILD_WITHOUT_IT": "ONLY_IF_NOT_USED_OR_EXPLICITLY_RESTRICTED",
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": false
+    },
+    {
+      "PARAMETER": "rail spacing/parallelism",
+      "SOURCE": "V5/V7 or external evidence required",
+      "VALUE": null,
+      "UNIT": "NOT_STATED",
+      "WHY_REQUIRED": "required to establish build geometry",
+      "WHAT_IT_CONTROLS": "base/rails/carriage interfaces",
+      "P0_PRIORITY": "P0-CORE",
+      "CAN_BUILD_WITHOUT_IT": "ONLY_IF_NOT_USED_OR_EXPLICITLY_RESTRICTED",
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": false
+    },
+    {
+      "PARAMETER": "mounting/hardpoints",
+      "SOURCE": "V5/V7 or external evidence required",
+      "VALUE": null,
+      "UNIT": "NOT_STATED",
+      "WHY_REQUIRED": "required to establish build geometry",
+      "WHAT_IT_CONTROLS": "base/rails/carriage interfaces",
+      "P0_PRIORITY": "P0-CORE",
+      "CAN_BUILD_WITHOUT_IT": "ONLY_IF_NOT_USED_OR_EXPLICITLY_RESTRICTED",
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": false
+    },
+    {
+      "PARAMETER": "absorber part identity and released stroke/force definition",
+      "SOURCE": "V5/V7 or external evidence required",
+      "VALUE": null,
+      "UNIT": "NOT_STATED",
+      "WHY_REQUIRED": "required for functional absorber implementation",
+      "WHAT_IT_CONTROLS": "ride-down energy path",
+      "P0_PRIORITY": "P0-FUNCTIONAL",
+      "CAN_BUILD_WITHOUT_IT": "ONLY_IF_NOT_USED_OR_EXPLICITLY_RESTRICTED",
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": false
+    },
+    {
+      "PARAMETER": "implemented links/stops/lock/rebound mechanism",
+      "SOURCE": "V5/V7 or external evidence required",
+      "VALUE": null,
+      "UNIT": "NOT_STATED",
+      "WHY_REQUIRED": "required for functional motion and safe characterization",
+      "WHAT_IT_CONTROLS": "rotation/state/rebound control",
+      "P0_PRIORITY": "P0-FUNCTIONAL",
+      "CAN_BUILD_WITHOUT_IT": "ONLY_IF_NOT_USED_OR_EXPLICITLY_RESTRICTED",
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": false
+    },
+    {
+      "PARAMETER": "actual materials/processes/deviations",
+      "SOURCE": "V5/V7 or external evidence required",
+      "VALUE": null,
+      "UNIT": "NOT_STATED",
+      "WHY_REQUIRED": "required to know what was actually built",
+      "WHAT_IT_CONTROLS": "configuration identity",
+      "P0_PRIORITY": "P0-CORE",
+      "CAN_BUILD_WITHOUT_IT": "ONLY_IF_NOT_USED_OR_EXPLICITLY_RESTRICTED",
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": false
+    },
+    {
+      "PARAMETER": "calibrated mass/CG/inertia",
+      "SOURCE": "V5/V7 or external evidence required",
+      "VALUE": null,
+      "UNIT": "NOT_STATED",
+      "WHY_REQUIRED": "required for characterization/CAE",
+      "WHAT_IT_CONTROLS": "measurement and model inputs",
+      "P0_PRIORITY": "P0-TEST/CAE",
+      "CAN_BUILD_WITHOUT_IT": "ONLY_IF_NOT_USED_OR_EXPLICITLY_RESTRICTED",
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": true
+    },
+    {
+      "PARAMETER": "friction/contact laws",
+      "SOURCE": "V5/V7 or external evidence required",
+      "VALUE": null,
+      "UNIT": "NOT_STATED",
+      "WHY_REQUIRED": "required for characterization/CAE",
+      "WHAT_IT_CONTROLS": "measurement and model inputs",
+      "P0_PRIORITY": "P0-TEST/CAE",
+      "CAN_BUILD_WITHOUT_IT": "ONLY_IF_NOT_USED_OR_EXPLICITLY_RESTRICTED",
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": true
+    },
+    {
+      "PARAMETER": "pulse/initial velocity",
+      "SOURCE": "V5/V7 or external evidence required",
+      "VALUE": null,
+      "UNIT": "NOT_STATED",
+      "WHY_REQUIRED": "required for characterization/CAE",
+      "WHAT_IT_CONTROLS": "measurement and model inputs",
+      "P0_PRIORITY": "P0-TEST/CAE",
+      "CAN_BUILD_WITHOUT_IT": "ONLY_IF_NOT_USED_OR_EXPLICITLY_RESTRICTED",
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": true
+    },
+    {
+      "PARAMETER": "joint/bolt properties",
+      "SOURCE": "V5/V7 or external evidence required",
+      "VALUE": null,
+      "UNIT": "NOT_STATED",
+      "WHY_REQUIRED": "required for characterization/CAE",
+      "WHAT_IT_CONTROLS": "measurement and model inputs",
+      "P0_PRIORITY": "P0-TEST/CAE",
+      "CAN_BUILD_WITHOUT_IT": "ONLY_IF_NOT_USED_OR_EXPLICITLY_RESTRICTED",
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": true
+    }
+  ]
+}

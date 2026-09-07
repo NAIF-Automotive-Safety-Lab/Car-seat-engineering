@@ -1,0 +1,92 @@
+{
+  "DOCUMENT": "P0_PARAMETER_INTELLIGENCE_PACK",
+  "STATUS": "PARTIAL",
+  "R4_1_SHA256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "RAW_NUMERICAL_VALUES": 846,
+  "TRUE_ENGINEERING_VALUES": 836,
+  "NON_ENGINEERING_NUMBERS": 3,
+  "TRUE_PARAMETERS": 836,
+  "TRUE_ENGINEERING_RELATIONSHIPS": 15,
+  "DESIGN_REFERENCES": 441,
+  "DESIGN_TARGETS": 2,
+  "ASSUMPTIONS": 196,
+  "SOURCE_STUDY_VALUES": 179,
+  "DERIVED_VALUES": 0,
+  "PHYSICAL_MEASUREMENTS": 0,
+  "TEST_RESULTS": 0,
+  "P0_CORE_PARAMETERS": 4,
+  "P0_FUNCTIONAL_PARAMETERS": 2,
+  "P0_TEST_PARAMETERS": 4,
+  "P0_CAE_PARAMETERS": 4,
+  "MISSING_PARAMETERS": 15,
+  "BUILD_BLOCKERS": 9,
+  "FALSE_BLOCKERS": 0,
+  "MINIMUM_P0_PARAMETER_SET": {
+    "STATUS": "PARTIAL",
+    "DOCUMENTED_ITEMS": [
+      {
+        "PARAMETER": "exact released interface dimensions",
+        "SOURCE": "V5/V7 or external evidence required",
+        "VALUE": null,
+        "UNIT": "NOT_STATED",
+        "WHY_REQUIRED": "required to establish build geometry",
+        "WHAT_IT_CONTROLS": "base/rails/carriage interfaces",
+        "P0_PRIORITY": "P0-CORE",
+        "CAN_BUILD_WITHOUT_IT": "ONLY_IF_NOT_USED_OR_EXPLICITLY_RESTRICTED",
+        "AUTHORITY_REQUIRED": true,
+        "PHYSICAL_TEST_REQUIRED": false
+      },
+      {
+        "PARAMETER": "rail spacing/parallelism",
+        "SOURCE": "V5/V7 or external evidence required",
+        "VALUE": null,
+        "UNIT": "NOT_STATED",
+        "WHY_REQUIRED": "required to establish build geometry",
+        "WHAT_IT_CONTROLS": "base/rails/carriage interfaces",
+        "P0_PRIORITY": "P0-CORE",
+        "CAN_BUILD_WITHOUT_IT": "ONLY_IF_NOT_USED_OR_EXPLICITLY_RESTRICTED",
+        "AUTHORITY_REQUIRED": true,
+        "PHYSICAL_TEST_REQUIRED": false
+      },
+      {
+        "PARAMETER": "mounting/hardpoints",
+        "SOURCE": "V5/V7 or external evidence required",
+        "VALUE": null,
+        "UNIT": "NOT_STATED",
+        "WHY_REQUIRED": "required to establish build geometry",
+        "WHAT_IT_CONTROLS": "base/rails/carriage interfaces",
+        "P0_PRIORITY": "P0-CORE",
+        "CAN_BUILD_WITHOUT_IT": "ONLY_IF_NOT_USED_OR_EXPLICITLY_RESTRICTED",
+        "AUTHORITY_REQUIRED": true,
+        "PHYSICAL_TEST_REQUIRED": false
+      },
+      {
+        "PARAMETER": "absorber part identity and released stroke/force definition",
+        "SOURCE": "V5/V7 or external evidence required",
+        "VALUE": null,
+        "UNIT": "NOT_STATED",
+        "WHY_REQUIRED": "required for functional absorber implementation",
+        "WHAT_IT_CONTROLS": "ride-down energy path",
+        "P0_PRIORITY": "P0-FUNCTIONAL",
+        "CAN_BUILD_WITHOUT_IT": "ONLY_IF_NOT_USED_OR_EXPLICITLY_RESTRICTED",
+        "AUTHORITY_REQUIRED": true,
+        "PHYSICAL_TEST_REQUIRED": false
+      },
+      {
+        "PARAMETER": "implemented links/stops/lock/rebound mechanism",
+        "SOURCE": "V5/V7 or external evidence required",
+        "VALUE": null,
+        "UNIT": "NOT_STATED",
+        "WHY_REQUIRED": "required for functional motion and safe characterization",
+        "WHAT_IT_CONTROLS": "rotation/state/rebound control",
+        "P0_PRIORITY": "P0-FUNCTIONAL",
+        "CAN_BUILD_WITHOUT_IT": "ONLY_IF_NOT_USED_OR_EXPLICITLY_RESTRICTED",
+        "AUTHORITY_REQUIRED": true,
+        "PHYSICAL_TEST_REQUIRED": false
+      }
+    ],
+    "EXTERNAL_REQUIREMENT": "Actual fabrication/configuration evidence remains required."
+  },
+  "PHYSICAL_DATA_INTEGRITY": "PASS",
+  "FALSE_PHYSICAL_PROMOTION": 0
+}

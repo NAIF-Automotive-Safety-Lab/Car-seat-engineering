@@ -1,0 +1,110 @@
+{
+  "DOCUMENT": "P0_MISSING_ENGINEERING_DATA",
+  "records": [
+    {
+      "PARAMETER": "physical mass",
+      "STATUS": "NOT_FOUND",
+      "CATEGORY": "NEEDED_BEFORE_FE",
+      "EVIDENCE_REQUIRED": "Authoritative released record or real calibrated test evidence",
+      "FALSE_BLOCKER": false
+    },
+    {
+      "PARAMETER": "physical CG",
+      "STATUS": "NOT_FOUND",
+      "CATEGORY": "NEEDED_BEFORE_FE",
+      "EVIDENCE_REQUIRED": "Authoritative released record or real calibrated test evidence",
+      "FALSE_BLOCKER": false
+    },
+    {
+      "PARAMETER": "physical inertia",
+      "STATUS": "NOT_FOUND",
+      "CATEGORY": "NEEDED_BEFORE_FE",
+      "EVIDENCE_REQUIRED": "Authoritative released record or real calibrated test evidence",
+      "FALSE_BLOCKER": false
+    },
+    {
+      "PARAMETER": "validated density mapping",
+      "STATUS": "NOT_FOUND",
+      "CATEGORY": "NEEDED_BEFORE_FE",
+      "EVIDENCE_REQUIRED": "Authoritative released record or real calibrated test evidence",
+      "FALSE_BLOCKER": false
+    },
+    {
+      "PARAMETER": "validated friction",
+      "STATUS": "NOT_FOUND",
+      "CATEGORY": "NEEDED_BEFORE_TEST",
+      "EVIDENCE_REQUIRED": "Authoritative released record or real calibrated test evidence",
+      "FALSE_BLOCKER": false
+    },
+    {
+      "PARAMETER": "validated contact stiffness",
+      "STATUS": "NOT_FOUND",
+      "CATEGORY": "NEEDED_BEFORE_TEST",
+      "EVIDENCE_REQUIRED": "Authoritative released record or real calibrated test evidence",
+      "FALSE_BLOCKER": false
+    },
+    {
+      "PARAMETER": "validated contact damping",
+      "STATUS": "NOT_FOUND",
+      "CATEGORY": "NEEDED_BEFORE_TEST",
+      "EVIDENCE_REQUIRED": "Authoritative released record or real calibrated test evidence",
+      "FALSE_BLOCKER": false
+    },
+    {
+      "PARAMETER": "validated restitution",
+      "STATUS": "NOT_FOUND",
+      "CATEGORY": "NEEDED_BEFORE_TEST",
+      "EVIDENCE_REQUIRED": "Authoritative released record or real calibrated test evidence",
+      "FALSE_BLOCKER": false
+    },
+    {
+      "PARAMETER": "measured absorber Fx/Fv",
+      "STATUS": "NOT_FOUND",
+      "CATEGORY": "NEEDED_BEFORE_TEST",
+      "EVIDENCE_REQUIRED": "Authoritative released record or real calibrated test evidence",
+      "FALSE_BLOCKER": false
+    },
+    {
+      "PARAMETER": "validated vehicle pulse",
+      "STATUS": "NOT_FOUND",
+      "CATEGORY": "NEEDED_BEFORE_FE",
+      "EVIDENCE_REQUIRED": "Authoritative released record or real calibrated test evidence",
+      "FALSE_BLOCKER": false
+    },
+    {
+      "PARAMETER": "validated initial velocity",
+      "STATUS": "NOT_FOUND",
+      "CATEGORY": "NEEDED_BEFORE_FE",
+      "EVIDENCE_REQUIRED": "Authoritative released record or real calibrated test evidence",
+      "FALSE_BLOCKER": false
+    },
+    {
+      "PARAMETER": "validated joint compliance",
+      "STATUS": "NOT_FOUND",
+      "CATEGORY": "NEEDED_BEFORE_TEST",
+      "EVIDENCE_REQUIRED": "Authoritative released record or real calibrated test evidence",
+      "FALSE_BLOCKER": false
+    },
+    {
+      "PARAMETER": "validated bolt stiffness",
+      "STATUS": "NOT_FOUND",
+      "CATEGORY": "NEEDED_BEFORE_TEST",
+      "EVIDENCE_REQUIRED": "Authoritative released record or real calibrated test evidence",
+      "FALSE_BLOCKER": false
+    },
+    {
+      "PARAMETER": "released GD&T",
+      "STATUS": "NOT_FOUND",
+      "CATEGORY": "NEEDED_BEFORE_FUNCTIONAL_P0",
+      "EVIDENCE_REQUIRED": "Authoritative released record or real calibrated test evidence",
+      "FALSE_BLOCKER": false
+    },
+    {
+      "PARAMETER": "released manufacturing BOM",
+      "STATUS": "NOT_FOUND",
+      "CATEGORY": "NEEDED_BEFORE_FUNCTIONAL_P0",
+      "EVIDENCE_REQUIRED": "Authoritative released record or real calibrated test evidence",
+      "FALSE_BLOCKER": false
+    }
+  ]
+}

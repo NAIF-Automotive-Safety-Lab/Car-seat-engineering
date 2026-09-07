@@ -1,0 +1,32 @@
+{
+  "DOCUMENT": "P0_ABSORBER_PARAMETER_REGISTER",
+  "records": [
+    {
+      "PARAMETER": "180 mm",
+      "CLASSIFICATION": "DESIGN_ASSUMPTION",
+      "T_OCS_STATUS": "DESIGN_STUDY_INPUT",
+      "PHYSICAL_EVIDENCE": "NO",
+      "USE": "concept stroke only; not a manufacturing tolerance or test result",
+      "SOURCE": "V7 absorber discussion",
+      "TRACEABILITY": "PARTIAL"
+    },
+    {
+      "PARAMETER": "18–22 kN",
+      "CLASSIFICATION": "DESIGN_TARGET",
+      "T_OCS_STATUS": "DESIGN_STUDY_INPUT",
+      "PHYSICAL_EVIDENCE": "NO",
+      "USE": "target/range only if exact source context is confirmed; requires actual absorber test",
+      "SOURCE": "V5/V7 source figure/text",
+      "TRACEABILITY": "PARTIAL"
+    },
+    {
+      "PARAMETER": "F-x/F-v/hysteresis/temperature/cycle",
+      "CLASSIFICATION": "NOT_FOUND",
+      "T_OCS_STATUS": "REQUIRES_PHYSICAL_TEST",
+      "PHYSICAL_EVIDENCE": "NO",
+      "USE": "test program definition only",
+      "SOURCE": "V7 absorber disclosure",
+      "TRACEABILITY": "PASS"
+    }
+  ]
+}

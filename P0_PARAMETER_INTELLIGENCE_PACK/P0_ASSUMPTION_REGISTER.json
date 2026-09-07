@@ -1,0 +1,25 @@
+{
+  "DOCUMENT": "P0_ASSUMPTION_REGISTER",
+  "records": [
+    {
+      "PARAMETER_ID": "ABS_STROKE_180MM",
+      "NAME": "ABS_STROKE_180MM",
+      "RAW_VALUE": "180 mm",
+      "RAW_UNIT": "as written",
+      "NORMALIZED_VALUE": "180 mm",
+      "NORMALIZED_UNIT": "NOT_STATED",
+      "SOURCE_DOCUMENT": "T_OCS_V7.0",
+      "VERSION": "T_OCS_V7.0",
+      "PAGE": 18,
+      "SECTION": "absorber / performance summary",
+      "FIGURE": "NOT_STATED",
+      "TABLE": "NOT_STATED",
+      "SOURCE_CONTEXT": "nominal concept stroke; not measured",
+      "COMPONENT": "130",
+      "FUNCTION": "absorber/reference study",
+      "CLASSIFICATION": "DESIGN_ASSUMPTION",
+      "TRACEABILITY": "SOURCE_CONTEXT_REQUIRES_PAGE/FIGURE_CONFIRMATION",
+      "PHYSICAL_EVIDENCE": "NO"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "DOCUMENT": "V5_V7_ENGINEERING_EVOLUTION",
+  "records": [
+    {
+      "TOPIC": "ride-down path",
+      "WHAT_CHANGED": "V7 consolidates or narrows the relationship relative to V5 concept disclosure",
+      "WHY": "traceability, claim specificity, and evidence discipline",
+      "ENGINEERING_IMPACT": "architecture relationship is more explicit; physical performance remains unvalidated",
+      "P0_IMPACT": "preserve relationship in build/configuration; obtain missing physical evidence before claims",
+      "PATENT_IMPACT": "narrower combination/relationship emphasis",
+      "SOURCE": "V5/V7"
+    },
+    {
+      "TOPIC": "separate rotation-control",
+      "WHAT_CHANGED": "V7 consolidates or narrows the relationship relative to V5 concept disclosure",
+      "WHY": "traceability, claim specificity, and evidence discipline",
+      "ENGINEERING_IMPACT": "architecture relationship is more explicit; physical performance remains unvalidated",
+      "P0_IMPACT": "preserve relationship in build/configuration; obtain missing physical evidence before claims",
+      "PATENT_IMPACT": "narrower combination/relationship emphasis",
+      "SOURCE": "V5/V7"
+    },
+    {
+      "TOPIC": "rebound control",
+      "WHAT_CHANGED": "V7 consolidates or narrows the relationship relative to V5 concept disclosure",
+      "WHY": "traceability, claim specificity, and evidence discipline",
+      "ENGINEERING_IMPACT": "architecture relationship is more explicit; physical performance remains unvalidated",
+      "P0_IMPACT": "preserve relationship in build/configuration; obtain missing physical evidence before claims",
+      "PATENT_IMPACT": "narrower combination/relationship emphasis",
+      "SOURCE": "V5/V7"
+    },
+    {
+      "TOPIC": "state machine",
+      "WHAT_CHANGED": "V7 consolidates or narrows the relationship relative to V5 concept disclosure",
+      "WHY": "traceability, claim specificity, and evidence discipline",
+      "ENGINEERING_IMPACT": "architecture relationship is more explicit; physical performance remains unvalidated",
+      "P0_IMPACT": "preserve relationship in build/configuration; obtain missing physical evidence before claims",
+      "PATENT_IMPACT": "narrower combination/relationship emphasis",
+      "SOURCE": "V5/V7"
+    },
+    {
+      "TOPIC": "bilateral load paths",
+      "WHAT_CHANGED": "V7 consolidates or narrows the relationship relative to V5 concept disclosure",
+      "WHY": "traceability, claim specificity, and evidence discipline",
+      "ENGINEERING_IMPACT": "architecture relationship is more explicit; physical performance remains unvalidated",
+      "P0_IMPACT": "preserve relationship in build/configuration; obtain missing physical evidence before claims",
+      "PATENT_IMPACT": "narrower combination/relationship emphasis",
+      "SOURCE": "V5/V7"
+    },
+    {
+      "TOPIC": "absorber cartridge",
+      "WHAT_CHANGED": "V7 consolidates or narrows the relationship relative to V5 concept disclosure",
+      "WHY": "traceability, claim specificity, and evidence discipline",
+      "ENGINEERING_IMPACT": "architecture relationship is more explicit; physical performance remains unvalidated",
+      "P0_IMPACT": "preserve relationship in build/configuration; obtain missing physical evidence before claims",
+      "PATENT_IMPACT": "narrower combination/relationship emphasis",
+      "SOURCE": "V5/V7"
+    },
+    {
+      "TOPIC": "restraint independence",
+      "WHAT_CHANGED": "V7 consolidates or narrows the relationship relative to V5 concept disclosure",
+      "WHY": "traceability, claim specificity, and evidence discipline",
+      "ENGINEERING_IMPACT": "architecture relationship is more explicit; physical performance remains unvalidated",
+      "P0_IMPACT": "preserve relationship in build/configuration; obtain missing physical evidence before claims",
+      "PATENT_IMPACT": "narrower combination/relationship emphasis",
+      "SOURCE": "V5/V7"
+    }
+  ]
+}
