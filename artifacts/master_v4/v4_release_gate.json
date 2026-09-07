@@ -1,0 +1,17 @@
+{
+  "status": "STOP_RELEASE",
+  "v7_status": "BLOCKED",
+  "critical_gap_count": "NONZERO",
+  "manufacturability_critical_gap_count": "NONZERO",
+  "available_cae_evidence_collected": false,
+  "all_blocked_items_explicitly_identified": true,
+  "prototype_release_package_generated": false,
+  "manufacturer_handoff_authorized": false,
+  "reasons": [
+    "no authoritative V7 native CAD/assembly",
+    "no released V7 BOM/material/PMI/tolerance package",
+    "no V7-ready CAE input set",
+    "physical validation and calibration absent",
+    "Peter reauthorization not present"
+  ]
+}

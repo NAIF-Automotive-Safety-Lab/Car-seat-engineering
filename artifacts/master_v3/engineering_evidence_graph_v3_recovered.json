@@ -867,11 +867,74 @@
       "verification_state": "NOT_AUTHORITATIVE_V7"
     },
     {
+      "node_id": "v7_native_source_recovery_inventory.json::artifacts/master_v3/v7_native_source_recovery_inventory.json",
+      "node_type": "CANDIDATE_SOURCE",
+      "label": "artifacts/master_v3/v7_native_source_recovery_inventory.json",
+      "source": "artifacts/master_v3/v7_native_source_recovery_inventory.json",
+      "source_sha256": "455ec629024a7835f76fe838878ae541872c695c1d00c145d2f26cc063d44be5",
+      "classification": "DERIVED",
+      "verification_state": "NOT_AUTHORITATIVE_V7"
+    },
+    {
       "node_id": "r41_step_validation.json::artifacts/r41_step_validation.json",
       "node_type": "CANDIDATE_SOURCE",
       "label": "artifacts/r41_step_validation.json",
       "source": "artifacts/r41_step_validation.json",
       "source_sha256": "4e1b0af0c79b988904133b4661b85a593727dc5184ea67ed0509647b4f5dd7a0",
+      "classification": "REFERENCE",
+      "verification_state": "NOT_AUTHORITATIVE_V7"
+    },
+    {
+      "node_id": "V7_NATIVE_PACKAGE_RECOVERY_REPORT.md::docs/master_v3/V7_NATIVE_PACKAGE_RECOVERY_REPORT.md",
+      "node_type": "CANDIDATE_SOURCE",
+      "label": "docs/master_v3/V7_NATIVE_PACKAGE_RECOVERY_REPORT.md",
+      "source": "docs/master_v3/V7_NATIVE_PACKAGE_RECOVERY_REPORT.md",
+      "source_sha256": "a1ae416b19872997b9c01a78ba5e15dd738bd2a95be1ad8cf8242c6a809322cb",
+      "classification": "REFERENCE",
+      "verification_state": "NOT_AUTHORITATIVE_V7"
+    },
+    {
+      "node_id": "attachment::T_OCS_V7_Patent_Draft_Invention_Disclosure_.pdf",
+      "node_type": "ATTACHED_REFERENCE_DOCUMENT",
+      "label": "/home/ubuntu/upload/T_OCS_V7_Patent_Draft_Invention_Disclosure_.pdf",
+      "source": "/home/ubuntu/upload/T_OCS_V7_Patent_Draft_Invention_Disclosure_.pdf",
+      "source_sha256": "d8eae9d669f6fd635364690b0d66f8a3fcb8d907264cb98b2538f382b15183f7",
+      "classification": "REFERENCE",
+      "verification_state": "NOT_AUTHORITATIVE_V7"
+    },
+    {
+      "node_id": "attachment::\u0646\u0645\u0627\u0630\u062cV5-V7.pdf",
+      "node_type": "ATTACHED_REFERENCE_DOCUMENT",
+      "label": "/home/ubuntu/upload/\u0646\u0645\u0627\u0630\u062cV5-V7.pdf",
+      "source": "/home/ubuntu/upload/\u0646\u0645\u0627\u0630\u062cV5-V7.pdf",
+      "source_sha256": "2ac7d2138900842103a59b67bc8f225f27c49a962aab9721947ae338e94c934f",
+      "classification": "REFERENCE",
+      "verification_state": "NOT_AUTHORITATIVE_V7"
+    },
+    {
+      "node_id": "attachment::JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER.zip",
+      "node_type": "ATTACHED_REFERENCE_ARCHIVE",
+      "label": "/home/ubuntu/upload/JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER.zip",
+      "source": "/home/ubuntu/upload/JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER.zip",
+      "source_sha256": "56e23b8705156a80d01804769167bd71f83f460b60f8712e2377118dec56ebda",
+      "classification": "REFERENCE",
+      "verification_state": "NOT_AUTHORITATIVE_V7"
+    },
+    {
+      "node_id": "attachment::JON_P0_PHYSICAL_PROTOTYPE_MASTER.zip",
+      "node_type": "ATTACHED_REFERENCE_ARCHIVE",
+      "label": "/home/ubuntu/upload/JON_P0_PHYSICAL_PROTOTYPE_MASTER.zip",
+      "source": "/home/ubuntu/upload/JON_P0_PHYSICAL_PROTOTYPE_MASTER.zip",
+      "source_sha256": "b911b3c702300416d33bfd41094bb28d76da9bca92a56c364b93a3b1a44bfd70",
+      "classification": "REFERENCE",
+      "verification_state": "NOT_AUTHORITATIVE_V7"
+    },
+    {
+      "node_id": "attachment::JON_PHYSICAL_INPUT_ENGINEERING_MASTER.zip",
+      "node_type": "ATTACHED_REFERENCE_ARCHIVE",
+      "label": "/home/ubuntu/upload/JON_PHYSICAL_INPUT_ENGINEERING_MASTER.zip",
+      "source": "/home/ubuntu/upload/JON_PHYSICAL_INPUT_ENGINEERING_MASTER.zip",
+      "source_sha256": "1aeb6342b75335688a2627f0efd1cf306a1e74c9826cecea7280ad5572d796db",
       "classification": "REFERENCE",
       "verification_state": "NOT_AUTHORITATIVE_V7"
     },
@@ -1727,10 +1790,66 @@
       "verification_state": "NOT_AUTHORITATIVE_V7"
     },
     {
+      "edge_id": "recovery::v7_native_source_recovery_inventory.json::artifacts/master_v3/v7_native_source_recovery_inventory.json",
+      "source_node": "v7_native_source_recovery_inventory.json::artifacts/master_v3/v7_native_source_recovery_inventory.json",
+      "target_node": "REFERENCE-EVIDENCE-POOL",
+      "source_sha256": "455ec629024a7835f76fe838878ae541872c695c1d00c145d2f26cc063d44be5",
+      "evidence_class": "DERIVED_FROM_DOCUMENT",
+      "verification_state": "NOT_AUTHORITATIVE_V7"
+    },
+    {
       "edge_id": "recovery::r41_step_validation.json::artifacts/r41_step_validation.json",
       "source_node": "r41_step_validation.json::artifacts/r41_step_validation.json",
       "target_node": "REFERENCE-EVIDENCE-POOL",
       "source_sha256": "4e1b0af0c79b988904133b4661b85a593727dc5184ea67ed0509647b4f5dd7a0",
+      "evidence_class": "DERIVED_FROM_DOCUMENT",
+      "verification_state": "NOT_AUTHORITATIVE_V7"
+    },
+    {
+      "edge_id": "recovery::V7_NATIVE_PACKAGE_RECOVERY_REPORT.md::docs/master_v3/V7_NATIVE_PACKAGE_RECOVERY_REPORT.md",
+      "source_node": "V7_NATIVE_PACKAGE_RECOVERY_REPORT.md::docs/master_v3/V7_NATIVE_PACKAGE_RECOVERY_REPORT.md",
+      "target_node": "REFERENCE-EVIDENCE-POOL",
+      "source_sha256": "a1ae416b19872997b9c01a78ba5e15dd738bd2a95be1ad8cf8242c6a809322cb",
+      "evidence_class": "DERIVED_FROM_DOCUMENT",
+      "verification_state": "NOT_AUTHORITATIVE_V7"
+    },
+    {
+      "edge_id": "recovery::attachment::T_OCS_V7_Patent_Draft_Invention_Disclosure_.pdf",
+      "source_node": "attachment::T_OCS_V7_Patent_Draft_Invention_Disclosure_.pdf",
+      "target_node": "REFERENCE-EVIDENCE-POOL",
+      "source_sha256": "d8eae9d669f6fd635364690b0d66f8a3fcb8d907264cb98b2538f382b15183f7",
+      "evidence_class": "DERIVED_FROM_DOCUMENT",
+      "verification_state": "NOT_AUTHORITATIVE_V7"
+    },
+    {
+      "edge_id": "recovery::attachment::\u0646\u0645\u0627\u0630\u062cV5-V7.pdf",
+      "source_node": "attachment::\u0646\u0645\u0627\u0630\u062cV5-V7.pdf",
+      "target_node": "REFERENCE-EVIDENCE-POOL",
+      "source_sha256": "2ac7d2138900842103a59b67bc8f225f27c49a962aab9721947ae338e94c934f",
+      "evidence_class": "DERIVED_FROM_DOCUMENT",
+      "verification_state": "NOT_AUTHORITATIVE_V7"
+    },
+    {
+      "edge_id": "recovery::attachment::JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER.zip",
+      "source_node": "attachment::JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER.zip",
+      "target_node": "REFERENCE-EVIDENCE-POOL",
+      "source_sha256": "56e23b8705156a80d01804769167bd71f83f460b60f8712e2377118dec56ebda",
+      "evidence_class": "DERIVED_FROM_DOCUMENT",
+      "verification_state": "NOT_AUTHORITATIVE_V7"
+    },
+    {
+      "edge_id": "recovery::attachment::JON_P0_PHYSICAL_PROTOTYPE_MASTER.zip",
+      "source_node": "attachment::JON_P0_PHYSICAL_PROTOTYPE_MASTER.zip",
+      "target_node": "REFERENCE-EVIDENCE-POOL",
+      "source_sha256": "b911b3c702300416d33bfd41094bb28d76da9bca92a56c364b93a3b1a44bfd70",
+      "evidence_class": "DERIVED_FROM_DOCUMENT",
+      "verification_state": "NOT_AUTHORITATIVE_V7"
+    },
+    {
+      "edge_id": "recovery::attachment::JON_PHYSICAL_INPUT_ENGINEERING_MASTER.zip",
+      "source_node": "attachment::JON_PHYSICAL_INPUT_ENGINEERING_MASTER.zip",
+      "target_node": "REFERENCE-EVIDENCE-POOL",
+      "source_sha256": "1aeb6342b75335688a2627f0efd1cf306a1e74c9826cecea7280ad5572d796db",
       "evidence_class": "DERIVED_FROM_DOCUMENT",
       "verification_state": "NOT_AUTHORITATIVE_V7"
     },

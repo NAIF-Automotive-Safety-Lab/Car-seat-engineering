@@ -3,12 +3,14 @@ from __future__ import annotations
 
 import hashlib
 import json
+import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "artifacts" / "master_v3"
+UPLOAD = Path("/home/ubuntu/upload")
 NOW = datetime.now(timezone.utc).isoformat()
 
 EXTENSIONS = {".step", ".stp", ".iges", ".igs", ".dxf", ".stl", ".3mf", ".dwg", ".sldprt", ".sldasm", ".x_t", ".x_b", ".pdf", ".docx", ".xlsx", ".csv", ".json", ".md", ".txt"}
@@ -78,6 +80,33 @@ def candidate_paths() -> list[Path]:
     return sorted(paths)
 
 
+def attached_sources() -> list[dict[str, Any]]:
+    records: list[dict[str, Any]] = []
+    for path in sorted(UPLOAD.glob("*.pdf")):
+        records.append({"artifact_id": "attachment::" + path.name, "category": "ATTACHED_REFERENCE_DOCUMENT",
+                        "path": str(path), "size_bytes": path.stat().st_size, "sha256": sha256(path),
+                        "classification": "REFERENCE", "authority_status": "NOT_AUTHORITATIVE_V7",
+                        "classification_basis": "attached patent/design reference PDF; not native CAD or released drawing",
+                        "limitation": "visual/textual design intent only", "discovered_at": NOW})
+    for path in sorted(UPLOAD.glob("*.zip")):
+        members: list[dict[str, Any]] = []
+        with zipfile.ZipFile(path) as archive:
+            for info in archive.infolist():
+                if info.is_dir():
+                    continue
+                payload = archive.read(info)
+                members.append({"path": info.filename, "size_bytes": info.file_size,
+                                "sha256": hashlib.sha256(payload).hexdigest()})
+        native = [m["path"] for m in members if Path(m["path"]).suffix.lower() in {".step", ".stp", ".iges", ".igs", ".sldprt", ".sldasm", ".x_t", ".x_b", ".dwg", ".dxf"}]
+        records.append({"artifact_id": "attachment::" + path.name, "category": "ATTACHED_REFERENCE_ARCHIVE",
+                        "path": str(path), "size_bytes": path.stat().st_size, "sha256": sha256(path),
+                        "classification": "REFERENCE", "authority_status": "NOT_AUTHORITATIVE_V7",
+                        "classification_basis": "attached P0/physical-input documentation archive",
+                        "limitation": "archive contains documentation/CSV/JSON/Markdown only" if not native else "native CAD member requires independent release authority",
+                        "native_cad_members": native, "members": members, "discovered_at": NOW})
+    return records
+
+
 def missing_record(artifact_id: str, category: str, requirement: str, reason: str) -> dict[str, Any]:
     return {"artifact_id": artifact_id, "category": category, "path": None, "size_bytes": None, "sha256": None,
             "classification": "MISSING", "authority_status": "MISSING_AUTHORITATIVE", "requirement": requirement,
@@ -91,6 +120,8 @@ for path in candidate_paths():
                       "path": relative(path), "size_bytes": path.stat().st_size, "sha256": sha256(path),
                       "classification": classification, "authority_status": "NOT_AUTHORITATIVE_V7" if classification != "AUTHORITATIVE" else "AUTHORITATIVE",
                       "classification_basis": basis, "limitation": limitation, "discovered_at": NOW})
+
+artifacts.extend(attached_sources())
 
 # Connected source: CAD-AI Engineering OS's minimal STEP fixture is intentionally synthetic.
 connected = Path("/home/ubuntu/cad-ai-engineering-os/tests/fixtures/minimal-box.step")

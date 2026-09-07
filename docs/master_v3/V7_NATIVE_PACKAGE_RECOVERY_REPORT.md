@@ -6,13 +6,13 @@
 
 ## Recovery result
 
-The repository, Git history and refs, local upload area, and the connected `cad-ai-engineering-os` repository were searched. The recovery inventory contains **98 candidate artifacts** with SHA-256 bindings:
+The repository, Git history and refs, local upload area, the newly supplied PDF/ZIP attachments, and the connected `cad-ai-engineering-os` repository were searched. The recovery inventory contains **105 candidate artifacts** with SHA-256 bindings:
 
 | Classification | Count | Meaning |
 |---|---:|---|
 | AUTHORITATIVE | 0 | No released V7 native source was recovered. |
-| DERIVED | 13 | Immutable acquisition/extraction or generated records; not authority. |
-| REFERENCE | 84 | P0, R4.1, architecture, prototype, schema, or document references. |
+| DERIVED | 14 | Immutable acquisition/extraction or generated records; not authority. |
+| REFERENCE | 90 | P0, R4.1, architecture, prototype, schema, or attached document references. |
 | SYNTHETIC | 1 | Connected-repository test fixture; never project evidence. |
 | MISSING | 8 required slots | Authoritative V7 package classes still absent. |
 
@@ -30,6 +30,18 @@ The only native STEP payload recovered is the R4.1 parent/reference artifact. Th
 
 None is a released V7 native CAD package.
 
+### Newly supplied attachments
+
+The three ZIP archives were opened in a temporary forensic workspace and every member was SHA-256 bound. Their original archive hashes are:
+
+| Attachment | SHA-256 | Native CAD members |
+|---|---|---|
+| `JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER.zip` | `56e23b8705156a80d01804769167bd71f83f460b60f8712e2377118dec56ebda` | None |
+| `JON_P0_PHYSICAL_PROTOTYPE_MASTER.zip` | `b911b3c702300416d33bfd41094bb28d76da9bca92a56c364b93a3b1a44bfd70` | None |
+| `JON_PHYSICAL_INPUT_ENGINEERING_MASTER.zip` | `1aeb6342b75335688a2627f0efd1cf306a1e74c9826cecea7280ad5572d796db` | None |
+
+The PDFs were also hash-bound as reference documents. `T_OCS_V7_Patent_Draft_Invention_Disclosure_.pdf` contains stable reference numerals and concept/claim text; `نماذجV5-V7.pdf` contains visual engineering boards. Neither is native CAD, a released drawing package, or a physical test result. The PDF/ZIP attachments are therefore classified `REFERENCE`, not `AUTHORITATIVE`.
+
 ## Recovered reference records
 
 The following artifacts were located and SHA-bound, but remain non-authoritative for V7:
@@ -43,6 +55,8 @@ The following artifacts were located and SHA-bound, but remain non-authoritative
 - `P0_PROTOTYPE_PARAMETER_PACK/V5_V7_NOT_FOUND_REGISTER.json` — explicitly records missing physical mass, CG, inertia, absorber curves, vehicle pulse, GD&T, and released manufacturing BOM.
 - `V7_CORRELATION_ARCHITECTURE.json` — correlation contract only; status is `DEFINED_NOT_CORRELATED`.
 - `EXTERNAL_DATA_INTAKE_PACKAGE/source_data_required/*` and `test_data_required/*` — input templates with null/unsubmitted values, not CAE-ready data.
+
+The complete attachment member inventory and hashes are embedded in `v7_native_source_recovery_inventory.json`.
 
 Every recovered candidate, including these records, is listed with path, byte size, SHA-256, classification, and limitation in the machine-readable inventory.
 

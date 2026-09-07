@@ -1,0 +1,371 @@
+{
+  "status": "BLOCKED",
+  "scope": "P0 reference records applied to frozen V7 audit; not a manufacturer release",
+  "source": {
+    "path": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_MASTER/P0_BOM.csv",
+    "sha256": "620ff8b5d83fdba9261836de4dd3c06ef8cd5ff464aaf1e4ce71b6104c974913",
+    "classification": "REFERENCE"
+  },
+  "components": [
+    {
+      "part_id": "P0-001",
+      "reference": "100",
+      "component": "Vehicle interface / base frame test fixture",
+      "part_function": "Transfers controlled bench/sled loads into the two rail paths; provides four-point structural retention interface.",
+      "material": "High-strength steel per source concept; final grade from material certificate and drawing release.",
+      "manufacturing_process": "Welded/bolted fabrication to released fixture drawing; critical hole pattern must be taken from native R4.1/CAD, not raster estimation.",
+      "joining_method": "NOT_RELEASED; derive from authoritative native CAD/drawing",
+      "critical_dimensions": "NOT_RELEASED; native R4.1/V7 CAD required",
+      "tolerances": "NOT_RELEASED",
+      "assembly_method": "P0 prototype/test article only; production assembly not authorized",
+      "manufacturing_risk": "HIGH \u2014 source row requires native CAD, material certificate, drawing release, or characterization",
+      "evidence": [
+        {
+          "path": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_MASTER/P0_BOM.csv",
+          "sha256": "620ff8b5d83fdba9261836de4dd3c06ef8cd5ff464aaf1e4ce71b6104c974913",
+          "classification": "REFERENCE"
+        }
+      ],
+      "status": "BLOCKED",
+      "release_authority": "NOT_PRESENT"
+    },
+    {
+      "part_id": "P0-002",
+      "reference": "110L",
+      "component": "Longitudinal load path S1 rail",
+      "part_function": "Left-side longitudinal guidance and load transfer.",
+      "material": "Source drawing: DP780 / hot-stamped rail concept.",
+      "manufacturing_process": "Machine/press-form or source-equivalent rail; verify straightness, parallelism and bore geometry against CAD.",
+      "joining_method": "NOT_RELEASED; derive from authoritative native CAD/drawing",
+      "critical_dimensions": "NOT_RELEASED; native R4.1/V7 CAD required",
+      "tolerances": "NOT_RELEASED",
+      "assembly_method": "P0 prototype/test article only; production assembly not authorized",
+      "manufacturing_risk": "HIGH \u2014 source row requires native CAD, material certificate, drawing release, or characterization",
+      "evidence": [
+        {
+          "path": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_MASTER/P0_BOM.csv",
+          "sha256": "620ff8b5d83fdba9261836de4dd3c06ef8cd5ff464aaf1e4ce71b6104c974913",
+          "classification": "REFERENCE"
+        }
+      ],
+      "status": "BLOCKED",
+      "release_authority": "NOT_PRESENT"
+    },
+    {
+      "part_id": "P0-003",
+      "reference": "110R",
+      "component": "Longitudinal load path S2 rail",
+      "part_function": "Right-side longitudinal guidance and load transfer.",
+      "material": "Source drawing: DP780 / hot-stamped rail concept.",
+      "manufacturing_process": "Mirror/independently inspectable counterpart to S1.",
+      "joining_method": "NOT_RELEASED; derive from authoritative native CAD/drawing",
+      "critical_dimensions": "NOT_RELEASED; native R4.1/V7 CAD required",
+      "tolerances": "NOT_RELEASED",
+      "assembly_method": "P0 prototype/test article only; production assembly not authorized",
+      "manufacturing_risk": "HIGH \u2014 source row requires native CAD, material certificate, drawing release, or characterization",
+      "evidence": [
+        {
+          "path": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_MASTER/P0_BOM.csv",
+          "sha256": "620ff8b5d83fdba9261836de4dd3c06ef8cd5ff464aaf1e4ce71b6104c974913",
+          "classification": "REFERENCE"
+        }
+      ],
+      "status": "BLOCKED",
+      "release_authority": "NOT_PRESENT"
+    },
+    {
+      "part_id": "P0-004",
+      "reference": "120",
+      "component": "Seat carriage",
+      "part_function": "Moving member between rail pair and seat structure; carries absorber reactions.",
+      "material": "High-strength steel per source concept; exact grade by MTR.",
+      "manufacturing_process": "Welded/machined hybrid as CAD dictates; datum structure must support displacement and load instrumentation.",
+      "joining_method": "NOT_RELEASED; derive from authoritative native CAD/drawing",
+      "critical_dimensions": "NOT_RELEASED; native R4.1/V7 CAD required",
+      "tolerances": "NOT_RELEASED",
+      "assembly_method": "P0 prototype/test article only; production assembly not authorized",
+      "manufacturing_risk": "HIGH \u2014 source row requires native CAD, material certificate, drawing release, or characterization",
+      "evidence": [
+        {
+          "path": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_MASTER/P0_BOM.csv",
+          "sha256": "620ff8b5d83fdba9261836de4dd3c06ef8cd5ff464aaf1e4ce71b6104c974913",
+          "classification": "REFERENCE"
+        }
+      ],
+      "status": "BLOCKED",
+      "release_authority": "NOT_PRESENT"
+    },
+    {
+      "part_id": "P0-005",
+      "reference": "130",
+      "component": "Ride-down energy-management module / cartridge interface",
+      "part_function": "Controlled longitudinal energy dissipation on each side.",
+      "material": "Source concept uses high-damping steel/hydraulic/metallic energy elements; actual cartridge technology is to be selected and characterized, not assumed.",
+      "manufacturing_process": "Provide standardized clevis-to-clevis mounting interface so cartridge can be replaced without changing surrounding structure.",
+      "joining_method": "NOT_RELEASED; derive from authoritative native CAD/drawing",
+      "critical_dimensions": "NOT_RELEASED; native R4.1/V7 CAD required",
+      "tolerances": "NOT_RELEASED",
+      "assembly_method": "P0 prototype/test article only; production assembly not authorized",
+      "manufacturing_risk": "HIGH \u2014 source row requires native CAD, material certificate, drawing release, or characterization",
+      "evidence": [
+        {
+          "path": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_MASTER/P0_BOM.csv",
+          "sha256": "620ff8b5d83fdba9261836de4dd3c06ef8cd5ff464aaf1e4ce71b6104c974913",
+          "classification": "REFERENCE"
+        }
+      ],
+      "status": "BLOCKED",
+      "release_authority": "NOT_PRESENT"
+    },
+    {
+      "part_id": "P0-006",
+      "reference": "140",
+      "component": "Pelvic-control / anti-submarining pan",
+      "part_function": "Provides distributed pelvic trajectory/load-guidance geometry.",
+      "material": "Source p29/p31 seat-pan steel concept; final thickness/grade by drawing and MTR.",
+      "manufacturing_process": "Formed sheet or machined prototype as CAD dictates; preserve front hinge interfaces.",
+      "joining_method": "NOT_RELEASED; derive from authoritative native CAD/drawing",
+      "critical_dimensions": "NOT_RELEASED; native R4.1/V7 CAD required",
+      "tolerances": "NOT_RELEASED",
+      "assembly_method": "P0 prototype/test article only; production assembly not authorized",
+      "manufacturing_risk": "HIGH \u2014 source row requires native CAD, material certificate, drawing release, or characterization",
+      "evidence": [
+        {
+          "path": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_MASTER/P0_BOM.csv",
+          "sha256": "620ff8b5d83fdba9261836de4dd3c06ef8cd5ff464aaf1e4ce71b6104c974913",
+          "classification": "REFERENCE"
+        }
+      ],
+      "status": "BLOCKED",
+      "release_authority": "NOT_PRESENT"
+    },
+    {
+      "part_id": "P0-007",
+      "reference": "150L",
+      "component": "Seatback rotation-control link left",
+      "part_function": "Independent left rotation-control load path.",
+      "material": "High-strength steel per source architecture; exact grade by MTR.",
+      "manufacturing_process": "Precision pivot bores; provide replaceable pin/bushing stack.",
+      "joining_method": "NOT_RELEASED; derive from authoritative native CAD/drawing",
+      "critical_dimensions": "NOT_RELEASED; native R4.1/V7 CAD required",
+      "tolerances": "NOT_RELEASED",
+      "assembly_method": "P0 prototype/test article only; production assembly not authorized",
+      "manufacturing_risk": "HIGH \u2014 source row requires native CAD, material certificate, drawing release, or characterization",
+      "evidence": [
+        {
+          "path": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_MASTER/P0_BOM.csv",
+          "sha256": "620ff8b5d83fdba9261836de4dd3c06ef8cd5ff464aaf1e4ce71b6104c974913",
+          "classification": "REFERENCE"
+        }
+      ],
+      "status": "BLOCKED",
+      "release_authority": "NOT_PRESENT"
+    },
+    {
+      "part_id": "P0-008",
+      "reference": "150R",
+      "component": "Seatback rotation-control link right",
+      "part_function": "Independent right rotation-control load path.",
+      "material": "High-strength steel per source architecture.",
+      "manufacturing_process": "Mirror/independent inspection counterpart to 150L.",
+      "joining_method": "NOT_RELEASED; derive from authoritative native CAD/drawing",
+      "critical_dimensions": "NOT_RELEASED; native R4.1/V7 CAD required",
+      "tolerances": "NOT_RELEASED",
+      "assembly_method": "P0 prototype/test article only; production assembly not authorized",
+      "manufacturing_risk": "HIGH \u2014 source row requires native CAD, material certificate, drawing release, or characterization",
+      "evidence": [
+        {
+          "path": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_MASTER/P0_BOM.csv",
+          "sha256": "620ff8b5d83fdba9261836de4dd3c06ef8cd5ff464aaf1e4ce71b6104c974913",
+          "classification": "REFERENCE"
+        }
+      ],
+      "status": "BLOCKED",
+      "release_authority": "NOT_PRESENT"
+    },
+    {
+      "part_id": "P0-009",
+      "reference": "160",
+      "component": "Seatback frame",
+      "part_function": "Torso/head structural support and seatback rotation member.",
+      "material": "Source p29: DP980 concept; final grade from MTR.",
+      "manufacturing_process": "Welded frame; all hinge and link datums inspection-controlled.",
+      "joining_method": "NOT_RELEASED; derive from authoritative native CAD/drawing",
+      "critical_dimensions": "NOT_RELEASED; native R4.1/V7 CAD required",
+      "tolerances": "NOT_RELEASED",
+      "assembly_method": "P0 prototype/test article only; production assembly not authorized",
+      "manufacturing_risk": "HIGH \u2014 source row requires native CAD, material certificate, drawing release, or characterization",
+      "evidence": [
+        {
+          "path": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_MASTER/P0_BOM.csv",
+          "sha256": "620ff8b5d83fdba9261836de4dd3c06ef8cd5ff464aaf1e4ce71b6104c974913",
+          "classification": "REFERENCE"
+        }
+      ],
+      "status": "BLOCKED",
+      "release_authority": "NOT_PRESENT"
+    },
+    {
+      "part_id": "P0-010",
+      "reference": "170",
+      "component": "Multi-state lock module",
+      "part_function": "Controls mechanical state transition among drive/prepare/ride-down/end-state functions.",
+      "material": "Source p31: DP980 housing / SCM440 pin/spring concept; exact grade/MTR required.",
+      "manufacturing_process": "Machine body and pin interfaces; spring/trigger elements must be replaceable; provide status sensor target.",
+      "joining_method": "NOT_RELEASED; derive from authoritative native CAD/drawing",
+      "critical_dimensions": "NOT_RELEASED; native R4.1/V7 CAD required",
+      "tolerances": "NOT_RELEASED",
+      "assembly_method": "P0 prototype/test article only; production assembly not authorized",
+      "manufacturing_risk": "HIGH \u2014 source row requires native CAD, material certificate, drawing release, or characterization",
+      "evidence": [
+        {
+          "path": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_MASTER/P0_BOM.csv",
+          "sha256": "620ff8b5d83fdba9261836de4dd3c06ef8cd5ff464aaf1e4ce71b6104c974913",
+          "classification": "REFERENCE"
+        }
+      ],
+      "status": "BLOCKED",
+      "release_authority": "NOT_PRESENT"
+    },
+    {
+      "part_id": "P0-011",
+      "reference": "180",
+      "component": "Rebound-control module",
+      "part_function": "Controls reverse motion after primary stroke.",
+      "material": "Directional damper or locking element per selected embodiment; not assumed.",
+      "manufacturing_process": "Modular mounting with known axis and travel limits.",
+      "joining_method": "NOT_RELEASED; derive from authoritative native CAD/drawing",
+      "critical_dimensions": "NOT_RELEASED; native R4.1/V7 CAD required",
+      "tolerances": "NOT_RELEASED",
+      "assembly_method": "P0 prototype/test article only; production assembly not authorized",
+      "manufacturing_risk": "HIGH \u2014 source row requires native CAD, material certificate, drawing release, or characterization",
+      "evidence": [
+        {
+          "path": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_MASTER/P0_BOM.csv",
+          "sha256": "620ff8b5d83fdba9261836de4dd3c06ef8cd5ff464aaf1e4ce71b6104c974913",
+          "classification": "REFERENCE"
+        }
+      ],
+      "status": "BLOCKED",
+      "release_authority": "NOT_PRESENT"
+    },
+    {
+      "part_id": "P0-012",
+      "reference": "190",
+      "component": "Occupant-restraint interface test mount",
+      "part_function": "Preserves restraint load path and permits instrumented belt/anchor tests without human occupants.",
+      "material": "Certified lab fixture/seat-belt anchor hardware; exact rating from supplier documentation.",
+      "manufacturing_process": "Do not improvise production anchorage; use qualified test anchor/fixture or verified vehicle-equivalent anchor geometry.",
+      "joining_method": "NOT_RELEASED; derive from authoritative native CAD/drawing",
+      "critical_dimensions": "NOT_RELEASED; native R4.1/V7 CAD required",
+      "tolerances": "NOT_RELEASED",
+      "assembly_method": "P0 prototype/test article only; production assembly not authorized",
+      "manufacturing_risk": "HIGH \u2014 source row requires native CAD, material certificate, drawing release, or characterization",
+      "evidence": [
+        {
+          "path": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_MASTER/P0_BOM.csv",
+          "sha256": "620ff8b5d83fdba9261836de4dd3c06ef8cd5ff464aaf1e4ce71b6104c974913",
+          "classification": "REFERENCE"
+        }
+      ],
+      "status": "BLOCKED",
+      "release_authority": "NOT_PRESENT"
+    },
+    {
+      "part_id": "P0-013",
+      "reference": "200",
+      "component": "Torso/head guidance test geometry",
+      "part_function": "Represents guidance surfaces where they influence occupant trajectory; no human occupancy in early P0 testing.",
+      "material": "Prototype structural frame + replaceable compliant surface only after bench safety review.",
+      "manufacturing_process": "Use a modular dummy/guide fixture so geometry can be changed without modifying structural frame.",
+      "joining_method": "NOT_RELEASED; derive from authoritative native CAD/drawing",
+      "critical_dimensions": "NOT_RELEASED; native R4.1/V7 CAD required",
+      "tolerances": "NOT_RELEASED",
+      "assembly_method": "P0 prototype/test article only; production assembly not authorized",
+      "manufacturing_risk": "HIGH \u2014 source row requires native CAD, material certificate, drawing release, or characterization",
+      "evidence": [
+        {
+          "path": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_MASTER/P0_BOM.csv",
+          "sha256": "620ff8b5d83fdba9261836de4dd3c06ef8cd5ff464aaf1e4ce71b6104c974913",
+          "classification": "REFERENCE"
+        }
+      ],
+      "status": "BLOCKED",
+      "release_authority": "NOT_PRESENT"
+    },
+    {
+      "part_id": "P0-014",
+      "reference": "210",
+      "component": "Sensor / trigger interface panel",
+      "part_function": "Provides fixed datum locations, connector routing and trigger/state sensing interfaces.",
+      "material": "Non-structural aluminum/steel test panel.",
+      "manufacturing_process": "Connectorized, strain-relieved, mechanically isolated from moving members.",
+      "joining_method": "NOT_RELEASED; derive from authoritative native CAD/drawing",
+      "critical_dimensions": "NOT_RELEASED; native R4.1/V7 CAD required",
+      "tolerances": "NOT_RELEASED",
+      "assembly_method": "P0 prototype/test article only; production assembly not authorized",
+      "manufacturing_risk": "HIGH \u2014 source row requires native CAD, material certificate, drawing release, or characterization",
+      "evidence": [
+        {
+          "path": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_MASTER/P0_BOM.csv",
+          "sha256": "620ff8b5d83fdba9261836de4dd3c06ef8cd5ff464aaf1e4ce71b6104c974913",
+          "classification": "REFERENCE"
+        }
+      ],
+      "status": "BLOCKED",
+      "release_authority": "NOT_PRESENT"
+    },
+    {
+      "part_id": "P0-015",
+      "reference": "J",
+      "component": "Hinge/pivot hardware set",
+      "part_function": "Back and pan hinges, pivot pins, bushings, washers, retainers.",
+      "material": "Source p29/p31 includes SCM440/10.9 concept fasteners; exact parts by supplier certificate.",
+      "manufacturing_process": "Use replaceable bushings and traceable fastener lot; no unverified substitutions.",
+      "joining_method": "NOT_RELEASED; derive from authoritative native CAD/drawing",
+      "critical_dimensions": "NOT_RELEASED; native R4.1/V7 CAD required",
+      "tolerances": "NOT_RELEASED",
+      "assembly_method": "P0 prototype/test article only; production assembly not authorized",
+      "manufacturing_risk": "HIGH \u2014 source row requires native CAD, material certificate, drawing release, or characterization",
+      "evidence": [
+        {
+          "path": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_MASTER/P0_BOM.csv",
+          "sha256": "620ff8b5d83fdba9261836de4dd3c06ef8cd5ff464aaf1e4ce71b6104c974913",
+          "classification": "REFERENCE"
+        }
+      ],
+      "status": "BLOCKED",
+      "release_authority": "NOT_PRESENT"
+    },
+    {
+      "part_id": "F",
+      "reference": "F",
+      "component": "Instrumentation-ready fastener/adapter set",
+      "part_function": "Provides access for load washers/cells, extensometry and preload measurement where needed.",
+      "material": "Supplier-certified fastener grade; no generic substitution.",
+      "manufacturing_process": "Predefine sensor clearances before machining.",
+      "joining_method": "NOT_RELEASED; derive from authoritative native CAD/drawing",
+      "critical_dimensions": "NOT_RELEASED; native R4.1/V7 CAD required",
+      "tolerances": "NOT_RELEASED",
+      "assembly_method": "P0 prototype/test article only; production assembly not authorized",
+      "manufacturing_risk": "HIGH \u2014 source row requires native CAD, material certificate, drawing release, or characterization",
+      "evidence": [
+        {
+          "path": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_MASTER/P0_BOM.csv",
+          "sha256": "620ff8b5d83fdba9261836de4dd3c06ef8cd5ff464aaf1e4ce71b6104c974913",
+          "classification": "REFERENCE"
+        }
+      ],
+      "status": "BLOCKED",
+      "release_authority": "NOT_PRESENT"
+    }
+  ],
+  "critical_manufacturability_gaps": [
+    "released native CAD/drawings",
+    "material certificates and lot mapping",
+    "released BOM",
+    "PMI/GD&T and tolerance stack",
+    "joining/weld specifications",
+    "inspection and acceptance criteria"
+  ]
+}

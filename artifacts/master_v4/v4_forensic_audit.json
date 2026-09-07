@@ -1,0 +1,64 @@
+{
+  "status": "BLOCKED",
+  "scope": "FROZEN_V7_FORENSIC_AUDIT",
+  "design_modification": false,
+  "concept_change": false,
+  "assumption_fill": false,
+  "source_inventory": "../master_v3/v7_native_source_recovery_inventory.json",
+  "native_v7_authoritative_sources": 0,
+  "r4_1_reference_sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "audited_domains": [
+    "geometry",
+    "interfaces",
+    "dimensions",
+    "thicknesses",
+    "materials",
+    "fasteners",
+    "joints_welds",
+    "mounting_points",
+    "clearances",
+    "mechanisms",
+    "assembly_feasibility",
+    "service_accessibility",
+    "critical_load_paths"
+  ],
+  "findings": [
+    {
+      "domain": "geometry",
+      "status": "BLOCKED",
+      "finding": "V7 native CAD not recovered; R4.1 is reference only"
+    },
+    {
+      "domain": "interfaces",
+      "status": "BLOCKED",
+      "finding": "exact datums/mating/clearances not released"
+    },
+    {
+      "domain": "materials",
+      "status": "UNVERIFIED",
+      "finding": "concept material basis exists; certificates and lot mapping absent"
+    },
+    {
+      "domain": "fasteners",
+      "status": "UNVERIFIED",
+      "finding": "concept grades exist; released identity/preload evidence absent"
+    },
+    {
+      "domain": "mechanisms",
+      "status": "REFERENCE",
+      "finding": "stable numerals and functional architecture documented, exact implementation not released"
+    },
+    {
+      "domain": "assembly_feasibility",
+      "status": "BLOCKED",
+      "finding": "P0 assembly is explicitly a prototype/test article and not production hardware"
+    },
+    {
+      "domain": "critical_load_paths",
+      "status": "REFERENCE",
+      "finding": "architecture and intended paths documented; no V7 structural validation"
+    }
+  ],
+  "component_count": 16,
+  "timestamp": "2026-09-07T05:11:00.342767+00:00"
+}

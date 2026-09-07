@@ -7,7 +7,7 @@
     "manufacturer_release_artifacts_generated": false,
     "gate": "STOP_RELEASE"
   },
-  "source_recovery_timestamp": "2026-09-07T05:05:32.415962+00:00",
+  "source_recovery_timestamp": "2026-09-07T05:10:23.056980+00:00",
   "repository": "/home/ubuntu/car-seat-engineering",
   "connected_sources_checked": [
     "/home/ubuntu/cad-ai-engineering-os",
@@ -26,7 +26,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "cg_properties.json::EXTERNAL_DATA_INTAKE_PACKAGE/legacy/source_data_required/cg_properties.json",
@@ -38,7 +38,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "inertia_tensor.json::EXTERNAL_DATA_INTAKE_PACKAGE/legacy/source_data_required/inertia_tensor.json",
@@ -50,7 +50,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "initial_velocity.json::EXTERNAL_DATA_INTAKE_PACKAGE/legacy/source_data_required/initial_velocity.json",
@@ -62,7 +62,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "mass_properties.json::EXTERNAL_DATA_INTAKE_PACKAGE/legacy/source_data_required/mass_properties.json",
@@ -74,7 +74,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "material_density.json::EXTERNAL_DATA_INTAKE_PACKAGE/legacy/source_data_required/material_density.json",
@@ -86,7 +86,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "vehicle_pulse.json::EXTERNAL_DATA_INTAKE_PACKAGE/legacy/source_data_required/vehicle_pulse.json",
@@ -98,7 +98,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "absorber_Fv.json::EXTERNAL_DATA_INTAKE_PACKAGE/legacy/test_data_required/absorber_Fv.json",
@@ -110,7 +110,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "absorber_Fx.json::EXTERNAL_DATA_INTAKE_PACKAGE/legacy/test_data_required/absorber_Fx.json",
@@ -122,7 +122,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "contact_damping.json::EXTERNAL_DATA_INTAKE_PACKAGE/legacy/test_data_required/contact_damping.json",
@@ -134,7 +134,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "contact_stiffness.json::EXTERNAL_DATA_INTAKE_PACKAGE/legacy/test_data_required/contact_stiffness.json",
@@ -146,7 +146,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "friction.json::EXTERNAL_DATA_INTAKE_PACKAGE/legacy/test_data_required/friction.json",
@@ -158,7 +158,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "joint_compliance.json::EXTERNAL_DATA_INTAKE_PACKAGE/legacy/test_data_required/joint_compliance.json",
@@ -170,7 +170,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "restitution.json::EXTERNAL_DATA_INTAKE_PACKAGE/legacy/test_data_required/restitution.json",
@@ -182,7 +182,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "bolt_stiffness.json::EXTERNAL_DATA_INTAKE_PACKAGE/source_data_required/bolt_stiffness.json",
@@ -194,7 +194,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "cg_properties.json::EXTERNAL_DATA_INTAKE_PACKAGE/source_data_required/cg_properties.json",
@@ -206,7 +206,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "inertia_tensor.json::EXTERNAL_DATA_INTAKE_PACKAGE/source_data_required/inertia_tensor.json",
@@ -218,7 +218,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "initial_velocity.json::EXTERNAL_DATA_INTAKE_PACKAGE/source_data_required/initial_velocity.json",
@@ -230,7 +230,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "mass_properties.json::EXTERNAL_DATA_INTAKE_PACKAGE/source_data_required/mass_properties.json",
@@ -242,7 +242,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "material_density.json::EXTERNAL_DATA_INTAKE_PACKAGE/source_data_required/material_density.json",
@@ -254,7 +254,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "vehicle_pulse.json::EXTERNAL_DATA_INTAKE_PACKAGE/source_data_required/vehicle_pulse.json",
@@ -266,7 +266,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "absorber_Fv.json::EXTERNAL_DATA_INTAKE_PACKAGE/test_data_required/absorber_Fv.json",
@@ -278,7 +278,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "absorber_Fx.json::EXTERNAL_DATA_INTAKE_PACKAGE/test_data_required/absorber_Fx.json",
@@ -290,7 +290,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "contact_damping.json::EXTERNAL_DATA_INTAKE_PACKAGE/test_data_required/contact_damping.json",
@@ -302,7 +302,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "contact_stiffness.json::EXTERNAL_DATA_INTAKE_PACKAGE/test_data_required/contact_stiffness.json",
@@ -314,7 +314,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "friction.json::EXTERNAL_DATA_INTAKE_PACKAGE/test_data_required/friction.json",
@@ -326,7 +326,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "joint_compliance.json::EXTERNAL_DATA_INTAKE_PACKAGE/test_data_required/joint_compliance.json",
@@ -338,7 +338,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "restitution.json::EXTERNAL_DATA_INTAKE_PACKAGE/test_data_required/restitution.json",
@@ -350,7 +350,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "required-input schema/template with null or unsubmitted fields",
       "limitation": "not CAE-ready evidence",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "INTERFACE_DEFINITION.json::INTERFACE_DEFINITION.json",
@@ -362,7 +362,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "P0_BOM.csv::JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_MASTER/P0_BOM.csv",
@@ -374,7 +374,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "P0_MANUFACTURING_DRAWINGS.md::JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_MASTER/P0_MANUFACTURING_DRAWINGS.md",
@@ -386,7 +386,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "P0_MANUFACTURING_DRAWING_RELEASE.md::JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_MASTER/P0_MANUFACTURING_DRAWING_RELEASE.md",
@@ -398,7 +398,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "P0_MASTER_ASSEMBLY.md::JON_P0_PHYSICAL_PROTOTYPE_MASTER/P0_MASTER/P0_MASTER_ASSEMBLY.md",
@@ -410,7 +410,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "MATERIAL_PROVENANCE.json::MATERIAL_PROVENANCE.json",
@@ -422,7 +422,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "P0_INSTRUMENT_INTERFACE_CONTROL.json::P0_CRITICAL_DESIGN_CLOSURE/P0_INSTRUMENT_INTERFACE_CONTROL.json",
@@ -434,7 +434,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "P0_INTERFACES_AND_DATUMS.json::P0_CRITICAL_DESIGN_CLOSURE/P0_INTERFACES_AND_DATUMS.json",
@@ -446,7 +446,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "P0_MATERIAL_FASTENER_CONTROL.json::P0_CRITICAL_DESIGN_CLOSURE/P0_MATERIAL_FASTENER_CONTROL.json",
@@ -458,7 +458,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "P0_INTERFACE_CLOSURE_REGISTER.json::P0_EVIDENCE_RECOVERY/P0_INTERFACE_CLOSURE_REGISTER.json",
@@ -470,7 +470,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "P0_MATERIAL_FASTENER_EVIDENCE_REGISTER.json::P0_EVIDENCE_RECOVERY/P0_MATERIAL_FASTENER_EVIDENCE_REGISTER.json",
@@ -482,7 +482,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "P0_ASSEMBLY_RECORD.json::P0_FUNCTIONAL_DEVELOPMENT_AUTHORIZATION/physical_execution/P0_ASSEMBLY_RECORD.json",
@@ -494,7 +494,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "P0_MATERIAL_RECORD.json::P0_FUNCTIONAL_DEVELOPMENT_AUTHORIZATION/physical_execution/P0_MATERIAL_RECORD.json",
@@ -506,7 +506,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "P0_MINIMUM_BUILD_BOM.json::P0_MINIMUM_BUILD_DEFINITION/P0_MINIMUM_BUILD_BOM.json",
@@ -518,7 +518,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "P0_MINIMUM_BUILD_BOM.md::P0_MINIMUM_BUILD_DEFINITION/P0_MINIMUM_BUILD_BOM.md",
@@ -530,7 +530,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "P0_MINIMUM_BUILD_BOM.json::P0_PARAMETER_INTELLIGENCE_PACK/P0_MINIMUM_BUILD_BOM.json",
@@ -542,7 +542,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "P0_MINIMUM_BUILD_BOM.md::P0_PARAMETER_INTELLIGENCE_PACK/P0_MINIMUM_BUILD_BOM.md",
@@ -554,7 +554,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "P0_V7_ARCHITECTURE_PHYSICAL_MAP.json::P0_PARAMETER_INTELLIGENCE_PACK/P0_V7_ARCHITECTURE_PHYSICAL_MAP.json",
@@ -566,7 +566,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "V5_V7_ENGINEERING_EVOLUTION.json::P0_PARAMETER_INTELLIGENCE_PACK/V5_V7_ENGINEERING_EVOLUTION.json",
@@ -578,7 +578,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "V5_V7_ENGINEERING_DELTA.json::P0_PROTOTYPE_PARAMETER_PACK/V5_V7_ENGINEERING_DELTA.json",
@@ -590,7 +590,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "V5_V7_NOT_FOUND_REGISTER.json::P0_PROTOTYPE_PARAMETER_PACK/V5_V7_NOT_FOUND_REGISTER.json",
@@ -602,7 +602,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "T_OCS_V7_Patent_Draft_Invention_Disclosure_.pdf.txt::P0_PROTOTYPE_PARAMETER_PACK/source_text/T_OCS_V7_Patent_Draft_Invention_Disclosure_.pdf.txt",
@@ -614,7 +614,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "\u0646\u0645\u0627\u0630\u062cV5-V7.pdf.txt::P0_PROTOTYPE_PARAMETER_PACK/source_text/\u0646\u0645\u0627\u0630\u062cV5-V7.pdf.txt",
@@ -626,7 +626,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "R4.1.step::R4.1/R4.1.step",
@@ -638,7 +638,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "R4.1 parent baseline; no V7 release authority",
       "limitation": "reference only",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "R4.1.step::R4.1.step",
@@ -650,7 +650,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "R4.1 parent baseline; no V7 release authority",
       "limitation": "reference only",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "P0_18_RECORD_FIREWALL.json::R4_1_NATIVE_CAD_FABRICATION_PIPELINE/P0_18_RECORD_FIREWALL.json",
@@ -662,7 +662,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "P0_CRITICAL_GAP_CLOSURE.json::R4_1_NATIVE_CAD_FABRICATION_PIPELINE/P0_CRITICAL_GAP_CLOSURE.json",
@@ -674,7 +674,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "P0_FABRICATION_READINESS_GATE.json::R4_1_NATIVE_CAD_FABRICATION_PIPELINE/P0_FABRICATION_READINESS_GATE.json",
@@ -686,7 +686,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "P0_INDEPENDENT_FABRICATION_RELEASE_GATE.json::R4_1_NATIVE_CAD_FABRICATION_PIPELINE/P0_INDEPENDENT_FABRICATION_RELEASE_GATE.json",
@@ -698,7 +698,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "R4.1_DETERMINISTIC_BOM.json::R4_1_NATIVE_CAD_FABRICATION_PIPELINE/R4.1_DETERMINISTIC_BOM.json",
@@ -710,7 +710,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "R4.1_DETERMINISTIC_GEOMETRY.json::R4_1_NATIVE_CAD_FABRICATION_PIPELINE/R4.1_DETERMINISTIC_GEOMETRY.json",
@@ -722,7 +722,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "R4.1_DETERMINISTIC_JOINT_MAP.json::R4_1_NATIVE_CAD_FABRICATION_PIPELINE/R4.1_DETERMINISTIC_JOINT_MAP.json",
@@ -734,7 +734,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "R4.1_DETERMINISTIC_PMI.json::R4_1_NATIVE_CAD_FABRICATION_PIPELINE/R4.1_DETERMINISTIC_PMI.json",
@@ -746,7 +746,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "R4.1_NATIVE_STEP_MANIFEST.json::R4_1_NATIVE_CAD_FABRICATION_PIPELINE/R4.1_NATIVE_STEP_MANIFEST.json",
@@ -758,7 +758,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "R4.1_NATIVE_STEP_RECOVERY.json::R4_1_NATIVE_CAD_FABRICATION_PIPELINE/R4.1_NATIVE_STEP_RECOVERY.json",
@@ -770,7 +770,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "R4.1_NATIVE_STEP_SOURCE_AUDIT.md::R4_1_NATIVE_CAD_FABRICATION_PIPELINE/R4.1_NATIVE_STEP_SOURCE_AUDIT.md",
@@ -782,7 +782,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "R4.1_PAYLOAD_AUTHENTICITY.json::R4_1_NATIVE_CAD_FABRICATION_PIPELINE/R4.1_PAYLOAD_AUTHENTICITY.json",
@@ -794,7 +794,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "R4.1_PIPELINE_SHA256_MANIFEST.json::R4_1_NATIVE_CAD_FABRICATION_PIPELINE/R4.1_PIPELINE_SHA256_MANIFEST.json",
@@ -806,7 +806,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "R4.1_TRACEABILITY.json::R4_1_NATIVE_CAD_FABRICATION_PIPELINE/R4.1_TRACEABILITY.json",
@@ -818,7 +818,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "SOURCE_PACKAGE_MANIFEST.json::R4_1_NATIVE_CAD_FABRICATION_PIPELINE/SOURCE_PACKAGE_MANIFEST.json",
@@ -830,7 +830,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "R4.1_NATIVE_STEP_AUTHENTICITY.json::R4_1_NATIVE_STEP_SOURCE_ESCALATION_V2/R4.1_NATIVE_STEP_AUTHENTICITY.json",
@@ -842,7 +842,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "R4.1_NATIVE_STEP_DECISION.json::R4_1_NATIVE_STEP_SOURCE_ESCALATION_V2/R4.1_NATIVE_STEP_DECISION.json",
@@ -854,7 +854,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "R4.1_NATIVE_STEP_MANIFEST.json::R4_1_NATIVE_STEP_SOURCE_ESCALATION_V2/R4.1_NATIVE_STEP_MANIFEST.json",
@@ -866,7 +866,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "R4.1_NATIVE_STEP_PIPELINE_SHA256_MANIFEST.json::R4_1_NATIVE_STEP_SOURCE_ESCALATION_V2/R4.1_NATIVE_STEP_PIPELINE_SHA256_MANIFEST.json",
@@ -878,7 +878,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "R4.1_NATIVE_STEP_RECOVERY_AUDIT.md::R4_1_NATIVE_STEP_SOURCE_ESCALATION_V2/R4.1_NATIVE_STEP_RECOVERY_AUDIT.md",
@@ -890,7 +890,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "R4.1_NATIVE_STEP_RECOVERY_ESCALATION.json::R4_1_NATIVE_STEP_SOURCE_ESCALATION_V2/R4.1_NATIVE_STEP_RECOVERY_ESCALATION.json",
@@ -902,7 +902,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "R4.1_NATIVE_STEP_SOURCE_CHAIN.json::R4_1_NATIVE_STEP_SOURCE_ESCALATION_V2/R4.1_NATIVE_STEP_SOURCE_CHAIN.json",
@@ -914,7 +914,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "R4.1_NATIVE_STEP_SOURCE_EXHAUSTION.json::R4_1_NATIVE_STEP_SOURCE_ESCALATION_V2/R4.1_NATIVE_STEP_SOURCE_EXHAUSTION.json",
@@ -926,7 +926,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "SOURCE_PACKAGE_MANIFEST.json::R4_1_NATIVE_STEP_SOURCE_ESCALATION_V2/SOURCE_PACKAGE_MANIFEST.json",
@@ -938,7 +938,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "V1_SR11_JOINT_MAPPING.json::SR11/joints/V1_SR11_JOINT_MAPPING.json",
@@ -950,7 +950,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "V1_SR11_JOINT_MAPPING.json::V1_SR11_JOINT_MAPPING.json",
@@ -962,7 +962,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "V7_CORRELATION_ARCHITECTURE.json::V7_CORRELATION_ARCHITECTURE.json",
@@ -974,7 +974,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "V7_CORRELATION_ENGINE_CONTRACT.json::V7_CORRELATION_ENGINE_CONTRACT.json",
@@ -986,7 +986,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "V7_CORRELATION_ENGINE_CONTRACT.schema.json::V7_CORRELATION_ENGINE_CONTRACT.schema.json",
@@ -998,7 +998,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "concept/prototype/architecture or extracted document record",
       "limitation": "not released V7 native authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "R4.1.step::artifacts/engineering-evidence/acquired/R4.1.step",
@@ -1010,7 +1010,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "immutable acquisition/extraction copy",
       "limitation": "must retain parent-source identity",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "R4.1.step.manifest.json::artifacts/engineering-evidence/acquired/R4.1.step.manifest.json",
@@ -1022,7 +1022,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "immutable acquisition/extraction copy",
       "limitation": "must retain parent-source identity",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "step_forensic_report.json::artifacts/engineering-evidence/step_forensic_report.json",
@@ -1034,7 +1034,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "README.md::artifacts/master_v2/V7-CAD-RELEASE-CANDIDATE/README.md",
@@ -1046,7 +1046,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository-generated evidence/report",
       "limitation": "not source authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "STATUS.json::artifacts/master_v2/V7-CAD-RELEASE-CANDIDATE/STATUS.json",
@@ -1058,7 +1058,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository-generated evidence/report",
       "limitation": "not source authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "cae_evidence_ledger.json::artifacts/master_v2/cae_evidence_ledger.json",
@@ -1070,7 +1070,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository-generated evidence/report",
       "limitation": "not source authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "feature_extraction_report.json::artifacts/master_v2/feature_extraction_report.json",
@@ -1082,7 +1082,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository-generated evidence/report",
       "limitation": "not source authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "pmi_report.json::artifacts/master_v2/pmi_report.json",
@@ -1094,7 +1094,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository-generated evidence/report",
       "limitation": "not source authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "r41_step_validation.json::artifacts/master_v2/r41_step_validation.json",
@@ -1106,7 +1106,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository-generated evidence/report",
       "limitation": "not source authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "r41_step_validation_final.json::artifacts/master_v2/r41_step_validation_final.json",
@@ -1118,7 +1118,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository-generated evidence/report",
       "limitation": "not source authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "step_forensic_report.json::artifacts/master_v2/step_forensic_report.json",
@@ -1130,7 +1130,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository-generated evidence/report",
       "limitation": "not source authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "v7_forensic_audit.json::artifacts/master_v2/v7_forensic_audit.json",
@@ -1142,7 +1142,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository-generated evidence/report",
       "limitation": "not source authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "F_material_closure.json::artifacts/master_v3/F_material_closure.json",
@@ -1154,7 +1154,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository-generated evidence/report",
       "limitation": "not source authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "G_fastener_closure.json::artifacts/master_v3/G_fastener_closure.json",
@@ -1166,7 +1166,19 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository-generated evidence/report",
       "limitation": "not source authority",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
+    },
+    {
+      "artifact_id": "v7_native_source_recovery_inventory.json::artifacts/master_v3/v7_native_source_recovery_inventory.json",
+      "category": "CANDIDATE_SOURCE",
+      "path": "artifacts/master_v3/v7_native_source_recovery_inventory.json",
+      "size_bytes": 67309,
+      "sha256": "455ec629024a7835f76fe838878ae541872c695c1d00c145d2f26cc063d44be5",
+      "classification": "DERIVED",
+      "authority_status": "NOT_AUTHORITATIVE_V7",
+      "classification_basis": "repository-generated evidence/report",
+      "limitation": "not source authority",
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "r41_step_validation.json::artifacts/r41_step_validation.json",
@@ -1178,7 +1190,288 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "repository document candidate",
       "limitation": "authority requires explicit release record",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
+    },
+    {
+      "artifact_id": "V7_NATIVE_PACKAGE_RECOVERY_REPORT.md::docs/master_v3/V7_NATIVE_PACKAGE_RECOVERY_REPORT.md",
+      "category": "CANDIDATE_SOURCE",
+      "path": "docs/master_v3/V7_NATIVE_PACKAGE_RECOVERY_REPORT.md",
+      "size_bytes": 4441,
+      "sha256": "a1ae416b19872997b9c01a78ba5e15dd738bd2a95be1ad8cf8242c6a809322cb",
+      "classification": "REFERENCE",
+      "authority_status": "NOT_AUTHORITATIVE_V7",
+      "classification_basis": "repository document candidate",
+      "limitation": "authority requires explicit release record",
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
+    },
+    {
+      "artifact_id": "attachment::T_OCS_V7_Patent_Draft_Invention_Disclosure_.pdf",
+      "category": "ATTACHED_REFERENCE_DOCUMENT",
+      "path": "/home/ubuntu/upload/T_OCS_V7_Patent_Draft_Invention_Disclosure_.pdf",
+      "size_bytes": 2483516,
+      "sha256": "d8eae9d669f6fd635364690b0d66f8a3fcb8d907264cb98b2538f382b15183f7",
+      "classification": "REFERENCE",
+      "authority_status": "NOT_AUTHORITATIVE_V7",
+      "classification_basis": "attached patent/design reference PDF; not native CAD or released drawing",
+      "limitation": "visual/textual design intent only",
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
+    },
+    {
+      "artifact_id": "attachment::\u0646\u0645\u0627\u0630\u062cV5-V7.pdf",
+      "category": "ATTACHED_REFERENCE_DOCUMENT",
+      "path": "/home/ubuntu/upload/\u0646\u0645\u0627\u0630\u062cV5-V7.pdf",
+      "size_bytes": 2665169,
+      "sha256": "2ac7d2138900842103a59b67bc8f225f27c49a962aab9721947ae338e94c934f",
+      "classification": "REFERENCE",
+      "authority_status": "NOT_AUTHORITATIVE_V7",
+      "classification_basis": "attached patent/design reference PDF; not native CAD or released drawing",
+      "limitation": "visual/textual design intent only",
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
+    },
+    {
+      "artifact_id": "attachment::JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER.zip",
+      "category": "ATTACHED_REFERENCE_ARCHIVE",
+      "path": "/home/ubuntu/upload/JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER.zip",
+      "size_bytes": 35686,
+      "sha256": "56e23b8705156a80d01804769167bd71f83f460b60f8712e2377118dec56ebda",
+      "classification": "REFERENCE",
+      "authority_status": "NOT_AUTHORITATIVE_V7",
+      "classification_basis": "attached P0/physical-input documentation archive",
+      "limitation": "archive contains documentation/CSV/JSON/Markdown only",
+      "native_cad_members": [],
+      "members": [
+        {
+          "path": "JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER/JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER.json",
+          "size_bytes": 47325,
+          "sha256": "d38513c5b41cb5eb50aa3fddb32ba5096b4fdbfb1e587709e4d839ed85612d8d"
+        },
+        {
+          "path": "JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER/JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER.md",
+          "size_bytes": 9184,
+          "sha256": "4b01a32d9145143cbcd8e29a3a7e41c765339e79820db8998ef6041c38a4577a"
+        },
+        {
+          "path": "JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER/P0_CHANGE_CONTROL.csv",
+          "size_bytes": 152,
+          "sha256": "4fd0676f0bf433c9d4c2009183fe883e8ac229e6f904badd3918da655a11164e"
+        },
+        {
+          "path": "JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER/P0_COMPONENT_REGISTER.csv",
+          "size_bytes": 5969,
+          "sha256": "6fb8cd7e7886f4ebb15d5fcc33ce8b59589381e75771cca509ff0a6420d4190e"
+        },
+        {
+          "path": "JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER/P0_DATA_ACQUISITION_PLAN.md",
+          "size_bytes": 1182,
+          "sha256": "809fb08fe3b59aeee8bbd720ce48958eb841c04916b5bb4d6f1e7b73dcfeff6c"
+        },
+        {
+          "path": "JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER/P0_EXPLORATORY_FABRICATION_DEFINITION.md",
+          "size_bytes": 2024,
+          "sha256": "27007448fb806a169d81a7d5bdd86fbbfc3a6903e229c6c74ea60f463de0f07e"
+        },
+        {
+          "path": "JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER/P0_FAILURE_LOG.csv",
+          "size_bytes": 197,
+          "sha256": "c49dbcb9f376a35e9cb593cc053d9966d110f3a50931e6d5d40a00021589828a"
+        },
+        {
+          "path": "JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER/P0_FAILURE_MODE_REGISTER.csv",
+          "size_bytes": 1566,
+          "sha256": "98574375d41715bf9de69a56999958198d64aa941d1f6c4888446d60bfe5815c"
+        },
+        {
+          "path": "JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER/P0_INSTRUMENTATION_PLAN.csv",
+          "size_bytes": 4931,
+          "sha256": "2bdd2cc1e640539eb13e09a329061dae89280f56765a62e20cb471beb4d385e5"
+        },
+        {
+          "path": "JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER/P0_R4.1_DEVIATION_REGISTER.csv",
+          "size_bytes": 1025,
+          "sha256": "e4de4237130231304ef3ea64c321348ee5dd80d4632a1814411f687a3d7c5a8e"
+        },
+        {
+          "path": "JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER/P0_R4.1_TRACEABILITY.csv",
+          "size_bytes": 1206,
+          "sha256": "abb97073acc1354adc86a1f5f0f043ca206bab322319018cf38eb89456a8aba8"
+        },
+        {
+          "path": "JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER/P0_REQUIREMENTS_TRACEABILITY.md",
+          "size_bytes": 1111,
+          "sha256": "6c9dba8f101276945dee588468f4b9e1e5a639484dc8535d937b97b439858317"
+        },
+        {
+          "path": "JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER/P0_SOURCE_NOMINALS.csv",
+          "size_bytes": 977,
+          "sha256": "6a8c22d5b1bce4beefbc0ba47f88fa5afe84267c29ce20662dffc531533bff2a"
+        },
+        {
+          "path": "JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER/P0_TEST_CONFIGURATION.md",
+          "size_bytes": 941,
+          "sha256": "c8c18e8a01e417110a0e329b0b4d7086ec11d84e6a6f2123c7bdaeba11a3e19f"
+        },
+        {
+          "path": "JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER/P0_TEST_MATRIX.csv",
+          "size_bytes": 7259,
+          "sha256": "462c64426b136b91a39d9063253e73d644e49af99d368b31bda29b1cb380843b"
+        },
+        {
+          "path": "JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER/P0_VARIANT_MATRIX.csv",
+          "size_bytes": 1904,
+          "sha256": "12ca42f8fb2cee077e5877f78f602e9aff192b8dfb1c60bf06ef72a264889549"
+        },
+        {
+          "path": "JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER/README.md",
+          "size_bytes": 576,
+          "sha256": "987ad2d1595226c31fc06e863037c0246395c29643efc3e8336a8987db6f4ae8"
+        },
+        {
+          "path": "JON_FIRST_REAL_PHYSICAL_TEST_PROTOTYPE_MASTER/SHA256SUMS.txt",
+          "size_bytes": 1602,
+          "sha256": "d6d7ba74cd161670fe154754a318257edc7449288329fdafc365cc9509924ef6"
+        }
+      ],
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
+    },
+    {
+      "artifact_id": "attachment::JON_P0_PHYSICAL_PROTOTYPE_MASTER.zip",
+      "category": "ATTACHED_REFERENCE_ARCHIVE",
+      "path": "/home/ubuntu/upload/JON_P0_PHYSICAL_PROTOTYPE_MASTER.zip",
+      "size_bytes": 41396,
+      "sha256": "b911b3c702300416d33bfd41094bb28d76da9bca92a56c364b93a3b1a44bfd70",
+      "classification": "REFERENCE",
+      "authority_status": "NOT_AUTHORITATIVE_V7",
+      "classification_basis": "attached P0/physical-input documentation archive",
+      "limitation": "archive contains documentation/CSV/JSON/Markdown only",
+      "native_cad_members": [],
+      "members": [
+        {
+          "path": "JON_P0_PHYSICAL_PROTOTYPE_MASTER.json",
+          "size_bytes": 55168,
+          "sha256": "2bb7bb12d9156ad4c0ef9dee56edba731f99cf73645cc8fc6f3e1a981766cb95"
+        },
+        {
+          "path": "JON_P0_PHYSICAL_PROTOTYPE_MASTER.md",
+          "size_bytes": 13173,
+          "sha256": "033ff26c0cc76e3ed7821ff47bb710ff7aa6385c83759d6a5339949c58fb1ed4"
+        },
+        {
+          "path": "P0_BOM.csv",
+          "size_bytes": 6088,
+          "sha256": "620ff8b5d83fdba9261836de4dd3c06ef8cd5ff464aaf1e4ce71b6104c974913"
+        },
+        {
+          "path": "P0_DATA_ACQUISITION_PLAN.csv",
+          "size_bytes": 1131,
+          "sha256": "bfd0ea40bb7e22473b2a9b59209a984f4697300110f68c6e6fe7339761161efb"
+        },
+        {
+          "path": "P0_DATA_ACQUISITION_PLAN.md",
+          "size_bytes": 332,
+          "sha256": "4fe17ab44673b967458d0df3cef93f0e2b71b6238db8566f1f8d474638a9c6ca"
+        },
+        {
+          "path": "P0_INSTRUMENTATION_PLAN.csv",
+          "size_bytes": 5316,
+          "sha256": "e34c64fadad64f1f1522236bc0303613b81bfcfe02c3643561e41ea264ecdfac"
+        },
+        {
+          "path": "P0_INSTRUMENTATION_PLAN.md",
+          "size_bytes": 407,
+          "sha256": "97236bbd965a21a15f3623ca25fd45836fff45c572fc62ec0f37f6d81a61c4f3"
+        },
+        {
+          "path": "P0_MANUFACTURING_DRAWINGS.md",
+          "size_bytes": 1673,
+          "sha256": "afba582ad28c30d8243ab92d46866d1718e2b9e77c4b39e99d02732d0d54ed99"
+        },
+        {
+          "path": "P0_MANUFACTURING_DRAWING_RELEASE.md",
+          "size_bytes": 1673,
+          "sha256": "afba582ad28c30d8243ab92d46866d1718e2b9e77c4b39e99d02732d0d54ed99"
+        },
+        {
+          "path": "P0_MASTER_ASSEMBLY.md",
+          "size_bytes": 1125,
+          "sha256": "407d18452aea0ce1d2abe2604fe0bb58e16960a653edd12fb47048fc54858029"
+        },
+        {
+          "path": "P0_R4.1_DEVIATION_REGISTER.csv",
+          "size_bytes": 2992,
+          "sha256": "4adf01ee7cdd0dc9626717886be8175ca68232aa31c3b69332c4de12e2badfef"
+        },
+        {
+          "path": "P0_R4.1_DEVIATION_REGISTER.md",
+          "size_bytes": 283,
+          "sha256": "d83776a3e8a577e14fc017cb3fff3e3555c89576d3f7897c2bd53dc61560c375"
+        },
+        {
+          "path": "P0_REQUIREMENTS_TRACEABILITY.csv",
+          "size_bytes": 1104,
+          "sha256": "2d0785e51dec2cb1690e701c8d62840675df1701dadd7a1da4cbff7036f131a0"
+        },
+        {
+          "path": "P0_REQUIREMENTS_TRACEABILITY.md",
+          "size_bytes": 346,
+          "sha256": "2fc84e00f3e5f8ff248d4d07fb3da1c2639c1b3200e80c701a76437b4f534ebf"
+        },
+        {
+          "path": "P0_TEST_CONFIGURATION.md",
+          "size_bytes": 1606,
+          "sha256": "dbf241b9357f357bb96120ac110accace0c0cd54a48e071e67eff7b5f8937acc"
+        },
+        {
+          "path": "P0_TEST_CONFIGURATION.txt",
+          "size_bytes": 1606,
+          "sha256": "dbf241b9357f357bb96120ac110accace0c0cd54a48e071e67eff7b5f8937acc"
+        },
+        {
+          "path": "P0_TEST_MATRIX.csv",
+          "size_bytes": 12387,
+          "sha256": "32f5ea4da72e77cbc10734be1fbcbdec491c2ef7eed052052aef221fc6cdc360"
+        },
+        {
+          "path": "P0_TEST_MATRIX.md",
+          "size_bytes": 262,
+          "sha256": "cd72b6c75db84724c64ae3abb1749d3596f360e1a8a863dc8f364e7586234b59"
+        },
+        {
+          "path": "README.txt",
+          "size_bytes": 646,
+          "sha256": "2c7c40cdefd6f38b660af6cfa37cff0cb7d937ccb8f5efb1aea64b6bd660a61e"
+        },
+        {
+          "path": "SHA256SUMS.txt",
+          "size_bytes": 1763,
+          "sha256": "3a89afd0c95da0297d2b3ce861f05a0d2689dc7e5328bc1f0e6d1d00166725a7"
+        }
+      ],
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
+    },
+    {
+      "artifact_id": "attachment::JON_PHYSICAL_INPUT_ENGINEERING_MASTER.zip",
+      "category": "ATTACHED_REFERENCE_ARCHIVE",
+      "path": "/home/ubuntu/upload/JON_PHYSICAL_INPUT_ENGINEERING_MASTER.zip",
+      "size_bytes": 30144,
+      "sha256": "1aeb6342b75335688a2627f0efd1cf306a1e74c9826cecea7280ad5572d796db",
+      "classification": "REFERENCE",
+      "authority_status": "NOT_AUTHORITATIVE_V7",
+      "classification_basis": "attached P0/physical-input documentation archive",
+      "limitation": "archive contains documentation/CSV/JSON/Markdown only",
+      "native_cad_members": [],
+      "members": [
+        {
+          "path": "JON_PHYSICAL_INPUT_ENGINEERING_MASTER.json",
+          "size_bytes": 62247,
+          "sha256": "353379f505b544da60b1846f6288411fb947e1a8b930d59c389e75c6fe97c45e"
+        },
+        {
+          "path": "JON_PHYSICAL_INPUT_ENGINEERING_MASTER.md",
+          "size_bytes": 52881,
+          "sha256": "a4afd9b4501dab0da3c4db798054b929bc106b4c0b1f1c7c11e5df1b939234c3"
+        }
+      ],
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     },
     {
       "artifact_id": "cad-ai-engineering-os::minimal-box.step",
@@ -1190,7 +1483,7 @@
       "authority_status": "NOT_AUTHORITATIVE_V7",
       "classification_basis": "test fixture from connected repository",
       "limitation": "not project geometry",
-      "discovered_at": "2026-09-07T05:05:32.415962+00:00"
+      "discovered_at": "2026-09-07T05:10:23.056980+00:00"
     }
   ],
   "missing_authoritative_slots": [
@@ -1292,10 +1585,10 @@
     }
   ],
   "counts": {
-    "recovered_candidates": 98,
+    "recovered_candidates": 105,
     "authoritative": 0,
-    "derived": 13,
-    "reference": 84,
+    "derived": 14,
+    "reference": 90,
     "synthetic": 1,
     "missing_authoritative_slots": 8
   },
