@@ -1,0 +1,103 @@
+{
+  "DOCUMENT": "P0_V7_ARCHITECTURE_PHYSICAL_MAP",
+  "records": [
+    {
+      "REFERENCE": "100",
+      "PHYSICAL_PART": "vehicle interface/base frame",
+      "MECHANICAL_FUNCTION": "transfers vehicle-interface loads",
+      "REQUIRED_INTERFACE": "hardpoints/interface",
+      "REQUIRED_MOVEMENT_OR_EVIDENCE": "development interface evidence"
+    },
+    {
+      "REFERENCE": "110L",
+      "PHYSICAL_PART": "left longitudinal load path",
+      "MECHANICAL_FUNCTION": "bilateral guidance/load sharing",
+      "REQUIRED_INTERFACE": "carriage/rail interface",
+      "REQUIRED_MOVEMENT_OR_EVIDENCE": "rail alignment/reaction evidence"
+    },
+    {
+      "REFERENCE": "110R",
+      "PHYSICAL_PART": "right longitudinal load path",
+      "MECHANICAL_FUNCTION": "bilateral guidance/load sharing",
+      "REQUIRED_INTERFACE": "carriage/rail interface",
+      "REQUIRED_MOVEMENT_OR_EVIDENCE": "rail alignment/reaction evidence"
+    },
+    {
+      "REFERENCE": "120",
+      "PHYSICAL_PART": "seat carriage",
+      "MECHANICAL_FUNCTION": "translates along guided path",
+      "REQUIRED_INTERFACE": "rails/absorber/seatback",
+      "REQUIRED_MOVEMENT_OR_EVIDENCE": "travel/binding evidence"
+    },
+    {
+      "REFERENCE": "130",
+      "PHYSICAL_PART": "ride-down module",
+      "MECHANICAL_FUNCTION": "dissipates energy during controlled translation",
+      "REQUIRED_INTERFACE": "carriage/base",
+      "REQUIRED_MOVEMENT_OR_EVIDENCE": "force-stroke test evidence"
+    },
+    {
+      "REFERENCE": "140",
+      "PHYSICAL_PART": "pelvic-control pan",
+      "MECHANICAL_FUNCTION": "controls pelvic trajectory/load distribution",
+      "REQUIRED_INTERFACE": "seat pan/restraint",
+      "REQUIRED_MOVEMENT_OR_EVIDENCE": "geometry/contact evidence"
+    },
+    {
+      "REFERENCE": "150L",
+      "PHYSICAL_PART": "left rotation-control link",
+      "MECHANICAL_FUNCTION": "limits seatback rotation",
+      "REQUIRED_INTERFACE": "seatback/frame",
+      "REQUIRED_MOVEMENT_OR_EVIDENCE": "motion/load evidence"
+    },
+    {
+      "REFERENCE": "150R",
+      "PHYSICAL_PART": "right rotation-control link",
+      "MECHANICAL_FUNCTION": "limits seatback rotation",
+      "REQUIRED_INTERFACE": "seatback/frame",
+      "REQUIRED_MOVEMENT_OR_EVIDENCE": "motion/load evidence"
+    },
+    {
+      "REFERENCE": "160",
+      "PHYSICAL_PART": "seatback frame",
+      "MECHANICAL_FUNCTION": "supports torso/head guidance",
+      "REQUIRED_INTERFACE": "rotation links/carriage",
+      "REQUIRED_MOVEMENT_OR_EVIDENCE": "fit/motion evidence"
+    },
+    {
+      "REFERENCE": "170",
+      "PHYSICAL_PART": "multi-state lock",
+      "MECHANICAL_FUNCTION": "changes mechanical constraint state",
+      "REQUIRED_INTERFACE": "carriage/rails/state trigger",
+      "REQUIRED_MOVEMENT_OR_EVIDENCE": "state transition evidence"
+    },
+    {
+      "REFERENCE": "180",
+      "PHYSICAL_PART": "rebound-control",
+      "MECHANICAL_FUNCTION": "controls reverse motion",
+      "REQUIRED_INTERFACE": "carriage/ride-down path",
+      "REQUIRED_MOVEMENT_OR_EVIDENCE": "reverse-motion evidence"
+    },
+    {
+      "REFERENCE": "190",
+      "PHYSICAL_PART": "restraint interface",
+      "MECHANICAL_FUNCTION": "maintains restraint path",
+      "REQUIRED_INTERFACE": "seat/vehicle interface",
+      "REQUIRED_MOVEMENT_OR_EVIDENCE": "development-only interface evidence"
+    },
+    {
+      "REFERENCE": "200",
+      "PHYSICAL_PART": "torso/head guidance",
+      "MECHANICAL_FUNCTION": "guides occupant trajectory conceptually",
+      "REQUIRED_INTERFACE": "seatback/restraint",
+      "REQUIRED_MOVEMENT_OR_EVIDENCE": "development geometry evidence"
+    },
+    {
+      "REFERENCE": "210",
+      "PHYSICAL_PART": "sensor/trigger interface",
+      "MECHANICAL_FUNCTION": "detects/informs state recognition",
+      "REQUIRED_INTERFACE": "lock/state mechanism",
+      "REQUIRED_MOVEMENT_OR_EVIDENCE": "sensor/trigger evidence"
+    }
+  ]
+}

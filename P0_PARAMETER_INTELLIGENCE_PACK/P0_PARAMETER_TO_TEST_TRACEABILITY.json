@@ -1,0 +1,21 @@
+{
+  "DOCUMENT": "P0_PARAMETER_TO_TEST_TRACEABILITY",
+  "records": [
+    {
+      "PARAMETER_GROUP": "geometry/fit",
+      "TEST": "P0-GF L1"
+    },
+    {
+      "PARAMETER_GROUP": "translation/rotation/state/rebound",
+      "TEST": "P0-FD low-risk functional test"
+    },
+    {
+      "PARAMETER_GROUP": "absorber/friction/contact/joints",
+      "TEST": "P0-TEST instrumented characterization"
+    },
+    {
+      "PARAMETER_GROUP": "mass/CG/inertia/pulse/FE inputs",
+      "TEST": "external authoritative source or dedicated test"
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "DOCUMENT": "P0_MINIMUM_BUILD_BOM",
+  "STATUS": "DEVELOPMENT_DEFINITION_NOT_RELEASE",
+  "MINIMUM_CONFIGURATION": "dual-side carriage rig",
+  "records": [
+    {
+      "PART_ID": "100",
+      "FUNCTION": "vehicle interface/base frame",
+      "SOURCE": "V7 architecture reference",
+      "GEOMETRY_STATUS": "SOURCE_REFERENCE_ONLY",
+      "MATERIAL_STATUS": "UNKNOWN_NOT_RELEASED",
+      "MANUFACTURING_STATUS": "NOT_RELEASED",
+      "CAN_FABRICATE_NOW": false,
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": true
+    },
+    {
+      "PART_ID": "110L",
+      "FUNCTION": "left longitudinal load path",
+      "SOURCE": "V7 architecture reference",
+      "GEOMETRY_STATUS": "SOURCE_REFERENCE_ONLY",
+      "MATERIAL_STATUS": "UNKNOWN_NOT_RELEASED",
+      "MANUFACTURING_STATUS": "NOT_RELEASED",
+      "CAN_FABRICATE_NOW": false,
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": true
+    },
+    {
+      "PART_ID": "110R",
+      "FUNCTION": "right longitudinal load path",
+      "SOURCE": "V7 architecture reference",
+      "GEOMETRY_STATUS": "SOURCE_REFERENCE_ONLY",
+      "MATERIAL_STATUS": "UNKNOWN_NOT_RELEASED",
+      "MANUFACTURING_STATUS": "NOT_RELEASED",
+      "CAN_FABRICATE_NOW": false,
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": true
+    },
+    {
+      "PART_ID": "120",
+      "FUNCTION": "seat carriage",
+      "SOURCE": "V7 architecture reference",
+      "GEOMETRY_STATUS": "SOURCE_REFERENCE_ONLY",
+      "MATERIAL_STATUS": "UNKNOWN_NOT_RELEASED",
+      "MANUFACTURING_STATUS": "NOT_RELEASED",
+      "CAN_FABRICATE_NOW": false,
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": true
+    },
+    {
+      "PART_ID": "130",
+      "FUNCTION": "ride-down module",
+      "SOURCE": "V7 architecture reference",
+      "GEOMETRY_STATUS": "SOURCE_REFERENCE_ONLY",
+      "MATERIAL_STATUS": "UNKNOWN_NOT_RELEASED",
+      "MANUFACTURING_STATUS": "NOT_RELEASED",
+      "CAN_FABRICATE_NOW": false,
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": true
+    },
+    {
+      "PART_ID": "140",
+      "FUNCTION": "pelvic-control pan",
+      "SOURCE": "V7 architecture reference",
+      "GEOMETRY_STATUS": "SOURCE_REFERENCE_ONLY",
+      "MATERIAL_STATUS": "UNKNOWN_NOT_RELEASED",
+      "MANUFACTURING_STATUS": "NOT_RELEASED",
+      "CAN_FABRICATE_NOW": false,
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": true
+    },
+    {
+      "PART_ID": "150L",
+      "FUNCTION": "left rotation-control link",
+      "SOURCE": "V7 architecture reference",
+      "GEOMETRY_STATUS": "SOURCE_REFERENCE_ONLY",
+      "MATERIAL_STATUS": "UNKNOWN_NOT_RELEASED",
+      "MANUFACTURING_STATUS": "NOT_RELEASED",
+      "CAN_FABRICATE_NOW": false,
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": true
+    },
+    {
+      "PART_ID": "150R",
+      "FUNCTION": "right rotation-control link",
+      "SOURCE": "V7 architecture reference",
+      "GEOMETRY_STATUS": "SOURCE_REFERENCE_ONLY",
+      "MATERIAL_STATUS": "UNKNOWN_NOT_RELEASED",
+      "MANUFACTURING_STATUS": "NOT_RELEASED",
+      "CAN_FABRICATE_NOW": false,
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": true
+    },
+    {
+      "PART_ID": "160",
+      "FUNCTION": "seatback frame",
+      "SOURCE": "V7 architecture reference",
+      "GEOMETRY_STATUS": "SOURCE_REFERENCE_ONLY",
+      "MATERIAL_STATUS": "UNKNOWN_NOT_RELEASED",
+      "MANUFACTURING_STATUS": "NOT_RELEASED",
+      "CAN_FABRICATE_NOW": false,
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": true
+    },
+    {
+      "PART_ID": "170",
+      "FUNCTION": "multi-state lock",
+      "SOURCE": "V7 architecture reference",
+      "GEOMETRY_STATUS": "SOURCE_REFERENCE_ONLY",
+      "MATERIAL_STATUS": "UNKNOWN_NOT_RELEASED",
+      "MANUFACTURING_STATUS": "NOT_RELEASED",
+      "CAN_FABRICATE_NOW": false,
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": true
+    },
+    {
+      "PART_ID": "180",
+      "FUNCTION": "rebound-control",
+      "SOURCE": "V7 architecture reference",
+      "GEOMETRY_STATUS": "SOURCE_REFERENCE_ONLY",
+      "MATERIAL_STATUS": "UNKNOWN_NOT_RELEASED",
+      "MANUFACTURING_STATUS": "NOT_RELEASED",
+      "CAN_FABRICATE_NOW": false,
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": true
+    },
+    {
+      "PART_ID": "190",
+      "FUNCTION": "restraint interface",
+      "SOURCE": "V7 architecture reference",
+      "GEOMETRY_STATUS": "SOURCE_REFERENCE_ONLY",
+      "MATERIAL_STATUS": "UNKNOWN_NOT_RELEASED",
+      "MANUFACTURING_STATUS": "NOT_RELEASED",
+      "CAN_FABRICATE_NOW": false,
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": true
+    },
+    {
+      "PART_ID": "200",
+      "FUNCTION": "torso/head guidance",
+      "SOURCE": "V7 architecture reference",
+      "GEOMETRY_STATUS": "SOURCE_REFERENCE_ONLY",
+      "MATERIAL_STATUS": "UNKNOWN_NOT_RELEASED",
+      "MANUFACTURING_STATUS": "NOT_RELEASED",
+      "CAN_FABRICATE_NOW": false,
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": true
+    },
+    {
+      "PART_ID": "210",
+      "FUNCTION": "sensor/trigger interface",
+      "SOURCE": "V7 architecture reference",
+      "GEOMETRY_STATUS": "SOURCE_REFERENCE_ONLY",
+      "MATERIAL_STATUS": "UNKNOWN_NOT_RELEASED",
+      "MANUFACTURING_STATUS": "NOT_RELEASED",
+      "CAN_FABRICATE_NOW": false,
+      "AUTHORITY_REQUIRED": true,
+      "PHYSICAL_TEST_REQUIRED": true
+    }
+  ]
+}

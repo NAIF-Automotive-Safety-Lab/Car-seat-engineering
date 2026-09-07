@@ -1,0 +1,95 @@
+{
+  "P0-GF": {
+    "purpose": "Geometry/Fit",
+    "required_parts": [
+      "geometry envelope parts and interfaces",
+      "temporary/local datum fixture"
+    ],
+    "required_materials": [
+      "actual material may remain UNKNOWN for nonfunctional mockup"
+    ],
+    "required_dimensions": [
+      "source geometry facts only; no invented tolerances"
+    ],
+    "required_decisions": [
+      "owner authorization and configuration ID"
+    ],
+    "required_instrumentation": [
+      "calibrated dimensional tools"
+    ],
+    "allowed_tests": [
+      "geometry/fit/alignment"
+    ],
+    "forbidden_tests": [
+      "functional absorber",
+      "friction",
+      "crash",
+      "safety validation"
+    ],
+    "evidence": [
+      "photos/measurements/configuration record"
+    ]
+  },
+  "P0-FD": {
+    "purpose": "Functional Development",
+    "required_parts": [
+      "bilateral rails/load paths",
+      "carriage",
+      "energy-management path",
+      "separate rotation-control path",
+      "lock/state mechanism",
+      "rebound-control",
+      "development restraint interface"
+    ],
+    "required_materials": [
+      "actual materials/processes recorded; UNKNOWN remains OPEN"
+    ],
+    "required_dimensions": [
+      "released/source-backed geometry and interface dimensions"
+    ],
+    "required_decisions": [
+      "mechanism choice and deviations recorded by authority"
+    ],
+    "required_instrumentation": [
+      "dimensional tools plus calibrated force/displacement/time where used"
+    ],
+    "allowed_tests": [
+      "low-risk static/mechanical function and controlled characterization"
+    ],
+    "forbidden_tests": [
+      "occupant/crash qualification",
+      "safety release",
+      "unrestricted FE"
+    ],
+    "evidence": [
+      "fabrication, assembly, deviation, calibration, raw data"
+    ]
+  },
+  "P0-TEST": {
+    "purpose": "Instrumented Development Test Article",
+    "required_parts": [
+      "verified P0-FD article plus instrument interfaces"
+    ],
+    "required_materials": [
+      "configuration-verified materials"
+    ],
+    "required_dimensions": [
+      "verified interfaces and datums"
+    ],
+    "required_decisions": [
+      "test plan/facility/instrumentation approval"
+    ],
+    "required_instrumentation": [
+      "calibrated DAQ, force/displacement/velocity as applicable"
+    ],
+    "allowed_tests": [
+      "approved developmental characterization"
+    ],
+    "forbidden_tests": [
+      "qualification/certification/homologation/vehicle safety release"
+    ],
+    "evidence": [
+      "raw data, calibration, uncertainty, report, hashes, independent record"
+    ]
+  }
+}

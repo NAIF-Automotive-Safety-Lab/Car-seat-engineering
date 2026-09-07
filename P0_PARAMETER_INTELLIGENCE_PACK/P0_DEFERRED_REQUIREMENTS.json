@@ -1,0 +1,59 @@
+{
+  "DOCUMENT": "P0_DEFERRED_REQUIREMENTS",
+  "records": [
+    {
+      "ITEM": "released manufacturing BOM",
+      "WAIT_CLASS": "WAIT_FOR_FIRST_BUILD",
+      "STATUS": "OPEN",
+      "REASON": "No authoritative evidence supplied."
+    },
+    {
+      "ITEM": "actual materials/processes/deviations",
+      "WAIT_CLASS": "WAIT_FOR_FIRST_BUILD",
+      "STATUS": "OPEN",
+      "REASON": "No authoritative evidence supplied."
+    },
+    {
+      "ITEM": "configuration verification",
+      "WAIT_CLASS": "WAIT_FOR_FIRST_BUILD",
+      "STATUS": "OPEN",
+      "REASON": "No authoritative evidence supplied."
+    },
+    {
+      "ITEM": "absorber performance F-x/F-v",
+      "WAIT_CLASS": "WAIT_FOR_COMPONENT_TEST",
+      "STATUS": "OPEN",
+      "REASON": "No authoritative evidence supplied."
+    },
+    {
+      "ITEM": "friction/contact laws",
+      "WAIT_CLASS": "WAIT_FOR_COMPONENT_TEST",
+      "STATUS": "OPEN",
+      "REASON": "No authoritative evidence supplied."
+    },
+    {
+      "ITEM": "instrumented raw data",
+      "WAIT_CLASS": "WAIT_FOR_INSTRUMENTED_TEST",
+      "STATUS": "OPEN",
+      "REASON": "No authoritative evidence supplied."
+    },
+    {
+      "ITEM": "vehicle pulse/initial velocity",
+      "WAIT_CLASS": "WAIT_FOR_SLED",
+      "STATUS": "OPEN",
+      "REASON": "No authoritative evidence supplied."
+    },
+    {
+      "ITEM": "14-input closure",
+      "WAIT_CLASS": "WAIT_FOR_FE",
+      "STATUS": "OPEN",
+      "REASON": "No authoritative evidence supplied."
+    },
+    {
+      "ITEM": "occupant/vehicle safety evidence",
+      "WAIT_CLASS": "WAIT_FOR_FULL_VEHICLE",
+      "STATUS": "OPEN",
+      "REASON": "No authoritative evidence supplied."
+    }
+  ]
+}

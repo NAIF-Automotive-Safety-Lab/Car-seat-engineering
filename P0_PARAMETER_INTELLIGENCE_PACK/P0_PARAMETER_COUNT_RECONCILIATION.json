@@ -1,0 +1,27 @@
+{
+  "DOCUMENT": "P0_PARAMETER_COUNT_RECONCILIATION",
+  "RAW_NUMERICAL_VALUES": 846,
+  "PARTITION": {
+    "TRUE_ENGINEERING_VALUES": 836,
+    "NON_ENGINEERING_NUMBERS": 3,
+    "UNRESOLVED_RAW_VALUES": 7
+  },
+  "PRIMARY_CLASSIFICATION_PARTITION": {
+    "DESIGN_REFERENCE": 441,
+    "DESIGN_TARGET": 2,
+    "ENGINEERING_ASSUMPTION": 196,
+    "SOURCE_STUDY_VALUE": 179,
+    "UNRESOLVED_ENGINEERING_VALUE": 18
+  },
+  "CHECKS": {
+    "raw_partition_sum": 846,
+    "engineering_partition_sum": 836,
+    "nonengineering_plus_unresolved_plus_engineering": 846,
+    "published_discrepancy_explained": "The 18 are engineering values retained by the prior engineering counter but not assigned to one of the four prior buckets; 7 raw tokens were neither engineering nor non-engineering under the prior heuristic and remain unresolved raw values.",
+    "double_counting": "FORBIDDEN_IN_THIS_RECONCILIATION"
+  },
+  "PHYSICAL_MEASUREMENTS": 0,
+  "TEST_RESULTS": 0,
+  "MISSING_PARAMETERS": 15,
+  "STATUS": "PASS_WITH_EXPLICIT_UNRESOLVED_BUCKET"
+}

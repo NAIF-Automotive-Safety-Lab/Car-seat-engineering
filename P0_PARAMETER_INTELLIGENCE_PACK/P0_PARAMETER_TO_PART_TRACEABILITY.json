@@ -1,0 +1,35 @@
+{
+  "DOCUMENT": "P0_PARAMETER_TO_PART_TRACEABILITY",
+  "records": [
+    {
+      "PARAMETER_GROUP": "bilateral load path",
+      "PARTS": [
+        "110L",
+        "110R",
+        "120"
+      ]
+    },
+    {
+      "PARAMETER_GROUP": "ride-down",
+      "PARTS": [
+        "120",
+        "130"
+      ]
+    },
+    {
+      "PARAMETER_GROUP": "rotation control",
+      "PARTS": [
+        "150L",
+        "150R",
+        "160"
+      ]
+    },
+    {
+      "PARAMETER_GROUP": "state/rebound",
+      "PARTS": [
+        "170",
+        "180"
+      ]
+    }
+  ]
+}
