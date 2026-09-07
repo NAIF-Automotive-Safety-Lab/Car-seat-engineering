@@ -1,0 +1,34 @@
+{
+  "INPUT_ID": "mass",
+  "TARGET_DEFINITION": "Complete P0 functional-development assembly for P0-FD-CFG-001, controlled against the complete immutable R4.1 hardware/body set; any physical deviation must be recorded before measurement.",
+  "CONFIGURATION_ID": "P0-FD-CFG-001",
+  "ARTICLE_SERIAL": "P0FD-20260907-001",
+  "R4_1_SHA256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "BODY_SET_OR_ASSEMBLY_SET": "R4.1 complete verified 62-solid assembly as the engineering mapping target; P0 functional-development assembly is the measured article only when physically fabricated and configuration-verified.",
+  "INCLUDED_COMPONENTS": [
+    "P0V0-100",
+    "P0V0-200",
+    "P0V0-300",
+    "P0V0-310",
+    "P0V0-400",
+    "P0V0-500",
+    "P0V0-600",
+    "P0V0-700",
+    "P0V0-800",
+    "P0V0-900"
+  ],
+  "EXCLUDED_COMPONENTS": [
+    "occupant or occupant surrogate unless explicitly part of the measured configuration",
+    "measurement fixture and supports",
+    "tools",
+    "packaging",
+    "unauthorized temporary components"
+  ],
+  "LOADING_CONDITION": "To be recorded before measurement; no occupant, ballast, fixture, or temporary component may be included without explicit mapping.",
+  "TEMPORARY_COMPONENTS": "None evidenced; any temporary component must be recorded before measurement.",
+  "FIXTURE_EXCLUSION_RULE": "Subtract documented fixture/support tare; exclude tools, packaging, supports, and unauthorized components.",
+  "RATIONALE": "Mass input is defined as the mass of the exact controlled article/configuration represented by the model target, not a generic seat mass. The 62-solid R4.1 set is the immutable traceability basis.",
+  "STATUS": "DEFINED_NOT_MEASURED",
+  "BLOCKER": "No fabricated/configuration-verified physical article is evidenced in the current environment.",
+  "NEXT_ACTION": "External fabrication and configuration verification must occur before weighing."
+}

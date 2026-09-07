@@ -1,0 +1,14 @@
+{
+  "DOCUMENT": "RAW_MEASUREMENT_MANIFEST",
+  "INPUT_ID": "mass",
+  "STATUS": "AWAITING_MEASUREMENT",
+  "RAW_FILE": null,
+  "RAW_FILE_SHA256": null,
+  "FILE_SIZE": null,
+  "ACQUISITION_TIMESTAMP": null,
+  "INSTRUMENT_ID": null,
+  "CALIBRATION_ID": null,
+  "CONFIGURATION_ID": "P0-FD-CFG-001",
+  "SERIAL": "P0FD-20260907-001",
+  "RULE": "No raw file exists; no placeholder reading generated."
+}

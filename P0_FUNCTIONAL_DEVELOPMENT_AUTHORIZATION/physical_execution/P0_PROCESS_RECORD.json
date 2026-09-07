@@ -1,0 +1,13 @@
+{
+  "DOCUMENT": "P0_PROCESS_RECORD",
+  "CONFIGURATION_ID": "P0-FD-CFG-001",
+  "SERIAL": "P0FD-20260907-001",
+  "STATUS": "OPEN",
+  "ACTUAL_FABRICATION_PROCESS": null,
+  "MANUFACTURER_SUPPLIER": null,
+  "LOT_BATCH": null,
+  "FABRICATION_DATE": null,
+  "OPERATOR": null,
+  "EVIDENCE": [],
+  "RULE": "No fabrication claim without external records."
+}

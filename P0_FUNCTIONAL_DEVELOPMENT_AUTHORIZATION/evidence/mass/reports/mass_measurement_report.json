@@ -1,0 +1,14 @@
+{
+  "DOCUMENT": "MASS_MEASUREMENT_REPORT",
+  "INPUT_ID": "mass",
+  "STATUS": "AWAITING_MEASUREMENT",
+  "RAW_READINGS": null,
+  "TARE": null,
+  "CORRECTED_READINGS": null,
+  "STATISTICAL_REDUCTION": null,
+  "FINAL_VALUE": null,
+  "UNIT": null,
+  "UNCERTAINTY": null,
+  "METHOD": "Awaiting real calibrated measurement",
+  "BLOCKER": "Physical article, instrument, calibration, and raw readings unavailable."
+}
