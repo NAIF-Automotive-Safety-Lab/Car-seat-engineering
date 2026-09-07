@@ -1,0 +1,73 @@
+{
+  "LOCK170": [
+    {
+      "OPTION": "Mechanical pawl + capture",
+      "STATUS": "CANDIDATE",
+      "SOURCE_BASIS": "V6/V7 multi-state lock architecture",
+      "SELECTION_CRITERIA": [
+        "positive engagement",
+        "reverse-load retention",
+        "fault behavior",
+        "latency",
+        "jam resistance"
+      ]
+    },
+    {
+      "OPTION": "Lock pin + capture pocket",
+      "STATUS": "CANDIDATE",
+      "SOURCE_BASIS": "V6/V7 lock-pin architecture",
+      "SELECTION_CRITERIA": [
+        "alignment",
+        "positive capture",
+        "reverse-load retention",
+        "fault behavior"
+      ]
+    },
+    {
+      "OPTION": "Inertia-driven pawl/cam",
+      "STATUS": "CANDIDATE",
+      "SOURCE_BASIS": "V6 inertial mass/cam/pawl concept",
+      "SELECTION_CRITERIA": [
+        "trigger repeatability",
+        "false trigger resistance",
+        "latency",
+        "fail-safe"
+      ]
+    }
+  ],
+  "REBOUND180": [
+    {
+      "OPTION": "Bidirectional damper",
+      "STATUS": "CANDIDATE",
+      "SOURCE_BASIS": "V5/V7 rebound concept",
+      "SELECTION_CRITERIA": [
+        "reverse-motion control",
+        "repeatability",
+        "temperature sensitivity",
+        "energy dissipation"
+      ]
+    },
+    {
+      "OPTION": "Directional friction/lock element",
+      "STATUS": "CANDIDATE",
+      "SOURCE_BASIS": "V7 rebound-control concept",
+      "SELECTION_CRITERIA": [
+        "reverse-motion suppression",
+        "wear",
+        "binding",
+        "repeatability"
+      ]
+    },
+    {
+      "OPTION": "Mechanical end-stop + controlled compliance",
+      "STATUS": "CANDIDATE",
+      "SOURCE_BASIS": "V5/V7 end-stop/rebound concept",
+      "SELECTION_CRITERIA": [
+        "stop load",
+        "rebound",
+        "repeatability",
+        "containment"
+      ]
+    }
+  ]
+}

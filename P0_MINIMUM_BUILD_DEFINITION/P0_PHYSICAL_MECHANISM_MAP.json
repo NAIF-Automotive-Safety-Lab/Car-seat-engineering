@@ -1,0 +1,93 @@
+[
+  {
+    "REF": "100",
+    "PHYSICAL_PART": "Vehicle/test-fixture base",
+    "FUNCTION": "Primary structural reaction boundary",
+    "REQUIRED_INTERFACE": "100↔110L/110R and test fixture",
+    "REQUIRED_MOVEMENT_OR_EVIDENCE": "Supports bilateral load path; fixture datum"
+  },
+  {
+    "REF": "110L",
+    "PHYSICAL_PART": "Left longitudinal load path S1",
+    "FUNCTION": "Guidance/load sharing/anti-rack",
+    "REQUIRED_INTERFACE": "110L↔120↔130L and base 100",
+    "REQUIRED_MOVEMENT_OR_EVIDENCE": "Controlled longitudinal translation; left reaction"
+  },
+  {
+    "REF": "110R",
+    "PHYSICAL_PART": "Right longitudinal load path S2",
+    "FUNCTION": "Guidance/load sharing/anti-rack",
+    "REQUIRED_INTERFACE": "110R↔120↔130R and base 100",
+    "REQUIRED_MOVEMENT_OR_EVIDENCE": "Controlled longitudinal translation; right reaction"
+  },
+  {
+    "REF": "120",
+    "PHYSICAL_PART": "Seat carriage",
+    "FUNCTION": "Moving mass/interface carrier",
+    "REQUIRED_INTERFACE": "120↔110L/R; 120↔130; 120↔160/rotation path",
+    "REQUIRED_MOVEMENT_OR_EVIDENCE": "Longitudinal translation x(t)"
+  },
+  {
+    "REF": "130",
+    "PHYSICAL_PART": "Ride-down energy management",
+    "FUNCTION": "Dissipative longitudinal path",
+    "REQUIRED_INTERFACE": "130↔120 and 110/base path",
+    "REQUIRED_MOVEMENT_OR_EVIDENCE": "Progressive energy absorption"
+  },
+  {
+    "REF": "140",
+    "PHYSICAL_PART": "Pelvic-control / anti-submarining pan",
+    "FUNCTION": "Pelvic trajectory/load distribution",
+    "REQUIRED_INTERFACE": "140↔120",
+    "REQUIRED_MOVEMENT_OR_EVIDENCE": "Occupant-interface function; not required for the six-function bare mechanism demonstrator"
+  },
+  {
+    "REF": "150L/150R",
+    "PHYSICAL_PART": "Seatback rotation-control links",
+    "FUNCTION": "Independent rotation-limiting path",
+    "REQUIRED_INTERFACE": "150↔160 and hinge/control structure",
+    "REQUIRED_MOVEMENT_OR_EVIDENCE": "Seatback rotation θ(t)"
+  },
+  {
+    "REF": "160",
+    "PHYSICAL_PART": "Seatback frame",
+    "FUNCTION": "Torso/head structural support",
+    "REQUIRED_INTERFACE": "160↔150 and hinge/J",
+    "REQUIRED_MOVEMENT_OR_EVIDENCE": "Rotation about hinge axis; structural support"
+  },
+  {
+    "REF": "170",
+    "PHYSICAL_PART": "Multi-state lock",
+    "FUNCTION": "State transition/constraint",
+    "REQUIRED_INTERFACE": "170↔seatback/carriage mechanism",
+    "REQUIRED_MOVEMENT_OR_EVIDENCE": "Changes mechanical constraint state"
+  },
+  {
+    "REF": "180",
+    "PHYSICAL_PART": "Rebound-control",
+    "FUNCTION": "Reverse-motion control",
+    "REQUIRED_INTERFACE": "180↔120/110",
+    "REQUIRED_MOVEMENT_OR_EVIDENCE": "Controls return/rebound phase"
+  },
+  {
+    "REF": "190",
+    "PHYSICAL_PART": "Restraint interface",
+    "FUNCTION": "Independent restraint load path",
+    "REQUIRED_INTERFACE": "190↔structural frame/base",
+    "REQUIRED_MOVEMENT_OR_EVIDENCE": "Restraint continuity; vehicle-specific capacity remains unproven"
+  },
+  {
+    "REF": "200",
+    "PHYSICAL_PART": "Torso/head guidance",
+    "FUNCTION": "Trajectory-control envelope",
+    "REQUIRED_INTERFACE": "200↔160/occupant interface",
+    "REQUIRED_MOVEMENT_OR_EVIDENCE": "Occupant guidance; not required for bare six-function mechanism"
+  },
+  {
+    "REF": "210",
+    "PHYSICAL_PART": "Sensor/trigger interface",
+    "FUNCTION": "Event recognition/instrumentation",
+    "REQUIRED_INTERFACE": "210↔100/120/130/170/180",
+    "REQUIRED_MOVEMENT_OR_EVIDENCE": "Provides measured observables/synchronization"
+  }
+]

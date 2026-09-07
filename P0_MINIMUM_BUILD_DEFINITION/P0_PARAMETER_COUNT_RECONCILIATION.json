@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-09-07T04:25:52.695060+03:00",
+  "source_claims_supplied_by_user": {
+    "TRUE_ENGINEERING_VALUES": 836,
+    "CATEGORY_SUM": {
+      "441": 441,
+      "2": 2,
+      "196": 196,
+      "179": 179
+    },
+    "CATEGORY_SUM_TOTAL": 818
+  },
+  "mathematical_reconciliation": {
+    "836_minus_818": 18,
+    "status": "ARITHMETICALLY_RECONCILED_ONLY"
+  },
+  "critical_finding": "The existence of the 18-record delta is mathematically proven, but the 18 individual records cannot be identified from the currently retrievable artifact set because no authoritative 836-record classified table/export was located in the File Library search.",
+  "missing_artifact_required_to_identify_18": [
+    "The exact 836-row engineering-value ledger/export used by the prior counter.",
+    "Stable PARAMETER_ID for every row.",
+    "Exactly-one-primary-classification field for every row.",
+    "Source/page/section provenance for each row."
+  ],
+  "current_run_clean_set": {
+    "true_parameters": 14,
+    "engineering_relationships": 21,
+    "physical_measurements": 0,
+    "test_results": 0
+  },
+  "zero_bypass": "The 18 are not fabricated, allocated, or hidden."
+}

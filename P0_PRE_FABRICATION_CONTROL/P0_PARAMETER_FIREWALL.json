@@ -1,0 +1,44 @@
+[
+  {
+    "VALUE": "180 mm",
+    "SOURCE_STATUS": "DESIGN_TARGET",
+    "ENGINEERING_STATUS": "RIDE_DOWN_TARGET",
+    "PHYSICAL_STATUS": "NOT_MEASURED",
+    "P0_USE": "Core design target only"
+  },
+  {
+    "VALUE": "18–22 kN",
+    "SOURCE_STATUS": "DESIGN_TARGET",
+    "ENGINEERING_STATUS": "ABSORBER_TARGET",
+    "PHYSICAL_STATUS": "NOT_MEASURED",
+    "P0_USE": "Absorber selection/characterization target only"
+  },
+  {
+    "VALUE": "25.6 g",
+    "SOURCE_STATUS": "SOURCE_STUDY_VALUE",
+    "ENGINEERING_STATUS": "STUDY_LOAD_CASE",
+    "PHYSICAL_STATUS": "NOT_MEASURED",
+    "P0_USE": "Reference only"
+  },
+  {
+    "VALUE": "47.5° → 24°",
+    "SOURCE_STATUS": "SOURCE_STUDY_VALUE",
+    "ENGINEERING_STATUS": "SEATBACK_STUDY_RESULT",
+    "PHYSICAL_STATUS": "NOT_MEASURED",
+    "P0_USE": "Reference only"
+  },
+  {
+    "VALUE": "≥2.5 g",
+    "SOURCE_STATUS": "DESIGN_REFERENCE_ONLY",
+    "ENGINEERING_STATUS": "TRIGGER_REFERENCE",
+    "PHYSICAL_STATUS": "NOT_MEASURED",
+    "P0_USE": "No P0 validated trigger threshold"
+  },
+  {
+    "VALUE": "<20 ms",
+    "SOURCE_STATUS": "DESIGN_REFERENCE_ONLY",
+    "ENGINEERING_STATUS": "LOCK_TIMING_REFERENCE",
+    "PHYSICAL_STATUS": "NOT_MEASURED",
+    "P0_USE": "No P0 validated timing"
+  }
+]

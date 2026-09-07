@@ -1,0 +1,76 @@
+{
+  "AUTHORITY_FILE": "P0_PRE_FABRICATION_AUTHORITY.json",
+  "timestamp": "2026-09-07T04:31:44.371695+03:00",
+  "R4_1": {
+    "status": "FROZEN",
+    "SHA256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "mutation_allowed": false
+  },
+  "R4_2": {
+    "status": "NOT_AUTHORIZED"
+  },
+  "FE": {
+    "status": "NOT_AUTHORIZED"
+  },
+  "SAFETY_VALIDATION": {
+    "status": "NOT_AUTHORIZED"
+  },
+  "CORE_CONFIGURATION": [
+    "100",
+    "110L",
+    "110R",
+    "120",
+    "130L/130R",
+    "150L/150R",
+    "160",
+    "170",
+    "180",
+    "J",
+    "210"
+  ],
+  "OPTIONAL_EXTENSION": [
+    "140",
+    "190",
+    "200"
+  ],
+  "DEFERRED": [
+    "vehicle-specific datum/hardpoints",
+    "validated vehicle pulse",
+    "validated initial velocity",
+    "friction/contact law",
+    "contact damping/restitution",
+    "joint/bolt compliance validation",
+    "FE material/contact cards",
+    "occupant/ATD integration",
+    "full-vehicle validation"
+  ],
+  "REFERENCE_ONLY": [
+    "source-study values",
+    "regulatory mapping values",
+    "illustrative values",
+    "design-board reference values not released"
+  ],
+  "GATE": "PRE_FABRICATION_BLOCKED",
+  "PHYSICAL_EVIDENCE": {
+    "measurements": 0,
+    "test_results": 0,
+    "promotion_of_nonphysical_data": 0
+  },
+  "COUNTER_RECONCILIATION": {
+    "asserted_total": 836,
+    "auditable_subtotal": 818,
+    "delta": 18,
+    "identities": "UNRESOLVED"
+  },
+  "FIREWALL_RULE": "TARGET/STUDY/REFERENCE/CAD ≠ PHYSICAL_MEASUREMENT",
+  "REQUIRED_NEXT_ARTIFACTS": [
+    "released critical geometry/interface control",
+    "fixture definition",
+    "material/fastener identification",
+    "controlled lock/rebound implementation choice",
+    "instrument mounts",
+    "safe end-stop configuration",
+    "serialized absorber/module selection"
+  ],
+  "release_status": "PRE-FABRICATION_BLOCKED"
+}

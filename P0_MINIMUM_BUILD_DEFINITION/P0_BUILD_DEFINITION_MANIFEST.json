@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-09-07T04:25:52.695060+03:00",
+  "MINIMUM_P0_BUILD_SET_STATUS": "DEFINED_NOT_RELEASED",
+  "PARAMETER_AUDIT_STATUS": "PARTIAL",
+  "COUNTER_RECONCILIATION_STATUS": "PARTIAL — 18 mathematically unaccounted but not individually identifiable",
+  "MINIMUM_PHYSICAL_ARTICLE": "P0-FD-MIN dual-side non-occupant integrated mechanism demonstrator",
+  "R4.1": "FROZEN",
+  "R4.2": "NOT_AUTHORIZED",
+  "PHYSICAL_DATA": 0,
+  "FE": "NOT_AUTHORIZED",
+  "SAFETY_VALIDATION": "NOT_AUTHORIZED",
+  "OUTPUTS": [
+    {
+      "file": "JOHN_RED_TEAM_REVIEW.json",
+      "size": 1290,
+      "sha256": "d47a37f833e41768be9dc61560d528947a3f1815d8e3eff17a77712ac04149e0"
+    },
+    {
+      "file": "P0_COST_MINIMUM_ARCHITECTURE.md",
+      "size": 1174,
+      "sha256": "f8d87637f92c57404d1868f5ae63da8f241285ccba882df504020066129be264"
+    },
+    {
+      "file": "P0_DEFERRED_REQUIREMENTS.json",
+      "size": 1605,
+      "sha256": "c80fdc70b39bd11ab5afd5e75fd903a81af0a56005ffb4ca0cd3ac5ddbac8b66"
+    },
+    {
+      "file": "P0_FINAL_BUILD_DECISION.md",
+      "size": 2898,
+      "sha256": "65fd7c7a24f5d080169f1ba196f75e990d18e91af305d24316fdc3eec3d696c9"
+    },
+    {
+      "file": "P0_LOCK_IMPLEMENTATION_OPTIONS.md",
+      "size": 1264,
+      "sha256": "926f76570cfb9f4491a5a2b1e638c85afbf05a04f8e2a5b6190b35a90d98a070"
+    },
+    {
+      "file": "P0_MINIMUM_BUILD_BOM.json",
+      "size": 5085,
+      "sha256": "7322319e3eac249db701ec1bc5718ea34a15cbdfdcc1b31b6f9a7f003dffebdf"
+    },
+    {
+      "file": "P0_MINIMUM_BUILD_BOM.md",
+      "size": 1387,
+      "sha256": "9f00cddc354d3b27920aa6d819f5cf5178d07234156dfb5f940d881a4af7dd47"
+    },
+    {
+      "file": "P0_MINIMUM_PHYSICAL_ARTICLE.json",
+      "size": 2353,
+      "sha256": "0a52aa6a6fccf3c938586ae153f5c5ba4e7e2ba7b10de0b75d00e5f62ddfeae1"
+    },
+    {
+      "file": "P0_PARAMETER_COUNT_RECONCILIATION.json",
+      "size": 1167,
+      "sha256": "f9ee39c00280318bf2c02fa1561e3a9030ac4f980560cd2d7fbb4835ade84a1a"
+    },
+    {
+      "file": "P0_PARAMETER_COUNT_RECONCILIATION.md",
+      "size": 1096,
+      "sha256": "0c9c1fa8913c9224ff763a43bf7d83bcb9feb46e0ed4355a38af924eee37f996"
+    },
+    {
+      "file": "P0_PARAMETER_FIREWALL.json",
+      "size": 831,
+      "sha256": "4a185841daa532d824bb93fb1624b926d5778ea5d03f7146459bdaaed8630e92"
+    },
+    {
+      "file": "P0_PARAMETER_TO_PART_TRACEABILITY.json",
+      "size": 2409,
+      "sha256": "cd21f957710b693a72b946e6f647b5419799962c7da578e4b50ea0e4d074db81"
+    },
+    {
+      "file": "P0_PARAMETER_TO_TEST_TRACEABILITY.json",
+      "size": 1342,
+      "sha256": "10b8f7c8d3921b74660037cd19a70fde6d91d66e5bd85018c01bcb538db0cd59"
+    },
+    {
+      "file": "P0_PHYSICAL_MECHANISM_MAP.json",
+      "size": 3507,
+      "sha256": "2c41afb0b9413280fa8178414666c7e371843d1752b1b932fa5ee730173a9ee1"
+    },
+    {
+      "file": "P0_STATE_MACHINE_PHYSICAL_IMPLEMENTATION.md",
+      "size": 1560,
+      "sha256": "4206d7a73db37ee56edb0306cf13d96c5aacffb3b1e47ec4b0161037ec26fe48"
+    },
+    {
+      "file": "P0_THREE_LEVEL_DEFINITION.json",
+      "size": 3454,
+      "sha256": "b27f047aa5b46280c1105926ab2dcb842713c686744bd9aa865a0369e0b3b762"
+    }
+  ]
+}

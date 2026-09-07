@@ -1,0 +1,193 @@
+{
+  "timestamp": "2026-09-07T04:31:44.371695+03:00",
+  "CORE_CONFIGURATION": "100 + 110L + 110R + 120 + 130L/R + 150L/R + 160 + 170 + 180 + J + 210",
+  "OPTIONAL_EXTENSION": "140 + 190 + 200",
+  "DEFERRED": [
+    "vehicle-specific datum/hardpoints",
+    "validated vehicle pulse",
+    "validated initial velocity",
+    "friction/contact law",
+    "contact damping/restitution",
+    "joint/bolt compliance validation",
+    "FE material/contact cards",
+    "occupant/ATD integration",
+    "full-vehicle validation"
+  ],
+  "REFERENCE_ONLY": [
+    "source-study values",
+    "regulatory mapping values",
+    "illustrative values",
+    "design-board reference values not released"
+  ],
+  "matrix": [
+    {
+      "PART": "100",
+      "FUNCTION": "Base/test fixture",
+      "REQUIRED_STATUS": "CORE_REQUIRED",
+      "SOURCE": "Source architecture",
+      "EVIDENCE_CLASS": "SOURCE_ARCHITECTURE + DESIGN_DEFINITION",
+      "GEOMETRY_STATUS": "Native R4.1 geometry required",
+      "INTERFACE_STATUS": "Drawing/BOM required",
+      "FABRICATION_STATUS": "PRE-FABRICATION_DEFINITION_ONLY",
+      "VALIDATION_DEPENDENCY": "Component/function testing before performance claims; physical validation not yet done",
+      "PHYSICAL_VERIFICATION_AFTER_BUILD": "Yes, by controlled inspection/component or integrated test as applicable; no validation currently claimed."
+    },
+    {
+      "PART": "110L",
+      "FUNCTION": "S1 left rail",
+      "REQUIRED_STATUS": "CORE_REQUIRED",
+      "SOURCE": "Source architecture",
+      "EVIDENCE_CLASS": "SOURCE_ARCHITECTURE + DESIGN_DEFINITION",
+      "GEOMETRY_STATUS": "Native R4.1",
+      "INTERFACE_STATUS": "Native drawing",
+      "FABRICATION_STATUS": "PRE-FABRICATION_DEFINITION_ONLY",
+      "VALIDATION_DEPENDENCY": "Component/function testing before performance claims; physical validation not yet done",
+      "PHYSICAL_VERIFICATION_AFTER_BUILD": "Yes, by controlled inspection/component or integrated test as applicable; no validation currently claimed."
+    },
+    {
+      "PART": "110R",
+      "FUNCTION": "S2 right rail",
+      "REQUIRED_STATUS": "CORE_REQUIRED",
+      "SOURCE": "Source architecture",
+      "EVIDENCE_CLASS": "SOURCE_ARCHITECTURE + DESIGN_DEFINITION",
+      "GEOMETRY_STATUS": "Native R4.1",
+      "INTERFACE_STATUS": "Native drawing",
+      "FABRICATION_STATUS": "PRE-FABRICATION_DEFINITION_ONLY",
+      "VALIDATION_DEPENDENCY": "Component/function testing before performance claims; physical validation not yet done",
+      "PHYSICAL_VERIFICATION_AFTER_BUILD": "Yes, by controlled inspection/component or integrated test as applicable; no validation currently claimed."
+    },
+    {
+      "PART": "120",
+      "FUNCTION": "Carriage",
+      "REQUIRED_STATUS": "CORE_REQUIRED",
+      "SOURCE": "Source architecture",
+      "EVIDENCE_CLASS": "SOURCE_ARCHITECTURE + DESIGN_DEFINITION",
+      "GEOMETRY_STATUS": "Native R4.1",
+      "INTERFACE_STATUS": "Native drawing",
+      "FABRICATION_STATUS": "PRE-FABRICATION_DEFINITION_ONLY",
+      "VALIDATION_DEPENDENCY": "Component/function testing before performance claims; physical validation not yet done",
+      "PHYSICAL_VERIFICATION_AFTER_BUILD": "Yes, by controlled inspection/component or integrated test as applicable; no validation currently claimed."
+    },
+    {
+      "PART": "130L/130R",
+      "FUNCTION": "See immutable/source architecture",
+      "REQUIRED_STATUS": "CORE_REQUIRED",
+      "SOURCE": "V5/V7 architecture",
+      "EVIDENCE_CLASS": "SOURCE_ARCHITECTURE + DESIGN_DEFINITION",
+      "GEOMETRY_STATUS": "NOT_RELEASED",
+      "INTERFACE_STATUS": "NOT_RELEASED",
+      "FABRICATION_STATUS": "PRE-FABRICATION_DEFINITION_ONLY",
+      "VALIDATION_DEPENDENCY": "Component/function testing before performance claims; physical validation not yet done",
+      "PHYSICAL_VERIFICATION_AFTER_BUILD": "Yes, by controlled inspection/component or integrated test as applicable; no validation currently claimed."
+    },
+    {
+      "PART": "150L/150R",
+      "FUNCTION": "Rotation-control links",
+      "REQUIRED_STATUS": "CORE_REQUIRED",
+      "SOURCE": "Source architecture",
+      "EVIDENCE_CLASS": "SOURCE_ARCHITECTURE + DESIGN_DEFINITION",
+      "GEOMETRY_STATUS": "Native R4.1",
+      "INTERFACE_STATUS": "Native drawing",
+      "FABRICATION_STATUS": "PRE-FABRICATION_DEFINITION_ONLY",
+      "VALIDATION_DEPENDENCY": "Component/function testing before performance claims; physical validation not yet done",
+      "PHYSICAL_VERIFICATION_AFTER_BUILD": "Yes, by controlled inspection/component or integrated test as applicable; no validation currently claimed."
+    },
+    {
+      "PART": "160",
+      "FUNCTION": "Seatback frame",
+      "REQUIRED_STATUS": "CORE_REQUIRED",
+      "SOURCE": "Source architecture",
+      "EVIDENCE_CLASS": "SOURCE_ARCHITECTURE + DESIGN_DEFINITION",
+      "GEOMETRY_STATUS": "Native R4.1",
+      "INTERFACE_STATUS": "Native drawing",
+      "FABRICATION_STATUS": "PRE-FABRICATION_DEFINITION_ONLY",
+      "VALIDATION_DEPENDENCY": "Component/function testing before performance claims; physical validation not yet done",
+      "PHYSICAL_VERIFICATION_AFTER_BUILD": "Yes, by controlled inspection/component or integrated test as applicable; no validation currently claimed."
+    },
+    {
+      "PART": "170",
+      "FUNCTION": "Multi-state lock",
+      "REQUIRED_STATUS": "CORE_REQUIRED",
+      "SOURCE": "Source architecture",
+      "EVIDENCE_CLASS": "SOURCE_ARCHITECTURE + DESIGN_DEFINITION",
+      "GEOMETRY_STATUS": "Functional concept only; implementation not uniquely released",
+      "INTERFACE_STATUS": "Component test",
+      "FABRICATION_STATUS": "PRE-FABRICATION_DEFINITION_ONLY",
+      "VALIDATION_DEPENDENCY": "Component/function testing before performance claims; physical validation not yet done",
+      "PHYSICAL_VERIFICATION_AFTER_BUILD": "Yes, by controlled inspection/component or integrated test as applicable; no validation currently claimed."
+    },
+    {
+      "PART": "180",
+      "FUNCTION": "Rebound-control module",
+      "REQUIRED_STATUS": "CORE_REQUIRED",
+      "SOURCE": "Source architecture",
+      "EVIDENCE_CLASS": "SOURCE_ARCHITECTURE + DESIGN_DEFINITION",
+      "GEOMETRY_STATUS": "Functional definition only",
+      "INTERFACE_STATUS": "Component test",
+      "FABRICATION_STATUS": "PRE-FABRICATION_DEFINITION_ONLY",
+      "VALIDATION_DEPENDENCY": "Component/function testing before performance claims; physical validation not yet done",
+      "PHYSICAL_VERIFICATION_AFTER_BUILD": "Yes, by controlled inspection/component or integrated test as applicable; no validation currently claimed."
+    },
+    {
+      "PART": "J",
+      "FUNCTION": "Hinge/pivot/fastener set",
+      "REQUIRED_STATUS": "CORE_REQUIRED",
+      "SOURCE": "Source architecture",
+      "EVIDENCE_CLASS": "SOURCE_ARCHITECTURE + DESIGN_DEFINITION",
+      "GEOMETRY_STATUS": "Exact geometry required",
+      "INTERFACE_STATUS": "Joint characterization",
+      "FABRICATION_STATUS": "PRE-FABRICATION_DEFINITION_ONLY",
+      "VALIDATION_DEPENDENCY": "Component/function testing before performance claims; physical validation not yet done",
+      "PHYSICAL_VERIFICATION_AFTER_BUILD": "Yes, by controlled inspection/component or integrated test as applicable; no validation currently claimed."
+    },
+    {
+      "PART": "210",
+      "FUNCTION": "Sensor/trigger panel",
+      "REQUIRED_STATUS": "CORE_REQUIRED",
+      "SOURCE": "Source architecture",
+      "EVIDENCE_CLASS": "SOURCE_ARCHITECTURE + DESIGN_DEFINITION",
+      "GEOMETRY_STATUS": "Mounting geometry required",
+      "INTERFACE_STATUS": "Calibration required",
+      "FABRICATION_STATUS": "PRE-FABRICATION_DEFINITION_ONLY",
+      "VALIDATION_DEPENDENCY": "Instrumentation calibration/verification required; no mechanism safety claim",
+      "PHYSICAL_VERIFICATION_AFTER_BUILD": "Yes, by controlled inspection/component or integrated test as applicable; no validation currently claimed."
+    },
+    {
+      "PART": "140",
+      "FUNCTION": "Pelvic/occupant interface",
+      "REQUIRED_STATUS": "OPTIONAL_INTEGRATED_OCCUPANT_INTERFACE_EXTENSION",
+      "SOURCE": "V5/V7 architecture",
+      "EVIDENCE_CLASS": "SOURCE_ARCHITECTURE",
+      "GEOMETRY_STATUS": "NOT_CORE_RELEASE",
+      "INTERFACE_STATUS": "VEHICLE/occupant dependent",
+      "FABRICATION_STATUS": "DEFERRED_FROM_CORE",
+      "VALIDATION_DEPENDENCY": "Separate occupant-interface/sled/vehicle evidence required",
+      "PHYSICAL_VERIFICATION_AFTER_BUILD": "Not part of P0-FD-MIN core evidence."
+    },
+    {
+      "PART": "190",
+      "FUNCTION": "Restraint interface",
+      "REQUIRED_STATUS": "OPTIONAL_INTEGRATED_OCCUPANT_INTERFACE_EXTENSION",
+      "SOURCE": "V5/V7 architecture",
+      "EVIDENCE_CLASS": "SOURCE_ARCHITECTURE",
+      "GEOMETRY_STATUS": "NOT_CORE_RELEASE",
+      "INTERFACE_STATUS": "VEHICLE/occupant dependent",
+      "FABRICATION_STATUS": "DEFERRED_FROM_CORE",
+      "VALIDATION_DEPENDENCY": "Separate occupant-interface/sled/vehicle evidence required",
+      "PHYSICAL_VERIFICATION_AFTER_BUILD": "Not part of P0-FD-MIN core evidence."
+    },
+    {
+      "PART": "200",
+      "FUNCTION": "Torso/head guidance",
+      "REQUIRED_STATUS": "OPTIONAL_INTEGRATED_OCCUPANT_INTERFACE_EXTENSION",
+      "SOURCE": "V5/V7 architecture",
+      "EVIDENCE_CLASS": "SOURCE_ARCHITECTURE",
+      "GEOMETRY_STATUS": "NOT_CORE_RELEASE",
+      "INTERFACE_STATUS": "VEHICLE/occupant dependent",
+      "FABRICATION_STATUS": "DEFERRED_FROM_CORE",
+      "VALIDATION_DEPENDENCY": "Separate occupant-interface/sled/vehicle evidence required",
+      "PHYSICAL_VERIFICATION_AFTER_BUILD": "Not part of P0-FD-MIN core evidence."
+    }
+  ],
+  "R4.1_SHA256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "PART": "140",
+    "STATUS": "OPTIONAL_EXTENSION",
+    "REASON": "Pelvic/occupant-interface function not required for six-function mechanism-only minimum; add for integrated occupant-interface P0."
+  },
+  {
+    "PART": "190",
+    "STATUS": "OPTIONAL_EXTENSION",
+    "REASON": "Restraint interface is vehicle/occupant dependent and not required for the core non-occupant mechanism demonstrator."
+  },
+  {
+    "PART": "200",
+    "STATUS": "OPTIONAL_EXTENSION",
+    "REASON": "Torso/head guidance requires occupant-interface scope and is deferred from the core mechanism demonstrator."
+  }
+]

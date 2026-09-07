@@ -1,0 +1,52 @@
+[
+  {
+    "ITEM": "vehicle datum and production hardpoints",
+    "WAIT_FOR": "WAIT_FOR_FE",
+    "WHY": "Not required to build a standalone bench mechanism; required for vehicle mapping."
+  },
+  {
+    "ITEM": "mass/CG/inertia as accepted physical values",
+    "WAIT_FOR": "WAIT_FOR_INSTRUMENTED_TEST",
+    "WHY": "Can be measured on exact article before high-fidelity dynamics."
+  },
+  {
+    "ITEM": "material density per lot",
+    "WAIT_FOR": "WAIT_FOR_FE",
+    "WHY": "Required for validated mass/material model."
+  },
+  {
+    "ITEM": "friction/contact stiffness/damping/restitution",
+    "WAIT_FOR": "WAIT_FOR_COMPONENT_TEST",
+    "WHY": "Need interface-specific characterization."
+  },
+  {
+    "ITEM": "absorber F-x/F-v",
+    "WAIT_FOR": "WAIT_FOR_FUNCTIONAL_ARTICLE",
+    "WHY": "The cartridge must be characterized before using it as a validated dynamic input."
+  },
+  {
+    "ITEM": "bolt stiffness/joint compliance",
+    "WAIT_FOR": "WAIT_FOR_COMPONENT_TEST",
+    "WHY": "Needed for compliant MBD/FE representations."
+  },
+  {
+    "ITEM": "vehicle pulse / initial velocity",
+    "WAIT_FOR": "WAIT_FOR_SLED",
+    "WHY": "These are event-boundary conditions and cannot be invented for the bench article."
+  },
+  {
+    "ITEM": "occupant/ATD integration",
+    "WAIT_FOR": "WAIT_FOR_SLED",
+    "WHY": "Early P0 is explicitly occupant-free."
+  },
+  {
+    "ITEM": "FE material cards / nonlinear contact",
+    "WAIT_FOR": "WAIT_FOR_FE",
+    "WHY": "FE is not authorized yet."
+  },
+  {
+    "ITEM": "full-vehicle compliance",
+    "WAIT_FOR": "WAIT_FOR_FULL_VEHICLE",
+    "WHY": "Outside first P0 scope."
+  }
+]

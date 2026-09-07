@@ -1,0 +1,54 @@
+{
+  "MINIMUM_PHYSICAL_ARTICLE": "P0-FD-MIN / P0-E core mechanism demonstrator",
+  "configuration": {
+    "mandatory": [
+      "100",
+      "110L",
+      "110R",
+      "120",
+      "130L/130R",
+      "150L/150R",
+      "160",
+      "170",
+      "180",
+      "J hinge/pivot/fastener set",
+      "210 instrumentation interface"
+    ],
+    "optional_for_core_mechanism": [
+      "140",
+      "190",
+      "200"
+    ],
+    "excluded": "human occupant / ATD for this first six-function proof article"
+  },
+  "why_minimum": [
+    "100 is required as a controlled structural reaction boundary.",
+    "110L+110R are both mandatory because bilateral load path is itself a core hypothesis; a single-side rig cannot prove bilateral load sharing/torsional control.",
+    "120 is the moving carriage required for controlled longitudinal translation.",
+    "130 is required to demonstrate the energy-management path.",
+    "150L+150R and 160 are required to demonstrate the separate seatback-rotation path.",
+    "170 is required to demonstrate state transition/constraint behavior.",
+    "180 is required to demonstrate rebound control.",
+    "J provides the hinge/pivot/joint interface.",
+    "210 is required to make the critical states and motion measurable/reproducible."
+  ],
+  "what_it_can_prove": [
+    "Bilateral guided carriage architecture at development-rig level",
+    "Controlled longitudinal translation at bench level",
+    "Existence/function of an explicit energy-management interface",
+    "Separate seatback rotation-control path",
+    "State-machine mechanical transition at development-model level",
+    "Rebound-control function",
+    "Measured mechanical kinematics and reaction channels"
+  ],
+  "what_it_cannot_prove": [
+    "Vehicle compatibility or regulatory hardpoints",
+    "Crash safety or occupant injury reduction",
+    "Production structural capacity",
+    "Certified restraint performance",
+    "Vehicle crash pulse equivalence",
+    "Full FE correlation",
+    "Sled/full-vehicle validation"
+  ],
+  "source_basis": "The first physical article master explicitly defines P0-E/V0 as a non-occupant integrated exploratory mechanism and lists the core real hardware modules; the full architecture separately retains 140/190/200 for pelvic/occupant interfaces. fileciteturn32file0L1-L10 fileciteturn32file1L1-L11"
+}

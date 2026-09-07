@@ -1,0 +1,76 @@
+[
+  {
+    "TEST": "P0-E01 guided translation/stop",
+    "PARAMETERS": [
+      "mass",
+      "friction",
+      "contact stiffness",
+      "contact damping",
+      "absorber F-x",
+      "absorber F-v"
+    ],
+    "OUTPUTS": [
+      "x(t)",
+      "v(t)",
+      "a(t)",
+      "S1",
+      "S2",
+      "absorber force"
+    ],
+    "STATUS": "DESIGN_DEFINED"
+  },
+  {
+    "TEST": "P0-E02 seatback rotation control",
+    "PARAMETERS": [
+      "joint compliance",
+      "bolt stiffness"
+    ],
+    "OUTPUTS": [
+      "theta(t)",
+      "link loads"
+    ],
+    "STATUS": "DESIGN_DEFINED"
+  },
+  {
+    "TEST": "P0-E03 rebound control",
+    "PARAMETERS": [
+      "friction",
+      "contact damping",
+      "restitution",
+      "absorber F-v"
+    ],
+    "OUTPUTS": [
+      "reverse velocity",
+      "secondary excursion",
+      "control force"
+    ],
+    "STATUS": "DESIGN_DEFINED"
+  },
+  {
+    "TEST": "P0-E04 state/lock",
+    "PARAMETERS": [
+      "bolt/joint stiffness as applicable",
+      "contact stiffness"
+    ],
+    "OUTPUTS": [
+      "state",
+      "engagement/release latency",
+      "residual motion"
+    ],
+    "STATUS": "DESIGN_DEFINED"
+  },
+  {
+    "TEST": "P0-A mass properties",
+    "PARAMETERS": [
+      "mass",
+      "CG",
+      "inertia"
+    ],
+    "OUTPUTS": [
+      "m",
+      "CG",
+      "I"
+    ],
+    "STATUS": "DESIGN_DEFINED"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "ISSUE": "836 vs 818 counter discrepancy",
+    "VERDICT": "UNPROVEN",
+    "ACTION": "Require exact 836-row source ledger; do not invent 18 identities."
+  },
+  {
+    "ISSUE": "Single-side rig proposed as minimum",
+    "VERDICT": "DISPUTE",
+    "ACTION": "Reject because bilateral load path is a core hypothesis."
+  },
+  {
+    "ISSUE": "18–22 kN treated as absorber performance",
+    "VERDICT": "MISCLASSIFIED",
+    "ACTION": "Keep as design target only."
+  },
+  {
+    "ISSUE": "180 mm treated as measured stroke",
+    "VERDICT": "MISCLASSIFIED",
+    "ACTION": "Keep as target/reference only."
+  },
+  {
+    "ISSUE": "25.6 g treated as T-OCS pulse",
+    "VERDICT": "MISCLASSIFIED",
+    "ACTION": "Keep as source-study reference."
+  },
+  {
+    "ISSUE": "H-point placeholder treated as vehicle hardpoint",
+    "VERDICT": "MISCLASSIFIED",
+    "ACTION": "Vehicle-specific data required."
+  },
+  {
+    "ISSUE": "P0-E includes optional occupant interface modules",
+    "VERDICT": "AGREE",
+    "ACTION": "Keep 140/190/200 out of the core six-function demonstrator unless that integrated function is under test."
+  },
+  {
+    "ISSUE": "Exact manufacturing release from concept boards",
+    "VERDICT": "UNPROVEN",
+    "ACTION": "Require native R4.1 critical geometry/drawing control."
+  }
+]

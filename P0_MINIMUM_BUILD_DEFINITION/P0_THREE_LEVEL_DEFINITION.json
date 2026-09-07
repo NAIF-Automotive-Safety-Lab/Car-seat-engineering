@@ -1,0 +1,128 @@
+{
+  "P0-GF": {
+    "purpose": "Geometry / fit only",
+    "required_parts": [
+      "100",
+      "110L",
+      "110R",
+      "120",
+      "160"
+    ],
+    "required_materials": "Released material identity is not required to establish geometry/fit; fabrication material must still be selected under controlled build authority.",
+    "required_dimensions": "Use immutable R4.1/native CAD geometry; concept-board values are references only.",
+    "required_decisions": [
+      "fixture datum/interface strategy",
+      "rail/carriage fit",
+      "seatback envelope",
+      "joint access"
+    ],
+    "required_instrumentation": [
+      "basic dimensional inspection"
+    ],
+    "allowed_tests": [
+      "fit/assembly inspection",
+      "manual motion/clearance checks"
+    ],
+    "forbidden_tests": [
+      "dynamic crash testing",
+      "occupant testing",
+      "safety claims"
+    ],
+    "evidence": [
+      "configuration ID",
+      "native geometry reference",
+      "inspection record"
+    ]
+  },
+  "P0-FD": {
+    "purpose": "Functional development article",
+    "required_parts": [
+      "100",
+      "110L",
+      "110R",
+      "120",
+      "130L/130R",
+      "150L/150R",
+      "160",
+      "170",
+      "180",
+      "J",
+      "210"
+    ],
+    "required_materials": "Controlled engineering selections tied to build drawing/BOM; no material value is to be invented from a concept board.",
+    "required_dimensions": "All critical interfaces from native R4.1; any exploratory deviation separately recorded.",
+    "required_decisions": [
+      "bilateral guidance",
+      "ride-down cartridge interface",
+      "seatback rotation path",
+      "lock implementation",
+      "rebound implementation",
+      "safe end-stops"
+    ],
+    "required_instrumentation": [
+      "carriage displacement",
+      "seatback angle",
+      "S1/S2 reaction channels or equivalent",
+      "absorber force/displacement",
+      "lock-state indication"
+    ],
+    "allowed_tests": [
+      "low-load mechanical motion",
+      "lock/rotate/rebound functional characterization",
+      "quasi-static component characterization"
+    ],
+    "forbidden_tests": [
+      "human occupant",
+      "vehicle crash",
+      "certification"
+    ],
+    "evidence": [
+      "build configuration",
+      "calibration IDs",
+      "raw data",
+      "test logs"
+    ]
+  },
+  "P0-TEST": {
+    "purpose": "Instrumented development test article",
+    "required_parts": [
+      "P0-FD hardware plus replaceable test modules"
+    ],
+    "required_materials": "Actual serialized materials/fasteners recorded",
+    "required_dimensions": "As-built measured dimensions and critical interface checks",
+    "required_decisions": [
+      "test load boundary",
+      "instrumentation channel mapping",
+      "module serialisation",
+      "failure containment"
+    ],
+    "required_instrumentation": [
+      "x(t)",
+      "v(t) if justified",
+      "a(t)",
+      "theta(t)",
+      "S1/S2",
+      "absorber F",
+      "absorber stroke",
+      "lock state",
+      "temperature",
+      "video"
+    ],
+    "allowed_tests": [
+      "controlled bench dynamics",
+      "interface/absorber/joint characterization",
+      "integrated non-occupant testing"
+    ],
+    "forbidden_tests": [
+      "unapproved occupant/sled testing",
+      "safety/certification claims"
+    ],
+    "evidence": [
+      "raw immutable data",
+      "calibration",
+      "uncertainty",
+      "configuration mapping",
+      "SHA-256"
+    ]
+  }
+}

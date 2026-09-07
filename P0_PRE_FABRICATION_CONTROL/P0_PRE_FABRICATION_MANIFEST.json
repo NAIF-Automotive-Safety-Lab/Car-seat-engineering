@@ -1,0 +1,51 @@
+{
+  "timestamp": "2026-09-07T04:31:44.371695+03:00",
+  "R4.1_SHA256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "artifacts": [
+    {
+      "file": "P0_CORE_CONFIGURATION_MATRIX.json",
+      "size": 9675,
+      "SHA256": "21a7b7aeeb368134fc03cfc89c52e18539da2c9ad33f46c07ddd8e7b3c3e9950"
+    },
+    {
+      "file": "P0_CORE_PART_TRACEABILITY.json",
+      "size": 7832,
+      "SHA256": "594c56b615224964501f57d882160c678b0731bcd9113be5b7a98c0b81aea8a7"
+    },
+    {
+      "file": "P0_CRITICAL_FABRICATION_GAP_REGISTER.json",
+      "size": 2639,
+      "SHA256": "f39342dc941737c4680c1b37d6a51642dce8d1d204666ff674c0ad60b8f969cb"
+    },
+    {
+      "file": "P0_LOCK_REBOUND_CANDIDATE_REGISTER.json",
+      "size": 1798,
+      "SHA256": "2fa0b328cc7f56ef743f7eb8ca866c5b091115d9fda8dcb8cd7b8b6737e928dc"
+    },
+    {
+      "file": "P0_OPTIONAL_EXTENSION_REGISTER.json",
+      "size": 598,
+      "SHA256": "0a5dd22f94588e4fd56bf3c1e8c022949747e1364bdd9146a28334d9b99fd50f"
+    },
+    {
+      "file": "P0_PARAMETER_FIREWALL.json",
+      "size": 1237,
+      "SHA256": "19fc194eef96853783b1d724ebc699be06d28c3444c9ad89e973b73b06721e80"
+    },
+    {
+      "file": "P0_PRE_FABRICATION_AUTHORITY.json",
+      "size": 1857,
+      "SHA256": "47729963073a2709e5b4356ac93cb2fe5f0883599e0c6af60aeb69dfde9c8882"
+    },
+    {
+      "file": "P0_PRE_FABRICATION_GATE_DECISION.md",
+      "size": 1499,
+      "SHA256": "4b5a4019e7ca435f8303aa3ac5029637326de2d685f8ddfcd9109d78f3e2a780"
+    },
+    {
+      "file": "P0_STATE_MACHINE_CONFIGURATION.md",
+      "size": 944,
+      "SHA256": "ab4a866b6d0a6e69f3fd25185f9af58ae54f2d5d3d1f87a55610c4212e736122"
+    }
+  ]
+}

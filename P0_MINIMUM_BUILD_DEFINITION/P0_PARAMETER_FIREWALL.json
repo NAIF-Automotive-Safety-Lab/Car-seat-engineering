@@ -1,0 +1,30 @@
+[
+  {
+    "value": "180 mm",
+    "SOURCE_STATUS": "DESIGN_TARGET",
+    "ENGINEERING_STATUS": "RIDE-DOWN_TARGET",
+    "PHYSICAL_STATUS": "NOT_MEASURED",
+    "P0_RELEVANCE": "Stroke design basis"
+  },
+  {
+    "value": "18–22 kN",
+    "SOURCE_STATUS": "DESIGN_TARGET",
+    "ENGINEERING_STATUS": "ABSORBER_FORCE_TARGET",
+    "PHYSICAL_STATUS": "NOT_MEASURED",
+    "P0_RELEVANCE": "Absorber target only"
+  },
+  {
+    "value": "25.6 g",
+    "SOURCE_STATUS": "SOURCE_STUDY_VALUE",
+    "ENGINEERING_STATUS": "STUDY_LOAD_CASE",
+    "PHYSICAL_STATUS": "NOT_MEASURED",
+    "P0_RELEVANCE": "Reference/methodology only"
+  },
+  {
+    "value": "47.5° → 24°",
+    "SOURCE_STATUS": "SOURCE_STUDY_VALUE",
+    "ENGINEERING_STATUS": "SEATBACK_STUDY_RESULT",
+    "PHYSICAL_STATUS": "NOT_MEASURED",
+    "P0_RELEVANCE": "Study benchmark only"
+  }
+]

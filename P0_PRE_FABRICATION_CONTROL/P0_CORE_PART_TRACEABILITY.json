@@ -1,0 +1,263 @@
+[
+  {
+    "PART": "100",
+    "REQUIRED_STATUS": "CORE_REQUIRED",
+    "PARAMETER_TRACEABILITY": [
+      "mass",
+      "CG",
+      "inertia",
+      "vehicle pulse",
+      "initial velocity"
+    ],
+    "SOURCE_TRACEABILITY": "Source architecture",
+    "TEST_TRACEABILITY": [
+      "P0-E01 guided translation/stop",
+      "P0-E02 seatback rotation control",
+      "P0-E03 rebound control",
+      "P0-E04 state/lock",
+      "P0-A mass properties"
+    ],
+    "PHYSICAL_VERIFICATION_BOUNDARY": "Yes, by controlled inspection/component or integrated test as applicable; no validation currently claimed."
+  },
+  {
+    "PART": "110L",
+    "REQUIRED_STATUS": "CORE_REQUIRED",
+    "PARAMETER_TRACEABILITY": [
+      "mass",
+      "CG",
+      "inertia",
+      "friction"
+    ],
+    "SOURCE_TRACEABILITY": "Source architecture",
+    "TEST_TRACEABILITY": [
+      "P0-E01 guided translation/stop",
+      "P0-E02 seatback rotation control",
+      "P0-E03 rebound control",
+      "P0-E04 state/lock",
+      "P0-A mass properties"
+    ],
+    "PHYSICAL_VERIFICATION_BOUNDARY": "Yes, by controlled inspection/component or integrated test as applicable; no validation currently claimed."
+  },
+  {
+    "PART": "110R",
+    "REQUIRED_STATUS": "CORE_REQUIRED",
+    "PARAMETER_TRACEABILITY": [
+      "mass",
+      "CG",
+      "inertia",
+      "friction"
+    ],
+    "SOURCE_TRACEABILITY": "Source architecture",
+    "TEST_TRACEABILITY": [
+      "P0-E01 guided translation/stop",
+      "P0-E02 seatback rotation control",
+      "P0-E03 rebound control",
+      "P0-E04 state/lock",
+      "P0-A mass properties"
+    ],
+    "PHYSICAL_VERIFICATION_BOUNDARY": "Yes, by controlled inspection/component or integrated test as applicable; no validation currently claimed."
+  },
+  {
+    "PART": "120",
+    "REQUIRED_STATUS": "CORE_REQUIRED",
+    "PARAMETER_TRACEABILITY": [
+      "mass",
+      "CG",
+      "inertia",
+      "friction"
+    ],
+    "SOURCE_TRACEABILITY": "Source architecture",
+    "TEST_TRACEABILITY": [
+      "P0-E01 guided translation/stop",
+      "P0-E02 seatback rotation control",
+      "P0-E03 rebound control",
+      "P0-E04 state/lock",
+      "P0-A mass properties"
+    ],
+    "PHYSICAL_VERIFICATION_BOUNDARY": "Yes, by controlled inspection/component or integrated test as applicable; no validation currently claimed."
+  },
+  {
+    "PART": "130L/130R",
+    "REQUIRED_STATUS": "CORE_REQUIRED",
+    "PARAMETER_TRACEABILITY": [
+      "CG",
+      "inertia"
+    ],
+    "SOURCE_TRACEABILITY": "V5/V7 architecture",
+    "TEST_TRACEABILITY": [
+      "P0-E01 guided translation/stop",
+      "P0-E02 seatback rotation control",
+      "P0-E03 rebound control",
+      "P0-E04 state/lock",
+      "P0-A mass properties"
+    ],
+    "PHYSICAL_VERIFICATION_BOUNDARY": "Yes, by controlled inspection/component or integrated test as applicable; no validation currently claimed."
+  },
+  {
+    "PART": "150L/150R",
+    "REQUIRED_STATUS": "CORE_REQUIRED",
+    "PARAMETER_TRACEABILITY": [
+      "CG",
+      "inertia"
+    ],
+    "SOURCE_TRACEABILITY": "Source architecture",
+    "TEST_TRACEABILITY": [
+      "P0-E01 guided translation/stop",
+      "P0-E02 seatback rotation control",
+      "P0-E03 rebound control",
+      "P0-E04 state/lock",
+      "P0-A mass properties"
+    ],
+    "PHYSICAL_VERIFICATION_BOUNDARY": "Yes, by controlled inspection/component or integrated test as applicable; no validation currently claimed."
+  },
+  {
+    "PART": "160",
+    "REQUIRED_STATUS": "CORE_REQUIRED",
+    "PARAMETER_TRACEABILITY": [
+      "mass",
+      "CG",
+      "inertia",
+      "bolt stiffness",
+      "joint compliance"
+    ],
+    "SOURCE_TRACEABILITY": "Source architecture",
+    "TEST_TRACEABILITY": [
+      "P0-E01 guided translation/stop",
+      "P0-E02 seatback rotation control",
+      "P0-E03 rebound control",
+      "P0-E04 state/lock",
+      "P0-A mass properties"
+    ],
+    "PHYSICAL_VERIFICATION_BOUNDARY": "Yes, by controlled inspection/component or integrated test as applicable; no validation currently claimed."
+  },
+  {
+    "PART": "170",
+    "REQUIRED_STATUS": "CORE_REQUIRED",
+    "PARAMETER_TRACEABILITY": [
+      "mass",
+      "CG",
+      "inertia",
+      "bolt stiffness"
+    ],
+    "SOURCE_TRACEABILITY": "Source architecture",
+    "TEST_TRACEABILITY": [
+      "P0-E01 guided translation/stop",
+      "P0-E02 seatback rotation control",
+      "P0-E03 rebound control",
+      "P0-E04 state/lock",
+      "P0-A mass properties"
+    ],
+    "PHYSICAL_VERIFICATION_BOUNDARY": "Yes, by controlled inspection/component or integrated test as applicable; no validation currently claimed."
+  },
+  {
+    "PART": "180",
+    "REQUIRED_STATUS": "CORE_REQUIRED",
+    "PARAMETER_TRACEABILITY": [
+      "mass",
+      "CG",
+      "inertia",
+      "bolt stiffness",
+      "friction"
+    ],
+    "SOURCE_TRACEABILITY": "Source architecture",
+    "TEST_TRACEABILITY": [
+      "P0-E01 guided translation/stop",
+      "P0-E02 seatback rotation control",
+      "P0-E03 rebound control",
+      "P0-E04 state/lock",
+      "P0-A mass properties"
+    ],
+    "PHYSICAL_VERIFICATION_BOUNDARY": "Yes, by controlled inspection/component or integrated test as applicable; no validation currently claimed."
+  },
+  {
+    "PART": "J",
+    "REQUIRED_STATUS": "CORE_REQUIRED",
+    "PARAMETER_TRACEABILITY": [
+      "CG",
+      "inertia",
+      "bolt stiffness",
+      "joint compliance"
+    ],
+    "SOURCE_TRACEABILITY": "Source architecture",
+    "TEST_TRACEABILITY": [
+      "P0-E01 guided translation/stop",
+      "P0-E02 seatback rotation control",
+      "P0-E03 rebound control",
+      "P0-E04 state/lock",
+      "P0-A mass properties"
+    ],
+    "PHYSICAL_VERIFICATION_BOUNDARY": "Yes, by controlled inspection/component or integrated test as applicable; no validation currently claimed."
+  },
+  {
+    "PART": "210",
+    "REQUIRED_STATUS": "CORE_REQUIRED",
+    "PARAMETER_TRACEABILITY": [
+      "mass",
+      "CG",
+      "inertia"
+    ],
+    "SOURCE_TRACEABILITY": "Source architecture",
+    "TEST_TRACEABILITY": [
+      "P0-E01 guided translation/stop",
+      "P0-E02 seatback rotation control",
+      "P0-E03 rebound control",
+      "P0-E04 state/lock",
+      "P0-A mass properties"
+    ],
+    "PHYSICAL_VERIFICATION_BOUNDARY": "Yes, by controlled inspection/component or integrated test as applicable; no validation currently claimed."
+  },
+  {
+    "PART": "140",
+    "REQUIRED_STATUS": "OPTIONAL_INTEGRATED_OCCUPANT_INTERFACE_EXTENSION",
+    "PARAMETER_TRACEABILITY": [
+      "mass",
+      "CG",
+      "inertia"
+    ],
+    "SOURCE_TRACEABILITY": "V5/V7 architecture",
+    "TEST_TRACEABILITY": [
+      "P0-E01 guided translation/stop",
+      "P0-E02 seatback rotation control",
+      "P0-E03 rebound control",
+      "P0-E04 state/lock",
+      "P0-A mass properties"
+    ],
+    "PHYSICAL_VERIFICATION_BOUNDARY": "Not part of P0-FD-MIN core evidence."
+  },
+  {
+    "PART": "190",
+    "REQUIRED_STATUS": "OPTIONAL_INTEGRATED_OCCUPANT_INTERFACE_EXTENSION",
+    "PARAMETER_TRACEABILITY": [
+      "mass",
+      "CG",
+      "inertia"
+    ],
+    "SOURCE_TRACEABILITY": "V5/V7 architecture",
+    "TEST_TRACEABILITY": [
+      "P0-E01 guided translation/stop",
+      "P0-E02 seatback rotation control",
+      "P0-E03 rebound control",
+      "P0-E04 state/lock",
+      "P0-A mass properties"
+    ],
+    "PHYSICAL_VERIFICATION_BOUNDARY": "Not part of P0-FD-MIN core evidence."
+  },
+  {
+    "PART": "200",
+    "REQUIRED_STATUS": "OPTIONAL_INTEGRATED_OCCUPANT_INTERFACE_EXTENSION",
+    "PARAMETER_TRACEABILITY": [
+      "mass",
+      "CG",
+      "inertia"
+    ],
+    "SOURCE_TRACEABILITY": "V5/V7 architecture",
+    "TEST_TRACEABILITY": [
+      "P0-E01 guided translation/stop",
+      "P0-E02 seatback rotation control",
+      "P0-E03 rebound control",
+      "P0-E04 state/lock",
+      "P0-A mass properties"
+    ],
+    "PHYSICAL_VERIFICATION_BOUNDARY": "Not part of P0-FD-MIN core evidence."
+  }
+]

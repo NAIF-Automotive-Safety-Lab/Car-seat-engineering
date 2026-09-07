@@ -1,0 +1,79 @@
+[
+  {
+    "GAP_ID": "GAP-001",
+    "ITEM": "critical native geometry",
+    "REQUIRED_EVIDENCE": "Exact fabrication-controlled geometry/drawing revision for core parts and interfaces",
+    "STATUS": "BLOCK",
+    "WHY": "Required before exact manufacturing release"
+  },
+  {
+    "GAP_ID": "GAP-002",
+    "ITEM": "vehicle hardpoints",
+    "REQUIRED_EVIDENCE": "Authoritative vehicle datum and production hardpoints",
+    "STATUS": "BLOCK",
+    "WHY": "Not required to prepare standalone bench article; required before vehicle interface release"
+  },
+  {
+    "GAP_ID": "GAP-003",
+    "ITEM": "fixture interfaces",
+    "REQUIRED_EVIDENCE": "Controlled fixture/base interface definition",
+    "STATUS": "BLOCK",
+    "WHY": "Required before exact fabrication of the test fixture"
+  },
+  {
+    "GAP_ID": "GAP-004",
+    "ITEM": "joint interfaces",
+    "REQUIRED_EVIDENCE": "Released hinge/link/joint interface definition",
+    "STATUS": "BLOCK",
+    "WHY": "Required before final joint fabrication"
+  },
+  {
+    "GAP_ID": "GAP-005",
+    "ITEM": "material identity",
+    "REQUIRED_EVIDENCE": "Released material grade/condition/lot mapping",
+    "STATUS": "BLOCK",
+    "WHY": "Required for controlled fabrication and later physical provenance"
+  },
+  {
+    "GAP_ID": "GAP-006",
+    "ITEM": "fastener identity/preload",
+    "REQUIRED_EVIDENCE": "Exact fastener stack and preload/torque definition",
+    "STATUS": "BLOCK",
+    "WHY": "Required where load path depends on fasteners"
+  },
+  {
+    "GAP_ID": "GAP-007",
+    "ITEM": "Lock-170 implementation",
+    "REQUIRED_EVIDENCE": "Selected, controlled candidate implementation + mechanical engagement test plan",
+    "STATUS": "BLOCK",
+    "WHY": "Do not select final concept by assumption"
+  },
+  {
+    "GAP_ID": "GAP-008",
+    "ITEM": "Rebound-180 implementation",
+    "REQUIRED_EVIDENCE": "Selected, controlled candidate implementation + rebound test plan",
+    "STATUS": "BLOCK",
+    "WHY": "Do not select final concept by assumption"
+  },
+  {
+    "GAP_ID": "GAP-009",
+    "ITEM": "instrument mounts",
+    "REQUIRED_EVIDENCE": "Controlled sensor locations/mounting details",
+    "STATUS": "BLOCK",
+    "WHY": "Required for reproducible P0-TEST"
+  },
+  {
+    "GAP_ID": "GAP-010",
+    "ITEM": "safe end-stops",
+    "REQUIRED_EVIDENCE": "Physical stop geometry + containment/load boundary",
+    "STATUS": "BLOCK",
+    "WHY": "Required before dynamic mechanism testing"
+  },
+  {
+    "GAP_ID": "GAP-011",
+    "ITEM": "absorber/module selection",
+    "REQUIRED_EVIDENCE": "Exact serialized/testable 130 module selection",
+    "STATUS": "BLOCK",
+    "WHY": "Required for functional characterization"
+  }
+]
