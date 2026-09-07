@@ -1,0 +1,28 @@
+{
+  "INPUT_ID": "mass",
+  "STATUS": "OPEN",
+  "VALUE": null,
+  "UNIT": null,
+  "SOURCE_ID": null,
+  "REVISION": null,
+  "DATE": null,
+  "SHA256": null,
+  "PROVENANCE": null,
+  "CONFIGURATION_MAPPING": "P0-FD-CFG-001 / P0FD-20260907-001 / R4.1 SHA256 fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "VALIDATION_STATUS": "OPEN",
+  "PHYSICAL_EVIDENCE_STATUS": "AWAITING_PHYSICAL_EVIDENCE",
+  "BLOCKER": "No authoritative exact-R4.1 mass record or physical calibrated measurement exists in the supplied evidence. Secure validator rejected the incomplete record.",
+  "NEXT_ACTION": "External owner/laboratory must provide mass_properties.json from an exact-R4.1 released source or perform and document calibrated full-assembly weighing.",
+  "ARTIFACT_PATHS": [
+    "P0_FUNCTIONAL_DEVELOPMENT_AUTHORIZATION/evidence/mass/raw/",
+    "P0_FUNCTIONAL_DEVELOPMENT_AUTHORIZATION/evidence/mass/reports/mass_properties.json",
+    "P0_FUNCTIONAL_DEVELOPMENT_AUTHORIZATION/evidence/mass/manifest.json"
+  ],
+  "ARTIFACT_SHA256": {
+    "mass_properties.json": "aa7069665b503e5189cc115307e7794cf822ea900c8e363705ba6a115928e911",
+    "manifest.json": "9159e3921a2b442ec601799d19b1e1dfc62379f68c5e2c083026df5d55d1791c"
+  },
+  "VALIDATOR_RETURN_CODE": 1,
+  "VALIDATOR_DECISION": "REJECTED / NOT CLOSED",
+  "GIT_COMMIT": null
+}
