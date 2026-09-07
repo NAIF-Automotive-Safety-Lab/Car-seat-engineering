@@ -1,0 +1,16 @@
+{
+  "status": "BLOCKED",
+  "criteria": {
+    "authoritative_geometry": "FAIL",
+    "controlled_interfaces": "FAIL",
+    "critical_dimensions": "FAIL",
+    "inspection_basis": "FAIL",
+    "material_identity": "FAIL",
+    "fastener_definition": "FAIL",
+    "safe_containment": "PARTIAL",
+    "instrumentation_provisions": "PARTIAL",
+    "module_selection": "PARTIAL",
+    "configuration_identity": "PARTIAL"
+  },
+  "decision": "Any FAIL keeps fabrication readiness blocked."
+}

@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-09-07T01:51:23.257097+00:00",
+  "historical_authenticity": "VERIFIED_BY_PROJECT_RECORDS",
+  "current_byte_level_authenticity": "NOT_RECOMPUTED",
+  "hash_expected": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "hash_actual_current_runtime": "NOT_AVAILABLE",
+  "format": "STEP",
+  "historical_solids": 62,
+  "historical_brep_valid": true,
+  "status": "PARTIAL"
+}

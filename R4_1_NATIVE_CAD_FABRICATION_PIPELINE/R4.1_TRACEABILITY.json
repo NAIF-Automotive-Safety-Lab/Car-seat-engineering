@@ -1,0 +1,76 @@
+{
+  "CORE": [
+    {
+      "REF": "100",
+      "ROLE": "vehicle/fixture base frame",
+      "GEOMETRY_STATUS": "NOT_EXTRACTED_CURRENT_RUNTIME"
+    },
+    {
+      "REF": "110L",
+      "ROLE": "left bilateral longitudinal rail",
+      "GEOMETRY_STATUS": "NOT_EXTRACTED_CURRENT_RUNTIME"
+    },
+    {
+      "REF": "110R",
+      "ROLE": "right bilateral longitudinal rail",
+      "GEOMETRY_STATUS": "NOT_EXTRACTED_CURRENT_RUNTIME"
+    },
+    {
+      "REF": "120",
+      "ROLE": "seat carriage",
+      "GEOMETRY_STATUS": "NOT_EXTRACTED_CURRENT_RUNTIME"
+    },
+    {
+      "REF": "130L/R",
+      "ROLE": "ride-down/absorber interfaces",
+      "GEOMETRY_STATUS": "NOT_EXTRACTED_CURRENT_RUNTIME"
+    },
+    {
+      "REF": "150L/R",
+      "ROLE": "seatback rotation-control links",
+      "GEOMETRY_STATUS": "NOT_EXTRACTED_CURRENT_RUNTIME"
+    },
+    {
+      "REF": "160",
+      "ROLE": "seatback frame",
+      "GEOMETRY_STATUS": "NOT_EXTRACTED_CURRENT_RUNTIME"
+    },
+    {
+      "REF": "170",
+      "ROLE": "multi-state lock",
+      "GEOMETRY_STATUS": "NOT_EXTRACTED_CURRENT_RUNTIME"
+    },
+    {
+      "REF": "180",
+      "ROLE": "rebound-control",
+      "GEOMETRY_STATUS": "NOT_EXTRACTED_CURRENT_RUNTIME"
+    },
+    {
+      "REF": "J",
+      "ROLE": "hinge/pivot/joint set",
+      "GEOMETRY_STATUS": "NOT_EXTRACTED_CURRENT_RUNTIME"
+    },
+    {
+      "REF": "210",
+      "ROLE": "sensor/trigger interface",
+      "GEOMETRY_STATUS": "NOT_EXTRACTED_CURRENT_RUNTIME"
+    }
+  ],
+  "OPTIONAL_EXTENSION": [
+    {
+      "REF": "140",
+      "ROLE": "pelvic-control pan",
+      "STATUS": "OPTIONAL_EXTENSION"
+    },
+    {
+      "REF": "190",
+      "ROLE": "restraint interface",
+      "STATUS": "OPTIONAL_EXTENSION"
+    },
+    {
+      "REF": "200",
+      "ROLE": "torso/head guidance",
+      "STATUS": "OPTIONAL_EXTENSION"
+    }
+  ]
+}

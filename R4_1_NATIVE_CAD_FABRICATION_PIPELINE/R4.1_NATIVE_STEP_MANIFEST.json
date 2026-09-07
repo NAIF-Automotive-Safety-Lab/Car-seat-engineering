@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-09-07T01:51:23.257097+00:00",
+  "target_path": "R4.1/R4.1.step",
+  "target_sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "library_artifact": {
+    "artifact_name": "T_OCS_V0_R4_1_SHOULDER_REPAIR.step",
+    "source": "File Library",
+    "file_ref": "file_00000000719c82109a9629b5f23950df",
+    "asserted_authoritative_path": "R4.1/R4.1.step",
+    "asserted_sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "historical_verification": "V1_R4_1_BASELINE_LOCK / V1_SR4_PACKAGE_INTEGRITY / V1_SR11_STATIC_ADAPTER_VALIDATION",
+    "historical_solids": 62,
+    "historical_step_readback": true,
+    "historical_mutation": false,
+    "current_runtime_byte_access": "NOT_AVAILABLE",
+    "current_sha_recalculation": "NOT_EXECUTED_ON_LIBRARY_PAYLOAD",
+    "status": "RECOVERED_FROM_LIBRARY_REFERENCE_BUT_NOT_BYTE_VERIFIED_IN_CURRENT_RUNTIME"
+  },
+  "local_candidates": [
+    {
+      "path": "/mnt/data/T_OCS_V0_CAD_VALIDATION_BASELINE.step",
+      "size_bytes": 791857,
+      "sha256": "448f5f6bab526c1a4aad8981e151037d2323d8c29f41f3f95cf43879bc24fa3a",
+      "matches_authoritative_r4_1": false,
+      "status": "REJECTED_AS_R4_1"
+    },
+    {
+      "path": "/mnt/data/T_OCS_V7_R1_Parametric_Research_Model.step",
+      "size_bytes": 791857,
+      "sha256": "448f5f6bab526c1a4aad8981e151037d2323d8c29f41f3f95cf43879bc24fa3a",
+      "matches_authoritative_r4_1": false,
+      "status": "REJECTED_AS_R4_1"
+    },
+    {
+      "path": "/mnt/data/T_OCS_V7_R0.step",
+      "size_bytes": 524034,
+      "sha256": "995a0a298735c9317a0bd4aabd19d56d7f15433f396a93b24eadb723f6c1f039",
+      "matches_authoritative_r4_1": false,
+      "status": "REJECTED_AS_R4_1"
+    },
+    {
+      "path": "/mnt/data/V0R2_EXECUTABLE/V0R2_EXECUTABLE_MECHANICAL_BASELINE.step",
+      "size_bytes": 807853,
+      "sha256": "591f4d5b8fb55e15a0784baaa1ceec0ca81e9ab8838a060e44c7ceaa49b8e5bc",
+      "matches_authoritative_r4_1": false,
+      "status": "REJECTED_AS_R4_1"
+    },
+    {
+      "path": "/mnt/data/V0_R4_CORRECTED/T_OCS_V0_R4_CORRECTED_DESIGN.step",
+      "size_bytes": 1190498,
+      "sha256": "27bac6b8a616ec17ff57071658f80dfcf38521c3d89f2f1da58498a8c879f2e6",
+      "matches_authoritative_r4_1": false,
+      "status": "REJECTED_AS_R4_1"
+    }
+  ]
+}

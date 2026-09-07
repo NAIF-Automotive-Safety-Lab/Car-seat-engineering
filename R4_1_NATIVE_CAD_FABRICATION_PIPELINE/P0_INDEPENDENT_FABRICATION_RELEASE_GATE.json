@@ -1,0 +1,4 @@
+{
+  "status": "BLOCKED",
+  "reason": "No independent release can self-approve from assertion records; native payload byte verification, released PMI/drawing, BOM/materials, joints and inspection evidence must be independently verified first."
+}

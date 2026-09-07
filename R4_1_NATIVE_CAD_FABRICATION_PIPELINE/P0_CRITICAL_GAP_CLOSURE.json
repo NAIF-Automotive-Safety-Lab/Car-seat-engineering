@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-09-07T01:51:23.257097+00:00",
+  "gaps": [
+    {
+      "GAP_ID": "GAP-001",
+      "STATUS": "PARTIALLY_CLOSED",
+      "WHY": "Historical baseline lock proves a 62-solid R4.1 STEP with the asserted SHA, but the exact payload is not mounted in the current runtime for fresh byte-level extraction.",
+      "NEXT": "Mount/recover exact payload; recompute SHA; deterministic geometry extraction + drawing correlation."
+    },
+    {
+      "GAP_ID": "GAP-003",
+      "STATUS": "PARTIALLY_CLOSED",
+      "WHY": "P0 laboratory datum/recording discipline exists, but exact fabrication interface geometry is not populated.",
+      "NEXT": "Authoritative fixture drawing/native R4.1 interface extraction + independent dimensional verification."
+    },
+    {
+      "GAP_ID": "GAP-004",
+      "STATUS": "BLOCKED",
+      "WHY": "Exact joint/pivot/limit data require native R4.1 extraction or authoritative joint map.",
+      "NEXT": "Recover native payload/joint map."
+    },
+    {
+      "GAP_ID": "GAP-005",
+      "STATUS": "PARTIALLY_CLOSED",
+      "WHY": "Controlled process and material evidence requirements exist, but released material mapping is absent.",
+      "NEXT": "Released BOM/material definitions + MTR/CoC."
+    },
+    {
+      "GAP_ID": "GAP-006",
+      "STATUS": "PARTIALLY_CLOSED",
+      "WHY": "Fastener-stack requirements are defined, but exact controlled fastener/preload data are not recovered.",
+      "NEXT": "Released BOM/fastener stack/preload instruction."
+    },
+    {
+      "GAP_ID": "GAP-007",
+      "STATUS": "BLOCKED",
+      "WHY": "Lock implementation remains a candidate architecture; no authoritative final selection was recovered.",
+      "NEXT": "Controlled selection test + released implementation."
+    },
+    {
+      "GAP_ID": "GAP-008",
+      "STATUS": "BLOCKED",
+      "WHY": "Rebound implementation remains candidate-level; no authoritative final selection was recovered.",
+      "NEXT": "Controlled selection test + released implementation."
+    },
+    {
+      "GAP_ID": "GAP-009",
+      "STATUS": "PARTIALLY_CLOSED",
+      "WHY": "Minimum channels are defined, but exact mounting geometry tied to released geometry is absent.",
+      "NEXT": "Instrument mount drawing/native extraction + calibration map."
+    },
+    {
+      "GAP_ID": "GAP-010",
+      "STATUS": "PARTIALLY_CLOSED",
+      "WHY": "Prior model evidence demonstrates stop intent/contact, but exact released physical stop geometry/tolerances are not independently verified.",
+      "NEXT": "Native extraction + released drawing/PMI + inspection."
+    },
+    {
+      "GAP_ID": "GAP-011",
+      "STATUS": "PARTIALLY_CLOSED",
+      "WHY": "Replaceable absorber concept and characterization plan exist, but exact selected module/serial is not controlled.",
+      "NEXT": "Controlled module selection + serialized specification + test evidence."
+    }
+  ],
+  "closed": 0,
+  "partial": 7,
+  "blocked": 3
+}

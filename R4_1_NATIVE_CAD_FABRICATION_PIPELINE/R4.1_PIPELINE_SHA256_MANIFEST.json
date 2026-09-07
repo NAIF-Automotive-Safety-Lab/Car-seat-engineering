@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-09-07T01:51:23.257097+00:00",
+  "authoritative_R4_1_SHA256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "artifacts": [
+    {
+      "file": "P0_18_RECORD_FIREWALL.json",
+      "size_bytes": 197,
+      "sha256": "5a840a0182da59bbfdedc7776f41a6dbb997cf425963b63786b6dad2867dbc53"
+    },
+    {
+      "file": "P0_CRITICAL_GAP_CLOSURE.json",
+      "size_bytes": 2913,
+      "sha256": "79f46a56c99a6c37b7b603e7db6256c332a66f7a7aee1b18fe20220e377a6587"
+    },
+    {
+      "file": "P0_FABRICATION_READINESS_GATE.json",
+      "size_bytes": 474,
+      "sha256": "345fb1bc67409feffc29b297e9337f3651b3177189a5e79da493a8c5cbd9e75c"
+    },
+    {
+      "file": "P0_INDEPENDENT_FABRICATION_RELEASE_GATE.json",
+      "size_bytes": 244,
+      "sha256": "a41f538a17f3fe76cac59c268a060ef6e331684487e21bae2696b7c0444a92f4"
+    },
+    {
+      "file": "R4.1_DETERMINISTIC_BOM.json",
+      "size_bytes": 271,
+      "sha256": "011cf15e150304aff24560b30648a21e9fc9f7b9882b371070f743d918855dc6"
+    },
+    {
+      "file": "R4.1_DETERMINISTIC_GEOMETRY.json",
+      "size_bytes": 498,
+      "sha256": "718497f835763a93704446a46dd354b53c9a98b448c659df5b898945a0cc0cf1"
+    },
+    {
+      "file": "R4.1_DETERMINISTIC_JOINT_MAP.json",
+      "size_bytes": 362,
+      "sha256": "6aa1828769a5066f5a23d2ce1d9362e378a3f327d6ba6b55055766bcd3a34dd3"
+    },
+    {
+      "file": "R4.1_DETERMINISTIC_PMI.json",
+      "size_bytes": 292,
+      "sha256": "339106dafcc536a719dd778d10080a507d516a5758260318dbc3fa2487742dfe"
+    },
+    {
+      "file": "R4.1_NATIVE_STEP_MANIFEST.json",
+      "size_bytes": 2310,
+      "sha256": "48801079fc9afbaac8a917ae261370b1cc60b596cd7568fe54cbdbddb6717173"
+    },
+    {
+      "file": "R4.1_NATIVE_STEP_RECOVERY.json",
+      "size_bytes": 2546,
+      "sha256": "85d2005a27b6b5551dcea35d26bedb016fe33c28c7f1a672185aae9add131d0e"
+    },
+    {
+      "file": "R4.1_NATIVE_STEP_SOURCE_AUDIT.md",
+      "size_bytes": 3470,
+      "sha256": "8de6e49693bbcf21b46077b4d7e2d591747545820a9ae5f40237c422d820fb37"
+    },
+    {
+      "file": "R4.1_PAYLOAD_AUTHENTICITY.json",
+      "size_bytes": 409,
+      "sha256": "ce3cb3569eb193428872d380bb886fe13672f5d3b6cf8b2f2f937e4a4b27f012"
+    },
+    {
+      "file": "R4.1_TRACEABILITY.json",
+      "size_bytes": 1816,
+      "sha256": "aa46286334a503aabbe88bae98e5fc20f2809631d2e51e7ca556100096972a9d"
+    }
+  ]
+}
