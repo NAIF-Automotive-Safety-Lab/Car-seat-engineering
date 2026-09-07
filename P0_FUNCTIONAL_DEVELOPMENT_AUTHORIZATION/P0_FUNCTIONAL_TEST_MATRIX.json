@@ -1,0 +1,58 @@
+{
+  "DOCUMENT": "P0_FUNCTIONAL_TEST_MATRIX",
+  "CONFIGURATION_ID": "P0-FD-CFG-001",
+  "SERIAL": "P0FD-20260907-001",
+  "R4_1_SHA256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "tests": [
+    {
+      "ID": "A",
+      "NAME": "GEOMETRY_FIT",
+      "STATUS": "AUTHORIZED_NOT_EXECUTED"
+    },
+    {
+      "ID": "B",
+      "NAME": "ASSEMBLY_ALIGNMENT",
+      "STATUS": "AUTHORIZED_NOT_EXECUTED"
+    },
+    {
+      "ID": "C",
+      "NAME": "STATIC_FUNCTION",
+      "STATUS": "AUTHORIZED_NOT_EXECUTED"
+    },
+    {
+      "ID": "D",
+      "NAME": "JOINT_LOCK_FUNCTION",
+      "STATUS": "AUTHORIZED_NOT_EXECUTED"
+    },
+    {
+      "ID": "E",
+      "NAME": "ABSORBER_CHARACTERIZATION",
+      "STATUS": "AUTHORIZED_NOT_EXECUTED"
+    },
+    {
+      "ID": "F",
+      "NAME": "FRICTION_CHARACTERIZATION",
+      "STATUS": "AUTHORIZED_NOT_EXECUTED"
+    },
+    {
+      "ID": "G",
+      "NAME": "CONTACT_DAMPING_CHARACTERIZATION",
+      "STATUS": "AUTHORIZED_NOT_EXECUTED"
+    },
+    {
+      "ID": "H",
+      "NAME": "STRUCTURAL_DEVELOPMENT_TESTING",
+      "STATUS": "AUTHORIZED_NOT_EXECUTED"
+    },
+    {
+      "ID": "I",
+      "NAME": "MATERIAL_CHARACTERIZATION",
+      "STATUS": "AUTHORIZED_NOT_EXECUTED"
+    },
+    {
+      "ID": "J",
+      "NAME": "CONTROLLED_DEVELOPMENTAL_CRASH_TEST",
+      "STATUS": "BLOCKED_EXTERNAL_FACILITY_GATE"
+    }
+  ]
+}

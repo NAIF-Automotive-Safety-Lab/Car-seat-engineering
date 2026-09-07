@@ -1,0 +1,24 @@
+{
+  "DOCUMENT": "EVIDENCE_REGISTER",
+  "CONFIGURATION_ID": "P0-FD-CFG-001",
+  "SERIAL": "P0FD-20260907-001",
+  "R4_1_SHA256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "RULE": "No evidence is PASS/CLOSED without raw data, units, calibration, provenance, timestamp, operator/lab, artifact path, SHA256, and R4.1 mapping.",
+  "records": [],
+  "OPEN_INPUTS": [
+    "mass",
+    "CG",
+    "inertia",
+    "density",
+    "friction",
+    "contact_stiffness",
+    "contact_damping",
+    "restitution",
+    "absorber_Fx",
+    "absorber_Fv",
+    "vehicle_pulse",
+    "initial_velocity",
+    "joint_compliance",
+    "bolt_joint_stiffness"
+  ]
+}

@@ -1,44 +1,36 @@
 {
   "document": "P0_GF01_OWNER_DECISION",
   "decision_owner": "Naif",
-  "OWNER_DECISION": "PENDING",
+  "OWNER_DECISION": "CONDITIONAL_FUNCTIONAL_DEVELOPMENT",
   "TECHNICAL_READINESS": "READY",
-  "AUTHORIZATION": "PENDING",
-  "PHYSICAL_BUILD_STATUS": "NOT_AUTHORIZED",
-  "FUNCTIONAL_P0": "BLOCKED",
+  "AUTHORIZATION": "FUNCTIONAL_DEVELOPMENT_AUTHORIZED_WITH_GATES",
+  "PHYSICAL_BUILD_STATUS": "AUTHORIZED_FOR_FUNCTIONAL_DEVELOPMENT",
+  "FUNCTIONAL_P0": "DEVELOPMENT_ONLY",
   "PHYSICAL_INPUT_CLOSURE": "0/14",
   "R4_1_STATUS": "FROZEN",
   "R4_1_SHA256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
-  "scope_under_review": "NON-FUNCTIONAL GEOMETRY/FIT VERIFICATION ONLY",
-  "recommended_defaults_for_owner_review": {
-    "PROTOTYPE_PROCESS": "3D_PRINT / NON_FUNCTIONAL MOCKUP",
-    "JOINING": "CLAMPED / FIXTURE_HELD",
-    "DATUM": "TEMPORARY LOCAL DATUM FIXTURE DERIVED FROM VERIFIED R4.1 GEOMETRY",
-    "INSPECTION": [
-      "CALIBRATED CALIPER",
-      "STEEL RULE",
-      "ANGLE/ALIGNMENT TOOL",
-      "DIAL INDICATOR WHEN NEEDED"
-    ],
-    "B02": {
-      "MIRROR_RELATION": "UNPROVEN",
-      "ACCEPTANCE_CRITERION_USE": "NOT USED AS ACCEPTANCE CRITERION"
-    }
-  },
-  "prohibited_until_explicit_owner_decision": [
-    "FUNCTIONAL P0 designation",
-    "crash testing",
-    "structural qualification",
-    "absorber characterization",
-    "friction characterization",
-    "safety validation",
-    "vehicle compatibility",
-    "FE authorization",
-    "14-input closure",
-    "R4.2 creation",
-    "R4.1 modification"
+  "scope": "Controlled engineering-development testing to generate physical evidence and characterize the design; not safety approval, certification, homologation, or unrestricted FE authorization.",
+  "CRASH_TEST": "DEVELOPMENT_ONLY_BUT_BLOCKED_UNTIL_EXTERNAL_QUALIFIED_FACILITY_GATE",
+  "STRUCTURAL_TEST": "DEVELOPMENT_ONLY",
+  "FUNCTIONAL_ABSORBER_TEST": "DEVELOPMENT_ONLY",
+  "ENERGY_ABSORPTION_TEST": "DEVELOPMENT_ONLY",
+  "FRICTION_TEST": "DEVELOPMENT_ONLY",
+  "CONTACT_DAMPING_TEST": "DEVELOPMENT_ONLY",
+  "MATERIAL_CHARACTERIZATION": "DEVELOPMENT_ONLY",
+  "LOCK_FUNCTION_TEST": "DEVELOPMENT_ONLY",
+  "SAFETY_VALIDATION": "NOT_AUTHORIZED",
+  "FE_AUTHORIZATION": "NOT_AUTHORIZED_UNTIL_INPUT_GATE_CLOSED",
+  "FORMAL_QUALIFICATION": "NOT_AUTHORIZED",
+  "CERTIFICATION_HOMOLOGATION": "NOT_AUTHORIZED",
+  "VEHICLE_SAFETY_RELEASE": "NOT_AUTHORIZED",
+  "B02_STATUS": "MIRROR_RELATION_UNPROVEN; NOT_USED_AS_ACCEPTANCE_CRITERION",
+  "conditions": [
+    "Every measured value requires source, method, instrument, calibration status, raw data, units, uncertainty/tolerance, timestamp, operator/lab, artifact path, SHA256, and R4.1 mapping.",
+    "All 14 inputs remain OPEN until accepted by the secure validator; no guessed, defaulted, inferred, interpolated, conflicting, unhashed, unrevised, or unmapped evidence is accepted.",
+    "Crash testing is blocked until an external qualified facility and authority gate is complete.",
+    "Developmental results must not be labeled qualification, certification, homologation, or safety validation.",
+    "R4.1 must not be modified and R4.2 must not be created."
   ],
-  "owner_action_required": "Naif must explicitly select AUTHORIZED, NOT AUTHORIZED, or CONDITIONAL and provide the approval record.",
-  "build_release_created": false,
-  "approval_record": null
+  "owner_command_record": "Explicit owner command received 2026-09-07; no authority by silence or implied approval used.",
+  "approval_record": "CONDITIONAL_FUNCTIONAL_DEVELOPMENT command recorded; physical evidence and all downstream gates remain outstanding."
 }

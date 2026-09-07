@@ -1,0 +1,6 @@
+{
+  "DOCUMENT": "DEVIATION_REGISTER",
+  "CONFIGURATION_ID": "P0-FD-CFG-001",
+  "records": [],
+  "RULE": "No deviation is accepted silently; each requires description, reason, affected interface, risk, authority, date, and SHA-bound evidence."
+}

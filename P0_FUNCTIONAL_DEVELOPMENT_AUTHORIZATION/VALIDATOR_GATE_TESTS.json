@@ -1,0 +1,22 @@
+{
+  "DOCUMENT": "VALIDATOR_GATE_TESTS",
+  "STATUS": "DEFINED_NOT_RUN_IN_THIS_AUTHORIZATION_UPDATE",
+  "EXPECTED_POLICY": "REJECTED",
+  "cases": [
+    "missing VALUE",
+    "wrong UNIT",
+    "missing SOURCE_ID",
+    "wrong REVISION/DATE",
+    "wrong SHA256",
+    "missing PROVENANCE",
+    "wrong R4.1 mapping",
+    "wrong configuration mapping",
+    "CLOSED with incomplete evidence",
+    "duplicate/conflicting records",
+    "assumption/default/inferred value",
+    "stale revision",
+    "raw/report hash mismatch",
+    "malformed JSON/schema violation"
+  ],
+  "ZERO_BYPASS_RULE": "Only secure validator may set CLOSED; no manual approval."
+}

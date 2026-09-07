@@ -1,0 +1,24 @@
+{
+  "required": [
+    "VALUE",
+    "UNIT",
+    "SOURCE_ID",
+    "REVISION",
+    "DATE",
+    "RAW_DATA",
+    "RAW_DATA_SHA256",
+    "PROVENANCE",
+    "R4_1_MAPPING",
+    "TEST_ID",
+    "ARTICLE_SERIAL",
+    "CONFIGURATION_ID",
+    "VALIDATION_STATUS"
+  ],
+  "validation_status_allowed": [
+    "OPEN",
+    "BLOCKED",
+    "REJECTED",
+    "CLOSED"
+  ],
+  "closed_rule": "CLOSED only by secure validator after all evidence checks pass; no manual CLOSED state."
+}
