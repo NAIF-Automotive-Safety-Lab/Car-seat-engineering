@@ -1,0 +1,8 @@
+{
+  "status": "PARTIAL",
+  "lock_170": {"module": "engineering_recovery.physics.lock_170", "candidates": ["L170-A", "L170-B", "L170-C"], "final_selection": "NOT_AUTHORIZED", "status": "BLOCKED"},
+  "rebound_180": {"module": "engineering_recovery.physics.rebound_180", "target_180_mm": 180, "evidence_class": "TARGET", "status": "BLOCKED"},
+  "absorbers": {"module": "engineering_recovery.absorbers", "absorber_status": "UNVERIFIED", "measured_curves": 0},
+  "chrono_core": "VERIFIED",
+  "v7_physics": "BLOCKED"
+}
