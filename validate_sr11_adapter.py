@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import json, sys
 from pathlib import Path
-root=Path(__file__).resolve().parents[1]
+root=Path(__file__).resolve().parent
 sr=root/'SR11'
 REQUIRED={'BASE','RAIL_L','RAIL_R','CARRIAGE','ABSORBER_L','ABSORBER_R','SEATBACK','ROT_CTRL_L','ROT_CTRL_R','LOCK_L','LOCK_R','ENDSTOPS','HINGE','ANTI_RACK','SHOULDER_ANCHOR','SHOULDER_GUSSET','SHOULDER_ROOT','SHOULDER_BRACE','SHOULDER_FRAME_BRACKET'}
 
