@@ -1,0 +1,41 @@
+{
+  "status": "PARTIAL_FUNCTIONAL_ALIGNMENT_NOT_COMPLIANCE_DETERMINATION",
+  "source_documents": [
+    {
+      "file": "T_OCS_V7_Patent_Draft_Invention_Disclosure_.pdf",
+      "classification": "REFERENCE",
+      "pages_analyzed": "V7 pages 2-9",
+      "role": "functional architecture, claim redline, evidence gates"
+    },
+    {
+      "file": "نماذجV5-V7.pdf",
+      "classification": "REFERENCE",
+      "pages_analyzed": "visual engineering boards",
+      "role": "concept boards and design-study references"
+    }
+  ],
+  "requirements": [
+    {"id":"FR-01","requirement":"bilateral longitudinal load paths 110L/110R","source":"V7 p2-p3","standards":["FMVSS 207","UNECE R17"],"mapping":"PARTIAL","evidence_needed":"native CAD/B-Rep, seat strength test, left/right reaction channels"},
+    {"id":"FR-02","requirement":"controlled longitudinal ride-down and energy dissipation 130","source":"V7 p3,p5","standards":["FMVSS 207","UNECE R17"],"mapping":"PARTIAL","evidence_needed":"force-stroke, hysteresis, temperature, cycling, sled evidence"},
+    {"id":"FR-03","requirement":"mechanically distinct seatback rotation control 150L/150R","source":"V7 p3-p5","standards":["FMVSS 207","FMVSS 202a","UNECE R17"],"mapping":"PARTIAL","evidence_needed":"isolated rotation test, link loads, head-restraint interaction"},
+    {"id":"FR-04","requirement":"event-dependent armed/ride-down/rebound/secure states 170","source":"V7 p3-p5","standards":[],"mapping":"NO_DIRECT_STANDARD","evidence_needed":"state transition, latency, unintended release, fail-safe tests"},
+    {"id":"FR-05","requirement":"rebound control 180","source":"V7 p4-p5","standards":["FMVSS 207","UNECE R17"],"mapping":"PARTIAL","evidence_needed":"reverse travel, engagement, load and energy evidence"},
+    {"id":"FR-06","requirement":"restraint path remains operable during ride-down 190","source":"V7 p3,p5","standards":["FMVSS 210","UNECE R14"],"mapping":"DIRECT_INTERFACE_RELEVANCE","evidence_needed":"released anchorage geometry and dynamic/strength test evidence"},
+    {"id":"FR-07","requirement":"pelvic control and reduced forward migration 140","source":"V7 p4-p5","standards":["FMVSS 208","FMVSS 202a"],"mapping":"INDIRECT","evidence_needed":"ATD/sled kinematics and load distribution; not closed by seat standard alone"},
+    {"id":"FR-08","requirement":"replaceable cartridge with force-stroke regions","source":"V7 p4","standards":[],"mapping":"NO_DIRECT_STANDARD","evidence_needed":"cartridge characterization and traceability"},
+    {"id":"FR-09","requirement":"separate left/right reaction measurement","source":"V7 p4","standards":["ISO 6487","SAE J211/1"],"mapping":"MEASUREMENT_ALIGNMENT","evidence_needed":"channel calibration, CFC/filter, timing, uncertainty, raw-data hash"},
+    {"id":"FR-10","requirement":"real parts, joints, travel limits, materials, measurable variables","source":"V7 p9","standards":[],"mapping":"PROJECT_ENGINEERING_GATE","evidence_needed":"authoritative native CAD, BOM, PMI/GD&T, material cards"},
+    {"id":"FR-11","requirement":"stable reference numerals across CAD, tests and FEA","source":"V7 p2","standards":[],"mapping":"TRACEABILITY_CONTROL","evidence_needed":"hashed mapping graph"},
+    {"id":"FR-12","requirement":"V0-V6 staged validation gates","source":"V7 p8","standards":["FMVSS 207","FMVSS 210","FMVSS 202a","UNECE R14","UNECE R17","UNECE R25","ISO 6487","SAE J211/1"],"mapping":"FRAMEWORK_ALIGNMENT","evidence_needed":"gate-specific artifacts and acceptance criteria"}
+  ],
+  "explicit_non_evidence": [
+    "25.6 g source-study pulse",
+    "180 mm concept stroke",
+    "18-22 kN absorber range",
+    "25-35 kN peak damping reference",
+    "source-model HIC/Nij predictions",
+    "generated CAD figures",
+    "visual PDF boards"
+  ],
+  "release_gate": "STOP_RELEASE"
+}
