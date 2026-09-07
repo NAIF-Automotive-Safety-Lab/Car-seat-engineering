@@ -1,0 +1,21 @@
+{
+  "R4_1_SHA256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "baseline_record_status": "HISTORICALLY_VERIFIED",
+  "current_payload_recovery": "NOT_RECOVERED_FROM_CURRENT_FILE_LIBRARY_RESULT",
+  "critical_feature_count": 30,
+  "critical_features": "GEO-001..GEO-030",
+  "authoritative_payloads_recovered": [],
+  "authoritative_assertion_records_recovered": [
+    "V1_R4_1_BASELINE_LOCK.json",
+    "R4_1_BASELINE_LOCK(2).json",
+    "V4_FINAL_ENGINEERING_REPORT.md"
+  ],
+  "required_next_payloads": [
+    "R4.1_NATIVE_GEOMETRY_EXTRACTION.json",
+    "R4.1_NATIVE_GEOMETRY_EXTRACTION_AUDIT.md",
+    "R4.1_PMI_TOLERANCE_EXTRACTION.json",
+    "R4.1_BOM_FASTENER_MATERIAL_MAP.json",
+    "R4.1_JOINT_MAP.json",
+    "R4.1_GEOMETRY_SHA256_MANIFEST.json"
+  ]
+}

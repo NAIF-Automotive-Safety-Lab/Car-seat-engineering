@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-09-07T01:43:00.494781+00:00",
+  "R4_1_SHA256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "artifacts": [
+    {
+      "file": "P0_EVIDENCE_RECOVERY_REGISTER.json",
+      "SHA256": "30c77526bfea54716f5043490ea83cd319267b2c9db73a5f43bef8004ec40f14",
+      "size_bytes": 10229
+    },
+    {
+      "file": "P0_EVIDENCE_RECOVERY_REPORT.md",
+      "SHA256": "d67b5ae767eb3aca5ddcb5c4d76c6c87699854fc46fb1188387ce3823f43fc67",
+      "size_bytes": 2500
+    },
+    {
+      "file": "P0_FABRICATION_READINESS_MATRIX.json",
+      "SHA256": "5d20864680bed82a85bd8dea160f78639cdec76e5f3c8228f34f11ea8240b6be",
+      "size_bytes": 1658
+    },
+    {
+      "file": "P0_GEOMETRY_AUTHORITY_REGISTER.json",
+      "SHA256": "d6560e830d7e946004730ffc54c1d96df90b36720fbbd693ee3938a936b75aae",
+      "size_bytes": 777
+    },
+    {
+      "file": "P0_INTERFACE_CLOSURE_REGISTER.json",
+      "SHA256": "32c4ef45c07bde458573075f0738fa7297dde5611a146f3cca7d34cdbfb82f20",
+      "size_bytes": 510
+    },
+    {
+      "file": "P0_LOCK_REBOUND_SELECTION_GATE.json",
+      "SHA256": "0067c5b5fa6529c5a96ac97c4814b2f6a3925b7028a9e0a27eef6912b2f19bd2",
+      "size_bytes": 449
+    },
+    {
+      "file": "P0_MATERIAL_FASTENER_EVIDENCE_REGISTER.json",
+      "SHA256": "5c2c5cb1f98cb54d6a5c60e8a0ee9e8d18689e7a27a6e393e717d81cc86e48a4",
+      "size_bytes": 290
+    },
+    {
+      "file": "P0_NEXT_BLOCKER_AUTHORITY.json",
+      "SHA256": "e89e9a7c52f97a83c91185b2999727e7aaeac81bc43b9ae115b32dd7157fafd9",
+      "size_bytes": 621
+    }
+  ]
+}

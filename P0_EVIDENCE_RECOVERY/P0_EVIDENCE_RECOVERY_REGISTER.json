@@ -1,0 +1,197 @@
+{
+  "timestamp": "2026-09-07T01:43:00.494781+00:00",
+  "evidence": [
+    {
+      "ARTIFACT": "V1_R4_1_BASELINE_LOCK.json",
+      "FILE_REF": "file_000000005aec820a9442697ebb6179a5",
+      "EVIDENCE": "R4.1 file path, expected/actual SHA, 62 solids, STEP readback, B-Rep valid, mutation false",
+      "AUTHORITY_LEVEL": "AUTHORITATIVE_ASSERTION_RECORD",
+      "LIMITATION": "The actual STEP payload is not exposed by the current File Library retrieval result; this artifact is a prior execution record, not fresh byte-level recovery in the current runtime."
+    },
+    {
+      "ARTIFACT": "R4_1_BASELINE_LOCK(2).json",
+      "FILE_REF": "file_000000007b6c8246a4188109ac011c96",
+      "EVIDENCE": "sha before/after match, 62 solids, B-Rep valid, mutation false",
+      "AUTHORITY_LEVEL": "AUTHORITATIVE_ASSERTION_RECORD",
+      "LIMITATION": "Historical verification record; native payload not present in current retrieval output."
+    },
+    {
+      "ARTIFACT": "V4_FINAL_ENGINEERING_REPORT.md",
+      "FILE_REF": "file_00000000fe68824681d4b4dce099dc67",
+      "EVIDENCE": "R4.1_BASELINE PASS; SHA match; 62 solids; 62/62 mapping; physical/material/hardpoint/joint evidence not closed",
+      "AUTHORITY_LEVEL": "EXECUTED_ENGINEERING_REPORT",
+      "LIMITATION": "Report states baseline passed but does not substitute for native CAD/PMI/BOM/joint-map artifacts."
+    },
+    {
+      "ARTIFACT": "JON_P0_FABRICATION_AND_TEST_RELEASE_MASTER.json",
+      "FILE_REF": "file_0000000099608243b63b286322426ae6",
+      "EVIDENCE": "30 critical features; explicit required handoff artifacts; release assertion says every critical geometry row must be authoritative and independently verified",
+      "AUTHORITY_LEVEL": "CONTROLLED_GOVERNANCE",
+      "LIMITATION": "It is a release/control document, not the missing native geometry/drawing/BOM itself."
+    },
+    {
+      "ARTIFACT": "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv",
+      "FILE_REF": "file_000000006a448210a8a5a79c53b0791a",
+      "EVIDENCE": "GEO-001..030 taxonomy with explicit extraction/source requirements; all rows currently BLOCKED",
+      "AUTHORITY_LEVEL": "CONTROLLED_GOVERNANCE",
+      "LIMITATION": "Register contains requirements/status, not authoritative populated geometry."
+    },
+    {
+      "ARTIFACT": "P0_TEST_CONFIGURATION.md",
+      "FILE_REF": "file_000000005b5c821097232135f3b17493",
+      "EVIDENCE": "P0-Z0 lab fixture plane, P0-X/Y/Z conventions, exact article/serial/configuration recording requirements; reference dimensions explicitly not released",
+      "AUTHORITY_LEVEL": "CONTROLLED_TEST_DEFINITION",
+      "LIMITATION": "Exact fixture interface geometry and released critical dimensions are not populated."
+    },
+    {
+      "ARTIFACT": "P0_DEV006_MANUS_EXTRACTION_REQUEST.csv",
+      "FILE_REF": "file_00000000a99082469a95d99cb6e33103",
+      "EVIDENCE": "REQ-001 native STEP, REQ-002 extraction report, REQ-003 PMI/drawing, REQ-004 BOM, REQ-005 joint map, REQ-006 material definitions",
+      "AUTHORITY_LEVEL": "CONTROLLED_EXTRACTION_REQUEST",
+      "LIMITATION": "These are requested evidence classes, not the payloads themselves."
+    },
+    {
+      "ARTIFACT": "R5_1_FINAL_REPORT.md",
+      "FILE_REF": "file_0000000041e08243b7bc7187b96c8832",
+      "EVIDENCE": "R4.1 hash; 62-solid baseline; model-regression evidence; load-path repair history; physical capacity still unknown",
+      "AUTHORITY_LEVEL": "EXECUTED_ENGINEERING_REPORT",
+      "LIMITATION": "Does not close fabrication-critical native geometry/material/joint data."
+    },
+    {
+      "ARTIFACT": "R4_REGRESSION_CHECK.json",
+      "FILE_REF": "file_00000000f5a481f48cdcb79bcfee433d",
+      "EVIDENCE": "R4 candidate regression: 69 internal intersections preserved, 2-DOF model, ±180 model end-stop contact, hinge/lock regression",
+      "AUTHORITY_LEVEL": "MODEL_EXECUTION_RECORD",
+      "LIMITATION": "Model execution is not fabrication release and not hardware validation."
+    }
+  ],
+  "gaps": [
+    {
+      "GAP_ID": "GAP-001",
+      "STATUS": "PARTIALLY_CLOSED",
+      "EVIDENCE": [
+        "V1_R4_1_BASELINE_LOCK.json",
+        "R4_1_BASELINE_LOCK(2).json",
+        "V4_FINAL_ENGINEERING_REPORT.md"
+      ],
+      "SOURCE": "R4.1 baseline lock / V4 execution records",
+      "REVISION": "historical execution records dated 2026-09-04 to 2026-09-05",
+      "HASH": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "REMAINING_REQUIREMENT": "Fresh access to the exact native R4.1 STEP payload plus deterministic extraction of critical geometry and independent drawing/PMI correlation. The current File Library results prove a prior successful hash/readback record, not current byte-level payload availability.",
+      "FABRICATION_IMPACT": "Exact machining coordinates/tolerances cannot be released from the retrieved records alone."
+    },
+    {
+      "GAP_ID": "GAP-003",
+      "STATUS": "PARTIALLY_CLOSED",
+      "EVIDENCE": [
+        "P0_TEST_CONFIGURATION.md"
+      ],
+      "SOURCE": "Controlled P0 test configuration",
+      "REVISION": "P0.1",
+      "HASH": "NOT_AVAILABLE_IN_SEARCH_RESULT",
+      "REMAINING_REQUIREMENT": "Exact physical fixture interface geometry, hole pattern, datum scheme, equipment envelope/limits, and released drawing/PMI.",
+      "FABRICATION_IMPACT": "Test fixture/base cannot be manufactured to controlled interface dimensions yet."
+    },
+    {
+      "GAP_ID": "GAP-004",
+      "STATUS": "BLOCKED",
+      "EVIDENCE": [
+        "P0_DEV006_MANUS_EXTRACTION_REQUEST.csv",
+        "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv"
+      ],
+      "SOURCE": "Controlled extraction request + geometry register",
+      "REVISION": "current project control records",
+      "HASH": "NOT_POPULATED_FOR_SOURCE_PAYLOAD",
+      "REMAINING_REQUIREMENT": "Actual native joint/pivot geometry, axes, mating features, limits, fastener stack and inspection-critical dimensions from R4.1 CAD/joint map/drawing.",
+      "FABRICATION_IMPACT": "Hinge/link/rail/joint fabrication remains uncontrolled."
+    },
+    {
+      "GAP_ID": "GAP-005",
+      "STATUS": "PARTIALLY_CLOSED",
+      "EVIDENCE": [
+        "JON_P0_FABRICATION_AND_TEST_RELEASE_MASTER.json"
+      ],
+      "SOURCE": "Controlled P0 fabrication/test master",
+      "REVISION": "P0.2-DEV006",
+      "HASH": "NOT_AVAILABLE_IN_SEARCH_RESULT",
+      "REMAINING_REQUIREMENT": "Released material identity/condition/lot mapping to every fabrication-critical R4.1 region, with MTR/CoC or controlled material record.",
+      "FABRICATION_IMPACT": "Cannot issue final material-controlled fabrication package."
+    },
+    {
+      "GAP_ID": "GAP-006",
+      "STATUS": "PARTIALLY_CLOSED",
+      "EVIDENCE": [
+        "JON_P0_FABRICATION_AND_TEST_RELEASE_MASTER.json",
+        "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv"
+      ],
+      "SOURCE": "Controlled P0 fabrication master + fastener-stack feature taxonomy",
+      "REVISION": "P0.2-DEV006",
+      "HASH": "NOT_AVAILABLE_IN_SEARCH_RESULT",
+      "REMAINING_REQUIREMENT": "Released fastener part numbers/grades/sizes/grip/stack and installation/preload/torque where explicitly controlled.",
+      "FABRICATION_IMPACT": "Fastener installation cannot be released as controlled load-path hardware."
+    },
+    {
+      "GAP_ID": "GAP-007",
+      "STATUS": "BLOCKED",
+      "EVIDENCE": [
+        "P0 critical design closure candidate register from current project chain"
+      ],
+      "SOURCE": "Controlled candidate architecture history",
+      "REVISION": "P0/R4 development chain",
+      "HASH": "SEE CURRENT CLOSURE PACKAGE; NO SOURCE PAYLOAD HASH",
+      "REMAINING_REQUIREMENT": "An authorized controlled selection process plus bench evidence for final Lock-170 architecture. No candidate can be promoted solely by convenience.",
+      "FABRICATION_IMPACT": "Final 170 hardware cannot be frozen for manufacture."
+    },
+    {
+      "GAP_ID": "GAP-008",
+      "STATUS": "BLOCKED",
+      "EVIDENCE": [
+        "P0 critical design closure candidate register from current project chain"
+      ],
+      "SOURCE": "Controlled candidate architecture history",
+      "REVISION": "P0/R4 development chain",
+      "HASH": "SEE CURRENT CLOSURE PACKAGE; NO SOURCE PAYLOAD HASH",
+      "REMAINING_REQUIREMENT": "Controlled selection and test evidence for rebound-control implementation; damping law remains unassigned.",
+      "FABRICATION_IMPACT": "Final 180 hardware cannot be frozen for manufacture."
+    },
+    {
+      "GAP_ID": "GAP-009",
+      "STATUS": "PARTIALLY_CLOSED",
+      "EVIDENCE": [
+        "P0_TEST_CONFIGURATION.md"
+      ],
+      "SOURCE": "Controlled P0 test configuration",
+      "REVISION": "P0.1",
+      "HASH": "NOT_AVAILABLE_IN_SEARCH_RESULT",
+      "REMAINING_REQUIREMENT": "Exact sensor model/range/bandwidth/calibration and mounting geometry tied to released R4.1/P0 critical geometry.",
+      "FABRICATION_IMPACT": "Instrumentation brackets/mounts remain uncontrolled."
+    },
+    {
+      "GAP_ID": "GAP-010",
+      "STATUS": "PARTIALLY_CLOSED",
+      "EVIDENCE": [
+        "R4_REGRESSION_CHECK.json",
+        "R5_1_FINAL_REPORT.md",
+        "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv"
+      ],
+      "SOURCE": "R4 model execution + fabrication geometry control",
+      "REVISION": "R4/R5.1 records",
+      "HASH": "R4 baseline hash recorded in evidence",
+      "REMAINING_REQUIREMENT": "Exact native stop faces/locations/tolerances and independent dimensional verification. Model-level ±180 contact is not manufacturing release.",
+      "FABRICATION_IMPACT": "Safe physical end-stop fabrication remains uncontrolled."
+    },
+    {
+      "GAP_ID": "GAP-011",
+      "STATUS": "PARTIALLY_CLOSED",
+      "EVIDENCE": [
+        "P0_TEST_CONFIGURATION.md",
+        "JON_P0_FABRICATION_AND_TEST_RELEASE_MASTER.json"
+      ],
+      "SOURCE": "P0 test configuration + P0 fabrication master",
+      "REVISION": "P0.1 / P0.2-DEV006",
+      "HASH": "NOT_AVAILABLE_IN_SEARCH_RESULT",
+      "REMAINING_REQUIREMENT": "Exact absorber module/cartridge identity, serial/configuration, mounting geometry, and characterization-plan linkage.",
+      "FABRICATION_IMPACT": "The interface can be prepared conceptually, but the replaceable test module cannot be frozen as a controlled hardware selection."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "bench_datum": "P0-Z0/P0-X/P0-Y/P0-Z is defined in P0_TEST_CONFIGURATION.md",
+  "vehicle_datum": "NOT_RECOVERED",
+  "exact_fixture_geometry": "BLOCKED",
+  "joint_geometry": "BLOCKED",
+  "rail/carriage_interface": "BLOCKED",
+  "hinge_interface": "BLOCKED",
+  "absorber_interfaces": "BLOCKED",
+  "lock_interface": "BLOCKED",
+  "rebound_interface": "BLOCKED",
+  "instrument_interface": "PARTIALLY_DEFINED",
+  "basis": [
+    "P0_TEST_CONFIGURATION.md",
+    "P0_FABRICATION_CRITICAL_GEOMETRY_REGISTER.csv"
+  ]
+}

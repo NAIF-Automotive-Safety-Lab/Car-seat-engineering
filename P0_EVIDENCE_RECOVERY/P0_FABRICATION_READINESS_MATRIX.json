@@ -1,0 +1,62 @@
+[
+  {
+    "ITEM": "Native R4.1 payload recovery",
+    "STATUS": "BLOCKED",
+    "GATE": "Required before exact fabrication geometry release"
+  },
+  {
+    "ITEM": "Critical geometry extraction/PMI correlation",
+    "STATUS": "BLOCKED",
+    "GATE": "Required"
+  },
+  {
+    "ITEM": "Bench fixture datum definition",
+    "STATUS": "PARTIALLY_CLOSED",
+    "GATE": "Exact interface geometry still required"
+  },
+  {
+    "ITEM": "Joint/hinge/pivot interfaces",
+    "STATUS": "BLOCKED",
+    "GATE": "Required"
+  },
+  {
+    "ITEM": "Material identity mapping",
+    "STATUS": "PARTIALLY_CLOSED",
+    "GATE": "Controlled release evidence required"
+  },
+  {
+    "ITEM": "Fastener stack/preload",
+    "STATUS": "PARTIALLY_CLOSED",
+    "GATE": "Controlled release evidence required"
+  },
+  {
+    "ITEM": "Lock 170 final selection",
+    "STATUS": "BLOCKED",
+    "GATE": "Controlled test selection required"
+  },
+  {
+    "ITEM": "Rebound 180 final selection",
+    "STATUS": "BLOCKED",
+    "GATE": "Controlled test selection required"
+  },
+  {
+    "ITEM": "Safe end-stop exact geometry",
+    "STATUS": "PARTIALLY_CLOSED",
+    "GATE": "Native geometry + verification required"
+  },
+  {
+    "ITEM": "Instrumentation mounts",
+    "STATUS": "PARTIALLY_CLOSED",
+    "GATE": "Exact mount geometry/model selection required"
+  },
+  {
+    "ITEM": "Absorber module selection",
+    "STATUS": "PARTIALLY_CLOSED",
+    "GATE": "Exact module identity/serial/spec required"
+  },
+  {
+    "ITEM": "Vehicle pulse/initial velocity/friction/restitution/contact damping/FE",
+    "STATUS": "DEFERRED",
+    "GATE": "Not fabrication blockers for the bench article, but not usable as assumptions"
+  }
+]

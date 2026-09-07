@@ -1,0 +1,22 @@
+{
+  "PRIMARY_BLOCKER": "AUTHORITATIVE_NATIVE_GEOMETRY_AND_CRITICAL_INTERFACE_PAYLOAD",
+  "SECONDARY_BLOCKERS": [
+    "PMI/GD&T",
+    "BOM/material mapping",
+    "joint map",
+    "fastener/preload mapping",
+    "controlled lock/rebound selection",
+    "exact instrument mounts",
+    "exact absorber module"
+  ],
+  "NOT_BLOCKING_THIS_GATE": [
+    "vehicle pulse",
+    "initial velocity",
+    "friction law",
+    "restitution",
+    "contact damping",
+    "FE cards",
+    "occupant integration"
+  ],
+  "WHY": "Those deferred inputs belong to later experimental/model layers and must not be used as fabrication assumptions."
+}

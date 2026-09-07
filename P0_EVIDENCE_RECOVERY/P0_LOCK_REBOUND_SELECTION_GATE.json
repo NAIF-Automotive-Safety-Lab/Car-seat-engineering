@@ -1,0 +1,21 @@
+{
+  "LOCK170": {
+    "status": "BLOCKED",
+    "selection": "NOT_AUTHORIZED",
+    "required_evidence": [
+      "controlled selection test",
+      "positive capture",
+      "reverse-load hold",
+      "fault/reset test"
+    ]
+  },
+  "REBOUND180": {
+    "status": "BLOCKED",
+    "selection": "NOT_AUTHORIZED",
+    "required_evidence": [
+      "controlled reverse-motion test",
+      "force/displacement/velocity data",
+      "reset behavior"
+    ]
+  }
+}
