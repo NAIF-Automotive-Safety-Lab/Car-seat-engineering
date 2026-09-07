@@ -1,0 +1,15 @@
+{
+  "artifact_id": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "artifact_name": "R4.1.step",
+  "source": "/home/ubuntu/car-seat-engineering/R4.1/R4.1.step",
+  "source_type": "local_file",
+  "path": "/home/ubuntu/car-seat-engineering/artifacts/engineering-evidence/acquired/R4.1.step",
+  "file_size_bytes": 1220000,
+  "sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "media_type": "model/step",
+  "extension": ".step",
+  "acquisition_timestamp": "2026-09-07T03:39:09.838436+00:00",
+  "tool_version": "EERE-0.1.0",
+  "repository_revision": "0c65ad2cffdb249161542b97a29bbae6dbafba21",
+  "status": "VERIFIED"
+}

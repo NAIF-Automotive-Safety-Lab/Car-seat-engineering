@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "source_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "extraction_timestamp": "2026-09-07T03:39:11.426960+00:00",
+  "kernel": "OCP/OpenCascade",
+  "kernel_version": "cadquery-ocp 8.0.1.0.0 (environment evidence)",
+  "deterministic": true,
+  "read_status": "IFSelect_ReturnStatus.IFSelect_RetDone",
+  "solid_count": 62,
+  "shell_count": 62,
+  "face_count": 402,
+  "edge_count": 1550,
+  "vertex_count": 3100,
+  "compound_count": 1,
+  "bounding_box": {
+    "xmin": -300.0000001,
+    "ymin": -260.0000001,
+    "zmin": -58.0000001,
+    "xmax": 300.0000001,
+    "ymax": 706.28467232199,
+    "zmax": 698.5000001
+  },
+  "volume": 15117824.54566455,
+  "surface_area": null,
+  "center_of_mass": {
+    "x": 3.2265392405584774,
+    "y": 60.31951574308448,
+    "z": 104.94177718309761
+  },
+  "shape_validity": true,
+  "self_intersection_check": "NOT_PERFORMED",
+  "notes": [
+    "Surface-area and surface/curve type inventories are not claimed until a dedicated deterministic extractor is added."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "tool": "EERE",
+  "version": "0.1.0",
+  "status": "PARTIAL",
+  "platform": "Linux x86_64",
+  "python": "3.12.3",
+  "dependencies": [
+    {"name": "cadquery-ocp", "version": "8.0.1.0.0", "status": "VERIFIED", "role": "STEP/B-Rep kernel binding"},
+    {"name": "pytest", "version": "9.1.1", "status": "VERIFIED", "role": "test runner"},
+    {"name": "pychrono.core", "version": null, "status": "BLOCKED", "role": "Chrono dynamics", "reason": "required module unavailable; similarly named pychrono package does not provide pychrono.core"},
+    {"name": "STEPcode", "version": null, "status": "NOT_AVAILABLE", "role": "independent STEP semantic parser"},
+    {"name": "step-p21", "version": null, "status": "NOT_AVAILABLE", "role": "ISO-10303-21 forensic parser"},
+    {"name": "gmsh", "version": null, "status": "NOT_AVAILABLE", "role": "mesh generation"},
+    {"name": "CalculiX", "version": null, "status": "NOT_AVAILABLE", "role": "FE solver"}
+  ],
+  "policy": "No unpinned external binary is treated as authoritative; unavailable engines remain explicitly blocked."
+}

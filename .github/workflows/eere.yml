@@ -1,0 +1,27 @@
+name: eere
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  eere-install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned EERE test dependencies
+        run: python -m pip install --disable-pip-version-check 'pytest==9.1.1' 'cadquery-ocp==8.0.1.0.0'
+      - name: Run EERE and existing owned tests
+        run: python -m pytest -q engineering_recovery/tests tests
+      - name: Run EERE evidence pipeline
+        run: python tools/eere_run.py
+      - name: Upload machine-readable evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eere-evidence
+          path: artifacts/engineering-evidence/

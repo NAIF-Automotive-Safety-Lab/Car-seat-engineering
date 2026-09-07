@@ -1,0 +1,9 @@
+{
+  "status": "BLOCKED",
+  "verified": ["OCP/OpenCascade STEP read", "OCP/OpenCascade B-Rep inventory", "artifact SHA and immutable copy"],
+  "blocked": ["pychrono.core dynamic runtime", "Gmsh", "CalculiX"],
+  "not_available": ["STEPcode executable binding", "step-p21 executable binding", "PMI/GD&T extraction", "deterministic feature recognition"],
+  "chrono": {"runtime_available": false, "status": "BLOCKED", "reason": "pychrono.core import unavailable"},
+  "solver_execution_performed": false,
+  "production_ready": false
+}

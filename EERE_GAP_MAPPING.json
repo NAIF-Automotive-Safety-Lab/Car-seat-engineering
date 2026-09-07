@@ -1,0 +1,12 @@
+{
+  "system": "EERE",
+  "status_policy": ["VERIFIED", "FAILED", "BLOCKED", "NOT_AVAILABLE", "NOT_APPLICABLE"],
+  "gap_groups": {
+    "A01-A12": {"current_status": "PARTIAL", "automatable": true, "eere_component": "acquisition/provenance", "required_evidence": "byte-addressable artifact manifest and replay", "remaining_human_input": "source authorization and missing physical records"},
+    "B01-B20": {"current_status": "BLOCKED", "automatable": true, "eere_component": "STEP/B-Rep/features", "required_evidence": "deterministic geometry and feature inventory", "remaining_human_input": "authoritative engineering interpretation where geometry is insufficient"},
+    "C01-C17": {"current_status": "BLOCKED", "automatable": false, "eere_component": "physical-evidence firewall", "required_evidence": "measured material, mass, CG, friction and absorber data", "remaining_human_input": "physical measurement package"},
+    "D01-D10": {"current_status": "BLOCKED", "automatable": true, "eere_component": "PMI/traceability", "required_evidence": "PMI/GD&T or explicit NOT_PRESENT result", "remaining_human_input": "released drawing and datum authority"},
+    "E01-O14": {"current_status": "BLOCKED", "automatable": false, "eere_component": "Chrono/FE/CAM integration", "required_evidence": "verified runtimes plus authorized inputs and solver evidence", "remaining_human_input": "test condition, acceptance criteria, and physical validation"}
+  },
+  "rule": "Software installation alone never closes a gap."
+}
