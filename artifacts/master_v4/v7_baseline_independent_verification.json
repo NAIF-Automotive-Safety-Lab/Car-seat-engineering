@@ -1,0 +1,168 @@
+{
+  "verification": "INDEPENDENT_V7_BASELINE_VERIFICATION",
+  "package": "V7_ENGINEERING_BASELINE_PACKAGE.zip",
+  "package_sha256": "b7e5f7d7f7ff7abdf86a381f69997b06e8172a5a3b6020fd29bdddb0893ccf85",
+  "outer_attached_files": {
+    "V7_V0_V8_VERIFICATION_MATRIX.json": "e1389d936eb3832ff6c460d045cf4d46cefe4ecd42ed71c678894c4a62db36e2",
+    "V7_CAE_INPUT_MANIFEST.json": "91fdff841ada2c6117427f0a2fc4d0251471dd5b6881e167f863e7256dd31953",
+    "V7_ENGINEERING_BASELINE_MANIFEST.json": "1076646e4493cad0bd170b4c7ad63ac0e587cac048cdcafa4342020c0d5a6d41",
+    "V7_ENGINEERING_RECONSTRUCTION_ASSEMBLY_HIERARCHICAL.step": "c6dea11388c4bd229f71c9b6a8814f83312a2d1976810c7512e38d6be107043d"
+  },
+  "package_integrity": {
+    "archive_member_count": 37,
+    "manifest_declared_artifacts_excluding_manifest": 36,
+    "actual_files_excluding_manifest": 36,
+    "path_set_exact": true,
+    "undeclared_files": [],
+    "missing_declared_files": [],
+    "manifest_hash_size_mismatches": [],
+    "status": "PASS"
+  },
+  "cad_source": {
+    "source": "CAD_NATIVE/v7_engineering_reconstruction.py",
+    "generator_language": "CadQuery",
+    "real_brep_export_path": true,
+    "mesh_only": false,
+    "visual_placeholder_detected": false,
+    "generator_reexecuted_in_verifier_environment": false,
+    "reexecution_blocker": "cadquery Python package is not installed in the verifier environment; existing emitted STEP payloads were independently read through OCP",
+    "status": "VERIFIED_WITH_EXECUTION_LIMITATION"
+  },
+  "step_audit": {
+    "component_step_files": 16,
+    "assembly_step_files": 2,
+    "all_ap214_automotive_design": true,
+    "all_read_status": "IFSelect_RetDone",
+    "all_brep_valid": true,
+    "per_file_solid_counts": {
+      "P100_BASE.step": 1,
+      "P110L_RAIL.step": 1,
+      "P110R_RAIL.step": 1,
+      "P120_CARRIAGE.step": 3,
+      "P130L_ABSORBER.step": 1,
+      "P130R_ABSORBER.step": 1,
+      "P140_PELVIC_CONTROL.step": 1,
+      "P150L_ROTATION_LINK.step": 1,
+      "P150R_ROTATION_LINK.step": 1,
+      "P160_SEATBACK_FRAME.step": 1,
+      "P170_LOCK170.step": 1,
+      "P180_REBOUND.step": 1,
+      "P190_RESTRAINT_INTERFACES.step": 2,
+      "P200_OCCUPANT_GUIDANCE.step": 2,
+      "P210_SENSOR_INTERFACE.step": 1,
+      "PJ_HINGE_PIVOT.step": 2,
+      "V7_ENGINEERING_RECONSTRUCTION_ASSEMBLY.step": 21,
+      "V7_ENGINEERING_RECONSTRUCTION_ASSEMBLY_HIERARCHICAL.step": 21
+    },
+    "status": "PASS"
+  },
+  "reference_identity": {
+    "required_refs": ["100","110L","110R","120","130L","130R","140","150L","150R","160","170","180","190","200","210","J"],
+    "bom_records": 16,
+    "assembly_manifest_records": 16,
+    "all_required_refs_mapped_to_step": true,
+    "identity_basis": "BOM/traceability records plus independent STEP file read and SHA-256; not filenames alone",
+    "status": "PASS_WITH_AUTHORITY_LIMITATION"
+  },
+  "assembly_audit": {
+    "assembly_solid_count": 21,
+    "sum_of_component_solid_counts": 21,
+    "bom_record_count": 16,
+    "explanation": "The difference is component records containing multiple B-Rep solids: 120=3, 190=2, 200=2, J=2; the remaining 12 records are single-solid. This is instance/component geometry multiplicity, not an unexplained count mismatch.",
+    "hierarchy_readback": "PASS",
+    "component_transforms": "DECLARED_IN_ASSEMBLY_STEP; not independently validated against vehicle datums",
+    "bilateral_geometry": "CAD pairs exist for 110L/110R, 130L/130R, and 150L/150R; metric symmetry/functional equivalence not accepted as proven",
+    "status": "PASS_WITH_BLOCKERS"
+  },
+  "interface_audit": {
+    "declared_interfaces": 9,
+    "actual_mating_face_axis_clearance_verification": "NOT_EXECUTED_AS_RELEASE_INSPECTION",
+    "interface_register_status": "DESIGN_DEFINED",
+    "unresolved": ["vehicle datum", "production datums", "hardware-verified absorber axes", "vehicle-specific restraint anchorage", "validated lock/rebound implementation", "inspection-critical mating tolerances"],
+    "status": "PARTIAL"
+  },
+  "clearance_interference": {
+    "pairwise_common_volume_pairs": 12,
+    "pairs": ["120-130L","120-130R","120-140","120-200","130L-140","130L-200","130R-140","130R-200","140-160","140-200","150L-160","160-J"],
+    "classification_rule": "OVERLAP_OR_INTENDED_CONTACT_UNRESOLVED",
+    "hard_interference_pass": false,
+    "undefined_clearance_present": true,
+    "status": "FAIL_FOR_RELEASE / PARTIAL_FOR_ENGINEERING_BASELINE"
+  },
+  "kinematic_audit": {
+    "declared_joints": ["J_RAIL","J_SEATBACK","J_LINK_L","J_LINK_R"],
+    "declared_dof_and_limits": "metadata only",
+    "executable_joint_graph": false,
+    "timing_values": "TO_BE_DEFINED",
+    "lock_rebound_executable_states": false,
+    "status": "DEFINED_NOT_EXECUTABLE"
+  },
+  "mass_properties": {
+    "mass": null,
+    "cg": null,
+    "inertia": null,
+    "reason": "materials are TO_BE_CERTIFIED and no validated density/mass-property mapping is supplied",
+    "status": "BLOCKED"
+  },
+  "bom_cad": {
+    "ref_count_match": true,
+    "component_sha_bindings_present": true,
+    "geometry_status": "REAL_SOLID_MODEL for all listed part STEP files",
+    "material_status": "TO_BE_CERTIFIED for all listed records",
+    "fabrication_status": "NOT_RELEASED",
+    "physical_evidence": "NONE",
+    "status": "PASS_WITH_RELEASE_BLOCKERS"
+  },
+  "materials": {
+    "records": 16,
+    "confirmed": 0,
+    "design_selected": 0,
+    "to_be_certified": 16,
+    "missing_grade_density_strength_certificates": true,
+    "status": "BLOCKED"
+  },
+  "pmi_gdt": {
+    "manifest_status": "ENGINEERING_DEFINED_NOT_RELEASED",
+    "actual_released_datums_dimensions_tolerances": false,
+    "tolerance_values": "TO_BE_DEFINED_BY_PROCESS_CAPABILITY / FUNCTIONAL STACK-UP / JOINT STACK / TEST",
+    "status": "PARTIAL_NOT_RELEASED"
+  },
+  "manufacturability": {
+    "declared_status": "ENGINEERING_DEFINITION_NOT_RELEASE",
+    "process_tooling_joining_access_inspection_tolerance_stack": "PARTIAL_OR_UNPROVEN",
+    "status": "UNPROVEN_FOR_RELEASE"
+  },
+  "cae_inputs": {
+    "geometry": "PRESENT",
+    "mass_cg_inertia": "NULL",
+    "materials": "TO_BE_CERTIFIED",
+    "joints": "DEFINED_PENDING_VALIDATION",
+    "friction_contact_damping_restitution": "TO_BE_MEASURED",
+    "vehicle_pulse_initial_velocity": "EXTERNAL_DATA_REQUIRED",
+    "absorber_fx_fv": "PHYSICAL_TEST_REQUIRED",
+    "simulation_executed": false,
+    "status": "BLOCKED"
+  },
+  "requirements": {
+    "count": 12,
+    "closed": 0,
+    "partial_or_open": 12,
+    "physical_evidence": "NONE",
+    "simulation_evidence": "NOT_EXECUTED_HERE",
+    "regulatory_evidence": "NOT_PROVEN",
+    "status": "BLOCKED"
+  },
+  "zero_bypass": {
+    "fabricated_measurements_detected": false,
+    "unsupported_material_properties_detected": false,
+    "false_physical_test_claims_detected": false,
+    "false_regulatory_claims_detected": false,
+    "hidden_placeholder_values_detected": false,
+    "synthetic_results_promoted_to_v7": false,
+    "silent_assumptions_detected": false,
+    "status": "PASS"
+  },
+  "final_classification": "VERIFIED_WITH_BLOCKERS",
+  "release_gate": "STOP_RELEASE",
+  "manufacturer_release": "PROHIBITED_UNLESS_SEPARATELY_AUTHORIZED"
+}
