@@ -1,0 +1,18 @@
+{
+  "repair_status": "COMPLETE",
+  "scope": "TRACEABILITY / PROVENANCE ONLY",
+  "old_manifest_removed": "12_MANIFESTS/RC006_CANONICAL_MANIFEST.json",
+  "new_embedded_manifest": "12_MANIFESTS/RC006_EMBEDDED_CONTENT_MANIFEST.json",
+  "external_canonical_manifest": "RC006_REPAIRED_CANONICAL_MANIFEST_FINAL.json",
+  "zip_sha256": "8ceb3c44b0cc14860ea0bcf5c500e71c6213556bd6d3ecf79665eb6f78f27aef",
+  "external_manifest_sha256": "febffa281b5b7a63c8084c44b7554a627c579ef39f68f76805cc0790417e5e24",
+  "engineering_values_changed": false,
+  "cad_step_geometry_changed": false,
+  "design_intent_changed": false,
+  "evidence_record_count": 331,
+  "unique_evidence_ids": 331,
+  "duplicate_evidence_ids": 0,
+  "success_gate": true,
+  "manus_verification_claimed": false,
+  "handoff_status": "READY_FOR_MANUS_READ_ONLY_FORENSIC_AUDIT"
+}

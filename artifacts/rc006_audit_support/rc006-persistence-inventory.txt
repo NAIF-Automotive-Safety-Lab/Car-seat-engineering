@@ -1,0 +1,103 @@
+=== REPO ===
+/home/ubuntu/audit-repo
+main
+da71eab34ca76a45015ab5113f08a7bd30052b27
+## [32mmain[m...[31morigin/main[m
+[31m??[m V7-RC-004_INTERFACE_DEFINITION_PACKAGE.zip
+[31m??[m V7_MANUS_INTERFACE_DEFINITION_AUDIT.json
+[31m??[m V7_MANUS_INTERFACE_DEFINITION_AUDIT.md
+[31m??[m V7_MANUS_RC005_FORENSIC_AUDIT.json
+[31m??[m V7_MANUS_RC005_FORENSIC_AUDIT.md
+[31m??[m V7_MANUS_RC006_FORENSIC_AUDIT.json
+[31m??[m V7_MANUS_RC006_FORENSIC_AUDIT.md
+[31m??[m V7_MANUS_RC006_PROVENANCE_FINAL_FORENSIC_AUDIT.json
+[31m??[m V7_MANUS_RC006_PROVENANCE_FINAL_FORENSIC_AUDIT.md
+[31m??[m V7_MANUS_RC006_REPAIRED_FORENSIC_AUDIT.json
+[31m??[m V7_MANUS_RC006_REPAIRED_FORENSIC_AUDIT.md
+[31m??[m artifacts/interface_semantics_closure/
+=== STATUS PORCELAIN V1 ===
+?? V7-RC-004_INTERFACE_DEFINITION_PACKAGE.zip
+?? V7_MANUS_INTERFACE_DEFINITION_AUDIT.json
+?? V7_MANUS_INTERFACE_DEFINITION_AUDIT.md
+?? V7_MANUS_RC005_FORENSIC_AUDIT.json
+?? V7_MANUS_RC005_FORENSIC_AUDIT.md
+?? V7_MANUS_RC006_FORENSIC_AUDIT.json
+?? V7_MANUS_RC006_FORENSIC_AUDIT.md
+?? V7_MANUS_RC006_PROVENANCE_FINAL_FORENSIC_AUDIT.json
+?? V7_MANUS_RC006_PROVENANCE_FINAL_FORENSIC_AUDIT.md
+?? V7_MANUS_RC006_REPAIRED_FORENSIC_AUDIT.json
+?? V7_MANUS_RC006_REPAIRED_FORENSIC_AUDIT.md
+?? artifacts/interface_semantics_closure/
+=== STAGED ===
+=== UNSTAGED ===
+=== UNTRACKED ===
+V7-RC-004_INTERFACE_DEFINITION_PACKAGE.zip
+V7_MANUS_INTERFACE_DEFINITION_AUDIT.json
+V7_MANUS_INTERFACE_DEFINITION_AUDIT.md
+V7_MANUS_RC005_FORENSIC_AUDIT.json
+V7_MANUS_RC005_FORENSIC_AUDIT.md
+V7_MANUS_RC006_FORENSIC_AUDIT.json
+V7_MANUS_RC006_FORENSIC_AUDIT.md
+V7_MANUS_RC006_PROVENANCE_FINAL_FORENSIC_AUDIT.json
+V7_MANUS_RC006_PROVENANCE_FINAL_FORENSIC_AUDIT.md
+V7_MANUS_RC006_REPAIRED_FORENSIC_AUDIT.json
+V7_MANUS_RC006_REPAIRED_FORENSIC_AUDIT.md
+artifacts/interface_semantics_closure/V7_INTERFACE_SEMANTICS_CLOSURE.json
+artifacts/interface_semantics_closure/V7_INTERFACE_SEMANTICS_CLOSURE.md
+=== IGNORED RELATED ===
+[31m??[m V7_MANUS_INTERFACE_DEFINITION_AUDIT.json
+[31m??[m V7_MANUS_INTERFACE_DEFINITION_AUDIT.md
+[31m??[m V7_MANUS_RC005_FORENSIC_AUDIT.json
+[31m??[m V7_MANUS_RC005_FORENSIC_AUDIT.md
+[31m??[m V7_MANUS_RC006_FORENSIC_AUDIT.json
+[31m??[m V7_MANUS_RC006_FORENSIC_AUDIT.md
+[31m??[m V7_MANUS_RC006_PROVENANCE_FINAL_FORENSIC_AUDIT.json
+[31m??[m V7_MANUS_RC006_PROVENANCE_FINAL_FORENSIC_AUDIT.md
+[31m??[m V7_MANUS_RC006_REPAIRED_FORENSIC_AUDIT.json
+[31m??[m V7_MANUS_RC006_REPAIRED_FORENSIC_AUDIT.md
+[31m??[m artifacts/interface_semantics_closure/
+=== RECENT COMMITS ===
+da71eab34ca76a45015ab5113f08a7bd30052b27	2026-09-08 10:36:06 +0000	Verify V7 engineering baseline package independently
+92c60891755630de4e903d7deb27e7ad4b5ec052	2026-09-08 07:54:26 +0000	Finalize EERE runtime compatibility and evidence reports
+d5922ccfd1f3813b872f2308ebb8b5a1a1a1e7ad	2026-09-08 07:49:56 +0000	Merge remote EERE evidence integration
+1b19aa58a0640f65b8c039d457c4022bd14c0959	2026-09-08 07:49:25 +0000	Integrate EERE engineering evidence recovery engine
+629044d1b43fd323fdee5f08196f5f4052735f81	2026-09-08 07:48:00 +0000	Add V7 evidence closure traceability gate
+e65ecd895cd3e8e8dd69ec521a74cf59e6feaedf	2026-09-07 05:36:36 +0000	Analyze V5 V7 visual boards against standards
+751d39c12c0d8f5cf4510ff1b94a6f2e9f2cccba	2026-09-07 05:28:34 +0000	Map PDF functional requirements to current standards
+0c036165ae887fdd68f5af690f9ba688767cbafa	2026-09-07 05:11:36 +0000	Add frozen V7 forensic audit and V4 gate evidence
+c0c44a133efd0ed3aa93c9678057d6c110ae71d5	2026-09-07 05:06:03 +0000	Recover and classify frozen V7 source package
+5eadf89c0f9460fd105ca3d15e9788af013141b6	2026-09-07 05:03:19 +0000	Extract physical release requirements from gap register
+514dc74f6602e54a65333e4953f33bb656ca12fd	2026-09-07 05:02:04 +0000	Add EVA virtual evidence acquisition engine
+617be6eee18b6bb064b31b3144993c4e0bb23ef6	2026-09-07 04:57:13 +0000	Add Master v2 evidence and physics closure contracts
+6660ebfa724227b2f7048a3fa535045da365803a	2026-09-07 04:53:31 +0000	Add frozen V7 engineering release gate audit
+006ae8d65f3ef31fb2933dd9e9459838929439fd	2026-09-07 04:03:32 +0000	Build and verify real PyChrono core binding
+9c86204d5f105473c9f75da2ef4c5d2649cdd0a4	2026-09-07 03:39:20 +0000	Add evidence-first engineering recovery engine
+=== BASELINE REFERENCES ===
+[33mda71eab[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Verify V7 engineering baseline package independently
+[33m92c6089[m Finalize EERE runtime compatibility and evidence reports
+[33md5922cc[m Merge remote EERE evidence integration
+[33m1b19aa5[m Integrate EERE engineering evidence recovery engine
+[33m629044d[m Add V7 evidence closure traceability gate
+[33me65ecd8[m Analyze V5 V7 visual boards against standards
+[33m751d39c[m Map PDF functional requirements to current standards
+[33m0c03616[m Add frozen V7 forensic audit and V4 gate evidence
+[33mc0c44a1[m Recover and classify frozen V7 source package
+[33m5eadf89[m Extract physical release requirements from gap register
+[33m514dc74[m Add EVA virtual evidence acquisition engine
+[33m617be6e[m Add Master v2 evidence and physics closure contracts
+[33m6660ebf[m Add frozen V7 engineering release gate audit
+[33m006ae8d[m Build and verify real PyChrono core binding
+[33m9c86204[m Add evidence-first engineering recovery engine
+[33m0c65ad2[m Record Chrono runtime dependency blocker
+[33m0f25c13[m Verify native STEP handover and repair validator paths
+[33me6c2070[m Add R4.1 native STEP source escalation V2 audit
+[33m5672288[m Add R4.1 native CAD fabrication pipeline audit
+[33m643d0ba[m Add P0 evidence recovery and blocker authority record
+=== CRITICAL LOCAL / REPO PRESENCE ===
+V7_MANUS_RC006_PROVENANCE_FINAL_FORENSIC_AUDIT.json	REPO_PRESENT
+V7_MANUS_RC006_PROVENANCE_FINAL_FORENSIC_AUDIT.md	REPO_PRESENT
+RC-006_EVIDENCE_PHYSICAL_INPUT_CLOSURE_PACKAGE_PROVENANCE_REPAIRED.zip	UPLOAD_PRESENT_ONLY
+RC006_REPAIRED_CANONICAL_MANIFEST_FINAL.json	UPLOAD_PRESENT_ONLY
+RC006_REPAIRED_PROVENANCE_SELF_VERIFICATION_FINAL.json	UPLOAD_PRESENT_ONLY
+RC006_EMBEDDED_CONTENT_MANIFEST.json	UPLOAD_PRESENT_ONLY
+RC006_PROVENANCE_REPAIR_FINAL_REPORT.json	UPLOAD_PRESENT_ONLY

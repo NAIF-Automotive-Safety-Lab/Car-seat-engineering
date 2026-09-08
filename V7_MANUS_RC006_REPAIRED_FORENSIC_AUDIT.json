@@ -1,0 +1,351 @@
+{
+  "artifact": "V7_MANUS_RC006_REPAIRED_FORENSIC_AUDIT",
+  "audit_revision": "2026-09-09",
+  "read_only": true,
+  "package": {
+    "filename": "RC-006_EVIDENCE_PHYSICAL_INPUT_CLOSURE_PACKAGE_REPAIRED.zip",
+    "expected_sha256": "1f7fe60e05982faab269a9d62d374147e4916619c1aa202cc37ac0428327f705",
+    "actual_sha256": "1f7fe60e05982faab269a9d62d374147e4916619c1aa202cc37ac0428327f705",
+    "package_sha_match": true,
+    "external_manifest_sha256": "a7f25ac8d07e68ee03f5882245a6e701e078ea56926c5a0ac505d841b0bdc365",
+    "expected_manifest_sha256": "a7f25ac8d07e68ee03f5882245a6e701e078ea56926c5a0ac505d841b0bdc365",
+    "external_manifest_sha_match": true,
+    "self_verification_sha256": "b4f941e544775b453d42a32eb95eb899adaf0211d357a18f2ef928b3194cde42",
+    "actual_member_count": 28,
+    "manifest_member_count": 28,
+    "exact_paths": true,
+    "missing": [],
+    "extra": [],
+    "duplicate_artifacts": false,
+    "zip_integrity": "PASS",
+    "member_checks": [
+      {
+        "path": "01_MASTER/RC006_EXECUTIVE_REPORT.md",
+        "declared_size": 1498,
+        "actual_size": 1498,
+        "declared_sha256": "25f08d10fefca6f96d743dc6d90fb3ecfb4a7f1a487dc77d09f5f7f673e6d494",
+        "actual_sha256": "25f08d10fefca6f96d743dc6d90fb3ecfb4a7f1a487dc77d09f5f7f673e6d494",
+        "result": "PASS"
+      },
+      {
+        "path": "01_MASTER/RC006_EXECUTIVE_STATUS.json",
+        "declared_size": 1125,
+        "actual_size": 1125,
+        "declared_sha256": "ea2886fd99cdeab8a334719bafe72b86dec129fee08c67c9dd5cfd2c172c4385",
+        "actual_sha256": "ea2886fd99cdeab8a334719bafe72b86dec129fee08c67c9dd5cfd2c172c4385",
+        "result": "PASS"
+      },
+      {
+        "path": "01_MASTER/RC006_MASTER_EVIDENCE_REGISTER.json",
+        "declared_size": 191639,
+        "actual_size": 191639,
+        "declared_sha256": "4f0840d7685ed09c399205052d4d8b2719d80914eaf505b69094e7967c9afd7a",
+        "actual_sha256": "4f0840d7685ed09c399205052d4d8b2719d80914eaf505b69094e7967c9afd7a",
+        "result": "PASS"
+      },
+      {
+        "path": "01_MASTER/RC006_TRACEABILITY_REPAIR_REPORT.json",
+        "declared_size": 1493,
+        "actual_size": 1493,
+        "declared_sha256": "9674f3b44b73be2bef2f71417a9ea5280dc001e5e2f3553c808b9fbee903252f",
+        "actual_sha256": "9674f3b44b73be2bef2f71417a9ea5280dc001e5e2f3553c808b9fbee903252f",
+        "result": "PASS"
+      },
+      {
+        "path": "02_MATERIALS/RC006_MATERIAL_EVIDENCE_REGISTER.json",
+        "declared_size": 8096,
+        "actual_size": 8096,
+        "declared_sha256": "0bc9553d89ff068a576ac4d898c614c9ec565e17b2b991bf5aee49794f127a40",
+        "actual_sha256": "0bc9553d89ff068a576ac4d898c614c9ec565e17b2b991bf5aee49794f127a40",
+        "result": "PASS"
+      },
+      {
+        "path": "03_MASS_CG_INERTIA/RC006_MASS_CG_INERTIA_EVIDENCE.json",
+        "declared_size": 9481,
+        "actual_size": 9481,
+        "declared_sha256": "013e8b1591eb3554b60d9bf3b3188825b9abe04697ecbda7cf483f2eb0213d4e",
+        "actual_sha256": "013e8b1591eb3554b60d9bf3b3188825b9abe04697ecbda7cf483f2eb0213d4e",
+        "result": "PASS"
+      },
+      {
+        "path": "04_JOINT_FASTENER/RC006_JOINT_FASTENER_EVIDENCE.json",
+        "declared_size": 5611,
+        "actual_size": 5611,
+        "declared_sha256": "bbf3f163e2937db2b1a2059db61a8f936b67472b3505aa5e18b12cfa24f0eae8",
+        "actual_sha256": "bbf3f163e2937db2b1a2059db61a8f936b67472b3505aa5e18b12cfa24f0eae8",
+        "result": "PASS"
+      },
+      {
+        "path": "05_ABSORBER/RC006_ABSORBER_EVIDENCE.json",
+        "declared_size": 3077,
+        "actual_size": 3077,
+        "declared_sha256": "50d2acffbc42513e3765bf109509530d94a0ea52698d7a1ef34646e2d4b9fcd2",
+        "actual_sha256": "50d2acffbc42513e3765bf109509530d94a0ea52698d7a1ef34646e2d4b9fcd2",
+        "result": "PASS"
+      },
+      {
+        "path": "06_LOCK/RC006_LOCK_EVIDENCE.json",
+        "declared_size": 2600,
+        "actual_size": 2600,
+        "declared_sha256": "2fd7283237b3afdf2c68bd0eddceeee4b3ec3aa9a182e898c0a8d1b9ceaeacc8",
+        "actual_sha256": "2fd7283237b3afdf2c68bd0eddceeee4b3ec3aa9a182e898c0a8d1b9ceaeacc8",
+        "result": "PASS"
+      },
+      {
+        "path": "07_REBOUND/RC006_REBOUND_EVIDENCE.json",
+        "declared_size": 1785,
+        "actual_size": 1785,
+        "declared_sha256": "7220e1a844bc6a9ffad749d33cc681662ad47a6928ebc0fb2cdbf6a1dc29b9ec",
+        "actual_sha256": "7220e1a844bc6a9ffad749d33cc681662ad47a6928ebc0fb2cdbf6a1dc29b9ec",
+        "result": "PASS"
+      },
+      {
+        "path": "08_VEHICLE_OEM/RC006_VEHICLE_OEM_INPUT_REGISTER.json",
+        "declared_size": 2356,
+        "actual_size": 2356,
+        "declared_sha256": "51355287bb6fec8eeef2d09b6cd2e0c520893491dc8b477cf4d3cb2ea32f63e9",
+        "actual_sha256": "51355287bb6fec8eeef2d09b6cd2e0c520893491dc8b477cf4d3cb2ea32f63e9",
+        "result": "PASS"
+      },
+      {
+        "path": "09_CAE/RC006_CAE_INPUT_READINESS.json",
+        "declared_size": 3922,
+        "actual_size": 3922,
+        "declared_sha256": "9e34bc9130ec0da8c9d192ba126ddc2b59440894a7dcb1f5b7a65701df8e030f",
+        "actual_sha256": "9e34bc9130ec0da8c9d192ba126ddc2b59440894a7dcb1f5b7a65701df8e030f",
+        "result": "PASS"
+      },
+      {
+        "path": "10_MANUFACTURABILITY/RC006_MANUFACTURABILITY_EVIDENCE_REGISTER.json",
+        "declared_size": 9305,
+        "actual_size": 9305,
+        "declared_sha256": "ca9f43d9b1ee925e78ff18711a07c739800538d616806f2b2692082f0f3a549f",
+        "actual_sha256": "ca9f43d9b1ee925e78ff18711a07c739800538d616806f2b2692082f0f3a549f",
+        "result": "PASS"
+      },
+      {
+        "path": "11_PROVENANCE/P0_PROTOTYPE_PARAMETER_PACK.md",
+        "declared_size": 21383,
+        "actual_size": 21383,
+        "declared_sha256": "ca4243468eb40c197ed9f09afd8627d94d52254a0c43bf4d3ad67ea4b7c940db",
+        "actual_sha256": "ca4243468eb40c197ed9f09afd8627d94d52254a0c43bf4d3ad67ea4b7c940db",
+        "result": "PASS"
+      },
+      {
+        "path": "11_PROVENANCE/RC006_BLOCKER_REGISTER.json",
+        "declared_size": 1894,
+        "actual_size": 1894,
+        "declared_sha256": "9e076e9737e15e4fa3c79b4c425036c3f6125540de620c9bc67598b2cba0567d",
+        "actual_sha256": "9e076e9737e15e4fa3c79b4c425036c3f6125540de620c9bc67598b2cba0567d",
+        "result": "PASS"
+      },
+      {
+        "path": "11_PROVENANCE/RC006_PROVENANCE_REGISTER.json",
+        "declared_size": 10233,
+        "actual_size": 10233,
+        "declared_sha256": "a4ab807e24e80b754c6ae4d5fca3a9839c7f47b80731d686d302909ce40e1537",
+        "actual_sha256": "a4ab807e24e80b754c6ae4d5fca3a9839c7f47b80731d686d302909ce40e1537",
+        "result": "PASS"
+      },
+      {
+        "path": "11_PROVENANCE/T_OCS_V7_R1_Parametric_Manifest.csv",
+        "declared_size": 1237,
+        "actual_size": 1237,
+        "declared_sha256": "a47e6df85d5f60d275c0806dcdde3e5264b93642360b6e4b230221c8d0b82160",
+        "actual_sha256": "a47e6df85d5f60d275c0806dcdde3e5264b93642360b6e4b230221c8d0b82160",
+        "result": "PASS"
+      },
+      {
+        "path": "11_PROVENANCE/V7_ABSORBER_TEST_SPECIFICATION.json",
+        "declared_size": 2579,
+        "actual_size": 2579,
+        "declared_sha256": "4c64a7aa1d1e9847ad283dbdd6e53881c553d48ae0245b627e1bfda36e0f9610",
+        "actual_sha256": "4c64a7aa1d1e9847ad283dbdd6e53881c553d48ae0245b627e1bfda36e0f9610",
+        "result": "PASS"
+      },
+      {
+        "path": "11_PROVENANCE/V7_CAE_DEPENDENCY_GRAPH_R5.json",
+        "declared_size": 3314,
+        "actual_size": 3314,
+        "declared_sha256": "140cf9ef5728f88b65ea434c204a24d6d3cc5a404f8b79eb0f3a08cd5b3ccc86",
+        "actual_sha256": "140cf9ef5728f88b65ea434c204a24d6d3cc5a404f8b79eb0f3a08cd5b3ccc86",
+        "result": "PASS"
+      },
+      {
+        "path": "11_PROVENANCE/V7_FASTENER_JOINT_DEFINITION_R5.json",
+        "declared_size": 4958,
+        "actual_size": 4958,
+        "declared_sha256": "04e62cf2baef4fc4a45c9286d69b0731c563fcd55e95b423cae266279ea5c7a8",
+        "actual_sha256": "04e62cf2baef4fc4a45c9286d69b0731c563fcd55e95b423cae266279ea5c7a8",
+        "result": "PASS"
+      },
+      {
+        "path": "11_PROVENANCE/V7_LOCK_TEST_SPECIFICATION.json",
+        "declared_size": 2122,
+        "actual_size": 2122,
+        "declared_sha256": "ca3570ee1f2d73cb5aef7984ba7ce33db7e0ded8ba6550cde8686a537e7f9ea5",
+        "actual_sha256": "ca3570ee1f2d73cb5aef7984ba7ce33db7e0ded8ba6550cde8686a537e7f9ea5",
+        "result": "PASS"
+      },
+      {
+        "path": "11_PROVENANCE/V7_MANUFACTURABILITY_MATRIX_R5.json",
+        "declared_size": 8514,
+        "actual_size": 8514,
+        "declared_sha256": "64443a5b437621a9a5902a0cc7f681f6f8b72b1f392982245978eb653a4694c7",
+        "actual_sha256": "64443a5b437621a9a5902a0cc7f681f6f8b72b1f392982245978eb653a4694c7",
+        "result": "PASS"
+      },
+      {
+        "path": "11_PROVENANCE/V7_MASS_CG_INERTIA_R5.json",
+        "declared_size": 8734,
+        "actual_size": 8734,
+        "declared_sha256": "7a7247d25c7c48743bf962f83a8a754f05a0b1f8b993e487433451657bd90228",
+        "actual_sha256": "7a7247d25c7c48743bf962f83a8a754f05a0b1f8b993e487433451657bd90228",
+        "result": "PASS"
+      },
+      {
+        "path": "11_PROVENANCE/V7_MATERIAL_DEFINITION_R5.json",
+        "declared_size": 7302,
+        "actual_size": 7302,
+        "declared_sha256": "d07b282a7bcb2967ef73c675e0789486cdf181c98e18ba6c1b013884873c0280",
+        "actual_sha256": "d07b282a7bcb2967ef73c675e0789486cdf181c98e18ba6c1b013884873c0280",
+        "result": "PASS"
+      },
+      {
+        "path": "11_PROVENANCE/V7_R5_EXECUTIVE_STATUS.json",
+        "declared_size": 546,
+        "actual_size": 546,
+        "declared_sha256": "e840104b9d3ff9457573b8119f89b983943aa7b14edcea7c45ed1d914621ae33",
+        "actual_sha256": "e840104b9d3ff9457573b8119f89b983943aa7b14edcea7c45ed1d914621ae33",
+        "result": "PASS"
+      },
+      {
+        "path": "11_PROVENANCE/V7_REBOUND_TEST_SPECIFICATION.json",
+        "declared_size": 1349,
+        "actual_size": 1349,
+        "declared_sha256": "f33dadef734bc2eda3008787b650512b87051e2c6cd36fdc413780c8439a7910",
+        "actual_sha256": "f33dadef734bc2eda3008787b650512b87051e2c6cd36fdc413780c8439a7910",
+        "result": "PASS"
+      },
+      {
+        "path": "11_PROVENANCE/V7_VEHICLE_INTERFACE_INPUTS.json",
+        "declared_size": 1892,
+        "actual_size": 1892,
+        "declared_sha256": "1b3aa02f04d1cd910744a5fe47e6f40dc5c1235f04bfc1ac13bcc13e01e11e0d",
+        "actual_sha256": "1b3aa02f04d1cd910744a5fe47e6f40dc5c1235f04bfc1ac13bcc13e01e11e0d",
+        "result": "PASS"
+      },
+      {
+        "path": "12_MANIFESTS/RC006_CANONICAL_MANIFEST.json",
+        "declared_size": 5295,
+        "actual_size": 5295,
+        "declared_sha256": "f7cc19855ffd845a26297dd4d3b6510c9b44517db7a08e147bfdd795330334fb",
+        "actual_sha256": "f7cc19855ffd845a26297dd4d3b6510c9b44517db7a08e147bfdd795330334fb",
+        "result": "PASS"
+      }
+    ],
+    "external_zip_manifest_mismatches": 0
+  },
+  "embedded_manifest_audit": {
+    "path": "12_MANIFESTS/RC006_CANONICAL_MANIFEST.json",
+    "declared_package_identity": "RC-006_EVIDENCE_PHYSICAL_INPUT_CLOSURE_PACKAGE",
+    "declared_revision": "V7-RC-006",
+    "declared_member_count": 27,
+    "declared_canonical_zip_sha256": "366519c3226a4c3793f890e8c012d676cc139eacae9fb7a44784def501cf8682",
+    "actual_repaired_zip_sha256": "1f7fe60e05982faab269a9d62d374147e4916619c1aa202cc37ac0428327f705",
+    "declared_member_paths_count": 27,
+    "actual_zip_paths_count": 28,
+    "inner_manifest_count_self_consistent": true,
+    "inner_manifest_zip_sha_match": false,
+    "inner_manifest_covers_actual_zip": false,
+    "result": "BLOCKED"
+  },
+  "evidence_register": {
+    "total_records": 331,
+    "expected_total_records": 331,
+    "unique_ids": 331,
+    "duplicate_ids": {},
+    "required_fields_missing": {},
+    "result": "PASS"
+  },
+  "vehicle_repair": {
+    "required_ids": [
+      "VEH-DATUM",
+      "VEH-SEAT-HARDPOINTS",
+      "VEH-RESTRAINT-ANCHORS",
+      "VEH-H-POINT",
+      "VEH-CLEARANCE-ENVELOPE",
+      "VEH-MOUNTING-LOADS",
+      "VEH-CRASH-PULSE",
+      "VEH-INITIAL-CONDITIONS"
+    ],
+    "found_ids": [
+      "VEH-CLEARANCE-ENVELOPE",
+      "VEH-CRASH-PULSE",
+      "VEH-DATUM",
+      "VEH-H-POINT",
+      "VEH-INITIAL-CONDITIONS",
+      "VEH-MOUNTING-LOADS",
+      "VEH-RESTRAINT-ANCHORS",
+      "VEH-SEAT-HARDPOINTS"
+    ],
+    "all_eight_distinct": true,
+    "all_current_values_null": true,
+    "all_external_source_required": true,
+    "all_blocking": true,
+    "invariant_issues": [],
+    "allowed_change_scope": [
+      "ID",
+      "parameter identity",
+      "traceability metadata"
+    ],
+    "result": "PASS"
+  },
+  "zero_bypass": {
+    "promotion_candidates": [],
+    "unsupported_claims": [
+      "\"manufacturing release\""
+    ],
+    "absorber_special_records": [
+      {
+        "id": "ABS-STROKE",
+        "value": 180,
+        "value_class": "REFERENCE",
+        "status": "REFERENCE",
+        "source_type": "EXISTING_AUTHORITATIVE_SOURCE"
+      }
+    ],
+    "result": "BLOCKED"
+  },
+  "engineering_immutability": {
+    "cad_geometry_changed": false,
+    "design_intent_changed": false,
+    "engineering_values_changed": false,
+    "r4_1_changed": false,
+    "r4_2_created": false,
+    "cae_executed": false,
+    "physical_tests_executed": false,
+    "manufacturing_release": false,
+    "external_data_acquired": false,
+    "result": "PASS"
+  },
+  "critical_caveat": {
+    "materials_density_pending": true,
+    "mass_cg_inertia_unresolved": true,
+    "joint_fastener_pending": true,
+    "absorber_pending": true,
+    "lock_pending": true,
+    "rebound_pending": true,
+    "vehicle_oem_pending": true,
+    "cae_physical_inputs_incomplete": true,
+    "physical_measurements": 0,
+    "physical_test_results": 0
+  },
+  "final_decision": "BLOCKED",
+  "final_reason": "BLOCKED: external ZIP\u2194repaired-manifest checks pass, but the embedded file named RC006_CANONICAL_MANIFEST.json is stale and contradicts the repaired package: it declares member_count=27, an old canonical ZIP SHA, and does not cover the 28 actual members. This is a package/provenance defect under zero-bypass.",
+  "baselines_preserved": [
+    "V7-R3 immutable",
+    "R4.1 frozen",
+    "R4.2 not created"
+  ]
+}

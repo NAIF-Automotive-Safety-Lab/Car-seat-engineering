@@ -1,0 +1,147 @@
+{
+  "manifest_role": "EMBEDDED_CONTENT_MANIFEST",
+  "package_identity": "RC-006_EVIDENCE_PHYSICAL_INPUT_CLOSURE_PACKAGE_REPAIRED",
+  "repair_revision": "RC-006-PROVENANCE-REPAIR",
+  "final_member_inventory_scope": "ALL_PACKAGE_MEMBERS_EXCEPT_THIS_EMBEDDED_MANIFEST",
+  "final_member_count_excluding_self": 27,
+  "members": [
+    {
+      "path": "01_MASTER/RC006_EXECUTIVE_REPORT.md",
+      "size_bytes": 1498,
+      "sha256": "25f08d10fefca6f96d743dc6d90fb3ecfb4a7f1a487dc77d09f5f7f673e6d494"
+    },
+    {
+      "path": "01_MASTER/RC006_EXECUTIVE_STATUS.json",
+      "size_bytes": 1125,
+      "sha256": "ea2886fd99cdeab8a334719bafe72b86dec129fee08c67c9dd5cfd2c172c4385"
+    },
+    {
+      "path": "01_MASTER/RC006_MASTER_EVIDENCE_REGISTER.json",
+      "size_bytes": 191639,
+      "sha256": "4f0840d7685ed09c399205052d4d8b2719d80914eaf505b69094e7967c9afd7a"
+    },
+    {
+      "path": "01_MASTER/RC006_TRACEABILITY_REPAIR_REPORT.json",
+      "size_bytes": 1493,
+      "sha256": "9674f3b44b73be2bef2f71417a9ea5280dc001e5e2f3553c808b9fbee903252f"
+    },
+    {
+      "path": "02_MATERIALS/RC006_MATERIAL_EVIDENCE_REGISTER.json",
+      "size_bytes": 8096,
+      "sha256": "0bc9553d89ff068a576ac4d898c614c9ec565e17b2b991bf5aee49794f127a40"
+    },
+    {
+      "path": "03_MASS_CG_INERTIA/RC006_MASS_CG_INERTIA_EVIDENCE.json",
+      "size_bytes": 9481,
+      "sha256": "013e8b1591eb3554b60d9bf3b3188825b9abe04697ecbda7cf483f2eb0213d4e"
+    },
+    {
+      "path": "04_JOINT_FASTENER/RC006_JOINT_FASTENER_EVIDENCE.json",
+      "size_bytes": 5611,
+      "sha256": "bbf3f163e2937db2b1a2059db61a8f936b67472b3505aa5e18b12cfa24f0eae8"
+    },
+    {
+      "path": "05_ABSORBER/RC006_ABSORBER_EVIDENCE.json",
+      "size_bytes": 3077,
+      "sha256": "50d2acffbc42513e3765bf109509530d94a0ea52698d7a1ef34646e2d4b9fcd2"
+    },
+    {
+      "path": "06_LOCK/RC006_LOCK_EVIDENCE.json",
+      "size_bytes": 2600,
+      "sha256": "2fd7283237b3afdf2c68bd0eddceeee4b3ec3aa9a182e898c0a8d1b9ceaeacc8"
+    },
+    {
+      "path": "07_REBOUND/RC006_REBOUND_EVIDENCE.json",
+      "size_bytes": 1785,
+      "sha256": "7220e1a844bc6a9ffad749d33cc681662ad47a6928ebc0fb2cdbf6a1dc29b9ec"
+    },
+    {
+      "path": "08_VEHICLE_OEM/RC006_VEHICLE_OEM_INPUT_REGISTER.json",
+      "size_bytes": 2356,
+      "sha256": "51355287bb6fec8eeef2d09b6cd2e0c520893491dc8b477cf4d3cb2ea32f63e9"
+    },
+    {
+      "path": "09_CAE/RC006_CAE_INPUT_READINESS.json",
+      "size_bytes": 3922,
+      "sha256": "9e34bc9130ec0da8c9d192ba126ddc2b59440894a7dcb1f5b7a65701df8e030f"
+    },
+    {
+      "path": "10_MANUFACTURABILITY/RC006_MANUFACTURABILITY_EVIDENCE_REGISTER.json",
+      "size_bytes": 9305,
+      "sha256": "ca9f43d9b1ee925e78ff18711a07c739800538d616806f2b2692082f0f3a549f"
+    },
+    {
+      "path": "11_PROVENANCE/P0_PROTOTYPE_PARAMETER_PACK.md",
+      "size_bytes": 21383,
+      "sha256": "ca4243468eb40c197ed9f09afd8627d94d52254a0c43bf4d3ad67ea4b7c940db"
+    },
+    {
+      "path": "11_PROVENANCE/RC006_BLOCKER_REGISTER.json",
+      "size_bytes": 1894,
+      "sha256": "9e076e9737e15e4fa3c79b4c425036c3f6125540de620c9bc67598b2cba0567d"
+    },
+    {
+      "path": "11_PROVENANCE/RC006_PROVENANCE_REGISTER.json",
+      "size_bytes": 10233,
+      "sha256": "a4ab807e24e80b754c6ae4d5fca3a9839c7f47b80731d686d302909ce40e1537"
+    },
+    {
+      "path": "11_PROVENANCE/T_OCS_V7_R1_Parametric_Manifest.csv",
+      "size_bytes": 1237,
+      "sha256": "a47e6df85d5f60d275c0806dcdde3e5264b93642360b6e4b230221c8d0b82160"
+    },
+    {
+      "path": "11_PROVENANCE/V7_ABSORBER_TEST_SPECIFICATION.json",
+      "size_bytes": 2579,
+      "sha256": "4c64a7aa1d1e9847ad283dbdd6e53881c553d48ae0245b627e1bfda36e0f9610"
+    },
+    {
+      "path": "11_PROVENANCE/V7_CAE_DEPENDENCY_GRAPH_R5.json",
+      "size_bytes": 3314,
+      "sha256": "140cf9ef5728f88b65ea434c204a24d6d3cc5a404f8b79eb0f3a08cd5b3ccc86"
+    },
+    {
+      "path": "11_PROVENANCE/V7_FASTENER_JOINT_DEFINITION_R5.json",
+      "size_bytes": 4958,
+      "sha256": "04e62cf2baef4fc4a45c9286d69b0731c563fcd55e95b423cae266279ea5c7a8"
+    },
+    {
+      "path": "11_PROVENANCE/V7_LOCK_TEST_SPECIFICATION.json",
+      "size_bytes": 2122,
+      "sha256": "ca3570ee1f2d73cb5aef7984ba7ce33db7e0ded8ba6550cde8686a537e7f9ea5"
+    },
+    {
+      "path": "11_PROVENANCE/V7_MANUFACTURABILITY_MATRIX_R5.json",
+      "size_bytes": 8514,
+      "sha256": "64443a5b437621a9a5902a0cc7f681f6f8b72b1f392982245978eb653a4694c7"
+    },
+    {
+      "path": "11_PROVENANCE/V7_MASS_CG_INERTIA_R5.json",
+      "size_bytes": 8734,
+      "sha256": "7a7247d25c7c48743bf962f83a8a754f05a0b1f8b993e487433451657bd90228"
+    },
+    {
+      "path": "11_PROVENANCE/V7_MATERIAL_DEFINITION_R5.json",
+      "size_bytes": 7302,
+      "sha256": "d07b282a7bcb2967ef73c675e0789486cdf181c98e18ba6c1b013884873c0280"
+    },
+    {
+      "path": "11_PROVENANCE/V7_R5_EXECUTIVE_STATUS.json",
+      "size_bytes": 546,
+      "sha256": "e840104b9d3ff9457573b8119f89b983943aa7b14edcea7c45ed1d914621ae33"
+    },
+    {
+      "path": "11_PROVENANCE/V7_REBOUND_TEST_SPECIFICATION.json",
+      "size_bytes": 1349,
+      "sha256": "f33dadef734bc2eda3008787b650512b87051e2c6cd36fdc413780c8439a7910"
+    },
+    {
+      "path": "11_PROVENANCE/V7_VEHICLE_INTERFACE_INPUTS.json",
+      "size_bytes": 1892,
+      "sha256": "1b3aa02f04d1cd910744a5fe47e6f40dc5c1235f04bfc1ac13bcc13e01e11e0d"
+    }
+  ],
+  "self_reference_policy": "THIS_EMBEDDED_MANIFEST_IS_INTENTIONALLY_EXCLUDED_FROM_ITS_OWN_SHA256_INVENTORY",
+  "final_zip_sha256_binding": "EXTERNAL_ONLY",
+  "external_binding_artifact": "RC006_REPAIRED_CANONICAL_MANIFEST_FINAL.json"
+}

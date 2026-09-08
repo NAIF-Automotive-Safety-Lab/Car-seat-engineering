@@ -1,0 +1,28 @@
+{
+  "zip_sha256": "8ceb3c44b0cc14860ea0bcf5c500e71c6213556bd6d3ecf79665eb6f78f27aef",
+  "external_manifest_sha256": "febffa281b5b7a63c8084c44b7554a627c579ef39f68f76805cc0790417e5e24",
+  "zip_member_count": 28,
+  "manifest_member_count": 28,
+  "zip_members_equals_manifest": true,
+  "paths_exact": true,
+  "sizes_exact": true,
+  "sha256_all_match": true,
+  "missing": [],
+  "extra": [],
+  "size_mismatch": [],
+  "hash_mismatch": [],
+  "duplicate_artifacts": false,
+  "embedded_manifest_path": "12_MANIFESTS/RC006_EMBEDDED_CONTENT_MANIFEST.json",
+  "embedded_manifest_role": "EMBEDDED_CONTENT_MANIFEST",
+  "stale_embedded_canonical_manifest": false,
+  "embedded_manifest_hash_scope_valid": true,
+  "embedded_missing": [],
+  "embedded_extra": [],
+  "embedded_hash_mismatch": [],
+  "evidence_records": {
+    "total": 331,
+    "unique": 331,
+    "duplicates": 0
+  },
+  "success_gate": true
+}
