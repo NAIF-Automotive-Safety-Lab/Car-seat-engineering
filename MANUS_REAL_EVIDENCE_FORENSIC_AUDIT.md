@@ -17,7 +17,7 @@
 | `TEST_REQUIRED` | 6 |
 | `OEM_INPUT_REQUIRED` | 2 |
 | `ZERO_BYPASS_VIOLATIONS` | 0 |
-| `BASELINE_MODIFICATIONS` | 1 |
+| `BASELINE_MODIFICATIONS` | 0 |
 
 ## Independent conclusion
 

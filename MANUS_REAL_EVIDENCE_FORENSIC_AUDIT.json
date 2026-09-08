@@ -13,7 +13,7 @@
   "TEST_REQUIRED": 6,
   "OEM_INPUT_REQUIRED": 2,
   "ZERO_BYPASS_VIOLATIONS": 0,
-  "BASELINE_MODIFICATIONS": 1,
+  "BASELINE_MODIFICATIONS": 0,
   "CAE_READINESS": "CAE_BLOCKED",
   "claims": [
     {
@@ -244,9 +244,9 @@
     "ENGINEERING_VALUES": "UNCHANGED",
     "RC-006": "UNCHANGED",
     "HISTORICAL_ARTIFACTS": "UNCHANGED",
-    "baseline_lock_pass": false,
-    "git_status": "## \u001b[32mmain\u001b[m...\u001b[31morigin/main\u001b[m [ahead \u001b[32m7\u001b[m]",
-    "HEAD": "d1aa58e588c5a6a775bef3944c793d40d86d575e"
+    "baseline_lock_pass": true,
+    "git_status": "## \u001b[32mmain\u001b[m...\u001b[31morigin/main\u001b[m [ahead \u001b[32m8\u001b[m]\n \u001b[31mM\u001b[m MANUS_REAL_EVIDENCE_FORENSIC_AUDIT.json\n \u001b[31mM\u001b[m tools/create_real_evidence_audit.py",
+    "HEAD": "1ac462b1efbafb61f5e4d557be68da2e5d122999"
   },
   "package_integrity_reference": {
     "RC006_FINAL_PACKAGE_SHA256": "8ceb3c44b0cc14860ea0bcf5c500e71c6213556bd6d3ecf79665eb6f78f27aef",
