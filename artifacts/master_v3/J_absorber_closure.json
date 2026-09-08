@@ -1,0 +1,14 @@
+{
+  "status": "UNVERIFIED",
+  "models": [
+    "linear",
+    "nonlinear",
+    "piecewise",
+    "viscoelastic",
+    "rate_dependent",
+    "hysteretic",
+    "energy_absorbing"
+  ],
+  "curves_available": 0,
+  "physical_test_required": true
+}

@@ -1,0 +1,32 @@
+{
+  "timestamp_utc": "2026-09-07T07:29:56Z",
+  "engine": "Project Chrono / PyChrono",
+  "host": "Linux-6.18.38+-x86_64-with-glibc2.39",
+  "arch": "x86_64",
+  "python": "3.12.3",
+  "expected_source_commit": "9faf13dd8f1128dd75ed233a9627027b0422c3f7",
+  "package_file": "/home/ubuntu/third_party/chrono-build-10.0.0/bin/pychrono/__init__.py",
+  "core_module_file": "/home/ubuntu/third_party/chrono-build-10.0.0/bin/pychrono/core.py",
+  "compiled_core_present": true,
+  "import": "PASS",
+  "version": "UNKNOWN",
+  "core_class_present": true,
+  "basic_system_creation": true,
+  "basic_body_creation": true,
+  "basic_joint_creation": true,
+  "basic_solver_execution": true,
+  "simulation_time": 0.010000000000000002,
+  "position": [
+    1.0,
+    0.0,
+    0.0
+  ],
+  "velocity": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "reaction_extracted": true,
+  "reaction_type": "ChWrenchd",
+  "status": "PASS"
+}

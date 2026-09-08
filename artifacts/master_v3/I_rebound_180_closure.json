@@ -1,0 +1,10 @@
+{
+  "status": "BLOCKED",
+  "target": {
+    "value": 180,
+    "unit": "mm",
+    "evidence_class": "TARGET"
+  },
+  "design_envelope": "NOT_RUN_V7_INPUTS_ABSENT",
+  "physical_test_required": true
+}

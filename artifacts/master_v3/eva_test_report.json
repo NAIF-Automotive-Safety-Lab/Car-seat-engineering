@@ -1,0 +1,8 @@
+{
+  "status": "VERIFIED_SOFTWARE_CONTRACTS",
+  "command": "python3 -m pytest -q engineering_recovery/tests tests",
+  "result": "27 passed",
+  "covered": ["source ingestion", "document extraction", "unit normalization", "provenance binding", "derivation", "uncertainty bounds", "parameter sweeps", "sensitivity", "robustness classification", "test prioritization", "calibration readiness", "evidence classification", "A-O closure fields", "zero-bypass enforcement"],
+  "synthetic_data": "software fixtures are marked SYNTHETIC_TEST_DATA and never promoted to project validation",
+  "project_validation": "BLOCKED"
+}

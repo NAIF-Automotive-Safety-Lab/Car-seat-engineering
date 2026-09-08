@@ -1,60 +1,21 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "EERE Artifact Manifest",
+  "title": "EERE Artifact Provenance",
   "type": "object",
-  "required": [
-    "artifact_id",
-    "artifact_name",
-    "source",
-    "source_type",
-    "file_size_bytes",
-    "sha256",
-    "media_type",
-    "extension",
-    "acquisition_timestamp",
-    "tool_version",
-    "repository_revision",
-    "status"
-  ],
+  "required": ["artifact_id", "artifact_name", "source", "source_type", "path", "file_size_bytes", "sha256", "media_type", "extension", "acquisition_timestamp", "tool_version", "repository_revision", "status"],
   "properties": {
-    "artifact_id": {
-      "type": "string"
-    },
-    "artifact_name": {
-      "type": "string"
-    },
-    "source": {
-      "type": "string"
-    },
-    "source_type": {
-      "type": "string"
-    },
-    "file_size_bytes": {
-      "type": "integer",
-      "minimum": 0
-    },
-    "sha256": {
-      "type": "string",
-      "pattern": "^[0-9a-f]{64}$"
-    },
-    "media_type": {
-      "type": "string"
-    },
-    "extension": {
-      "type": "string"
-    },
-    "acquisition_timestamp": {
-      "type": "string"
-    },
-    "tool_version": {
-      "type": "string"
-    },
-    "repository_revision": {
-      "type": "string"
-    },
-    "status": {
-      "type": "string"
-    }
-  },
-  "additionalProperties": true
+    "artifact_id": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "artifact_name": {"type": "string"},
+    "source": {"type": "string"},
+    "source_type": {"type": "string"},
+    "path": {"type": "string"},
+    "file_size_bytes": {"type": "integer", "minimum": 0},
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "media_type": {"type": "string"},
+    "extension": {"type": "string"},
+    "acquisition_timestamp": {"type": "string"},
+    "tool_version": {"type": "string"},
+    "repository_revision": {"type": "string"},
+    "status": {"enum": ["VERIFIED", "BLOCKED", "UNVERIFIED"]}
+  }
 }

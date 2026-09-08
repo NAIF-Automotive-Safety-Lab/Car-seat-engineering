@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "validation_class": "STATIC_SR11_ADAPTER",
+  "checks": [
+    {
+      "name": "mapping_coverage",
+      "pass": true,
+      "count": 62,
+      "unique": 62
+    },
+    {
+      "name": "required_model_elements",
+      "pass": true,
+      "missing": []
+    },
+    {
+      "name": "joint_references",
+      "pass": true
+    },
+    {
+      "name": "contact_references",
+      "pass": true
+    },
+    {
+      "name": "no_silent_defaults",
+      "pass": true
+    },
+    {
+      "name": "endstop_mapping",
+      "pass": true
+    },
+    {
+      "name": "lock_mapping",
+      "pass": true
+    },
+    {
+      "name": "bilateral_absorber_mapping",
+      "pass": true
+    },
+    {
+      "name": "adapter_callable_static_validate",
+      "pass": true
+    },
+    {
+      "name": "adapter_callable_build_chrono_system",
+      "pass": true
+    }
+  ],
+  "solver_execution_performed": false
+}

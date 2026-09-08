@@ -1,0 +1,21 @@
+{
+  "status": "PARTIAL",
+  "models": [
+    {
+      "model_id": "R4.1_BREP",
+      "maturity": "M2",
+      "label": "COMPUTATIONAL",
+      "evidence_refs": [
+        "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+      ],
+      "status": "VERIFIED_FOR_R4_1"
+    },
+    {
+      "model_id": "V7_DYNAMIC_MODEL",
+      "maturity": "M0",
+      "label": "CONCEPTUAL",
+      "evidence_refs": [],
+      "status": "UNVERIFIED"
+    }
+  ]
+}

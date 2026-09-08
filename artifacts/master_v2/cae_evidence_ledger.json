@@ -1,0 +1,45 @@
+{
+  "status": "PARTIAL",
+  "analyses": [
+    {
+      "analysis": "Gmsh synthetic mesh smoke",
+      "input": "synthetic_engine_smoke/cube.geo",
+      "solver": "Gmsh 4.15.2",
+      "command": "gmsh -3 cube.geo -format msh2",
+      "output": "synthetic_engine_smoke/run/cube.msh",
+      "result": "VERIFIED",
+      "evidence_class": "CALCULATED",
+      "project_status": "NOT_V7_EVIDENCE"
+    },
+    {
+      "analysis": "CalculiX synthetic static smoke",
+      "input": "synthetic_engine_smoke/cube.inp",
+      "solver": "CalculiX source build",
+      "command": "CalculiX cube",
+      "output": "synthetic_engine_smoke/run/cube.frd",
+      "result": "VERIFIED",
+      "evidence_class": "CALCULATED",
+      "project_status": "NOT_V7_EVIDENCE"
+    },
+    {
+      "analysis": "R4.1 OCP B-Rep validation",
+      "input": "R4.1/R4.1.step",
+      "solver": "OCP/OpenCascade",
+      "command": "validate_r41_step.py",
+      "output": "r41_step_validation.json",
+      "result": "VERIFIED_FOR_R4_1",
+      "evidence_class": "DERIVED_FROM_CAD",
+      "project_status": "NOT_V7_EVIDENCE"
+    },
+    {
+      "analysis": "V7 CAE",
+      "input": null,
+      "solver": null,
+      "command": null,
+      "output": null,
+      "result": "BLOCKED",
+      "evidence_class": "UNVERIFIED",
+      "project_status": "BLOCKED"
+    }
+  ]
+}

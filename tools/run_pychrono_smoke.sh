@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+CHRONO_BUILD_ROOT="${CHRONO_BUILD_ROOT:-/home/ubuntu/third_party/chrono-build-10.0.0}"
+export PYTHONPATH="$CHRONO_BUILD_ROOT/bin${PYTHONPATH:+:$PYTHONPATH}"
+export LD_LIBRARY_PATH="$CHRONO_BUILD_ROOT/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+export PYCHRONO_EXPECTED_SOURCE_COMMIT="${PYCHRONO_EXPECTED_SOURCE_COMMIT:-9faf13dd8f1128dd75ed233a9627027b0422c3f7}"
+
+python3 pychrono_smoke_test.py

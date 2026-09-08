@@ -1,0 +1,86 @@
+{
+  "status": "CANDIDATE_TEST_PLAN",
+  "selection_policy": "information gain per effort; no invented cost",
+  "tests": [
+    {
+      "test_id": "T01_vehicle_pulse_and_acceleration",
+      "affected_gaps": [
+        "O01",
+        "O02",
+        "L01",
+        "L02"
+      ],
+      "uncertainties_reduced": 4,
+      "sensitivity_importance": 10,
+      "safety_importance": 10,
+      "effort_estimate": 8,
+      "dependency_unlocks": [
+        "lock timing",
+        "rebound",
+        "CAE calibration"
+      ],
+      "information_gain_score": 3.875,
+      "status": "CANDIDATE",
+      "physical_test_required": true
+    },
+    {
+      "test_id": "T02_absorber_force_stroke",
+      "affected_gaps": [
+        "J01",
+        "J02",
+        "I01",
+        "O06"
+      ],
+      "uncertainties_reduced": 4,
+      "sensitivity_importance": 9,
+      "safety_importance": 8,
+      "effort_estimate": 6,
+      "dependency_unlocks": [
+        "absorber model",
+        "ride-down dynamics"
+      ],
+      "information_gain_score": 4.5,
+      "status": "CANDIDATE",
+      "physical_test_required": true
+    },
+    {
+      "test_id": "T03_joint_and_lock_characterization",
+      "affected_gaps": [
+        "E01",
+        "H01",
+        "H02",
+        "G01"
+      ],
+      "uncertainties_reduced": 4,
+      "sensitivity_importance": 8,
+      "safety_importance": 9,
+      "effort_estimate": 7,
+      "dependency_unlocks": [
+        "Lock-170 ranking",
+        "structural load path"
+      ],
+      "information_gain_score": 3.857142857142857,
+      "status": "CANDIDATE",
+      "physical_test_required": true
+    },
+    {
+      "test_id": "T04_material_and_fastener_certificate_review",
+      "affected_gaps": [
+        "F01",
+        "G01",
+        "G02"
+      ],
+      "uncertainties_reduced": 3,
+      "sensitivity_importance": 7,
+      "safety_importance": 8,
+      "effort_estimate": 3,
+      "dependency_unlocks": [
+        "FE material card",
+        "preload model"
+      ],
+      "information_gain_score": 7.666666666666667,
+      "status": "CANDIDATE",
+      "physical_test_required": true
+    }
+  ]
+}

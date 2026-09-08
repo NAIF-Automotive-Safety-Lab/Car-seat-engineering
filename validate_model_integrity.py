@@ -7,7 +7,7 @@ import json
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parent
 MANIFEST = ROOT / "SR11/manifests/V1_SR11_BODY_MAPPING.json"
 
 REQUIRED_BODY_IDS = {

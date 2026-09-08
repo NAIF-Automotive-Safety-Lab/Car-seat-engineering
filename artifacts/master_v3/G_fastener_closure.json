@@ -1,0 +1,104 @@
+{
+  "status": "BLOCKED",
+  "gaps": [
+    {
+      "gap_id": "G01",
+      "cad_bom_search": "completed against available records",
+      "fastener": null,
+      "calculated_preload": null,
+      "preload_evidence_class": "CALCULATED_ONLY_IF_INPUTS_EXIST",
+      "physical_test_required": true,
+      "minimum_human_input": "released BOM/fastener specification"
+    },
+    {
+      "gap_id": "G02",
+      "cad_bom_search": "completed against available records",
+      "fastener": null,
+      "calculated_preload": null,
+      "preload_evidence_class": "CALCULATED_ONLY_IF_INPUTS_EXIST",
+      "physical_test_required": true,
+      "minimum_human_input": "released BOM/fastener specification"
+    },
+    {
+      "gap_id": "G03",
+      "cad_bom_search": "completed against available records",
+      "fastener": null,
+      "calculated_preload": null,
+      "preload_evidence_class": "CALCULATED_ONLY_IF_INPUTS_EXIST",
+      "physical_test_required": true,
+      "minimum_human_input": "released BOM/fastener specification"
+    },
+    {
+      "gap_id": "G04",
+      "cad_bom_search": "completed against available records",
+      "fastener": null,
+      "calculated_preload": null,
+      "preload_evidence_class": "CALCULATED_ONLY_IF_INPUTS_EXIST",
+      "physical_test_required": true,
+      "minimum_human_input": "released BOM/fastener specification"
+    },
+    {
+      "gap_id": "G05",
+      "cad_bom_search": "completed against available records",
+      "fastener": null,
+      "calculated_preload": null,
+      "preload_evidence_class": "CALCULATED_ONLY_IF_INPUTS_EXIST",
+      "physical_test_required": true,
+      "minimum_human_input": "released BOM/fastener specification"
+    },
+    {
+      "gap_id": "G06",
+      "cad_bom_search": "completed against available records",
+      "fastener": null,
+      "calculated_preload": null,
+      "preload_evidence_class": "CALCULATED_ONLY_IF_INPUTS_EXIST",
+      "physical_test_required": true,
+      "minimum_human_input": "released BOM/fastener specification"
+    },
+    {
+      "gap_id": "G07",
+      "cad_bom_search": "completed against available records",
+      "fastener": null,
+      "calculated_preload": null,
+      "preload_evidence_class": "CALCULATED_ONLY_IF_INPUTS_EXIST",
+      "physical_test_required": true,
+      "minimum_human_input": "released BOM/fastener specification"
+    },
+    {
+      "gap_id": "G08",
+      "cad_bom_search": "completed against available records",
+      "fastener": null,
+      "calculated_preload": null,
+      "preload_evidence_class": "CALCULATED_ONLY_IF_INPUTS_EXIST",
+      "physical_test_required": true,
+      "minimum_human_input": "released BOM/fastener specification"
+    },
+    {
+      "gap_id": "G09",
+      "cad_bom_search": "completed against available records",
+      "fastener": null,
+      "calculated_preload": null,
+      "preload_evidence_class": "CALCULATED_ONLY_IF_INPUTS_EXIST",
+      "physical_test_required": true,
+      "minimum_human_input": "released BOM/fastener specification"
+    },
+    {
+      "gap_id": "G10",
+      "cad_bom_search": "completed against available records",
+      "fastener": null,
+      "calculated_preload": null,
+      "preload_evidence_class": "CALCULATED_ONLY_IF_INPUTS_EXIST",
+      "physical_test_required": true,
+      "minimum_human_input": "released BOM/fastener specification"
+    },
+    {
+      "gap_id": "G11",
+      "cad_bom_search": "completed against available records",
+      "fastener": null,
+      "calculated_preload": null,
+      "preload_evidence_class": "CALCULATED_ONLY_IF_INPUTS_EXIST",
+      "physical_test_required": true,
+      "minimum_human_input": "released BOM/fastener specification"
+    }
+  ]
+}

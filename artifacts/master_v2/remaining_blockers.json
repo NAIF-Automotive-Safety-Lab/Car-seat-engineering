@@ -1,0 +1,16 @@
+{
+  "status": "BLOCKED_RELEASE",
+  "critical": [
+    "V7 native CAD payload absent",
+    "released V7 BOM/materials/PMI/tolerances absent",
+    "V7 interfaces and critical load paths not deterministically auditable",
+    "V7 CAE inputs and acceptance thresholds absent"
+  ],
+  "noncritical_or_external": [
+    "OCCT 7.9.2 installation stopped",
+    "step-p21 build stopped",
+    "feature recognition not implemented",
+    "physical measurements count is zero"
+  ],
+  "release_decision": "STOP_RELEASE"
+}

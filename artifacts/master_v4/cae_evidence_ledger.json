@@ -1,0 +1,53 @@
+{
+  "status": "BLOCKED",
+  "entries": [
+    {
+      "analysis": "R4.1 STEP/B-Rep forensic reference audit",
+      "input": "R4.1/R4.1.step",
+      "input_sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "solver": "OpenCascade/OCP",
+      "version": "repository-verified",
+      "command": "python3 validate_r41_step.py R4.1/R4.1.step",
+      "output_artifact": "artifacts/r41_step_validation.json",
+      "result": "reference geometry parsed; not V7",
+      "hash": null,
+      "status": "PARTIAL"
+    },
+    {
+      "analysis": "V7 structural FEA",
+      "input": null,
+      "input_sha256": null,
+      "solver": "CalculiX",
+      "version": null,
+      "command": null,
+      "output_artifact": null,
+      "result": "V7 native geometry/material/loads unavailable",
+      "hash": null,
+      "status": "BLOCKED"
+    },
+    {
+      "analysis": "V7 multibody dynamics",
+      "input": null,
+      "input_sha256": null,
+      "solver": "Project Chrono",
+      "version": "10.0.0 core verified",
+      "command": null,
+      "output_artifact": null,
+      "result": "V7 configuration and calibrated physical inputs unavailable",
+      "hash": null,
+      "status": "BLOCKED"
+    },
+    {
+      "analysis": "Synthetic engine smokes",
+      "input": "artifacts/master_v2/synthetic_engine_smoke",
+      "input_sha256": null,
+      "solver": "Gmsh/CalculiX",
+      "version": "repository-recorded",
+      "command": "synthetic fixture smoke commands",
+      "output_artifact": "synthetic outputs",
+      "result": "software availability only",
+      "hash": null,
+      "status": "VERIFIED_NOT_PROJECT_EVIDENCE"
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "status": "PASS",
+  "artifact_manifest": {
+    "artifact_id": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "artifact_name": "R4.1.step",
+    "source": "/home/ubuntu/car-seat-engineering/R4.1/R4.1.step",
+    "source_type": "local_file",
+    "path": "/home/ubuntu/car-seat-engineering/artifacts/engineering-evidence/acquired/R4.1.step",
+    "file_size_bytes": 1220000,
+    "sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "media_type": "model/step",
+    "extension": ".step",
+    "acquisition_timestamp": "2026-09-07T04:02:42.287469+00:00",
+    "tool_version": "EERE-0.1.0",
+    "repository_revision": "9c86204d5f105473c9f75da2ef4c5d2649cdd0a4",
+    "status": "VERIFIED"
+  },
+  "forensic": {
+    "status": "PASS",
+    "source_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "file_size_bytes": 1220000,
+    "parser": "EERE deterministic ISO-10303-21 entity scanner",
+    "deterministic": true,
+    "header_present": true,
+    "footer_present": true,
+    "schema": [
+      "'AUTOMOTIVE_DESIGN { 1 0 10303 214 1 1 1 1 }"
+    ],
+    "application_protocol": [
+      "'Open CASCADE Model"
+    ],
+    "entity_count": 22119,
+    "entity_type_counts": {
+      "ADVANCED_BREP_SHAPE_REPRESENTATION": 62,
+      "ADVANCED_FACE": 402,
+      "APPLICATION_CONTEXT": 1,
+      "APPLICATION_PROTOCOL_DEFINITION": 1,
+      "AXIS2_PLACEMENT_2D": 97,
+      "AXIS2_PLACEMENT_3D": 584,
+      "B_SPLINE_CURVE_WITH_KNOTS": 80,
+      "CARTESIAN_POINT": 4441,
+      "CIRCLE": 178,
+      "CLOSED_SHELL": 62,
+      "CONTEXT_DEPENDENT_SHAPE_REPRESENTATION": 62,
+      "CYLINDRICAL_SURFACE": 47,
+      "DEFINITIONAL_REPRESENTATION": 1550,
+      "DIRECTION": 3286,
+      "EDGE_CURVE": 775,
+      "EDGE_LOOP": 424,
+      "ELLIPSE": 38,
+      "FACE_BOUND": 424,
+      "ITEM_DEFINED_TRANSFORMATION": 62,
+      "LINE": 2021,
+      "MANIFOLD_SOLID_BREP": 62,
+      "NEXT_ASSEMBLY_USAGE_OCCURRENCE": 62,
+      "ORIENTED_EDGE": 1550,
+      "PCURVE": 1550,
+      "PLANE": 355,
+      "PRODUCT": 63,
+      "PRODUCT_CONTEXT": 63,
+      "PRODUCT_DEFINITION": 63,
+      "PRODUCT_DEFINITION_CONTEXT": 63,
+      "PRODUCT_DEFINITION_FORMATION": 63,
+      "PRODUCT_DEFINITION_SHAPE": 125,
+      "PRODUCT_RELATED_PRODUCT_CATEGORY": 63,
+      "SEAM_CURVE": 36,
+      "SHAPE_DEFINITION_REPRESENTATION": 63,
+      "SHAPE_REPRESENTATION": 1,
+      "SURFACE_CURVE": 739,
+      "UNCERTAINTY_MEASURE_WITH_UNIT": 63,
+      "VECTOR": 2021,
+      "VERTEX_POINT": 517
+    },
+    "product_definitions": 63,
+    "product_definition_relationships": 0,
+    "representation_relationships": 0,
+    "geometry_entity_count": 7042,
+    "topology_entity_count": 1818,
+    "pmi_entity_count": 0,
+    "assembly_entities": 62,
+    "unknown_entities": [],
+    "parse_errors": [],
+    "warnings": [
+      "STEPcode and step-p21 comparison is NOT_AVAILABLE; this report is not a dual-parser claim."
+    ]
+  },
+  "brep": {
+    "status": "PASS",
+    "source_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "extraction_timestamp": "2026-09-07T04:02:43.624029+00:00",
+    "kernel": "OCP/OpenCascade",
+    "kernel_version": "cadquery-ocp 8.0.1.0.0 (environment evidence)",
+    "deterministic": true,
+    "read_status": "IFSelect_ReturnStatus.IFSelect_RetDone",
+    "solid_count": 62,
+    "shell_count": 62,
+    "face_count": 402,
+    "edge_count": 1550,
+    "vertex_count": 3100,
+    "compound_count": 1,
+    "bounding_box": {
+      "xmin": -300.0000001,
+      "ymin": -260.0000001,
+      "zmin": -58.0000001,
+      "xmax": 300.0000001,
+      "ymax": 706.28467232199,
+      "zmax": 698.5000001
+    },
+    "volume": 15117824.54566455,
+    "surface_area": null,
+    "center_of_mass": {
+      "x": 3.2265392405584774,
+      "y": 60.31951574308448,
+      "z": 104.94177718309761
+    },
+    "shape_validity": true,
+    "self_intersection_check": "NOT_PERFORMED",
+    "notes": [
+      "Surface-area and surface/curve type inventories are not claimed until a dedicated deterministic extractor is added."
+    ]
+  },
+  "runtime": {
+    "status": "BLOCKED",
+    "components": {
+      "ocp": {
+        "status": "VERIFIED",
+        "reason": "B-Rep report completed"
+      },
+      "stepcode": {
+        "status": "NOT_AVAILABLE",
+        "reason": "No executable stepcode binding detected"
+      },
+      "step_p21": {
+        "status": "NOT_AVAILABLE",
+        "reason": "No executable step-p21 parser detected"
+      },
+      "pychrono_core": {
+        "status": "VERIFIED",
+        "package_file": "/home/ubuntu/third_party/chrono-build-10.0.0/bin/pychrono/__init__.py",
+        "core_file": "/home/ubuntu/third_party/chrono-build-10.0.0/bin/pychrono/core.py",
+        "compiled_core_present": true,
+        "system_class_present": true
+      },
+      "gmsh": {
+        "status": "NOT_AVAILABLE",
+        "reason": "executable not found"
+      },
+      "calculix": {
+        "status": "NOT_AVAILABLE",
+        "reason": "executable not found"
+      }
+    },
+    "platform": "Linux-6.18.38+-x86_64-with-glibc2.39",
+    "python": "3.12.3",
+    "checked_at": "2026-09-07T04:02:44.129013+00:00"
+  }
+}

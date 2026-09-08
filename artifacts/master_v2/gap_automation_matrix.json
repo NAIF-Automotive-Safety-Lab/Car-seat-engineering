@@ -1,0 +1,1091 @@
+{
+  "status": "PARTIAL",
+  "records": [
+    {
+      "gap_id": "A01",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "A02",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "A03",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "A04",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "A05",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "A06",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "A07",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "A08",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "A09",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "A10",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "A11",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "A12",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "B01",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "B02",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "B03",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "B04",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "B05",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "B06",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "B07",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "B08",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "B09",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "B10",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "B11",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "B12",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "B13",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "B14",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "B15",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "B16",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "B17",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "B18",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "B19",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "B20",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "C01",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "C02",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "C03",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "C04",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "C05",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "C06",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "C07",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "C08",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "C09",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "C10",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "C11",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "C12",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "C13",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "C14",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "C15",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "C16",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "C17",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "D01",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "D02",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "D03",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "D04",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "D05",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "D06",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "D07",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "D08",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "D09",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "D10",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "E01",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "E02",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "E03",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "E04",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "E05",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "E06",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "E07",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "E08",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "E09",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "E10",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "E11",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "F01",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "F02",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "F03",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "F04",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "F05",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "F06",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "F07",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "F08",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "F09",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "G01",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "G02",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "G03",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "G04",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "G05",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "G06",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "G07",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "G08",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "G09",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "G10",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "G11",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "H01",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "H02",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "H03",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "H04",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "H05",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "H06",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "H07",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "H08",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "H09",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "H10",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "H11",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "H12",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "I01",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "I02",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "I03",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "I04",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "I05",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "I06",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "I07",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "I08",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "I09",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "I10",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "I11",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "J01",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "J02",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "J03",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "J04",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "J05",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "J06",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "J07",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "J08",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "J09",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "J10",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "J11",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "K01",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "K02",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "K03",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "K04",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "K05",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "K06",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "K07",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "K08",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "K09",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "K10",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "K11",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "K12",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "L01",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "L02",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "L03",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "L04",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "L05",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "L06",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "L07",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "L08",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "L09",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "L10",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "M01",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "M02",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "M03",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "M04",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "M05",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "M06",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "M07",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "M08",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "M09",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "M10",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "M11",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "N01",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "N02",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "N03",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "N04",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "N05",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "N06",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "N07",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "N08",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "N09",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "N10",
+      "closure_class": "SOFTWARE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "O01",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "O02",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "O03",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "O04",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "O05",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "O06",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "O07",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "O08",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "O09",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "O10",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "O11",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "O12",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "O13",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    },
+    {
+      "gap_id": "O14",
+      "closure_class": "EVIDENCE-CLOSABLE",
+      "status": "BLOCKED",
+      "reason": "V7 source evidence absent"
+    }
+  ]
+}

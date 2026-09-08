@@ -1,0 +1,488 @@
+{
+  "status": "BLOCKED_RELEASE",
+  "classification_policy": [
+    "PROVEN",
+    "ASSUMED",
+    "UNVERIFIED",
+    "BLOCKED"
+  ],
+  "components": [
+    {
+      "part_reference": "100",
+      "part": "vehicle interface/base frame",
+      "material": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_process": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "joining_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "critical_dimensions": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "tolerances": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "assembly_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_risk": {
+        "status": "BLOCKED",
+        "value": "Cannot assess without released V7 definition"
+      },
+      "evidence": [],
+      "release_status": "BLOCKED"
+    },
+    {
+      "part_reference": "110L",
+      "part": "left longitudinal load path",
+      "material": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_process": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "joining_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "critical_dimensions": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "tolerances": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "assembly_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_risk": {
+        "status": "BLOCKED",
+        "value": "Cannot assess without released V7 definition"
+      },
+      "evidence": [],
+      "release_status": "BLOCKED"
+    },
+    {
+      "part_reference": "110R",
+      "part": "right longitudinal load path",
+      "material": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_process": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "joining_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "critical_dimensions": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "tolerances": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "assembly_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_risk": {
+        "status": "BLOCKED",
+        "value": "Cannot assess without released V7 definition"
+      },
+      "evidence": [],
+      "release_status": "BLOCKED"
+    },
+    {
+      "part_reference": "120",
+      "part": "seat carriage",
+      "material": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_process": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "joining_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "critical_dimensions": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "tolerances": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "assembly_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_risk": {
+        "status": "BLOCKED",
+        "value": "Cannot assess without released V7 definition"
+      },
+      "evidence": [],
+      "release_status": "BLOCKED"
+    },
+    {
+      "part_reference": "130",
+      "part": "ride-down module",
+      "material": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_process": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "joining_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "critical_dimensions": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "tolerances": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "assembly_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_risk": {
+        "status": "BLOCKED",
+        "value": "Cannot assess without released V7 definition"
+      },
+      "evidence": [],
+      "release_status": "BLOCKED"
+    },
+    {
+      "part_reference": "140",
+      "part": "pelvic-control pan",
+      "material": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_process": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "joining_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "critical_dimensions": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "tolerances": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "assembly_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_risk": {
+        "status": "BLOCKED",
+        "value": "Cannot assess without released V7 definition"
+      },
+      "evidence": [],
+      "release_status": "BLOCKED"
+    },
+    {
+      "part_reference": "150L",
+      "part": "left rotation-control link",
+      "material": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_process": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "joining_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "critical_dimensions": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "tolerances": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "assembly_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_risk": {
+        "status": "BLOCKED",
+        "value": "Cannot assess without released V7 definition"
+      },
+      "evidence": [],
+      "release_status": "BLOCKED"
+    },
+    {
+      "part_reference": "150R",
+      "part": "right rotation-control link",
+      "material": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_process": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "joining_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "critical_dimensions": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "tolerances": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "assembly_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_risk": {
+        "status": "BLOCKED",
+        "value": "Cannot assess without released V7 definition"
+      },
+      "evidence": [],
+      "release_status": "BLOCKED"
+    },
+    {
+      "part_reference": "160",
+      "part": "seatback frame",
+      "material": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_process": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "joining_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "critical_dimensions": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "tolerances": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "assembly_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_risk": {
+        "status": "BLOCKED",
+        "value": "Cannot assess without released V7 definition"
+      },
+      "evidence": [],
+      "release_status": "BLOCKED"
+    },
+    {
+      "part_reference": "170",
+      "part": "multi-state lock",
+      "material": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_process": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "joining_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "critical_dimensions": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "tolerances": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "assembly_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_risk": {
+        "status": "BLOCKED",
+        "value": "Cannot assess without released V7 definition"
+      },
+      "evidence": [],
+      "release_status": "BLOCKED"
+    },
+    {
+      "part_reference": "180",
+      "part": "rebound-control",
+      "material": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_process": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "joining_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "critical_dimensions": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "tolerances": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "assembly_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_risk": {
+        "status": "BLOCKED",
+        "value": "Cannot assess without released V7 definition"
+      },
+      "evidence": [],
+      "release_status": "BLOCKED"
+    },
+    {
+      "part_reference": "190",
+      "part": "restraint interface",
+      "material": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_process": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "joining_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "critical_dimensions": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "tolerances": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "assembly_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_risk": {
+        "status": "BLOCKED",
+        "value": "Cannot assess without released V7 definition"
+      },
+      "evidence": [],
+      "release_status": "BLOCKED"
+    },
+    {
+      "part_reference": "200",
+      "part": "torso/head guidance",
+      "material": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_process": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "joining_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "critical_dimensions": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "tolerances": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "assembly_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_risk": {
+        "status": "BLOCKED",
+        "value": "Cannot assess without released V7 definition"
+      },
+      "evidence": [],
+      "release_status": "BLOCKED"
+    },
+    {
+      "part_reference": "210",
+      "part": "sensor/trigger interface",
+      "material": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_process": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "joining_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "critical_dimensions": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "tolerances": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "assembly_method": {
+        "status": "BLOCKED",
+        "value": null
+      },
+      "manufacturing_risk": {
+        "status": "BLOCKED",
+        "value": "Cannot assess without released V7 definition"
+      },
+      "evidence": [],
+      "release_status": "BLOCKED"
+    }
+  ],
+  "critical_manufacturability_gap_count": 14
+}

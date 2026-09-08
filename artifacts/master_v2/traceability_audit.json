@@ -1,0 +1,21 @@
+{
+  "status": "PARTIAL",
+  "source_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "orphan_nodes": [
+    "PART-100",
+    "PART-110L",
+    "PART-110R",
+    "PART-120",
+    "PART-130",
+    "PART-140",
+    "PART-150L",
+    "PART-150R",
+    "PART-160",
+    "PART-170",
+    "PART-180",
+    "PART-190",
+    "PART-200",
+    "PART-210"
+  ],
+  "reason": "V7 CAD-to-feature-to-CAE links cannot be established without V7 payload and released engineering records"
+}

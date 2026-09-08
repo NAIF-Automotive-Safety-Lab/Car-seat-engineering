@@ -1,0 +1,113 @@
+{
+  "status": "PARTIAL",
+  "nodes": [
+    {
+      "id": "PART-100",
+      "type": "PART",
+      "label": "vehicle interface/base frame",
+      "evidence_class": "DERIVED_FROM_DOCUMENT",
+      "verification_state": "UNVERIFIED"
+    },
+    {
+      "id": "PART-110L",
+      "type": "PART",
+      "label": "left longitudinal load path",
+      "evidence_class": "DERIVED_FROM_DOCUMENT",
+      "verification_state": "UNVERIFIED"
+    },
+    {
+      "id": "PART-110R",
+      "type": "PART",
+      "label": "right longitudinal load path",
+      "evidence_class": "DERIVED_FROM_DOCUMENT",
+      "verification_state": "UNVERIFIED"
+    },
+    {
+      "id": "PART-120",
+      "type": "PART",
+      "label": "seat carriage",
+      "evidence_class": "DERIVED_FROM_DOCUMENT",
+      "verification_state": "UNVERIFIED"
+    },
+    {
+      "id": "PART-130",
+      "type": "PART",
+      "label": "ride-down module",
+      "evidence_class": "DERIVED_FROM_DOCUMENT",
+      "verification_state": "UNVERIFIED"
+    },
+    {
+      "id": "PART-140",
+      "type": "PART",
+      "label": "pelvic-control pan",
+      "evidence_class": "DERIVED_FROM_DOCUMENT",
+      "verification_state": "UNVERIFIED"
+    },
+    {
+      "id": "PART-150L",
+      "type": "PART",
+      "label": "left rotation-control link",
+      "evidence_class": "DERIVED_FROM_DOCUMENT",
+      "verification_state": "UNVERIFIED"
+    },
+    {
+      "id": "PART-150R",
+      "type": "PART",
+      "label": "right rotation-control link",
+      "evidence_class": "DERIVED_FROM_DOCUMENT",
+      "verification_state": "UNVERIFIED"
+    },
+    {
+      "id": "PART-160",
+      "type": "PART",
+      "label": "seatback frame",
+      "evidence_class": "DERIVED_FROM_DOCUMENT",
+      "verification_state": "UNVERIFIED"
+    },
+    {
+      "id": "PART-170",
+      "type": "PART",
+      "label": "multi-state lock",
+      "evidence_class": "DERIVED_FROM_DOCUMENT",
+      "verification_state": "UNVERIFIED"
+    },
+    {
+      "id": "PART-180",
+      "type": "PART",
+      "label": "rebound-control",
+      "evidence_class": "DERIVED_FROM_DOCUMENT",
+      "verification_state": "UNVERIFIED"
+    },
+    {
+      "id": "PART-190",
+      "type": "PART",
+      "label": "restraint interface",
+      "evidence_class": "DERIVED_FROM_DOCUMENT",
+      "verification_state": "UNVERIFIED"
+    },
+    {
+      "id": "PART-200",
+      "type": "PART",
+      "label": "torso/head guidance",
+      "evidence_class": "DERIVED_FROM_DOCUMENT",
+      "verification_state": "UNVERIFIED"
+    },
+    {
+      "id": "PART-210",
+      "type": "PART",
+      "label": "sensor/trigger interface",
+      "evidence_class": "DERIVED_FROM_DOCUMENT",
+      "verification_state": "UNVERIFIED"
+    },
+    {
+      "id": "R4.1",
+      "type": "CAD_ARTIFACT",
+      "label": "R4.1 STEP",
+      "evidence_class": "DERIVED_FROM_CAD",
+      "source_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "verification_state": "VERIFIED"
+    }
+  ],
+  "edges": [],
+  "orphan_audit": "BLOCKED_PENDING_V7_PAYLOAD"
+}

@@ -1,0 +1,28 @@
+{
+  "status": "VERIFIED_SOFTWARE_ONLY",
+  "results": [
+    {
+      "experiment_id": "EVA-SYNTHETIC-001",
+      "parameter": "x",
+      "status": "CALCULATED",
+      "note": "Software contract smoke only"
+    }
+  ],
+  "project_results": [],
+  "unknown_parameters": [
+    "O01",
+    "O02",
+    "O03",
+    "O04",
+    "O05",
+    "O06",
+    "O07",
+    "O08",
+    "O09",
+    "O10",
+    "O11",
+    "O12",
+    "O13",
+    "O14"
+  ]
+}

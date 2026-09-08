@@ -1,0 +1,7 @@
+{
+  "status": "BLOCKED",
+  "physical_measurements": 0,
+  "required_fields": ["sensor_id", "calibration", "sampling", "units", "timestamp", "test_id", "raw_data_sha256"],
+  "available_interfaces": ["accelerometers", "load_cells", "displacement_sensors", "velocity_measurement", "strain_gauges", "pressure_sensors", "high_speed_video", "DAQ", "synchronization", "calibration", "anti_alias_filtering", "timebase"],
+  "firewall": "Software may not create MEASURED_PHYSICALLY records"
+}
