@@ -1,0 +1,709 @@
+{
+  "artifact": "V7_INTERFACE_SEMANTICS_CLOSURE",
+  "revision": "AUDIT-2026-09-09",
+  "source_revision": "V7-RC-004 / V7-RC-005 inputs",
+  "read_only_audit": true,
+  "geometry_changed": false,
+  "baselines_preserved": [
+    "V7-R3",
+    "R4.1",
+    "R4.2 not authorized"
+  ],
+  "interface_count": 9,
+  "counts": {
+    "CLOSED": 0,
+    "PARTIAL": 2,
+    "UNKNOWN": 7,
+    "GEOMETRIC_ERROR": 0,
+    "UNSUPPORTED_CLAIMS": "0/FAIL"
+  },
+  "final_state": "MODEL/ENGINEERING DEFINITION ONLY",
+  "physical_validation": "NOT_DONE",
+  "cae_started": false,
+  "records": [
+    {
+      "interface_id": "IF-R4-01",
+      "part_A": "120",
+      "part_B": "130L",
+      "body_ids": {
+        "A": "120",
+        "B": "130L"
+      },
+      "geometric_region": {
+        "face_ids_A": [
+          7,
+          8,
+          10,
+          12
+        ],
+        "face_ids_B": [
+          2,
+          4
+        ],
+        "common_bbox_mm": [
+          -27.50000015,
+          -202.00000015,
+          219.99999985,
+          27.50000015,
+          -179.99999985,
+          245.00000015
+        ]
+      },
+      "overlap_volume_mm3": 30250.000000000004,
+      "location": "common_bbox_mm only; no authoritative vehicle/production datum established",
+      "related_BOM_items": [
+        "120",
+        "130L"
+      ],
+      "related_assembly_function": {
+        "A": "carriage",
+        "B": "left ride-down module"
+      },
+      "related_kinematic_joint": null,
+      "related_fastener_interface": "NOT_PROVEN",
+      "classification": "UNKNOWN",
+      "closure_status": "UNKNOWN",
+      "classification_basis": "Geometry proves a positive-volume intersection, but the authoritative interface register and forensic record both state mechanical purpose, relative motion, axis datum, DOF, contact rule, clearance rule, load-path role, and fastening are NOT_PROVEN.",
+      "contact": {
+        "status": "UNKNOWN",
+        "evidence": "No contact rule, normal relationship, or clearance requirement is proven in the source records."
+      },
+      "capture": {
+        "status": "UNKNOWN",
+        "evidence": "No capture feature, escape direction, or retention evidence is present in the source records."
+      },
+      "structural_role": {
+        "status": "UNKNOWN",
+        "evidence": "Load-path role, mating entities, attachment mechanism, fastener dependency, and datum dependency are marked NOT_PROVEN."
+      },
+      "geometry_correction_proposal": null,
+      "evidence_sources": [
+        "INTERFACES/V7_R4_INTERFACE_REGISTER.json",
+        "INTERFACES/V7_R4_INTERFACE_GEOMETRY_EVIDENCE.json",
+        "INTERFACES/V7_R4_INTERFACE_FORENSICS.json"
+      ],
+      "evidence_state": "MODEL_EXECUTED / SEMANTICS_PENDING; physical_validation=NOT_DONE"
+    },
+    {
+      "interface_id": "IF-R4-02",
+      "part_A": "120",
+      "part_B": "130R",
+      "body_ids": {
+        "A": "120",
+        "B": "130R"
+      },
+      "geometric_region": {
+        "face_ids_A": [
+          13,
+          14,
+          15,
+          18
+        ],
+        "face_ids_B": [
+          4,
+          11
+        ],
+        "common_bbox_mm": [
+          -27.50000015,
+          179.99999985,
+          219.99999985,
+          27.50000015,
+          202.00000015,
+          245.00000015
+        ]
+      },
+      "overlap_volume_mm3": 30250.000000000004,
+      "location": "common_bbox_mm only; no authoritative vehicle/production datum established",
+      "related_BOM_items": [
+        "120",
+        "130R"
+      ],
+      "related_assembly_function": {
+        "A": "carriage",
+        "B": "right ride-down module"
+      },
+      "related_kinematic_joint": null,
+      "related_fastener_interface": "NOT_PROVEN",
+      "classification": "UNKNOWN",
+      "closure_status": "UNKNOWN",
+      "classification_basis": "Geometry proves a positive-volume intersection, but the authoritative interface register and forensic record both state mechanical purpose, relative motion, axis datum, DOF, contact rule, clearance rule, load-path role, and fastening are NOT_PROVEN.",
+      "contact": {
+        "status": "UNKNOWN",
+        "evidence": "No contact rule, normal relationship, or clearance requirement is proven in the source records."
+      },
+      "capture": {
+        "status": "UNKNOWN",
+        "evidence": "No capture feature, escape direction, or retention evidence is present in the source records."
+      },
+      "structural_role": {
+        "status": "UNKNOWN",
+        "evidence": "Load-path role, mating entities, attachment mechanism, fastener dependency, and datum dependency are marked NOT_PROVEN."
+      },
+      "geometry_correction_proposal": null,
+      "evidence_sources": [
+        "INTERFACES/V7_R4_INTERFACE_REGISTER.json",
+        "INTERFACES/V7_R4_INTERFACE_GEOMETRY_EVIDENCE.json",
+        "INTERFACES/V7_R4_INTERFACE_FORENSICS.json"
+      ],
+      "evidence_state": "MODEL_EXECUTED / SEMANTICS_PENDING; physical_validation=NOT_DONE"
+    },
+    {
+      "interface_id": "IF-R4-03",
+      "part_A": "120",
+      "part_B": "140",
+      "body_ids": {
+        "A": "120",
+        "B": "140"
+      },
+      "geometric_region": {
+        "face_ids_A": [
+          7,
+          8,
+          10,
+          12,
+          13,
+          14,
+          15,
+          18
+        ],
+        "face_ids_B": [
+          2,
+          3,
+          4,
+          5,
+          7,
+          12
+        ],
+        "common_bbox_mm": [
+          -27.50000015,
+          -215.00000015,
+          207.99999985,
+          27.50000015,
+          215.00000015,
+          245.00000015
+        ]
+      },
+      "overlap_volume_mm3": 113574.99999999996,
+      "location": "common_bbox_mm only; no authoritative vehicle/production datum established",
+      "related_BOM_items": [
+        "120",
+        "140"
+      ],
+      "related_assembly_function": {
+        "A": "carriage",
+        "B": "pelvic-control reference (optional extension)"
+      },
+      "related_kinematic_joint": null,
+      "related_fastener_interface": "NOT_PROVEN",
+      "classification": "UNKNOWN",
+      "closure_status": "UNKNOWN",
+      "classification_basis": "Geometry proves a positive-volume intersection, but the authoritative interface register and forensic record both state mechanical purpose, relative motion, axis datum, DOF, contact rule, clearance rule, load-path role, and fastening are NOT_PROVEN.",
+      "contact": {
+        "status": "UNKNOWN",
+        "evidence": "No contact rule, normal relationship, or clearance requirement is proven in the source records."
+      },
+      "capture": {
+        "status": "UNKNOWN",
+        "evidence": "No capture feature, escape direction, or retention evidence is present in the source records."
+      },
+      "structural_role": {
+        "status": "UNKNOWN",
+        "evidence": "Load-path role, mating entities, attachment mechanism, fastener dependency, and datum dependency are marked NOT_PROVEN."
+      },
+      "geometry_correction_proposal": null,
+      "evidence_sources": [
+        "INTERFACES/V7_R4_INTERFACE_REGISTER.json",
+        "INTERFACES/V7_R4_INTERFACE_GEOMETRY_EVIDENCE.json",
+        "INTERFACES/V7_R4_INTERFACE_FORENSICS.json"
+      ],
+      "evidence_state": "MODEL_EXECUTED / SEMANTICS_PENDING; physical_validation=NOT_DONE"
+    },
+    {
+      "interface_id": "IF-R4-04",
+      "part_A": "120",
+      "part_B": "200",
+      "body_ids": {
+        "A": "120",
+        "B": "200"
+      },
+      "geometric_region": {
+        "face_ids_A": [
+          7,
+          8,
+          9,
+          11,
+          12,
+          13,
+          14,
+          16,
+          17,
+          18
+        ],
+        "face_ids_B": [
+          1,
+          2,
+          7,
+          10
+        ],
+        "common_bbox_mm": [
+          -80.000005,
+          -240.000005,
+          199.999995,
+          40.000005,
+          240.000005,
+          520.000005
+        ]
+      },
+      "overlap_volume_mm3": 7671.875043127121,
+      "location": "common_bbox_mm only; no authoritative vehicle/production datum established",
+      "related_BOM_items": [
+        "120",
+        "200"
+      ],
+      "related_assembly_function": {
+        "A": "carriage",
+        "B": "torso/head guidance (optional extension)"
+      },
+      "related_kinematic_joint": null,
+      "related_fastener_interface": "NOT_PROVEN",
+      "classification": "UNKNOWN",
+      "closure_status": "UNKNOWN",
+      "classification_basis": "Geometry proves a positive-volume intersection, but the authoritative interface register and forensic record both state mechanical purpose, relative motion, axis datum, DOF, contact rule, clearance rule, load-path role, and fastening are NOT_PROVEN.",
+      "contact": {
+        "status": "UNKNOWN",
+        "evidence": "No contact rule, normal relationship, or clearance requirement is proven in the source records."
+      },
+      "capture": {
+        "status": "UNKNOWN",
+        "evidence": "No capture feature, escape direction, or retention evidence is present in the source records."
+      },
+      "structural_role": {
+        "status": "UNKNOWN",
+        "evidence": "Load-path role, mating entities, attachment mechanism, fastener dependency, and datum dependency are marked NOT_PROVEN."
+      },
+      "geometry_correction_proposal": null,
+      "evidence_sources": [
+        "INTERFACES/V7_R4_INTERFACE_REGISTER.json",
+        "INTERFACES/V7_R4_INTERFACE_GEOMETRY_EVIDENCE.json",
+        "INTERFACES/V7_R4_INTERFACE_FORENSICS.json"
+      ],
+      "evidence_state": "MODEL_EXECUTED / SEMANTICS_PENDING; physical_validation=NOT_DONE"
+    },
+    {
+      "interface_id": "IF-R4-05",
+      "part_A": "130L",
+      "part_B": "140",
+      "body_ids": {
+        "A": "130L",
+        "B": "140"
+      },
+      "geometric_region": {
+        "face_ids_A": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          8,
+          10,
+          11
+        ],
+        "face_ids_B": [
+          3,
+          10,
+          11,
+          12,
+          18
+        ],
+        "common_bbox_mm": [
+          -150.00000015,
+          -202.00000015,
+          219.99999985,
+          130.00000015,
+          -157.99999985,
+          260.00000015
+        ]
+      },
+      "overlap_volume_mm3": 303345.23168198584,
+      "location": "common_bbox_mm only; no authoritative vehicle/production datum established",
+      "related_BOM_items": [
+        "130L",
+        "140"
+      ],
+      "related_assembly_function": {
+        "A": "left ride-down module",
+        "B": "pelvic-control reference (optional extension)"
+      },
+      "related_kinematic_joint": null,
+      "related_fastener_interface": "NOT_PROVEN",
+      "classification": "UNKNOWN",
+      "closure_status": "UNKNOWN",
+      "classification_basis": "Geometry proves a positive-volume intersection, but the authoritative interface register and forensic record both state mechanical purpose, relative motion, axis datum, DOF, contact rule, clearance rule, load-path role, and fastening are NOT_PROVEN.",
+      "contact": {
+        "status": "UNKNOWN",
+        "evidence": "No contact rule, normal relationship, or clearance requirement is proven in the source records."
+      },
+      "capture": {
+        "status": "UNKNOWN",
+        "evidence": "No capture feature, escape direction, or retention evidence is present in the source records."
+      },
+      "structural_role": {
+        "status": "UNKNOWN",
+        "evidence": "Load-path role, mating entities, attachment mechanism, fastener dependency, and datum dependency are marked NOT_PROVEN."
+      },
+      "geometry_correction_proposal": null,
+      "evidence_sources": [
+        "INTERFACES/V7_R4_INTERFACE_REGISTER.json",
+        "INTERFACES/V7_R4_INTERFACE_GEOMETRY_EVIDENCE.json",
+        "INTERFACES/V7_R4_INTERFACE_FORENSICS.json"
+      ],
+      "evidence_state": "MODEL_EXECUTED / SEMANTICS_PENDING; physical_validation=NOT_DONE"
+    },
+    {
+      "interface_id": "IF-R4-06",
+      "part_A": "130R",
+      "part_B": "140",
+      "body_ids": {
+        "A": "130R",
+        "B": "140"
+      },
+      "geometric_region": {
+        "face_ids_A": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          8,
+          10,
+          11
+        ],
+        "face_ids_B": [
+          3,
+          7,
+          8,
+          9,
+          16
+        ],
+        "common_bbox_mm": [
+          -150.00000015,
+          157.99999985,
+          219.99999985,
+          130.00000015,
+          202.00000015,
+          260.00000015
+        ]
+      },
+      "overlap_volume_mm3": 303345.23168198584,
+      "location": "common_bbox_mm only; no authoritative vehicle/production datum established",
+      "related_BOM_items": [
+        "130R",
+        "140"
+      ],
+      "related_assembly_function": {
+        "A": "right ride-down module",
+        "B": "pelvic-control reference (optional extension)"
+      },
+      "related_kinematic_joint": null,
+      "related_fastener_interface": "NOT_PROVEN",
+      "classification": "UNKNOWN",
+      "closure_status": "UNKNOWN",
+      "classification_basis": "Geometry proves a positive-volume intersection, but the authoritative interface register and forensic record both state mechanical purpose, relative motion, axis datum, DOF, contact rule, clearance rule, load-path role, and fastening are NOT_PROVEN.",
+      "contact": {
+        "status": "UNKNOWN",
+        "evidence": "No contact rule, normal relationship, or clearance requirement is proven in the source records."
+      },
+      "capture": {
+        "status": "UNKNOWN",
+        "evidence": "No capture feature, escape direction, or retention evidence is present in the source records."
+      },
+      "structural_role": {
+        "status": "UNKNOWN",
+        "evidence": "Load-path role, mating entities, attachment mechanism, fastener dependency, and datum dependency are marked NOT_PROVEN."
+      },
+      "geometry_correction_proposal": null,
+      "evidence_sources": [
+        "INTERFACES/V7_R4_INTERFACE_REGISTER.json",
+        "INTERFACES/V7_R4_INTERFACE_GEOMETRY_EVIDENCE.json",
+        "INTERFACES/V7_R4_INTERFACE_FORENSICS.json"
+      ],
+      "evidence_state": "MODEL_EXECUTED / SEMANTICS_PENDING; physical_validation=NOT_DONE"
+    },
+    {
+      "interface_id": "IF-R4-07",
+      "part_A": "140",
+      "part_B": "160",
+      "body_ids": {
+        "A": "140",
+        "B": "160"
+      },
+      "geometric_region": {
+        "face_ids_A": [
+          2,
+          3,
+          4
+        ],
+        "face_ids_B": [
+          1,
+          8,
+          9,
+          11,
+          12,
+          15
+        ],
+        "common_bbox_mm": [
+          -201.00000015,
+          -215.00000015,
+          224.99999985,
+          -168.99999985,
+          215.00000015,
+          230.00000015
+        ]
+      },
+      "overlap_volume_mm3": 11199.999999999993,
+      "location": "common_bbox_mm only; no authoritative vehicle/production datum established",
+      "related_BOM_items": [
+        "140",
+        "160"
+      ],
+      "related_assembly_function": {
+        "A": "pelvic-control reference (optional extension)",
+        "B": "seatback frame"
+      },
+      "related_kinematic_joint": null,
+      "related_fastener_interface": "NOT_PROVEN",
+      "classification": "UNKNOWN",
+      "closure_status": "UNKNOWN",
+      "classification_basis": "Geometry proves a positive-volume intersection, but the authoritative interface register and forensic record both state mechanical purpose, relative motion, axis datum, DOF, contact rule, clearance rule, load-path role, and fastening are NOT_PROVEN.",
+      "contact": {
+        "status": "UNKNOWN",
+        "evidence": "No contact rule, normal relationship, or clearance requirement is proven in the source records."
+      },
+      "capture": {
+        "status": "UNKNOWN",
+        "evidence": "No capture feature, escape direction, or retention evidence is present in the source records."
+      },
+      "structural_role": {
+        "status": "UNKNOWN",
+        "evidence": "Load-path role, mating entities, attachment mechanism, fastener dependency, and datum dependency are marked NOT_PROVEN."
+      },
+      "geometry_correction_proposal": null,
+      "evidence_sources": [
+        "INTERFACES/V7_R4_INTERFACE_REGISTER.json",
+        "INTERFACES/V7_R4_INTERFACE_GEOMETRY_EVIDENCE.json",
+        "INTERFACES/V7_R4_INTERFACE_FORENSICS.json"
+      ],
+      "evidence_state": "MODEL_EXECUTED / SEMANTICS_PENDING; physical_validation=NOT_DONE"
+    },
+    {
+      "interface_id": "IF-R4-08",
+      "part_A": "150L",
+      "part_B": "160",
+      "body_ids": {
+        "A": "150L",
+        "B": "160"
+      },
+      "geometric_region": {
+        "face_ids_A": [
+          1,
+          2,
+          3,
+          4,
+          7
+        ],
+        "face_ids_B": [
+          1,
+          15
+        ],
+        "common_bbox_mm": [
+          -201.00000015000006,
+          -217.00000015,
+          410.7651073063086,
+          -168.99999985,
+          -192.99999985,
+          666.5629557324055
+        ]
+      },
+      "overlap_volume_mm3": 106752.60605471101,
+      "location": "common_bbox_mm only; no authoritative vehicle/production datum established",
+      "related_BOM_items": [
+        "150L",
+        "160"
+      ],
+      "related_assembly_function": {
+        "A": "left seatback rotation-control link",
+        "B": "seatback frame"
+      },
+      "related_kinematic_joint": {
+        "id": "J_LINK_L",
+        "type": "REVOLUTE_LINK",
+        "parent": "150L",
+        "child": "160",
+        "axis": "q2-coupled",
+        "coordinate": null,
+        "allowed_dof": null,
+        "blocked_dof": null,
+        "limits": null,
+        "status": "MODEL_DEFINED",
+        "constraint_direction": "Blocked DOFs are model-declared; physical datum/constraint validation is absent.",
+        "allowed_relative_motion": "Model-defined only; physical validation not done.",
+        "forbidden_relative_motion": "Model-defined blocked DOFs only; physical validation not done.",
+        "lock_condition": "Not established for this interface.",
+        "release_condition": "Not established for this interface."
+      },
+      "related_fastener_interface": "NOT_PROVEN",
+      "classification": "JOINT",
+      "closure_status": "PARTIAL",
+      "classification_basis": "Direct pair matches the model-defined J_LINK_L parent/child relation 150L -> 160; the source marks this as MODEL_DEFINED and physical validation is not done.",
+      "contact": {
+        "status": "UNKNOWN",
+        "evidence": "No contact rule, normal relationship, or clearance requirement is proven in the source records."
+      },
+      "capture": {
+        "status": "UNKNOWN",
+        "evidence": "No capture feature, escape direction, or retention evidence is present in the source records."
+      },
+      "structural_role": {
+        "status": "UNKNOWN",
+        "evidence": "Load-path role, mating entities, attachment mechanism, fastener dependency, and datum dependency are marked NOT_PROVEN."
+      },
+      "geometry_correction_proposal": null,
+      "evidence_sources": [
+        "INTERFACES/V7_R4_INTERFACE_REGISTER.json",
+        "INTERFACES/V7_R4_INTERFACE_GEOMETRY_EVIDENCE.json",
+        "INTERFACES/V7_R4_INTERFACE_FORENSICS.json"
+      ],
+      "evidence_state": "MODEL_EXECUTED / SEMANTICS_PENDING; physical_validation=NOT_DONE"
+    },
+    {
+      "interface_id": "IF-R4-09",
+      "part_A": "160",
+      "part_B": "J",
+      "body_ids": {
+        "A": "160",
+        "B": "J"
+      },
+      "geometric_region": {
+        "face_ids_A": [
+          1,
+          4,
+          5,
+          13,
+          15
+        ],
+        "face_ids_B": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "common_bbox_mm": [
+          -201.00000015,
+          -230.00000015,
+          251.99999985,
+          -168.99999985,
+          210.00000015,
+          288.00000015
+        ]
+      },
+      "overlap_volume_mm3": 67326.5357313047,
+      "location": "common_bbox_mm only; no authoritative vehicle/production datum established",
+      "related_BOM_items": [
+        "160",
+        "J"
+      ],
+      "related_assembly_function": {
+        "A": "seatback frame",
+        "B": "seatback hinge/pivot reference body"
+      },
+      "related_kinematic_joint": {
+        "id": "J_SEATBACK",
+        "type": "REVOLUTE",
+        "parent": "J",
+        "child": "160",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "coordinate": "q2",
+        "allowed_dof": [
+          "Ry"
+        ],
+        "blocked_dof": [
+          "Tx",
+          "Ty",
+          "Tz",
+          "Rx",
+          "Rz"
+        ],
+        "limits": [
+          -10,
+          25
+        ],
+        "status": "MODEL_DEFINED",
+        "constraint_direction": "Blocked DOFs are model-declared; physical datum/constraint validation is absent.",
+        "allowed_relative_motion": "Model-defined only; physical validation not done.",
+        "forbidden_relative_motion": "Model-defined blocked DOFs only; physical validation not done.",
+        "lock_condition": "Not established for this interface.",
+        "release_condition": "Not established for this interface."
+      },
+      "related_fastener_interface": "NOT_PROVEN",
+      "classification": "JOINT",
+      "closure_status": "PARTIAL",
+      "classification_basis": "Direct pair matches the model-defined J_SEATBACK parent/child relation J -> 160; the source marks this as MODEL_DEFINED and physical validation is not done.",
+      "contact": {
+        "status": "UNKNOWN",
+        "evidence": "No contact rule, normal relationship, or clearance requirement is proven in the source records."
+      },
+      "capture": {
+        "status": "UNKNOWN",
+        "evidence": "No capture feature, escape direction, or retention evidence is present in the source records."
+      },
+      "structural_role": {
+        "status": "UNKNOWN",
+        "evidence": "Load-path role, mating entities, attachment mechanism, fastener dependency, and datum dependency are marked NOT_PROVEN."
+      },
+      "geometry_correction_proposal": null,
+      "evidence_sources": [
+        "INTERFACES/V7_R4_INTERFACE_REGISTER.json",
+        "INTERFACES/V7_R4_INTERFACE_GEOMETRY_EVIDENCE.json",
+        "INTERFACES/V7_R4_INTERFACE_FORENSICS.json"
+      ],
+      "evidence_state": "MODEL_EXECUTED / SEMANTICS_PENDING; physical_validation=NOT_DONE"
+    }
+  ],
+  "evidence_hashes": {
+    "/home/ubuntu/interface-audit-work/base-r4/INTERFACES/V7_R4_INTERFACE_REGISTER.json": {
+      "sha256": "e6be7d2326f73e4e9d51f1f2f766e59f66f2edc428dc3748e2b907a1dfc18502",
+      "bytes": 7773
+    },
+    "/home/ubuntu/interface-audit-work/base-r4/INTERFACES/V7_R4_INTERFACE_GEOMETRY_EVIDENCE.json": {
+      "sha256": "ad47a76f28c1c6fcb1b61b3fd100c993bae368ac5a30312bec80c966c9a372c2",
+      "bytes": 11454
+    },
+    "/home/ubuntu/interface-audit-work/base-r4/INTERFACES/V7_R4_INTERFACE_FORENSICS.json": {
+      "sha256": "089e5b2533cd48528e45bd02fb5e84769e625b28687865881b6f6196ad823492",
+      "bytes": 11678
+    },
+    "/home/ubuntu/interface-audit-work/r4/V7_R4_KINEMATIC_MODEL.json": {
+      "sha256": "a02cc7a48eabb9e61fa71b697098bd977362758163389f6f4e986ead43441b73",
+      "bytes": 7116
+    },
+    "/home/ubuntu/upload/V7_ENGINEERING_BASELINE_PACKAGE_R4.zip": {
+      "sha256": "68620362150fd604dfdc3089e12ce346bb5acb1fbb40b02daaa6e60880d08d61",
+      "bytes": 681538
+    },
+    "/home/ubuntu/upload/V7_R4_KINEMATIC_CLOSURE_CORRECTED.zip": {
+      "sha256": "4b0118697b42c15f7b476890bea60f97e7fd16878ccd6f41ab7cb73878fbf274",
+      "bytes": 10555
+    }
+  },
+  "limitations": [
+    "Positive-volume intersection is not semantic proof.",
+    "IF-R4-08 and IF-R4-09 are only PARTIAL because their pairings are model-defined joint relations; source evidence does not establish physical validation, datums, fasteners, contact normals, or release/lock behavior.",
+    "No fastener dimensions, preload, material properties, friction, retention load, or manufacturing tolerances were invented.",
+    "No GEOMETRIC_ERROR classification is assigned because no source artifact proves an erroneous geometry condition."
+  ]
+}

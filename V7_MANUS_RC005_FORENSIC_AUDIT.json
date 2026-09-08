@@ -1,0 +1,263 @@
+{
+  "artifact": "V7_MANUS_RC005_FORENSIC_AUDIT",
+  "audit_revision": "2026-09-09",
+  "read_only": true,
+  "package": {
+    "filename": "RC-005_ENGINEERING_INPUT_CLOSURE_PACKAGE.zip",
+    "sha256": "1af7499a537a71980b1e4ff98742837e9847ee36bb1d9df63a6c880278b904cf",
+    "member_count_actual": 15,
+    "member_count_manifest": 15,
+    "paths_exact": true,
+    "zip_integrity_test": "PASS",
+    "member_checks": [
+      {
+        "path": "01_MASTER/RC-005_EXECUTIVE_STATUS.md",
+        "present": true,
+        "declared_size": 1108,
+        "actual_size": 1108,
+        "declared_sha256": "0ed79d3b14afb9f1649e771c293825995992a62c8e065a5cea915a80d5f3e1f8",
+        "actual_sha256": "0ed79d3b14afb9f1649e771c293825995992a62c8e065a5cea915a80d5f3e1f8",
+        "result": "PASS"
+      },
+      {
+        "path": "01_MASTER/RC-005_MASTER_INPUT_MATRIX.json",
+        "present": true,
+        "declared_size": 14981,
+        "actual_size": 14981,
+        "declared_sha256": "ee509c08ffecd5fef9ef404bc64512b78703ccfb1c89e7c52b87a3ca8e97ab9e",
+        "actual_sha256": "ee509c08ffecd5fef9ef404bc64512b78703ccfb1c89e7c52b87a3ca8e97ab9e",
+        "result": "PASS"
+      },
+      {
+        "path": "01_MASTER/RC-005_TRACEABILITY.json",
+        "present": true,
+        "declared_size": 432,
+        "actual_size": 432,
+        "declared_sha256": "4e01fe6c3375d63ed31f8eed65615b0b5e9081a2cf29208a4aee4075ce4c5137",
+        "actual_sha256": "4e01fe6c3375d63ed31f8eed65615b0b5e9081a2cf29208a4aee4075ce4c5137",
+        "result": "PASS"
+      },
+      {
+        "path": "02_MATERIALS/V7_MATERIAL_DEFINITION_RC005.json",
+        "present": true,
+        "declared_size": 7236,
+        "actual_size": 7236,
+        "declared_sha256": "8d5109409c29c5c9653b7ba4da0fbc14a4a5db153f1078205cea7975a2ef66b0",
+        "actual_sha256": "8d5109409c29c5c9653b7ba4da0fbc14a4a5db153f1078205cea7975a2ef66b0",
+        "result": "PASS"
+      },
+      {
+        "path": "03_MASS_PROPERTIES/V7_MASS_CG_INERTIA_RC005.json",
+        "present": true,
+        "declared_size": 8830,
+        "actual_size": 8830,
+        "declared_sha256": "86d1de1d73abdc72fb7b4c5b92127f33463091559fdbbe5ed3b9a39bbea091ef",
+        "actual_sha256": "86d1de1d73abdc72fb7b4c5b92127f33463091559fdbbe5ed3b9a39bbea091ef",
+        "result": "PASS"
+      },
+      {
+        "path": "04_JOINTS_FASTENERS/V7_FASTENER_JOINT_RC005.json",
+        "present": true,
+        "declared_size": 7022,
+        "actual_size": 7022,
+        "declared_sha256": "c1867b17e567dd8a5aaa6d36ca7679bec4c01420d00dc557e256dd9828ebf8e4",
+        "actual_sha256": "c1867b17e567dd8a5aaa6d36ca7679bec4c01420d00dc557e256dd9828ebf8e4",
+        "result": "PASS"
+      },
+      {
+        "path": "05_ABSORBER/V7_ABSORBER_TEST_SPECIFICATION_RC005.json",
+        "present": true,
+        "declared_size": 2579,
+        "actual_size": 2579,
+        "declared_sha256": "4c64a7aa1d1e9847ad283dbdd6e53881c553d48ae0245b627e1bfda36e0f9610",
+        "actual_sha256": "4c64a7aa1d1e9847ad283dbdd6e53881c553d48ae0245b627e1bfda36e0f9610",
+        "result": "PASS"
+      },
+      {
+        "path": "06_LOCK/V7_LOCK_TEST_SPECIFICATION_RC005.json",
+        "present": true,
+        "declared_size": 2122,
+        "actual_size": 2122,
+        "declared_sha256": "ca3570ee1f2d73cb5aef7984ba7ce33db7e0ded8ba6550cde8686a537e7f9ea5",
+        "actual_sha256": "ca3570ee1f2d73cb5aef7984ba7ce33db7e0ded8ba6550cde8686a537e7f9ea5",
+        "result": "PASS"
+      },
+      {
+        "path": "07_REBOUND/V7_REBOUND_TEST_SPECIFICATION_RC005.json",
+        "present": true,
+        "declared_size": 1349,
+        "actual_size": 1349,
+        "declared_sha256": "f33dadef734bc2eda3008787b650512b87051e2c6cd36fdc413780c8439a7910",
+        "actual_sha256": "f33dadef734bc2eda3008787b650512b87051e2c6cd36fdc413780c8439a7910",
+        "result": "PASS"
+      },
+      {
+        "path": "08_VEHICLE/V7_VEHICLE_INTERFACE_INPUTS_RC005.json",
+        "present": true,
+        "declared_size": 1892,
+        "actual_size": 1892,
+        "declared_sha256": "1b3aa02f04d1cd910744a5fe47e6f40dc5c1235f04bfc1ac13bcc13e01e11e0d",
+        "actual_sha256": "1b3aa02f04d1cd910744a5fe47e6f40dc5c1235f04bfc1ac13bcc13e01e11e0d",
+        "result": "PASS"
+      },
+      {
+        "path": "09_CAE/V7_CAE_DEPENDENCY_GRAPH_RC005.json",
+        "present": true,
+        "declared_size": 3314,
+        "actual_size": 3314,
+        "declared_sha256": "140cf9ef5728f88b65ea434c204a24d6d3cc5a404f8b79eb0f3a08cd5b3ccc86",
+        "actual_sha256": "140cf9ef5728f88b65ea434c204a24d6d3cc5a404f8b79eb0f3a08cd5b3ccc86",
+        "result": "PASS"
+      },
+      {
+        "path": "10_MANUFACTURABILITY/V7_MANUFACTURABILITY_MATRIX_RC005.json",
+        "present": true,
+        "declared_size": 8514,
+        "actual_size": 8514,
+        "declared_sha256": "64443a5b437621a9a5902a0cc7f681f6f8b72b1f392982245978eb653a4694c7",
+        "actual_sha256": "64443a5b437621a9a5902a0cc7f681f6f8b72b1f392982245978eb653a4694c7",
+        "result": "PASS"
+      },
+      {
+        "path": "11_GAPS/RC-005_GAP_REGISTER.json",
+        "present": true,
+        "declared_size": 2233,
+        "actual_size": 2233,
+        "declared_sha256": "dbba60c96a30df8ff53b40723f005f023b1a0ef1b4491483e0e1d7a5d6599548",
+        "actual_sha256": "dbba60c96a30df8ff53b40723f005f023b1a0ef1b4491483e0e1d7a5d6599548",
+        "result": "PASS"
+      },
+      {
+        "path": "12_MANIFESTS/RC-005_INTERNAL_MEMBER_MANIFEST.json",
+        "present": true,
+        "declared_size": 2724,
+        "actual_size": 2724,
+        "declared_sha256": "f019168709c4d45eafd6b351516e3f2fef2cce224378cbe3a36e679aa599657c",
+        "actual_sha256": "f019168709c4d45eafd6b351516e3f2fef2cce224378cbe3a36e679aa599657c",
+        "result": "PASS"
+      },
+      {
+        "path": "12_MANIFESTS/RC-005_SOURCE_PROVENANCE.json",
+        "present": true,
+        "declared_size": 4398,
+        "actual_size": 4398,
+        "declared_sha256": "120abf8a1519f51c416da875ad69956c3b9c341111e5f25f76a14d8475104120",
+        "actual_sha256": "120abf8a1519f51c416da875ad69956c3b9c341111e5f25f76a14d8475104120",
+        "result": "PASS"
+      }
+    ],
+    "zero_mismatch": true,
+    "external_manifest_sha256": "617a7a4048ff39cf46719e7d9709b7ece8e70f6f87dac4bca66bb7f53be6a5b5",
+    "self_verification_sha256": "30c26f468e389853df9f380e0bc3f38ca9912ea1611e15b1486a9c29d68dbfed",
+    "self_verification_claims": {
+      "zip_sha256": "1af7499a537a71980b1e4ff98742837e9847ee36bb1d9df63a6c880278b904cf",
+      "zip_member_count": 15,
+      "manifest_member_count": 15,
+      "missing_from_manifest": [],
+      "missing_from_zip": [],
+      "hash_or_size_mismatches": [],
+      "membership_pass": true,
+      "R4_1_modified": false,
+      "R4_2_created": false
+    },
+    "internal_manifest": {
+      "member_count": 14,
+      "self_hash_excluded": true,
+      "result": "PASS"
+    }
+  },
+  "domains": {
+    "materials_density": {
+      "result": "PASS_WITH_BLOCKERS",
+      "classification": "SOURCE_REQUIRED",
+      "finding": "Material identity, density, grade, strength, modulus and Poisson data are null/externally required; no authoritative value claimed."
+    },
+    "mass_cg_inertia": {
+      "result": "PASS_WITH_BLOCKERS",
+      "classification_chain": [
+        "GEOMETRY",
+        "MATERIAL",
+        "DENSITY",
+        "MASS",
+        "CG",
+        "INERTIA"
+      ],
+      "finding": "Geometry-derived volumes are present, but mass, CG and inertia remain null and explicitly blocked by density/material mapping."
+    },
+    "joints_fasteners": {
+      "result": "PASS_WITH_BLOCKERS",
+      "classification": {
+        "joint_definition": "MODEL_DEFINED",
+        "fastener_identity_preload_torque": "SOURCE_REQUIRED",
+        "physical_validation": "TEST_REQUIRED"
+      },
+      "finding": "Fastener fields are unresolved; no preload, torque, friction or capacity is closed."
+    },
+    "absorber": {
+      "result": "PASS_WITH_BLOCKERS",
+      "classification": "TEST_REQUIRED",
+      "finding": "F-x, F-v, hysteresis, rate, temperature, cycling, L/R matching, stroke characterization, instrumentation and acceptance criteria are specified; no curve/coefficient is invented."
+    },
+    "lock": {
+      "result": "PASS_WITH_BLOCKERS",
+      "classification": "TEST_REQUIRED",
+      "finding": "State, engagement, retention, partial engagement, premature/delayed/unintended release, jammed/reset/fault tests are specified; hardware capacity is not claimed."
+    },
+    "rebound": {
+      "result": "PASS_WITH_BLOCKERS",
+      "classification": "TEST_REQUIRED",
+      "finding": "Physical response and acceptance remain test-required; no damping/friction/energy-return coefficient is invented."
+    },
+    "vehicle_interface": {
+      "result": "PASS_WITH_BLOCKERS",
+      "classification": "OEM_INPUT_REQUIRED",
+      "finding": "Vehicle datum, hardpoints, anchors, H-point, clearances, loads, pulse and initial conditions are null and external-required."
+    },
+    "cae_dependency_graph": {
+      "result": "PASS_WITH_BLOCKERS",
+      "finding": "Graph distinguishes available geometry, model-defined joints, derivation blocked by density, physical-test-required nodes, external-required nodes and undefined acceptance criteria."
+    },
+    "manufacturability": {
+      "result": "PASS_WITH_BLOCKERS",
+      "finding": "Manufacturability definition is present; manufacturing_release=false and release data are not closed."
+    }
+  },
+  "input_status_counts": {
+    "SOURCE_REQUIRED": 8,
+    "MODEL_DERIVABLE": 3,
+    "KNOWN": 3,
+    "TEST_REQUIRED": 9,
+    "CUSTOMER/OEM_INPUT_REQUIRED": 7,
+    "UNKNOWN": 1
+  },
+  "unsupported_claims": {
+    "result": "PASS",
+    "count": 0,
+    "numeric_physical_candidates": [
+      "\"path\": \"05_ABSORBER/V7_ABSORBER_TEST_SPECIFICATION_RC005.json\","
+    ],
+    "finding": "No unsupported physical validation, capacity, crash, safety, certified-material, fastener-load, absorber-law, lock-capacity or rebound-behavior claim was promoted. Qualified CAE_INPUT_READY_WITH_BLOCKERS is not CAE validation."
+  },
+  "geometry_protection": {
+    "geometry_modified": false,
+    "r4_1_modified": false,
+    "r4_2_created": false,
+    "cad_or_step_members_in_package": false,
+    "result": "PASS"
+  },
+  "readiness": {
+    "cae_status_declared": "CAE_INPUT_READY_WITH_BLOCKERS",
+    "cae_status_audited": "JUSTIFIED_AS_INPUT_CONTRACT_ONLY",
+    "cae_validated": false,
+    "physical_validation": false,
+    "manufacturing_release": false,
+    "safety_validation": false
+  },
+  "final_decision": "BLOCKED",
+  "final_reason": "Integrity or unsupported-claim failure detected.",
+  "baselines_preserved": [
+    "V7-R3 immutable",
+    "R4.1 frozen",
+    "R4.2 not created"
+  ]
+}

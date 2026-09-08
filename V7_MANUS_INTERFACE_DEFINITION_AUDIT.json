@@ -1,0 +1,358 @@
+{
+  "artifact": "V7_MANUS_INTERFACE_DEFINITION_AUDIT",
+  "audit_revision": "2026-09-09",
+  "read_only": true,
+  "canonical_package": {
+    "filename": "V7-RC-004_INTERFACE_DEFINITION_PACKAGE.zip",
+    "absolute_path": "/home/ubuntu/audit-repo/V7-RC-004_INTERFACE_DEFINITION_PACKAGE.zip",
+    "sha256": "a2545e781afbdfd0a8241bb99a0d2eeb4fd9c3b4576476158e14d6cac4de0e75",
+    "member_count": 4,
+    "members": [
+      "V7_CURRENT_ENGINEERING_INTERFACE_DEFINITION.json",
+      "V7_CURRENT_ENGINEERING_INTERFACE_DEFINITION.md",
+      "V7_R4_DESIGN_INTENT_REVISION_MANIFEST.json",
+      "V7_R4_DESIGN_INTENT_SHA256_MANIFEST.json"
+    ],
+    "manifest_sha256": "27509720eedc23229662036bcefce5b4499bacc1c83b3f7ff1a63cf3e2979f3b",
+    "manifest_member_sha256": "27509720eedc23229662036bcefce5b4499bacc1c83b3f7ff1a63cf3e2979f3b",
+    "manifest_declared_artifact_count": 3,
+    "zip_manifest_path_count_match": true,
+    "member_checks": [
+      {
+        "path": "V7_CURRENT_ENGINEERING_INTERFACE_DEFINITION.json",
+        "declared_size_bytes": 15477,
+        "actual_size_bytes": 15477,
+        "declared_sha256": "4b41d70467482a2d7d35d5d33dd393bb346552def3e620e7a65914369a4ff572",
+        "actual_sha256": "4b41d70467482a2d7d35d5d33dd393bb346552def3e620e7a65914369a4ff572",
+        "result": "PASS"
+      },
+      {
+        "path": "V7_CURRENT_ENGINEERING_INTERFACE_DEFINITION.md",
+        "declared_size_bytes": 3571,
+        "actual_size_bytes": 3571,
+        "declared_sha256": "b1e73ec95c87b5adfc5d5459b0782f393eb19e91df58b4def00730010df2c84d",
+        "actual_sha256": "b1e73ec95c87b5adfc5d5459b0782f393eb19e91df58b4def00730010df2c84d",
+        "result": "PASS"
+      },
+      {
+        "path": "V7_R4_DESIGN_INTENT_REVISION_MANIFEST.json",
+        "declared_size_bytes": 666,
+        "actual_size_bytes": 666,
+        "declared_sha256": "abe1ad151d921b6ec46a85cee7679346a2535c56ce5ffc11630ac1397acc1a9d",
+        "actual_sha256": "abe1ad151d921b6ec46a85cee7679346a2535c56ce5ffc11630ac1397acc1a9d",
+        "result": "PASS"
+      }
+    ],
+    "mismatch_count": 0,
+    "result": "PASS"
+  },
+  "claims": {
+    "DESIGN_INTENT_9_OF_9": true,
+    "SOURCE_SUPPORTED_COUNT": 2,
+    "MODEL_DEFINED_COUNT": 9,
+    "INFERRED_COUNT": 7,
+    "PHYSICAL_VALIDATED_COUNT": 0,
+    "UNSUPPORTED_CLAIMS": "0/FAIL for unsupported numerical physical claims",
+    "GEOMETRY_CHANGED": "NO at package scope",
+    "CAE_READY": "NO",
+    "MANUFACTURING_READY": "NO"
+  },
+  "interfaces": [
+    {
+      "interface": "IF-R4-01",
+      "part_A": "120",
+      "part_B": "130L",
+      "geometry": "GEOMETRY_PROVEN",
+      "model": "MODEL_DEFINED",
+      "design_intent": "DESIGN_INTENT_INFERRED",
+      "source_supported": "PARTIAL / NOT_PROVEN",
+      "physical_validated": "NO",
+      "final_evidence_level": "DESIGN_INTENT_INFERRED",
+      "audit_result": "PARTIAL",
+      "interface_type": "STRUCTURAL_INTERFACE",
+      "parent": "120",
+      "child": "130L",
+      "axis": "Longitudinal carriage axis / q1; exact local attachment axis not released",
+      "dof": {
+        "TRANSLATIONAL": {
+          "Tx": "COUPLED_TO_Q1",
+          "Ty": "CONSTRAINED",
+          "Tz": "CONSTRAINED"
+        },
+        "ROTATIONAL": {
+          "Rx": "CONSTRAINED",
+          "Ry": "CONSTRAINED",
+          "Rz": "CONSTRAINED"
+        }
+      },
+      "state_dependency": "RIDE_DOWN; REBOUND_CONTROL; SECURE",
+      "basis": "Design-intent role is consistent with body roles and kinematic model, but released mechanical source proof is absent."
+    },
+    {
+      "interface": "IF-R4-02",
+      "part_A": "120",
+      "part_B": "130R",
+      "geometry": "GEOMETRY_PROVEN",
+      "model": "MODEL_DEFINED",
+      "design_intent": "DESIGN_INTENT_INFERRED",
+      "source_supported": "PARTIAL / NOT_PROVEN",
+      "physical_validated": "NO",
+      "final_evidence_level": "DESIGN_INTENT_INFERRED",
+      "audit_result": "PARTIAL",
+      "interface_type": "STRUCTURAL_INTERFACE",
+      "parent": "120",
+      "child": "130R",
+      "axis": "Longitudinal carriage axis / q1; exact local attachment axis not released",
+      "dof": {
+        "TRANSLATIONAL": {
+          "Tx": "COUPLED_TO_Q1",
+          "Ty": "CONSTRAINED",
+          "Tz": "CONSTRAINED"
+        },
+        "ROTATIONAL": {
+          "Rx": "CONSTRAINED",
+          "Ry": "CONSTRAINED",
+          "Rz": "CONSTRAINED"
+        }
+      },
+      "state_dependency": "RIDE_DOWN; REBOUND_CONTROL; SECURE",
+      "basis": "Design-intent role is consistent with body roles and kinematic model, but released mechanical source proof is absent."
+    },
+    {
+      "interface": "IF-R4-03",
+      "part_A": "120",
+      "part_B": "140",
+      "geometry": "GEOMETRY_PROVEN",
+      "model": "MODEL_DEFINED",
+      "design_intent": "DESIGN_INTENT_INFERRED",
+      "source_supported": "PARTIAL / NOT_PROVEN",
+      "physical_validated": "NO",
+      "final_evidence_level": "DESIGN_INTENT_INFERRED",
+      "audit_result": "PARTIAL",
+      "interface_type": "STRUCTURAL_INTERFACE",
+      "parent": "120",
+      "child": "140",
+      "axis": "Carriage reference q1; local attachment datum not released",
+      "dof": {
+        "TRANSLATIONAL": {
+          "Tx": "COUPLED_TO_Q1",
+          "Ty": "CONSTRAINED",
+          "Tz": "CONSTRAINED"
+        },
+        "ROTATIONAL": {
+          "Rx": "CONSTRAINED",
+          "Ry": "CONSTRAINED",
+          "Rz": "CONSTRAINED"
+        }
+      },
+      "state_dependency": "S0_NORMAL; ARMED; RIDE_DOWN; REBOUND_CONTROL; SECURE",
+      "basis": "Design-intent role is consistent with body roles and kinematic model, but released mechanical source proof is absent."
+    },
+    {
+      "interface": "IF-R4-04",
+      "part_A": "120",
+      "part_B": "200",
+      "geometry": "GEOMETRY_PROVEN",
+      "model": "MODEL_DEFINED",
+      "design_intent": "DESIGN_INTENT_INFERRED",
+      "source_supported": "PARTIAL / NOT_PROVEN",
+      "physical_validated": "NO",
+      "final_evidence_level": "DESIGN_INTENT_INFERRED",
+      "audit_result": "PARTIAL",
+      "interface_type": "GUIDED_INTERFACE",
+      "parent": "120",
+      "child": "200",
+      "axis": "Carriage q1 longitudinal frame; local guide datum not released",
+      "dof": {
+        "TRANSLATIONAL": {
+          "Tx": "COUPLED_TO_Q1",
+          "Ty": "CONSTRAINED",
+          "Tz": "CONSTRAINED"
+        },
+        "ROTATIONAL": {
+          "Rx": "CONSTRAINED",
+          "Ry": "CONSTRAINED",
+          "Rz": "CONSTRAINED"
+        }
+      },
+      "state_dependency": "S0_NORMAL; ARMED; RIDE_DOWN; REBOUND_CONTROL; SECURE",
+      "basis": "Design-intent role is consistent with body roles and kinematic model, but released mechanical source proof is absent."
+    },
+    {
+      "interface": "IF-R4-05",
+      "part_A": "130L",
+      "part_B": "140",
+      "geometry": "GEOMETRY_PROVEN",
+      "model": "MODEL_DEFINED",
+      "design_intent": "DESIGN_INTENT_INFERRED",
+      "source_supported": "PARTIAL / NOT_PROVEN",
+      "physical_validated": "NO",
+      "final_evidence_level": "DESIGN_INTENT_INFERRED",
+      "audit_result": "PARTIAL",
+      "interface_type": "STRUCTURAL_INTERFACE",
+      "parent": "140",
+      "child": "130L",
+      "axis": "Left ride-down path axis associated with 130L; exact local joint axis not released",
+      "dof": {
+        "TRANSLATIONAL": {
+          "Tx": "CARRIAGE_COUPLED",
+          "Ty": "CONSTRAINED",
+          "Tz": "CONSTRAINED"
+        },
+        "ROTATIONAL": {
+          "Rx": "CONSTRAINED",
+          "Ry": "CONSTRAINED",
+          "Rz": "CONSTRAINED"
+        }
+      },
+      "state_dependency": "RIDE_DOWN; REBOUND_CONTROL",
+      "basis": "Design-intent role is consistent with body roles and kinematic model, but released mechanical source proof is absent."
+    },
+    {
+      "interface": "IF-R4-06",
+      "part_A": "130R",
+      "part_B": "140",
+      "geometry": "GEOMETRY_PROVEN",
+      "model": "MODEL_DEFINED",
+      "design_intent": "DESIGN_INTENT_INFERRED",
+      "source_supported": "PARTIAL / NOT_PROVEN",
+      "physical_validated": "NO",
+      "final_evidence_level": "DESIGN_INTENT_INFERRED",
+      "audit_result": "PARTIAL",
+      "interface_type": "STRUCTURAL_INTERFACE",
+      "parent": "140",
+      "child": "130R",
+      "axis": "Right ride-down path axis associated with 130R; exact local joint axis not released",
+      "dof": {
+        "TRANSLATIONAL": {
+          "Tx": "CARRIAGE_COUPLED",
+          "Ty": "CONSTRAINED",
+          "Tz": "CONSTRAINED"
+        },
+        "ROTATIONAL": {
+          "Rx": "CONSTRAINED",
+          "Ry": "CONSTRAINED",
+          "Rz": "CONSTRAINED"
+        }
+      },
+      "state_dependency": "RIDE_DOWN; REBOUND_CONTROL",
+      "basis": "Design-intent role is consistent with body roles and kinematic model, but released mechanical source proof is absent."
+    },
+    {
+      "interface": "IF-R4-07",
+      "part_A": "140",
+      "part_B": "160",
+      "geometry": "GEOMETRY_PROVEN",
+      "model": "MODEL_DEFINED",
+      "design_intent": "DESIGN_INTENT_INFERRED",
+      "source_supported": "PARTIAL / NOT_PROVEN",
+      "physical_validated": "NO",
+      "final_evidence_level": "DESIGN_INTENT_INFERRED",
+      "audit_result": "PARTIAL",
+      "interface_type": "STRUCTURAL_INTERFACE",
+      "parent": "160",
+      "child": "140",
+      "axis": "Seatback rotation q2 axis belongs to J/160; local 140-to-160 mating datum not released",
+      "dof": {
+        "TRANSLATIONAL": {
+          "Tx": "NO_INDEPENDENT_DOF",
+          "Ty": "NO_INDEPENDENT_DOF",
+          "Tz": "NO_INDEPENDENT_DOF"
+        },
+        "ROTATIONAL": {
+          "Rx": "NO_INDEPENDENT_DOF",
+          "Ry": "NO_INDEPENDENT_DOF",
+          "Rz": "NO_INDEPENDENT_DOF"
+        }
+      },
+      "state_dependency": "S0_NORMAL; ARMED; RIDE_DOWN; REBOUND_CONTROL; SECURE",
+      "basis": "Design-intent role is consistent with body roles and kinematic model, but released mechanical source proof is absent."
+    },
+    {
+      "interface": "IF-R4-08",
+      "part_A": "150L",
+      "part_B": "160",
+      "geometry": "GEOMETRY_PROVEN",
+      "model": "MODEL_DEFINED",
+      "design_intent": "MODEL_DEFINED",
+      "source_supported": "SOURCE_SUPPORTED",
+      "physical_validated": "NO",
+      "final_evidence_level": "MODEL_DEFINED",
+      "audit_result": "PASS",
+      "interface_type": "JOINT",
+      "parent": "150L",
+      "child": "160",
+      "axis": "q2-coupled rotation-control path; exact physical pin axis not released",
+      "dof": {
+        "TRANSLATIONAL": {
+          "Tx": "CONSTRAINED",
+          "Ty": "CONSTRAINED",
+          "Tz": "CONSTRAINED"
+        },
+        "ROTATIONAL": {
+          "Rx": "CONSTRAINED",
+          "Ry": "Q2_COUPLED",
+          "Rz": "CONSTRAINED"
+        }
+      },
+      "state_dependency": "S0_NORMAL; ARMED; RIDE_DOWN; REBOUND_CONTROL; SECURE",
+      "basis": "Exact model-artifact relation for J_LINK_L/J_SEATBACK; no physical validation."
+    },
+    {
+      "interface": "IF-R4-09",
+      "part_A": "160",
+      "part_B": "J",
+      "geometry": "GEOMETRY_PROVEN",
+      "model": "MODEL_DEFINED",
+      "design_intent": "MODEL_DEFINED",
+      "source_supported": "SOURCE_SUPPORTED",
+      "physical_validated": "NO",
+      "final_evidence_level": "MODEL_DEFINED",
+      "audit_result": "PASS",
+      "interface_type": "JOINT",
+      "parent": "J",
+      "child": "160",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "dof": {
+        "TRANSLATIONAL": {
+          "Tx": "CONSTRAINED",
+          "Ty": "CONSTRAINED",
+          "Tz": "CONSTRAINED"
+        },
+        "ROTATIONAL": {
+          "Rx": "CONSTRAINED",
+          "Ry": "Q2",
+          "Rz": "CONSTRAINED"
+        }
+      },
+      "state_dependency": "S0_NORMAL; ARMED; RIDE_DOWN; REBOUND_CONTROL; SECURE",
+      "basis": "Exact model-artifact relation for J_LINK_L/J_SEATBACK; no physical validation."
+    }
+  ],
+  "geometry_integrity": {
+    "new_package_contains_cad_or_step": false,
+    "geometry_changed": false,
+    "cad_changed": false,
+    "r4_1_changed": false,
+    "r4_2_created": false,
+    "result": "PASS"
+  },
+  "unsupported_claim_scan": {
+    "numeric_physical_claim_candidates": [],
+    "result": "PASS"
+  },
+  "final_decision": "VERIFIED_WITH_BLOCKERS",
+  "final_reason": "Canonical ZIP and manifest have zero mismatches. Remaining blockers are non-physical design-intent/model status, absent physical validation, and no manufacturing/CAE readiness.",
+  "baselines_preserved": [
+    "V7-R3",
+    "R4.1",
+    "R4.2 not created"
+  ],
+  "cae_started": false,
+  "physical_validation": false,
+  "manufacturing_release": false
+}

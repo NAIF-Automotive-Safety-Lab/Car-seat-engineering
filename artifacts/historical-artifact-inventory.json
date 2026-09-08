@@ -1,0 +1,179 @@
+{
+  "repo": "/home/ubuntu/audit-repo",
+  "head": "a9203c1a10babfe0b8e3f55917a236db90c783a6",
+  "items": [
+    {
+      "path": "V7-RC-004_INTERFACE_DEFINITION_PACKAGE.zip",
+      "type": "file",
+      "size_bytes": 5899,
+      "mtime": 1788908756.0528722,
+      "files": [
+        {
+          "path": "V7-RC-004_INTERFACE_DEFINITION_PACKAGE.zip",
+          "size_bytes": 5899,
+          "sha256": "a2545e781afbdfd0a8241bb99a0d2eeb4fd9c3b4576476158e14d6cac4de0e75",
+          "mtime": 1788908756.0528722,
+          "identical_committed_paths": []
+        }
+      ],
+      "zip_test": true,
+      "member_count": 4,
+      "members": [
+        "V7_CURRENT_ENGINEERING_INTERFACE_DEFINITION.json",
+        "V7_CURRENT_ENGINEERING_INTERFACE_DEFINITION.md",
+        "V7_R4_DESIGN_INTENT_REVISION_MANIFEST.json",
+        "V7_R4_DESIGN_INTENT_SHA256_MANIFEST.json"
+      ],
+      "scope_keywords": {
+        "rc-004": 0,
+        "rc005": 0,
+        "rc-005": 0,
+        "interface": 0,
+        "closure": 0,
+        "forensic": 0,
+        "geometry": 0,
+        "design intent": 0,
+        "physical validation": 0
+      }
+    },
+    {
+      "path": "V7_MANUS_INTERFACE_DEFINITION_AUDIT.json",
+      "type": "file",
+      "size_bytes": 12526,
+      "mtime": 1788908756.0575519,
+      "files": [
+        {
+          "path": "V7_MANUS_INTERFACE_DEFINITION_AUDIT.json",
+          "size_bytes": 12526,
+          "sha256": "a218353818262478225dfb39edfaa321740f0cdb4f927f553d3a51bc8aa0fe91",
+          "mtime": 1788908756.0575519,
+          "identical_committed_paths": []
+        }
+      ],
+      "json_valid": true,
+      "scope_keywords": {
+        "rc-004": 2,
+        "rc005": 0,
+        "rc-005": 0,
+        "interface": 33,
+        "closure": 0,
+        "forensic": 0,
+        "geometry": 21,
+        "design intent": 0,
+        "physical validation": 3
+      }
+    },
+    {
+      "path": "V7_MANUS_INTERFACE_DEFINITION_AUDIT.md",
+      "type": "file",
+      "size_bytes": 4823,
+      "mtime": 1788908756.057688,
+      "files": [
+        {
+          "path": "V7_MANUS_INTERFACE_DEFINITION_AUDIT.md",
+          "size_bytes": 4823,
+          "sha256": "4e963c256d3459ed5c2154b7b12c2f2fe161569eac57962e6e6ff28e346ba009",
+          "mtime": 1788908756.057688,
+          "identical_committed_paths": []
+        }
+      ],
+      "scope_keywords": {
+        "rc-004": 3,
+        "rc005": 0,
+        "rc-005": 0,
+        "interface": 6,
+        "closure": 0,
+        "forensic": 0,
+        "geometry": 14,
+        "design intent": 1,
+        "physical validation": 3
+      }
+    },
+    {
+      "path": "V7_MANUS_RC005_FORENSIC_AUDIT.json",
+      "type": "file",
+      "size_bytes": 10681,
+      "mtime": 1788909355.147796,
+      "files": [
+        {
+          "path": "V7_MANUS_RC005_FORENSIC_AUDIT.json",
+          "size_bytes": 10681,
+          "sha256": "d2489c241b3a9493cca37151614f3ea7b7c50259d8f311e59fa8bceb1723beec",
+          "mtime": 1788909355.147796,
+          "identical_committed_paths": []
+        }
+      ],
+      "json_valid": true,
+      "scope_keywords": {
+        "rc-004": 0,
+        "rc005": 11,
+        "rc-005": 7,
+        "interface": 2,
+        "closure": 1,
+        "forensic": 1,
+        "geometry": 5,
+        "design intent": 0,
+        "physical validation": 1
+      }
+    },
+    {
+      "path": "V7_MANUS_RC005_FORENSIC_AUDIT.md",
+      "type": "file",
+      "size_bytes": 3749,
+      "mtime": 1788909355.148004,
+      "files": [
+        {
+          "path": "V7_MANUS_RC005_FORENSIC_AUDIT.md",
+          "size_bytes": 3749,
+          "sha256": "d477b8a89f0fcd2e3ae66143366353a58f0a686856ea15324b7a1070299891e5",
+          "mtime": 1788909355.148004,
+          "identical_committed_paths": []
+        }
+      ],
+      "scope_keywords": {
+        "rc-004": 0,
+        "rc005": 0,
+        "rc-005": 4,
+        "interface": 1,
+        "closure": 1,
+        "forensic": 2,
+        "geometry": 4,
+        "design intent": 0,
+        "physical validation": 1
+      }
+    },
+    {
+      "path": "artifacts/interface_semantics_closure",
+      "type": "directory",
+      "size_bytes": 30726,
+      "mtime": 1788907741.1289449,
+      "files": [
+        {
+          "path": "artifacts/interface_semantics_closure/V7_INTERFACE_SEMANTICS_CLOSURE.json",
+          "size_bytes": 24101,
+          "sha256": "29f25f59cbe9ca1aa2fee6b86e39f99967861dd3aedbc739692f1b3052964022",
+          "mtime": 1788907751.031084,
+          "identical_committed_paths": []
+        },
+        {
+          "path": "artifacts/interface_semantics_closure/V7_INTERFACE_SEMANTICS_CLOSURE.md",
+          "size_bytes": 6625,
+          "sha256": "d75c824e2ac0ea9479dd00445ef88424b969799061b8949dac2e257b8993d4e2",
+          "mtime": 1788907751.0312629,
+          "identical_committed_paths": []
+        }
+      ],
+      "scope_keywords": {
+        "rc-004": 2,
+        "rc005": 0,
+        "rc-005": 2,
+        "interface": 121,
+        "closure": 13,
+        "forensic": 35,
+        "geometry": 49,
+        "design intent": 0,
+        "physical validation": 11
+      }
+    }
+  ]
+}
