@@ -5,11 +5,13 @@ import json
 from pathlib import Path
 
 from .acquisition import ArtifactAcquisitionService
-from .brep import validate_brep
-from .features import extract_features, pmi_report
+from .brep import brep_report
+from .features import feature_report, pmi_report
 from .runtime import chrono_smoke, dependency_status
-from .step import build_step_forensic_report
+from .step import forensic_report
 from .traceability import EvidenceGraph, build_gap_mapping, normalized_joint
+from .traceability.graph import EvidenceEdge, EvidenceNode
+from .evidence.contracts import EvidenceClass
 
 
 def dump(path: Path, value: object) -> None:
@@ -19,22 +21,21 @@ def dump(path: Path, value: object) -> None:
 
 def run(project_root: Path, step_path: Path) -> dict[str, object]:
     project_root = project_root.resolve(); step_path = step_path.resolve()
-    evidence = project_root / "artifacts/engineering-evidence"
-    service = ArtifactAcquisitionService(project_root, evidence)
-    artifact = service.acquire_file(step_path, artifact_id="r4_1_authoritative")
-    forensic = build_step_forensic_report(step_path)
-    brep = validate_brep(step_path)
-    features = extract_features(step_path)
+    evidence = project_root / "artifacts/engineering-evidence/r4_1_eere"
+    service = ArtifactAcquisitionService(project_root, "eere-runtime")
+    acquired, manifest = service.acquire_file(step_path, evidence)
+    forensic = forensic_report(step_path)
+    brep = brep_report(step_path)
+    features = feature_report(step_path)
     pmi = pmi_report(step_path)
     runtimes = dependency_status()
     chrono = chrono_smoke()
     graph = EvidenceGraph()
-    graph.add_node("R4.1", "CAD_ARTIFACT", sha256=artifact["manifest"]["sha256"])
-    graph.add_node("P0", "ENGINEERING_CONFIGURATION", status="UNVERIFIED")
-    graph.add_edge("R4.1", "P0", {"source": "current_artifact_manifest", "status": "VERIFIED"})
-    graph.add_node("joint:unknown", "JOINT", value=normalized_joint("joint:unknown", "UNDEFINED", "UNDEFINED"))
+    graph.add_node(EvidenceNode("R4.1", "CAD_ARTIFACT", "R4.1", str(step_path), manifest.sha256, EvidenceClass.DERIVED_FROM_CAD, "VERIFIED"))
+    graph.add_node(EvidenceNode("P0", "ENGINEERING_CONFIGURATION", "P0", None, None, EvidenceClass.UNVERIFIED, "UNVERIFIED"))
+    graph.add_edge(EvidenceEdge("edge:R4.1:P0", "R4.1", "P0", str(step_path), manifest.sha256, EvidenceClass.DERIVED_FROM_CAD, service.record_timestamp(), "EERE", "0.1.0", "HIGH", "VERIFIED"))
     result = {
-        "artifact": artifact,
+        "artifact": {"destination": str(acquired), "manifest": manifest.to_dict()},
         "step_forensic": forensic,
         "brep_validation": brep,
         "features": features,
@@ -44,9 +45,8 @@ def run(project_root: Path, step_path: Path) -> dict[str, object]:
         "traceability": graph.as_dict(),
         "gap_mapping": build_gap_mapping(),
     }
-    out = project_root / "artifacts/engineering-evidence/r4_1_eere"
     for key, value in result.items():
-        dump(out / f"{key}.json", value)
+        dump(evidence / f"{key}.json", value)
     return result
 
 
@@ -60,7 +60,7 @@ def main(argv: list[str] | None = None) -> int:
         print("EERE_STATUS=BLOCKED"); print(f"REASON=MISSING_STEP:{step}"); return 2
     result = run(root, step)
     print("EERE_ACQUISITION=VERIFIED")
-    print(f"EERE_STEP_FORENSIC={result['step_forensic']['dual_parse_status']}")
+    print(f"EERE_STEP_FORENSIC={result['step_forensic']['status']}")
     print(f"EERE_BREP={result['brep_validation']['status']}")
     print(f"EERE_CHRONO={result['chronoruntime_smoke']['status']}")
     print("EERE_PHYSICAL_EVIDENCE=NOT_AVAILABLE")

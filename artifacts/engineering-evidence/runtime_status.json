@@ -1,5 +1,5 @@
 {
-  "status": "BLOCKED",
+  "status": "PARTIAL",
   "components": {
     "ocp": {
       "status": "VERIFIED",
@@ -14,11 +14,8 @@
       "reason": "No executable step-p21 parser detected"
     },
     "pychrono_core": {
-      "status": "VERIFIED",
-      "package_file": "/home/ubuntu/third_party/chrono-build-10.0.0/bin/pychrono/__init__.py",
-      "core_file": "/home/ubuntu/third_party/chrono-build-10.0.0/bin/pychrono/core.py",
-      "compiled_core_present": true,
-      "system_class_present": true
+      "status": "BLOCKED",
+      "reason": "ModuleNotFoundError: No module named 'pychrono'"
     },
     "gmsh": {
       "status": "NOT_AVAILABLE",
@@ -31,5 +28,5 @@
   },
   "platform": "Linux-6.18.38+-x86_64-with-glibc2.39",
   "python": "3.12.3",
-  "checked_at": "2026-09-07T04:02:44.129013+00:00"
+  "checked_at": "2026-09-08T07:54:23.316282+00:00"
 }

@@ -1,3 +1,2 @@
-from .service import ArtifactAcquisitionService, ArtifactManifest, sha256_file
-
-__all__ = ["ArtifactAcquisitionService", "ArtifactManifest", "sha256_file"]
+from .service import ArtifactAcquisitionService, ArtifactManifest, sha256_file, utc_now
+__all__ = ["ArtifactAcquisitionService", "ArtifactManifest", "sha256_file", "utc_now"]

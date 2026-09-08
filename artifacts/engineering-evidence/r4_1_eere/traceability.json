@@ -1,51 +1,39 @@
 {
   "edges": [
     {
-      "evidence": {
-        "source": "current_artifact_manifest",
-        "status": "VERIFIED"
-      },
-      "source": "R4.1",
-      "target": "P0"
+      "confidence": "HIGH",
+      "edge_id": "edge:R4.1:P0",
+      "evidence_class": "DERIVED_FROM_CAD",
+      "source": "/home/ubuntu/repo/R4.1/R4.1.step",
+      "source_node": "R4.1",
+      "source_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "target_node": "P0",
+      "timestamp": "2026-09-08T07:54:25.791815+00:00",
+      "tool": "EERE",
+      "tool_version": "0.1.0",
+      "verification_state": "VERIFIED"
     }
   ],
+  "generated_at": "2026-09-08T07:54:25.791951+00:00",
   "nodes": [
     {
-      "id": "R4.1",
-      "sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
-      "type": "CAD_ARTIFACT"
+      "evidence_class": "DERIVED_FROM_CAD",
+      "label": "R4.1",
+      "node_id": "R4.1",
+      "node_type": "CAD_ARTIFACT",
+      "source": "/home/ubuntu/repo/R4.1/R4.1.step",
+      "source_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "verification_state": "VERIFIED"
     },
     {
-      "id": "P0",
-      "status": "UNVERIFIED",
-      "type": "ENGINEERING_CONFIGURATION"
-    },
-    {
-      "id": "joint:unknown",
-      "type": "JOINT",
-      "value": {
-        "axis": "UNDEFINED",
-        "body_a": "UNDEFINED",
-        "body_b": "UNDEFINED",
-        "bushing_reference": "UNDEFINED",
-        "clearance": "UNDEFINED",
-        "compliance_reference": "UNDEFINED",
-        "confidence": "UNDEFINED",
-        "fastener_reference": "UNDEFINED",
-        "joint_id": "joint:unknown",
-        "joint_type": "UNDEFINED",
-        "limits": "UNDEFINED",
-        "location": "UNDEFINED",
-        "source_evidence": {},
-        "status": "UNVERIFIED",
-        "stop_condition": "UNDEFINED"
-      }
+      "evidence_class": "UNVERIFIED",
+      "label": "P0",
+      "node_id": "P0",
+      "node_type": "ENGINEERING_CONFIGURATION",
+      "source": null,
+      "source_sha256": null,
+      "verification_state": "UNVERIFIED"
     }
   ],
-  "orphan_audit": {
-    "orphan_edges": [],
-    "orphan_nodes": [
-      "joint:unknown"
-    ]
-  }
+  "orphan_nodes": []
 }

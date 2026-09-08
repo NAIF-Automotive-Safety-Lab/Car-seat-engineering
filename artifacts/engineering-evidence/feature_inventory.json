@@ -1,0 +1,28 @@
+{
+  "status": "VERIFIED",
+  "source_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "kernel": "OCP/OpenCascade",
+  "deterministic": true,
+  "solid_count": 62,
+  "surface_type_counts": {
+    "plane": 355,
+    "cylinder": 47,
+    "cone": 0,
+    "sphere": 0,
+    "other_surface": 0
+  },
+  "candidate_features": {
+    "planar_faces": 355,
+    "cylindrical_faces": 47,
+    "conical_faces": 0,
+    "spherical_faces": 0,
+    "holes": "UNDEFINED",
+    "slots": "UNDEFINED",
+    "fillets": "UNDEFINED",
+    "chamfers": "UNDEFINED",
+    "interfaces": "UNDEFINED",
+    "pivot_axes": "UNDEFINED",
+    "hinge_axes": "UNDEFINED"
+  },
+  "authority_rule": "surface counts are deterministic; semantic feature labels remain UNDEFINED unless independently verified"
+}

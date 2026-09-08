@@ -1,20 +1,71 @@
 {
-  "tool": "EERE",
+  "system": "EERE",
   "version": "0.1.0",
-  "status": "PARTIAL",
-  "platform": "Linux x86_64",
-  "python": "3.12.3",
-  "dependencies": [
-    {"name":"cadquery-ocp","version":"8.0.1.0.0","status":"VERIFIED","role":"STEP/B-Rep kernel binding"},
-    {"name":"pytest","version":"9.1.1","status":"VERIFIED","role":"test runner"},
-    {"name":"pychrono.core","version":"10.0.0","status":"VERIFIED","role":"Chrono dynamics","source_commit":"9faf13dd8f1128dd75ed233a9627027b0422c3f7","binding_sha256":"ddac0900a002c55a408d7c497ee6d88e4c4ef1b56e90b18eecad8b97319003c9"},
-    {"name":"gmsh","version":"4.15.2-git-657c8e9","status":"VERIFIED","role":"mesh executable","path":"/home/ubuntu/third_party/gmsh-install-4.15.2/bin/gmsh"},
-    {"name":"pychrono.cascade","version":null,"status":"BLOCKED","role":"Existing SR11 STEP/Cascade adapter","reason":"not built; requires additional Cascade/pythonocc integration"},
-    {"name":"STEPcode","version":null,"status":"NOT_AVAILABLE","role":"independent STEP semantic parser"},
-    {"name":"step-p21","version":null,"status":"NOT_AVAILABLE","role":"ISO-10303-21 forensic parser"},
-    {"name":"CalculiX","version":null,"status":"NOT_AVAILABLE","role":"FE solver","reason":"executable not found"},
-    {"name":"feature-recognition","version":null,"status":"PARTIAL","role":"deterministic OCCT surface inventory","reason":"surface types verified; semantic feature labels remain UNDEFINED"},
-    {"name":"PMI/GD&T","version":null,"status":"NOT_PRESENT_OR_NOT_RECOVERED","role":"STEP PMI extraction","reason":"R4.1 STEP entity inventory contains zero PMI entities"}
+  "repository_revision": "d5922ccfd1f3813b872f2308ebb8b5a1a1a1e7ad",
+  "pinned": {
+    "python": "3.12.3",
+    "cadquery-ocp": "7.9.3.1.1"
+  },
+  "verified": [
+    "OCP import",
+    "STEP read",
+    "raw STEP forensic scan",
+    "B-Rep import",
+    "62-solid count",
+    "artifact SHA reproducibility",
+    "immutable copy"
   ],
-  "policy":"No unpinned external binary is treated as authoritative; unavailable engines and absent engineering evidence remain explicitly blocked or unavailable."
+  "not_available": [
+    "pychrono",
+    "stepcode",
+    "step-p21",
+    "FreeCAD",
+    "CadQuery",
+    "Analysis Situs",
+    "BrepMFR"
+  ],
+  "status_policy": "NOT_AVAILABLE and BLOCKED are preserved; no unavailable dependency is represented as installed.",
+  "components": {
+    "occt": {
+      "module": "OCP",
+      "role": "STEP/B-Rep/XDE",
+      "status": "VERIFIED",
+      "version": "OCP-installed; exact OCCT runtime version not exposed by binding"
+    },
+    "analysis_situs": {
+      "module": null,
+      "role": "B-Rep analysis/feature recognition",
+      "status": "NOT_AVAILABLE"
+    },
+    "stepcode": {
+      "module": "stepcode",
+      "role": "STEP semantic parser",
+      "status": "NOT_AVAILABLE"
+    },
+    "step_p21": {
+      "module": "step_p21",
+      "role": "ISO-10303-21 parser",
+      "status": "NOT_AVAILABLE"
+    },
+    "chrono": {
+      "module": "pychrono",
+      "role": "dynamics",
+      "status": "NOT_AVAILABLE"
+    },
+    "freecad": {
+      "module": "FreeCAD",
+      "role": "optional CAD interoperability",
+      "status": "NOT_AVAILABLE"
+    },
+    "cadquery": {
+      "module": "cadquery",
+      "role": "Python CAD automation",
+      "status": "NOT_AVAILABLE"
+    },
+    "brepmfr": {
+      "module": null,
+      "role": "optional candidate-only AI feature recognition",
+      "status": "NOT_APPLICABLE"
+    }
+  }
 }

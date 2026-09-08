@@ -12,8 +12,7 @@ def _box(shape: Any) -> dict[str, float]:
     from OCP.BRepBndLib import BRepBndLib
     box = Bnd_Box()
     BRepBndLib.Add_s(shape, box)
-    xmin, ymin, zmin = box.GetXMin(), box.GetYMin(), box.GetZMin()
-    xmax, ymax, zmax = box.GetXMax(), box.GetYMax(), box.GetZMax()
+    xmin, ymin, zmin, xmax, ymax, zmax = box.Get()
     return {"xmin": xmin, "ymin": ymin, "zmin": zmin, "xmax": xmax, "ymax": ymax, "zmax": zmax}
 
 
@@ -44,12 +43,17 @@ def brep_report(path: Path) -> dict[str, Any]:
     props = GProp_GProps()
     BRepGProp.VolumeProperties_s(shape, props)
     center = props.CentreOfMass()
+    try:
+        import importlib.metadata
+        kernel_version = f"cadquery-ocp {importlib.metadata.version('cadquery-ocp')}"
+    except Exception:
+        kernel_version = "cadquery-ocp VERSION_UNAVAILABLE"
     return {
         "status": "PASS",
         "source_sha256": sha256_file(path),
         "extraction_timestamp": datetime.now(timezone.utc).isoformat(),
         "kernel": "OCP/OpenCascade",
-        "kernel_version": "cadquery-ocp 8.0.1.0.0 (environment evidence)",
+        "kernel_version": kernel_version,
         "deterministic": True,
         "read_status": str(status),
         "solid_count": count(TopAbs_SOLID),

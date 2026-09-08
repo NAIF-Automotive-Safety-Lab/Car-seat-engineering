@@ -3,16 +3,16 @@
   "artifact_manifest": {
     "artifact_id": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
     "artifact_name": "R4.1.step",
-    "source": "/home/ubuntu/car-seat-engineering/R4.1/R4.1.step",
+    "source": "/home/ubuntu/repo/R4.1/R4.1.step",
     "source_type": "local_file",
-    "path": "/home/ubuntu/car-seat-engineering/artifacts/engineering-evidence/acquired/R4.1.step",
+    "path": "/home/ubuntu/repo/artifacts/engineering-evidence/acquired/R4.1.step",
     "file_size_bytes": 1220000,
     "sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
     "media_type": "model/step",
     "extension": ".step",
-    "acquisition_timestamp": "2026-09-07T04:02:42.287469+00:00",
+    "acquisition_timestamp": "2026-09-08T07:54:21.312884+00:00",
     "tool_version": "EERE-0.1.0",
-    "repository_revision": "9c86204d5f105473c9f75da2ef4c5d2649cdd0a4",
+    "repository_revision": "d5922ccfd1f3813b872f2308ebb8b5a1a1a1e7ad",
     "status": "VERIFIED"
   },
   "forensic": {
@@ -87,9 +87,9 @@
   "brep": {
     "status": "PASS",
     "source_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
-    "extraction_timestamp": "2026-09-07T04:02:43.624029+00:00",
+    "extraction_timestamp": "2026-09-08T07:54:22.722587+00:00",
     "kernel": "OCP/OpenCascade",
-    "kernel_version": "cadquery-ocp 8.0.1.0.0 (environment evidence)",
+    "kernel_version": "cadquery-ocp 7.9.3.1.1",
     "deterministic": true,
     "read_status": "IFSelect_ReturnStatus.IFSelect_RetDone",
     "solid_count": 62,
@@ -119,8 +119,46 @@
       "Surface-area and surface/curve type inventories are not claimed until a dedicated deterministic extractor is added."
     ]
   },
+  "features": {
+    "status": "VERIFIED",
+    "source_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "kernel": "OCP/OpenCascade",
+    "deterministic": true,
+    "solid_count": 62,
+    "surface_type_counts": {
+      "plane": 355,
+      "cylinder": 47,
+      "cone": 0,
+      "sphere": 0,
+      "other_surface": 0
+    },
+    "candidate_features": {
+      "planar_faces": 355,
+      "cylindrical_faces": 47,
+      "conical_faces": 0,
+      "spherical_faces": 0,
+      "holes": "UNDEFINED",
+      "slots": "UNDEFINED",
+      "fillets": "UNDEFINED",
+      "chamfers": "UNDEFINED",
+      "interfaces": "UNDEFINED",
+      "pivot_axes": "UNDEFINED",
+      "hinge_axes": "UNDEFINED"
+    },
+    "authority_rule": "surface counts are deterministic; semantic feature labels remain UNDEFINED unless independently verified"
+  },
+  "pmi": {
+    "status": "NOT_PRESENT_OR_NOT_RECOVERED",
+    "source_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "pmi_entity_count": 0,
+    "dimensions": [],
+    "datum_features": [],
+    "geometric_tolerances": [],
+    "units": [],
+    "authority_rule": "PMI is reported only when present in the inspected STEP entity inventory; no PMI is inferred"
+  },
   "runtime": {
-    "status": "BLOCKED",
+    "status": "PARTIAL",
     "components": {
       "ocp": {
         "status": "VERIFIED",
@@ -135,11 +173,8 @@
         "reason": "No executable step-p21 parser detected"
       },
       "pychrono_core": {
-        "status": "VERIFIED",
-        "package_file": "/home/ubuntu/third_party/chrono-build-10.0.0/bin/pychrono/__init__.py",
-        "core_file": "/home/ubuntu/third_party/chrono-build-10.0.0/bin/pychrono/core.py",
-        "compiled_core_present": true,
-        "system_class_present": true
+        "status": "BLOCKED",
+        "reason": "ModuleNotFoundError: No module named 'pychrono'"
       },
       "gmsh": {
         "status": "NOT_AVAILABLE",
@@ -152,6 +187,6 @@
     },
     "platform": "Linux-6.18.38+-x86_64-with-glibc2.39",
     "python": "3.12.3",
-    "checked_at": "2026-09-07T04:02:44.129013+00:00"
+    "checked_at": "2026-09-08T07:54:23.316282+00:00"
   }
 }

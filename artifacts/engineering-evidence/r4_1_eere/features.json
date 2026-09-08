@@ -1,23 +1,28 @@
 {
-  "authority_rule": "AI_OR_HEURISTIC_FEATURES_CANNOT_BE_AUTHORITATIVE_WITHOUT_INDEPENDENT_VERIFICATION",
-  "deterministic": true,
-  "extraction_timestamp": "2026-09-08T07:49:01.581110Z",
-  "features": {
-    "candidate_hinge_axes": "UNDEFINED_UNTIL_ASSEMBLY_CORRELATION",
-    "candidate_pivot_axes": "UNDEFINED_UNTIL_ASSEMBLY_CORRELATION",
-    "candidate_stop_faces": "UNDEFINED_UNTIL_FEATURE_RULES",
-    "chamfers": "UNDEFINED_REQUIRES_TOPOLOGY_RULES",
-    "clearance_candidates": "UNDEFINED_UNTIL_INTERFACE_RULES",
-    "cones": 0,
-    "cylinders": 47,
-    "datum_candidates": "UNDEFINED_UNTIL_PMI_OR_RULES",
-    "fillets": "UNDEFINED_REQUIRES_TOPOLOGY_RULES",
-    "holes": "UNDEFINED_REQUIRES_TOPOLOGY_RULES",
-    "mating_surfaces": "UNDEFINED_UNTIL_INTERFACE_RULES",
-    "planes": 355,
-    "slots": "UNDEFINED_REQUIRES_TOPOLOGY_RULES",
-    "spheres": 0
+  "authority_rule": "surface counts are deterministic; semantic feature labels remain UNDEFINED unless independently verified",
+  "candidate_features": {
+    "chamfers": "UNDEFINED",
+    "conical_faces": 0,
+    "cylindrical_faces": 47,
+    "fillets": "UNDEFINED",
+    "hinge_axes": "UNDEFINED",
+    "holes": "UNDEFINED",
+    "interfaces": "UNDEFINED",
+    "pivot_axes": "UNDEFINED",
+    "planar_faces": 355,
+    "slots": "UNDEFINED",
+    "spherical_faces": 0
   },
-  "source_artifact_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
-  "status": "CANDIDATE_ONLY"
+  "deterministic": true,
+  "kernel": "OCP/OpenCascade",
+  "solid_count": 62,
+  "source_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "status": "VERIFIED",
+  "surface_type_counts": {
+    "cone": 0,
+    "cylinder": 47,
+    "other_surface": 0,
+    "plane": 355,
+    "sphere": 0
+  }
 }

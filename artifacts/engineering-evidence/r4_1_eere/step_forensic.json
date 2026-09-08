@@ -1,11 +1,11 @@
 {
-  "application_protocol": "AUTOMOTIVE_DESIGN",
-  "assembly_entities": {
-    "NEXT_ASSEMBLY_USAGE_OCCURRENCE": 62
-  },
-  "dual_parse_status": "VERIFIED",
+  "application_protocol": [
+    "'Open CASCADE Model"
+  ],
+  "assembly_entities": 62,
+  "deterministic": true,
   "entity_count": 22119,
-  "entity_counts": {
+  "entity_type_counts": {
     "ADVANCED_BREP_SHAPE_REPRESENTATION": 62,
     "ADVANCED_FACE": 402,
     "APPLICATION_CONTEXT": 1,
@@ -46,39 +46,24 @@
     "VECTOR": 2021,
     "VERTEX_POINT": 517
   },
-  "extraction_timestamp": "2026-09-08T07:48:59.855719Z",
-  "geometry_entity_count": 10912,
-  "header": {
-    "file_description": [
-      "('Open CASCADE Model'),'2;1'"
-    ],
-    "file_name": [
-      "'Open CASCADE Shape Model','2026-09-03T23:12:53',('Author'),(\n    'Open CASCADE'),'Open CASCADE STEP processor 7.9','Open CASCADE 7.9'\n  ,'Unknown'"
-    ],
-    "file_schema": [
-      "('AUTOMOTIVE_DESIGN { 1 0 10303 214 1 1 1 1 }')"
-    ],
-    "present": true
-  },
-  "occt": {
-    "kernel": "OCP/OCCT",
-    "reader_status": "IFSelect_ReturnStatus.IFSelect_RetDone",
-    "status": "VERIFIED"
-  },
+  "file_size_bytes": 1220000,
+  "footer_present": true,
+  "geometry_entity_count": 7042,
+  "header_present": true,
   "parse_errors": [],
-  "parser": "EERE_RAW_STEP_ENTITY_SCANNER/0.1.0",
-  "pmi_entities": {},
+  "parser": "EERE deterministic ISO-10303-21 entity scanner",
   "pmi_entity_count": 0,
   "product_definition_relationships": 0,
   "product_definitions": 63,
   "representation_relationships": 0,
-  "schema": 0,
+  "schema": [
+    "'AUTOMOTIVE_DESIGN { 1 0 10303 214 1 1 1 1 }"
+  ],
   "source_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
-  "source_size_bytes": 1220000,
-  "status": "VERIFIED",
+  "status": "PASS",
   "topology_entity_count": 1818,
   "unknown_entities": [],
   "warnings": [
-    "Raw scanner is semantic-light; compare with OCCT report."
+    "STEPcode and step-p21 comparison is NOT_AVAILABLE; this report is not a dual-parser claim."
   ]
 }

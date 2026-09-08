@@ -3,13 +3,13 @@
   "artifact_name": "R4.1.step",
   "source": "/home/ubuntu/repo/R4.1/R4.1.step",
   "source_type": "local_file",
-  "path": "/home/ubuntu/repo/artifacts/engineering-evidence/acquired/R4.1.step",
+  "path": "/home/ubuntu/repo/artifacts/engineering-evidence/r4_1_eere/R4.1.step",
   "file_size_bytes": 1220000,
   "sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
   "media_type": "model/step",
   "extension": ".step",
-  "acquisition_timestamp": "2026-09-08T07:54:21.312884+00:00",
+  "acquisition_timestamp": "2026-09-08T07:54:23.728630+00:00",
   "tool_version": "EERE-0.1.0",
-  "repository_revision": "d5922ccfd1f3813b872f2308ebb8b5a1a1a1e7ad",
+  "repository_revision": "eere-runtime",
   "status": "VERIFIED"
 }

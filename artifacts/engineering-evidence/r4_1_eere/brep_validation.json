@@ -7,27 +7,29 @@
     "zmax": 698.5000001,
     "zmin": -58.0000001
   },
-  "cad_kernel_version": "OCP/OCCT",
-  "center_of_mass": "UNDEFINED_UNTIL_DETERMINISTIC_MASS_PROPERTIES_POLICY",
+  "center_of_mass": {
+    "x": 3.2265392405584774,
+    "y": 60.31951574308448,
+    "z": 104.94177718309761
+  },
   "compound_count": 1,
-  "compsolid_count": 0,
   "deterministic": true,
   "edge_count": 1550,
-  "extraction_timestamp": "2026-09-08T07:49:01.543151Z",
-  "extraction_tool_version": "eere-brep/0.1.0",
+  "extraction_timestamp": "2026-09-08T07:54:25.172643+00:00",
   "face_count": 402,
-  "readback": {
-    "kernel": "OCP/OCCT",
-    "reader_status": "IFSelect_ReturnStatus.IFSelect_RetDone",
-    "status": "VERIFIED"
-  },
-  "self_intersection_checks": "NOT_RUN",
-  "shape_validity": "IMPORTED; DETAILED_CHECK_NOT_RUN",
+  "kernel": "OCP/OpenCascade",
+  "kernel_version": "cadquery-ocp 7.9.3.1.1",
+  "notes": [
+    "Surface-area and surface/curve type inventories are not claimed until a dedicated deterministic extractor is added."
+  ],
+  "read_status": "IFSelect_ReturnStatus.IFSelect_RetDone",
+  "self_intersection_check": "NOT_PERFORMED",
+  "shape_validity": true,
   "shell_count": 62,
   "solid_count": 62,
-  "source_artifact_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
-  "status": "VERIFIED",
-  "surface_area": "UNDEFINED_UNTIL_DETERMINISTIC_MASS_PROPERTIES_POLICY",
+  "source_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "status": "PASS",
+  "surface_area": null,
   "vertex_count": 3100,
-  "volume": "UNDEFINED_UNTIL_DETERMINISTIC_MASS_PROPERTIES_POLICY"
+  "volume": 15117824.54566455
 }

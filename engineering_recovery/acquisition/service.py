@@ -13,6 +13,10 @@ from typing import Any
 TOOL_VERSION = "EERE-0.1.0"
 
 
+def utc_now() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+
 def sha256_file(path: Path) -> str:
     digest = hashlib.sha256()
     with path.open("rb") as handle:
