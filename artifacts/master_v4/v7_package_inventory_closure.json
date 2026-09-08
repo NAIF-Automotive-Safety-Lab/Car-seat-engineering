@@ -1,0 +1,22 @@
+{
+  "source_inventory": "artifacts/master_v3/v7_native_source_recovery_inventory.json",
+  "inventory_sha256": "a718b847c322784c66f69d0f34623012d9deb6ded4580e28e489f7d03b30ce24",
+  "authoritative_artifacts": [],
+  "counts": {
+    "recovered_candidates": 105,
+    "authoritative": 0,
+    "derived": 14,
+    "reference": 90,
+    "synthetic": 1,
+    "missing_authoritative_slots": 8
+  },
+  "classification_policy": [
+    "AUTHORITATIVE",
+    "DERIVED",
+    "REFERENCE",
+    "SYNTHETIC",
+    "MISSING"
+  ],
+  "recovery_result": "RECOVERY_COMPLETE_NO_AUTHORITATIVE_V7_SOURCE",
+  "sha_binding": "Every recovered file record in the source inventory carries a SHA-256; no authoritative V7 artifact was found."
+}

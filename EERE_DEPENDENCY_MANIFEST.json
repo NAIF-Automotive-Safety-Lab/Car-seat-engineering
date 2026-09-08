@@ -5,14 +5,16 @@
   "platform": "Linux x86_64",
   "python": "3.12.3",
   "dependencies": [
-    {"name": "cadquery-ocp", "version": "8.0.1.0.0", "status": "VERIFIED", "role": "STEP/B-Rep kernel binding"},
-    {"name": "pytest", "version": "9.1.1", "status": "VERIFIED", "role": "test runner"},
-    {"name": "pychrono.core", "version": "10.0.0", "status": "VERIFIED", "role": "Chrono dynamics", "source_commit": "9faf13dd8f1128dd75ed233a9627027b0422c3f7", "binding_sha256": "ddac0900a002c55a408d7c497ee6d88e4c4ef1b56e90b18eecad8b97319003c9"},
-    {"name": "pychrono.cascade", "version": null, "status": "BLOCKED", "role": "Existing SR11 STEP/Cascade adapter", "reason": "not built; requires additional Cascade/pythonocc integration"},
-    {"name": "STEPcode", "version": null, "status": "NOT_AVAILABLE", "role": "independent STEP semantic parser"},
-    {"name": "step-p21", "version": null, "status": "NOT_AVAILABLE", "role": "ISO-10303-21 forensic parser"},
-    {"name": "gmsh", "version": null, "status": "NOT_AVAILABLE", "role": "mesh generation"},
-    {"name": "CalculiX", "version": null, "status": "NOT_AVAILABLE", "role": "FE solver"}
+    {"name":"cadquery-ocp","version":"8.0.1.0.0","status":"VERIFIED","role":"STEP/B-Rep kernel binding"},
+    {"name":"pytest","version":"9.1.1","status":"VERIFIED","role":"test runner"},
+    {"name":"pychrono.core","version":"10.0.0","status":"VERIFIED","role":"Chrono dynamics","source_commit":"9faf13dd8f1128dd75ed233a9627027b0422c3f7","binding_sha256":"ddac0900a002c55a408d7c497ee6d88e4c4ef1b56e90b18eecad8b97319003c9"},
+    {"name":"gmsh","version":"4.15.2-git-657c8e9","status":"VERIFIED","role":"mesh executable","path":"/home/ubuntu/third_party/gmsh-install-4.15.2/bin/gmsh"},
+    {"name":"pychrono.cascade","version":null,"status":"BLOCKED","role":"Existing SR11 STEP/Cascade adapter","reason":"not built; requires additional Cascade/pythonocc integration"},
+    {"name":"STEPcode","version":null,"status":"NOT_AVAILABLE","role":"independent STEP semantic parser"},
+    {"name":"step-p21","version":null,"status":"NOT_AVAILABLE","role":"ISO-10303-21 forensic parser"},
+    {"name":"CalculiX","version":null,"status":"NOT_AVAILABLE","role":"FE solver","reason":"executable not found"},
+    {"name":"feature-recognition","version":null,"status":"PARTIAL","role":"deterministic OCCT surface inventory","reason":"surface types verified; semantic feature labels remain UNDEFINED"},
+    {"name":"PMI/GD&T","version":null,"status":"NOT_PRESENT_OR_NOT_RECOVERED","role":"STEP PMI extraction","reason":"R4.1 STEP entity inventory contains zero PMI entities"}
   ],
-  "policy": "No unpinned external binary is treated as authoritative; unavailable engines remain explicitly blocked."
+  "policy":"No unpinned external binary is treated as authoritative; unavailable engines and absent engineering evidence remain explicitly blocked or unavailable."
 }
