@@ -1,0 +1,8 @@
+python==3.12.3
+cadquery-ocp==7.9.3.1.1
+pychrono=NOT_INSTALLED
+stepcode=NOT_INSTALLED
+step-p21=NOT_INSTALLED
+analysis-situs=NOT_INTEGRATED
+freecad=NOT_INSTALLED
+cadquery=NOT_INSTALLED

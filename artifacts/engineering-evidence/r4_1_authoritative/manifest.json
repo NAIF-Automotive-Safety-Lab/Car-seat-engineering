@@ -1,0 +1,15 @@
+{
+  "artifact_id": "r4_1_authoritative",
+  "artifact_name": "R4.1.step",
+  "source": "/home/ubuntu/repo/R4.1/R4.1.step",
+  "source_type": "local_file",
+  "absolute_or_project_relative_path": "artifacts/engineering-evidence/r4_1_authoritative/R4.1.step",
+  "file_size_bytes": 1220000,
+  "sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "media_type": "model/step",
+  "extension": ".step",
+  "acquisition_timestamp": "2026-09-08T07:48:59.828111Z",
+  "tool_version": "eere-acquisition/0.1.0",
+  "repository_revision": "ref: refs/heads/main",
+  "status": "ACQUIRED_IMMUTABLE"
+}

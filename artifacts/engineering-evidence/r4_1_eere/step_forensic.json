@@ -1,0 +1,84 @@
+{
+  "application_protocol": "AUTOMOTIVE_DESIGN",
+  "assembly_entities": {
+    "NEXT_ASSEMBLY_USAGE_OCCURRENCE": 62
+  },
+  "dual_parse_status": "VERIFIED",
+  "entity_count": 22119,
+  "entity_counts": {
+    "ADVANCED_BREP_SHAPE_REPRESENTATION": 62,
+    "ADVANCED_FACE": 402,
+    "APPLICATION_CONTEXT": 1,
+    "APPLICATION_PROTOCOL_DEFINITION": 1,
+    "AXIS2_PLACEMENT_2D": 97,
+    "AXIS2_PLACEMENT_3D": 584,
+    "B_SPLINE_CURVE_WITH_KNOTS": 80,
+    "CARTESIAN_POINT": 4441,
+    "CIRCLE": 178,
+    "CLOSED_SHELL": 62,
+    "CONTEXT_DEPENDENT_SHAPE_REPRESENTATION": 62,
+    "CYLINDRICAL_SURFACE": 47,
+    "DEFINITIONAL_REPRESENTATION": 1550,
+    "DIRECTION": 3286,
+    "EDGE_CURVE": 775,
+    "EDGE_LOOP": 424,
+    "ELLIPSE": 38,
+    "FACE_BOUND": 424,
+    "ITEM_DEFINED_TRANSFORMATION": 62,
+    "LINE": 2021,
+    "MANIFOLD_SOLID_BREP": 62,
+    "NEXT_ASSEMBLY_USAGE_OCCURRENCE": 62,
+    "ORIENTED_EDGE": 1550,
+    "PCURVE": 1550,
+    "PLANE": 355,
+    "PRODUCT": 63,
+    "PRODUCT_CONTEXT": 63,
+    "PRODUCT_DEFINITION": 63,
+    "PRODUCT_DEFINITION_CONTEXT": 63,
+    "PRODUCT_DEFINITION_FORMATION": 63,
+    "PRODUCT_DEFINITION_SHAPE": 125,
+    "PRODUCT_RELATED_PRODUCT_CATEGORY": 63,
+    "SEAM_CURVE": 36,
+    "SHAPE_DEFINITION_REPRESENTATION": 63,
+    "SHAPE_REPRESENTATION": 1,
+    "SURFACE_CURVE": 739,
+    "UNCERTAINTY_MEASURE_WITH_UNIT": 63,
+    "VECTOR": 2021,
+    "VERTEX_POINT": 517
+  },
+  "extraction_timestamp": "2026-09-08T07:48:59.855719Z",
+  "geometry_entity_count": 10912,
+  "header": {
+    "file_description": [
+      "('Open CASCADE Model'),'2;1'"
+    ],
+    "file_name": [
+      "'Open CASCADE Shape Model','2026-09-03T23:12:53',('Author'),(\n    'Open CASCADE'),'Open CASCADE STEP processor 7.9','Open CASCADE 7.9'\n  ,'Unknown'"
+    ],
+    "file_schema": [
+      "('AUTOMOTIVE_DESIGN { 1 0 10303 214 1 1 1 1 }')"
+    ],
+    "present": true
+  },
+  "occt": {
+    "kernel": "OCP/OCCT",
+    "reader_status": "IFSelect_ReturnStatus.IFSelect_RetDone",
+    "status": "VERIFIED"
+  },
+  "parse_errors": [],
+  "parser": "EERE_RAW_STEP_ENTITY_SCANNER/0.1.0",
+  "pmi_entities": {},
+  "pmi_entity_count": 0,
+  "product_definition_relationships": 0,
+  "product_definitions": 63,
+  "representation_relationships": 0,
+  "schema": 0,
+  "source_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "source_size_bytes": 1220000,
+  "status": "VERIFIED",
+  "topology_entity_count": 1818,
+  "unknown_entities": [],
+  "warnings": [
+    "Raw scanner is semantic-light; compare with OCCT report."
+  ]
+}

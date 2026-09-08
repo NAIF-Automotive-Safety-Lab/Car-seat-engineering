@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["joint_id", "body_a", "body_b", "joint_type", "location", "axis", "limits", "status"],
+  "properties": {
+    "joint_id": {"type": "string"},
+    "body_a": {"type": "string"},
+    "body_b": {"type": "string"},
+    "joint_type": {},
+    "location": {},
+    "axis": {},
+    "limits": {},
+    "clearance": {},
+    "stop_condition": {},
+    "fastener_reference": {},
+    "bushing_reference": {},
+    "compliance_reference": {},
+    "source_evidence": {"type": "object"},
+    "confidence": {},
+    "status": {"type": "string"}
+  },
+  "additionalProperties": true
+}

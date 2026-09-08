@@ -1,0 +1,21 @@
+{
+  "system": "EERE",
+  "repository_revision": "e6c20704a0da879eb9c71d903d6b03587676c8ca",
+  "occt": {
+    "status": "VERIFIED",
+    "reader_status": "IFSelect_ReturnStatus.IFSelect_RetDone",
+    "kernel": "OCP/OCCT"
+  },
+  "step_forensic": "VERIFIED",
+  "brep": "VERIFIED",
+  "chrono": {
+    "runtime_available": false,
+    "status": "BLOCKED",
+    "platform": "Linux-6.18.38+-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+    "error": "ModuleNotFoundError: No module named 'pychrono'",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/ubuntu/repo/engineering_recovery/runtime.py\", line 31, in chrono_smoke\n    import pychrono.core as chrono\nModuleNotFoundError: No module named 'pychrono'\n"
+  },
+  "physical_evidence": "NOT_AVAILABLE",
+  "r4_1_sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+}

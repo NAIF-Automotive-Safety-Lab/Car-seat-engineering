@@ -1,0 +1,42 @@
+name: eere
+
+on:
+  push:
+    paths:
+      - 'engineering_recovery/**'
+      - 'tools/eere_generate_reports.py'
+      - 'EERE_*.json'
+      - 'EERE_*.md'
+      - '.github/workflows/eere.yml'
+  pull_request:
+    paths:
+      - 'engineering_recovery/**'
+      - 'tools/eere_generate_reports.py'
+      - 'EERE_*.json'
+      - 'EERE_*.md'
+      - '.github/workflows/eere.yml'
+
+jobs:
+  eere-unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install pinned CAD runtime
+        run: python -m pip install 'cadquery-ocp==7.9.3.1.1'
+      - name: EERE unit tests
+        run: PYTHONPATH=. python -m unittest discover -s engineering_recovery/tests -p 'test_*.py' -v
+      - name: EERE report generation
+        run: PYTHONPATH=. python tools/eere_generate_reports.py
+      - name: Assert honest runtime states
+        run: |
+          python - <<'PY'
+          import json
+          status = json.load(open('EERE_RUNTIME_STATUS.json'))
+          assert status['occt']['status'] == 'VERIFIED'
+          assert status['step_forensic'] == 'VERIFIED'
+          assert status['brep'] == 'VERIFIED'
+          assert status['chrono']['status'] in {'VERIFIED', 'BLOCKED'}
+          PY

@@ -1,0 +1,71 @@
+{
+  "system": "EERE",
+  "version": "0.1.0",
+  "repository_revision": "e6c20704a0da879eb9c71d903d6b03587676c8ca",
+  "pinned": {
+    "python": "3.12.3",
+    "cadquery-ocp": "7.9.3.1.1"
+  },
+  "verified": [
+    "OCP import",
+    "STEP read",
+    "raw STEP forensic scan",
+    "B-Rep import",
+    "62-solid count",
+    "artifact SHA reproducibility",
+    "immutable copy"
+  ],
+  "not_available": [
+    "pychrono",
+    "stepcode",
+    "step-p21",
+    "FreeCAD",
+    "CadQuery",
+    "Analysis Situs",
+    "BrepMFR"
+  ],
+  "status_policy": "NOT_AVAILABLE and BLOCKED are preserved; no unavailable dependency is represented as installed.",
+  "components": {
+    "occt": {
+      "module": "OCP",
+      "role": "STEP/B-Rep/XDE",
+      "status": "VERIFIED",
+      "version": "OCP-installed; exact OCCT runtime version not exposed by binding"
+    },
+    "analysis_situs": {
+      "module": null,
+      "role": "B-Rep analysis/feature recognition",
+      "status": "NOT_AVAILABLE"
+    },
+    "stepcode": {
+      "module": "stepcode",
+      "role": "STEP semantic parser",
+      "status": "NOT_AVAILABLE"
+    },
+    "step_p21": {
+      "module": "step_p21",
+      "role": "ISO-10303-21 parser",
+      "status": "NOT_AVAILABLE"
+    },
+    "chrono": {
+      "module": "pychrono",
+      "role": "dynamics",
+      "status": "NOT_AVAILABLE"
+    },
+    "freecad": {
+      "module": "FreeCAD",
+      "role": "optional CAD interoperability",
+      "status": "NOT_AVAILABLE"
+    },
+    "cadquery": {
+      "module": "cadquery",
+      "role": "Python CAD automation",
+      "status": "NOT_AVAILABLE"
+    },
+    "brepmfr": {
+      "module": null,
+      "role": "optional candidate-only AI feature recognition",
+      "status": "NOT_APPLICABLE"
+    }
+  }
+}

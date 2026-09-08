@@ -1,0 +1,47 @@
+{
+  "dependencies": {
+    "analysis_situs": {
+      "module": null,
+      "role": "B-Rep analysis/feature recognition",
+      "status": "NOT_AVAILABLE"
+    },
+    "brepmfr": {
+      "module": null,
+      "role": "optional candidate-only AI feature recognition",
+      "status": "NOT_APPLICABLE"
+    },
+    "cadquery": {
+      "module": "cadquery",
+      "role": "Python CAD automation",
+      "status": "NOT_AVAILABLE"
+    },
+    "chrono": {
+      "module": "pychrono",
+      "role": "dynamics",
+      "status": "NOT_AVAILABLE"
+    },
+    "freecad": {
+      "module": "FreeCAD",
+      "role": "optional CAD interoperability",
+      "status": "NOT_AVAILABLE"
+    },
+    "occt": {
+      "module": "OCP",
+      "role": "STEP/B-Rep/XDE",
+      "status": "VERIFIED",
+      "version": "OCP-installed; exact OCCT runtime version not exposed by binding"
+    },
+    "step_p21": {
+      "module": "step_p21",
+      "role": "ISO-10303-21 parser",
+      "status": "NOT_AVAILABLE"
+    },
+    "stepcode": {
+      "module": "stepcode",
+      "role": "STEP semantic parser",
+      "status": "NOT_AVAILABLE"
+    }
+  },
+  "platform": "Linux-6.18.38+-x86_64-with-glibc2.39",
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]"
+}

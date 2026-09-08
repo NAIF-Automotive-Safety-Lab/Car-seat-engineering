@@ -1,0 +1,51 @@
+{
+  "edges": [
+    {
+      "evidence": {
+        "source": "current_artifact_manifest",
+        "status": "VERIFIED"
+      },
+      "source": "R4.1",
+      "target": "P0"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "R4.1",
+      "sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "type": "CAD_ARTIFACT"
+    },
+    {
+      "id": "P0",
+      "status": "UNVERIFIED",
+      "type": "ENGINEERING_CONFIGURATION"
+    },
+    {
+      "id": "joint:unknown",
+      "type": "JOINT",
+      "value": {
+        "axis": "UNDEFINED",
+        "body_a": "UNDEFINED",
+        "body_b": "UNDEFINED",
+        "bushing_reference": "UNDEFINED",
+        "clearance": "UNDEFINED",
+        "compliance_reference": "UNDEFINED",
+        "confidence": "UNDEFINED",
+        "fastener_reference": "UNDEFINED",
+        "joint_id": "joint:unknown",
+        "joint_type": "UNDEFINED",
+        "limits": "UNDEFINED",
+        "location": "UNDEFINED",
+        "source_evidence": {},
+        "status": "UNVERIFIED",
+        "stop_condition": "UNDEFINED"
+      }
+    }
+  ],
+  "orphan_audit": {
+    "orphan_edges": [],
+    "orphan_nodes": [
+      "joint:unknown"
+    ]
+  }
+}
