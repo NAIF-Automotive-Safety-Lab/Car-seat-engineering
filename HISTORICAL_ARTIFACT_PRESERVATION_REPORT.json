@@ -1,0 +1,123 @@
+{
+  "repository": "/home/ubuntu/audit-repo",
+  "branch": "main",
+  "HEAD_BEFORE": "a9203c1a10babfe0b8e3f55917a236db90c783a6",
+  "PRESERVATION_COMMIT_SHA": "b44e1b2590dabf27a1ed1021693477606ea9dc7f",
+  "HEAD_AFTER": "b44e1b2590dabf27a1ed1021693477606ea9dc7f",
+  "commit_message": "preserve: archive historical RC-004/RC-005 evidence",
+  "inventory": [
+    {
+      "path": "V7-RC-004_INTERFACE_DEFINITION_PACKAGE.zip",
+      "classification": "VALID_HISTORICAL_ARTIFACT",
+      "justification": "RC-004 canonical interface-definition package; ZIP test PASS; 4 members; independent provenance value.",
+      "ON_DISK": true,
+      "TRACKED": true,
+      "STAGED": false,
+      "COMMITTED": true,
+      "REACHABLE_FROM_GIT_HISTORY": true,
+      "COMMIT_SHA": "b44e1b2590dabf27a1ed1021693477606ea9dc7f",
+      "size_bytes": 5899,
+      "sha256": "a2545e781afbdfd0a8241bb99a0d2eeb4fd9c3b4576476158e14d6cac4de0e75"
+    },
+    {
+      "path": "V7_MANUS_INTERFACE_DEFINITION_AUDIT.json",
+      "classification": "VALID_HISTORICAL_ARTIFACT",
+      "justification": "RC-004 independent audit output; JSON valid; package binding and zero-mismatch checks recorded.",
+      "ON_DISK": true,
+      "TRACKED": true,
+      "STAGED": false,
+      "COMMITTED": true,
+      "REACHABLE_FROM_GIT_HISTORY": true,
+      "COMMIT_SHA": "b44e1b2590dabf27a1ed1021693477606ea9dc7f",
+      "size_bytes": 12526,
+      "sha256": "a218353818262478225dfb39edfaa321740f0cdb4f927f553d3a51bc8aa0fe91"
+    },
+    {
+      "path": "V7_MANUS_INTERFACE_DEFINITION_AUDIT.md",
+      "classification": "DERIVED/SUPPORTING_ARTIFACT",
+      "justification": "Human-readable RC-004 audit report paired with the JSON audit.",
+      "ON_DISK": true,
+      "TRACKED": true,
+      "STAGED": false,
+      "COMMITTED": true,
+      "REACHABLE_FROM_GIT_HISTORY": true,
+      "COMMIT_SHA": "b44e1b2590dabf27a1ed1021693477606ea9dc7f",
+      "size_bytes": 4823,
+      "sha256": "4e963c256d3459ed5c2154b7b12c2f2fe161569eac57962e6e6ff28e346ba009"
+    },
+    {
+      "path": "V7_MANUS_RC005_FORENSIC_AUDIT.json",
+      "classification": "VALID_HISTORICAL_ARTIFACT",
+      "justification": "RC-005 independent forensic audit; JSON valid; 15-member package audit and blocker classifications.",
+      "ON_DISK": true,
+      "TRACKED": true,
+      "STAGED": false,
+      "COMMITTED": true,
+      "REACHABLE_FROM_GIT_HISTORY": true,
+      "COMMIT_SHA": "b44e1b2590dabf27a1ed1021693477606ea9dc7f",
+      "size_bytes": 10681,
+      "sha256": "d2489c241b3a9493cca37151614f3ea7b7c50259d8f311e59fa8bceb1723beec"
+    },
+    {
+      "path": "V7_MANUS_RC005_FORENSIC_AUDIT.md",
+      "classification": "DERIVED/SUPPORTING_ARTIFACT",
+      "justification": "Human-readable RC-005 forensic report paired with the JSON audit.",
+      "ON_DISK": true,
+      "TRACKED": true,
+      "STAGED": false,
+      "COMMITTED": true,
+      "REACHABLE_FROM_GIT_HISTORY": true,
+      "COMMIT_SHA": "b44e1b2590dabf27a1ed1021693477606ea9dc7f",
+      "size_bytes": 3749,
+      "sha256": "d477b8a89f0fcd2e3ae66143366353a58f0a686856ea15324b7a1070299891e5"
+    },
+    {
+      "path": "artifacts/interface_semantics_closure/V7_INTERFACE_SEMANTICS_CLOSURE.json",
+      "classification": "VALID_HISTORICAL_ARTIFACT",
+      "justification": "Read-only 9-interface semantics closure; geometry unchanged; physical validation not done.",
+      "ON_DISK": true,
+      "TRACKED": true,
+      "STAGED": false,
+      "COMMITTED": true,
+      "REACHABLE_FROM_GIT_HISTORY": true,
+      "COMMIT_SHA": "b44e1b2590dabf27a1ed1021693477606ea9dc7f",
+      "size_bytes": 24101,
+      "sha256": "29f25f59cbe9ca1aa2fee6b86e39f99967861dd3aedbc739692f1b3052964022"
+    },
+    {
+      "path": "artifacts/interface_semantics_closure/V7_INTERFACE_SEMANTICS_CLOSURE.md",
+      "classification": "DERIVED/SUPPORTING_ARTIFACT",
+      "justification": "Human-readable interface semantics closure report paired with the JSON artifact.",
+      "ON_DISK": true,
+      "TRACKED": true,
+      "STAGED": false,
+      "COMMITTED": true,
+      "REACHABLE_FROM_GIT_HISTORY": true,
+      "COMMIT_SHA": "b44e1b2590dabf27a1ed1021693477606ea9dc7f",
+      "size_bytes": 6625,
+      "sha256": "d75c824e2ac0ea9479dd00445ef88424b969799061b8949dac2e257b8993d4e2"
+    }
+  ],
+  "duplicate_analysis": {
+    "identical_committed_paths_found": false,
+    "all_inventory_hashes_unique_against_preexisting_tracked_files": true,
+    "RC004_zip_internal_integrity": "PASS",
+    "RC004_zip_member_count": 4
+  },
+  "untracked_files": [],
+  "staged_files": [],
+  "modified_files": [],
+  "deleted_files": [],
+  "engineering_immutability": {
+    "RC006_modified": false,
+    "V7_R3_modified": false,
+    "R4_1_modified": false,
+    "CAD_STEP_geometry_modified": false,
+    "evidence_values_modified": false,
+    "interface_changes": false,
+    "CAE_started": false,
+    "R4_2_created": false,
+    "RC007_created": false
+  },
+  "final_persistence_verdict": "FULL_REPOSITORY_PERSISTENCE_VERIFIED"
+}
