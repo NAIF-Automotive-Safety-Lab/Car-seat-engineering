@@ -1,148 +1,225 @@
 {
-  "record_type": "RC006_REPOSITORY_PERSISTENCE_CHECKPOINT",
-  "timestamp_utc": "2026-09-08T23:45:53Z",
-  "repository_path": "/home/ubuntu/audit-repo",
-  "branch": "main",
-  "head_before": "da71eab34ca76a45015ab5113f08a7bd30052b27",
-  "checkpoint_commit_sha": "202eb623df893e405468b213738f5332579aa072",
-  "head_after_checkpoint_commit": "202eb623df893e405468b213738f5332579aa072",
-  "commit_message": "checkpoint: persist RC-006 traceability and provenance repairs",
-  "files_added_or_modified": [
-    "A\tRC-006_EVIDENCE_PHYSICAL_INPUT_CLOSURE_PACKAGE_PROVENANCE_REPAIRED.zip",
-    "A\tRC006_EMBEDDED_CONTENT_MANIFEST.json",
-    "A\tRC006_PROVENANCE_REPAIR_FINAL_REPORT.json",
-    "A\tRC006_REPAIRED_CANONICAL_MANIFEST_FINAL.json",
-    "A\tRC006_REPAIRED_PROVENANCE_SELF_VERIFICATION_FINAL.json",
-    "A\tV7_MANUS_RC006_FORENSIC_AUDIT.json",
-    "A\tV7_MANUS_RC006_FORENSIC_AUDIT.md",
-    "A\tV7_MANUS_RC006_PROVENANCE_FINAL_FORENSIC_AUDIT.json",
-    "A\tV7_MANUS_RC006_PROVENANCE_FINAL_FORENSIC_AUDIT.md",
-    "A\tV7_MANUS_RC006_REPAIRED_FORENSIC_AUDIT.json",
-    "A\tV7_MANUS_RC006_REPAIRED_FORENSIC_AUDIT.md",
-    "A\tartifacts/rc006_audit_support/rc006-audit-result.txt",
-    "A\tartifacts/rc006_audit_support/rc006-exceptions.txt",
-    "A\tartifacts/rc006_audit_support/rc006-inventory.txt",
-    "A\tartifacts/rc006_audit_support/rc006-persistence-inventory.txt",
-    "A\tartifacts/rc006_audit_support/rc006-provenance-final-audit-result.txt",
-    "A\tartifacts/rc006_audit_support/rc006-provenance-final-inventory.txt",
-    "A\tartifacts/rc006_audit_support/rc006-register-audit.txt",
-    "A\tartifacts/rc006_audit_support/rc006-repair-comparison.txt",
-    "A\tartifacts/rc006_audit_support/rc006-repaired-audit-result.txt",
-    "A\tartifacts/rc006_audit_support/rc006-repaired-inventory.txt",
-    "A\tartifacts/rc006_provenance/V7_MANUS_RC006_PROVENANCE_FINAL_FORENSIC_AUDIT.json",
-    "A\tartifacts/rc006_provenance/V7_MANUS_RC006_PROVENANCE_FINAL_FORENSIC_AUDIT.md",
-    "A\ttools/rc006/audit_rc006_register.py",
-    "A\ttools/rc006/compare_rc006_repair.py",
-    "A\ttools/rc006/create_rc006_audit.py",
-    "A\ttools/rc006/create_rc006_provenance_final_audit.py",
-    "A\ttools/rc006/create_rc006_repaired_audit.py",
-    "A\ttools/rc006/fix_rc006_final_verdict.py",
-    "A\ttools/rc006/inspect_rc006_exceptions.py",
-    "A\ttools/rc006/run_rc006_inventory.sh",
-    "A\ttools/rc006/run_rc006_persistence_inventory.sh",
-    "A\ttools/rc006/run_rc006_provenance_final_inventory.sh",
-    "A\ttools/rc006/run_rc006_repaired_inventory.sh"
-  ],
-  "files_deleted": [],
-  "critical_artifacts": {
-    "RC-006_EVIDENCE_PHYSICAL_INPUT_CLOSURE_PACKAGE_PROVENANCE_REPAIRED.zip": {
-      "present_on_disk": true,
-      "tracked": true,
-      "committed": true,
-      "reachable_from_commit": true,
-      "sha256": "8ceb3c44b0cc14860ea0bcf5c500e71c6213556bd6d3ecf79665eb6f78f27aef"
+  "document": "RC006_REPOSITORY_CHECKPOINT_RECONCILIATED",
+  "reconciliation_mode": "NON_DESTRUCTIVE_MERGE",
+  "note": "Both historical checkpoint records are preserved below; neither engineering artifact nor historical commit was deleted or rewritten.",
+  "local_checkpoint_record": {
+    "record_type": "RC006_REPOSITORY_PERSISTENCE_CHECKPOINT",
+    "timestamp_utc": "2026-09-08T23:45:53Z",
+    "repository_path": "/home/ubuntu/audit-repo",
+    "branch": "main",
+    "head_before": "da71eab34ca76a45015ab5113f08a7bd30052b27",
+    "checkpoint_commit_sha": "202eb623df893e405468b213738f5332579aa072",
+    "head_after_checkpoint_commit": "202eb623df893e405468b213738f5332579aa072",
+    "commit_message": "checkpoint: persist RC-006 traceability and provenance repairs",
+    "files_added_or_modified": [
+      "A\tRC-006_EVIDENCE_PHYSICAL_INPUT_CLOSURE_PACKAGE_PROVENANCE_REPAIRED.zip",
+      "A\tRC006_EMBEDDED_CONTENT_MANIFEST.json",
+      "A\tRC006_PROVENANCE_REPAIR_FINAL_REPORT.json",
+      "A\tRC006_REPAIRED_CANONICAL_MANIFEST_FINAL.json",
+      "A\tRC006_REPAIRED_PROVENANCE_SELF_VERIFICATION_FINAL.json",
+      "A\tV7_MANUS_RC006_FORENSIC_AUDIT.json",
+      "A\tV7_MANUS_RC006_FORENSIC_AUDIT.md",
+      "A\tV7_MANUS_RC006_PROVENANCE_FINAL_FORENSIC_AUDIT.json",
+      "A\tV7_MANUS_RC006_PROVENANCE_FINAL_FORENSIC_AUDIT.md",
+      "A\tV7_MANUS_RC006_REPAIRED_FORENSIC_AUDIT.json",
+      "A\tV7_MANUS_RC006_REPAIRED_FORENSIC_AUDIT.md",
+      "A\tartifacts/rc006_audit_support/rc006-audit-result.txt",
+      "A\tartifacts/rc006_audit_support/rc006-exceptions.txt",
+      "A\tartifacts/rc006_audit_support/rc006-inventory.txt",
+      "A\tartifacts/rc006_audit_support/rc006-persistence-inventory.txt",
+      "A\tartifacts/rc006_audit_support/rc006-provenance-final-audit-result.txt",
+      "A\tartifacts/rc006_audit_support/rc006-provenance-final-inventory.txt",
+      "A\tartifacts/rc006_audit_support/rc006-register-audit.txt",
+      "A\tartifacts/rc006_audit_support/rc006-repair-comparison.txt",
+      "A\tartifacts/rc006_audit_support/rc006-repaired-audit-result.txt",
+      "A\tartifacts/rc006_audit_support/rc006-repaired-inventory.txt",
+      "A\tartifacts/rc006_provenance/V7_MANUS_RC006_PROVENANCE_FINAL_FORENSIC_AUDIT.json",
+      "A\tartifacts/rc006_provenance/V7_MANUS_RC006_PROVENANCE_FINAL_FORENSIC_AUDIT.md",
+      "A\ttools/rc006/audit_rc006_register.py",
+      "A\ttools/rc006/compare_rc006_repair.py",
+      "A\ttools/rc006/create_rc006_audit.py",
+      "A\ttools/rc006/create_rc006_provenance_final_audit.py",
+      "A\ttools/rc006/create_rc006_repaired_audit.py",
+      "A\ttools/rc006/fix_rc006_final_verdict.py",
+      "A\ttools/rc006/inspect_rc006_exceptions.py",
+      "A\ttools/rc006/run_rc006_inventory.sh",
+      "A\ttools/rc006/run_rc006_persistence_inventory.sh",
+      "A\ttools/rc006/run_rc006_provenance_final_inventory.sh",
+      "A\ttools/rc006/run_rc006_repaired_inventory.sh"
+    ],
+    "files_deleted": [],
+    "critical_artifacts": {
+      "RC-006_EVIDENCE_PHYSICAL_INPUT_CLOSURE_PACKAGE_PROVENANCE_REPAIRED.zip": {
+        "present_on_disk": true,
+        "tracked": true,
+        "committed": true,
+        "reachable_from_commit": true,
+        "sha256": "8ceb3c44b0cc14860ea0bcf5c500e71c6213556bd6d3ecf79665eb6f78f27aef"
+      },
+      "RC006_REPAIRED_CANONICAL_MANIFEST_FINAL.json": {
+        "present_on_disk": true,
+        "tracked": true,
+        "committed": true,
+        "reachable_from_commit": true,
+        "sha256": "febffa281b5b7a63c8084c44b7554a627c579ef39f68f76805cc0790417e5e24"
+      },
+      "RC006_REPAIRED_PROVENANCE_SELF_VERIFICATION_FINAL.json": {
+        "present_on_disk": true,
+        "tracked": true,
+        "committed": true,
+        "reachable_from_commit": true,
+        "sha256": "fc7d09120235d2cc31a44632e8f6f06e8210e180c704cbc2b0c99fe2189a6e2a"
+      },
+      "RC006_EMBEDDED_CONTENT_MANIFEST.json": {
+        "present_on_disk": true,
+        "tracked": true,
+        "committed": true,
+        "reachable_from_commit": true,
+        "sha256": "ef657b6fd125e2e5f9a62d1acff672a72ec64647886bb88305abe808d947e0ac"
+      },
+      "RC006_PROVENANCE_REPAIR_FINAL_REPORT.json": {
+        "present_on_disk": true,
+        "tracked": true,
+        "committed": true,
+        "reachable_from_commit": true,
+        "sha256": "fa45ef634eca16f682ea380101ad6d5a384fcd0855834d7b13dc04950add992a"
+      },
+      "V7_MANUS_RC006_PROVENANCE_FINAL_FORENSIC_AUDIT.json": {
+        "present_on_disk": true,
+        "tracked": true,
+        "committed": true,
+        "reachable_from_commit": true,
+        "sha256": "2cf68881affda096c3748bd97d78e8b1deaec985290261781f201149ec694a61"
+      },
+      "V7_MANUS_RC006_PROVENANCE_FINAL_FORENSIC_AUDIT.md": {
+        "present_on_disk": true,
+        "tracked": true,
+        "committed": true,
+        "reachable_from_commit": true,
+        "sha256": "e502ce049e4bb965d713ccee08ea12ed8e0b72b34813cbe8dc6917f2eb52fdc6"
+      },
+      "V7_MANUS_RC006_REPAIRED_FORENSIC_AUDIT.json": {
+        "present_on_disk": true,
+        "tracked": true,
+        "committed": true,
+        "reachable_from_commit": true,
+        "sha256": "c7b9bbf366e462a9c7384581b01a8b326ec8139e843d6a6bafbdb8a1a18fb6f7"
+      },
+      "V7_MANUS_RC006_REPAIRED_FORENSIC_AUDIT.md": {
+        "present_on_disk": true,
+        "tracked": true,
+        "committed": true,
+        "reachable_from_commit": true,
+        "sha256": "edb71d45d26ccf44ab7547aaf8a9d50dff21f48ee732ceb1c5d40831830b668a"
+      },
+      "V7_MANUS_RC006_FORENSIC_AUDIT.json": {
+        "present_on_disk": true,
+        "tracked": true,
+        "committed": true,
+        "reachable_from_commit": true,
+        "sha256": "d9dc248a626c6f315bb636f484466e4e037b8967f7e1a6a3296926dd358e2d94"
+      },
+      "V7_MANUS_RC006_FORENSIC_AUDIT.md": {
+        "present_on_disk": true,
+        "tracked": true,
+        "committed": true,
+        "reachable_from_commit": true,
+        "sha256": "2261f1f09f51c0d1662e737b69c164b3a9a9c917d5f22e8ff054d57b49149692"
+      }
     },
-    "RC006_REPAIRED_CANONICAL_MANIFEST_FINAL.json": {
-      "present_on_disk": true,
-      "tracked": true,
-      "committed": true,
-      "reachable_from_commit": true,
-      "sha256": "febffa281b5b7a63c8084c44b7554a627c579ef39f68f76805cc0790417e5e24"
+    "critical_package_sha256": "8ceb3c44b0cc14860ea0bcf5c500e71c6213556bd6d3ecf79665eb6f78f27aef",
+    "critical_external_manifest_sha256": "febffa281b5b7a63c8084c44b7554a627c579ef39f68f76805cc0790417e5e24",
+    "validation": {
+      "zip_sha_expected": "8ceb3c44b0cc14860ea0bcf5c500e71c6213556bd6d3ecf79665eb6f78f27aef",
+      "zip_sha_match": true,
+      "manifest_sha_expected": "febffa281b5b7a63c8084c44b7554a627c579ef39f68f76805cc0790417e5e24",
+      "manifest_sha_match": true,
+      "records_331": true,
+      "unique_ids_331": true,
+      "duplicate_ids_0": true,
+      "baseline_immutability": "PASS"
     },
-    "RC006_REPAIRED_PROVENANCE_SELF_VERIFICATION_FINAL.json": {
-      "present_on_disk": true,
-      "tracked": true,
-      "committed": true,
-      "reachable_from_commit": true,
-      "sha256": "fc7d09120235d2cc31a44632e8f6f06e8210e180c704cbc2b0c99fe2189a6e2a"
-    },
-    "RC006_EMBEDDED_CONTENT_MANIFEST.json": {
-      "present_on_disk": true,
-      "tracked": true,
-      "committed": true,
-      "reachable_from_commit": true,
-      "sha256": "ef657b6fd125e2e5f9a62d1acff672a72ec64647886bb88305abe808d947e0ac"
-    },
-    "RC006_PROVENANCE_REPAIR_FINAL_REPORT.json": {
-      "present_on_disk": true,
-      "tracked": true,
-      "committed": true,
-      "reachable_from_commit": true,
-      "sha256": "fa45ef634eca16f682ea380101ad6d5a384fcd0855834d7b13dc04950add992a"
-    },
-    "V7_MANUS_RC006_PROVENANCE_FINAL_FORENSIC_AUDIT.json": {
-      "present_on_disk": true,
-      "tracked": true,
-      "committed": true,
-      "reachable_from_commit": true,
-      "sha256": "2cf68881affda096c3748bd97d78e8b1deaec985290261781f201149ec694a61"
-    },
-    "V7_MANUS_RC006_PROVENANCE_FINAL_FORENSIC_AUDIT.md": {
-      "present_on_disk": true,
-      "tracked": true,
-      "committed": true,
-      "reachable_from_commit": true,
-      "sha256": "e502ce049e4bb965d713ccee08ea12ed8e0b72b34813cbe8dc6917f2eb52fdc6"
-    },
-    "V7_MANUS_RC006_REPAIRED_FORENSIC_AUDIT.json": {
-      "present_on_disk": true,
-      "tracked": true,
-      "committed": true,
-      "reachable_from_commit": true,
-      "sha256": "c7b9bbf366e462a9c7384581b01a8b326ec8139e843d6a6bafbdb8a1a18fb6f7"
-    },
-    "V7_MANUS_RC006_REPAIRED_FORENSIC_AUDIT.md": {
-      "present_on_disk": true,
-      "tracked": true,
-      "committed": true,
-      "reachable_from_commit": true,
-      "sha256": "edb71d45d26ccf44ab7547aaf8a9d50dff21f48ee732ceb1c5d40831830b668a"
-    },
-    "V7_MANUS_RC006_FORENSIC_AUDIT.json": {
-      "present_on_disk": true,
-      "tracked": true,
-      "committed": true,
-      "reachable_from_commit": true,
-      "sha256": "d9dc248a626c6f315bb636f484466e4e037b8967f7e1a6a3296926dd358e2d94"
-    },
-    "V7_MANUS_RC006_FORENSIC_AUDIT.md": {
-      "present_on_disk": true,
-      "tracked": true,
-      "committed": true,
-      "reachable_from_commit": true,
-      "sha256": "2261f1f09f51c0d1662e737b69c164b3a9a9c917d5f22e8ff054d57b49149692"
-    }
+    "working_tree_at_checkpoint": "Clean for committed RC-006 scope; unrelated historical untracked artifacts remain outside scope.",
+    "remaining_uncommitted_or_untracked_project_artifacts": [
+      "V7-RC-004_INTERFACE_DEFINITION_PACKAGE.zip",
+      "V7_MANUS_INTERFACE_DEFINITION_AUDIT.json",
+      "V7_MANUS_INTERFACE_DEFINITION_AUDIT.md",
+      "V7_MANUS_RC005_FORENSIC_AUDIT.json",
+      "V7_MANUS_RC005_FORENSIC_AUDIT.md",
+      "artifacts/interface_semantics_closure/"
+    ],
+    "persistence_verdict": "PERSISTENCE_VERIFIED_WITH_BLOCKERS"
   },
-  "critical_package_sha256": "8ceb3c44b0cc14860ea0bcf5c500e71c6213556bd6d3ecf79665eb6f78f27aef",
-  "critical_external_manifest_sha256": "febffa281b5b7a63c8084c44b7554a627c579ef39f68f76805cc0790417e5e24",
-  "validation": {
-    "zip_sha_expected": "8ceb3c44b0cc14860ea0bcf5c500e71c6213556bd6d3ecf79665eb6f78f27aef",
-    "zip_sha_match": true,
-    "manifest_sha_expected": "febffa281b5b7a63c8084c44b7554a627c579ef39f68f76805cc0790417e5e24",
-    "manifest_sha_match": true,
-    "records_331": true,
-    "unique_ids_331": true,
-    "duplicate_ids_0": true,
-    "baseline_immutability": "PASS"
+  "remote_checkpoint_record": {
+    "document": "RC006_REPOSITORY_CHECKPOINT",
+    "audit_mode": "READ_ONLY_AUDIT_FIRST_THEN_PERSISTENCE",
+    "timestamp": "2026-09-09T03:11:30+03:00",
+    "repository_root": "/home/ubuntu/repo",
+    "branch": "main",
+    "head_before": "92c60891755630de4e903d7deb27e7ad4b5ec052",
+    "head_after": null,
+    "checkpoint_commit_sha": null,
+    "working_tree_before_checkpoint": {
+      "staged_files": [],
+      "unstaged_files": [],
+      "untracked_project_files": [
+        "docs/independent/V7_RC002_INDEPENDENT_REVERIFICATION.md",
+        "tools/independent_v7_brep.py",
+        "tools/independent_v7_compare.py",
+        "tools/independent_v7_contracts.py",
+        "tools/independent_v7_geometry_compare.py",
+        "tools/independent_v7_inventory.py",
+        "tools/independent_v7_kinematics.py",
+        "tools/independent_v7_overlaps.py"
+      ],
+      "note": "These are V7-RC-002 verification artifacts from the preceding task, not RC-006 artifacts; they were not staged to avoid unrelated changes."
+    },
+    "expected_rc006_artifacts": {
+      "package": {
+        "path": "RC-006_EVIDENCE_PHYSICAL_INPUT_CLOSURE_PACKAGE_PROVENANCE_REPAIRED.zip",
+        "expected_sha256": "8ceb3c44b0cc14860ea0bcf5c500e71c6213556bd6d3ecf79665eb6f78f27aef",
+        "present_on_disk": false,
+        "tracked": false,
+        "staged": false,
+        "committed": false,
+        "observed_sha256": null
+      },
+      "external_canonical_manifest": {
+        "path": "RC006_REPAIRED_CANONICAL_MANIFEST_FINAL.json",
+        "expected_sha256": "febffa281b5b7a63c8084c44b7554a627c579ef39f68f76805cc0790417e5e24",
+        "present_on_disk": false,
+        "tracked": false,
+        "staged": false,
+        "committed": false,
+        "observed_sha256": null
+      }
+    },
+    "rc006_content_checks": {
+      "total_records_expected": 331,
+      "unique_ids_expected": 331,
+      "duplicate_ids_expected": 0,
+      "records_observed": null,
+      "unique_ids_observed": null,
+      "duplicate_ids_observed": null,
+      "veh_traceability_ids_observed": null,
+      "reason": "No RC-006 package or canonical manifest exists in repository, upload, temporary audit directories, or reachable/unreachable Git commits inspected."
+    },
+    "baseline_protection": {
+      "v7_r3_status": "NOT_LOCATED_BY_EXACT_FILENAME_IN_CURRENT_WORKTREE",
+      "r4_1_path": "R4.1/R4.1.step",
+      "r4_1_sha256_recomputed": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "r4_2_present": false,
+      "cad_or_evidence_modified": false
+    },
+    "validation": {
+      "json_parse": "PASS for this checkpoint record",
+      "critical_artifact_hash_verification": "BLOCKED_ARTIFACTS_ABSENT",
+      "git_persistence": "FAILED_FOR_RC006",
+      "repository_clean_for_rc006_scope": true,
+      "repository_clean_overall": false
+    },
+    "verdict": "PERSISTENCE_FAILED",
+    "required_recovery_action": "Provide the exact RC-006 package and RC006_REPAIRED_CANONICAL_MANIFEST_FINAL.json, or restore them from the authoritative source; compare bytes and hashes before staging."
   },
-  "working_tree_at_checkpoint": "Clean for committed RC-006 scope; unrelated historical untracked artifacts remain outside scope.",
-  "remaining_uncommitted_or_untracked_project_artifacts": [
-    "V7-RC-004_INTERFACE_DEFINITION_PACKAGE.zip",
-    "V7_MANUS_INTERFACE_DEFINITION_AUDIT.json",
-    "V7_MANUS_INTERFACE_DEFINITION_AUDIT.md",
-    "V7_MANUS_RC005_FORENSIC_AUDIT.json",
-    "V7_MANUS_RC005_FORENSIC_AUDIT.md",
-    "artifacts/interface_semantics_closure/"
-  ],
-  "persistence_verdict": "PERSISTENCE_VERIFIED_WITH_BLOCKERS"
+  "resolution": "Retain local authoritative-artifact persistence record and remote prior failure record as distinct historical evidence; current repository state is established by the merge commit and subsequent post-merge verification."
 }
