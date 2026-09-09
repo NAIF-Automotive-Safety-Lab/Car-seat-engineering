@@ -1,0 +1,1104 @@
+{
+  "audit_artifact": "MANUS_REAL_EVIDENCE_ACQUISITION_FORENSIC_AUDIT",
+  "audit_revision": "2026-09-09",
+  "read_only": true,
+  "mode": "INDEPENDENT_ZERO_BYPASS",
+  "PACKAGE_IDENTITY": "RC-006_EVIDENCE_ACQUISITION_CANONICAL",
+  "REVISION": "RC-006-EA",
+  "PACKAGE_PATH": "/home/ubuntu/upload/RC-006_EVIDENCE_ACQUISITION_CANONICAL.zip",
+  "MANIFEST_PATH": "/home/ubuntu/upload/RC006_EVIDENCE_ACQUISITION_CANONICAL_MANIFEST.json",
+  "SELF_VERIFICATION_PATH": "/home/ubuntu/upload/RC006_EVIDENCE_ACQUISITION_SELF_VERIFICATION.json",
+  "PACKAGE_SHA256": "19a0a5bce0832f9cf95d0e311a2da751d326814bc4acc3e76a29946680775475",
+  "MANIFEST_SHA256": "b5579ca0f59c913b01a9b501af49995332766def80c79aa5c3cdd46255ef9ae1",
+  "SELF_VERIFICATION_SHA256": "f70f983f8982ff48583ff98216f574b27a9aa4c31171feb49fcfe09b4db2c16d",
+  "MEMBER_COUNT": 12,
+  "ZIP_INTEGRITY": "PASS",
+  "MANIFEST_CONSISTENCY": "PASS",
+  "MANIFEST_MISMATCHES": [],
+  "CANONICAL_COLLISION_STATUS": "NO_COLLISION",
+  "collision_basis": {
+    "frozen_rc006_path": "/home/ubuntu/audit-repo/RC-006_EVIDENCE_PHYSICAL_INPUT_CLOSURE_PACKAGE_PROVENANCE_REPAIRED.zip",
+    "frozen_rc006_sha256": "8ceb3c44b0cc14860ea0bcf5c500e71c6213556bd6d3ecf79665eb6f78f27aef",
+    "frozen_rc006_member_count": 28,
+    "new_package_sha_differs": true,
+    "member_paths_differ": true,
+    "package_identity_differs": true
+  },
+  "relationship_to_frozen_rc006": "NEW EVIDENCE-ACQUISITION PACKAGE / NOT A REPLACEMENT; frozen RC-006 remains authoritative historical baseline",
+  "MASTER_REGISTER_STATUS": {
+    "total_records": 331,
+    "unique_ids": 331,
+    "duplicate_ids": 0,
+    "independent_counts_pass": true,
+    "basis_artifact": "01_MASTER/RC006_MASTER_EVIDENCE_REGISTER.json",
+    "basis_sha256": "4f0840d7685ed09c399205052d4d8b2719d80914eaf505b69094e7967c9afd7a",
+    "against_frozen_register": {
+      "added_records": [],
+      "removed_records": [],
+      "changed_record_count": 331,
+      "changed_field_counts": {
+        "ACQUISITION_STATUS": 331,
+        "AUDITABLE_SOURCE": 331,
+        "PHYSICAL_RESULT_PRESENT": 331
+      },
+      "changed_scope_classification": "LEGITIMATE_ACQUISITION_UPDATE_ONLY",
+      "changed_records": [
+        {
+          "id": "ABS-ABS-01",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "TEST_REQUIRED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_ABSORBER_TEST_SPECIFICATION.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "ABS-ABS-02",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "TEST_REQUIRED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_ABSORBER_TEST_SPECIFICATION.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "ABS-ABS-03",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "TEST_REQUIRED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_ABSORBER_TEST_SPECIFICATION.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "ABS-ABS-04",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "TEST_REQUIRED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_ABSORBER_TEST_SPECIFICATION.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "ABS-ABS-05",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "TEST_REQUIRED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_ABSORBER_TEST_SPECIFICATION.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "ABS-ABS-06",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "TEST_REQUIRED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_ABSORBER_TEST_SPECIFICATION.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "ABS-ABS-07",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "TEST_REQUIRED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_ABSORBER_TEST_SPECIFICATION.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "ABS-ABS-08",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "TEST_REQUIRED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_ABSORBER_TEST_SPECIFICATION.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "ABS-ABS-09",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "TEST_REQUIRED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_ABSORBER_TEST_SPECIFICATION.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "ABS-STROKE",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "TEST_REQUIRED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_ABSORBER_TEST_SPECIFICATION.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CAE-ABSORBER",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "BLOCKED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_CAE_DEPENDENCY_GRAPH_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CAE-ACCEPTANCE_CRITERIA",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "BLOCKED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_CAE_DEPENDENCY_GRAPH_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CAE-CG",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "BLOCKED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_CAE_DEPENDENCY_GRAPH_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CAE-CONTACT",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "BLOCKED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_CAE_DEPENDENCY_GRAPH_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CAE-DENSITY",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "BLOCKED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_CAE_DEPENDENCY_GRAPH_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CAE-FRICTION",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "BLOCKED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_CAE_DEPENDENCY_GRAPH_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CAE-GEOMETRY",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "BLOCKED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_CAE_DEPENDENCY_GRAPH_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CAE-INERTIA",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "BLOCKED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_CAE_DEPENDENCY_GRAPH_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CAE-JOINTS",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "BLOCKED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_CAE_DEPENDENCY_GRAPH_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CAE-LOAD_CASE",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "BLOCKED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_CAE_DEPENDENCY_GRAPH_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CAE-MASS",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "BLOCKED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_CAE_DEPENDENCY_GRAPH_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CAE-MATERIAL",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "BLOCKED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_CAE_DEPENDENCY_GRAPH_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CAE-PULSE",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "BLOCKED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_CAE_DEPENDENCY_GRAPH_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CAE-RESTRAINT",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "BLOCKED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_CAE_DEPENDENCY_GRAPH_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CG-100",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CG-110L",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CG-110R",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CG-120",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CG-130L",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CG-130R",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CG-140",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CG-150L",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CG-150R",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CG-160",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CG-170",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CG-180",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CG-190",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CG-200",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CG-210",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "CG-J",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "GEO-VOL-100",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "GEO-VOL-110L",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "GEO-VOL-110R",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "GEO-VOL-120",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "GEO-VOL-130L",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "GEO-VOL-130R",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "GEO-VOL-140",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "GEO-VOL-150L",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "GEO-VOL-150R",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        },
+        {
+          "id": "GEO-VOL-160",
+          "fields": {
+            "ACQUISITION_STATUS": {
+              "old": null,
+              "new": "MODEL_DERIVABLE_IF_DENSITY_RESOLVED"
+            },
+            "AUDITABLE_SOURCE": {
+              "old": null,
+              "new": "V7_MASS_CG_INERTIA_R5.json"
+            },
+            "PHYSICAL_RESULT_PRESENT": {
+              "old": null,
+              "new": false
+            }
+          }
+        }
+      ],
+      "comparison_scope": "record JSON exact comparison"
+    }
+  },
+  "MATERIAL_STATUS": {
+    "status": "SOURCE_REQUIRED",
+    "count": 16,
+    "supplier_evidence_acquired": false,
+    "exact_released_material_verified": false,
+    "generic_or_typical_substitution_accepted": false
+  },
+  "MASS_CG_INERTIA_STATUS": "BLOCKED_BY_DENSITY_MATERIAL",
+  "JOINT_FASTENER_STATUS": {
+    "status": "OPEN",
+    "interface_count": 9,
+    "physical_joint_evidence_acquired": false,
+    "all_numeric_fields_open": true
+  },
+  "ABSORBER_STATUS": {
+    "status": "TEST_REQUIRED",
+    "physical_test_results": 0,
+    "180_mm_is_test_result": false,
+    "18_22_kN_validated_result": false
+  },
+  "LOCK_STATUS": "TEST_REQUIRED_NO_HARDWARE_RESULTS",
+  "REBOUND_STATUS": "TEST_REQUIRED_NO_PHYSICAL_RESULTS",
+  "OEM_STATUS": {
+    "status": "OEM_INPUT_REQUIRED",
+    "count": 8,
+    "all_current_values_null": true,
+    "no_guessing": true
+  },
+  "CAE_STATUS": {
+    "status": "BLOCKED",
+    "cae_execution": false,
+    "physical_validation": false,
+    "missing_blocking_nodes": [
+      "MATERIAL",
+      "DENSITY",
+      "MASS",
+      "CG",
+      "INERTIA",
+      "CONTACT",
+      "FRICTION",
+      "ABSORBER",
+      "LOAD_CASE",
+      "PULSE",
+      "RESTRAINT",
+      "ACCEPTANCE_CRITERIA"
+    ]
+  },
+  "ZERO_BYPASS_VIOLATIONS": 0,
+  "zero_bypass_checks": {
+    "assumption_to_fact": false,
+    "model_to_physical": false,
+    "reference_to_validated": false,
+    "target_to_test_result": false,
+    "literature_to_project_result": false,
+    "generic_material_to_actual_material": false,
+    "typical_fastener_to_actual_fastener": false,
+    "typical_vehicle_to_oem_input": false
+  },
+  "BASELINE_MODIFICATIONS": 0,
+  "baseline_immutability": {
+    "V7-R3": "UNCHANGED",
+    "R4.1": "UNCHANGED",
+    "R4.2": "ABSENT_NOT_AUTHORIZED",
+    "CAD": "UNCHANGED",
+    "STEP": "UNCHANGED",
+    "GEOMETRY": "UNCHANGED",
+    "DESIGN_INTENT": "UNCHANGED",
+    "ENGINEERING_VALUES": "UNCHANGED",
+    "PREVIOUS_RC006": "UNCHANGED",
+    "HISTORICAL_ARTIFACTS": "UNCHANGED",
+    "baseline_lock_pass": true,
+    "git_status": "## \u001b[32mmain\u001b[m...\u001b[31morigin/main\u001b[m [ahead \u001b[32m9\u001b[m]\n\u001b[31m??\u001b[m MANUS_REAL_EVIDENCE_ACQUISITION_FORENSIC_AUDIT.json\n\u001b[31m??\u001b[m MANUS_REAL_EVIDENCE_ACQUISITION_FORENSIC_AUDIT.md"
+  },
+  "self_verification_claims": {
+    "package_identity": "RC-006_EVIDENCE_ACQUISITION_CANONICAL",
+    "zip_sha256": "19a0a5bce0832f9cf95d0e311a2da751d326814bc4acc3e76a29946680775475",
+    "manifest_sha256": "b5579ca0f59c913b01a9b501af49995332766def80c79aa5c3cdd46255ef9ae1",
+    "zip_member_count": 12,
+    "manifest_member_count": 12,
+    "paths_exact": true,
+    "sizes_exact": true,
+    "sha256_all_match": true,
+    "missing": [],
+    "extra": [],
+    "size_mismatch": [],
+    "hash_mismatch": [],
+    "total_records": 331,
+    "unique_ids": 331,
+    "duplicate_ids": 0,
+    "physical_measurements": 0,
+    "test_results": 0,
+    "self_verification": "PASS"
+  },
+  "source_index_summary": {
+    "generated_utc": "2026-09-08T23:58:22.384436+00:00",
+    "sources": [
+      {
+        "path": "V7_ENGINEERING_R5/V7_MATERIAL_DEFINITION_R5.json",
+        "size_bytes": 7302,
+        "sha256": "d07b282a7bcb2967ef73c675e0789486cdf181c98e18ba6c1b013884873c0280",
+        "source_class": "PROJECT_SOURCE",
+        "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+      },
+      {
+        "path": "V7_ENGINEERING_R5/V7_MASS_CG_INERTIA_R5.json",
+        "size_bytes": 8734,
+        "sha256": "7a7247d25c7c48743bf962f83a8a754f05a0b1f8b993e487433451657bd90228",
+        "source_class": "PROJECT_SOURCE",
+        "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+      },
+      {
+        "path": "V7_ENGINEERING_R5/V7_FASTENER_JOINT_DEFINITION_R5.json",
+        "size_bytes": 4958,
+        "sha256": "04e62cf2baef4fc4a45c9286d69b0731c563fcd55e95b423cae266279ea5c7a8",
+        "source_class": "PROJECT_SOURCE",
+        "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+      },
+      {
+        "path": "V7_ENGINEERING_R5/V7_ABSORBER_TEST_SPECIFICATION.json",
+        "size_bytes": 2579,
+        "sha256": "4c64a7aa1d1e9847ad283dbdd6e53881c553d48ae0245b627e1bfda36e0f9610",
+        "source_class": "PROJECT_SOURCE",
+        "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+      },
+      {
+        "path": "V7_ENGINEERING_R5/V7_LOCK_TEST_SPECIFICATION.json",
+        "size_bytes": 2122,
+        "sha256": "ca3570ee1f2d73cb5aef7984ba7ce33db7e0ded8ba6550cde8686a537e7f9ea5",
+        "source_class": "PROJECT_SOURCE",
+        "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+      },
+      {
+        "path": "V7_ENGINEERING_R5/V7_REBOUND_TEST_SPECIFICATION.json",
+        "size_bytes": 1349,
+        "sha256": "f33dadef734bc2eda3008787b650512b87051e2c6cd36fdc413780c8439a7910",
+        "source_class": "PROJECT_SOURCE",
+        "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+      },
+      {
+        "path": "V7_ENGINEERING_R5/V7_VEHICLE_INTERFACE_INPUTS.json",
+        "size_bytes": 1892,
+        "sha256": "1b3aa02f04d1cd910744a5fe47e6f40dc5c1235f04bfc1ac13bcc13e01e11e0d",
+        "source_class": "PROJECT_SOURCE",
+        "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+      },
+      {
+        "path": "V7_ENGINEERING_R5/V7_CAE_DEPENDENCY_GRAPH_R5.json",
+        "size_bytes": 3314,
+        "sha256": "140cf9ef5728f88b65ea434c204a24d6d3cc5a404f8b79eb0f3a08cd5b3ccc86",
+        "source_class": "PROJECT_SOURCE",
+        "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+      },
+      {
+        "path": "V7_ENGINEERING_R5/V7_MANUFACTURABILITY_MATRIX_R5.json",
+        "size_bytes": 8514,
+        "sha256": "64443a5b437621a9a5902a0cc7f681f6f8b72b1f392982245978eb653a4694c7",
+        "source_class": "PROJECT_SOURCE",
+        "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+      },
+      {
+        "path": "V7_CURRENT_ENGINEERING_INTERFACE_DEFINITION_R4/V7_CURRENT_ENGINEERING_INTERFACE_DEFINITION.json",
+        "size_bytes": 15477,
+        "sha256": "4b41d70467482a2d7d35d5d33dd393bb346552def3e620e7a65914369a4ff572",
+        "source_class": "PROJECT_SOURCE",
+        "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+      },
+      {
+        "path": "V7_R4_KINEMATIC_CLOSURE/V7_R4_KINEMATIC_MODEL.json",
+        "size_bytes": 7116,
+        "sha256": "a02cc7a48eabb9e61fa71b697098bd977362758163389f6f4e986ead43441b73",
+        "source_class": "PROJECT_SOURCE",
+        "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+      },
+      {
+        "path": "V7_R4_KINEMATIC_CLOSURE/V7_R4_STATE_MACHINE.json",
+        "size_bytes": 1536,
+        "sha256": "8d1867810c897404e77fb088d7410030987bfd935efbba5e1f4a53a3e37f0ccc",
+        "source_class": "PROJECT_SOURCE",
+        "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+      },
+      {
+        "path": "N_IOCARS_V5_Engineering_Report.pdf",
+        "size_bytes": 1351333,
+        "sha256": "857fba7ada595c29285406db282da463b5c9d68c1b768270007f71ba294a6d69",
+        "source_class": "PROJECT_SOURCE",
+        "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+      },
+      {
+        "path": "N_IOCARS_V4_8D_Strict_Engineering_Report.pdf",
+        "size_bytes": 871133,
+        "sha256": "54e25e5a047d698e3644c3b2ebf1c98ae762411adfc59389ecaecb330920294c",
+        "source_class": "PROJECT_SOURCE",
+        "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+      },
+      {
+        "path": "N_IOCARS_V5_Design_Parameters.txt",
+        "size_bytes": 833,
+        "sha256": "e37682dd54bae5968df25233a08f067363f3f2005a475d2c7895ef8b5f39fc3c",
+        "source_class": "PROJECT_SOURCE",
+        "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+      }
+    ]
+  },
+  "FINAL_VERDICT": "VERIFIED_ACQUISITION_WITH_BLOCKERS"
+}
