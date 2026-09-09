@@ -1,0 +1,80 @@
+{
+  "document": "GITHUB_RC006_PERSISTENCE_FORENSIC_REPORT",
+  "timestamp": "2026-09-09T03:19:40+03:00",
+  "requested_local_repository": "/home/ubuntu/audit-repo",
+  "requested_remote": "https://github.com/NAIF-Automotive-Safety-Lab/Car-seat-engineering.git",
+  "verdict": "GITHUB_PERSISTENCE_FAILED",
+  "failure_reason": "The requested local repository /home/ubuntu/audit-repo does not exist in the current environment, and the required RC-006 authoritative artifacts were not found in /home/ubuntu/repo, /home/ubuntu/upload, or /tmp. No artifact was fabricated, regenerated, or substituted.",
+  "audit_repo": {
+    "present_on_disk": false,
+    "git_fetch_performed": false,
+    "local_head": null,
+    "remote_main": null,
+    "merge_base": null,
+    "local_only_commits": null,
+    "remote_only_commits": null,
+    "divergence": null
+  },
+  "available_repository_observation": {
+    "path": "/home/ubuntu/repo",
+    "branch": "main",
+    "local_head": "460fda6b46f27f9670d97e8978e32f7cb3047fd4",
+    "remote_main": "460fda6b46f27f9670d97e8978e32f7cb3047fd4",
+    "merge_base": "460fda6b46f27f9670d97e8978e32f7cb3047fd4",
+    "divergence": "0 0",
+    "note": "This repository was inspected only as an independently available repository; it was not treated as the claimed /home/ubuntu/audit-repo source of RC-006 artifacts."
+  },
+  "critical_artifacts": [
+    {
+      "name": "RC-006_EVIDENCE_PHYSICAL_INPUT_CLOSURE_PACKAGE_PROVENANCE_REPAIRED.zip",
+      "expected_sha256": "8ceb3c44b0cc14860ea0bcf5c500e71c6213556bd6d3ecf79665eb6f78f27aef",
+      "observed_paths": [],
+      "on_disk": false,
+      "tracked": false,
+      "committed": false,
+      "reachable_from_git": false,
+      "remote_reachable": false,
+      "sha_match": false
+    },
+    {
+      "name": "RC006_REPAIRED_CANONICAL_MANIFEST_FINAL.json",
+      "expected_sha256": "febffa281b5b7a63c8084c44b7554a627c579ef39f68f76805cc0790417e5e24",
+      "observed_paths": [],
+      "on_disk": false,
+      "tracked": false,
+      "committed": false,
+      "reachable_from_git": false,
+      "remote_reachable": false,
+      "sha_match": false
+    }
+  ],
+  "additional_rc006_artifacts": {
+    "embedded_content_manifest": "NOT_FOUND",
+    "provenance_self_verification": "NOT_FOUND",
+    "provenance_repair_report": "NOT_FOUND",
+    "rc006_audit_checkpoint_records": "NOT_FOUND",
+    "records_331": null,
+    "unique_ids_331": null,
+    "duplicate_ids": null,
+    "veh_traceability_ids": null
+  },
+  "push": {
+    "performed": false,
+    "reason": "No verified RC-006 artifacts were available to stage; no force-push, reset, rebase, squash, deletion, or content mutation was performed."
+  },
+  "baseline_checks": {
+    "r4_1_sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "r4_1_changed": false,
+    "v7_r3_changed": false,
+    "r4_2_present": false,
+    "cad_changed": false,
+    "step_changed": false,
+    "geometry_changed": false,
+    "design_intent_changed": false,
+    "engineering_values_changed": false,
+    "cae_run": false,
+    "physical_validation_run": false
+  },
+  "required_next_action": "Make /home/ubuntu/audit-repo available in the current environment, or provide the exact RC-006 artifacts and their authoritative Git source. Re-run byte-level and independent-clone verification before any push.",
+  "stop_condition": "STOP — persistence cannot be claimed."
+}
