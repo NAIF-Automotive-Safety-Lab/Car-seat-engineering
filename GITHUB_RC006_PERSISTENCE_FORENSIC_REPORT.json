@@ -1,0 +1,122 @@
+{
+  "report": "GITHUB_RC006_PERSISTENCE_FORENSIC_REPORT",
+  "timestamp_utc": "2026-09-09T00:19:57.969834+00:00",
+  "remote": "https://github.com/NAIF-Automotive-Safety-Lab/Car-seat-engineering.git",
+  "LOCAL_HEAD": "822cb3bcb9448068e092031315104b113b20cbc8",
+  "REMOTE_MAIN_AT_LAST_FETCH": "460fda6b46f27f9670d97e8978e32f7cb3047fd4",
+  "MERGE_BASE": "460fda6b46f27f9670d97e8978e32f7cb3047fd4",
+  "NON_DESTRUCTIVE_MERGE_COMMIT": "822cb3bcb9448068e092031315104b113b20cbc8",
+  "LOCAL_ONLY_COMMITS": [
+    "822cb3b Merge origin/main preserving RC-006 checkpoint history",
+    "d4dd78c docs: finalize RC-006 persistence verification",
+    "c99a4ec docs: persist RC-006 acquisition-plan postcommit verification",
+    "85a0fad docs: record RC-006 acquisition-plan persistence checkpoint",
+    "fb7a7b2 checkpoint: persist RC-006 acquisition-plan audit artifacts",
+    "47ac04c audit: verify RC-006 evidence acquisition package",
+    "57d573c audit: correct baseline immutability gate",
+    "1ac462b audit: record independent real evidence forensic gate",
+    "d1aa58e docs: finalize historical preservation gate report",
+    "4923f18 docs: record historical artifact preservation gate",
+    "b44e1b2 preserve: archive historical RC-004/RC-005 evidence",
+    "a9203c1 docs: persist final RC-006 persistence gate",
+    "857ef49 docs: persist RC-006 post-commit verification",
+    "5f12ab9 docs: record RC-006 persistence checkpoint",
+    "202eb62 checkpoint: persist RC-006 traceability and provenance repairs"
+  ],
+  "REMOTE_ONLY_COMMITS": [],
+  "DIVERGENCE_AT_FETCH": "15\t0",
+  "PUSH_ATTEMPT": {
+    "command": "git push origin main",
+    "return_code": 128,
+    "stdout": "",
+    "stderr": "fatal: could not read Username for 'https://github.com': terminal prompts disabled",
+    "force_push_used": false
+  },
+  "REMOTE_VERIFICATION": {
+    "last_known_github_main": "460fda6b46f27f9670d97e8978e32f7cb3047fd4",
+    "authoritative_package_present": false,
+    "external_manifest_present": false,
+    "checkpoint_present": true,
+    "independent_clone_verified": true
+  },
+  "CRITICAL_ARTIFACT_MATRIX": [
+    {
+      "path": "RC-006_EVIDENCE_PHYSICAL_INPUT_CLOSURE_PACKAGE_PROVENANCE_REPAIRED.zip",
+      "ON_DISK": true,
+      "TRACKED": true,
+      "COMMITTED": true,
+      "REACHABLE_FROM_GIT": true,
+      "SHA256": "8ceb3c44b0cc14860ea0bcf5c500e71c6213556bd6d3ecf79665eb6f78f27aef",
+      "EXPECTED_SHA256": "8ceb3c44b0cc14860ea0bcf5c500e71c6213556bd6d3ecf79665eb6f78f27aef",
+      "SHA_MATCH": true
+    },
+    {
+      "path": "RC006_REPAIRED_CANONICAL_MANIFEST_FINAL.json",
+      "ON_DISK": true,
+      "TRACKED": true,
+      "COMMITTED": true,
+      "REACHABLE_FROM_GIT": true,
+      "SHA256": "febffa281b5b7a63c8084c44b7554a627c579ef39f68f76805cc0790417e5e24",
+      "EXPECTED_SHA256": "febffa281b5b7a63c8084c44b7554a627c579ef39f68f76805cc0790417e5e24",
+      "SHA_MATCH": true
+    },
+    {
+      "path": "RC006_EMBEDDED_CONTENT_MANIFEST.json",
+      "ON_DISK": true,
+      "TRACKED": true,
+      "COMMITTED": true,
+      "REACHABLE_FROM_GIT": true,
+      "SHA256": "ef657b6fd125e2e5f9a62d1acff672a72ec64647886bb88305abe808d947e0ac",
+      "EXPECTED_SHA256": null,
+      "SHA_MATCH": true
+    },
+    {
+      "path": "RC006_REPAIRED_PROVENANCE_SELF_VERIFICATION_FINAL.json",
+      "ON_DISK": true,
+      "TRACKED": true,
+      "COMMITTED": true,
+      "REACHABLE_FROM_GIT": true,
+      "SHA256": "fc7d09120235d2cc31a44632e8f6f06e8210e180c704cbc2b0c99fe2189a6e2a",
+      "EXPECTED_SHA256": null,
+      "SHA_MATCH": true
+    },
+    {
+      "path": "RC006_PROVENANCE_REPAIR_FINAL_REPORT.json",
+      "ON_DISK": true,
+      "TRACKED": true,
+      "COMMITTED": true,
+      "REACHABLE_FROM_GIT": true,
+      "SHA256": "fa45ef634eca16f682ea380101ad6d5a384fcd0855834d7b13dc04950add992a",
+      "EXPECTED_SHA256": null,
+      "SHA_MATCH": true
+    },
+    {
+      "path": "RC006_REPOSITORY_CHECKPOINT.json",
+      "ON_DISK": true,
+      "TRACKED": true,
+      "COMMITTED": true,
+      "REACHABLE_FROM_GIT": true,
+      "SHA256": "7b784b7932290a70e12fd943689d706babe3172ef85a510af7f9e35f0169e18d",
+      "EXPECTED_SHA256": null,
+      "SHA_MATCH": true
+    }
+  ],
+  "BASELINE_IMMUTABILITY": {
+    "V7-R3": "UNCHANGED",
+    "R4.1": "UNCHANGED",
+    "R4.2": "ABSENT",
+    "CAD": "UNCHANGED",
+    "STEP": "UNCHANGED",
+    "GEOMETRY": "UNCHANGED",
+    "DESIGN_INTENT": "UNCHANGED",
+    "ENGINEERING_VALUES": "UNCHANGED",
+    "CA\u0415_EXECUTED": false,
+    "PHYSICAL_VALIDATION": false
+  },
+  "LOCAL_WORKTREE": {
+    "status": "## \u001b[32mmain\u001b[m...\u001b[31morigin/main\u001b[m [ahead \u001b[32m15\u001b[m]",
+    "porcelain": "",
+    "untracked": ""
+  },
+  "FINAL_VERDICT": "GITHUB_PERSISTENCE_FAILED"
+}
