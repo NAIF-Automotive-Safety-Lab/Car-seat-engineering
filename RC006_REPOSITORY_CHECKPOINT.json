@@ -1,0 +1,71 @@
+{
+  "document": "RC006_REPOSITORY_CHECKPOINT",
+  "audit_mode": "READ_ONLY_AUDIT_FIRST_THEN_PERSISTENCE",
+  "timestamp": "2026-09-09T03:11:30+03:00",
+  "repository_root": "/home/ubuntu/repo",
+  "branch": "main",
+  "head_before": "92c60891755630de4e903d7deb27e7ad4b5ec052",
+  "head_after": null,
+  "checkpoint_commit_sha": null,
+  "working_tree_before_checkpoint": {
+    "staged_files": [],
+    "unstaged_files": [],
+    "untracked_project_files": [
+      "docs/independent/V7_RC002_INDEPENDENT_REVERIFICATION.md",
+      "tools/independent_v7_brep.py",
+      "tools/independent_v7_compare.py",
+      "tools/independent_v7_contracts.py",
+      "tools/independent_v7_geometry_compare.py",
+      "tools/independent_v7_inventory.py",
+      "tools/independent_v7_kinematics.py",
+      "tools/independent_v7_overlaps.py"
+    ],
+    "note": "These are V7-RC-002 verification artifacts from the preceding task, not RC-006 artifacts; they were not staged to avoid unrelated changes."
+  },
+  "expected_rc006_artifacts": {
+    "package": {
+      "path": "RC-006_EVIDENCE_PHYSICAL_INPUT_CLOSURE_PACKAGE_PROVENANCE_REPAIRED.zip",
+      "expected_sha256": "8ceb3c44b0cc14860ea0bcf5c500e71c6213556bd6d3ecf79665eb6f78f27aef",
+      "present_on_disk": false,
+      "tracked": false,
+      "staged": false,
+      "committed": false,
+      "observed_sha256": null
+    },
+    "external_canonical_manifest": {
+      "path": "RC006_REPAIRED_CANONICAL_MANIFEST_FINAL.json",
+      "expected_sha256": "febffa281b5b7a63c8084c44b7554a627c579ef39f68f76805cc0790417e5e24",
+      "present_on_disk": false,
+      "tracked": false,
+      "staged": false,
+      "committed": false,
+      "observed_sha256": null
+    }
+  },
+  "rc006_content_checks": {
+    "total_records_expected": 331,
+    "unique_ids_expected": 331,
+    "duplicate_ids_expected": 0,
+    "records_observed": null,
+    "unique_ids_observed": null,
+    "duplicate_ids_observed": null,
+    "veh_traceability_ids_observed": null,
+    "reason": "No RC-006 package or canonical manifest exists in repository, upload, temporary audit directories, or reachable/unreachable Git commits inspected."
+  },
+  "baseline_protection": {
+    "v7_r3_status": "NOT_LOCATED_BY_EXACT_FILENAME_IN_CURRENT_WORKTREE",
+    "r4_1_path": "R4.1/R4.1.step",
+    "r4_1_sha256_recomputed": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "r4_2_present": false,
+    "cad_or_evidence_modified": false
+  },
+  "validation": {
+    "json_parse": "PASS for this checkpoint record",
+    "critical_artifact_hash_verification": "BLOCKED_ARTIFACTS_ABSENT",
+    "git_persistence": "FAILED_FOR_RC006",
+    "repository_clean_for_rc006_scope": true,
+    "repository_clean_overall": false
+  },
+  "verdict": "PERSISTENCE_FAILED",
+  "required_recovery_action": "Provide the exact RC-006 package and RC006_REPAIRED_CANONICAL_MANIFEST_FINAL.json, or restore them from the authoritative source; compare bytes and hashes before staging."
+}
