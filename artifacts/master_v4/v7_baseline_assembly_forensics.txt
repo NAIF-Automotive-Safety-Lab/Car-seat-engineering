@@ -1,0 +1,408 @@
+{"ref": "100", "file": "P100_BASE.step", "read": "IFSelect_ReturnStatus.IFSelect_RetDone", "solids": 1, "volume": 13560000.0, "bbox": [-260.0000001, -450.0000001, -1e-07, 260.0000001, 450.0000001, 135.0000001]}
+{"ref": "110L", "file": "P110L_RAIL.step", "read": "IFSelect_ReturnStatus.IFSelect_RetDone", "solids": 1, "volume": 932400.0, "bbox": [-210.0000001, -229.0000001, 104.9999999, 210.0000001, -190.9999999, 173.0000001]}
+{"ref": "110R", "file": "P110R_RAIL.step", "read": "IFSelect_ReturnStatus.IFSelect_RetDone", "solids": 1, "volume": 932400.0, "bbox": [-210.0000001, 190.9999999, 104.9999999, 210.0000001, 229.0000001, 173.0000001]}
+{"ref": "120", "file": "P120_CARRIAGE.step", "read": "IFSelect_ReturnStatus.IFSelect_RetDone", "solids": 3, "volume": 6317599.999999999, "bbox": [-235.0000001, -240.0000001, 174.9999999, 235.0000001, 240.0000001, 245.0000001]}
+{"ref": "130L", "file": "P130L_ABSORBER.step", "read": "IFSelect_ReturnStatus.IFSelect_RetDone", "solids": 1, "volume": 533770.6168867504, "bbox": [-150.0000001, -202.0000001, 219.9999999, 130.0000001, -157.9999999, 264.0000001]}
+{"ref": "130R", "file": "P130R_ABSORBER.step", "read": "IFSelect_ReturnStatus.IFSelect_RetDone", "solids": 1, "volume": 533770.6168867504, "bbox": [-150.0000001, 157.9999999, 219.9999999, 130.0000001, 202.0000001, 264.0000001]}
+{"ref": "140", "file": "P140_PELVIC_CONTROL.step", "read": "IFSelect_ReturnStatus.IFSelect_RetDone", "solids": 1, "volume": 5028450.0, "bbox": [-210.0000001, -215.0000001, 207.9999999, 375.0000001, 215.0000001, 260.0000001]}
+{"ref": "150L", "file": "P150L_ROTATION_LINK.step", "read": "IFSelect_ReturnStatus.IFSelect_RetDone", "solids": 1, "volume": 227083.53888207264, "bbox": [-222.04572135638347, -229.0000001, 355.9999999, -130.3277858889, -192.9999999, 666.5629556824055]}
+{"ref": "150R", "file": "P150R_ROTATION_LINK.step", "read": "IFSelect_ReturnStatus.IFSelect_RetDone", "solids": 1, "volume": 227083.53888211586, "bbox": [-159.672214111, 192.9999999, 355.9999999, -67.9542786435191, 229.0000001, 666.5629556824]}
+{"ref": "160", "file": "P160_SEATBACK_FRAME.step", "read": "IFSelect_ReturnStatus.IFSelect_RetDone", "solids": 1, "volume": 3176000.0, "bbox": [-201.0000001, -230.0000001, 224.9999999, -168.9999999, 230.0000001, 870.0000001]}
+{"ref": "170", "file": "P170_LOCK170.step", "read": "IFSelect_ReturnStatus.IFSelect_RetDone", "solids": 1, "volume": 256571.68026350642, "bbox": [-125.0000001, -60.0000001, 319.9999999, -34.9999999, 30.0000001, 365.0000001]}
+{"ref": "180", "file": "P180_REBOUND.step", "read": "IFSelect_ReturnStatus.IFSelect_RetDone", "solids": 1, "volume": 485625.6606917095, "bbox": [-10.000000100000001, -25.0000001, 249.9999999, 205.0000001, 25.0000001, 300.0000001]}
+{"ref": "190", "file": "P190_RESTRAINT_INTERFACES.step", "read": "IFSelect_ReturnStatus.IFSelect_RetDone", "solids": 2, "volume": 216000.00000000006, "bbox": [97.4999999, -255.0000001, 559.9999999, 142.5000001, 255.0000001, 620.0000001]}
+{"ref": "200", "file": "P200_OCCUPANT_GUIDANCE.step", "read": "IFSelect_ReturnStatus.IFSelect_RetDone", "solids": 2, "volume": 1670400.0000000922, "bbox": [-80.0000001, -212.0000001, 199.9999999, 40.0000001, 212.0000001, 520.0000001]}
+{"ref": "210", "file": "P210_SENSOR_INTERFACE.step", "read": "IFSelect_ReturnStatus.IFSelect_RetDone", "solids": 1, "volume": 66714.33605270136, "bbox": [29.9999999, -40.0000001, 332.9999999, 130.0000001, 40.0000001, 353.0000001]}
+{"ref": "J", "file": "PJ_HINGE_PIVOT.step", "read": "IFSelect_ReturnStatus.IFSelect_RetDone", "solids": 2, "volume": 101787.60197630928, "bbox": [-203.0000001, -260.0000001, 251.9999999, -166.9999999, 210.0000001, 288.0000001]}
+TOTAL_COMPONENT_SOLIDS 21
+PAIRWISE_COMMONS
+{"a": "120", "b": "130L", "intersection_volume_mm3": 30250.000000000004, "classification": "OVERLAP_OR_INTENDED_CONTACT_UNRESOLVED"}
+{"a": "120", "b": "130R", "intersection_volume_mm3": 30250.000000000004, "classification": "OVERLAP_OR_INTENDED_CONTACT_UNRESOLVED"}
+{"a": "120", "b": "140", "intersection_volume_mm3": 113574.99999999996, "classification": "OVERLAP_OR_INTENDED_CONTACT_UNRESOLVED"}
+{"a": "120", "b": "200", "intersection_volume_mm3": 92926.49999567906, "classification": "OVERLAP_OR_INTENDED_CONTACT_UNRESOLVED"}
+{"a": "130L", "b": "140", "intersection_volume_mm3": 303345.23168198584, "classification": "OVERLAP_OR_INTENDED_CONTACT_UNRESOLVED"}
+{"a": "130L", "b": "200", "intersection_volume_mm3": 71119.99999583226, "classification": "OVERLAP_OR_INTENDED_CONTACT_UNRESOLVED"}
+{"a": "130R", "b": "140", "intersection_volume_mm3": 303345.23168198584, "classification": "OVERLAP_OR_INTENDED_CONTACT_UNRESOLVED"}
+{"a": "130R", "b": "200", "intersection_volume_mm3": 71119.99998399815, "classification": "OVERLAP_OR_INTENDED_CONTACT_UNRESOLVED"}
+{"a": "140", "b": "160", "intersection_volume_mm3": 11199.999999999993, "classification": "OVERLAP_OR_INTENDED_CONTACT_UNRESOLVED"}
+{"a": "140", "b": "200", "intersection_volume_mm3": 128706.00036542694, "classification": "OVERLAP_OR_INTENDED_CONTACT_UNRESOLVED"}
+{"a": "150L", "b": "160", "intersection_volume_mm3": 106752.60605471101, "classification": "OVERLAP_OR_INTENDED_CONTACT_UNRESOLVED"}
+{"a": "160", "b": "J", "intersection_volume_mm3": 67326.5357313047, "classification": "OVERLAP_OR_INTENDED_CONTACT_UNRESOLVED"}
+ASSEMBLY_METADATA
+ASSEMBLY/V7_ASSEMBLY_MANIFEST.json {
+  "revision": "V7-RC-001",
+  "classification": "V7_ENGINEERING_RECONSTRUCTION / CONTROLLED_CURRENT_BASELINE",
+  "historical_binary_master": false,
+  "coordinate_system": {
+    "origin": "bench fixture datum origin",
+    "X": "longitudinal forward",
+    "Y": "lateral right",
+    "Z": "up"
+  },
+  "parts": [
+    {
+      "ref": "100",
+      "name": "P100_BASE",
+      "step": "CAD_STEP/P100_BASE.step",
+      "material_status": "TO_BE_CERTIFIED"
+    },
+    {
+      "ref": "110L",
+      "name": "P110L_RAIL",
+      "step": "CAD_STEP/P110L_RAIL.step",
+      "material_status": "TO_BE_CERTIFIED"
+    },
+    {
+      "ref": "110R",
+      "name": "P110R_RAIL",
+      "step": "CAD_STEP/P110R_RAIL.step",
+      "material_status": "TO_BE_CERTIFIED"
+    },
+    {
+      "ref": "120",
+      "name": "P120_CARRIAGE",
+      "step": "CAD_STEP/P120_CARRIAGE.step",
+      "material_status": "TO_BE_CERTIFIED"
+    },
+    {
+      "ref": "130L",
+      "name": "P130L_ABSORBER",
+      "step": "CAD_STEP/P130L_ABSORBER.step",
+      "material_status": "TO_BE_CERTIFIED"
+    },
+    {
+      "ref": "130R",
+      "name": "P130R_ABSORBER",
+      "step": "CAD_STEP/P130R_ABSORBER.step",
+      "material_status": "TO_BE_CERTIFIED"
+    },
+    {
+      "ref": "140",
+      "name": "P140_PELVIC_CONTROL",
+      "step": "CAD_STEP/P140_PELVIC_CONTROL.step",
+      "material_status": "TO_BE_CERTIFIED"
+    },
+    {
+      "ref": "160",
+      "name": "P160_SEATBACK_FRAME",
+      "step": "CAD_STEP/P160_SEATBACK_FRAME.step",
+      "material_status": "TO_BE_CERTIFIED"
+    },
+    {
+      "ref": "150L",
+      "name": "P150L_ROTATION_LINK",
+      "step": "CAD_STEP/P150L_ROTATION_LINK.step",
+      "material_status": "TO_BE_CERTIFIED"
+    },
+    {
+      "ref": "150R",
+      "name": "P150R_ROTATION_LINK",
+      "step": "CAD_STEP/P150R_ROTATION_LINK.step",
+      "material_status": "TO_BE_CERTIFIED"
+    },
+    {
+      "ref": "J",
+      "name": "PJ_HINGE_PIVOT",
+      "step": "CAD_STEP/PJ_HINGE_PIVOT.step",
+      "material_status": "TO_BE_CERTIFIED"
+    },
+    {
+      "ref": "170",
+      "name": "P170_LOCK170",
+      "step": "CAD_STEP/P170_LOCK170.step",
+      "material_status": "TO_BE_CERTIFIED"
+    },
+    {
+      "ref": "180",
+      "name": "P180_REBOUND",
+      "step": "CAD_STEP/P180_REBOUND.step",
+      "material_status": "TO_BE_CERTIFIED"
+    },
+    {
+      "ref": "190",
+      "name": "P190_RESTRAINT_INTERFACES",
+      "step": "CAD_STEP/P190_RESTRAINT_INTERFACES.step",
+      "material_status": "TO_BE_CERTIFIED"
+    },
+    {
+      "ref": "200",
+      "name": "P200_OCCUPANT_GUIDANCE",
+      "step": "CAD_STEP/P200_OCCUPANT_GUIDANCE.step",
+      "material_status": "TO_BE_CERTIFIED"
+    },
+    {
+      "ref": "210",
+      "name": "P210_SENSOR_INTERFACE",
+      "step": "CAD_STEP/P210_SENSOR_INTERFACE.step",
+      "material_status": "TO_BE_CERTIFIED"
+    }
+  ],
+  "assembly_step": "CAD_STEP/V7_ENGINEERING_RECONSTRUCTION_ASSEMBLY.step",
+  "optional_extension": [
+    "140",
+    "190",
+    "200"
+  ]
+}
+ASSEMBLY/V7_ASSEMBLY_VALIDATION.json {
+  "timestamp": "2026-09-08T10:24:25.399613+00:00",
+  "assembly": {
+    "FILE": "CAD_STEP/V7_ENGINEERING_RECONSTRUCTION_ASSEMBLY_HIERARCHICAL.step",
+    "SHA256": "c6dea11388c4bd229f71c9b6a8814f83312a2d1976810c7512e38d6be107043d",
+    "STEP_READ": true,
+    "SOLIDS": 21,
+    "VOLUME_MM3": 34265657.59052171,
+    "STATUS": "MODEL_EXECUTED"
+  },
+  "parts": [
+    {
+      "REF": "100",
+      "FILE": "CAD_STEP/P100_BASE.step",
+      "SHA256": "63a6b6d1de5caae6e8eab29e90e82339c4c3e12dc82eba3a9ffd1de6c911ddde",
+      "STEP_READ": true,
+      "B_REP_EXECUTABLE": true,
+      "SOLIDS": 1,
+      "VOLUME_MM3": 13560000.0,
+      "STATUS": "MODEL_EXECUTED"
+    },
+    {
+      "REF": "110L",
+      "FILE": "CAD_STEP/P110L_RAIL.step",
+      "SHA256": "009b570e2ef0638d796b5bf947fd110a300ca6b6604d3a6000233413a968157a",
+      "STEP_READ": true,
+      "B_REP_EXECUTABLE": true,
+      "SOLIDS": 1,
+      "VOLUME_MM3": 932400.0,
+      "STATUS": "MODEL_EXECUTED"
+    },
+    {
+      "REF": "110R",
+      "FILE": "CAD_STEP/P110R_RAIL.step",
+      "SHA256": "0516bb8761975feb44a03e7fe40f7dd1e6624c2da48f3f7ed9bbe3a74de2b164",
+      "STEP_READ": true,
+      "B_REP_EXECUTABLE": true,
+      "SOLIDS": 1,
+      "VOLUME_MM3": 932400.0,
+      "STATUS": "MODEL_EXECUTED"
+    },
+    {
+      "REF": "120",
+      "FILE": "CAD_STEP/P120_CARRIAGE.step",
+      "SHA256": "901648644c9f18b9469b6bf705468ab760609d3aa9de3b11dd7080871e427fb1",
+      "STEP_READ": true,
+      "B_REP_EXECUTABLE": true,
+      "SOLIDS": 3,
+      "VOLUME_MM3": 6317599.999999999,
+      "STATUS": "MODEL_EXECUTED"
+    },
+    {
+      "REF": "130L",
+      "FILE": "CAD_STEP/P130L_ABSORBER.step",
+      "SHA256": "09b397049439ab8ee67352166d17c7fecdcbbb47afe2b193bf48ca488f82ba89",
+      "STEP_READ": true,
+      "B_REP_EXECUTABLE": true,
+      "SOLIDS": 1,
+      "VOLUME_MM3": 533770.6168867504,
+      "STATUS": "MODEL_EXECUTED"
+    },
+    {
+      "REF": "130R",
+      "FILE": "CAD_STEP/P130R_ABSORBER.step",
+      "SHA256": "56eff216937efcb18db9c0f4962c8774ca3182d2bdbb53152967c7bdba29e7a9",
+      "STEP_READ": true,
+      "B_REP_EXECUTABLE": true,
+      "SOLIDS": 1,
+      "VOLUME_MM3": 533770.6168867504,
+      "STATUS": "MODEL_EXECUTED"
+    },
+    {
+      "REF": "140",
+      "FILE": "CAD_STEP/P140_PELVIC_CONTROL.step",
+      "SHA256": "902d843388a24a0223756d1f4f3eac67e06f99a7eb3f61f113e79f1db9d8061f",
+      "STEP_READ": true,
+      "B_REP_EXECUTABLE": true,
+      "SOLIDS": 1,
+      "VOLUME_MM3": 5028450.0,
+      "STATUS": "MODEL_EXECUTED"
+    },
+    {
+      "REF": "150L",
+      "FILE": "CAD_STEP/P150L_ROTATION_LINK.step",
+      "SHA256": "ce70625464ced8fb9b603dc21512082a59ce6fa5aa230038d5009ff2782c0600",
+      "STEP_READ": true,
+      "B_REP_EXECUTABLE": true,
+      "SOLIDS": 1,
+      "VOLUME_MM3": 227083.53888207264,
+      "STATUS": "MODEL_EXECUTED"
+    },
+    {
+      "REF": "150R",
+      "FILE": "CAD_STEP/P150R_ROTATION_LINK.step",
+      "SHA256": "cade2a06b3f6bf2da0c69d149b8a22506cf3b6dc305f6eb45163823da366c053",
+      "STEP_READ": true,
+      "B_REP_EXECUTABLE": true,
+      "SOLIDS": 1,
+      "VOLUME_MM3": 227083.53888211586,
+      "STATUS": "MODEL_EXECUTED"
+    },
+    {
+      "REF": "160",
+      "FILE": "CAD_STEP/P160_SEATBACK_FRAME.step",
+      "SHA256": "06eddbfac6b066db86cf7cb3a1d01a3dade2910685089b379711b75778306ae3",
+      "STEP_READ": true,
+      "B_REP_EXECUTABLE": true,
+      "SOLIDS": 1,
+      "VOLUME_MM3": 3176000.0,
+      "STATUS": "MODEL_EXECUTED"
+    },
+    {
+      "REF": "170",
+      "FILE": "CAD_STEP/P170_LOCK170.step",
+      "SHA256": "d86a25f839fc7f0d14bb6df3a9a2adf7e2f8c41d1490d4987b19c3c3e1f402d5",
+      "STEP_READ": true,
+      "B_REP_EXECUTABLE": true,
+      "SOLIDS": 1,
+      "VOLUME_MM3": 256571.68026350642,
+      "STATUS": "MODEL_EXECUTED"
+    },
+    {
+      "REF": "180",
+      "FILE": "CAD_STEP/P180_REBOUND.step",
+      "SHA256": "1867ab6500b821034d5c8ed3d639ab62b923a9d1d6fde5292779b3b42dd41412",
+      "STEP_READ": true,
+      "B_REP_EXECUTABLE": true,
+      "SOLIDS": 1,
+      "VOLUME_MM3": 485625.6606917095,
+      "STATUS": "MODEL_EXECUTED"
+    },
+    {
+      "REF": "190",
+      "FILE": "CAD_STEP/P190_RESTRAINT_INTERFACES.step",
+      "SHA256": "4ba6391c29f093ff895f904ba466e569fb943f765254cc42da90e18541eaadf9",
+      "STEP_READ": true,
+      "B_REP_EXECUTABLE": true,
+      "SOLIDS": 2,
+      "VOLUME_MM3": 216000.00000000006,
+      "STATUS": "MODEL_EXECUTED"
+    },
+    {
+      "REF": "200",
+      "FILE": "CAD_STEP/P200_OCCUPANT_GUIDANCE.step",
+      "SHA256": "8325fa9033e7e6b0549751c3ad5542f2db25e310de2353f2fad70e12caa2d6e6",
+      "STEP_READ": true,
+      "B_REP_EXECUTABLE": true,
+      "SOLIDS": 2,
+      "VOLUME_MM3": 1670400.0000000922,
+      "STATUS": "MODEL_EXECUTED"
+    },
+    {
+      "REF": "210",
+      "FILE": "CAD_STEP/P210_SENSOR_INTERFACE.step",
+      "SHA256": "b762068b3443930a6a177c2076eead5283efca0c59f2153448b176dbf4f358be",
+      "STEP_READ": true,
+      "B_REP_EXECUTABLE": true,
+      "SOLIDS": 1,
+      "VOLUME_MM3": 66714.33605270136,
+      "STATUS": "MODEL_EXECUTED"
+    },
+    {
+      "REF": "J",
+      "FILE": "CAD_STEP/PJ_HINGE_PIVOT.step",
+      "SHA256": "11dc11cd25ed288d82cae80bdc0f9029a783d880473a9535d33ef16e3b5df001",
+      "STEP_READ": true,
+      "B_REP_EXECUTABLE": true,
+      "SOLIDS": 2,
+      "VOLUME_MM3": 101787.60197630928,
+      "STATUS": "MODEL_EXECUTED"
+    }
+  ]
+}
+ASSEMBLY/V7_STATE_MACHINE.json {
+  "states": [
+    "S0",
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+  ],
+  "transitions": [
+    {
+      "from": "S0",
+      "to": "S1",
+      "trigger": "event detection / inertial trigger",
+      "timing": "TO_BE_DEFINED"
+    },
+    {
+      "from": "S1",
+      "to": "S2",
+      "trigger": "capture engagement",
+      "timing": "TO_BE_DEFINED"
+    },
+    {
+      "from": "S2",
+      "to": "S3",
+      "trigger": "load engagement / ride-down",
+      "timing": "TO_BE_DEFINED"
+    },
+    {
+      "from": "S3",
+      "to": "S4",
+      "trigger": "end-of-primary-motion / rebound state",
+      "timing": "TO_BE_DEFINED"
+    },
+    {
+      "from": "S4",
+      "to": "S5",
+      "trigger": "secure/post-event condition",
+      "timing": "TO_BE_DEFINED"
+    }
+  ]
+}
+TRACEABILITY/V7_PARAMETER_REGISTER.json {
+  "seat_width_mm": {
+    "value": 520,
+    "status": "DESIGN_DEFINED",
+    "source": "V7 R0 concept reference"
+  },
+  "seat_pan_depth_mm": {
+    "value": 500,
+    "status": "DESIGN_DEFINED",
+    "source": "V7 R0 concept reference"
+  },
+  "seatback_height_mm": {
+    "value": 650,
+    "status": "DESIGN_DEFINED",
+    "source": "V7 R0 concept reference"
+  },
+  "rail_spacing_mm": {
+    "value": 420,
+    "status": "DESIGN_DEFINED",
+    "source": "V7 R0 concept reference"
+  },
+  "ride_down_budget_mm": {
+    "value": 350,
+    "status": "DESIGN_TARGET",
+    "source": "V7 R0 concept reference"
+  },
+  "capture_frame_width_mm": {
+    "value": 470,
+    "status": "DESIGN_DEFINED",
+    "source": "V7 R0 concept reference"
+  },
+  "rail_travel_current_baseline_mm": {
+    "value": 180,
+    "status": "DESIGN_TARGET",
+    "source": "V7 engineering definition; not measured"
+  },
+  "absorber_force_target_kN": {
+    "value": "18\u201322",
+    "status": "DESIGN_TARGET",
+    "source": "V7 engineering definition; not measured"
+  },
+  "H_point_vehicle_authority": {
+    "value": null,
+    "status": "TO_BE_DEFINED",
+    "source": "vehicle-specific data absent"
+  }
+}
