@@ -1,0 +1,87 @@
+{
+  "record_type": "RC006_ACQUISITION_PLAN_PERSISTENCE_CHECKPOINT",
+  "timestamp_utc": "2026-09-09T00:13:02.738410+00:00",
+  "repository_path": "/home/ubuntu/audit-repo",
+  "branch": "main",
+  "head_before": "47ac04c8b53dea35a94bdd63b990a27eb899058a",
+  "head_after": "fb7a7b2e98e72900daff9b8766fedacfa6eaaa5b",
+  "checkpoint_commit_sha": "fb7a7b2e98e72900daff9b8766fedacfa6eaaa5b",
+  "commit_message": "checkpoint: persist RC-006 acquisition-plan audit artifacts",
+  "files_added_or_modified": [
+    {
+      "path": "MANUS_REAL_EVIDENCE_ACQUISITION_PLAN_FORENSIC_AUDIT.json",
+      "sha256": "a3f59324ab9a756be24958ebea76c0eca5bfc76bb36fb6b76c565f22021cf12e",
+      "size": 6566
+    },
+    {
+      "path": "MANUS_REAL_EVIDENCE_ACQUISITION_PLAN_FORENSIC_AUDIT.md",
+      "sha256": "1de6785514623c377403583a332771e8c2bd98c29c01995cf85d958b6df90249",
+      "size": 3647
+    },
+    {
+      "path": "artifacts/rc006_acquisition_plan/EVIDENCE_DEPENDENCY_GRAPH.json",
+      "sha256": "98e280bd6f4c0ccaa3fa8e0e22cd71f5392fe53bc031f66fc47c75211afdf528",
+      "size": 3960
+    },
+    {
+      "path": "artifacts/rc006_acquisition_plan/OEM_DATA_REQUEST_MATRIX.json",
+      "sha256": "ce03b96365b97717cc749ff9469c9a4906cf923f5dc850a422d6143805763f7b",
+      "size": 6278
+    },
+    {
+      "path": "artifacts/rc006_acquisition_plan/PHYSICAL_TEST_ACQUISITION_MATRIX.json",
+      "sha256": "80f892c15e29b4565c81412ff39488e0a88b9195b2f82c763d94fd682f9fbbc4",
+      "size": 8328
+    },
+    {
+      "path": "artifacts/rc006_acquisition_plan/RC006_REAL_EVIDENCE_ACQUISITION_CANONICAL_MANIFEST_FINAL.json",
+      "sha256": "935b1367848e8b9c24e9c631f8139eb58e24995f1c148843be896b08d7f68b1e",
+      "size": 2050
+    },
+    {
+      "path": "artifacts/rc006_acquisition_plan/RC006_REAL_EVIDENCE_ACQUISITION_FINAL_SELF_VERIFICATION.json",
+      "sha256": "b2ce23675132682cf834e2809a30d15e0ae4259f8659d96cca190cf0017f3e28",
+      "size": 728
+    },
+    {
+      "path": "artifacts/rc006_acquisition_plan/RC006_REAL_EVIDENCE_ACQUISITION_PACKAGE_FINAL.zip",
+      "sha256": "e13c653d3a8f921f08681e28a6181b722271c73ab358d4f591136af9f4f65d55",
+      "size": 11336
+    },
+    {
+      "path": "artifacts/rc006_acquisition_plan/REAL_EVIDENCE_ACQUISITION_MATRIX.json",
+      "sha256": "dd8f9de04453dbb3a49cd5e8b8cf4b258e67ae4d3101b7ac1d1c0945e281a1d2",
+      "size": 51274
+    },
+    {
+      "path": "artifacts/rc006_acquisition_plan/SOURCE_REQUEST_MATRIX.json",
+      "sha256": "2a75639a788cafa4cb3fc5d2e2616559b0b23e61a01b2ddab9e0c6a7515e631d",
+      "size": 9702
+    },
+    {
+      "path": "artifacts/rc006_audit_support/current-rc006-persistence-inventory.json",
+      "sha256": "a0311414122c676157efe25386694abf2857ff3ce3f5097c4cc173003427f2ce",
+      "size": 29779
+    },
+    {
+      "path": "artifacts/rc006_audit_support/current-rc006-persistence-inventory.txt",
+      "sha256": "a0311414122c676157efe25386694abf2857ff3ce3f5097c4cc173003427f2ce",
+      "size": 29779
+    },
+    {
+      "path": "tools/rc006/create_rc006_plan_audit.py",
+      "sha256": "43cb955efd673ae9d37ce11106c2f6dc80d463479d4377abeb996e7bb5634d81",
+      "size": 15705
+    },
+    {
+      "path": "tools/rc006/run_rc006_persistence_gate_current.py",
+      "sha256": "f4298b5edf1492f855c502af768dea5eaa81c0e36025f4f1704ab4131297f701",
+      "size": 3552
+    }
+  ],
+  "files_deleted": [],
+  "git_status_after_checkpoint": "## \u001b[32mmain\u001b[m...\u001b[31morigin/main\u001b[m [ahead \u001b[32m11\u001b[m]",
+  "working_tree_clean": true,
+  "untracked_files": "",
+  "validation": "RC-006 authoritative provenance package remains hash-verified; acquisition-plan package and audit artifacts are committed as distinct evidence-plan artifacts; no engineering content modified"
+}
