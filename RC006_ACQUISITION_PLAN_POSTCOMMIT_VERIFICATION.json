@@ -1,0 +1,130 @@
+{
+  "repo": "/home/ubuntu/audit-repo",
+  "branch": "main",
+  "head_before_checkpoint": "47ac04c8b53dea35a94bdd63b990a27eb899058a",
+  "checkpoint_commit": "fb7a7b2e98e72900daff9b8766fedacfa6eaaa5b",
+  "head_after_record_commit": "85a0fadc0a38a5acc132fe95e7b94cfd08c337a9",
+  "artifacts": {
+    "final_package": {
+      "path": "artifacts/rc006_acquisition_plan/RC006_REAL_EVIDENCE_ACQUISITION_PACKAGE_FINAL.zip",
+      "present_on_disk": true,
+      "tracked": true,
+      "staged": false,
+      "committed": true,
+      "reachable_from_git": true,
+      "sha256": "e13c653d3a8f921f08681e28a6181b722271c73ab358d4f591136af9f4f65d55",
+      "expected_sha256": "e13c653d3a8f921f08681e28a6181b722271c73ab358d4f591136af9f4f65d55",
+      "sha256_match": true,
+      "zip_integrity": true,
+      "member_count": 8
+    },
+    "final_manifest": {
+      "path": "artifacts/rc006_acquisition_plan/RC006_REAL_EVIDENCE_ACQUISITION_CANONICAL_MANIFEST_FINAL.json",
+      "present_on_disk": true,
+      "tracked": true,
+      "staged": false,
+      "committed": true,
+      "reachable_from_git": true,
+      "sha256": "935b1367848e8b9c24e9c631f8139eb58e24995f1c148843be896b08d7f68b1e",
+      "expected_sha256": "935b1367848e8b9c24e9c631f8139eb58e24995f1c148843be896b08d7f68b1e",
+      "sha256_match": true
+    },
+    "final_self_verification": {
+      "path": "artifacts/rc006_acquisition_plan/RC006_REAL_EVIDENCE_ACQUISITION_FINAL_SELF_VERIFICATION.json",
+      "present_on_disk": true,
+      "tracked": true,
+      "staged": false,
+      "committed": true,
+      "reachable_from_git": true,
+      "sha256": "b2ce23675132682cf834e2809a30d15e0ae4259f8659d96cca190cf0017f3e28",
+      "expected_sha256": "b2ce23675132682cf834e2809a30d15e0ae4259f8659d96cca190cf0017f3e28",
+      "sha256_match": true
+    },
+    "authoritative_rc006_package": {
+      "path": "RC-006_EVIDENCE_PHYSICAL_INPUT_CLOSURE_PACKAGE_PROVENANCE_REPAIRED.zip",
+      "present_on_disk": true,
+      "tracked": true,
+      "staged": false,
+      "committed": true,
+      "reachable_from_git": true,
+      "sha256": "8ceb3c44b0cc14860ea0bcf5c500e71c6213556bd6d3ecf79665eb6f78f27aef",
+      "expected_sha256": "8ceb3c44b0cc14860ea0bcf5c500e71c6213556bd6d3ecf79665eb6f78f27aef",
+      "sha256_match": true
+    },
+    "authoritative_rc006_manifest": {
+      "path": "RC006_REPAIRED_CANONICAL_MANIFEST_FINAL.json",
+      "present_on_disk": true,
+      "tracked": true,
+      "staged": false,
+      "committed": true,
+      "reachable_from_git": true,
+      "sha256": "febffa281b5b7a63c8084c44b7554a627c579ef39f68f76805cc0790417e5e24",
+      "expected_sha256": "febffa281b5b7a63c8084c44b7554a627c579ef39f68f76805cc0790417e5e24",
+      "sha256_match": true
+    },
+    "audit_json": {
+      "path": "MANUS_REAL_EVIDENCE_ACQUISITION_PLAN_FORENSIC_AUDIT.json",
+      "present_on_disk": true,
+      "tracked": true,
+      "staged": false,
+      "committed": true,
+      "reachable_from_git": true,
+      "sha256": "a3f59324ab9a756be24958ebea76c0eca5bfc76bb36fb6b76c565f22021cf12e",
+      "expected_sha256": null,
+      "sha256_match": true
+    },
+    "audit_md": {
+      "path": "MANUS_REAL_EVIDENCE_ACQUISITION_PLAN_FORENSIC_AUDIT.md",
+      "present_on_disk": true,
+      "tracked": true,
+      "staged": false,
+      "committed": true,
+      "reachable_from_git": true,
+      "sha256": "1de6785514623c377403583a332771e8c2bd98c29c01995cf85d958b6df90249",
+      "expected_sha256": null,
+      "sha256_match": true
+    },
+    "checkpoint_record": {
+      "path": "RC006_ACQUISITION_PLAN_PERSISTENCE_CHECKPOINT.json",
+      "present_on_disk": true,
+      "tracked": true,
+      "staged": false,
+      "committed": true,
+      "reachable_from_git": true,
+      "sha256": "d54b89761dba97e1fd4782ba860b0e4b8842a06a0e4b0782b0f71024be7f22cf",
+      "expected_sha256": null,
+      "sha256_match": true
+    },
+    "checkpoint_md": {
+      "path": "RC006_ACQUISITION_PLAN_PERSISTENCE_CHECKPOINT.md",
+      "present_on_disk": true,
+      "tracked": true,
+      "staged": false,
+      "committed": true,
+      "reachable_from_git": true,
+      "sha256": "7038e1312b07f3954c02c9422b57a6357b4eb685319ee65393f2bf8e7c50ac14",
+      "expected_sha256": null,
+      "sha256_match": true
+    }
+  },
+  "status": "## \u001b[32mmain\u001b[m...\u001b[31morigin/main\u001b[m [ahead \u001b[32m12\u001b[m]",
+  "porcelain": "",
+  "untracked": "",
+  "staged": "",
+  "modified": "",
+  "deleted": "",
+  "authoritative_artifacts_all_committed": true,
+  "critical_scope_clean": true,
+  "baseline_immutability": {
+    "V7-R3": "UNCHANGED",
+    "R4.1": "UNCHANGED",
+    "R4.2": "ABSENT",
+    "CAD": "UNCHANGED",
+    "STEP": "UNCHANGED",
+    "GEOMETRY": "UNCHANGED",
+    "DESIGN_INTENT": "UNCHANGED",
+    "ENGINEERING_VALUES": "UNCHANGED",
+    "RC006_HISTORICAL_ARTIFACTS": "UNCHANGED"
+  },
+  "verdict": "PERSISTENCE_VERIFIED"
+}
