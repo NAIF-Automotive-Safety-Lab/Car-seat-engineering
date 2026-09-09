@@ -1,0 +1,136 @@
+{
+  "revision": "V7-RC-006-EA-ACQ",
+  "chain": [
+    "GEOMETRY",
+    "MATERIAL",
+    "DENSITY",
+    "MASS",
+    "CG",
+    "INERTIA",
+    "JOINTS",
+    "CONTACT",
+    "FRICTION",
+    "ABSORBER",
+    "LOAD_CASE",
+    "CRASH_PULSE",
+    "RESTRAINT",
+    "ACCEPTANCE_CRITERIA"
+  ],
+  "nodes": [
+    {
+      "NODE": "GEOMETRY",
+      "STATUS": "KNOWN",
+      "CURRENT_VALUE_OR_NOTE": "V7-R4/R3 controlled geometry artifacts; unchanged",
+      "OWNER": "JON/Manus",
+      "BLOCKING": false,
+      "REQUIRED_EVIDENCE_OR_DOCUMENT": "Geometry source hash"
+    },
+    {
+      "NODE": "MATERIAL",
+      "STATUS": "SOURCE_REQUIRED",
+      "CURRENT_VALUE_OR_NOTE": null,
+      "OWNER": "Peter/Manus",
+      "BLOCKING": true,
+      "REQUIRED_EVIDENCE_OR_DOCUMENT": "Released material specification"
+    },
+    {
+      "NODE": "DENSITY",
+      "STATUS": "SOURCE_REQUIRED",
+      "CURRENT_VALUE_OR_NOTE": null,
+      "OWNER": "Supplier/Engineering",
+      "BLOCKING": true,
+      "REQUIRED_EVIDENCE_OR_DOCUMENT": "Exact density source tied to material"
+    },
+    {
+      "NODE": "MASS",
+      "STATUS": "MODEL_DERIVABLE",
+      "CURRENT_VALUE_OR_NOTE": "Blocked until material+density are controlled",
+      "OWNER": "JON/Manus",
+      "BLOCKING": true,
+      "REQUIRED_EVIDENCE_OR_DOCUMENT": "Geometry+material+density"
+    },
+    {
+      "NODE": "CG",
+      "STATUS": "MODEL_DERIVABLE",
+      "CURRENT_VALUE_OR_NOTE": "Blocked until component mass distribution controlled",
+      "OWNER": "JON/Manus",
+      "BLOCKING": true,
+      "REQUIRED_EVIDENCE_OR_DOCUMENT": "Mass properties chain"
+    },
+    {
+      "NODE": "INERTIA",
+      "STATUS": "MODEL_DERIVABLE",
+      "CURRENT_VALUE_OR_NOTE": "Blocked until component mass distribution controlled",
+      "OWNER": "JON/Manus",
+      "BLOCKING": true,
+      "REQUIRED_EVIDENCE_OR_DOCUMENT": "Mass properties chain"
+    },
+    {
+      "NODE": "JOINTS",
+      "STATUS": "KNOWN",
+      "CURRENT_VALUE_OR_NOTE": "Model-defined; physical fastener evidence pending",
+      "OWNER": "JON/Manus",
+      "BLOCKING": true,
+      "REQUIRED_EVIDENCE_OR_DOCUMENT": "Controlled joint/fastener source"
+    },
+    {
+      "NODE": "CONTACT",
+      "STATUS": "SOURCE_REQUIRED",
+      "CURRENT_VALUE_OR_NOTE": "9 interface semantics/physical contact parameters not fully evidenced",
+      "OWNER": "Peter/Manus",
+      "BLOCKING": true,
+      "REQUIRED_EVIDENCE_OR_DOCUMENT": "Controlled interface evidence"
+    },
+    {
+      "NODE": "FRICTION",
+      "STATUS": "TEST_REQUIRED",
+      "CURRENT_VALUE_OR_NOTE": null,
+      "OWNER": "Manus",
+      "BLOCKING": true,
+      "REQUIRED_EVIDENCE_OR_DOCUMENT": "Component/interface test"
+    },
+    {
+      "NODE": "ABSORBER",
+      "STATUS": "TEST_REQUIRED",
+      "CURRENT_VALUE_OR_NOTE": null,
+      "OWNER": "Manus",
+      "BLOCKING": true,
+      "REQUIRED_EVIDENCE_OR_DOCUMENT": "130L/130R characterization"
+    },
+    {
+      "NODE": "LOAD_CASE",
+      "STATUS": "OEM_INPUT_REQUIRED",
+      "CURRENT_VALUE_OR_NOTE": null,
+      "OWNER": "Peter/Manus",
+      "BLOCKING": true,
+      "REQUIRED_EVIDENCE_OR_DOCUMENT": "OEM/customer load case"
+    },
+    {
+      "NODE": "CRASH_PULSE",
+      "STATUS": "OEM_INPUT_REQUIRED",
+      "CURRENT_VALUE_OR_NOTE": null,
+      "OWNER": "Peter/Manus",
+      "BLOCKING": true,
+      "REQUIRED_EVIDENCE_OR_DOCUMENT": "OEM/customer pulse or approved test definition"
+    },
+    {
+      "NODE": "RESTRAINT",
+      "STATUS": "OEM_INPUT_REQUIRED",
+      "CURRENT_VALUE_OR_NOTE": null,
+      "OWNER": "Peter/Manus",
+      "BLOCKING": true,
+      "REQUIRED_EVIDENCE_OR_DOCUMENT": "OEM restraint interface definition"
+    },
+    {
+      "NODE": "ACCEPTANCE_CRITERIA",
+      "STATUS": "SOURCE_REQUIRED",
+      "CURRENT_VALUE_OR_NOTE": null,
+      "OWNER": "Peter",
+      "BLOCKING": true,
+      "REQUIRED_EVIDENCE_OR_DOCUMENT": "Approved project acceptance definition"
+    }
+  ],
+  "overall_status": "BLOCKED",
+  "cae_execution": false,
+  "physical_validation": false
+}

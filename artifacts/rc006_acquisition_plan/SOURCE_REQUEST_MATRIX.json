@@ -1,0 +1,306 @@
+{
+  "revision": "V7-RC-006-EA-ACQ",
+  "requests": [
+    {
+      "REQUEST_ID": "SUP-MAT-100",
+      "PART": "100",
+      "REQUEST": "Exact material designation/grade + density + CAE-relevant properties",
+      "ACCEPTABLE_EVIDENCE": [
+        "supplier/manufacturer datasheet",
+        "released material specification",
+        "MTR/CoA"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No generic substitution"
+    },
+    {
+      "REQUEST_ID": "SUP-MAT-110L",
+      "PART": "110L",
+      "REQUEST": "Exact material designation/grade + density + CAE-relevant properties",
+      "ACCEPTABLE_EVIDENCE": [
+        "supplier/manufacturer datasheet",
+        "released material specification",
+        "MTR/CoA"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No generic substitution"
+    },
+    {
+      "REQUEST_ID": "SUP-MAT-110R",
+      "PART": "110R",
+      "REQUEST": "Exact material designation/grade + density + CAE-relevant properties",
+      "ACCEPTABLE_EVIDENCE": [
+        "supplier/manufacturer datasheet",
+        "released material specification",
+        "MTR/CoA"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No generic substitution"
+    },
+    {
+      "REQUEST_ID": "SUP-MAT-120",
+      "PART": "120",
+      "REQUEST": "Exact material designation/grade + density + CAE-relevant properties",
+      "ACCEPTABLE_EVIDENCE": [
+        "supplier/manufacturer datasheet",
+        "released material specification",
+        "MTR/CoA"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No generic substitution"
+    },
+    {
+      "REQUEST_ID": "SUP-MAT-130L",
+      "PART": "130L",
+      "REQUEST": "Exact material designation/grade + density + CAE-relevant properties",
+      "ACCEPTABLE_EVIDENCE": [
+        "supplier/manufacturer datasheet",
+        "released material specification",
+        "MTR/CoA"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No generic substitution"
+    },
+    {
+      "REQUEST_ID": "SUP-MAT-130R",
+      "PART": "130R",
+      "REQUEST": "Exact material designation/grade + density + CAE-relevant properties",
+      "ACCEPTABLE_EVIDENCE": [
+        "supplier/manufacturer datasheet",
+        "released material specification",
+        "MTR/CoA"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No generic substitution"
+    },
+    {
+      "REQUEST_ID": "SUP-MAT-140",
+      "PART": "140",
+      "REQUEST": "Exact material designation/grade + density + CAE-relevant properties",
+      "ACCEPTABLE_EVIDENCE": [
+        "supplier/manufacturer datasheet",
+        "released material specification",
+        "MTR/CoA"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No generic substitution"
+    },
+    {
+      "REQUEST_ID": "SUP-MAT-150L",
+      "PART": "150L",
+      "REQUEST": "Exact material designation/grade + density + CAE-relevant properties",
+      "ACCEPTABLE_EVIDENCE": [
+        "supplier/manufacturer datasheet",
+        "released material specification",
+        "MTR/CoA"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No generic substitution"
+    },
+    {
+      "REQUEST_ID": "SUP-MAT-150R",
+      "PART": "150R",
+      "REQUEST": "Exact material designation/grade + density + CAE-relevant properties",
+      "ACCEPTABLE_EVIDENCE": [
+        "supplier/manufacturer datasheet",
+        "released material specification",
+        "MTR/CoA"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No generic substitution"
+    },
+    {
+      "REQUEST_ID": "SUP-MAT-160",
+      "PART": "160",
+      "REQUEST": "Exact material designation/grade + density + CAE-relevant properties",
+      "ACCEPTABLE_EVIDENCE": [
+        "supplier/manufacturer datasheet",
+        "released material specification",
+        "MTR/CoA"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No generic substitution"
+    },
+    {
+      "REQUEST_ID": "SUP-MAT-170",
+      "PART": "170",
+      "REQUEST": "Exact material designation/grade + density + CAE-relevant properties",
+      "ACCEPTABLE_EVIDENCE": [
+        "supplier/manufacturer datasheet",
+        "released material specification",
+        "MTR/CoA"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No generic substitution"
+    },
+    {
+      "REQUEST_ID": "SUP-MAT-180",
+      "PART": "180",
+      "REQUEST": "Exact material designation/grade + density + CAE-relevant properties",
+      "ACCEPTABLE_EVIDENCE": [
+        "supplier/manufacturer datasheet",
+        "released material specification",
+        "MTR/CoA"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No generic substitution"
+    },
+    {
+      "REQUEST_ID": "SUP-MAT-190",
+      "PART": "190",
+      "REQUEST": "Exact material designation/grade + density + CAE-relevant properties",
+      "ACCEPTABLE_EVIDENCE": [
+        "supplier/manufacturer datasheet",
+        "released material specification",
+        "MTR/CoA"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No generic substitution"
+    },
+    {
+      "REQUEST_ID": "SUP-MAT-200",
+      "PART": "200",
+      "REQUEST": "Exact material designation/grade + density + CAE-relevant properties",
+      "ACCEPTABLE_EVIDENCE": [
+        "supplier/manufacturer datasheet",
+        "released material specification",
+        "MTR/CoA"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No generic substitution"
+    },
+    {
+      "REQUEST_ID": "SUP-MAT-210",
+      "PART": "210",
+      "REQUEST": "Exact material designation/grade + density + CAE-relevant properties",
+      "ACCEPTABLE_EVIDENCE": [
+        "supplier/manufacturer datasheet",
+        "released material specification",
+        "MTR/CoA"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No generic substitution"
+    },
+    {
+      "REQUEST_ID": "SUP-MAT-J",
+      "PART": "J",
+      "REQUEST": "Exact material designation/grade + density + CAE-relevant properties",
+      "ACCEPTABLE_EVIDENCE": [
+        "supplier/manufacturer datasheet",
+        "released material specification",
+        "MTR/CoA"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No generic substitution"
+    },
+    {
+      "REQUEST_ID": "SRC-JF-IF-R4-01",
+      "INTERFACE_ID": "IF-R4-01",
+      "REQUEST": "Fastener/joint identity and controlled installation parameters where applicable",
+      "ACCEPTABLE_EVIDENCE": [
+        "released drawing/BOM/PMI",
+        "supplier specification",
+        "joint test report"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No guessed preload/torque/grade"
+    },
+    {
+      "REQUEST_ID": "SRC-JF-IF-R4-02",
+      "INTERFACE_ID": "IF-R4-02",
+      "REQUEST": "Fastener/joint identity and controlled installation parameters where applicable",
+      "ACCEPTABLE_EVIDENCE": [
+        "released drawing/BOM/PMI",
+        "supplier specification",
+        "joint test report"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No guessed preload/torque/grade"
+    },
+    {
+      "REQUEST_ID": "SRC-JF-IF-R4-03",
+      "INTERFACE_ID": "IF-R4-03",
+      "REQUEST": "Fastener/joint identity and controlled installation parameters where applicable",
+      "ACCEPTABLE_EVIDENCE": [
+        "released drawing/BOM/PMI",
+        "supplier specification",
+        "joint test report"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No guessed preload/torque/grade"
+    },
+    {
+      "REQUEST_ID": "SRC-JF-IF-R4-04",
+      "INTERFACE_ID": "IF-R4-04",
+      "REQUEST": "Fastener/joint identity and controlled installation parameters where applicable",
+      "ACCEPTABLE_EVIDENCE": [
+        "released drawing/BOM/PMI",
+        "supplier specification",
+        "joint test report"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No guessed preload/torque/grade"
+    },
+    {
+      "REQUEST_ID": "SRC-JF-IF-R4-05",
+      "INTERFACE_ID": "IF-R4-05",
+      "REQUEST": "Fastener/joint identity and controlled installation parameters where applicable",
+      "ACCEPTABLE_EVIDENCE": [
+        "released drawing/BOM/PMI",
+        "supplier specification",
+        "joint test report"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No guessed preload/torque/grade"
+    },
+    {
+      "REQUEST_ID": "SRC-JF-IF-R4-06",
+      "INTERFACE_ID": "IF-R4-06",
+      "REQUEST": "Fastener/joint identity and controlled installation parameters where applicable",
+      "ACCEPTABLE_EVIDENCE": [
+        "released drawing/BOM/PMI",
+        "supplier specification",
+        "joint test report"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No guessed preload/torque/grade"
+    },
+    {
+      "REQUEST_ID": "SRC-JF-IF-R4-07",
+      "INTERFACE_ID": "IF-R4-07",
+      "REQUEST": "Fastener/joint identity and controlled installation parameters where applicable",
+      "ACCEPTABLE_EVIDENCE": [
+        "released drawing/BOM/PMI",
+        "supplier specification",
+        "joint test report"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No guessed preload/torque/grade"
+    },
+    {
+      "REQUEST_ID": "SRC-JF-IF-R4-08",
+      "INTERFACE_ID": "IF-R4-08",
+      "REQUEST": "Fastener/joint identity and controlled installation parameters where applicable",
+      "ACCEPTABLE_EVIDENCE": [
+        "released drawing/BOM/PMI",
+        "supplier specification",
+        "joint test report"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No guessed preload/torque/grade"
+    },
+    {
+      "REQUEST_ID": "SRC-JF-IF-R4-09",
+      "INTERFACE_ID": "IF-R4-09",
+      "REQUEST": "Fastener/joint identity and controlled installation parameters where applicable",
+      "ACCEPTABLE_EVIDENCE": [
+        "released drawing/BOM/PMI",
+        "supplier specification",
+        "joint test report"
+      ],
+      "STATUS": "OPEN",
+      "PROHIBITION": "No guessed preload/torque/grade"
+    }
+  ],
+  "external_acquisition_performed": false
+}

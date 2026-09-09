@@ -1,0 +1,979 @@
+{
+  "revision": "V7-RC-006-EA-ACQ",
+  "scope": "Evidence acquisition only; no design/CAD/CAE changes",
+  "entries": [
+    {
+      "BLOCKER_ID": "B-MAT-100",
+      "PARAMETER": "Material identity / grade / density / CAE properties — part 100",
+      "REQUIRED_EVIDENCE": [
+        "released engineering material specification",
+        "supplier/manufacturer datasheet tied to exact grade",
+        "MTR/CoA when material certification is required"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "controlled engineering drawing/BOM",
+        "manufacturer/supplier specification",
+        "MTR/CoA",
+        "controlled CAD material metadata only if tied to released material designation"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / supplier-manufacturer of exact designated material",
+      "APPLICABILITY_REQUIREMENT": "Exact V7 part 100; exact revision/configuration must match intended current baseline",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Document evidence with designation, grade, standard, density and relevant properties; no inferred density",
+      "ACCEPTANCE_CRITERIA": "Exact part-specific identity and traceable property source; no generic substitution",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Obtain controlled material evidence for exact part/configuration",
+      "OWNER": "Peter/Manus acquisition; supplier/manufacturer evidence source",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-MAT-110L",
+      "PARAMETER": "Material identity / grade / density / CAE properties — part 110L",
+      "REQUIRED_EVIDENCE": [
+        "released engineering material specification",
+        "supplier/manufacturer datasheet tied to exact grade",
+        "MTR/CoA when material certification is required"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "controlled engineering drawing/BOM",
+        "manufacturer/supplier specification",
+        "MTR/CoA",
+        "controlled CAD material metadata only if tied to released material designation"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / supplier-manufacturer of exact designated material",
+      "APPLICABILITY_REQUIREMENT": "Exact V7 part 110L; exact revision/configuration must match intended current baseline",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Document evidence with designation, grade, standard, density and relevant properties; no inferred density",
+      "ACCEPTANCE_CRITERIA": "Exact part-specific identity and traceable property source; no generic substitution",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Obtain controlled material evidence for exact part/configuration",
+      "OWNER": "Peter/Manus acquisition; supplier/manufacturer evidence source",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-MAT-110R",
+      "PARAMETER": "Material identity / grade / density / CAE properties — part 110R",
+      "REQUIRED_EVIDENCE": [
+        "released engineering material specification",
+        "supplier/manufacturer datasheet tied to exact grade",
+        "MTR/CoA when material certification is required"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "controlled engineering drawing/BOM",
+        "manufacturer/supplier specification",
+        "MTR/CoA",
+        "controlled CAD material metadata only if tied to released material designation"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / supplier-manufacturer of exact designated material",
+      "APPLICABILITY_REQUIREMENT": "Exact V7 part 110R; exact revision/configuration must match intended current baseline",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Document evidence with designation, grade, standard, density and relevant properties; no inferred density",
+      "ACCEPTANCE_CRITERIA": "Exact part-specific identity and traceable property source; no generic substitution",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Obtain controlled material evidence for exact part/configuration",
+      "OWNER": "Peter/Manus acquisition; supplier/manufacturer evidence source",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-MAT-120",
+      "PARAMETER": "Material identity / grade / density / CAE properties — part 120",
+      "REQUIRED_EVIDENCE": [
+        "released engineering material specification",
+        "supplier/manufacturer datasheet tied to exact grade",
+        "MTR/CoA when material certification is required"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "controlled engineering drawing/BOM",
+        "manufacturer/supplier specification",
+        "MTR/CoA",
+        "controlled CAD material metadata only if tied to released material designation"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / supplier-manufacturer of exact designated material",
+      "APPLICABILITY_REQUIREMENT": "Exact V7 part 120; exact revision/configuration must match intended current baseline",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Document evidence with designation, grade, standard, density and relevant properties; no inferred density",
+      "ACCEPTANCE_CRITERIA": "Exact part-specific identity and traceable property source; no generic substitution",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Obtain controlled material evidence for exact part/configuration",
+      "OWNER": "Peter/Manus acquisition; supplier/manufacturer evidence source",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-MAT-130L",
+      "PARAMETER": "Material identity / grade / density / CAE properties — part 130L",
+      "REQUIRED_EVIDENCE": [
+        "released engineering material specification",
+        "supplier/manufacturer datasheet tied to exact grade",
+        "MTR/CoA when material certification is required"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "controlled engineering drawing/BOM",
+        "manufacturer/supplier specification",
+        "MTR/CoA",
+        "controlled CAD material metadata only if tied to released material designation"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / supplier-manufacturer of exact designated material",
+      "APPLICABILITY_REQUIREMENT": "Exact V7 part 130L; exact revision/configuration must match intended current baseline",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Document evidence with designation, grade, standard, density and relevant properties; no inferred density",
+      "ACCEPTANCE_CRITERIA": "Exact part-specific identity and traceable property source; no generic substitution",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Obtain controlled material evidence for exact part/configuration",
+      "OWNER": "Peter/Manus acquisition; supplier/manufacturer evidence source",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-MAT-130R",
+      "PARAMETER": "Material identity / grade / density / CAE properties — part 130R",
+      "REQUIRED_EVIDENCE": [
+        "released engineering material specification",
+        "supplier/manufacturer datasheet tied to exact grade",
+        "MTR/CoA when material certification is required"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "controlled engineering drawing/BOM",
+        "manufacturer/supplier specification",
+        "MTR/CoA",
+        "controlled CAD material metadata only if tied to released material designation"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / supplier-manufacturer of exact designated material",
+      "APPLICABILITY_REQUIREMENT": "Exact V7 part 130R; exact revision/configuration must match intended current baseline",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Document evidence with designation, grade, standard, density and relevant properties; no inferred density",
+      "ACCEPTANCE_CRITERIA": "Exact part-specific identity and traceable property source; no generic substitution",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Obtain controlled material evidence for exact part/configuration",
+      "OWNER": "Peter/Manus acquisition; supplier/manufacturer evidence source",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-MAT-140",
+      "PARAMETER": "Material identity / grade / density / CAE properties — part 140",
+      "REQUIRED_EVIDENCE": [
+        "released engineering material specification",
+        "supplier/manufacturer datasheet tied to exact grade",
+        "MTR/CoA when material certification is required"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "controlled engineering drawing/BOM",
+        "manufacturer/supplier specification",
+        "MTR/CoA",
+        "controlled CAD material metadata only if tied to released material designation"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / supplier-manufacturer of exact designated material",
+      "APPLICABILITY_REQUIREMENT": "Exact V7 part 140; exact revision/configuration must match intended current baseline",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Document evidence with designation, grade, standard, density and relevant properties; no inferred density",
+      "ACCEPTANCE_CRITERIA": "Exact part-specific identity and traceable property source; no generic substitution",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Obtain controlled material evidence for exact part/configuration",
+      "OWNER": "Peter/Manus acquisition; supplier/manufacturer evidence source",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-MAT-150L",
+      "PARAMETER": "Material identity / grade / density / CAE properties — part 150L",
+      "REQUIRED_EVIDENCE": [
+        "released engineering material specification",
+        "supplier/manufacturer datasheet tied to exact grade",
+        "MTR/CoA when material certification is required"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "controlled engineering drawing/BOM",
+        "manufacturer/supplier specification",
+        "MTR/CoA",
+        "controlled CAD material metadata only if tied to released material designation"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / supplier-manufacturer of exact designated material",
+      "APPLICABILITY_REQUIREMENT": "Exact V7 part 150L; exact revision/configuration must match intended current baseline",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Document evidence with designation, grade, standard, density and relevant properties; no inferred density",
+      "ACCEPTANCE_CRITERIA": "Exact part-specific identity and traceable property source; no generic substitution",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Obtain controlled material evidence for exact part/configuration",
+      "OWNER": "Peter/Manus acquisition; supplier/manufacturer evidence source",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-MAT-150R",
+      "PARAMETER": "Material identity / grade / density / CAE properties — part 150R",
+      "REQUIRED_EVIDENCE": [
+        "released engineering material specification",
+        "supplier/manufacturer datasheet tied to exact grade",
+        "MTR/CoA when material certification is required"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "controlled engineering drawing/BOM",
+        "manufacturer/supplier specification",
+        "MTR/CoA",
+        "controlled CAD material metadata only if tied to released material designation"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / supplier-manufacturer of exact designated material",
+      "APPLICABILITY_REQUIREMENT": "Exact V7 part 150R; exact revision/configuration must match intended current baseline",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Document evidence with designation, grade, standard, density and relevant properties; no inferred density",
+      "ACCEPTANCE_CRITERIA": "Exact part-specific identity and traceable property source; no generic substitution",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Obtain controlled material evidence for exact part/configuration",
+      "OWNER": "Peter/Manus acquisition; supplier/manufacturer evidence source",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-MAT-160",
+      "PARAMETER": "Material identity / grade / density / CAE properties — part 160",
+      "REQUIRED_EVIDENCE": [
+        "released engineering material specification",
+        "supplier/manufacturer datasheet tied to exact grade",
+        "MTR/CoA when material certification is required"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "controlled engineering drawing/BOM",
+        "manufacturer/supplier specification",
+        "MTR/CoA",
+        "controlled CAD material metadata only if tied to released material designation"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / supplier-manufacturer of exact designated material",
+      "APPLICABILITY_REQUIREMENT": "Exact V7 part 160; exact revision/configuration must match intended current baseline",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Document evidence with designation, grade, standard, density and relevant properties; no inferred density",
+      "ACCEPTANCE_CRITERIA": "Exact part-specific identity and traceable property source; no generic substitution",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Obtain controlled material evidence for exact part/configuration",
+      "OWNER": "Peter/Manus acquisition; supplier/manufacturer evidence source",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-MAT-170",
+      "PARAMETER": "Material identity / grade / density / CAE properties — part 170",
+      "REQUIRED_EVIDENCE": [
+        "released engineering material specification",
+        "supplier/manufacturer datasheet tied to exact grade",
+        "MTR/CoA when material certification is required"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "controlled engineering drawing/BOM",
+        "manufacturer/supplier specification",
+        "MTR/CoA",
+        "controlled CAD material metadata only if tied to released material designation"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / supplier-manufacturer of exact designated material",
+      "APPLICABILITY_REQUIREMENT": "Exact V7 part 170; exact revision/configuration must match intended current baseline",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Document evidence with designation, grade, standard, density and relevant properties; no inferred density",
+      "ACCEPTANCE_CRITERIA": "Exact part-specific identity and traceable property source; no generic substitution",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Obtain controlled material evidence for exact part/configuration",
+      "OWNER": "Peter/Manus acquisition; supplier/manufacturer evidence source",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-MAT-180",
+      "PARAMETER": "Material identity / grade / density / CAE properties — part 180",
+      "REQUIRED_EVIDENCE": [
+        "released engineering material specification",
+        "supplier/manufacturer datasheet tied to exact grade",
+        "MTR/CoA when material certification is required"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "controlled engineering drawing/BOM",
+        "manufacturer/supplier specification",
+        "MTR/CoA",
+        "controlled CAD material metadata only if tied to released material designation"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / supplier-manufacturer of exact designated material",
+      "APPLICABILITY_REQUIREMENT": "Exact V7 part 180; exact revision/configuration must match intended current baseline",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Document evidence with designation, grade, standard, density and relevant properties; no inferred density",
+      "ACCEPTANCE_CRITERIA": "Exact part-specific identity and traceable property source; no generic substitution",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Obtain controlled material evidence for exact part/configuration",
+      "OWNER": "Peter/Manus acquisition; supplier/manufacturer evidence source",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-MAT-190",
+      "PARAMETER": "Material identity / grade / density / CAE properties — part 190",
+      "REQUIRED_EVIDENCE": [
+        "released engineering material specification",
+        "supplier/manufacturer datasheet tied to exact grade",
+        "MTR/CoA when material certification is required"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "controlled engineering drawing/BOM",
+        "manufacturer/supplier specification",
+        "MTR/CoA",
+        "controlled CAD material metadata only if tied to released material designation"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / supplier-manufacturer of exact designated material",
+      "APPLICABILITY_REQUIREMENT": "Exact V7 part 190; exact revision/configuration must match intended current baseline",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Document evidence with designation, grade, standard, density and relevant properties; no inferred density",
+      "ACCEPTANCE_CRITERIA": "Exact part-specific identity and traceable property source; no generic substitution",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Obtain controlled material evidence for exact part/configuration",
+      "OWNER": "Peter/Manus acquisition; supplier/manufacturer evidence source",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-MAT-200",
+      "PARAMETER": "Material identity / grade / density / CAE properties — part 200",
+      "REQUIRED_EVIDENCE": [
+        "released engineering material specification",
+        "supplier/manufacturer datasheet tied to exact grade",
+        "MTR/CoA when material certification is required"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "controlled engineering drawing/BOM",
+        "manufacturer/supplier specification",
+        "MTR/CoA",
+        "controlled CAD material metadata only if tied to released material designation"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / supplier-manufacturer of exact designated material",
+      "APPLICABILITY_REQUIREMENT": "Exact V7 part 200; exact revision/configuration must match intended current baseline",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Document evidence with designation, grade, standard, density and relevant properties; no inferred density",
+      "ACCEPTANCE_CRITERIA": "Exact part-specific identity and traceable property source; no generic substitution",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Obtain controlled material evidence for exact part/configuration",
+      "OWNER": "Peter/Manus acquisition; supplier/manufacturer evidence source",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-MAT-210",
+      "PARAMETER": "Material identity / grade / density / CAE properties — part 210",
+      "REQUIRED_EVIDENCE": [
+        "released engineering material specification",
+        "supplier/manufacturer datasheet tied to exact grade",
+        "MTR/CoA when material certification is required"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "controlled engineering drawing/BOM",
+        "manufacturer/supplier specification",
+        "MTR/CoA",
+        "controlled CAD material metadata only if tied to released material designation"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / supplier-manufacturer of exact designated material",
+      "APPLICABILITY_REQUIREMENT": "Exact V7 part 210; exact revision/configuration must match intended current baseline",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Document evidence with designation, grade, standard, density and relevant properties; no inferred density",
+      "ACCEPTANCE_CRITERIA": "Exact part-specific identity and traceable property source; no generic substitution",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Obtain controlled material evidence for exact part/configuration",
+      "OWNER": "Peter/Manus acquisition; supplier/manufacturer evidence source",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-MAT-J",
+      "PARAMETER": "Material identity / grade / density / CAE properties — part J",
+      "REQUIRED_EVIDENCE": [
+        "released engineering material specification",
+        "supplier/manufacturer datasheet tied to exact grade",
+        "MTR/CoA when material certification is required"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "controlled engineering drawing/BOM",
+        "manufacturer/supplier specification",
+        "MTR/CoA",
+        "controlled CAD material metadata only if tied to released material designation"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / supplier-manufacturer of exact designated material",
+      "APPLICABILITY_REQUIREMENT": "Exact V7 part J; exact revision/configuration must match intended current baseline",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Document evidence with designation, grade, standard, density and relevant properties; no inferred density",
+      "ACCEPTANCE_CRITERIA": "Exact part-specific identity and traceable property source; no generic substitution",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Obtain controlled material evidence for exact part/configuration",
+      "OWNER": "Peter/Manus acquisition; supplier/manufacturer evidence source",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-MCI",
+      "PARAMETER": "Component/assembly mass, CG, inertia tensor",
+      "REQUIRED_EVIDENCE": [
+        "authoritative material + density mapping",
+        "geometry artifact hash",
+        "calculation record or physical metrology for correlation"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "released material specification",
+        "measured density",
+        "authoritative CAD geometry",
+        "physical mass/CG/inertia measurement"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority + controlled material source; physical metrology for hardware validation",
+      "APPLICABILITY_REQUIREMENT": "Exact V7 configuration; same geometry/material assignment and reference frame",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Derive only after material+density controlled; physical measurement remains separate evidence class",
+      "ACCEPTANCE_CRITERIA": "No fake mass; every value traceable to geometry/material inputs and calculation or measurement method",
+      "CURRENT_STATUS": "BLOCKED",
+      "NEXT_ACQUISITION_ACTION": "Close B-MAT first; then perform legitimate derivation and/or hardware metrology",
+      "OWNER": "JON/Manus",
+      "BLOCKING_LEVEL": "P0→CAE"
+    },
+    {
+      "BLOCKER_ID": "B-JF-IF-R4-01",
+      "PARAMETER": "Fastener/joint evidence — IF-R4-01 (120→130L)",
+      "REQUIRED_EVIDENCE": [
+        "controlled assembly drawing/BOM",
+        "fastener identity/size/grade",
+        "thread/washer/locking method",
+        "torque/preload/clamp-load specification if applicable",
+        "physical joint characterization where source evidence is insufficient"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "released drawing/PMI",
+        "controlled BOM",
+        "supplier fastener specification",
+        "approved joint engineering specification",
+        "controlled test report"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / OEM / approved supplier / test laboratory as applicable",
+      "APPLICABILITY_REQUIREMENT": "Exact interface IF-R4-01 and current V7 configuration",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Controlled document or traceable test; model constraints are not physical fastener evidence",
+      "ACCEPTANCE_CRITERIA": "Identity and required clamp/preload/torque/load-path evidence traceable; otherwise remain OPEN",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Recover controlled interface/fastener evidence; test where source does not define physical behavior",
+      "OWNER": "Peter/Manus + supplier/OEM as applicable",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-JF-IF-R4-02",
+      "PARAMETER": "Fastener/joint evidence — IF-R4-02 (120→130R)",
+      "REQUIRED_EVIDENCE": [
+        "controlled assembly drawing/BOM",
+        "fastener identity/size/grade",
+        "thread/washer/locking method",
+        "torque/preload/clamp-load specification if applicable",
+        "physical joint characterization where source evidence is insufficient"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "released drawing/PMI",
+        "controlled BOM",
+        "supplier fastener specification",
+        "approved joint engineering specification",
+        "controlled test report"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / OEM / approved supplier / test laboratory as applicable",
+      "APPLICABILITY_REQUIREMENT": "Exact interface IF-R4-02 and current V7 configuration",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Controlled document or traceable test; model constraints are not physical fastener evidence",
+      "ACCEPTANCE_CRITERIA": "Identity and required clamp/preload/torque/load-path evidence traceable; otherwise remain OPEN",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Recover controlled interface/fastener evidence; test where source does not define physical behavior",
+      "OWNER": "Peter/Manus + supplier/OEM as applicable",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-JF-IF-R4-03",
+      "PARAMETER": "Fastener/joint evidence — IF-R4-03 (120→140)",
+      "REQUIRED_EVIDENCE": [
+        "controlled assembly drawing/BOM",
+        "fastener identity/size/grade",
+        "thread/washer/locking method",
+        "torque/preload/clamp-load specification if applicable",
+        "physical joint characterization where source evidence is insufficient"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "released drawing/PMI",
+        "controlled BOM",
+        "supplier fastener specification",
+        "approved joint engineering specification",
+        "controlled test report"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / OEM / approved supplier / test laboratory as applicable",
+      "APPLICABILITY_REQUIREMENT": "Exact interface IF-R4-03 and current V7 configuration",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Controlled document or traceable test; model constraints are not physical fastener evidence",
+      "ACCEPTANCE_CRITERIA": "Identity and required clamp/preload/torque/load-path evidence traceable; otherwise remain OPEN",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Recover controlled interface/fastener evidence; test where source does not define physical behavior",
+      "OWNER": "Peter/Manus + supplier/OEM as applicable",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-JF-IF-R4-04",
+      "PARAMETER": "Fastener/joint evidence — IF-R4-04 (120→200)",
+      "REQUIRED_EVIDENCE": [
+        "controlled assembly drawing/BOM",
+        "fastener identity/size/grade",
+        "thread/washer/locking method",
+        "torque/preload/clamp-load specification if applicable",
+        "physical joint characterization where source evidence is insufficient"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "released drawing/PMI",
+        "controlled BOM",
+        "supplier fastener specification",
+        "approved joint engineering specification",
+        "controlled test report"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / OEM / approved supplier / test laboratory as applicable",
+      "APPLICABILITY_REQUIREMENT": "Exact interface IF-R4-04 and current V7 configuration",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Controlled document or traceable test; model constraints are not physical fastener evidence",
+      "ACCEPTANCE_CRITERIA": "Identity and required clamp/preload/torque/load-path evidence traceable; otherwise remain OPEN",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Recover controlled interface/fastener evidence; test where source does not define physical behavior",
+      "OWNER": "Peter/Manus + supplier/OEM as applicable",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-JF-IF-R4-05",
+      "PARAMETER": "Fastener/joint evidence — IF-R4-05 (130L→140)",
+      "REQUIRED_EVIDENCE": [
+        "controlled assembly drawing/BOM",
+        "fastener identity/size/grade",
+        "thread/washer/locking method",
+        "torque/preload/clamp-load specification if applicable",
+        "physical joint characterization where source evidence is insufficient"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "released drawing/PMI",
+        "controlled BOM",
+        "supplier fastener specification",
+        "approved joint engineering specification",
+        "controlled test report"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / OEM / approved supplier / test laboratory as applicable",
+      "APPLICABILITY_REQUIREMENT": "Exact interface IF-R4-05 and current V7 configuration",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Controlled document or traceable test; model constraints are not physical fastener evidence",
+      "ACCEPTANCE_CRITERIA": "Identity and required clamp/preload/torque/load-path evidence traceable; otherwise remain OPEN",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Recover controlled interface/fastener evidence; test where source does not define physical behavior",
+      "OWNER": "Peter/Manus + supplier/OEM as applicable",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-JF-IF-R4-06",
+      "PARAMETER": "Fastener/joint evidence — IF-R4-06 (130R→140)",
+      "REQUIRED_EVIDENCE": [
+        "controlled assembly drawing/BOM",
+        "fastener identity/size/grade",
+        "thread/washer/locking method",
+        "torque/preload/clamp-load specification if applicable",
+        "physical joint characterization where source evidence is insufficient"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "released drawing/PMI",
+        "controlled BOM",
+        "supplier fastener specification",
+        "approved joint engineering specification",
+        "controlled test report"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / OEM / approved supplier / test laboratory as applicable",
+      "APPLICABILITY_REQUIREMENT": "Exact interface IF-R4-06 and current V7 configuration",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Controlled document or traceable test; model constraints are not physical fastener evidence",
+      "ACCEPTANCE_CRITERIA": "Identity and required clamp/preload/torque/load-path evidence traceable; otherwise remain OPEN",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Recover controlled interface/fastener evidence; test where source does not define physical behavior",
+      "OWNER": "Peter/Manus + supplier/OEM as applicable",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-JF-IF-R4-07",
+      "PARAMETER": "Fastener/joint evidence — IF-R4-07 (140→160)",
+      "REQUIRED_EVIDENCE": [
+        "controlled assembly drawing/BOM",
+        "fastener identity/size/grade",
+        "thread/washer/locking method",
+        "torque/preload/clamp-load specification if applicable",
+        "physical joint characterization where source evidence is insufficient"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "released drawing/PMI",
+        "controlled BOM",
+        "supplier fastener specification",
+        "approved joint engineering specification",
+        "controlled test report"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / OEM / approved supplier / test laboratory as applicable",
+      "APPLICABILITY_REQUIREMENT": "Exact interface IF-R4-07 and current V7 configuration",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Controlled document or traceable test; model constraints are not physical fastener evidence",
+      "ACCEPTANCE_CRITERIA": "Identity and required clamp/preload/torque/load-path evidence traceable; otherwise remain OPEN",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Recover controlled interface/fastener evidence; test where source does not define physical behavior",
+      "OWNER": "Peter/Manus + supplier/OEM as applicable",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-JF-IF-R4-08",
+      "PARAMETER": "Fastener/joint evidence — IF-R4-08 (150L→160)",
+      "REQUIRED_EVIDENCE": [
+        "controlled assembly drawing/BOM",
+        "fastener identity/size/grade",
+        "thread/washer/locking method",
+        "torque/preload/clamp-load specification if applicable",
+        "physical joint characterization where source evidence is insufficient"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "released drawing/PMI",
+        "controlled BOM",
+        "supplier fastener specification",
+        "approved joint engineering specification",
+        "controlled test report"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / OEM / approved supplier / test laboratory as applicable",
+      "APPLICABILITY_REQUIREMENT": "Exact interface IF-R4-08 and current V7 configuration",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Controlled document or traceable test; model constraints are not physical fastener evidence",
+      "ACCEPTANCE_CRITERIA": "Identity and required clamp/preload/torque/load-path evidence traceable; otherwise remain OPEN",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Recover controlled interface/fastener evidence; test where source does not define physical behavior",
+      "OWNER": "Peter/Manus + supplier/OEM as applicable",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-JF-IF-R4-09",
+      "PARAMETER": "Fastener/joint evidence — IF-R4-09 (160→J)",
+      "REQUIRED_EVIDENCE": [
+        "controlled assembly drawing/BOM",
+        "fastener identity/size/grade",
+        "thread/washer/locking method",
+        "torque/preload/clamp-load specification if applicable",
+        "physical joint characterization where source evidence is insufficient"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "released drawing/PMI",
+        "controlled BOM",
+        "supplier fastener specification",
+        "approved joint engineering specification",
+        "controlled test report"
+      ],
+      "SOURCE_AUTHORITY": "Engineering authority / OEM / approved supplier / test laboratory as applicable",
+      "APPLICABILITY_REQUIREMENT": "Exact interface IF-R4-09 and current V7 configuration",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Controlled document or traceable test; model constraints are not physical fastener evidence",
+      "ACCEPTANCE_CRITERIA": "Identity and required clamp/preload/torque/load-path evidence traceable; otherwise remain OPEN",
+      "CURRENT_STATUS": "SOURCE_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Recover controlled interface/fastener evidence; test where source does not define physical behavior",
+      "OWNER": "Peter/Manus + supplier/OEM as applicable",
+      "BLOCKING_LEVEL": "P0"
+    },
+    {
+      "BLOCKER_ID": "B-ABS",
+      "PARAMETER": "130L/130R absorber characterization",
+      "REQUIRED_EVIDENCE": [
+        "F-x",
+        "F-v where applicable",
+        "hysteresis/energy",
+        "rate sensitivity",
+        "temperature sensitivity",
+        "cycling/repeatability",
+        "L/R matching",
+        "tolerance sensitivity",
+        "end-stop behavior"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "controlled component test report on exact serialized unit/configuration",
+        "supplier characterization tied to exact unit/design"
+      ],
+      "SOURCE_AUTHORITY": "Approved test laboratory / component supplier / engineering test authority",
+      "APPLICABILITY_REQUIREMENT": "Exact 130L/130R intended module/configuration; fixture and instrumentation documented",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Raw force/displacement/time data and derived curves; calibrated instrumentation",
+      "ACCEPTANCE_CRITERIA": "Test evidence complete and traceable; no synthesized force law",
+      "CURRENT_STATUS": "TEST_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Execute approved absorber characterization",
+      "OWNER": "Manus test execution",
+      "BLOCKING_LEVEL": "P0→CAE"
+    },
+    {
+      "BLOCKER_ID": "B-L170",
+      "PARAMETER": "170 lock hardware behavior",
+      "REQUIRED_EVIDENCE": [
+        "engagement",
+        "retention",
+        "partial engagement",
+        "premature/delayed release",
+        "jam",
+        "unintended release",
+        "reset",
+        "fault containment"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "controlled hardware test report on exact lock configuration",
+        "approved supplier characterization"
+      ],
+      "SOURCE_AUTHORITY": "Approved test laboratory / supplier / engineering test authority",
+      "APPLICABILITY_REQUIREMENT": "Exact 170 lock configuration",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Physical state/load/displacement evidence with fixture and instrumentation traceability",
+      "ACCEPTANCE_CRITERIA": "Each required behavior supported by physical evidence or remains OPEN",
+      "CURRENT_STATUS": "TEST_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Prepare and execute controlled 170 test matrix",
+      "OWNER": "Manus test execution",
+      "BLOCKING_LEVEL": "P0→CAE"
+    },
+    {
+      "BLOCKER_ID": "B-RB180",
+      "PARAMETER": "180 rebound-control physical behavior",
+      "REQUIRED_EVIDENCE": [
+        "reverse travel",
+        "reverse velocity",
+        "reverse acceleration",
+        "returned energy",
+        "stop behavior",
+        "reset",
+        "failure modes"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "controlled component/system test report",
+        "supplier characterization tied to exact design"
+      ],
+      "SOURCE_AUTHORITY": "Approved test laboratory / supplier / engineering test authority",
+      "APPLICABILITY_REQUIREMENT": "Exact 180 configuration and interface",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Synchronized position/velocity/acceleration/load channels",
+      "ACCEPTANCE_CRITERIA": "Physical evidence for defined behavior; no assumed damping/friction",
+      "CURRENT_STATUS": "TEST_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Execute controlled rebound characterization",
+      "OWNER": "Manus test execution",
+      "BLOCKING_LEVEL": "P0→CAE"
+    },
+    {
+      "BLOCKER_ID": "B-VEH-VEHICLE-DATUM",
+      "PARAMETER": "vehicle_datum",
+      "REQUIRED_EVIDENCE": [
+        "Exact OEM/package coordinate frame and transform"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "OEM/customer vehicle package",
+        "vehicle CAD/package data",
+        "approved vehicle test data"
+      ],
+      "SOURCE_AUTHORITY": "OEM/customer vehicle authority",
+      "APPLICABILITY_REQUIREMENT": "Exact target vehicle/platform/configuration and revision",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Controlled file/document with revision and vehicle applicability; confidentiality restrictions recorded",
+      "ACCEPTANCE_CRITERIA": "Exact vehicle-specific value/source; generic vehicle data rejected",
+      "CURRENT_STATUS": "OEM_INPUT_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Provide exact OEM/customer input for target vehicle/platform; no generic substitution",
+      "OWNER": "Peter/Manus + OEM/customer",
+      "BLOCKING_LEVEL": "P1"
+    },
+    {
+      "BLOCKER_ID": "B-VEH-SEAT-HARDPOINTS",
+      "PARAMETER": "seat_hardpoints",
+      "REQUIRED_EVIDENCE": [
+        "Exact mounting point XYZ + tolerance"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "OEM/customer vehicle package",
+        "vehicle CAD/package data",
+        "approved vehicle test data"
+      ],
+      "SOURCE_AUTHORITY": "OEM/customer vehicle authority",
+      "APPLICABILITY_REQUIREMENT": "Exact target vehicle/platform/configuration and revision",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Controlled file/document with revision and vehicle applicability; confidentiality restrictions recorded",
+      "ACCEPTANCE_CRITERIA": "Exact vehicle-specific value/source; generic vehicle data rejected",
+      "CURRENT_STATUS": "OEM_INPUT_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Provide exact OEM/customer input for target vehicle/platform; no generic substitution",
+      "OWNER": "Peter/Manus + OEM/customer",
+      "BLOCKING_LEVEL": "P1"
+    },
+    {
+      "BLOCKER_ID": "B-VEH-RESTRAINT-ANCHOR-POINTS",
+      "PARAMETER": "restraint_anchor_points",
+      "REQUIRED_EVIDENCE": [
+        "Exact structural anchor XYZ + load path"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "OEM/customer vehicle package",
+        "vehicle CAD/package data",
+        "approved vehicle test data"
+      ],
+      "SOURCE_AUTHORITY": "OEM/customer vehicle authority",
+      "APPLICABILITY_REQUIREMENT": "Exact target vehicle/platform/configuration and revision",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Controlled file/document with revision and vehicle applicability; confidentiality restrictions recorded",
+      "ACCEPTANCE_CRITERIA": "Exact vehicle-specific value/source; generic vehicle data rejected",
+      "CURRENT_STATUS": "OEM_INPUT_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Provide exact OEM/customer input for target vehicle/platform; no generic substitution",
+      "OWNER": "Peter/Manus + OEM/customer",
+      "BLOCKING_LEVEL": "P1"
+    },
+    {
+      "BLOCKER_ID": "B-VEH-H-POINT",
+      "PARAMETER": "H_point",
+      "REQUIRED_EVIDENCE": [
+        "Authoritative H-point definition for intended vehicle/configuration"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "OEM/customer vehicle package",
+        "vehicle CAD/package data",
+        "approved vehicle test data"
+      ],
+      "SOURCE_AUTHORITY": "OEM/customer vehicle authority",
+      "APPLICABILITY_REQUIREMENT": "Exact target vehicle/platform/configuration and revision",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Controlled file/document with revision and vehicle applicability; confidentiality restrictions recorded",
+      "ACCEPTANCE_CRITERIA": "Exact vehicle-specific value/source; generic vehicle data rejected",
+      "CURRENT_STATUS": "OEM_INPUT_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Provide exact OEM/customer input for target vehicle/platform; no generic substitution",
+      "OWNER": "Peter/Manus + OEM/customer",
+      "BLOCKING_LEVEL": "P1"
+    },
+    {
+      "BLOCKER_ID": "B-VEH-CLEARANCES",
+      "PARAMETER": "clearances",
+      "REQUIRED_EVIDENCE": [
+        "Vehicle-package clearance envelope"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "OEM/customer vehicle package",
+        "vehicle CAD/package data",
+        "approved vehicle test data"
+      ],
+      "SOURCE_AUTHORITY": "OEM/customer vehicle authority",
+      "APPLICABILITY_REQUIREMENT": "Exact target vehicle/platform/configuration and revision",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Controlled file/document with revision and vehicle applicability; confidentiality restrictions recorded",
+      "ACCEPTANCE_CRITERIA": "Exact vehicle-specific value/source; generic vehicle data rejected",
+      "CURRENT_STATUS": "OEM_INPUT_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Provide exact OEM/customer input for target vehicle/platform; no generic substitution",
+      "OWNER": "Peter/Manus + OEM/customer",
+      "BLOCKING_LEVEL": "P1"
+    },
+    {
+      "BLOCKER_ID": "B-VEH-MOUNTING-LOADS",
+      "PARAMETER": "mounting_loads",
+      "REQUIRED_EVIDENCE": [
+        "Authorized vehicle/fixture interface load cases"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "OEM/customer vehicle package",
+        "vehicle CAD/package data",
+        "approved vehicle test data"
+      ],
+      "SOURCE_AUTHORITY": "OEM/customer vehicle authority",
+      "APPLICABILITY_REQUIREMENT": "Exact target vehicle/platform/configuration and revision",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Controlled file/document with revision and vehicle applicability; confidentiality restrictions recorded",
+      "ACCEPTANCE_CRITERIA": "Exact vehicle-specific value/source; generic vehicle data rejected",
+      "CURRENT_STATUS": "OEM_INPUT_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Provide exact OEM/customer input for target vehicle/platform; no generic substitution",
+      "OWNER": "Peter/Manus + OEM/customer",
+      "BLOCKING_LEVEL": "P1"
+    },
+    {
+      "BLOCKER_ID": "B-VEH-VEHICLE-PULSE",
+      "PARAMETER": "vehicle_pulse",
+      "REQUIRED_EVIDENCE": [
+        "Authorized event/sled/vehicle acceleration time history"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "OEM/customer vehicle package",
+        "vehicle CAD/package data",
+        "approved vehicle test data"
+      ],
+      "SOURCE_AUTHORITY": "OEM/customer vehicle authority",
+      "APPLICABILITY_REQUIREMENT": "Exact target vehicle/platform/configuration and revision",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Controlled file/document with revision and vehicle applicability; confidentiality restrictions recorded",
+      "ACCEPTANCE_CRITERIA": "Exact vehicle-specific value/source; generic vehicle data rejected",
+      "CURRENT_STATUS": "OEM_INPUT_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Provide exact OEM/customer input for target vehicle/platform; no generic substitution",
+      "OWNER": "Peter/Manus + OEM/customer",
+      "BLOCKING_LEVEL": "P1"
+    },
+    {
+      "BLOCKER_ID": "B-VEH-INITIAL-CONDITIONS",
+      "PARAMETER": "initial_conditions",
+      "REQUIRED_EVIDENCE": [
+        "Authorized initial velocity/position/orientation"
+      ],
+      "EXACT_ACCEPTABLE_SOURCE": [
+        "OEM/customer vehicle package",
+        "vehicle CAD/package data",
+        "approved vehicle test data"
+      ],
+      "SOURCE_AUTHORITY": "OEM/customer vehicle authority",
+      "APPLICABILITY_REQUIREMENT": "Exact target vehicle/platform/configuration and revision",
+      "MEASUREMENT_OR_DOCUMENT_REQUIREMENT": "Controlled file/document with revision and vehicle applicability; confidentiality restrictions recorded",
+      "ACCEPTANCE_CRITERIA": "Exact vehicle-specific value/source; generic vehicle data rejected",
+      "CURRENT_STATUS": "OEM_INPUT_REQUIRED",
+      "NEXT_ACQUISITION_ACTION": "Provide exact OEM/customer input for target vehicle/platform; no generic substitution",
+      "OWNER": "Peter/Manus + OEM/customer",
+      "BLOCKING_LEVEL": "P1"
+    }
+  ],
+  "source_index": [
+    {
+      "path": "V7_ENGINEERING_R5/V7_MATERIAL_DEFINITION_R5.json",
+      "size_bytes": 7302,
+      "sha256": "d07b282a7bcb2967ef73c675e0789486cdf181c98e18ba6c1b013884873c0280",
+      "source_class": "PROJECT_SOURCE",
+      "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+    },
+    {
+      "path": "V7_ENGINEERING_R5/V7_MASS_CG_INERTIA_R5.json",
+      "size_bytes": 8734,
+      "sha256": "7a7247d25c7c48743bf962f83a8a754f05a0b1f8b993e487433451657bd90228",
+      "source_class": "PROJECT_SOURCE",
+      "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+    },
+    {
+      "path": "V7_ENGINEERING_R5/V7_FASTENER_JOINT_DEFINITION_R5.json",
+      "size_bytes": 4958,
+      "sha256": "04e62cf2baef4fc4a45c9286d69b0731c563fcd55e95b423cae266279ea5c7a8",
+      "source_class": "PROJECT_SOURCE",
+      "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+    },
+    {
+      "path": "V7_ENGINEERING_R5/V7_ABSORBER_TEST_SPECIFICATION.json",
+      "size_bytes": 2579,
+      "sha256": "4c64a7aa1d1e9847ad283dbdd6e53881c553d48ae0245b627e1bfda36e0f9610",
+      "source_class": "PROJECT_SOURCE",
+      "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+    },
+    {
+      "path": "V7_ENGINEERING_R5/V7_LOCK_TEST_SPECIFICATION.json",
+      "size_bytes": 2122,
+      "sha256": "ca3570ee1f2d73cb5aef7984ba7ce33db7e0ded8ba6550cde8686a537e7f9ea5",
+      "source_class": "PROJECT_SOURCE",
+      "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+    },
+    {
+      "path": "V7_ENGINEERING_R5/V7_REBOUND_TEST_SPECIFICATION.json",
+      "size_bytes": 1349,
+      "sha256": "f33dadef734bc2eda3008787b650512b87051e2c6cd36fdc413780c8439a7910",
+      "source_class": "PROJECT_SOURCE",
+      "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+    },
+    {
+      "path": "V7_ENGINEERING_R5/V7_VEHICLE_INTERFACE_INPUTS.json",
+      "size_bytes": 1892,
+      "sha256": "1b3aa02f04d1cd910744a5fe47e6f40dc5c1235f04bfc1ac13bcc13e01e11e0d",
+      "source_class": "PROJECT_SOURCE",
+      "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+    },
+    {
+      "path": "V7_ENGINEERING_R5/V7_CAE_DEPENDENCY_GRAPH_R5.json",
+      "size_bytes": 3314,
+      "sha256": "140cf9ef5728f88b65ea434c204a24d6d3cc5a404f8b79eb0f3a08cd5b3ccc86",
+      "source_class": "PROJECT_SOURCE",
+      "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+    },
+    {
+      "path": "V7_ENGINEERING_R5/V7_MANUFACTURABILITY_MATRIX_R5.json",
+      "size_bytes": 8514,
+      "sha256": "64443a5b437621a9a5902a0cc7f681f6f8b72b1f392982245978eb653a4694c7",
+      "source_class": "PROJECT_SOURCE",
+      "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+    },
+    {
+      "path": "V7_CURRENT_ENGINEERING_INTERFACE_DEFINITION_R4/V7_CURRENT_ENGINEERING_INTERFACE_DEFINITION.json",
+      "size_bytes": 15477,
+      "sha256": "4b41d70467482a2d7d35d5d33dd393bb346552def3e620e7a65914369a4ff572",
+      "source_class": "PROJECT_SOURCE",
+      "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+    },
+    {
+      "path": "V7_R4_KINEMATIC_CLOSURE/V7_R4_KINEMATIC_MODEL.json",
+      "size_bytes": 7116,
+      "sha256": "a02cc7a48eabb9e61fa71b697098bd977362758163389f6f4e986ead43441b73",
+      "source_class": "PROJECT_SOURCE",
+      "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+    },
+    {
+      "path": "V7_R4_KINEMATIC_CLOSURE/V7_R4_STATE_MACHINE.json",
+      "size_bytes": 1536,
+      "sha256": "8d1867810c897404e77fb088d7410030987bfd935efbba5e1f4a53a3e37f0ccc",
+      "source_class": "PROJECT_SOURCE",
+      "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+    },
+    {
+      "path": "N_IOCARS_V5_Engineering_Report.pdf",
+      "size_bytes": 1351333,
+      "sha256": "857fba7ada595c29285406db282da463b5c9d68c1b768270007f71ba294a6d69",
+      "source_class": "PROJECT_SOURCE",
+      "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+    },
+    {
+      "path": "N_IOCARS_V4_8D_Strict_Engineering_Report.pdf",
+      "size_bytes": 871133,
+      "sha256": "54e25e5a047d698e3644c3b2ebf1c98ae762411adfc59389ecaecb330920294c",
+      "source_class": "PROJECT_SOURCE",
+      "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+    },
+    {
+      "path": "N_IOCARS_V5_Design_Parameters.txt",
+      "size_bytes": 833,
+      "sha256": "e37682dd54bae5968df25233a08f067363f3f2005a475d2c7895ef8b5f39fc3c",
+      "source_class": "PROJECT_SOURCE",
+      "promotion_rule": "NOT_PHYSICAL_EVIDENCE_UNLESS_EXPLICIT"
+    }
+  ],
+  "current_record_count": 331,
+  "current_unique_ids": 331,
+  "current_duplicate_ids": 0
+}

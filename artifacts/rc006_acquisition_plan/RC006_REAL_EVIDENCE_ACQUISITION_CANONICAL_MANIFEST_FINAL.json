@@ -1,0 +1,56 @@
+{
+  "manifest_role": "EXTERNAL_CANONICAL_PACKAGE_MANIFEST",
+  "package_identity": "RC006_REAL_EVIDENCE_ACQUISITION",
+  "revision": "V7-RC-006-EA-ACQ",
+  "created_utc": "2026-09-09T00:02:45.373751+00:00",
+  "final_zip_sha256": "e13c653d3a8f921f08681e28a6181b722271c73ab358d4f591136af9f4f65d55",
+  "member_count": 8,
+  "members": [
+    {
+      "path": "01_MASTER/RC006_ACQUISITION_FINAL_REPORT.md",
+      "size_bytes": 1778,
+      "sha256": "a994020bf62135c781395bf68bd151bc61a090b94cba865bbce04a6a5bbcd6ed"
+    },
+    {
+      "path": "01_MASTER/REAL_EVIDENCE_ACQUISITION_MATRIX.json",
+      "size_bytes": 51274,
+      "sha256": "dd8f9de04453dbb3a49cd5e8b8cf4b258e67ae4d3101b7ac1d1c0945e281a1d2"
+    },
+    {
+      "path": "02_SOURCE_REQUESTS/SOURCE_REQUEST_MATRIX.json",
+      "size_bytes": 9702,
+      "sha256": "2a75639a788cafa4cb3fc5d2e2616559b0b23e61a01b2ddab9e0c6a7515e631d"
+    },
+    {
+      "path": "03_PHYSICAL_TEST/PHYSICAL_TEST_ACQUISITION_MATRIX.json",
+      "size_bytes": 8328,
+      "sha256": "80f892c15e29b4565c81412ff39488e0a88b9195b2f82c763d94fd682f9fbbc4"
+    },
+    {
+      "path": "04_OEM/OEM_DATA_REQUEST_MATRIX.json",
+      "size_bytes": 6278,
+      "sha256": "ce03b96365b97717cc749ff9469c9a4906cf923f5dc850a422d6143805763f7b"
+    },
+    {
+      "path": "05_DEPENDENCY/EVIDENCE_DEPENDENCY_GRAPH.json",
+      "size_bytes": 3960,
+      "sha256": "98e280bd6f4c0ccaa3fa8e0e22cd71f5392fe53bc031f66fc47c75211afdf528"
+    },
+    {
+      "path": "06_MANIFEST/RC006_ACQUISITION_EXECUTIVE_STATUS.json",
+      "size_bytes": 611,
+      "sha256": "96437311c6033e0726bf796a39e795f9ab8bdc1ed1936c8d5efef573df49a404"
+    },
+    {
+      "path": "06_MANIFEST/RC006_ACQUISITION_SELF_VERIFICATION.json",
+      "size_bytes": 1651,
+      "sha256": "ded531fc6e3935f4d9bc4cd5cdf915309b07b209f10beb7f3abefb9216a49051"
+    }
+  ],
+  "record_control": {
+    "total_records": 331,
+    "unique_ids": 331,
+    "duplicate_ids": 0
+  },
+  "engineering_scope": "Evidence acquisition matrix only; no CAD/STEP/geometry changes; no CAE/FE/test/physical validation."
+}

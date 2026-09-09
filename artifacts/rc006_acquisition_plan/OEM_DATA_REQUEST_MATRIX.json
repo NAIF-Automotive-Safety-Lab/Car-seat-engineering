@@ -1,0 +1,134 @@
+{
+  "revision": "V7-RC-006-EA-ACQ",
+  "requests": [
+    {
+      "REQUEST_ID": "OEM-VEHICLE-DATUM",
+      "INPUT_ID": "vehicle_datum",
+      "CURRENT_VALUE": null,
+      "REQUIRED_DEFINITION": "Exact OEM/package coordinate frame and transform",
+      "REQUIRED_FORMAT": [
+        "controlled CAD/package or signed engineering document",
+        "revision/date",
+        "vehicle/platform applicability"
+      ],
+      "SOURCE_AUTHORITY": "OEM/customer",
+      "CONFIDENTIALITY_RESTRICTION": "Record handling restrictions supplied by source; do not distribute without authorization",
+      "VERIFICATION_METHOD": "Revision/provenance check against OEM-controlled source",
+      "STATUS": "OEM_INPUT_REQUIRED",
+      "NEXT_ACTION": "Provide exact OEM/customer input for target vehicle/platform; no generic substitution"
+    },
+    {
+      "REQUEST_ID": "OEM-SEAT-HARDPOINTS",
+      "INPUT_ID": "seat_hardpoints",
+      "CURRENT_VALUE": null,
+      "REQUIRED_DEFINITION": "Exact mounting point XYZ + tolerance",
+      "REQUIRED_FORMAT": [
+        "controlled CAD/package or signed engineering document",
+        "revision/date",
+        "vehicle/platform applicability"
+      ],
+      "SOURCE_AUTHORITY": "OEM/customer",
+      "CONFIDENTIALITY_RESTRICTION": "Record handling restrictions supplied by source; do not distribute without authorization",
+      "VERIFICATION_METHOD": "Revision/provenance check against OEM-controlled source",
+      "STATUS": "OEM_INPUT_REQUIRED",
+      "NEXT_ACTION": "Provide exact OEM/customer input for target vehicle/platform; no generic substitution"
+    },
+    {
+      "REQUEST_ID": "OEM-RESTRAINT-ANCHOR-POINTS",
+      "INPUT_ID": "restraint_anchor_points",
+      "CURRENT_VALUE": null,
+      "REQUIRED_DEFINITION": "Exact structural anchor XYZ + load path",
+      "REQUIRED_FORMAT": [
+        "controlled CAD/package or signed engineering document",
+        "revision/date",
+        "vehicle/platform applicability"
+      ],
+      "SOURCE_AUTHORITY": "OEM/customer",
+      "CONFIDENTIALITY_RESTRICTION": "Record handling restrictions supplied by source; do not distribute without authorization",
+      "VERIFICATION_METHOD": "Revision/provenance check against OEM-controlled source",
+      "STATUS": "OEM_INPUT_REQUIRED",
+      "NEXT_ACTION": "Provide exact OEM/customer input for target vehicle/platform; no generic substitution"
+    },
+    {
+      "REQUEST_ID": "OEM-H-POINT",
+      "INPUT_ID": "H_point",
+      "CURRENT_VALUE": null,
+      "REQUIRED_DEFINITION": "Authoritative H-point definition for intended vehicle/configuration",
+      "REQUIRED_FORMAT": [
+        "controlled CAD/package or signed engineering document",
+        "revision/date",
+        "vehicle/platform applicability"
+      ],
+      "SOURCE_AUTHORITY": "OEM/customer",
+      "CONFIDENTIALITY_RESTRICTION": "Record handling restrictions supplied by source; do not distribute without authorization",
+      "VERIFICATION_METHOD": "Revision/provenance check against OEM-controlled source",
+      "STATUS": "OEM_INPUT_REQUIRED",
+      "NEXT_ACTION": "Provide exact OEM/customer input for target vehicle/platform; no generic substitution"
+    },
+    {
+      "REQUEST_ID": "OEM-CLEARANCES",
+      "INPUT_ID": "clearances",
+      "CURRENT_VALUE": null,
+      "REQUIRED_DEFINITION": "Vehicle-package clearance envelope",
+      "REQUIRED_FORMAT": [
+        "controlled CAD/package or signed engineering document",
+        "revision/date",
+        "vehicle/platform applicability"
+      ],
+      "SOURCE_AUTHORITY": "OEM/customer",
+      "CONFIDENTIALITY_RESTRICTION": "Record handling restrictions supplied by source; do not distribute without authorization",
+      "VERIFICATION_METHOD": "Revision/provenance check against OEM-controlled source",
+      "STATUS": "OEM_INPUT_REQUIRED",
+      "NEXT_ACTION": "Provide exact OEM/customer input for target vehicle/platform; no generic substitution"
+    },
+    {
+      "REQUEST_ID": "OEM-MOUNTING-LOADS",
+      "INPUT_ID": "mounting_loads",
+      "CURRENT_VALUE": null,
+      "REQUIRED_DEFINITION": "Authorized vehicle/fixture interface load cases",
+      "REQUIRED_FORMAT": [
+        "controlled CAD/package or signed engineering document",
+        "revision/date",
+        "vehicle/platform applicability"
+      ],
+      "SOURCE_AUTHORITY": "OEM/customer",
+      "CONFIDENTIALITY_RESTRICTION": "Record handling restrictions supplied by source; do not distribute without authorization",
+      "VERIFICATION_METHOD": "Revision/provenance check against OEM-controlled source",
+      "STATUS": "OEM_INPUT_REQUIRED",
+      "NEXT_ACTION": "Provide exact OEM/customer input for target vehicle/platform; no generic substitution"
+    },
+    {
+      "REQUEST_ID": "OEM-VEHICLE-PULSE",
+      "INPUT_ID": "vehicle_pulse",
+      "CURRENT_VALUE": null,
+      "REQUIRED_DEFINITION": "Authorized event/sled/vehicle acceleration time history",
+      "REQUIRED_FORMAT": [
+        "controlled CAD/package or signed engineering document",
+        "revision/date",
+        "vehicle/platform applicability"
+      ],
+      "SOURCE_AUTHORITY": "OEM/customer",
+      "CONFIDENTIALITY_RESTRICTION": "Record handling restrictions supplied by source; do not distribute without authorization",
+      "VERIFICATION_METHOD": "Revision/provenance check against OEM-controlled source",
+      "STATUS": "OEM_INPUT_REQUIRED",
+      "NEXT_ACTION": "Provide exact OEM/customer input for target vehicle/platform; no generic substitution"
+    },
+    {
+      "REQUEST_ID": "OEM-INITIAL-CONDITIONS",
+      "INPUT_ID": "initial_conditions",
+      "CURRENT_VALUE": null,
+      "REQUIRED_DEFINITION": "Authorized initial velocity/position/orientation",
+      "REQUIRED_FORMAT": [
+        "controlled CAD/package or signed engineering document",
+        "revision/date",
+        "vehicle/platform applicability"
+      ],
+      "SOURCE_AUTHORITY": "OEM/customer",
+      "CONFIDENTIALITY_RESTRICTION": "Record handling restrictions supplied by source; do not distribute without authorization",
+      "VERIFICATION_METHOD": "Revision/provenance check against OEM-controlled source",
+      "STATUS": "OEM_INPUT_REQUIRED",
+      "NEXT_ACTION": "Provide exact OEM/customer input for target vehicle/platform; no generic substitution"
+    }
+  ],
+  "oem_acquisition_performed": false
+}

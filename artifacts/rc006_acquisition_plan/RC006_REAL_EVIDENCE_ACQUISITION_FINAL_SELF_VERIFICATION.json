@@ -1,0 +1,22 @@
+{
+  "verification_role": "EXTERNAL_FINAL_SELF_VERIFICATION",
+  "package_identity": "RC006_REAL_EVIDENCE_ACQUISITION",
+  "revision": "V7-RC-006-EA-ACQ",
+  "final_zip_sha256": "e13c653d3a8f921f08681e28a6181b722271c73ab358d4f591136af9f4f65d55",
+  "external_manifest_sha256": "935b1367848e8b9c24e9c631f8139eb58e24995f1c148843be896b08d7f68b1e",
+  "zip_member_count": 8,
+  "manifest_member_count": 8,
+  "missing": [],
+  "extra": [],
+  "hash_or_size_mismatches": [],
+  "zip_members_equal_manifest": true,
+  "all_sizes_match": true,
+  "all_hashes_match": true,
+  "total_records": 331,
+  "unique_ids": 331,
+  "duplicate_ids": 0,
+  "physical_measurements": 0,
+  "test_results": 0,
+  "engineering_mutation": false,
+  "overall_pass": true
+}

@@ -1,0 +1,240 @@
+{
+  "revision": "V7-RC-006-EA-ACQ",
+  "tests": [
+    {
+      "TEST_ID": "ABS-01",
+      "DOMAIN": "ABSORBER_130",
+      "VARIABLE": "stroke",
+      "MEASUREMENT": "displacement vs time",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_ABSORBER_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "ABS-02",
+      "DOMAIN": "ABSORBER_130",
+      "VARIABLE": "F-x",
+      "MEASUREMENT": "force vs displacement",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_ABSORBER_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "ABS-03",
+      "DOMAIN": "ABSORBER_130",
+      "VARIABLE": "F-v",
+      "MEASUREMENT": "force vs velocity",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_ABSORBER_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "ABS-04",
+      "DOMAIN": "ABSORBER_130",
+      "VARIABLE": "hysteresis",
+      "MEASUREMENT": "loading/unloading energy loop",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_ABSORBER_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "ABS-05",
+      "DOMAIN": "ABSORBER_130",
+      "VARIABLE": "rate dependence",
+      "MEASUREMENT": "repeat F-x/F-v across controlled velocity conditions",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_ABSORBER_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "ABS-06",
+      "DOMAIN": "ABSORBER_130",
+      "VARIABLE": "temperature dependence",
+      "MEASUREMENT": "characterize after controlled thermal conditioning",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_ABSORBER_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "ABS-07",
+      "DOMAIN": "ABSORBER_130",
+      "VARIABLE": "cycle/aging",
+      "MEASUREMENT": "repeat characterization after controlled cycling/aging",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_ABSORBER_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "ABS-08",
+      "DOMAIN": "ABSORBER_130",
+      "VARIABLE": "L/R matching",
+      "MEASUREMENT": "paired comparison of 130L vs 130R",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_ABSORBER_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "ABS-09",
+      "DOMAIN": "ABSORBER_130",
+      "VARIABLE": "tolerance sensitivity",
+      "MEASUREMENT": "repeat characterization across released manufacturing variation when available",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_ABSORBER_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "L170-01",
+      "DOMAIN": "LOCK_170",
+      "VARIABLE": "UNLOCKED",
+      "MEASUREMENT": "intended motion available",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_LOCK_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "L170-02",
+      "DOMAIN": "LOCK_170",
+      "VARIABLE": "ENGAGEMENT",
+      "MEASUREMENT": "positive mechanical capture and engagement indication",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_LOCK_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "L170-03",
+      "DOMAIN": "LOCK_170",
+      "VARIABLE": "RETENTION",
+      "MEASUREMENT": "reaction/displacement under controlled load",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_LOCK_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "L170-04",
+      "DOMAIN": "LOCK_170",
+      "VARIABLE": "PARTIAL_ENGAGEMENT",
+      "MEASUREMENT": "detect/characterize non-full capture condition",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_LOCK_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "L170-05",
+      "DOMAIN": "LOCK_170",
+      "VARIABLE": "PREMATURE_RELEASE",
+      "MEASUREMENT": "release before commanded condition",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_LOCK_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "L170-06",
+      "DOMAIN": "LOCK_170",
+      "VARIABLE": "DELAYED_RELEASE",
+      "MEASUREMENT": "release timing relative to commanded state",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_LOCK_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "L170-07",
+      "DOMAIN": "LOCK_170",
+      "VARIABLE": "JAMMED",
+      "MEASUREMENT": "state retention / recovery behavior",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_LOCK_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "L170-08",
+      "DOMAIN": "LOCK_170",
+      "VARIABLE": "UNINTENDED_RELEASE",
+      "MEASUREMENT": "release under non-commanded disturbance",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_LOCK_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "L170-09",
+      "DOMAIN": "LOCK_170",
+      "VARIABLE": "RESET",
+      "MEASUREMENT": "repeatable return to defined reset state",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_LOCK_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "L170-10",
+      "DOMAIN": "LOCK_170",
+      "VARIABLE": "FAULT_CONTAINMENT",
+      "MEASUREMENT": "safe mechanical state under defined fault injection",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_LOCK_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "RB-01",
+      "DOMAIN": "REBOUND_180",
+      "VARIABLE": "reverse travel",
+      "MEASUREMENT": "x_reverse(t)",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_REBOUND_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "RB-02",
+      "DOMAIN": "REBOUND_180",
+      "VARIABLE": "reverse velocity",
+      "MEASUREMENT": "v_reverse(t)",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_REBOUND_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "RB-03",
+      "DOMAIN": "REBOUND_180",
+      "VARIABLE": "reverse acceleration",
+      "MEASUREMENT": "a_reverse(t)",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_REBOUND_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "RB-04",
+      "DOMAIN": "REBOUND_180",
+      "VARIABLE": "energy return",
+      "MEASUREMENT": "integral/work or equivalent energy accounting from measured channels",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_REBOUND_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "RB-05",
+      "DOMAIN": "REBOUND_180",
+      "VARIABLE": "stop position",
+      "MEASUREMENT": "position at rebound stop",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_REBOUND_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "RB-06",
+      "DOMAIN": "REBOUND_180",
+      "VARIABLE": "reset",
+      "MEASUREMENT": "repeatability of reset mechanism",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_REBOUND_TEST_SPECIFICATION.json"
+    },
+    {
+      "TEST_ID": "RB-07",
+      "DOMAIN": "REBOUND_180",
+      "VARIABLE": "failure modes",
+      "MEASUREMENT": "jam/no-control/overtravel/uncommanded-release observations",
+      "STATUS": "TEST_REQUIRED",
+      "RESULT_PRESENT": false,
+      "SOURCE_SPEC": "/mnt/data/V7_ENGINEERING_R5/V7_REBOUND_TEST_SPECIFICATION.json"
+    }
+  ],
+  "physical_test_execution_performed": false
+}
