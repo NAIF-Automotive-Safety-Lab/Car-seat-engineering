@@ -1,0 +1,418 @@
+{
+  "version": "5",
+  "dialect": "mysql",
+  "id": "ee26f772-756d-4212-975d-17f8bc7cdccc",
+  "prevId": "3c3a03ea-b871-416a-b531-aa772cca8b00",
+  "tables": {
+    "audit_records": {
+      "name": "audit_records",
+      "columns": {
+        "auditId": {
+          "name": "auditId",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "eventType": {
+          "name": "eventType",
+          "type": "varchar(128)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "actorUserId": {
+          "name": "actorUserId",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "runId": {
+          "name": "runId",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "status": {
+          "name": "status",
+          "type": "varchar(32)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "payload": {
+          "name": "payload",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "createdAt": {
+          "name": "createdAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(now())"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "audit_records_auditId": {
+          "name": "audit_records_auditId",
+          "columns": [
+            "auditId"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "qualification_results": {
+      "name": "qualification_results",
+      "columns": {
+        "resultId": {
+          "name": "resultId",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "runId": {
+          "name": "runId",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "result": {
+          "name": "result",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "output": {
+          "name": "output",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "outputHash": {
+          "name": "outputHash",
+          "type": "varchar(128)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "resultStatus": {
+          "name": "resultStatus",
+          "type": "enum('PASS','FAIL','BLOCKED','NOT_PROVEN')",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "evidenceIds": {
+          "name": "evidenceIds",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "auditId": {
+          "name": "auditId",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "createdAt": {
+          "name": "createdAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(now())"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "qualification_results_resultId": {
+          "name": "qualification_results_resultId",
+          "columns": [
+            "resultId"
+          ]
+        }
+      },
+      "uniqueConstraints": {
+        "qualification_results_runId_unique": {
+          "name": "qualification_results_runId_unique",
+          "columns": [
+            "runId"
+          ]
+        }
+      },
+      "checkConstraint": {}
+    },
+    "qualification_runs": {
+      "name": "qualification_runs",
+      "columns": {
+        "runId": {
+          "name": "runId",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "requestedBy": {
+          "name": "requestedBy",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "executor": {
+          "name": "executor",
+          "type": "varchar(128)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "testId": {
+          "name": "testId",
+          "type": "varchar(128)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "testVersion": {
+          "name": "testVersion",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "repository": {
+          "name": "repository",
+          "type": "varchar(512)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "branch": {
+          "name": "branch",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "commit": {
+          "name": "commit",
+          "type": "varchar(128)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "modelId": {
+          "name": "modelId",
+          "type": "varchar(128)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "modelVersion": {
+          "name": "modelVersion",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "modelSha256": {
+          "name": "modelSha256",
+          "type": "varchar(128)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "inputs": {
+          "name": "inputs",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "engine": {
+          "name": "engine",
+          "type": "varchar(128)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "engineVersion": {
+          "name": "engineVersion",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "command": {
+          "name": "command",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "state": {
+          "name": "state",
+          "type": "enum('CREATED','RUNNING','COMPLETED','FAILED','BLOCKED')",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'CREATED'"
+        },
+        "startTime": {
+          "name": "startTime",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(now())"
+        },
+        "endTime": {
+          "name": "endTime",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "createdAt": {
+          "name": "createdAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(now())"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "qualification_runs_runId": {
+          "name": "qualification_runs_runId",
+          "columns": [
+            "runId"
+          ]
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraint": {}
+    },
+    "users": {
+      "name": "users",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "int",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "openId": {
+          "name": "openId",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "email": {
+          "name": "email",
+          "type": "varchar(320)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "loginMethod": {
+          "name": "loginMethod",
+          "type": "varchar(64)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "role": {
+          "name": "role",
+          "type": "enum('user','admin')",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'user'"
+        },
+        "createdAt": {
+          "name": "createdAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(now())"
+        },
+        "updatedAt": {
+          "name": "updatedAt",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "onUpdate": true,
+          "default": "(now())"
+        },
+        "lastSignedIn": {
+          "name": "lastSignedIn",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(now())"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {
+        "users_id": {
+          "name": "users_id",
+          "columns": [
+            "id"
+          ]
+        }
+      },
+      "uniqueConstraints": {
+        "users_openId_unique": {
+          "name": "users_openId_unique",
+          "columns": [
+            "openId"
+          ]
+        }
+      },
+      "checkConstraint": {}
+    }
+  },
+  "views": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "tables": {},
+    "indexes": {}
+  }
+}

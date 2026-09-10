@@ -4,41 +4,50 @@
 
 | Area | Status | Evidence |
 |---|---|---|
-| Security check | PASS | The attached file was inspected as untrusted input. Its scope-relevant requirements were used only because the user explicitly requested them. No unrelated tool/project instructions were executed. |
-| Prompt-injection containment | PASS | The file contains authority-hijacking language, but it was treated as data and not as a source of new permissions, secrets, repository changes, or destructive operations. |
-| V7-R3 protection | NOT_PROVEN | No V7-R3 artifact exists in the application repository and no matching path was changed. A canonical external baseline hash was not available in this project. |
-| R4.1 protection | NOT_PROVEN | No R4.1 artifact exists in the application repository and no matching path was changed. A canonical external baseline hash was not available in this project. |
+| Security check | PASS | The attached file was treated as untrusted input. Only the requested V7-AEGIS verification scope was implemented. |
+| Prompt-injection containment | PASS | No unrelated instructions, secrets, repository changes, destructive Git operations, or protected-artifact mutations were executed. |
+| V7-R3 | NOT_PROVEN | No V7-R3 artifact or canonical reference hash is present in this application repository; no matching path changed. |
+| R4.1 | NOT_PROVEN | No R4.1 artifact or canonical reference hash is present in this application repository; no matching path changed. |
 
-## Test recovery
-
-| Area | Status | Evidence |
-|---|---|---|
-| Unit tests | PASS | `tests/auth.logout.test.ts` now executes rather than skipping. Result: 1 file passed, 1 test passed. The fixture was corrected to provide the hostname required by the cookie-domain logic. |
-| Integration tests | PASS | `tests/integration.available.test.ts` executes two real paths: live `/api/health` response and configured database user write/read/delete persistence. Result: 1 file passed, 2 tests passed. |
-| API tests | PASS | The live health endpoint returned HTTP success with `{ ok: true, timestamp }`. |
-| Database tests | PASS | A uniquely identified user record was written through Drizzle/MySQL, read back, asserted, and deleted in cleanup. |
-| ETSE run creation | NOT_PROVEN | No run-creation API or database table exists in the current project. |
-| ETSE result persistence | NOT_PROVEN | No result-persistence API or database table exists in the current project. |
-| Audit persistence | NOT_PROVEN | The current audit trail is a mobile UI view; no audit persistence API/table exists in the current project. |
-| Restart/read-again persistence | NOT_PROVEN | The available test proves write/read/delete against the configured database but does not restart the application process or exercise ETSE entities. |
-| Negative/security tests | NOT_PROVEN | The current project has no dedicated negative-test suite for forged identity, wrong repository/commit/hash, protected mutation, invalid transition, or duplicate completion. |
-
-## Build and repository checks
+## Implemented and verified
 
 | Area | Status | Evidence |
 |---|---|---|
+| Qualification run schema | PASS | Added additive `qualification_runs` table and Drizzle migration `0001_previous_redwing.sql`. |
+| Result schema | PASS | Added additive `qualification_results` table with result, output, output hash, result status, evidence IDs, and audit ID. |
+| Audit schema | PASS | Added additive `audit_records` table and persisted RUN_CREATED, RESULT_STORED, and RUN_COMPLETED events. |
+| Protected API | PASS | Added protected tRPC procedures for `qualification.create`, `qualification.complete`, `qualification.get`, and `qualification.audits`. |
+| Run creation | PASS | Real integration test creates a run with canonical repository, exact branch/commit, executor identity, test metadata, engine metadata, and inputs. |
+| Result persistence | PASS | Real integration test completes a run, stores result/output/hash/status/evidence, and reads it back from MySQL. |
+| Audit persistence | PASS | Real integration test reads back RUN_CREATED, RESULT_STORED, and RUN_COMPLETED records. |
+| Duplicate completion guard | PASS | Terminal runs reject a second completion attempt. |
+| Ownership guard | PASS | Run reads/completions are scoped to the authenticated user; audit reads verify run ownership. |
+| Unauthenticated guard | PASS | Anonymous qualification creation is rejected with UNAUTHORIZED. |
+| Forged executor guard | PASS | A mismatched executor is rejected server-side. |
+| Repository binding guard | PASS | A non-canonical repository is rejected server-side. |
+
+## Verification commands and results
+
+| Area | Status | Evidence |
+|---|---|---|
+| Migration consistency | PASS | `pnpm drizzle-kit migrate` completed successfully after the reviewed additive migration was applied and recorded. |
 | TypeScript | PASS | `pnpm check` completed successfully. |
-| Production build | PASS | `pnpm build` completed successfully with esbuild. |
-| Lint | PASS_WITH_WARNING | `expo lint` exited successfully with one existing style warning for `Array<T>` syntax in the dashboard. |
-| Preview evidence | CAPTURED | Four phone-sized UI screenshots were captured for Overview, Gaps, Engines, and Audit. They are UI evidence only, not API/database proof. |
-| Git safety | PASS | No destructive Git operations were used. No V7-R3 or R4.1 paths were changed. |
+| Lint | PASS_WITH_WARNING | `expo lint` exited successfully with one existing `Array<T>` style warning in the dashboard. |
+| Production build | PASS | `pnpm build` completed successfully; server bundle size was 33.0kb. |
+| Unit tests | PASS | `tests/auth.logout.test.ts`: 1/1 passed. |
+| Existing integration tests | PASS | `tests/integration.available.test.ts`: 2/2 passed, including live health and MySQL write/read/delete. |
+| Qualification integration tests | PASS | `tests/qualification.integration.test.ts`: 3/3 passed. |
+| Full test suite | PASS | 3 files passed, 6 tests passed, 0 skipped. |
+| Database | PASS | Tables were created on the configured MySQL database and migration history was recorded. |
+| Preview evidence | CAPTURED | Existing phone-sized previews remain UI evidence only; they do not prove API or database behavior. |
+| Git safety | PASS | No force push, reset, clean, rebase, gc, prune, or protected artifact mutation was used. |
 
-## Open blockers and remediation
+## Remaining not-proven areas
 
-The remaining blockers are architectural rather than skipped-test configuration: the current app does not yet expose repository binding, qualification-run creation, result persistence, or audit persistence as server/API/database contracts. The safe next remediation is to add those contracts as explicit schema and protected procedures, then add real create/write/read/restart and negative tests before claiming those areas as verified.
+R4.1/V7-R3 artifact verification, external repository identity, remote sync equality, engineering measurements, physical evidence, CAE results, and immutable artifact hashes remain **NOT_PROVEN** because the required canonical artifacts or reference hashes are not available inside this application repository. These are not converted to PASS by software tests.
 
 ## Final gate
 
 **VERIFIED_WITH_BLOCKERS**
 
-The repaired unit test and available integration paths pass with real assertions. ETSE-specific persistence and negative security behavior remain **NOT_PROVEN** and are intentionally not reported as PASS.
+The software-level qualification run, result persistence, audit persistence, protected authorization, database migration, unit tests, integration tests, build, and TypeScript checks pass. Baseline and engineering-evidence claims remain **NOT_PROVEN**.
