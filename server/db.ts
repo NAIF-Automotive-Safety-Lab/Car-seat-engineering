@@ -89,4 +89,13 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
+export async function deleteUserByOpenId(openId: string): Promise<void> {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database is not available");
+  }
+
+  await db.delete(users).where(eq(users.openId, openId));
+}
+
 // TODO: add feature queries here as your schema grows.
