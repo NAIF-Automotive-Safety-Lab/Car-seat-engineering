@@ -1,0 +1,143 @@
+{
+  "manifestVersion": "1.0.0",
+  "manifestPurpose": "V7-AEGIS lineage lock before implementation",
+  "canonicalRepository": "https://github.com/NAIF-Automotive-Safety-Lab/Car-seat-engineering.git",
+  "canonicalBranch": "main",
+  "canonicalCommit": "8c0c00a7dc2428d73d96b81f91b1e8826c592c26",
+  "workingBranch": "audit/lineage-lock-v7-sync",
+  "workingBaseCommit": "8c0c00a7dc2428d73d96b81f91b1e8826c592c26",
+  "lineageStatus": "BLOCKED",
+  "lineageDecision": "Do not merge unrelated histories until an explicit integration decision is recorded.",
+  "entries": [
+    {
+      "branch": "main",
+      "commit": "8c0c00a7dc2428d73d96b81f91b1e8826c592c26",
+      "parents": [
+        "d6cc862074e24c8168b35a6a92f17cd888f4b7e0",
+        "f891232fbd907a640a87e503581acba0107559de"
+      ],
+      "remoteRef": "origin/main",
+      "reachableArtifacts": [
+        "R4.1.step",
+        "R4.1/R4.1.step",
+        "artifacts/engineering-evidence/acquired/R4.1.step",
+        "artifacts/engineering-evidence/r4_1_authoritative/R4.1.step",
+        "artifacts/engineering-evidence/r4_1_eere/R4.1.step",
+        "artifacts/engineering-evidence/* manifests and evidence records",
+        "engineering_recovery/*"
+      ],
+      "verifiedChanges": [
+        "Current local main equals origin/main",
+        "Working tree was clean before this audit branch",
+        "R4.1 STEP copies observed with SHA-256 fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+      ],
+      "unverifiableChanges": [
+        "No current execution of the full test/build/type/lint gates in this phase",
+        "No live MySQL restart/read-back proof",
+        "No authenticated OAuth/browser E2E",
+        "No real CAD/CAE engine execution proven by this audit"
+      ]
+    },
+    {
+      "branch": "aegis-recovery",
+      "commit": "148255b83610b8450b975cae5f4aa41e9aceb6c6",
+      "parents": [
+        "805c7bd30bd8f7762059009d62677d55540b22e7"
+      ],
+      "remoteRef": "origin/aegis-recovery",
+      "reachableArtifacts": [
+        "AEGIS_X_KERNEL_REPORT.md",
+        "V7-AEGIS historical recovery records on the branch"
+      ],
+      "verifiedChanges": [
+        "Commit exists and is reachable from the configured GitHub remote",
+        "Commit records an authenticated E2E OAuth blocker"
+      ],
+      "unverifiableChanges": [
+        "Branch has no merge base with origin/main",
+        "Historical test/build/database claims were not re-executed",
+        "Branch lineage cannot be treated as a patch to current main"
+      ]
+    },
+    {
+      "branch": "aegis-auth-patch",
+      "commit": "3c8261d0e125df855b2c814c629b6d04dd5bd9c5",
+      "parents": [
+        "49352d54392c51c06c50110a2ea3e42c78f4edee"
+      ],
+      "remoteRef": "origin/aegis-auth-patch",
+      "reachableArtifacts": [
+        "tests/oauth.security.test.ts",
+        "server/_core/oauth.ts",
+        "app/oauth/callback.tsx",
+        "app/(tabs)/index.tsx",
+        "AEGIS_X_KERNEL_REPORT.md"
+      ],
+      "verifiedChanges": [
+        "Commit exists and is reachable from the configured GitHub remote",
+        "Commit contains OAuth security regression tests and login UI changes"
+      ],
+      "unverifiableChanges": [
+        "Branch has no merge base with origin/main",
+        "Security tests were not executed in this read/lineage phase",
+        "Patch cannot be applied to current main without an explicit transplant/integration review"
+      ]
+    },
+    {
+      "branch": "supplied-recovery-bundle",
+      "commit": "aaa037a65169592cf975c8df66015c038e93e127",
+      "parents": [],
+      "remoteRef": "artifact-hosted remote claimed by bundle",
+      "reachableArtifacts": [
+        "V7_AEGIS_CANONICAL_MANIFEST.json",
+        "V7_AEGIS_BUILD_STATE.json",
+        "V7_AEGIS_TEST_STATE.json",
+        "V7_AEGIS_BLOCKERS.json",
+        "V7_AEGIS_GIT_RECOVERY.md",
+        "application source and migration files in the ZIP"
+      ],
+      "verifiedChanges": [],
+      "unverifiableChanges": [
+        "Claimed commit is absent from cloned GitHub repository",
+        "Claimed remote is not the selected GitHub repository",
+        "Bundle is untrusted historical evidence and was not executed"
+      ]
+    },
+    {
+      "branch": "supplied-auth-patch-bundle",
+      "commit": "UNBOUND",
+      "parents": [],
+      "remoteRef": "UNBOUND",
+      "reachableArtifacts": [
+        "application source and tests in the ZIP",
+        "tests/oauth.security.test.ts"
+      ],
+      "verifiedChanges": [],
+      "unverifiableChanges": [
+        "Bundle is not cryptographically bound to current GitHub main",
+        "Bundle was not executed",
+        "Bundle must be reconciled to a Git commit before any application"
+      ]
+    }
+  ],
+  "relationshipChecks": {
+    "mainToAegisRecoveryMergeBase": null,
+    "mainToAegisAuthPatchMergeBase": null,
+    "mainEqualsOriginMain": true,
+    "workingTreeCleanAtBranchCreation": true,
+    "mergePermitted": false
+  },
+  "protectedArtifacts": {
+    "R4.1": {
+      "status": "PRESENT_BUT_IMMUTABLE_SCOPE",
+      "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "mutationPerformed": false
+    },
+    "V7-R3": {
+      "status": "NO_MUTATION_PERFORMED",
+      "mutationPerformed": false
+    }
+  },
+  "nextTask": "Resolve canonical lineage and approve an explicit integration plan; do not merge or execute until lineage is resolved.",
+  "recoveryState": "BLOCKED / NOT_PROVEN"
+}
