@@ -64,3 +64,15 @@ This checkpoint contains only the recovery log. No application source, schema, b
 - **Authenticated browser UI E2E:** NOT_PROVEN; no authenticated browser session or AEGIS UI flow was available for a truthful end-to-end claim.
 - **Remote verification:** PASS; independent clone of `aegis-recovery` resolved to `28dae5d9c32d24338a9cc457ca17d85371fe8184` and contained this log.
 - **JON handoff:** `HANDOFF_READY_PENDING_INDEPENDENT_REVIEW`; see `JON_AEGIS_REVIEW_HANDOFF.md`.
+
+## Sequential checkpoint — MySQL
+
+- **Result:** `MYSQL = PASS`
+- **Engine:** MariaDB 10.11.14, MySQL-compatible
+- **Database:** isolated `aegis_test`
+- **Migration:** `pnpm db:push` completed successfully with no pending schema changes
+- **Schema:** 11 AEGIS tables plus migration history table
+- **Write/read:** PASS
+- **Restart/new-connection read-back:** PASS
+- **Secrets:** runtime-only; no credentials recorded
+- **Next gate:** existing 19-test regression suite
