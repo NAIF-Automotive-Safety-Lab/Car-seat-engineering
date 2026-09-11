@@ -94,3 +94,11 @@ This checkpoint contains only the recovery log. No application source, schema, b
 - **Authenticated Browser → API → AEGIS-X → MySQL → Result → Audit → UI:** `NOT_PROVEN`; no authenticated browser session and no complete AEGIS UI execution flow were available. This is intentionally not promoted to PASS.
 - **Existing authenticated API/database/result/audit coverage:** PASS through the 19/19 integration suite.
 - **Next gate:** safe production build and final GitHub checkpoint.
+
+## Sequential checkpoint — Web app build
+
+- **TypeScript:** PASS (`pnpm check`)
+- **Production build:** PASS (`pnpm build`)
+- **Server bundle:** `dist/index.js`, 68.0 KB
+- **Safe software changes:** no additional application source changes were required after the 19/19 regression pass.
+- **Next gate:** final GitHub fetch/clone SHA verification and John handoff.
