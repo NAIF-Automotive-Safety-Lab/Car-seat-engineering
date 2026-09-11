@@ -55,3 +55,12 @@
 ## Change control
 
 This checkpoint contains only the recovery log. No application source, schema, baseline, CAD, STEP, V7-R3, or R4.1 file was changed.
+
+## Final software checkpoint
+
+- **TypeScript:** PASS (`pnpm check`)
+- **Production build:** PASS (`pnpm build`)
+- **Browser API smoke:** PASS; public browser reached `/api/health` on the live AEGIS server and received the live JSON response.
+- **Authenticated browser UI E2E:** NOT_PROVEN; no authenticated browser session or AEGIS UI flow was available for a truthful end-to-end claim.
+- **Remote verification:** PASS; independent clone of `aegis-recovery` resolved to `28dae5d9c32d24338a9cc457ca17d85371fe8184` and contained this log.
+- **JON handoff:** `HANDOFF_READY_PENDING_INDEPENDENT_REVIEW`; see `JON_AEGIS_REVIEW_HANDOFF.md`.
