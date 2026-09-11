@@ -16,6 +16,7 @@ AEGIS-X is implemented as the central V7-AEGIS execution, qualification, evidenc
 | Input Gate | PASS | Input hashes are required; missing upstream data produces BLOCK BEFORE EXECUTION. |
 | Test Registry / Versioning | PASS | `kernel_tests` persists versioned test contracts and their acceptance/gate metadata. |
 | Test Planner / Orchestrator | PASS | `kernel.plan` creates QUEUED or BLOCKED runs; it never executes when trust prerequisites fail. |
+| Execution state machine | PASS | `kernel.execute` blocks queued runs when no real solver runtime exists; `kernel.cancel` rejects terminal transitions. |
 | Engine Manager | PASS | `kernel_engines` persists adapter identity/version/capabilities; OpenCascade, OpenRadioss, CalculiX, and future MBD are represented as adapter kinds. |
 | Result Manager | PASS | `kernel.complete` persists result status, output hash, and evidence IDs; PASS requires evidence. |
 | Evidence Manager | PASS | `kernel.recordEvidence` persists payload, source hash, evidence class, and provenance. |
@@ -23,6 +24,8 @@ AEGIS-X is implemented as the central V7-AEGIS execution, qualification, evidenc
 | Gate Manager | PASS | `kernel_gates` records policy, decision, dependency list, and block reason. |
 | Reproducibility Manager | PASS | Run records bind repository, commit, artifact SHA, model, input hashes, test version, engine version, output hash, result, evidence, and gate. |
 | Drift Manager | PASS | `kernel.recordDrift` records baseline/artifact hashes and computes MATCH or DRIFT with impact metadata. |
+| Gap detection | PASS | `kernel.gaps` reports missing registry, blocked-run, and no-verified-run gaps with impact and remediation. |
+| Reproducibility comparison | PASS | `kernel.reproducibility` compares repository, commit, artifact SHA, model, test version, inputs, engine version, outputs, and result. |
 | Diagnostics / Safe Auto-Repair | NOT_PROVEN | No automatic mutation or repair is enabled; diagnostics remain explicit data and safe repair requires a future contract. |
 
 ## R4.1 first-class qualification
@@ -31,7 +34,7 @@ The `R4.1-QUALIFICATION` v1.0.0 contract includes Identity, SHA, STEP, Schema, B
 
 ## Database and API
 
-The additive migration `drizzle/0002_overrated_adam_warlock.sql` creates `kernel_engines`, `kernel_tests`, `kernel_runs`, `kernel_evidence`, `kernel_audits`, `kernel_gates`, and `kernel_drifts`. Protected tRPC procedures are available under `kernel.status`, `kernel.plan`, `kernel.getRun`, `kernel.complete`, `kernel.recordEvidence`, `kernel.recordDrift`, `kernel.registerEngine`, and `kernel.registerTest`.
+The additive migration `drizzle/0002_overrated_adam_warlock.sql` creates `kernel_engines`, `kernel_tests`, `kernel_runs`, `kernel_evidence`, `kernel_audits`, `kernel_gates`, and `kernel_drifts`. Protected tRPC procedures are available under `kernel.status`, `kernel.plan`, `kernel.execute`, `kernel.cancel`, `kernel.getRun`, `kernel.complete`, `kernel.recordEvidence`, `kernel.recordDrift`, `kernel.gaps`, `kernel.reproducibility`, `kernel.registerEngine`, and `kernel.registerTest`.
 
 ## Verification evidence
 
@@ -41,11 +44,12 @@ The additive migration `drizzle/0002_overrated_adam_warlock.sql` creates `kernel
 | Lint | PASS_WITH_WARNING | `expo lint` exits successfully; only the existing module-type warning remains after the dashboard warning was removed. |
 | Build | PASS | `pnpm build` produced the server bundle. |
 | Migration consistency | PASS | `pnpm drizzle-kit migrate` completes without replaying the applied migration. |
-| Full tests | PASS | 4 test files, 9 tests passed, 0 skipped. |
-| Kernel tests | PASS | 3 tests cover block-before-execution, evidence-bound completion, audit readback, and unauthenticated rejection. |
+| Full tests | PASS | 4 test files, 12 tests passed, 0 skipped. |
+| Kernel tests | PASS | 6 tests cover block-before-execution, evidence-bound completion, duplicate completion rejection, audit readback, unauthenticated rejection, no-runtime execution blocking, invalid terminal transition, wrong SHA rejection, gap detection, reproducibility comparison, forged ownership, and protected mutation denial. |
 | UI preview | CAPTURED | Mobile previews captured for Command Center, Runs, Tests, Gaps, Engines, and Audit. |
-| Runs / Results UI | BUILT | Runs screen distinguishes BLOCKED, QUEUED, and NOT_PROVEN and keeps execution behind the kernel. |
-| Test Registry UI | BUILT | Tests screen exposes version, engine, checks, evidence class, and upstream-blocking policy. |
+| Runs / Results UI | VERIFIED | Runs screen reads `kernel.status` through tRPC and shows live loading, backend-read-blocked, empty, and persisted-run states. |
+| Test Registry UI | VERIFIED | Tests screen reads persisted contracts from `kernel.status` and exposes version, engine, checks, evidence class, and gate policy. |
+| Command Center API link | VERIFIED | Command Center banner reflects protected `kernel.status` as CONNECTING, READ BLOCKED, or BACKEND LINKED; no fixture replaces an unavailable response. |
 | Protected baselines | UNCHANGED | No V7-R3 or R4.1 paths were changed. |
 | Real solver execution | NOT_PROVEN | Adapters are registry contracts only; no OpenCascade/OpenRadioss/CalculiX solver result is claimed. |
 | Physical engineering validation | NOT_PROVEN | No physical measurement, supplier/OEM evidence, CAE artifact, or canonical R4.1/V7-R3 baseline hash was supplied. |

@@ -67,6 +67,7 @@ describe("AEGIS-X kernel trust and execution gates", () => {
       expect(evidence.evidenceId).toMatch(/^k_ev_/);
       const completed = await caller.kernel.complete({ runId, outputHash: "output-hash", result: { solids: "not_proven" }, resultStatus: "PASS", evidenceIds: [evidence.evidenceId] });
       expect(completed.state).toBe("COMPLETED");
+      await expect(caller.kernel.complete({ runId, outputHash: "output-hash-2", result: { duplicate: true }, resultStatus: "PASS", evidenceIds: [evidence.evidenceId] })).rejects.toThrow("run is not executable");
 
       const readBack = await caller.kernel.getRun({ runId });
       expect(readBack?.run.state).toBe("COMPLETED");
@@ -88,5 +89,73 @@ describe("AEGIS-X kernel trust and execution gates", () => {
     const anonymous = appRouter.createCaller(context(null));
     await expect(anonymous.kernel.plan(validPlan)).rejects.toMatchObject({ code: "UNAUTHORIZED" });
     expect(validPlan.engineId).toBe("opencascade");
+  });
+
+  it("blocks engine execution when no real solver runtime is available", async () => {
+    const { openId, user } = await testUser();
+    const caller = appRouter.createCaller(context(user));
+    let runId = "";
+    try {
+      await caller.kernel.registerEngine({ engineId: "opencascade", name: "OpenCascade", version: "1.0.0", adapterKind: "CAD_KERNEL", capabilities: ["STEP"] });
+      const planned = await caller.kernel.plan(validPlan);
+      runId = planned.runId;
+      const executed = await caller.kernel.execute({ runId });
+      expect(executed.state).toBe("BLOCKED");
+      expect(executed.reason).toContain("ENGINE_RUNTIME_NOT_AVAILABLE");
+      await expect(caller.kernel.cancel({ runId })).rejects.toThrow("terminal run cannot be cancelled");
+    } finally {
+      if (runId) await deleteKernelRunForTest(user.id, runId);
+      const db = await getDb();
+      if (db) {
+        await db.delete(kernelAudits).where(and(eq(kernelAudits.actorUserId, user.id), eq(kernelAudits.eventType, "ENGINE_REGISTERED")));
+        await db.delete(kernelEngines).where(eq(kernelEngines.engineId, "opencascade"));
+      }
+      await deleteUserByOpenId(openId);
+    }
+  });
+
+  it("detects wrong SHA and compares reproducibility without inventing a result", async () => {
+    const { openId, user } = await testUser();
+    const caller = appRouter.createCaller(context(user));
+    let runId = "";
+    try {
+      await caller.kernel.registerEngine({ engineId: "opencascade", name: "OpenCascade", version: "1.0.0", adapterKind: "CAD_KERNEL", capabilities: ["STEP"] });
+      const wrongSha = await caller.kernel.plan({ ...validPlan, artifactSha256: "not-a-sha" });
+      runId = wrongSha.runId;
+      expect(wrongSha.state).toBe("BLOCKED");
+      expect(wrongSha.blockReason).toContain("artifact SHA format is invalid");
+      const comparison = await caller.kernel.reproducibility({ first: { repository: validPlan.repository, commit: validPlan.commit, artifactSha: validPlan.artifactSha256 }, second: { repository: validPlan.repository, commit: validPlan.commit, artifactSha: validPlan.artifactSha256 } });
+      expect(comparison.reproducible).toBe(true);
+      expect(comparison.differences).toHaveLength(0);
+      const gaps = await caller.kernel.gaps();
+      expect(gaps.some((gap) => gap.id === "K-GAP-BLOCKED-RUNS")).toBe(true);
+    } finally {
+      if (runId) await deleteKernelRunForTest(user.id, runId);
+      const db = await getDb();
+      if (db) {
+        await db.delete(kernelAudits).where(and(eq(kernelAudits.actorUserId, user.id), eq(kernelAudits.eventType, "ENGINE_REGISTERED")));
+        await db.delete(kernelEngines).where(eq(kernelEngines.engineId, "opencascade"));
+      }
+      await deleteUserByOpenId(openId);
+    }
+  });
+
+  it("denies forged ownership and protected baseline mutation", async () => {
+    const owner = await testUser();
+    const forger = await testUser();
+    const ownerCaller = appRouter.createCaller(context(owner.user));
+    const forgerCaller = appRouter.createCaller(context(forger.user));
+    let runId = "";
+    try {
+      const blocked = await ownerCaller.kernel.plan({ ...validPlan, artifactSha256: undefined });
+      runId = blocked.runId;
+      await expect(forgerCaller.kernel.getRun({ runId })).resolves.toBeUndefined();
+      await expect(forgerCaller.kernel.execute({ runId })).rejects.toThrow("run not found or not owned");
+      await expect(ownerCaller.kernel.registerTest({ testId: "MUTATION-ATTEMPT", version: "1.0.0", purpose: "negative", preconditions: [], inputs: [], inputHashes: [], engineId: "opencascade", engineVersion: "1.0.0", command: "deny", checks: [], acceptance: [], outputs: [], evidenceClass: "NONE", gatePolicy: "BLOCK", protectedArtifact: "R4.1" })).rejects.toThrow("protected baseline mutation denied");
+    } finally {
+      if (runId) await deleteKernelRunForTest(owner.user.id, runId);
+      await deleteUserByOpenId(owner.openId);
+      await deleteUserByOpenId(forger.openId);
+    }
   });
 });

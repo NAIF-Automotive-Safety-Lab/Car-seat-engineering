@@ -5,6 +5,7 @@ import * as Haptics from 'expo-haptics';
 import { ScreenContainer } from '@/components/screen-container';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { useColors } from '@/hooks/use-colors';
+import { trpc } from '@/lib/trpc';
 
 type Tone = 'mint' | 'amber' | 'coral' | 'slate';
 
@@ -35,6 +36,8 @@ const kernelModules = [
 export default function HomeScreen() {
   const router = useRouter();
   const colors = useColors('dark');
+  const kernelStatus = trpc.kernel.status.useQuery(undefined, { retry: false, refetchOnMount: 'always' });
+  const backendState = kernelStatus.isLoading ? 'CONNECTING' : kernelStatus.error ? 'READ BLOCKED' : 'BACKEND LINKED';
 
   const pulse = async () => {
     if (Platform.OS !== 'web') await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
@@ -52,7 +55,7 @@ export default function HomeScreen() {
         </View>
 
         <View style={styles.kernelBanner}>
-          <View style={styles.bannerTop}><View style={styles.liveDot} /><Text style={styles.bannerLabel}>KERNEL ONLINE · TRUST GATED</Text><Text style={styles.bannerState}>NO FAKE PASS</Text></View>
+          <View style={styles.bannerTop}><View style={[styles.liveDot, { backgroundColor: kernelStatus.error ? '#FF6B76' : '#2DE0B2' }]} /><Text style={styles.bannerLabel}>KERNEL {backendState} · TRUST GATED</Text><Text style={styles.bannerState}>NO FAKE PASS</Text></View>
           <Text style={styles.bannerTitle}>Single execution and qualification heart</Text>
           <Text style={styles.bannerCopy}>AEGIS-X plans, blocks, records, and audits every future CAD / CAE test. A registered adapter is not evidence that a solver succeeded.</Text>
           <View style={styles.bannerRule}><View style={styles.ruleSegment} /><Text style={styles.ruleText}>BLOCK BEFORE EXECUTION</Text></View>

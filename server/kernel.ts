@@ -91,6 +91,10 @@ export async function registerKernelEngine(input: { userId: number; engineId: st
 
 export async function registerKernelTest(input: { userId: number; testId: string; version: string; purpose: string; preconditions: string[]; inputs: string[]; inputHashes: string[]; engineId: string; engineVersion: string; command: string; checks: string[]; acceptance: string[]; outputs: string[]; evidenceClass: string; gatePolicy: string; protectedArtifact?: string }) {
   const db = await requireDb();
+  if (input.protectedArtifact && /(?:V7-R3|R4\.1)/i.test(input.protectedArtifact)) {
+    await audit("PROTECTED_MUTATION_DENIED", input.userId, undefined, "BLOCKED", { protectedArtifact: input.protectedArtifact, testId: input.testId });
+    throw new Error("protected baseline mutation denied");
+  }
   await db.insert(kernelTests).values({ testId: input.testId, version: input.version, purpose: input.purpose, preconditions: JSON.stringify(input.preconditions), inputs: JSON.stringify(input.inputs), inputHashes: JSON.stringify(input.inputHashes), engineId: input.engineId, engineVersion: input.engineVersion, command: input.command, checks: JSON.stringify(input.checks), acceptance: JSON.stringify(input.acceptance), outputs: JSON.stringify(input.outputs), evidenceClass: input.evidenceClass, gatePolicy: input.gatePolicy, protectedArtifact: input.protectedArtifact, createdAt: new Date() }).onDuplicateKeyUpdate({ set: { version: input.version, purpose: input.purpose, command: input.command, engineVersion: input.engineVersion, gatePolicy: input.gatePolicy } });
   await audit("TEST_REGISTERED", input.userId, undefined, "RECORDED", { testId: input.testId, version: input.version });
   return { testId: input.testId, version: input.version };
@@ -124,6 +128,48 @@ export async function completeKernelRun(input: { userId: number; runId: string; 
   await db.update(kernelRuns).set({ state: nextState, outputHash: input.outputHash, result: JSON.stringify(input.result), evidenceIds: JSON.stringify(input.evidenceIds), gate: nextState === "COMPLETED" ? "PASS" : nextState, completedAt: new Date() }).where(eq(kernelRuns.runId, input.runId));
   await audit("RESULT_RECORDED", input.userId, input.runId, nextState, { outputHash: input.outputHash, evidenceIds: input.evidenceIds });
   return { runId: input.runId, state: nextState };
+}
+
+export async function executeKernelRun(input: { userId: number; runId: string }) {
+  const db = await requireDb();
+  const rows = await db.select().from(kernelRuns).where(and(eq(kernelRuns.runId, input.runId), eq(kernelRuns.requestedBy, input.userId))).limit(1);
+  const run = rows[0];
+  if (!run) throw new Error("run not found or not owned by authenticated user");
+  if (run.state !== "QUEUED") throw new Error("only queued runs can enter execution");
+  const reason = "ENGINE_RUNTIME_NOT_AVAILABLE: adapter registration does not prove solver execution";
+  await db.update(kernelRuns).set({ state: "BLOCKED", blockReason: reason, gate: "BLOCKED" }).where(eq(kernelRuns.runId, input.runId));
+  await db.update(kernelGates).set({ decision: "BLOCKED", reason }).where(eq(kernelGates.runId, input.runId));
+  await audit("EXECUTION_BLOCKED", input.userId, input.runId, "BLOCKED", { reason });
+  return { runId: input.runId, state: "BLOCKED" as const, reason };
+}
+
+export async function cancelKernelRun(input: { userId: number; runId: string }) {
+  const db = await requireDb();
+  const rows = await db.select().from(kernelRuns).where(and(eq(kernelRuns.runId, input.runId), eq(kernelRuns.requestedBy, input.userId))).limit(1);
+  const run = rows[0];
+  if (!run) throw new Error("run not found or not owned by authenticated user");
+  if (run.state !== "QUEUED" && run.state !== "RUNNING") throw new Error("terminal run cannot be cancelled");
+  const reason = "CANCELLED_BY_OPERATOR";
+  await db.update(kernelRuns).set({ state: "BLOCKED", blockReason: reason, gate: "BLOCKED", completedAt: new Date() }).where(eq(kernelRuns.runId, input.runId));
+  await audit("EXECUTION_CANCELLED", input.userId, input.runId, "BLOCKED", { reason });
+  return { runId: input.runId, state: "BLOCKED" as const, reason };
+}
+
+export async function detectKernelGaps() {
+  const db = await requireDb();
+  const [engines, tests, runs] = await Promise.all([db.select().from(kernelEngines), db.select().from(kernelTests), db.select().from(kernelRuns).orderBy(desc(kernelRuns.createdAt)).limit(50)]);
+  const gaps: Array<{ id: string; status: "OPEN" | "BLOCKED" | "NOT_PROVEN"; impact: string; remediation: string }> = [];
+  if (engines.length === 0) gaps.push({ id: "K-GAP-ENGINE-REGISTRY", status: "OPEN", impact: "No adapter is registered.", remediation: "Register an adapter and separately verify runtime availability." });
+  if (tests.length === 0) gaps.push({ id: "K-GAP-TEST-REGISTRY", status: "OPEN", impact: "No versioned contract is persisted.", remediation: "Register a complete test contract." });
+  if (runs.some((run) => run.state === "BLOCKED" || run.state === "NOT_PROVEN")) gaps.push({ id: "K-GAP-BLOCKED-RUNS", status: "BLOCKED", impact: "At least one run is blocked or unverified.", remediation: "Resolve upstream trust/evidence gaps; do not promote downstream results." });
+  if (runs.length > 0 && runs.every((run) => run.state !== "COMPLETED")) gaps.push({ id: "K-GAP-NO-VERIFIED-RUN", status: "NOT_PROVEN", impact: "No completed kernel run exists.", remediation: "Provide trusted artifact inputs and a real engine runtime." });
+  return gaps;
+}
+
+export function compareReproducibility(input: { first: Record<string, unknown>; second: Record<string, unknown> }) {
+  const keys = ["repository", "commit", "artifactSha", "model", "testVersion", "inputs", "engineVersion", "outputs", "result"];
+  const differences = keys.filter((key) => JSON.stringify(input.first[key]) !== JSON.stringify(input.second[key]));
+  return { reproducible: differences.length === 0, differences };
 }
 
 export async function getKernelRun(userId: number, runId: string) {

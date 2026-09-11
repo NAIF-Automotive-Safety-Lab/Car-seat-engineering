@@ -3,7 +3,7 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { protectedProcedure, publicProcedure, router } from "./_core/trpc";
 import { completeQualificationRun, createQualificationRun, getQualificationRun, listAudits } from "./qualification";
-import { completeKernelRun, getKernelRun, listKernelStatus, planKernelRun, recordKernelDrift, recordKernelEvidence, registerKernelEngine, registerKernelTest } from "./kernel";
+import { cancelKernelRun, compareReproducibility, completeKernelRun, detectKernelGaps, executeKernelRun, getKernelRun, listKernelStatus, planKernelRun, recordKernelDrift, recordKernelEvidence, registerKernelEngine, registerKernelTest } from "./kernel";
 import { z } from "zod";
 
 export const appRouter = router({
@@ -77,6 +77,16 @@ export const appRouter = router({
     complete: protectedProcedure
       .input(z.object({ runId: z.string().min(1), outputHash: z.string().min(1), result: z.unknown(), resultStatus: z.enum(["PASS", "FAIL", "BLOCKED", "NOT_PROVEN"]), evidenceIds: z.array(z.string()) }))
       .mutation(({ ctx, input }) => completeKernelRun({ userId: ctx.user.id, ...input })),
+    execute: protectedProcedure
+      .input(z.object({ runId: z.string().min(1) }))
+      .mutation(({ ctx, input }) => executeKernelRun({ userId: ctx.user.id, ...input })),
+    cancel: protectedProcedure
+      .input(z.object({ runId: z.string().min(1) }))
+      .mutation(({ ctx, input }) => cancelKernelRun({ userId: ctx.user.id, ...input })),
+    gaps: protectedProcedure.query(() => detectKernelGaps()),
+    reproducibility: protectedProcedure
+      .input(z.object({ first: z.record(z.string(), z.unknown()), second: z.record(z.string(), z.unknown()) }))
+      .query(({ input }) => compareReproducibility(input)),
     recordEvidence: protectedProcedure
       .input(z.object({ runId: z.string().min(1), evidenceClass: z.string().min(1), sourceHash: z.string().min(1), payload: z.unknown(), provenance: z.unknown() }))
       .mutation(({ ctx, input }) => recordKernelEvidence({ userId: ctx.user.id, ...input })),
