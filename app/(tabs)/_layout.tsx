@@ -20,7 +20,7 @@ export default function TabLayout() {
       tabBarStyle: { paddingTop: 7, paddingBottom: bottomPadding, height: 58 + bottomPadding, backgroundColor: '#0B1728', borderTopColor: '#22334A', borderTopWidth: 1 },
       tabBarLabelStyle: { fontSize: 9, fontWeight: '700' },
     }}>
-      <Tabs.Screen name="index" options={{ title: 'Overview', tabBarIcon: ({ color }) => <IconSymbol name="square.grid.2x2.fill" size={20} color={color} /> }} />
+      <Tabs.Screen name="index" options={{ title: 'Command Center', tabBarIcon: ({ color }) => <IconSymbol name="square.grid.2x2.fill" size={20} color={color} /> }} />
       <Tabs.Screen name="gaps" options={{ title: 'Gaps', tabBarIcon: ({ color }) => <IconSymbol name="exclamationmark.triangle.fill" size={20} color={color} /> }} />
       <Tabs.Screen name="engines" options={{ title: 'Engines', tabBarIcon: ({ color }) => <IconSymbol name="cpu.fill" size={20} color={color} /> }} />
       <Tabs.Screen name="audit" options={{ title: 'Audit', tabBarIcon: ({ color }) => <IconSymbol name="list.bullet.rectangle.portrait.fill" size={20} color={color} /> }} />

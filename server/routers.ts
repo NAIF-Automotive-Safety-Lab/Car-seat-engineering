@@ -3,6 +3,7 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { protectedProcedure, publicProcedure, router } from "./_core/trpc";
 import { completeQualificationRun, createQualificationRun, getQualificationRun, listAudits } from "./qualification";
+import { completeKernelRun, getKernelRun, listKernelStatus, planKernelRun, recordKernelDrift, recordKernelEvidence, registerKernelEngine, registerKernelTest } from "./kernel";
 import { z } from "zod";
 
 export const appRouter = router({
@@ -53,6 +54,41 @@ export const appRouter = router({
     audits: protectedProcedure
       .input(z.object({ runId: z.string().min(1).optional() }).optional())
       .query(({ ctx, input }) => listAudits(ctx.user.id, input?.runId)),
+  }),
+
+  kernel: router({
+    status: protectedProcedure.query(() => listKernelStatus()),
+    plan: protectedProcedure
+      .input(z.object({
+        testId: z.string().min(1),
+        testVersion: z.string().min(1),
+        repository: z.string().optional(),
+        commit: z.string().optional(),
+        artifactSha256: z.string().optional(),
+        model: z.string().optional(),
+        inputHashes: z.record(z.string(), z.string()).optional(),
+        engineId: z.string().min(1),
+        engineVersion: z.string().min(1),
+      }))
+      .mutation(({ ctx, input }) => planKernelRun({ userId: ctx.user.id, ...input })),
+    getRun: protectedProcedure
+      .input(z.object({ runId: z.string().min(1) }))
+      .query(({ ctx, input }) => getKernelRun(ctx.user.id, input.runId)),
+    complete: protectedProcedure
+      .input(z.object({ runId: z.string().min(1), outputHash: z.string().min(1), result: z.unknown(), resultStatus: z.enum(["PASS", "FAIL", "BLOCKED", "NOT_PROVEN"]), evidenceIds: z.array(z.string()) }))
+      .mutation(({ ctx, input }) => completeKernelRun({ userId: ctx.user.id, ...input })),
+    recordEvidence: protectedProcedure
+      .input(z.object({ runId: z.string().min(1), evidenceClass: z.string().min(1), sourceHash: z.string().min(1), payload: z.unknown(), provenance: z.unknown() }))
+      .mutation(({ ctx, input }) => recordKernelEvidence({ userId: ctx.user.id, ...input })),
+    recordDrift: protectedProcedure
+      .input(z.object({ runId: z.string().optional(), artifactSha256: z.string().min(1), baselineSha256: z.string().min(1), impact: z.array(z.string()) }))
+      .mutation(({ ctx, input }) => recordKernelDrift({ userId: ctx.user.id, ...input })),
+    registerEngine: protectedProcedure
+      .input(z.object({ engineId: z.string().min(1), name: z.string().min(1), version: z.string().min(1), adapterKind: z.string().min(1), capabilities: z.array(z.string()) }))
+      .mutation(({ ctx, input }) => registerKernelEngine({ userId: ctx.user.id, ...input })),
+    registerTest: protectedProcedure
+      .input(z.object({ testId: z.string().min(1), version: z.string().min(1), purpose: z.string().min(1), preconditions: z.array(z.string()), inputs: z.array(z.string()), inputHashes: z.array(z.string()), engineId: z.string().min(1), engineVersion: z.string().min(1), command: z.string().min(1), checks: z.array(z.string()), acceptance: z.array(z.string()), outputs: z.array(z.string()), evidenceClass: z.string().min(1), gatePolicy: z.string().min(1), protectedArtifact: z.string().optional() }))
+      .mutation(({ ctx, input }) => registerKernelTest({ userId: ctx.user.id, ...input })),
   }),
 
   // TODO: add feature routers here, e.g.

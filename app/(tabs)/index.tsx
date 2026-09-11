@@ -1,6 +1,4 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRouter } from 'expo-router';
-import { useEffect, useMemo, useState } from 'react';
 import { Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import * as Haptics from 'expo-haptics';
 
@@ -8,63 +6,139 @@ import { ScreenContainer } from '@/components/screen-container';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { useColors } from '@/hooks/use-colors';
 
-const toneColors: Record<'success' | 'warning' | 'error', string> = { success: '#2DE0B2', warning: '#FFBF69', error: '#FF6B76' };
-const healthItems: Array<{ label: string; value: string; detail: string; icon: 'account-tree.fill' | 'arrow.triangle.2.circlepath' | 'waveform.path.ecg' | 'cpu.fill' | 'checkmark.seal.fill' | 'doc.text.magnifyingglass'; tone: keyof typeof toneColors }> = [
-  { label: 'Repository', value: 'BLOCKED', detail: 'Identity unverified', icon: 'account-tree.fill', tone: 'error' },
-  { label: 'Sync gate', value: 'BLOCKED', detail: 'No remote proof', icon: 'arrow.triangle.2.circlepath', tone: 'error' },
-  { label: 'Drift gate', value: 'UNKNOWN', detail: 'Awaiting baseline', icon: 'waveform.path.ecg', tone: 'warning' },
-  { label: 'Engines', value: '20 / 20', detail: 'Registered', icon: 'cpu.fill', tone: 'success' },
-  { label: 'Test health', value: 'BLOCKED', detail: 'No verified run', icon: 'checkmark.seal.fill', tone: 'error' },
-  { label: 'Evidence', value: 'GATED', detail: 'Source required', icon: 'doc.text.magnifyingglass', tone: 'warning' },
+type Tone = 'mint' | 'amber' | 'coral' | 'slate';
+
+const tones: Record<Tone, string> = {
+  mint: '#2DE0B2',
+  amber: '#FFBF69',
+  coral: '#FF6B76',
+  slate: '#8DA0B8',
+};
+
+type ControlDomain = { label: string; state: string; detail: string; tone: Tone; icon: 'shield.lefthalf.filled' | 'account-tree.fill' | 'cpu.fill' | 'doc.text.magnifyingglass' | 'list.bullet.rectangle.portrait.fill' | 'waveform.path.ecg' };
+const controlDomains: ControlDomain[] = [
+  { label: 'Trust kernel', state: 'GATED', detail: 'No execution without exact inputs', tone: 'mint', icon: 'shield.lefthalf.filled' },
+  { label: 'Repository', state: 'BLOCKED', detail: 'Canonical identity required', tone: 'coral', icon: 'account-tree.fill' },
+  { label: 'Engine adapters', state: 'UNKNOWN', detail: 'Adapter presence ≠ solver success', tone: 'amber', icon: 'cpu.fill' },
+  { label: 'Evidence', state: 'GATED', detail: 'Provenance-bound outputs only', tone: 'amber', icon: 'doc.text.magnifyingglass' },
+  { label: 'Audit manager', state: 'READY', detail: 'Every gate decision recorded', tone: 'mint', icon: 'list.bullet.rectangle.portrait.fill' },
+  { label: 'Drift manager', state: 'NOT_PROVEN', detail: 'Baseline hash is unavailable', tone: 'slate', icon: 'waveform.path.ecg' },
 ];
+
+const kernelModules = [
+  ['Artifact manager', 'SHA and source ownership'],
+  ['Test registry', 'Versioned execution contracts'],
+  ['Execution bus', 'Queue only after trust gate'],
+  ['Reproducibility', 'Compare inputs and outputs'],
+] as const;
 
 export default function HomeScreen() {
   const router = useRouter();
   const colors = useColors('dark');
-  const [lastScan, setLastScan] = useState('Not run in this session');
-  const [isScanning, setIsScanning] = useState(false);
 
-  useEffect(() => { AsyncStorage.getItem('aegis.lastScan').then((value) => { if (value) setLastScan(value); }); }, []);
-  const blockers = useMemo(() => healthItems.filter((item) => item.tone === 'error').length, []);
-
-  const runScan = async () => {
-    if (isScanning) return;
-    setIsScanning(true);
+  const pulse = async () => {
     if (Platform.OS !== 'web') await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    setTimeout(async () => {
-      const stamp = new Date().toISOString().replace('T', ' ').slice(0, 19) + 'Z';
-      await AsyncStorage.setItem('aegis.lastScan', stamp);
-      setLastScan(stamp);
-      setIsScanning(false);
-      if (Platform.OS !== 'web') await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Warning);
-    }, 650);
   };
 
   return (
     <ScreenContainer containerClassName="bg-[#08111F]" className="px-5" edges={['top', 'left', 'right']}>
       <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
         <View style={styles.headerRow}>
-          <View style={styles.brandRow}><View style={styles.brandMark}><IconSymbol name="shield.lefthalf.filled" size={20} color="#08111F" /></View><View><Text style={styles.eyebrow}>ENGINEERING CONTROL</Text><Text style={styles.brandName}>V7-AEGIS</Text></View></View>
-          <Pressable onPress={runScan} style={({ pressed }) => [styles.iconButton, pressed && styles.pressed]}><IconSymbol name="arrow.clockwise" size={19} color={colors.foreground} /></Pressable>
+          <View style={styles.brandRow}>
+            <View style={styles.brandMark}><IconSymbol name="shield.lefthalf.filled" size={21} color="#08111F" /></View>
+            <View><Text style={styles.eyebrow}>V7-AEGIS / EXECUTION KERNEL</Text><Text style={styles.brandName}>AEGIS-X COMMAND CENTER</Text></View>
+          </View>
+          <Pressable onPress={pulse} style={({ pressed }) => [styles.iconButton, pressed && styles.pressed]}><IconSymbol name="arrow.clockwise" size={18} color={colors.foreground} /></Pressable>
         </View>
-        <View style={styles.statusRow}><View style={styles.statusDot} /><Text style={styles.statusText}>{isScanning ? 'SELF-DIAGNOSTIC RUNNING' : 'SYSTEM READY WITH BLOCKERS'}</Text><Text style={styles.statusTime}>{blockers} blockers</Text></View>
 
-        <View style={styles.heroCard}><View style={styles.heroGlow} /><View style={styles.heroTopLine}><Text style={styles.sectionKicker}>QUALIFICATION GATE</Text><View style={styles.blockedPill}><Text style={styles.blockedPillText}>BLOCKED</Text></View></View><Text style={styles.heroTitle}>R4.1 artifact qualification</Text><Text style={styles.heroCopy}>Execution is held until the canonical repository identity and artifact evidence are verified.</Text><View style={styles.heroDivider} /><View style={styles.heroMetaRow}><View><Text style={styles.metaLabel}>BASELINE</Text><Text style={styles.metaValue}>R4.1 · IMMUTABLE</Text></View><View><Text style={styles.metaLabel}>EVIDENCE</Text><Text style={styles.metaValue}>UNVERIFIED</Text></View></View></View>
+        <View style={styles.kernelBanner}>
+          <View style={styles.bannerTop}><View style={styles.liveDot} /><Text style={styles.bannerLabel}>KERNEL ONLINE · TRUST GATED</Text><Text style={styles.bannerState}>NO FAKE PASS</Text></View>
+          <Text style={styles.bannerTitle}>Single execution and qualification heart</Text>
+          <Text style={styles.bannerCopy}>AEGIS-X plans, blocks, records, and audits every future CAD / CAE test. A registered adapter is not evidence that a solver succeeded.</Text>
+          <View style={styles.bannerRule}><View style={styles.ruleSegment} /><Text style={styles.ruleText}>BLOCK BEFORE EXECUTION</Text></View>
+        </View>
 
-        <View style={styles.sectionHeader}><View><Text style={styles.sectionTitle}>System health</Text><Text style={styles.sectionSubtitle}>Gates are truth-bound, not optimistic UI.</Text></View><Text style={styles.scanTime}>{lastScan === 'Not run in this session' ? 'LIVE' : 'SCANNED'}</Text></View>
-        <View style={styles.healthGrid}>{healthItems.map((item) => <View key={item.label} style={styles.healthCard}><View style={styles.healthTop}><IconSymbol name={item.icon} size={17} color={toneColors[item.tone]} /><View style={[styles.healthIndicator, { backgroundColor: toneColors[item.tone] }]} /></View><Text style={styles.healthLabel}>{item.label}</Text><Text style={[styles.healthValue, { color: toneColors[item.tone] }]}>{item.value}</Text><Text style={styles.healthDetail}>{item.detail}</Text></View>)}</View>
+        <View style={styles.sectionHeader}><View><Text style={styles.sectionTitle}>Kernel health</Text><Text style={styles.sectionSubtitle}>Truth-bound operational domains</Text></View><Text style={styles.sectionStatus}>LIVE POLICY</Text></View>
+        <View style={styles.healthGrid}>
+          {controlDomains.map((item) => (
+            <View key={item.label} style={styles.healthCard}>
+              <View style={styles.healthTop}><IconSymbol name={item.icon} size={17} color={tones[item.tone]} /><View style={[styles.healthIndicator, { backgroundColor: tones[item.tone] }]} /></View>
+              <Text style={styles.healthLabel}>{item.label}</Text>
+              <Text style={[styles.healthState, { color: tones[item.tone] }]}>{item.state}</Text>
+              <Text style={styles.healthDetail}>{item.detail}</Text>
+            </View>
+          ))}
+        </View>
 
-        <View style={styles.sectionHeader}><View><Text style={styles.sectionTitle}>Priority attention</Text><Text style={styles.sectionSubtitle}>Resolve evidence blockers before remediation.</Text></View></View>
-        <Pressable onPress={() => router.push('/gaps' as never)} style={({ pressed }) => [styles.priorityCard, pressed && styles.pressed]}><View style={styles.priorityIcon}><IconSymbol name="exclamationmark.triangle.fill" size={19} color="#FFBF69" /></View><View style={styles.priorityBody}><View style={styles.priorityTitleRow}><Text style={styles.priorityTitle}>GAP-0001 · repository identity</Text><Text style={styles.prioritySeverity}>P0</Text></View><Text style={styles.priorityCopy}>Exact branch, commit, and manifest hash are required before a qualification run.</Text><Text style={styles.priorityLink}>VIEW GAP CENTER  ›</Text></View></Pressable>
+        <View style={styles.sectionHeader}><View><Text style={styles.sectionTitle}>R4.1 qualification</Text><Text style={styles.sectionSubtitle}>First-class workflow, not a viewer shortcut</Text></View><Text style={styles.blockedText}>BLOCKED</Text></View>
+        <Pressable onPress={() => { void pulse(); router.push('/gaps' as never); }} style={({ pressed }) => [styles.qualificationCard, pressed && styles.pressed]}>
+          <View style={styles.qualificationIcon}><IconSymbol name="exclamationmark.triangle.fill" size={20} color="#FFBF69" /></View>
+          <View style={styles.qualificationBody}><View style={styles.qualificationTop}><Text style={styles.qualificationEyebrow}>R4.1-QUALIFICATION · v1.0.0</Text><Text style={styles.blockedText}>GATE</Text></View><Text style={styles.qualificationTitle}>Identity → SHA → STEP → B-Rep → Evidence</Text><Text style={styles.qualificationCopy}>Missing canonical artifact proof keeps every downstream check blocked. No computed result is promoted to physical validation.</Text><Text style={styles.linkText}>OPEN GAPS  ›</Text></View>
+        </Pressable>
 
-        <View style={styles.sectionHeader}><View><Text style={styles.sectionTitle}>Operator actions</Text><Text style={styles.sectionSubtitle}>Safe entry points for the next verified step.</Text></View></View>
-        <View style={styles.actionRow}><Pressable onPress={() => router.push('/engines' as never)} style={({ pressed }) => [styles.actionCard, pressed && styles.pressed]}><View style={styles.actionIcon}><IconSymbol name="cpu.fill" size={20} color="#2DE0B2" /></View><Text style={styles.actionTitle}>Engine center</Text><Text style={styles.actionCopy}>20 registered engines</Text></Pressable><Pressable onPress={() => router.push('/audit' as never)} style={({ pressed }) => [styles.actionCard, pressed && styles.pressed]}><View style={[styles.actionIcon, { backgroundColor: '#2B2331' }]}><IconSymbol name="list.bullet.rectangle.portrait.fill" size={20} color="#FFBF69" /></View><Text style={styles.actionTitle}>Audit trail</Text><Text style={styles.actionCopy}>Trace every gate decision</Text></Pressable></View>
-        <Text style={styles.footer}>LAST DIAGNOSTIC · {lastScan}</Text>
+        <View style={styles.sectionHeader}><View><Text style={styles.sectionTitle}>Kernel modules</Text><Text style={styles.sectionSubtitle}>Centralized capabilities, one execution path</Text></View></View>
+        <View style={styles.moduleGrid}>
+          {kernelModules.map(([label, detail]) => <View key={label} style={styles.moduleCard}><View style={styles.moduleIcon}><IconSymbol name="chevron.right" size={15} color="#2DE0B2" /></View><Text style={styles.moduleLabel}>{label}</Text><Text style={styles.moduleDetail}>{detail}</Text></View>)}
+        </View>
+
+        <View style={styles.actionRow}>
+          <Pressable onPress={() => { void pulse(); router.push('/engines' as never); }} style={({ pressed }) => [styles.actionCard, pressed && styles.pressed]}><IconSymbol name="cpu.fill" size={20} color="#2DE0B2" /><Text style={styles.actionTitle}>Engine registry</Text><Text style={styles.actionCopy}>OpenCascade · OpenRadioss · CalculiX · MBD adapters</Text></Pressable>
+          <Pressable onPress={() => { void pulse(); router.push('/audit' as never); }} style={({ pressed }) => [styles.actionCard, pressed && styles.pressed]}><IconSymbol name="list.bullet.rectangle.portrait.fill" size={20} color="#FFBF69" /><Text style={styles.actionTitle}>Audit + evidence</Text><Text style={styles.actionCopy}>Trace provenance, gates, drift, and reproducibility</Text></Pressable>
+        </View>
+
+        <Text style={styles.footer}>ASSUMPTION ≠ MEASUREMENT · MODEL RESULT ≠ PHYSICAL VALIDATION · BLOCKED ≠ PASS</Text>
       </ScrollView>
     </ScreenContainer>
   );
 }
 
 const styles = StyleSheet.create({
-  scrollContent: { paddingTop: 14, paddingBottom: 40, gap: 18 }, headerRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }, brandRow: { flexDirection: 'row', alignItems: 'center', gap: 10 }, brandMark: { width: 38, height: 38, borderRadius: 12, backgroundColor: '#2DE0B2', alignItems: 'center', justifyContent: 'center' }, eyebrow: { color: '#8192A9', fontSize: 9, fontWeight: '800', letterSpacing: 1.5 }, brandName: { color: '#F5F8FC', fontSize: 18, fontWeight: '800', letterSpacing: 1.1, marginTop: 2 }, iconButton: { width: 40, height: 40, borderRadius: 13, backgroundColor: '#101D31', borderWidth: 1, borderColor: '#22334A', alignItems: 'center', justifyContent: 'center' }, pressed: { opacity: 0.72, transform: [{ scale: 0.98 }] }, statusRow: { flexDirection: 'row', alignItems: 'center', gap: 8, marginTop: 2 }, statusDot: { width: 7, height: 7, borderRadius: 4, backgroundColor: '#FFBF69' }, statusText: { color: '#FFBF69', fontSize: 10, fontWeight: '800', letterSpacing: 0.8, flex: 1 }, statusTime: { color: '#8192A9', fontSize: 10, fontWeight: '700' }, heroCard: { overflow: 'hidden', backgroundColor: '#12243A', borderRadius: 22, padding: 20, borderWidth: 1, borderColor: '#26405B' }, heroGlow: { position: 'absolute', width: 180, height: 180, borderRadius: 90, backgroundColor: '#153A48', right: -60, top: -80, opacity: 0.7 }, heroTopLine: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }, sectionKicker: { color: '#7F9AB5', fontSize: 10, fontWeight: '800', letterSpacing: 1.4 }, blockedPill: { backgroundColor: '#412733', borderRadius: 8, paddingHorizontal: 9, paddingVertical: 5 }, blockedPillText: { color: '#FF6B76', fontSize: 10, fontWeight: '900', letterSpacing: 0.8 }, heroTitle: { color: '#F5F8FC', fontSize: 23, fontWeight: '800', marginTop: 18, letterSpacing: -0.4 }, heroCopy: { color: '#AFC0D4', fontSize: 13, lineHeight: 20, marginTop: 8, maxWidth: 320 }, heroDivider: { height: 1, backgroundColor: '#29445E', marginTop: 19, marginBottom: 14 }, heroMetaRow: { flexDirection: 'row', gap: 28 }, metaLabel: { color: '#7890A9', fontSize: 9, fontWeight: '800', letterSpacing: 1.2 }, metaValue: { color: '#DCE7F2', fontSize: 11, fontWeight: '700', marginTop: 5 }, sectionHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', marginTop: 4 }, sectionTitle: { color: '#F5F8FC', fontSize: 17, fontWeight: '800' }, sectionSubtitle: { color: '#8192A9', fontSize: 11, marginTop: 4 }, scanTime: { color: '#2DE0B2', fontSize: 10, fontWeight: '800', letterSpacing: 1 }, healthGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 10 }, healthCard: { width: '31.8%', minWidth: 95, backgroundColor: '#101D31', borderRadius: 15, borderWidth: 1, borderColor: '#22334A', padding: 12 }, healthTop: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }, healthIndicator: { width: 5, height: 5, borderRadius: 3 }, healthLabel: { color: '#9CAFC1', fontSize: 10, fontWeight: '700', marginTop: 14 }, healthValue: { fontSize: 12, fontWeight: '900', marginTop: 5, letterSpacing: 0.2 }, healthDetail: { color: '#70829A', fontSize: 9, marginTop: 4, lineHeight: 13 }, priorityCard: { flexDirection: 'row', gap: 13, backgroundColor: '#171D2B', borderRadius: 17, borderWidth: 1, borderColor: '#44394A', padding: 15 }, priorityIcon: { width: 38, height: 38, borderRadius: 12, backgroundColor: '#332C26', alignItems: 'center', justifyContent: 'center' }, priorityBody: { flex: 1 }, priorityTitleRow: { flexDirection: 'row', justifyContent: 'space-between', gap: 8 }, priorityTitle: { flex: 1, color: '#F5F8FC', fontSize: 13, fontWeight: '800' }, prioritySeverity: { color: '#FF6B76', fontSize: 11, fontWeight: '900' }, priorityCopy: { color: '#9DAFC2', fontSize: 11, lineHeight: 17, marginTop: 6 }, priorityLink: { color: '#FFBF69', fontSize: 10, fontWeight: '900', letterSpacing: 0.7, marginTop: 10 }, actionRow: { flexDirection: 'row', gap: 10 }, actionCard: { flex: 1, backgroundColor: '#101D31', borderRadius: 16, borderWidth: 1, borderColor: '#22334A', padding: 14 }, actionIcon: { width: 37, height: 37, borderRadius: 11, backgroundColor: '#173833', alignItems: 'center', justifyContent: 'center', marginBottom: 12 }, actionTitle: { color: '#F5F8FC', fontSize: 13, fontWeight: '800' }, actionCopy: { color: '#8192A9', fontSize: 10, lineHeight: 15, marginTop: 4 }, footer: { textAlign: 'center', color: '#5D6E84', fontSize: 9, fontWeight: '700', letterSpacing: 0.9, marginTop: 4 },
+  scrollContent: { paddingTop: 14, paddingBottom: 42, gap: 18 },
+  headerRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
+  brandRow: { flexDirection: 'row', alignItems: 'center', gap: 10 },
+  brandMark: { width: 39, height: 39, borderRadius: 13, backgroundColor: '#2DE0B2', alignItems: 'center', justifyContent: 'center' },
+  eyebrow: { color: '#8192A9', fontSize: 8, fontWeight: '800', letterSpacing: 1.25 },
+  brandName: { color: '#F5F8FC', fontSize: 16, fontWeight: '900', letterSpacing: 0.7, marginTop: 3 },
+  iconButton: { width: 40, height: 40, borderRadius: 13, backgroundColor: '#101D31', borderWidth: 1, borderColor: '#22334A', alignItems: 'center', justifyContent: 'center' },
+  pressed: { opacity: 0.72, transform: [{ scale: 0.98 }] },
+  kernelBanner: { backgroundColor: '#12243A', borderRadius: 21, borderWidth: 1, borderColor: '#2B5160', padding: 18, overflow: 'hidden' },
+  bannerTop: { flexDirection: 'row', alignItems: 'center', gap: 7 },
+  liveDot: { width: 7, height: 7, borderRadius: 4, backgroundColor: '#2DE0B2' },
+  bannerLabel: { color: '#2DE0B2', fontSize: 9, fontWeight: '900', letterSpacing: 1.05, flex: 1 },
+  bannerState: { color: '#FFBF69', fontSize: 8, fontWeight: '900', letterSpacing: 0.8 },
+  bannerTitle: { color: '#F5F8FC', fontSize: 22, fontWeight: '900', letterSpacing: -0.5, marginTop: 17 },
+  bannerCopy: { color: '#B0C0D3', fontSize: 12, lineHeight: 18, marginTop: 8 },
+  bannerRule: { flexDirection: 'row', alignItems: 'center', gap: 9, marginTop: 17 },
+  ruleSegment: { width: 30, height: 2, backgroundColor: '#FF6B76' },
+  ruleText: { color: '#FF6B76', fontSize: 9, fontWeight: '900', letterSpacing: 1 },
+  sectionHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', marginTop: 2 },
+  sectionTitle: { color: '#F5F8FC', fontSize: 17, fontWeight: '900' },
+  sectionSubtitle: { color: '#8192A9', fontSize: 10, marginTop: 4 },
+  sectionStatus: { color: '#2DE0B2', fontSize: 9, fontWeight: '900', letterSpacing: 1 },
+  blockedText: { color: '#FF6B76', fontSize: 9, fontWeight: '900', letterSpacing: 0.8 },
+  healthGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 9 },
+  healthCard: { width: '31.8%', minWidth: 95, backgroundColor: '#101D31', borderRadius: 15, borderWidth: 1, borderColor: '#22334A', padding: 11 },
+  healthTop: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
+  healthIndicator: { width: 5, height: 5, borderRadius: 3 },
+  healthLabel: { color: '#9CAFC1', fontSize: 9, fontWeight: '700', marginTop: 13 },
+  healthState: { fontSize: 11, fontWeight: '900', marginTop: 5 },
+  healthDetail: { color: '#70829A', fontSize: 8, lineHeight: 12, marginTop: 4 },
+  qualificationCard: { flexDirection: 'row', gap: 12, backgroundColor: '#171D2B', borderRadius: 17, borderWidth: 1, borderColor: '#44394A', padding: 14 },
+  qualificationIcon: { width: 38, height: 38, borderRadius: 12, backgroundColor: '#332C26', alignItems: 'center', justifyContent: 'center' },
+  qualificationBody: { flex: 1 },
+  qualificationTop: { flexDirection: 'row', justifyContent: 'space-between', gap: 8 },
+  qualificationEyebrow: { color: '#8D9FB5', fontSize: 8, fontWeight: '800', letterSpacing: 0.8 },
+  qualificationTitle: { color: '#F5F8FC', fontSize: 14, fontWeight: '900', marginTop: 8 },
+  qualificationCopy: { color: '#A2B1C2', fontSize: 10, lineHeight: 16, marginTop: 6 },
+  linkText: { color: '#FFBF69', fontSize: 9, fontWeight: '900', letterSpacing: 0.8, marginTop: 10 },
+  moduleGrid: { flexDirection: 'row', flexWrap: 'wrap', gap: 9 },
+  moduleCard: { width: '48.6%', backgroundColor: '#0E1A2B', borderRadius: 15, borderWidth: 1, borderColor: '#22334A', padding: 12 },
+  moduleIcon: { width: 27, height: 27, borderRadius: 9, backgroundColor: '#173833', alignItems: 'center', justifyContent: 'center', marginBottom: 10 },
+  moduleLabel: { color: '#E4ECF4', fontSize: 11, fontWeight: '900' },
+  moduleDetail: { color: '#778AA2', fontSize: 9, lineHeight: 13, marginTop: 4 },
+  actionRow: { flexDirection: 'row', gap: 9 },
+  actionCard: { flex: 1, backgroundColor: '#101D31', borderRadius: 16, borderWidth: 1, borderColor: '#22334A', padding: 13 },
+  actionTitle: { color: '#F5F8FC', fontSize: 12, fontWeight: '900', marginTop: 11 },
+  actionCopy: { color: '#8192A9', fontSize: 9, lineHeight: 14, marginTop: 4 },
+  footer: { color: '#5D6E84', fontSize: 8, fontWeight: '800', letterSpacing: 0.7, textAlign: 'center', lineHeight: 13, marginTop: 2 },
 });
