@@ -106,3 +106,13 @@ This checkpoint contains only the recovery log. No application source, schema, b
 ## Final checkpoint — GitHub and John handoff
 
 The final handoff package is `JON_AEGIS_REVIEW_HANDOFF.md`. It identifies the final remote build SHA and requests independent reproducible review. `JOHN_STATUS = HANDOFF_READY_PENDING_INDEPENDENT_REVIEW`; no independent result is claimed. The final GitHub checkpoint must be verified from local fetch and an independent clone before this record is considered complete.
+
+## Sequential checkpoint — Authenticated E2E blocker
+
+- **Browser → `/api/health`:** PASS.
+- **No session → protected API:** PASS; browser request returned HTTP 401 / `UNAUTHORIZED`.
+- **Real Login UI:** BLOCKED; the current Expo application has no login screen or login action.
+- **OAuth backend:** present at `/api/oauth/callback`, but it requires a real externally issued `code` and `state`, exchanges them against `OAUTH_SERVER_URL`, and then creates the session cookie. No valid OAuth authorization code/state or authenticated browser session was available.
+- **Safe conclusion:** full authenticated `Test User → Login UI → Session/Cookie → Protected API → AEGIS-X → MySQL → Result → Audit → UI` is `NOT_PROVEN`.
+- **No bypass:** no fake session, token fabrication, cookie injection, auth relaxation, or server-side identity substitution was performed.
+- **Remaining software blocker:** provide a real authorized OAuth/browser login path and test account/session; only then rerun the full E2E.
