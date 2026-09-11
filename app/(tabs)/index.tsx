@@ -1,11 +1,13 @@
 import { useRouter } from 'expo-router';
 import { Platform, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import * as Haptics from 'expo-haptics';
+import { useState } from 'react';
 
 import { ScreenContainer } from '@/components/screen-container';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { useColors } from '@/hooks/use-colors';
 import { trpc } from '@/lib/trpc';
+import { startOAuthLogin } from '@/constants/oauth';
 
 type Tone = 'mint' | 'amber' | 'coral' | 'slate';
 
@@ -38,9 +40,19 @@ export default function HomeScreen() {
   const colors = useColors('dark');
   const kernelStatus = trpc.kernel.status.useQuery(undefined, { retry: false, refetchOnMount: 'always' });
   const backendState = kernelStatus.isLoading ? 'CONNECTING' : kernelStatus.error ? 'READ BLOCKED' : 'BACKEND LINKED';
+  const [loginError, setLoginError] = useState<string | null>(null);
 
   const pulse = async () => {
     if (Platform.OS !== 'web') await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+  };
+
+  const login = async () => {
+    setLoginError(null);
+    try {
+      await startOAuthLogin();
+    } catch {
+      setLoginError('OAuth configuration is unavailable; no session was created.');
+    }
   };
 
   return (
@@ -59,6 +71,8 @@ export default function HomeScreen() {
           <Text style={styles.bannerTitle}>Single execution and qualification heart</Text>
           <Text style={styles.bannerCopy}>AEGIS-X plans, blocks, records, and audits every future CAD / CAE test. A registered adapter is not evidence that a solver succeeded.</Text>
           <View style={styles.bannerRule}><View style={styles.ruleSegment} /><Text style={styles.ruleText}>BLOCK BEFORE EXECUTION</Text></View>
+          {kernelStatus.error && <Pressable onPress={() => { void pulse(); void login(); }} style={({ pressed }) => [styles.loginButton, pressed && styles.pressed]}><IconSymbol name="person.crop.circle.fill" size={16} color="#08111F" /><Text style={styles.loginButtonText}>SIGN IN WITH OAUTH</Text></Pressable>}
+          {loginError && <Text style={styles.loginError}>{loginError}</Text>}
         </View>
 
         <View style={styles.sectionHeader}><View><Text style={styles.sectionTitle}>Kernel health</Text><Text style={styles.sectionSubtitle}>Truth-bound operational domains</Text></View><Text style={styles.sectionStatus}>LIVE POLICY</Text></View>
@@ -114,6 +128,9 @@ const styles = StyleSheet.create({
   bannerRule: { flexDirection: 'row', alignItems: 'center', gap: 9, marginTop: 17 },
   ruleSegment: { width: 30, height: 2, backgroundColor: '#FF6B76' },
   ruleText: { color: '#FF6B76', fontSize: 9, fontWeight: '900', letterSpacing: 1 },
+  loginButton: { alignSelf: 'flex-start', flexDirection: 'row', alignItems: 'center', gap: 7, backgroundColor: '#2DE0B2', borderRadius: 10, paddingHorizontal: 12, paddingVertical: 9, marginTop: 15 },
+  loginButtonText: { color: '#08111F', fontSize: 9, fontWeight: '900', letterSpacing: 0.7 },
+  loginError: { color: '#FFBF69', fontSize: 9, marginTop: 8 },
   sectionHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end', marginTop: 2 },
   sectionTitle: { color: '#F5F8FC', fontSize: 17, fontWeight: '900' },
   sectionSubtitle: { color: '#8192A9', fontSize: 10, marginTop: 4 },

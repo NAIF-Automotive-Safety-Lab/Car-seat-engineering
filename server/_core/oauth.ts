@@ -9,6 +9,16 @@ function getQueryParam(req: Request, key: string): string | undefined {
   return typeof value === "string" ? value : undefined;
 }
 
+function isValidOAuthState(state: string): boolean {
+  try {
+    const decoded = Buffer.from(state, "base64").toString("utf8");
+    const redirectUri = new URL(decoded);
+    return redirectUri.protocol === "http:" || redirectUri.protocol === "https:";
+  } catch {
+    return false;
+  }
+}
+
 async function syncUser(userInfo: {
   openId?: string | null;
   name?: string | null;
@@ -70,6 +80,10 @@ export function registerOAuthRoutes(app: Express) {
       res.status(400).json({ error: "code and state are required" });
       return;
     }
+    if (!isValidOAuthState(state)) {
+      res.status(400).json({ error: "invalid OAuth state" });
+      return;
+    }
 
     try {
       const tokenResponse = await sdk.exchangeCodeForToken(code, state);
@@ -83,8 +97,6 @@ export function registerOAuthRoutes(app: Express) {
       const cookieOptions = getSessionCookieOptions(req);
       res.cookie(COOKIE_NAME, sessionToken, { ...cookieOptions, maxAge: ONE_YEAR_MS });
 
-      // Redirect to the frontend URL (Expo web on port 8081)
-      // Cookie is set with parent domain so it works across both 3000 and 8081 subdomains
       const frontendUrl =
         process.env.EXPO_WEB_PREVIEW_URL ||
         process.env.EXPO_PACKAGER_PROXY_URL ||
@@ -104,6 +116,10 @@ export function registerOAuthRoutes(app: Express) {
       res.status(400).json({ error: "code and state are required" });
       return;
     }
+    if (!isValidOAuthState(state)) {
+      res.status(400).json({ error: "invalid OAuth state" });
+      return;
+    }
 
     try {
       const tokenResponse = await sdk.exchangeCodeForToken(code, state);
@@ -111,7 +127,7 @@ export function registerOAuthRoutes(app: Express) {
       const user = await syncUser(userInfo);
 
       const sessionToken = await sdk.createSessionToken(userInfo.openId!, {
-        name: userInfo.name || "",
+        name: user.name || "",
         expiresInMs: ONE_YEAR_MS,
       });
 
@@ -134,7 +150,6 @@ export function registerOAuthRoutes(app: Express) {
     res.json({ success: true });
   });
 
-  // Get current authenticated user - works with both cookie (web) and Bearer token (mobile)
   app.get("/api/auth/me", async (req: Request, res: Response) => {
     try {
       const user = await sdk.authenticateRequest(req);
@@ -145,26 +160,17 @@ export function registerOAuthRoutes(app: Express) {
     }
   });
 
-  // Establish session cookie from Bearer token
-  // Used by iframe preview: frontend receives token via postMessage, then calls this endpoint
-  // to get a proper Set-Cookie response from the backend (3000-xxx domain)
   app.post("/api/auth/session", async (req: Request, res: Response) => {
     try {
-      // Authenticate using Bearer token from Authorization header
       const user = await sdk.authenticateRequest(req);
-
-      // Get the token from the Authorization header to set as cookie
       const authHeader = req.headers.authorization || req.headers.Authorization;
       if (typeof authHeader !== "string" || !authHeader.startsWith("Bearer ")) {
         res.status(400).json({ error: "Bearer token required" });
         return;
       }
       const token = authHeader.slice("Bearer ".length).trim();
-
-      // Set cookie for this domain (3000-xxx)
       const cookieOptions = getSessionCookieOptions(req);
       res.cookie(COOKIE_NAME, token, { ...cookieOptions, maxAge: ONE_YEAR_MS });
-
       res.json({ success: true, user: buildUserResponse(user) });
     } catch (error) {
       console.error("[Auth] /api/auth/session failed:", error);
