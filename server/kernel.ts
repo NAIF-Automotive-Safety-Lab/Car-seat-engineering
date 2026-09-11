@@ -1,5 +1,5 @@
 import { randomUUID } from "node:crypto";
-import { and, desc, eq } from "drizzle-orm";
+import { and, desc, eq, isNull, lt, or } from "drizzle-orm";
 import { getDb } from "./db";
 import { kernelAudits, kernelDrifts, kernelEngines, kernelEvidence, kernelGates, kernelRuns, kernelTests } from "../drizzle/schema";
 
@@ -125,7 +125,7 @@ export async function completeKernelRun(input: { userId: number; runId: string; 
   if (!input.outputHash.trim()) throw new Error("output hash is required");
   if (input.resultStatus === "PASS" && input.evidenceIds.length === 0) throw new Error("PASS requires evidence");
   const nextState: KernelState = input.resultStatus === "PASS" ? "COMPLETED" : input.resultStatus === "FAIL" ? "FAILED" : input.resultStatus;
-  await db.update(kernelRuns).set({ state: nextState, outputHash: input.outputHash, result: JSON.stringify(input.result), evidenceIds: JSON.stringify(input.evidenceIds), gate: nextState === "COMPLETED" ? "PASS" : nextState, completedAt: new Date() }).where(eq(kernelRuns.runId, input.runId));
+  await db.update(kernelRuns).set({ state: nextState, outputHash: input.outputHash, result: JSON.stringify(input.result), evidenceIds: JSON.stringify(input.evidenceIds), gate: nextState === "COMPLETED" ? "PASS" : nextState, leaseOwner: null, leaseExpiresAt: null, completedAt: new Date() }).where(eq(kernelRuns.runId, input.runId));
   await audit("RESULT_RECORDED", input.userId, input.runId, nextState, { outputHash: input.outputHash, evidenceIds: input.evidenceIds });
   return { runId: input.runId, state: nextState };
 }
@@ -135,9 +135,9 @@ export async function executeKernelRun(input: { userId: number; runId: string })
   const rows = await db.select().from(kernelRuns).where(and(eq(kernelRuns.runId, input.runId), eq(kernelRuns.requestedBy, input.userId))).limit(1);
   const run = rows[0];
   if (!run) throw new Error("run not found or not owned by authenticated user");
-  if (run.state !== "QUEUED") throw new Error("only queued runs can enter execution");
+  if (run.state !== "QUEUED" && run.state !== "RUNNING") throw new Error("only queued or running runs can enter execution");
   const reason = "ENGINE_RUNTIME_NOT_AVAILABLE: adapter registration does not prove solver execution";
-  await db.update(kernelRuns).set({ state: "BLOCKED", blockReason: reason, gate: "BLOCKED" }).where(eq(kernelRuns.runId, input.runId));
+  await db.update(kernelRuns).set({ state: "BLOCKED", blockReason: reason, gate: "BLOCKED", leaseOwner: null, leaseExpiresAt: null, completedAt: new Date() }).where(eq(kernelRuns.runId, input.runId));
   await db.update(kernelGates).set({ decision: "BLOCKED", reason }).where(eq(kernelGates.runId, input.runId));
   await audit("EXECUTION_BLOCKED", input.userId, input.runId, "BLOCKED", { reason });
   return { runId: input.runId, state: "BLOCKED" as const, reason };
@@ -150,9 +150,34 @@ export async function cancelKernelRun(input: { userId: number; runId: string }) 
   if (!run) throw new Error("run not found or not owned by authenticated user");
   if (run.state !== "QUEUED" && run.state !== "RUNNING") throw new Error("terminal run cannot be cancelled");
   const reason = "CANCELLED_BY_OPERATOR";
-  await db.update(kernelRuns).set({ state: "BLOCKED", blockReason: reason, gate: "BLOCKED", completedAt: new Date() }).where(eq(kernelRuns.runId, input.runId));
+  await db.update(kernelRuns).set({ state: "BLOCKED", blockReason: reason, gate: "BLOCKED", leaseOwner: null, leaseExpiresAt: null, completedAt: new Date() }).where(eq(kernelRuns.runId, input.runId));
   await audit("EXECUTION_CANCELLED", input.userId, input.runId, "BLOCKED", { reason });
   return { runId: input.runId, state: "BLOCKED" as const, reason };
+}
+
+export async function claimKernelRun(input: { userId: number; workerId: string; leaseSeconds?: number }) {
+  const db = await requireDb();
+  const now = new Date();
+  const candidate = await db.select().from(kernelRuns).where(and(eq(kernelRuns.requestedBy, input.userId), eq(kernelRuns.state, "QUEUED"), or(isNull(kernelRuns.leaseExpiresAt), lt(kernelRuns.leaseExpiresAt, now)))).orderBy(kernelRuns.createdAt).limit(1);
+  const run = candidate[0];
+  if (!run) return { claimed: false as const, reason: "NO_QUEUED_RUN" };
+  if (run.attempts >= run.maxAttempts) {
+    await db.update(kernelRuns).set({ state: "BLOCKED", blockReason: "MAX_ATTEMPTS_EXCEEDED", gate: "BLOCKED", completedAt: now }).where(eq(kernelRuns.runId, run.runId));
+    await audit("QUEUE_BLOCKED_MAX_ATTEMPTS", input.userId, run.runId, "BLOCKED", { attempts: run.attempts, maxAttempts: run.maxAttempts });
+    return { claimed: false as const, reason: "MAX_ATTEMPTS_EXCEEDED", runId: run.runId };
+  }
+  const leaseSeconds = Math.max(1, Math.min(input.leaseSeconds ?? 30, 300));
+  const leaseExpiresAt = new Date(now.getTime() + leaseSeconds * 1000);
+  await db.update(kernelRuns).set({ state: "RUNNING", attempts: run.attempts + 1, leaseOwner: input.workerId, leaseExpiresAt, resourceClass: "isolated" }).where(and(eq(kernelRuns.runId, run.runId), eq(kernelRuns.state, "QUEUED"), or(isNull(kernelRuns.leaseExpiresAt), lt(kernelRuns.leaseExpiresAt, now))));
+  await audit("QUEUE_CLAIMED", input.userId, run.runId, "RUNNING", { workerId: input.workerId, leaseExpiresAt, resourceClass: "isolated" });
+  return { claimed: true as const, runId: run.runId, leaseOwner: input.workerId, leaseExpiresAt };
+}
+
+export async function workerTick(input: { userId: number; workerId: string; leaseSeconds?: number }) {
+  const claim = await claimKernelRun(input);
+  if (!claim.claimed) return claim;
+  const execution = await executeKernelRun({ userId: input.userId, runId: claim.runId });
+  return { ...claim, execution };
 }
 
 export async function detectKernelGaps() {
@@ -170,6 +195,14 @@ export function compareReproducibility(input: { first: Record<string, unknown>; 
   const keys = ["repository", "commit", "artifactSha", "model", "testVersion", "inputs", "engineVersion", "outputs", "result"];
   const differences = keys.filter((key) => JSON.stringify(input.first[key]) !== JSON.stringify(input.second[key]));
   return { reproducible: differences.length === 0, differences };
+}
+
+export function calculateDependencyImpact(input: { changedDependencies: string[]; tests: Array<{ testId: string; dependencies: string[] }>; runs: Array<{ runId: string; testId: string; state: string }> }) {
+  const changed = new Set(input.changedDependencies);
+  const affectedTests = input.tests.filter((test) => test.dependencies.some((dependency) => changed.has(dependency))).map((test) => test.testId);
+  const affectedSet = new Set(affectedTests);
+  const staleRuns = input.runs.filter((run) => affectedSet.has(run.testId)).map((run) => ({ runId: run.runId, priorState: run.state, status: "STALE" as const }));
+  return { affectedTests, staleRuns, rerunRequired: affectedTests.length > 0 };
 }
 
 export async function getKernelRun(userId: number, runId: string) {

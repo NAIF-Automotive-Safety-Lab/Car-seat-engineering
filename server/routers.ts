@@ -3,7 +3,8 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { protectedProcedure, publicProcedure, router } from "./_core/trpc";
 import { completeQualificationRun, createQualificationRun, getQualificationRun, listAudits } from "./qualification";
-import { cancelKernelRun, compareReproducibility, completeKernelRun, detectKernelGaps, executeKernelRun, getKernelRun, listKernelStatus, planKernelRun, recordKernelDrift, recordKernelEvidence, registerKernelEngine, registerKernelTest } from "./kernel";
+import { calculateDependencyImpact, cancelKernelRun, claimKernelRun, compareReproducibility, completeKernelRun, detectKernelGaps, executeKernelRun, getKernelRun, listKernelStatus, planKernelRun, recordKernelDrift, recordKernelEvidence, registerKernelEngine, registerKernelTest, workerTick } from "./kernel";
+import { qualifyR41IsolatedFixture } from "./r41";
 import { z } from "zod";
 
 export const appRouter = router({
@@ -80,6 +81,12 @@ export const appRouter = router({
     execute: protectedProcedure
       .input(z.object({ runId: z.string().min(1) }))
       .mutation(({ ctx, input }) => executeKernelRun({ userId: ctx.user.id, ...input })),
+    claim: protectedProcedure
+      .input(z.object({ workerId: z.string().min(1).max(128), leaseSeconds: z.number().int().positive().max(300).optional() }))
+      .mutation(({ ctx, input }) => claimKernelRun({ userId: ctx.user.id, ...input })),
+    workerTick: protectedProcedure
+      .input(z.object({ workerId: z.string().min(1).max(128), leaseSeconds: z.number().int().positive().max(300).optional() }))
+      .mutation(({ ctx, input }) => workerTick({ userId: ctx.user.id, ...input })),
     cancel: protectedProcedure
       .input(z.object({ runId: z.string().min(1) }))
       .mutation(({ ctx, input }) => cancelKernelRun({ userId: ctx.user.id, ...input })),
@@ -87,6 +94,12 @@ export const appRouter = router({
     reproducibility: protectedProcedure
       .input(z.object({ first: z.record(z.string(), z.unknown()), second: z.record(z.string(), z.unknown()) }))
       .query(({ input }) => compareReproducibility(input)),
+    dependencyImpact: protectedProcedure
+      .input(z.object({ changedDependencies: z.array(z.string()), tests: z.array(z.object({ testId: z.string(), dependencies: z.array(z.string()) })), runs: z.array(z.object({ runId: z.string(), testId: z.string(), state: z.string() })) }))
+      .query(({ input }) => calculateDependencyImpact(input)),
+    r41Fixture: protectedProcedure
+      .input(z.object({ fixturePayload: z.string().min(1).max(100000) }))
+      .mutation(({ ctx, input }) => qualifyR41IsolatedFixture({ userId: ctx.user.id, ...input })),
     recordEvidence: protectedProcedure
       .input(z.object({ runId: z.string().min(1), evidenceClass: z.string().min(1), sourceHash: z.string().min(1), payload: z.unknown(), provenance: z.unknown() }))
       .mutation(({ ctx, input }) => recordKernelEvidence({ userId: ctx.user.id, ...input })),

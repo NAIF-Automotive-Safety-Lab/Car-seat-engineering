@@ -22,6 +22,13 @@
       "when": 1789086013432,
       "tag": "0002_overrated_adam_warlock",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1789087858993,
+      "tag": "0003_smart_namora",
+      "breakpoints": true
     }
   ]
 }

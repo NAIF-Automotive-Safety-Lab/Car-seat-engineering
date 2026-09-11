@@ -103,6 +103,11 @@ export const kernelRuns = mysqlTable("kernel_runs", {
   result: text("result"),
   evidenceIds: text("evidenceIds").notNull(),
   gate: varchar("gate", { length: 32 }).notNull(),
+  attempts: int("attempts").default(0).notNull(),
+  maxAttempts: int("maxAttempts").default(1).notNull(),
+  leaseOwner: varchar("leaseOwner", { length: 128 }),
+  leaseExpiresAt: timestamp("leaseExpiresAt"),
+  resourceClass: varchar("resourceClass", { length: 64 }).default("isolated").notNull(),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   completedAt: timestamp("completedAt"),
 });

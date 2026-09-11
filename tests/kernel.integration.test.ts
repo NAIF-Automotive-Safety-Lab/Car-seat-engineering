@@ -1,9 +1,10 @@
 import { and, eq } from "drizzle-orm";
+import { drizzle } from "drizzle-orm/mysql2";
 import { describe, expect, it } from "vitest";
 import { appRouter } from "../server/routers";
 import { deleteUserByOpenId, getDb, getUserByOpenId, upsertUser } from "../server/db";
 import { deleteKernelRunForTest } from "../server/kernel";
-import { kernelAudits, kernelEngines } from "../drizzle/schema";
+import { kernelAudits, kernelEngines, kernelRuns } from "../drizzle/schema";
 import type { TrpcContext } from "../server/_core/context";
 
 type TestUser = NonNullable<TrpcContext["user"]>;
@@ -156,6 +157,117 @@ describe("AEGIS-X kernel trust and execution gates", () => {
       if (runId) await deleteKernelRunForTest(owner.user.id, runId);
       await deleteUserByOpenId(owner.openId);
       await deleteUserByOpenId(forger.openId);
+    }
+  });
+
+  it("claims a queued run once with a lease and isolated resource class", async () => {
+    const { openId, user } = await testUser();
+    const caller = appRouter.createCaller(context(user));
+    let runId = "";
+    try {
+      await caller.kernel.registerEngine({ engineId: "opencascade", name: "OpenCascade", version: "1.0.0", adapterKind: "CAD_KERNEL", capabilities: ["STEP"] });
+      const planned = await caller.kernel.plan(validPlan);
+      runId = planned.runId;
+      const claim = await caller.kernel.claim({ workerId: "worker-test-1", leaseSeconds: 15 });
+      expect(claim.claimed).toBe(true);
+      if (!claim.claimed) throw new Error("queue claim did not return a run");
+      expect(claim.runId).toBe(runId);
+      const readBack = await caller.kernel.getRun({ runId });
+      expect(readBack?.run.state).toBe("RUNNING");
+      expect(readBack?.run.attempts).toBe(1);
+      expect(readBack?.run.resourceClass).toBe("isolated");
+      expect(readBack?.run.leaseOwner).toBe("worker-test-1");
+      const secondClaim = await caller.kernel.claim({ workerId: "worker-test-2", leaseSeconds: 15 });
+      expect(secondClaim.claimed).toBe(false);
+    } finally {
+      if (runId) await deleteKernelRunForTest(user.id, runId);
+      const db = await getDb();
+      if (db) {
+        await db.delete(kernelAudits).where(and(eq(kernelAudits.actorUserId, user.id), eq(kernelAudits.eventType, "ENGINE_REGISTERED")));
+        await db.delete(kernelEngines).where(eq(kernelEngines.engineId, "opencascade"));
+      }
+      await deleteUserByOpenId(openId);
+    }
+  });
+
+  it("executes all six R4.1 pipeline steps only as isolated NOT_PROVEN fixture runs", async () => {
+    const { openId, user } = await testUser();
+    const caller = appRouter.createCaller(context(user));
+    const runIds: string[] = [];
+    try {
+      const result = await caller.kernel.r41Fixture({ fixturePayload: "isolated-r4.1-step-fixture" });
+      expect(result.realArtifactStatus).toBe("BLOCKED / NOT_PROVEN");
+      expect(result.records).toHaveLength(6);
+      for (const record of result.records) {
+        runIds.push(record.runId);
+        expect(record.testId).toMatch(/^R4\.1-00[1-6]$/);
+        expect(record.version).toBe("1.0.0");
+        expect(record.artifactSha).toHaveLength(64);
+        expect(record.commit).toBe("fixture-isolated");
+        expect(record.engineVersion).toBe("0.0.0-fixture");
+        expect(record.outputHash).toHaveLength(64);
+        expect(record.result).toBe("NOT_PROVEN");
+        expect(record.evidenceId).toMatch(/^r41_ev_/);
+        expect(record.auditId).toMatch(/^r41_audit_/);
+        expect(record.gate).toBe("NOT_PROVEN");
+      }
+    } finally {
+      for (const runId of runIds) await deleteKernelRunForTest(user.id, runId);
+      await deleteUserByOpenId(openId);
+    }
+  });
+
+  it("reads a persisted run through a fresh database connection", async () => {
+    const { openId, user } = await testUser();
+    const caller = appRouter.createCaller(context(user));
+    let runId = "";
+    try {
+      await caller.kernel.registerEngine({ engineId: "opencascade", name: "OpenCascade", version: "1.0.0", adapterKind: "CAD_KERNEL", capabilities: ["STEP"] });
+      const planned = await caller.kernel.plan(validPlan);
+      runId = planned.runId;
+      await caller.kernel.claim({ workerId: "restart-test-worker", leaseSeconds: 15 });
+      if (!process.env.DATABASE_URL) throw new Error("DATABASE_URL is required for restart persistence coverage");
+      const freshDb = drizzle(process.env.DATABASE_URL);
+      const persisted = await freshDb.select().from(kernelRuns).where(eq(kernelRuns.runId, runId)).limit(1);
+      expect(persisted[0]?.state).toBe("RUNNING");
+      expect(persisted[0]?.attempts).toBe(1);
+      expect(persisted[0]?.leaseOwner).toBe("restart-test-worker");
+      await freshDb.$client.end();
+    } finally {
+      if (runId) await deleteKernelRunForTest(user.id, runId);
+      const db = await getDb();
+      if (db) {
+        await db.delete(kernelAudits).where(and(eq(kernelAudits.actorUserId, user.id), eq(kernelAudits.eventType, "ENGINE_REGISTERED")));
+        await db.delete(kernelEngines).where(eq(kernelEngines.engineId, "opencascade"));
+      }
+      await deleteUserByOpenId(openId);
+    }
+  });
+
+  it("runs one isolated worker tick and marks dependent runs stale", async () => {
+    const { openId, user } = await testUser();
+    const caller = appRouter.createCaller(context(user));
+    let runId = "";
+    try {
+      await caller.kernel.registerEngine({ engineId: "opencascade", name: "OpenCascade", version: "1.0.0", adapterKind: "CAD_KERNEL", capabilities: ["STEP"] });
+      const planned = await caller.kernel.plan(validPlan);
+      runId = planned.runId;
+      const tick = await caller.kernel.workerTick({ workerId: "worker-tick-test", leaseSeconds: 15 });
+      expect(tick.claimed).toBe(true);
+      if (!tick.claimed) throw new Error("worker did not claim a queued run");
+      expect(tick.execution.state).toBe("BLOCKED");
+      const impact = await caller.kernel.dependencyImpact({ changedDependencies: ["R4.1-artifact"], tests: [{ testId: "R4.1-QUALIFICATION", dependencies: ["R4.1-artifact", "repository"] }, { testId: "OTHER", dependencies: ["unrelated"] }], runs: [{ runId, testId: "R4.1-QUALIFICATION", state: "BLOCKED" }] });
+      expect(impact.affectedTests).toEqual(["R4.1-QUALIFICATION"]);
+      expect(impact.staleRuns[0]).toMatchObject({ runId, status: "STALE" });
+      expect(impact.rerunRequired).toBe(true);
+    } finally {
+      if (runId) await deleteKernelRunForTest(user.id, runId);
+      const db = await getDb();
+      if (db) {
+        await db.delete(kernelAudits).where(and(eq(kernelAudits.actorUserId, user.id), eq(kernelAudits.eventType, "ENGINE_REGISTERED")));
+        await db.delete(kernelEngines).where(eq(kernelEngines.engineId, "opencascade"));
+      }
+      await deleteUserByOpenId(openId);
     }
   });
 });
