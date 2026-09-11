@@ -270,4 +270,36 @@ describe("AEGIS-X kernel trust and execution gates", () => {
       await deleteUserByOpenId(openId);
     }
   });
+
+  it("suppresses duplicate queued runs and requeues one expired worker lease", async () => {
+    const { openId, user } = await testUser();
+    const caller = appRouter.createCaller(context(user));
+    let runId = "";
+    try {
+      await caller.kernel.registerEngine({ engineId: "opencascade", name: "OpenCascade", version: "1.0.0", adapterKind: "CAD_KERNEL", capabilities: ["STEP"] });
+      const first = await caller.kernel.plan({ ...validPlan, maxAttempts: 2 });
+      runId = first.runId;
+      const duplicate = await caller.kernel.plan({ ...validPlan, maxAttempts: 2 });
+      expect(duplicate.runId).toBe(runId);
+      expect(duplicate.deduplicated).toBe(true);
+      const claimed = await caller.kernel.claim({ workerId: "crash-recovery-worker", leaseSeconds: 30 });
+      expect(claimed.claimed).toBe(true);
+      const db = await getDb();
+      if (!db) throw new Error("database unavailable");
+      await db.update(kernelRuns).set({ leaseExpiresAt: new Date("2000-01-01T00:00:00.000Z") }).where(eq(kernelRuns.runId, runId));
+      const recovered = await caller.kernel.recoverExpired();
+      expect(recovered).toEqual({ requeued: 1, blocked: 0 });
+      const readBack = await caller.kernel.getRun({ runId });
+      expect(readBack?.run.state).toBe("QUEUED");
+      expect(readBack?.run.blockReason).toBe("WORKER_LEASE_EXPIRED_REQUEUED");
+    } finally {
+      if (runId) await deleteKernelRunForTest(user.id, runId);
+      const db = await getDb();
+      if (db) {
+        await db.delete(kernelAudits).where(and(eq(kernelAudits.actorUserId, user.id), eq(kernelAudits.eventType, "ENGINE_REGISTERED")));
+        await db.delete(kernelEngines).where(eq(kernelEngines.engineId, "opencascade"));
+      }
+      await deleteUserByOpenId(openId);
+    }
+  });
 });

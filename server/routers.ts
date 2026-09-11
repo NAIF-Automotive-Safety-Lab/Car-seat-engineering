@@ -3,7 +3,7 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { protectedProcedure, publicProcedure, router } from "./_core/trpc";
 import { completeQualificationRun, createQualificationRun, getQualificationRun, listAudits } from "./qualification";
-import { calculateDependencyImpact, cancelKernelRun, claimKernelRun, compareReproducibility, completeKernelRun, detectKernelGaps, executeKernelRun, getKernelRun, listKernelStatus, planKernelRun, recordKernelDrift, recordKernelEvidence, registerKernelEngine, registerKernelTest, workerTick } from "./kernel";
+import { calculateDependencyImpact, cancelKernelRun, claimKernelRun, compareReproducibility, completeKernelRun, detectKernelGaps, executeKernelRun, getKernelRun, listKernelStatus, planKernelRun, recordKernelDrift, recordKernelEvidence, recoverExpiredRuns, registerKernelEngine, registerKernelTest, workerTick } from "./kernel";
 import { qualifyR41IsolatedFixture } from "./r41";
 import { z } from "zod";
 
@@ -70,6 +70,7 @@ export const appRouter = router({
         inputHashes: z.record(z.string(), z.string()).optional(),
         engineId: z.string().min(1),
         engineVersion: z.string().min(1),
+        maxAttempts: z.number().int().positive().max(3).optional(),
       }))
       .mutation(({ ctx, input }) => planKernelRun({ userId: ctx.user.id, ...input })),
     getRun: protectedProcedure
@@ -87,6 +88,8 @@ export const appRouter = router({
     workerTick: protectedProcedure
       .input(z.object({ workerId: z.string().min(1).max(128), leaseSeconds: z.number().int().positive().max(300).optional() }))
       .mutation(({ ctx, input }) => workerTick({ userId: ctx.user.id, ...input })),
+    recoverExpired: protectedProcedure
+      .mutation(({ ctx }) => recoverExpiredRuns({ userId: ctx.user.id })),
     cancel: protectedProcedure
       .input(z.object({ runId: z.string().min(1) }))
       .mutation(({ ctx, input }) => cancelKernelRun({ userId: ctx.user.id, ...input })),

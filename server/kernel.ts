@@ -1,5 +1,5 @@
 import { randomUUID } from "node:crypto";
-import { and, desc, eq, isNull, lt, or } from "drizzle-orm";
+import { and, desc, eq, inArray, isNull, lt, or } from "drizzle-orm";
 import { getDb } from "./db";
 import { kernelAudits, kernelDrifts, kernelEngines, kernelEvidence, kernelGates, kernelRuns, kernelTests } from "../drizzle/schema";
 
@@ -35,6 +35,7 @@ type PlanInput = {
   inputHashes?: Record<string, string>;
   engineId: string;
   engineVersion: string;
+  maxAttempts?: number;
 };
 
 async function requireDb() {
@@ -106,14 +107,16 @@ export async function planKernelRun(input: PlanInput) {
   const failures = validationFailures(input, contract);
   const engine = await db.select().from(kernelEngines).where(and(eq(kernelEngines.engineId, input.engineId), eq(kernelEngines.version, input.engineVersion))).limit(1);
   if (!engine[0]) failures.push("engine adapter is not registered");
+  const duplicate = await db.select().from(kernelRuns).where(and(eq(kernelRuns.requestedBy, input.userId), eq(kernelRuns.testId, input.testId), eq(kernelRuns.testVersion, input.testVersion), eq(kernelRuns.artifactSha256, input.artifactSha256 ?? ""), inArray(kernelRuns.state, ["QUEUED", "RUNNING"]))).limit(1);
+  if (duplicate[0]) return { runId: duplicate[0].runId, state: duplicate[0].state, blockReason: duplicate[0].blockReason, gateId: null, deduplicated: true as const };
   const runId = `k_run_${randomUUID()}`;
   const state: KernelState = failures.length > 0 ? "BLOCKED" : "QUEUED";
   const blockReason = failures.length > 0 ? `BLOCK BEFORE EXECUTION: ${failures.join("; ")}` : null;
-  await db.insert(kernelRuns).values({ runId, requestedBy: input.userId, testId: input.testId, testVersion: input.testVersion, repository: input.repository ?? "", commit: input.commit ?? "", artifactSha256: input.artifactSha256 ?? "", model: input.model ?? "", inputHashes: JSON.stringify(input.inputHashes ?? {}), engineId: input.engineId, engineVersion: input.engineVersion, state, blockReason, evidenceIds: JSON.stringify([]), gate: state === "BLOCKED" ? "BLOCKED" : "PENDING", createdAt: new Date() });
+  await db.insert(kernelRuns).values({ runId, requestedBy: input.userId, testId: input.testId, testVersion: input.testVersion, repository: input.repository ?? "", commit: input.commit ?? "", artifactSha256: input.artifactSha256 ?? "", model: input.model ?? "", inputHashes: JSON.stringify(input.inputHashes ?? {}), engineId: input.engineId, engineVersion: input.engineVersion, state, blockReason, evidenceIds: JSON.stringify([]), gate: state === "BLOCKED" ? "BLOCKED" : "PENDING", maxAttempts: Math.max(1, Math.min(input.maxAttempts ?? 1, 3)), resourceClass: "isolated", createdAt: new Date() });
   const gateId = `k_gate_${randomUUID()}`;
   await db.insert(kernelGates).values({ gateId, runId, policy: contract?.gatePolicy ?? "BLOCK_ON_UNTRUSTED_UPSTREAM", decision: state === "BLOCKED" ? "BLOCKED" : "NOT_PROVEN", reason: blockReason ?? "Execution is queued; no solver result exists.", dependencies: JSON.stringify(failures), createdAt: new Date() });
   await audit(state === "BLOCKED" ? "EXECUTION_BLOCKED" : "EXECUTION_QUEUED", input.userId, runId, state, { failures, testId: input.testId, engineId: input.engineId });
-  return { runId, state, blockReason, gateId };
+  return { runId, state, blockReason, gateId, deduplicated: false as const };
 }
 
 export async function completeKernelRun(input: { userId: number; runId: string; outputHash: string; result: unknown; resultStatus: "PASS" | "FAIL" | "BLOCKED" | "NOT_PROVEN"; evidenceIds: string[] }) {
@@ -178,6 +181,26 @@ export async function workerTick(input: { userId: number; workerId: string; leas
   if (!claim.claimed) return claim;
   const execution = await executeKernelRun({ userId: input.userId, runId: claim.runId });
   return { ...claim, execution };
+}
+
+export async function recoverExpiredRuns(input: { userId: number }) {
+  const db = await requireDb();
+  const now = new Date();
+  const expired = await db.select().from(kernelRuns).where(and(eq(kernelRuns.requestedBy, input.userId), eq(kernelRuns.state, "RUNNING"), lt(kernelRuns.leaseExpiresAt, now)));
+  let requeued = 0;
+  let blocked = 0;
+  for (const run of expired) {
+    if (run.attempts < run.maxAttempts) {
+      await db.update(kernelRuns).set({ state: "QUEUED", leaseOwner: null, leaseExpiresAt: null, blockReason: "WORKER_LEASE_EXPIRED_REQUEUED" }).where(eq(kernelRuns.runId, run.runId));
+      await audit("WORKER_CRASH_RECOVERED", input.userId, run.runId, "QUEUED", { attempts: run.attempts, maxAttempts: run.maxAttempts });
+      requeued += 1;
+    } else {
+      await db.update(kernelRuns).set({ state: "BLOCKED", gate: "BLOCKED", leaseOwner: null, leaseExpiresAt: null, blockReason: "WORKER_LEASE_EXPIRED_MAX_ATTEMPTS", completedAt: now }).where(eq(kernelRuns.runId, run.runId));
+      await audit("WORKER_CRASH_BLOCKED", input.userId, run.runId, "BLOCKED", { attempts: run.attempts, maxAttempts: run.maxAttempts });
+      blocked += 1;
+    }
+  }
+  return { requeued, blocked };
 }
 
 export async function detectKernelGaps() {
