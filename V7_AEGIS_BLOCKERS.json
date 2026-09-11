@@ -1,0 +1,10 @@
+{
+  "blockers": [
+    { "id": "AUTHENTICATED_E2E", "status": "BLOCKED", "reason": "No real authenticated browser session is available in this environment." },
+    { "id": "REAL_CAD_ENGINE", "status": "BLOCKED", "reason": "No trusted OpenCascade/OpenRadioss/CalculiX runtime is configured." },
+    { "id": "REAL_R41_ARTIFACT", "status": "BLOCKED / NOT_PROVEN", "reason": "No STEP/STP/IGES artifact was found in the canonical project or upload directory." },
+    { "id": "REMOTE_RUNNER", "status": "BLOCKED", "reason": "No authenticated runner identity, public key, heartbeat, or signed transport is configured." },
+    { "id": "GITHUB_PUSH", "status": "BLOCKED", "reason": "The S3-backed WebDev remote does not provide shell credentials; direct push failed with username prompt disabled." }
+  ],
+  "nonBlockers": ["database migration", "worker queue", "restart read-back", "security negatives", "reproducibility", "JON HMAC/replay protection"]
+}

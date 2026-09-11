@@ -1,0 +1,19 @@
+{
+  "manifestVersion": "1.0.0",
+  "project": "V7-AEGIS",
+  "kernel": "AEGIS-X",
+  "branch": "main",
+  "commit": "aaa037a65169592cf975c8df66015c038e93e127",
+  "remote": "https://7f0548f6b28a1758d9bf7be630d36cb4.artifacts.cloudflare.net/git/prod/iMguyThUG2dP8xXixCH9da.git",
+  "protectedBaselines": { "V7-R3": "UNCHANGED", "R4.1": "UNCHANGED" },
+  "database": { "dialect": "mysql", "migrations": ["0000_elite_eternals", "0001_previous_redwing", "0002_overrated_adam_warlock", "0003_smart_namora"], "status": "PASS" },
+  "sourceHashes": {
+    "server/kernel.ts": "f503b85049b8367f36f7d62f11336afd2a76f91f64baac4027b62f0fbba731c3",
+    "server/jon.ts": "6cc759fc9a1839c0e58071ad419b64c3c26eedb1f6ae52b9a02b8be4e506053c",
+    "server/r41.ts": "b349a13d63076a34909fbd74dbfa01f8eb486121dc28ccd94ee77a8e2dc8e16d",
+    "drizzle/schema.ts": "bc6ad3832b44b7b2f268ac67f8eb91842ec1c95b5bfcf27b110bfe93102dbd54",
+    "drizzle/0003_smart_namora.sql": "1df590d10848eb74645bab215718d92f883ce73825f4c447764a5dcf202023f8",
+    "tests/kernel.integration.test.ts": "3f6ee234a6682814bb77027fd2afd087b40cd05259dd4eddcc97fc2dd46d96c5",
+    "tests/jon.integration.test.ts": "cc36f250353150b6ffaad376e11a043fb9edf07514654c4e82ec257152ed3e7a"
+  }
+}

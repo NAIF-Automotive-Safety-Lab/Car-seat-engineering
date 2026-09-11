@@ -1,0 +1,13 @@
+{
+  "testFiles": 5,
+  "testsPassed": 19,
+  "testsFailed": 0,
+  "testsSkipped": 0,
+  "kernelTests": 11,
+  "qualificationTests": 3,
+  "jonSecurityTests": 2,
+  "availableIntegrationTests": 2,
+  "authLogoutTests": 1,
+  "coverage": ["negative authorization", "wrong SHA", "protected mutation", "duplicate completion", "queue isolation", "fresh connection read-back", "worker tick", "expired lease recovery", "duplicate run suppression", "dependency impact", "reproducibility", "HMAC", "replay protection"],
+  "r41Fixture": "PIPELINE VERIFIED; R4.1 VERIFIED = NOT_PROVEN"
+}

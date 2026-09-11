@@ -1,0 +1,10 @@
+{
+  "project": "V7-AEGIS",
+  "kernel": "AEGIS-X",
+  "built": ["trust gates", "queue lease", "worker tick", "bounded retries", "duplicate-run suppression", "expired-lease recovery", "JON gateway", "HMAC webhook", "isolated R4.1 fixture pipeline"],
+  "executed": ["pnpm check", "pnpm lint", "pnpm build", "pnpm test", "live JON credential fail-closed checks"],
+  "verified": ["TypeScript", "lint", "build", "migration consistency", "19 tests", "0 skipped", "baseline scan", "secret scan"],
+  "realSolverExecution": "BLOCKED",
+  "realR41Qualification": "BLOCKED / NOT_PROVEN",
+  "physicalEngineeringEvidence": "NOT_PROVEN"
+}
