@@ -86,3 +86,11 @@ This checkpoint contains only the recovery log. No application source, schema, b
 - **Command:** `pnpm test -- --reporter=dot`
 - **Runtime:** `DATABASE_URL` isolated AEGIS MySQL-compatible database; `AEGIS_API_URL=http://127.0.0.1:3001`
 - **Next gate:** browser/API/AEGIS-X/database/result/audit/UI E2E
+
+## Sequential checkpoint — E2E
+
+- **Browser → live API health:** PASS; browser received live JSON from `/api/health`.
+- **Browser → protected API without authentication:** PASS for the negative security case; protected `qualification.get` returned HTTP 401 / `UNAUTHORIZED`.
+- **Authenticated Browser → API → AEGIS-X → MySQL → Result → Audit → UI:** `NOT_PROVEN`; no authenticated browser session and no complete AEGIS UI execution flow were available. This is intentionally not promoted to PASS.
+- **Existing authenticated API/database/result/audit coverage:** PASS through the 19/19 integration suite.
+- **Next gate:** safe production build and final GitHub checkpoint.
