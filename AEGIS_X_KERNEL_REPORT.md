@@ -43,7 +43,9 @@ The additive migration `drizzle/0002_overrated_adam_warlock.sql` creates `kernel
 | Migration consistency | PASS | `pnpm drizzle-kit migrate` completes without replaying the applied migration. |
 | Full tests | PASS | 4 test files, 9 tests passed, 0 skipped. |
 | Kernel tests | PASS | 3 tests cover block-before-execution, evidence-bound completion, audit readback, and unauthenticated rejection. |
-| UI preview | CAPTURED | Mobile previews captured for Command Center, Gaps, Engines, and Audit. |
+| UI preview | CAPTURED | Mobile previews captured for Command Center, Runs, Tests, Gaps, Engines, and Audit. |
+| Runs / Results UI | BUILT | Runs screen distinguishes BLOCKED, QUEUED, and NOT_PROVEN and keeps execution behind the kernel. |
+| Test Registry UI | BUILT | Tests screen exposes version, engine, checks, evidence class, and upstream-blocking policy. |
 | Protected baselines | UNCHANGED | No V7-R3 or R4.1 paths were changed. |
 | Real solver execution | NOT_PROVEN | Adapters are registry contracts only; no OpenCascade/OpenRadioss/CalculiX solver result is claimed. |
 | Physical engineering validation | NOT_PROVEN | No physical measurement, supplier/OEM evidence, CAE artifact, or canonical R4.1/V7-R3 baseline hash was supplied. |

@@ -21,6 +21,8 @@ export default function TabLayout() {
       tabBarLabelStyle: { fontSize: 9, fontWeight: '700' },
     }}>
       <Tabs.Screen name="index" options={{ title: 'Command Center', tabBarIcon: ({ color }) => <IconSymbol name="square.grid.2x2.fill" size={20} color={color} /> }} />
+      <Tabs.Screen name="runs" options={{ title: 'Runs', tabBarIcon: ({ color }) => <IconSymbol name="play.fill" size={20} color={color} /> }} />
+      <Tabs.Screen name="tests" options={{ title: 'Tests', tabBarIcon: ({ color }) => <IconSymbol name="checkmark.seal.fill" size={20} color={color} /> }} />
       <Tabs.Screen name="gaps" options={{ title: 'Gaps', tabBarIcon: ({ color }) => <IconSymbol name="exclamationmark.triangle.fill" size={20} color={color} /> }} />
       <Tabs.Screen name="engines" options={{ title: 'Engines', tabBarIcon: ({ color }) => <IconSymbol name="cpu.fill" size={20} color={color} /> }} />
       <Tabs.Screen name="audit" options={{ title: 'Audit', tabBarIcon: ({ color }) => <IconSymbol name="list.bullet.rectangle.portrait.fill" size={20} color={color} /> }} />
