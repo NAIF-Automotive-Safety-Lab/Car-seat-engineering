@@ -102,3 +102,7 @@ This checkpoint contains only the recovery log. No application source, schema, b
 - **Server bundle:** `dist/index.js`, 68.0 KB
 - **Safe software changes:** no additional application source changes were required after the 19/19 regression pass.
 - **Next gate:** final GitHub fetch/clone SHA verification and John handoff.
+
+## Final checkpoint — GitHub and John handoff
+
+The final handoff package is `JON_AEGIS_REVIEW_HANDOFF.md`. It identifies the final remote build SHA and requests independent reproducible review. `JOHN_STATUS = HANDOFF_READY_PENDING_INDEPENDENT_REVIEW`; no independent result is claimed. The final GitHub checkpoint must be verified from local fetch and an independent clone before this record is considered complete.

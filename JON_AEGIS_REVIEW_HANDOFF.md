@@ -8,7 +8,7 @@ This handoff is for an independent engineering/software review of the existing V
 
 Repository: `NAIF-Automotive-Safety-Lab/Car-seat-engineering`  
 Branch: `aegis-recovery`  
-Verified remote commit: `28dae5d9c32d24338a9cc457ca17d85371fe8184`  
+Verified remote commit: `7c31e7f2a4ffc888c1da262da101c569fd8d4c04`
 Base AEGIS commit supplied for takeover: `49352d54392c51c06c50110a2ea3e42c78f4edee`
 
 ## Verified software evidence
@@ -29,7 +29,7 @@ The following remain blocked or not proven and must not be promoted by review wi
 | Signed remote runner | BLOCKED / NOT_PROVEN |
 | Real R4.1 STEP/STP artifact | BLOCKED / NOT_PROVEN |
 | Physical engineering evidence | NOT_PROVEN |
-| Authenticated Browser→API→AEGIS-X→DB→Result→Audit→UI E2E | NOT_PROVEN; API browser health only was proven |
+| Authenticated Browser→API→AEGIS-X→DB→Result→Audit→UI E2E | NOT_PROVEN; browser health and unauthenticated 401 security response were proven, but no authenticated UI session was available |
 | V7-R3/R4.1 immutability | No tracked baseline artifact exists in this application branch for byte-level comparison; no mutation was performed |
 
 ## Requested independent review
@@ -39,3 +39,5 @@ JON should independently verify the remote commit, migration state, test count, 
 ## Review status
 
 `JON_STATUS = HANDOFF_READY_PENDING_INDEPENDENT_REVIEW`
+
+The handoff corresponds to the final remote branch SHA above. No independent John/JON review result is claimed in this checkpoint; the result remains pending until an independent reviewer produces reproducible evidence.
