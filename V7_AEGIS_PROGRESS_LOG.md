@@ -76,3 +76,13 @@ This checkpoint contains only the recovery log. No application source, schema, b
 - **Restart/new-connection read-back:** PASS
 - **Secrets:** runtime-only; no credentials recorded
 - **Next gate:** existing 19-test regression suite
+
+## Sequential checkpoint — Regression tests
+
+- **Result:** `19/19 PASS`
+- **Test files:** 5 passed
+- **Failed:** 0
+- **Skipped:** 0
+- **Command:** `pnpm test -- --reporter=dot`
+- **Runtime:** `DATABASE_URL` isolated AEGIS MySQL-compatible database; `AEGIS_API_URL=http://127.0.0.1:3001`
+- **Next gate:** browser/API/AEGIS-X/database/result/audit/UI E2E
