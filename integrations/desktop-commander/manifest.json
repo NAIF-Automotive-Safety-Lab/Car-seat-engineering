@@ -1,0 +1,24 @@
+{
+  "source_repo": "https://github.com/wonderwhy-er/DesktopCommanderMCP.git",
+  "source_commit": "a781f5a4b8cfebac6638bc6fcbd38fca6326be53",
+  "included_components": [
+    "src/index.ts (MCP server entry)",
+    "src/remote-device (device transport)",
+    "src/data (non-sensitive prompts/data)",
+    "config.json (security blocked commands)",
+    "package.json (build scripts & dependencies — reference)",
+    "scripts/* (build/test helpers)"
+  ],
+  "excluded_components": [
+    ".git",
+    "dist",
+    "large binary assets",
+    "R4.1 and other immutable V7 artifacts",
+    "evidence manifests"
+  ],
+  "required_node_version": ">=18.0.0",
+  "build_commands": ["npm install", "npm run build"],
+  "start_command": "node dist/index.js",
+  "mcp_entrypoint": "dist/index.js",
+  "notes": "This manifest is declarative — follow README.md to fetch and selectively copy source files into working/ before building in CI."
+}

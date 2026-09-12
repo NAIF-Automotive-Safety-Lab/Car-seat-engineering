@@ -1,0 +1,11 @@
+TASK: Integrate selected components from wonderwhy-er/DesktopCommanderMCP
+SOURCE_REPOSITORY: https://github.com/wonderwhy-er/DesktopCommanderMCP
+SOURCE_COMMIT: a781f5a4b8cfebac6638bc6fcbd38fca6326be53
+INTEGRATION_BRANCH: aegis/desktop-commander-integration
+INTEGRATION_DATE: 2026-09-12T00:00:00Z
+
+This directory contains metadata, license attribution, and helper scripts to perform a selective transplant of the DesktopCommanderMCP components necessary for MCP server, filesystem operations, and terminal/process execution.
+
+Files included here are intentionally lightweight. The full upstream source is NOT copied to avoid duplicating large artifacts and to respect V7 immutability constraints.
+
+See README.md for steps to reproduce the build and runtime tests.
