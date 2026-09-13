@@ -1,0 +1,41 @@
+name: build-selfhost-bundle
+on:
+  push:
+    branches:
+      - migration/digitalocean-deepseek-20260913
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Verify canonical commit is preserved
+        run: |
+          test "$(git rev-parse HEAD)" != "" 
+          test -f R4.1/R4.1.step
+          sha256sum R4.1/R4.1.step
+      - name: Build migration bundle
+        run: |
+          mkdir -p dist/V7-AEGIS-selfhost
+          cp -a . dist/V7-AEGIS-selfhost/repository
+          rm -rf dist/V7-AEGIS-selfhost/repository/.git dist/V7-AEGIS-selfhost/repository/dist
+          cat > dist/V7-AEGIS-selfhost/BUILD_PROVENANCE.txt <<EOF
+Canonical source repository: NAIF-Automotive-Safety-Lab/Car-seat-engineering
+Source commit: $(git rev-parse HEAD)
+R4.1 SHA-256: $(sha256sum R4.1/R4.1.step | awk '{print $1}')
+Bundle purpose: DigitalOcean + DeepSeek self-host migration bootstrap
+Floot source mirror: NOT_INCLUDED — Floot account build limit prevented source extraction on 2026-09-13; no substitution was made.
+EOF
+          tar -czf dist/V7-AEGIS-selfhost-bundle.tar.gz -C dist V7-AEGIS-selfhost
+          sha256sum dist/V7-AEGIS-selfhost-bundle.tar.gz > dist/V7-AEGIS-selfhost-bundle.tar.gz.sha256
+      - uses: actions/upload-artifact@v4
+        with:
+          name: V7-AEGIS-selfhost-bundle
+          path: |
+            dist/V7-AEGIS-selfhost-bundle.tar.gz
+            dist/V7-AEGIS-selfhost-bundle.tar.gz.sha256
+            dist/V7-AEGIS-selfhost/BUILD_PROVENANCE.txt
+          if-no-files-found: error

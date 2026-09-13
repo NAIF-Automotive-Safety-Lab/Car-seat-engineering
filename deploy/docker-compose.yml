@@ -1,0 +1,46 @@
+services:
+  aegis:
+    image: ghcr.io/example/v7-aegis-control-plane:UNATTESTED
+    restart: unless-stopped
+    env_file: ../.env
+    environment:
+      AEGIS_ROLE: CONTROL_PLANE
+      DEEPSEEK_BASE_URL: ${DEEPSEEK_BASE_URL:-https://api.deepseek.com}
+      DEEPSEEK_MODEL: ${DEEPSEEK_MODEL:-deepseek-v4-flash}
+      AEGIS_CANONICAL_GIT_SHA: ${AEGIS_CANONICAL_GIT_SHA}
+      AEGIS_R41_SHA256: ${AEGIS_R41_SHA256}
+      AEGIS_V7_PACKAGE_SHA256: ${AEGIS_V7_PACKAGE_SHA256}
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - ../data/runs:/var/lib/aegis/runs
+      - ../data/ledger:/var/lib/aegis/ledger
+    security_opt:
+      - no-new-privileges:true
+    read_only: true
+    tmpfs:
+      - /tmp
+    networks:
+      - aegis_net
+
+  runtime:
+    image: ${AEGIS_DOCKER_IMAGE_REFERENCE:-v7-aegis-engine-baseline:UNATTESTED}
+    restart: "no"
+    env_file: ../.env
+    environment:
+      AEGIS_ROLE: EXECUTION_RUNTIME
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    networks: []
+    volumes:
+      - ../data/runs:/work/output
+      - ${AEGIS_CANONICAL_CHECKOUT:-..}:/work/baseline:ro
+    entrypoint: ["/bin/sh", "-lc"]
+    command: ["echo BLOCKED_UNTIL_ATTESTED; exit 20"]
+
+networks:
+  aegis_net:
+    driver: bridge
