@@ -1,0 +1,21 @@
+name: aegis-gates
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Install test runner
+        run: python -m pip install --disable-pip-version-check pytest==9.1.1 cadquery-ocp==7.9.3.1.1
+      - name: Production import/build check
+        run: python -m py_compile aegis/*.py && test -s aegis/static/index.html
+      - name: Unit, integration, security, replay, and regression tests
+        run: python -m pytest -q aegis/tests engineering_recovery/tests tests
+      - name: Fail-closed release-gate verification
+        run: python -c "from aegis.core import AegisStore,AEOK; assert AEOK(AegisStore(':memory:')).release_gate('candidate',{},'ci')['status']=='BLOCK'"
