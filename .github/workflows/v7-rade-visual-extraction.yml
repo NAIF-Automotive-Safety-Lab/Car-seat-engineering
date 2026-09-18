@@ -1,0 +1,74 @@
+name: V7 RADe Visual Extraction
+
+on:
+  push:
+    branches:
+      - tools/v7-rade-visual-extraction
+  workflow_dispatch:
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install PDF tooling
+        run: python -m pip install --upgrade pip pymupdf pillow
+
+      - name: Render V5/V6/V7 PDFs and build manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p rade_visual_extract
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, json, fitz
+          from PIL import Image, ImageOps, ImageDraw
+          pdfs = [
+              "T_OCS_V5_Patent_Draft_Invention_Disclosure.pdf",
+              "T_OCS_V6_Patent_Draft_Invention_Disclosure.pdf",
+              "T_OCS_V7_Patent_Draft_Invention_Disclosure.pdf",
+          ]
+          out = Path("rade_visual_extract")
+          manifest = []
+          for name in pdfs:
+              p = Path(name)
+              data = p.read_bytes()
+              sha = hashlib.sha256(data).hexdigest()
+              doc = fitz.open(p)
+              pdf_out = out / p.stem
+              pdf_out.mkdir(parents=True, exist_ok=True)
+              thumbs=[]
+              for i, page in enumerate(doc):
+                  pix = page.get_pixmap(matrix=fitz.Matrix(1.5,1.5), alpha=False)
+                  fn = pdf_out / f"page-{i+1:03d}.png"
+                  pix.save(fn)
+                  im = Image.open(fn).convert("RGB")
+                  im.thumbnail((360,480))
+                  thumbs.append((i+1,im.copy()))
+              cols=5
+              rows=(len(thumbs)+cols-1)//cols
+              sheet=Image.new("RGB",(cols*380,rows*520),"white")
+              d=ImageDraw.Draw(sheet)
+              for j,(pn,im) in enumerate(thumbs):
+                  x=(j%cols)*380+10; y=(j//cols)*520+10
+                  sheet.paste(im,(x,y))
+                  d.text((x,y+485),f"Page {pn}",fill="black")
+              sheet.save(pdf_out/"contact-sheet.jpg",quality=92)
+              manifest.append({"pdf":name,"sha256":sha,"pages":len(doc),"render_dir":str(pdf_out)})
+          (out/"manifest.json").write_text(json.dumps(manifest,indent=2),encoding="utf-8")
+          PY
+
+      - name: Upload rendered PDF pages
+        uses: actions/upload-artifact@v4
+        with:
+          name: v7-rade-visual-extraction
+          path: rade_visual_extract/
+          if-no-files-found: error
+          retention-days: 7
