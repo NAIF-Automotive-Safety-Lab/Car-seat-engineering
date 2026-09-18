@@ -1,6 +1,8 @@
 name: V7 RADe Visual Extraction
 
 on:
+  pull_request:
+    types: [opened, synchronize, reopened]
   push:
     branches:
       - tools/v7-rade-visual-extraction
