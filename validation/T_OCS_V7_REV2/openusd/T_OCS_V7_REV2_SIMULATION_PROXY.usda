@@ -1,0 +1,55 @@
+#usda 1.0
+# SIMULATION_ONLY / NON_AUTHORITATIVE_PROXY
+(
+    defaultPrim = "T_OCS_ROOT"
+    metersPerUnit = 1
+    upAxis = "Z"
+    doc = "T-OCS V7.0 REVISION-2 validation scaffold; not authoritative CAD."
+)
+
+def Xform "T_OCS_ROOT" (
+    customData = { string t_ocs:artifact_status = "SIMULATION_ONLY" string t_ocs:revision = "V7.0-REVISION-2-REQUESTED" }
+) {
+    def Xform "BASE_STRUCTURE" { string t_ocs:id = "T_OCS-CMP-100" }
+    def Xform "PRIMARY_CONCEPT_COMPONENTS" {
+        def Xform "RAILS" {
+            def Xform "RAIL_L" { string t_ocs:id = "T_OCS-CMP-110L" }
+            def Xform "RAIL_R" { string t_ocs:id = "T_OCS-CMP-110R" }
+        }
+        def Xform "CARRIAGE" { string t_ocs:id = "T_OCS-CMP-120" }
+    }
+    def Xform "MOVING_COMPONENTS" {
+        def Xform "ABSORBER_L" { string t_ocs:id = "T_OCS-CMP-130L" }
+        def Xform "ABSORBER_R" { string t_ocs:id = "T_OCS-CMP-130R" }
+        def Xform "PELVIC_CONTROL" { string t_ocs:id = "T_OCS-CMP-140" }
+        def Xform "ROTATION_LINK_L" { string t_ocs:id = "T_OCS-CMP-150L" }
+        def Xform "ROTATION_LINK_R" { string t_ocs:id = "T_OCS-CMP-150R" }
+        def Xform "SEATBACK_FRAME" { string t_ocs:id = "T_OCS-CMP-160" }
+        def Xform "LOCK_170" { string t_ocs:id = "T_OCS-CMP-170" }
+        def Xform "REBOUND" { string t_ocs:id = "T_OCS-CMP-180" }
+        def Xform "RESTRAINT_INTERFACES" { string t_ocs:id = "T_OCS-CMP-190" }
+        def Xform "OCCUPANT_GUIDANCE" { string t_ocs:id = "T_OCS-CMP-200" }
+        def Xform "SENSOR_INTERFACE" { string t_ocs:id = "T_OCS-CMP-210" }
+    }
+    def Xform "JOINTS_AND_INTERFACES" {
+        def Xform "CARRIAGE_TRANSLATION" { string t_ocs:id = "T_OCS-JNT-001" }
+        def Xform "SEATBACK_ROTATION" { string t_ocs:id = "T_OCS-JNT-002" }
+        custom string t_ocs:motion_basis = "conceptual 2-DOF translation + rotation"
+        custom string t_ocs:limits = "travel 180 mm concept; seatback target <=25 deg screen"
+    }
+    def Xform "CONTACT_SURFACES" { string t_ocs:id = "T_OCS-CNT-001" }
+    def Xform "CONSTRAINTS" { string t_ocs:id = "T_OCS-CNS-001" }
+    def Xform "REFERENCE_GEOMETRY" {
+        custom double t_ocs:nominal_width_m = 0.500
+        custom double t_ocs:nominal_depth_m = 0.520
+        custom double t_ocs:nominal_height_m = 0.860
+        custom double t_ocs:ride_down_stroke_m = 0.180
+        custom double t_ocs:seatback_recline_deg = 25.0
+        custom string t_ocs:values_status = "ASSUMED_FROM_V5_SOURCE"
+    }
+    def Xform "MEASUREMENT_POINTS" { string t_ocs:id = "T_OCS-MEAS-ROOT" }
+    def Xform "LOAD_APPLICATION_POINTS" { string t_ocs:id = "T_OCS-LOAD-ROOT" }
+    def Xform "TEST_FIXTURES" { string t_ocs:id = "T_OCS-FIX-ROOT" }
+    def Xform "SENSORS" { string t_ocs:id = "T_OCS-SNS-ROOT" }
+    def Xform "VALIDATION_SCENARIOS" { string t_ocs:id = "T_OCS-TEST-ROOT" }
+}

@@ -1,0 +1,21 @@
+PARAMETER_ID,VALUE,UNIT,SOURCE,STATUS,CONFIDENCE,DEPENDENT_TESTS
+GEOM_OVERALL_WIDTH,500,mm,T_OCS_V5_Engineering_Design_Package.pdf,ASSUMED,0.99,K-001;K-005
+GEOM_OVERALL_DEPTH,520,mm,T_OCS_V5_Engineering_Design_Package.pdf,ASSUMED,0.99,K-001;K-005
+GEOM_OVERALL_HEIGHT,860,mm,T_OCS_V5_Engineering_Design_Package.pdf,ASSUMED,0.99,K-001;K-005
+SEATBACK_RECLINE,25,deg rearward,T_OCS_V5_Engineering_Design_Package.pdf,ASSUMED,0.99,K-001;K-002
+RIDE_DOWN_STROKE,180,mm,T_OCS_V5_Engineering_Design_Package.pdf,ASSUMED,0.99,K-002;K-004;D-002;D-005
+SEATBACK_ROTATION_SCREEN_TARGET,<=25,deg,T_OCS_V5_Engineering_Design_Package.pdf,ASSUMED,0.99,K-004;D-006
+OCCUPANT_SCREENING_MASS,75,kg,N_IOCARS_V5_Engineering_Report.pdf,ASSUMED,0.98,D-001;D-002
+STANDARD_GRAVITY,9.80665,m/s^2,standard gravity constant,VERIFIED,0.99,D-001
+VEHICLE_BASE_PULSE,UNKNOWN,m/s^2 vs s,V7 project physical-input evidence,UNKNOWN,0.99,D-001;D-002;D-003;XC-001
+INITIAL_VELOCITY,UNKNOWN,m/s,V7 project physical-input evidence,UNKNOWN,0.99,D-001;D-002;D-003
+MATERIAL_DENSITY,UNKNOWN,kg/m^3,V7 project physical-input evidence,UNKNOWN,0.99,G1;G3
+ASSEMBLY_MASS,UNKNOWN,kg,V7 project physical-input evidence,UNKNOWN,0.99,D-001;D-002;D-003
+ASSEMBLY_CG,UNKNOWN,m,V7 project physical-input evidence,UNKNOWN,0.99,D-001;D-002;D-003
+ASSEMBLY_INERTIA,UNKNOWN,kg*m^2,V7 project physical-input evidence,UNKNOWN,0.99,D-001;D-002;D-003
+FRICTION,UNKNOWN,-,V7 project physical-input evidence,UNKNOWN,0.99,D-004;D-005;D-007;XC-001
+CONTACT_STIFFNESS,UNKNOWN,N/m,V7 project physical-input evidence,UNKNOWN,0.99,D-004;D-005;D-006;XC-001
+CONTACT_DAMPING,UNKNOWN,N*s/m,V7 project physical-input evidence,UNKNOWN,0.99,D-004;D-005;D-006;XC-001
+ABSORBER_F_X,UNKNOWN,N vs m,V7 project physical-input evidence,UNKNOWN,0.99,D-002;D-005;D-007
+ABSORBER_F_V,UNKNOWN,N vs m/s,V7 project physical-input evidence,UNKNOWN,0.99,D-003;D-007
+JOINT_COMPLIANCE,UNKNOWN,m/N;rad/(N*m),V7 project physical-input evidence,UNKNOWN,0.99,D-006;D-007
