@@ -1,0 +1,16 @@
+{
+  "FINAL_STATUS": "NOT_PROVEN",
+  "VALIDATION_LEVEL": "V0",
+  "G0_INPUT_INTEGRITY": "BLOCKED",
+  "G1_DIGITAL_MODEL": "PASS",
+  "G2_KINEMATICS": "NOT_PROVEN",
+  "G3_PHYSICS": "BLOCKED",
+  "G4_VALIDATION_EVIDENCE": "NOT_PROVEN",
+  "BASIS": {
+    "G0": "Exact V7.0 REVISION-2 source not directly identified in current main search; authoritative native source not byte-addressable in current execution runtime.",
+    "G1": "Simulation proxy hierarchy, IDs and provenance are internally consistent.",
+    "G2": "Neutral software self-test exists, but exact R2 mechanism geometry/joint semantics are not verified.",
+    "G3": "Required physical parameters and executed NVIDIA/Unity physics evidence are absent.",
+    "G4": "No physical correlation evidence; upstream forensic records report zero physical measurements/results."
+  }
+}
