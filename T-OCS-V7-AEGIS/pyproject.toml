@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tocs-v7-aegis"
+version = "0.1.0"
+description = "Fail-closed T-OCS V7 Rev-2 evidence pipeline"
+requires-python = ">=3.10"
+
+[project.scripts]
+aegis = "aegis.cli:main"
