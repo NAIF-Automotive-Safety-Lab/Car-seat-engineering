@@ -1,0 +1,19 @@
+name: G2 Regression
+on:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fail closed on G2 FAIL; preserve BLOCKED
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("T-OCS-V7-AEGIS/G2/RUNS/LATEST_G2_STATUS.json")
+          s=json.loads(p.read_text())["status"]
+          print("G2_REGRESSION_STATUS="+s)
+          if s=="FAIL":
+              raise SystemExit(1)
+          PY
