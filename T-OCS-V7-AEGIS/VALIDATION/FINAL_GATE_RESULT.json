@@ -1,0 +1,12 @@
+{
+  "G0":"PASS",
+  "G1":"NOT_PROVEN",
+  "G2":"BLOCKED",
+  "G3":"BLOCKED",
+  "G4":"PASS",
+  "OVERALL":"BLOCKED",
+  "fail_closed":true,
+  "schema_version":"1.0",
+  "claim_boundary":{"CRASH_VALIDATION":"NOT_PROVEN","SAFETY_VALIDATION":"NOT_PROVEN","MANUFACTURING_VALIDATION":"NOT_PROVEN"},
+  "blockers":["G1 acceptance contract not supplied","G2 native Chrono unavailable and authoritative joint/constraint closure incomplete","G3 physical inputs missing/unverified and OpenRadioss runtime unavailable"]
+}
