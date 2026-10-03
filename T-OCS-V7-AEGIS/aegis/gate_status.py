@@ -6,7 +6,7 @@ from .provenance import sha256_file
 
 ROOT = Path(__file__).resolve().parents[1]
 BASELINE = ROOT.parent / "R4.1" / "R4.1.step"
-EXPECTED_R41_SHA256 = "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+EXPECTED_R41_SHA256 = "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
 VALID_STATES = {"PASS","FAIL","BLOCKED","NOT_PROVEN"}
 
 def load_json(path: Path) -> dict:
@@ -16,8 +16,9 @@ def load_json(path: Path) -> dict:
         return {}
     return value if isinstance(value, dict) else {}
 
-def read_state(path: Path) -> str:
-    value = load_json(path).get("status", "NOT_PROVEN")
+def read_gate_state(path: Path) -> str:
+    obj = load_json(path)
+    value = obj.get("gate_status", obj.get("status", "NOT_PROVEN"))
     return value if value in VALID_STATES else "NOT_PROVEN"
 
 def main() -> int:
@@ -35,20 +36,20 @@ def main() -> int:
 
     g1 = "NOT_PROVEN"
     blockers.append("No separate G1 acceptance contract was supplied by the work order.")
-    g2 = read_state(ROOT/"G2"/"RUNS"/"LATEST_G2_STATUS.json")
-    g3 = read_state(ROOT/"G3"/"RUNS"/"LATEST_G3_STATUS.json")
-    g4 = read_state(ROOT/"G4"/"EVIDENCE_ENGINE"/"self_check_result.json")
+    g2 = read_gate_state(ROOT/"G2"/"RUNS"/"LATEST_G2_STATUS.json")
+    g3 = read_gate_state(ROOT/"G3"/"RUNS"/"LATEST_G3_STATUS.json")
+    g4 = read_gate_state(ROOT/"G4"/"EVIDENCE_ENGINE"/"self_check_result.json")
 
     for name,state in [("G2",g2),("G3",g3),("G4",g4)]:
         if state == "NOT_PROVEN":
             blockers.append(f"{name} status is absent or not proven")
 
-    states = (g0,g2,g3,g4)
+    states = (g0,g1,g2,g3,g4)
     if any(s == "FAIL" for s in states):
         overall = "FAIL"
     elif any(s == "BLOCKED" for s in states):
         overall = "BLOCKED"
-    elif any(s == "NOT_PROVEN" for s in (g0,g1,g2,g3,g4)):
+    elif any(s == "NOT_PROVEN" for s in states):
         overall = "NOT_PROVEN"
     else:
         overall = "PASS"
@@ -75,6 +76,5 @@ def main() -> int:
     print(f"G3 = {g3}")
     print(f"G4 = {g4}")
     print(f"OVERALL = {overall}")
-    for b in blockers:
-        print(f"BLOCKER = {b}")
+    for b in blockers: print(f"BLOCKER = {b}")
     return 0 if overall == "PASS" else 1
