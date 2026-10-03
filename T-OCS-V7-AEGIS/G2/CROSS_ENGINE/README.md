@@ -1,0 +1,1 @@
+Unity 6 is a cross-check, not the G2 authority. Hosted CI has no Unity Editor/runtime, so UNITY_CROSSCHECK = BLOCKED. No screenshots substitute for runtime evidence.
