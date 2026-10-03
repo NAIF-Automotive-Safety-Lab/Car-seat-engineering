@@ -1,0 +1,11 @@
+{
+  "schema_version":"1.0",
+  "status":"BLOCKED",
+  "target_version":"10.0.0",
+  "build_system":"CMake",
+  "native_build_attempted":"YES",
+  "native_build_completed":"NO",
+  "source":"https://github.com/projectchrono/chrono.git",
+  "source_ref":"release/10.0.0",
+  "reason":"Execution container could not resolve github.com; no cached Chrono source was present."
+}
