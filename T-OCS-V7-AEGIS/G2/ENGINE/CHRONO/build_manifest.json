@@ -1,11 +1,11 @@
 {
-  "schema_version":"1.0",
-  "status":"BLOCKED",
-  "target_version":"10.0.0",
-  "build_system":"CMake",
-  "native_build_attempted":"YES",
-  "native_build_completed":"NO",
-  "source":"https://github.com/projectchrono/chrono.git",
-  "source_ref":"release/10.0.0",
-  "reason":"Execution container could not resolve github.com; no cached Chrono source was present."
+  "schema_version": "1.0",
+  "status": "BLOCKED",
+  "engine": "Project Chrono",
+  "build_attempted": false,
+  "native_build": false,
+  "reason": "Native Chrono source was not available in the execution container, so no build was attempted and no build artifact was fabricated.",
+  "cmake_available": "3.31.6",
+  "compiler_available": "g++ 14.2.0",
+  "engineering_execution_started": false
 }

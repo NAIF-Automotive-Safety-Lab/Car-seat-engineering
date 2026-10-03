@@ -1,7 +1,8 @@
 {
-  "engine":"Project Chrono",
-  "requested_version":"10.0.0",
-  "runtime_status":"BLOCKED",
-  "source_status":"BLOCKED",
-  "engineering_use":"NOT_PROVEN"
+  "schema_version": "1.0",
+  "status": "NOT_PROVEN",
+  "engine": "Project Chrono",
+  "version": null,
+  "version_source": null,
+  "reason": "No native Chrono runtime/source was acquired; no version is asserted."
 }

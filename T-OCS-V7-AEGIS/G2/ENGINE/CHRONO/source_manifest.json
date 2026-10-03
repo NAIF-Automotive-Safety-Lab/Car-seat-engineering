@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "status": "BLOCKED",
+  "engine": "Project Chrono",
+  "authoritative_source": "https://github.com/projectchrono/chrono",
+  "source_access": "METADATA_ONLY",
+  "source_repository_verified": true,
+  "source_default_branch": "main",
+  "local_source_present": false,
+  "local_source_archive_present": false,
+  "shell_github_dns": "BLOCKED",
+  "shell_git_transport": "BLOCKED",
+  "approved_source_acquisition": "BLOCKED",
+  "reason": "Official Project Chrono repository is reachable through the authorized GitHub connector for metadata/source inspection, but the execution host cannot acquire the source archive into the native runtime; no local/cached Chrono source exists."
+}
