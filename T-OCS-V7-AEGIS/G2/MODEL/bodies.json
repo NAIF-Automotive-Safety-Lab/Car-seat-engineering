@@ -1,0 +1,289 @@
+{
+  "schema_version": "1.0",
+  "status": "NOT_PROVEN",
+  "source_artifact": "SR11/manifests/V1_SR11_BODY_MAPPING.json",
+  "source_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "solids": 62,
+  "engineering_properties_promoted": false,
+  "bodies": [
+    {
+      "body_id": "BASE",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "RAIL_L",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "RAIL_R",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "CARRIAGE",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "ABSORBER_L",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "ABSORBER_R",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "PELVIC_CONTROL",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "SEATBACK",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "ROT_CTRL_L",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "ROT_CTRL_R",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "SOURCE_LOCK_L",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "SOURCE_LOCK_R",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "REBOUND_L",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "REBOUND_R",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "LAP_ANCHOR_L",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "LAP_ANCHOR_R",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "SHOULDER_ANCHOR",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "GUIDE_L",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "GUIDE_R",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "UPPER_GUIDE",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "ENDSTOPS",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "HINGE",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "ANTI_RACK",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "LOCK_L",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "LOCK_R",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "GUSSET_L",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "GUSSET_R",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "SHOULDER_GUSSET",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "SHOULDER_ROOT",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "SHOULDER_BRACE",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    },
+    {
+      "body_id": "SHOULDER_FRAME_BRACKET",
+      "source_status": "MODEL_DEFINED",
+      "status": "NOT_PROVEN",
+      "mass_source": "UNKNOWN",
+      "cg_source": "UNKNOWN",
+      "inertia_source": "UNKNOWN",
+      "provenance": "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+    }
+  ]
+}
