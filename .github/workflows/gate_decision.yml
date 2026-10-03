@@ -1,0 +1,23 @@
+name: AEGIS Gate Decision
+on:
+  workflow_dispatch:
+jobs:
+  gate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Emit machine-readable gate state
+        run: |
+          python3 - <<'PY'
+          import json
+          p="T-OCS-V7-AEGIS/VALIDATION/FINAL_GATE_RESULT.json"
+          d=json.load(open(p))
+          print("G0 =",d["G0"])
+          print("G1 =",d["G1"])
+          print("G2 =",d["G2"])
+          print("G3 =",d["G3"])
+          print("G4 =",d["G4"])
+          print("OVERALL =",d["OVERALL"])
+          if d["OVERALL"]=="PASS":
+              print("PASS requires all mandatory acceptance gates to be PASS.")
+          PY
