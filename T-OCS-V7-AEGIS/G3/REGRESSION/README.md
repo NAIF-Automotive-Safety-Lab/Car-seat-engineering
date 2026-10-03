@@ -1,0 +1,1 @@
+Regression requires baseline, current result, delta, tolerance, status, explanation and hashes. FAIL or BLOCKED prevents G3 PASS.
