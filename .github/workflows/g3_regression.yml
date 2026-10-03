@@ -1,0 +1,18 @@
+name: G3 Regression
+on:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fail closed on G3 FAIL; preserve BLOCKED
+        run: |
+          python3 - <<'PY'
+          import json
+          p="T-OCS-V7-AEGIS/G3/RUNS/LATEST_G3_STATUS.json"
+          s=json.load(open(p))["status"]
+          print("G3_REGRESSION_STATUS="+s)
+          if s=="FAIL":
+              raise SystemExit(1)
+          PY
