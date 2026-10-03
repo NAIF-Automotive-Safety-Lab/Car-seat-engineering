@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.0",
-  "status": "NOT_PROVEN",
-  "engine": "Project Chrono",
-  "version": null,
-  "version_source": null,
-  "reason": "No native Chrono runtime/source was acquired; no version is asserted."
+  "schema_version":"1.0",
+  "status":"NOT_PROVEN",
+  "engine":"Project Chrono",
+  "runtime_version":null,
+  "source_head_commit_observed":"9e95a025adbd454f04f263986865b88e38cadd43",
+  "reason":"Official upstream metadata was inspected, but no native runtime was provisioned."
 }
