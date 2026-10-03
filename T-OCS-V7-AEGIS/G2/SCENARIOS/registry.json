@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "scenarios": [
+    {
+      "scenario_id": "K001",
+      "status": "BLOCKED",
+      "reason": "authoritative executable model closure absent"
+    },
+    {
+      "scenario_id": "K002",
+      "status": "BLOCKED",
+      "reason": "T-OCS joint semantics absent"
+    },
+    {
+      "scenario_id": "K003",
+      "status": "BLOCKED",
+      "reason": "coupled-body semantics absent"
+    },
+    {
+      "scenario_id": "K004",
+      "status": "BLOCKED",
+      "reason": "boundary conditions absent"
+    },
+    {
+      "scenario_id": "K005",
+      "status": "NOT_PROVEN",
+      "reason": "generic engine probe only"
+    },
+    {
+      "scenario_id": "K006",
+      "status": "BLOCKED",
+      "reason": "engineering parameter set absent"
+    },
+    {
+      "scenario_id": "K007",
+      "status": "BLOCKED",
+      "reason": "Unity runtime unavailable"
+    }
+  ]
+}
