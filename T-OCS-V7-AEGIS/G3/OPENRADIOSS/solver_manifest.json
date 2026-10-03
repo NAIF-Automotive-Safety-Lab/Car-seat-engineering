@@ -1,0 +1,9 @@
+{
+  "schema_version":"1.0",
+  "solver":"OpenRadioss",
+  "role":"PRIMARY_G3",
+  "status":"BLOCKED",
+  "runtime_identity":"NOT_AVAILABLE",
+  "execution":"FORBIDDEN_WHILE_INPUT_CLOSURE_IS_BLOCKED",
+  "fallback_solver_substitution":"FALSE"
+}
