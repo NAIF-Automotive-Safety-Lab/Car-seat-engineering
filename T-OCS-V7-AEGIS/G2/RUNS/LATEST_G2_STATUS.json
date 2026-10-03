@@ -1,1 +1,9 @@
-{"schema_version":"1.0","status":"NOT_PROVEN","reason":"Awaiting native Chrono CI execution and deterministic run evidence."}
+{
+  "schema_version":"1.0",
+  "status":"BLOCKED",
+  "baseline_readback":"PASS",
+  "chrono_native_runtime":"BLOCKED",
+  "authoritative_joint_constraint_closure":"BLOCKED",
+  "unity_crosscheck":"BLOCKED",
+  "reason":"Chrono native runtime is unavailable and authoritative T-OCS joint/constraint closure remains incomplete. No T-OCS kinematic run was executed."
+}
