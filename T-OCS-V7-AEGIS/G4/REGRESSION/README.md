@@ -1,0 +1,1 @@
+G4 integrity regression compares expected and current artifact hashes. Missing or stale required artifacts block the gate.
