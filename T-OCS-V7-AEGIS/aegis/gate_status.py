@@ -6,7 +6,7 @@ from .provenance import sha256_file
 
 ROOT = Path(__file__).resolve().parents[1]
 BASELINE = ROOT.parent / "R4.1" / "R4.1.step"
-EXPECTED_R41_SHA256 = "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+EXPECTED_R41_SHA256 = "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
 VALID_STATES = {"PASS","FAIL","BLOCKED","NOT_PROVEN"}
 
 def load_json(path: Path) -> dict:
@@ -16,40 +16,54 @@ def load_json(path: Path) -> dict:
         return {}
     return value if isinstance(value, dict) else {}
 
-def read_gate_state(path: Path) -> str:
+def read_gate_record(path: Path) -> tuple[str, dict]:
     obj = load_json(path)
     value = obj.get("gate_status", obj.get("status", "NOT_PROVEN"))
-    return value if value in VALID_STATES else "NOT_PROVEN"
+    state = value if value in VALID_STATES else "NOT_PROVEN"
+    return state, obj
 
 def main() -> int:
     blockers = []
     if not BASELINE.is_file():
         g0 = "BLOCKED"
-        blockers.append("R4.1/R4.1.step is absent from the execution checkout")
+        blockers.append("G0 BLOCKED: R4.1/R4.1.step is absent from the execution checkout")
     else:
         actual = sha256_file(BASELINE)
         if actual == EXPECTED_R41_SHA256:
             g0 = "PASS"
         else:
             g0 = "FAIL"
-            blockers.append(f"R4.1 SHA-256 mismatch: expected {EXPECTED_R41_SHA256}, actual {actual}")
+            blockers.append(f"G0 FAIL: R4.1 SHA-256 mismatch: expected {EXPECTED_R41_SHA256}, actual {actual}")
 
     g1 = "NOT_PROVEN"
-    blockers.append("No separate G1 acceptance contract was supplied by the work order.")
-    g2 = read_gate_state(ROOT/"G2"/"RUNS"/"LATEST_G2_STATUS.json")
-    g3 = read_gate_state(ROOT/"G3"/"RUNS"/"LATEST_G3_STATUS.json")
-    g4 = read_gate_state(ROOT/"G4"/"EVIDENCE_ENGINE"/"self_check_result.json")
+    blockers.append("G1 NOT_PROVEN: no separate G1 acceptance contract was supplied by the work order.")
 
-    for name,state in [("G2",g2),("G3",g3),("G4",g4)]:
-        if state == "NOT_PROVEN":
-            blockers.append(f"{name} status is absent or not proven")
+    records = {
+        "G2": ROOT/"G2"/"RUNS"/"LATEST_G2_STATUS.json",
+        "G3": ROOT/"G3"/"RUNS"/"LATEST_G3_STATUS.json",
+        "G4": ROOT/"G4"/"EVIDENCE_ENGINE"/"self_check_result.json"
+    }
+    states = {"G1":g1}
+    for name,path in records.items():
+        state,obj = read_gate_record(path)
+        states[name] = state
+        if state == "BLOCKED":
+            reason = obj.get("reason","no blocking reason recorded")
+            blockers.append(f"{name} BLOCKED: {reason}")
+        elif state == "FAIL":
+            reason = obj.get("reason","no failure reason recorded")
+            blockers.append(f"{name} FAIL: {reason}")
+        elif state == "NOT_PROVEN":
+            reason = obj.get("reason","status not proven")
+            blockers.append(f"{name} NOT_PROVEN: {reason}")
 
-    states = (g0,g1,g2,g3,g4)
-    if any(s == "FAIL" for s in states):
+    g2,g3,g4 = states["G2"],states["G3"],states["G4"]
+    all_states = (g0,g1,g2,g3,g4)
+    if "FAIL" in all_states:
         overall = "FAIL"
-    elif any(s == "BLOCKED" for s in states):
+    elif "BLOCKED" in all_states:
         overall = "BLOCKED"
-    elif any(s == "NOT_PROVEN" for s in states):
+    elif "NOT_PROVEN" in all_states:
         overall = "NOT_PROVEN"
     else:
         overall = "PASS"
@@ -76,5 +90,6 @@ def main() -> int:
     print(f"G3 = {g3}")
     print(f"G4 = {g4}")
     print(f"OVERALL = {overall}")
-    for b in blockers: print(f"BLOCKER = {b}")
+    for b in blockers:
+        print(f"BLOCKER = {b}")
     return 0 if overall == "PASS" else 1
