@@ -1,22 +1,38 @@
 {
-  "G0":"PASS",
+  "schema_version":"1.0",
+  "timestamp_utc":"2026-10-04T00:00:00+00:00",
+  "fail_closed":true,
+  "ENVIRONMENT":"BLOCKED",
+  "G0":"BLOCKED",
   "G1":"NOT_PROVEN",
   "G2":"BLOCKED",
   "G3":"BLOCKED",
   "G4":"NOT_PROVEN",
   "OVERALL":"BLOCKED",
-  "fail_closed":true,
-  "schema_version":"1.0",
   "claim_boundary":{
     "CRASH_VALIDATION":"NOT_PROVEN",
     "SAFETY_VALIDATION":"NOT_PROVEN",
     "MANUFACTURING_VALIDATION":"NOT_PROVEN"
   },
-  "g4_self_check":"PASS",
+  "baseline":{
+    "file":"T_OCS_V0_R4_1_SHOULDER_REPAIR.step",
+    "size_bytes":1220000,
+    "actual_sha256":"fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "actual_sha256_length":64,
+    "required_sha256":"fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "required_sha256_length":65,
+    "required_sha256_valid":false,
+    "sha_match":false,
+    "step_read":"PASS",
+    "brep_transfer":"PASS",
+    "solid_count":62
+  },
   "blockers":[
-    "G1 NOT_PROVEN: no separate G1 acceptance contract was supplied by the work order.",
-    "G2 BLOCKED: Chrono native runtime is unavailable and authoritative T-OCS joint/constraint closure remains incomplete. No T-OCS kinematic run was executed.",
-    "G3 BLOCKED: mandatory physical inputs are missing/unverified; OpenRadioss execution is forbidden.",
-    "G4 NOT_PROVEN: evidence-engine self-check passed, but full critical-artifact evidence review/hash closure is incomplete."
+    "G0 BLOCKED: governing R4.1 SHA-256 reference is malformed at 65 hexadecimal characters and cannot be silently corrected.",
+    "ENVIRONMENT BLOCKED: github.com DNS/HTTPS/Git transport unavailable.",
+    "ENVIRONMENT BLOCKED: Git LFS executable unavailable.",
+    "G2 BLOCKED: native Project Chrono runtime is not available; no T-OCS engineering kinematic simulation executed.",
+    "G3 BLOCKED: OpenRadioss/Gmsh/ParaView runtimes unavailable and mandatory physical inputs are not closed.",
+    "G4 NOT_PROVEN: complete engineering evidence gate cannot close while G2/G3 are blocked."
   ]
 }
