@@ -1,11 +1,10 @@
 {
-  "schema_version": "1.0",
-  "status": "BLOCKED",
-  "engine": "Project Chrono",
-  "build_attempted": false,
-  "native_build": false,
-  "reason": "Native Chrono source was not available in the execution container, so no build was attempted and no build artifact was fabricated.",
-  "cmake_available": "3.31.6",
-  "compiler_available": "g++ 14.2.0",
-  "engineering_execution_started": false
+  "schema_version":"1.0",
+  "evidence_id":"ENV-CHRONO-RECOVERY-001",
+  "status":"BLOCKED",
+  "build_attempted":false,
+  "cmake":"3.31.6",
+  "cxx":"g++ 14.2.0",
+  "out_of_source_build_required":true,
+  "reason":"Chrono source was not available in the executable host; build not attempted."
 }
