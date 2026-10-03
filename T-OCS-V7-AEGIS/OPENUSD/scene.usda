@@ -1,0 +1,11 @@
+#usda 1.0
+(
+    customLayerData = {
+        string pipeline = "T-OCS V7.0 REVISION-2 AEGIS"
+        string status = "BLOCKED"
+        string provenance = "No inferred engineering transforms or joint semantics are authored."
+    }
+)
+def "T_OCS_V7_REV2" {
+    string[] blocked_features = ["rigid_bodies","transforms","collision_representation","joints_constraints"]
+}
