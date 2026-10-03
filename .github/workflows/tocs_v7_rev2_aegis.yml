@@ -1,0 +1,265 @@
+name: T-OCS V7 Rev-2 AEGIS
+
+on:
+  push:
+    paths:
+      - "T-OCS-V7-AEGIS/**"
+      - "R4.1/R4.1.step"
+      - ".github/workflows/tocs_v7_rev2_aegis.yml"
+  pull_request:
+    paths:
+      - "T-OCS-V7-AEGIS/**"
+      - "R4.1/R4.1.step"
+      - ".github/workflows/tocs_v7_rev2_aegis.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  aegis:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash -euo pipefail
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: G0 — immutable R4.1
+        run: |
+          test -f R4.1/R4.1.step
+          expected="fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+          actual="$(sha256sum R4.1/R4.1.step | awk '{print $1}')"
+          echo "EXPECTED=$expected"
+          echo "ACTUAL=$actual"
+          test "$actual" = "$expected"
+
+      - name: Python bootstrap
+        working-directory: T-OCS-V7-AEGIS
+        run: |
+          python3 -m venv .venv
+          . .venv/bin/activate
+          python -m pip install --disable-pip-version-check -e .
+          python -m pip install --disable-pip-version-check pytest==9.1.1
+          python -m pytest -q aegis/test_gate_engine.py
+
+      - name: Validate JSON control files
+        working-directory: T-OCS-V7-AEGIS
+        run: |
+          . .venv/bin/activate
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          for path in sorted(Path(".").rglob("*.json")):
+              json.loads(path.read_text(encoding="utf-8"))
+          print("JSON_CONTROL_FILES=PASS")
+          PY
+
+      - name: Build native Project Chrono 10.0.0
+        working-directory: T-OCS-V7-AEGIS
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ninja-build cmake g++ git libeigen3-dev
+          git clone --depth 1 --branch "release/10.0.0" https://github.com/projectchrono/chrono.git "$RUNNER_TEMP/chrono"
+          git -C "$RUNNER_TEMP/chrono" rev-parse HEAD > "$RUNNER_TEMP/chrono-source-commit.txt"
+
+          cmake -S "$RUNNER_TEMP/chrono" -B "$RUNNER_TEMP/chrono-build" -G Ninja             -DCMAKE_BUILD_TYPE=Release             -DCMAKE_INSTALL_PREFIX="$RUNNER_TEMP/chrono-install"             -DCH_ENABLE_MODULE_CORE=ON             -DCH_ENABLE_MODULE_CASCADE=OFF             -DCH_ENABLE_MODULE_PYTHON=OFF             -DCH_ENABLE_MODULE_POSTPROCESS=OFF
+          cmake --build "$RUNNER_TEMP/chrono-build" --parallel
+          cmake --install "$RUNNER_TEMP/chrono-build"
+
+          CHRONO_CONFIG="$(find "$RUNNER_TEMP/chrono-install" -name ChronoConfig.cmake -print -quit)"
+          test -n "$CHRONO_CONFIG"
+
+          cmake -S G2/ENGINE/CHRONO -B "$RUNNER_TEMP/probe-build" -G Ninja             -DCMAKE_BUILD_TYPE=Release             -DChrono_DIR="$(dirname "$CHRONO_CONFIG")"
+          cmake --build "$RUNNER_TEMP/probe-build" --parallel
+
+      - name: G2 — deterministic native runtime probe
+        working-directory: T-OCS-V7-AEGIS
+        run: |
+          export LD_LIBRARY_PATH="$RUNNER_TEMP/chrono-install/lib:$(printenv LD_LIBRARY_PATH 2>/dev/null || true)"
+          rm -rf "$RUNNER_TEMP/g2-run-1" "$RUNNER_TEMP/g2-run-2"
+          mkdir -p "$RUNNER_TEMP/g2-run-1" "$RUNNER_TEMP/g2-run-2" G2/RUNS/G2-CHRONO-ENGINE-001
+
+          "$RUNNER_TEMP/probe-build/tocs_chrono_probe" "$RUNNER_TEMP/g2-run-1" > G2/RUNS/G2-CHRONO-ENGINE-001/stdout-1.log 2> G2/RUNS/G2-CHRONO-ENGINE-001/stderr-1.log
+          "$RUNNER_TEMP/probe-build/tocs_chrono_probe" "$RUNNER_TEMP/g2-run-2" > G2/RUNS/G2-CHRONO-ENGINE-001/stdout-2.log 2> G2/RUNS/G2-CHRONO-ENGINE-001/stderr-2.log
+
+          h1="$(sha256sum "$RUNNER_TEMP/g2-run-1/trajectory.csv" | awk '{print $1}')"
+          h2="$(sha256sum "$RUNNER_TEMP/g2-run-2/trajectory.csv" | awk '{print $1}')"
+          test "$h1" = "$h2"
+
+          mkdir -p G2/RESULTS/engine_probe
+          cp "$RUNNER_TEMP/g2-run-1/trajectory.csv" G2/RESULTS/engine_probe/trajectory.csv
+          cp "$RUNNER_TEMP/g2-run-1/metrics.json" G2/RESULTS/engine_probe/metrics.json
+
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+          src=Path("G2/RESULTS/engine_probe/trajectory.csv")
+          rows=list(csv.DictReader(src.open()))
+          with Path("G2/RESULTS/engine_probe/joint_states.csv").open("w",newline="") as f:
+              w=csv.writer(f)
+              w.writerow(["time_s","motor_angle_rad","motor_speed_radps"])
+              for r in rows: w.writerow([r["time_s"],r["motor_angle_rad"],r["motor_speed_radps"]])
+          with Path("G2/RESULTS/engine_probe/constraint_states.csv").open("w",newline="") as f:
+              w=csv.writer(f)
+              w.writerow(["time_s","max_constraint_error"])
+              for r in rows: w.writerow([r["time_s"],r["max_constraint_error"]])
+          PY
+
+          cp "$RUNNER_TEMP/g2-run-1/trajectory.csv" G2/RUNS/G2-CHRONO-ENGINE-001/trajectory.csv
+          cp "$RUNNER_TEMP/g2-run-1/metrics.json" G2/RUNS/G2-CHRONO-ENGINE-001/metrics.json
+
+          cat > G2/ENGINE/CHRONO/runtime_probe.json <<EOF
+          {
+            "schema_version":"1.0",
+            "status":"PASS",
+            "engine":"Project Chrono",
+            "version":"10.0.0",
+            "source_commit":"$(cat "$RUNNER_TEMP/chrono-source-commit.txt")",
+            "native_build":"PASS",
+            "runtime_test":"PASS",
+            "repeatability":"PASS",
+            "trajectory_sha256_run1":"$h1",
+            "trajectory_sha256_run2":"$h2",
+            "engineering_claim":"NONE"
+          }
+          EOF
+
+          cat > G2/RUNS/G2-CHRONO-ENGINE-001/run_manifest.json <<EOF
+          {
+            "schema_version":"1.0",
+            "run_id":"G2-CHRONO-ENGINE-001",
+            "scenario_id":"ENGINE_ONLY_GENERIC",
+            "model_version":"CHRONO-10.0.0-ENGINE-PROBE",
+            "parameter_set_id":"ENGINE_PROBE_V1",
+            "initial_conditions":"GENERIC_PROBE_DEFINED",
+            "time_step_s":0.005,
+            "duration_s":0.2,
+            "solver_configuration":"Project Chrono ChSystemNSC + ChLinkMotorRotationSpeed",
+            "engineering_claim":"NONE",
+            "repeatability":"PASS",
+            "input_hashes":{
+              "probe_source":"$(sha256sum G2/ENGINE/CHRONO/probe.cpp | awk '{print $1}')",
+              "cmake":"$(sha256sum G2/ENGINE/CHRONO/CMakeLists.txt | awk '{print $1}')"
+            },
+            "output_hashes":{
+              "trajectory_run1":"$h1",
+              "trajectory_run2":"$h2"
+            }
+          }
+          EOF
+
+          cat > G2/RUNS/LATEST_G2_STATUS.json <<'EOF'
+          {
+            "schema_version":"1.0",
+            "status":"BLOCKED",
+            "engine_probe":"PASS",
+            "deterministic_repeatability":"PASS",
+            "required_tocs_joint_closure":"BLOCKED",
+            "required_cross_check":"BLOCKED",
+            "reason":"Chrono native runtime is proven, but the authoritative T-OCS joint/constraint model is not closed for engineering execution."
+          }
+          EOF
+
+      - name: Dependency capability detector
+        working-directory: T-OCS-V7-AEGIS
+        run: |
+          python3 - <<'PY'
+          import json,shutil,subprocess
+          from pathlib import Path
+          commands={"python":"python3 --version","cmake":"cmake --version","gmsh":"gmsh --version","ccx":"ccx -v","pvbatch":"pvbatch --version","paraview":"paraview --version"}
+          out={}
+          for name,cmd in commands.items():
+              exe=cmd.split()[0]; path=shutil.which(exe)
+              if not path:
+                  out[name]={"installed":False,"runtime_test":"BLOCKED","reason":"executable_not_found","path":None}
+                  continue
+              p=subprocess.run(cmd.split(),capture_output=True,text=True,timeout=10)
+              out[name]={"installed":True,"runtime_test":"PASS" if p.returncode==0 else "FAIL","path":path,"returncode":p.returncode,"stdout":(p.stdout+p.stderr)[:1000]}
+          for name in ["unity6","omniverse","openradioss","code_aster"]:
+              out[name]={"installed":False,"runtime_test":"BLOCKED","reason":"no_runtime_declared_in_hosted_runner"}
+          Path("G2/RESULTS/capability_detector.json").write_text(json.dumps(out,indent=2,sort_keys=True)+"\n",encoding="utf-8")
+          PY
+
+      - name: G3 — fail-closed OpenRadioss attempt
+        working-directory: T-OCS-V7-AEGIS
+        run: |
+          set +e
+          python3 G3/OPENRADIOSS/runner/run_case.py > G3/OPENRADIOSS/outputs/stdout.log 2> G3/OPENRADIOSS/outputs/stderr.log
+          rc=$?
+          set -e
+          test "$rc" -eq 20
+          cat > G3/RUNS/LATEST_G3_STATUS.json <<'EOF'
+          {
+            "schema_version":"1.0",
+            "status":"BLOCKED",
+            "openradioss_runtime":"BLOCKED",
+            "physical_input_closure":"BLOCKED",
+            "reason":"Mandatory physical inputs are MISSING/UNVERIFIED. OpenRadioss execution is therefore forbidden."
+          }
+          EOF
+
+      - name: G4 — evidence engine self-check
+        working-directory: T-OCS-V7-AEGIS
+        run: |
+          python3 G4/EVIDENCE_ENGINE/self_check.py
+
+      - name: Register G2 evidence
+        working-directory: T-OCS-V7-AEGIS
+        run: |
+          printf '%s\n' '{"evidence_id":"G2-CHRONO-001","gate":"G2","claim":"Native Project Chrono engine probe executed twice with identical trajectory SHA-256","artifact":"G2/RUNS/G2-CHRONO-ENGINE-001/trajectory.csv","source":"G2/ENGINE/CHRONO/probe.cpp","run_id":"G2-CHRONO-ENGINE-001","status":"PASS","review_status":"AUTOMATED"}' >> G4/LEDGER/evidence_ledger.jsonl
+
+      - name: Final gate decision
+        working-directory: T-OCS-V7-AEGIS
+        run: |
+          . .venv/bin/activate
+          set +e
+          aegis gate-status > ../aegis-gate-output.txt 2>&1
+          rc=$?
+          set -e
+          cat ../aegis-gate-output.txt
+          cat VALIDATION/FINAL_GATE_RESULT.json
+          if [ "$rc" -eq 0 ]; then
+            echo "ERROR: gate unexpectedly returned PASS while mandatory engineering gates are blocked."
+            exit 1
+          fi
+
+      - name: Provenance and final SHA-256 manifest
+        if: always()
+        working-directory: T-OCS-V7-AEGIS
+        run: |
+          mkdir -p G4/MANIFESTS G4/HASHES
+          cat > G4/MANIFESTS/ci_provenance.json <<EOF
+          {
+            "github_run_id":"$GITHUB_RUN_ID",
+            "github_run_attempt":"$GITHUB_RUN_ATTEMPT",
+            "github_sha":"$GITHUB_SHA",
+            "runner":"ubuntu-24.04",
+            "timestamp_utc":"$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          }
+          EOF
+          python3 - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          rows=[]
+          for p in sorted(Path(".").rglob("*")):
+              if p.is_file() and str(p) != "G4/HASHES/SHA256SUMS_FINAL.json":
+                  h=hashlib.sha256()
+                  with p.open("rb") as f:
+                      for c in iter(lambda:f.read(1024*1024),b""): h.update(c)
+                  rows.append({"artifact":str(p).replace("\\","/"),"sha256":h.hexdigest(),"size_bytes":p.stat().st_size})
+          Path("G4/HASHES/SHA256SUMS_FINAL.json").write_text(json.dumps({"schema_version":"1.0","artifacts":rows},indent=2,sort_keys=True)+"\n",encoding="utf-8")
+          PY
+
+      - name: Upload AEGIS evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: T-OCS-V7-REV2-AEGIS
+          path: |
+            T-OCS-V7-AEGIS/
+            aegis-gate-output.txt
+          if-no-files-found: error
+          retention-days: 30
