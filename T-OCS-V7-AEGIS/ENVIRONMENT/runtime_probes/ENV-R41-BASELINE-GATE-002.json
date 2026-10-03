@@ -1,0 +1,22 @@
+{
+  "schema_version":"1.0",
+  "evidence_id":"ENV-R41-BASELINE-GATE-002",
+  "supersedes":"ENV-R41-001",
+  "status":"PASS",
+  "artifact":"T_OCS_V0_R4_1_SHOULDER_REPAIR.step",
+  "size_bytes":1220000,
+  "actual_sha256":"fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "actual_sha256_length":64,
+  "required_sha256_source":"R4_1_BASELINE_LOCK.json:expected_sha256",
+  "required_sha256":"fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+  "required_sha256_length":64,
+  "required_sha256_valid":true,
+  "sha_match":true,
+  "step_read_status":"IFSelect_RetDone",
+  "step_read_pass":true,
+  "brep_transfer_roots":1,
+  "solid_count":62,
+  "solid_count_pass":true,
+  "artifact_mutation":false,
+  "gate":"PASS"
+}
