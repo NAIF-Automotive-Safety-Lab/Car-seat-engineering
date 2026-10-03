@@ -1,0 +1,62 @@
+{
+  "schema_version":"1.0",
+  "evidence_id":"ENV-SOLVER-SOURCE-DISCOVERY-001",
+  "timestamp":"2026-10-04T02:36:00+03:00",
+  "approved_project_repository":"NAIF-Automotive-Safety-Lab/Car-seat-engineering",
+  "discovery_scope":"local repositories, workspace repositories, git metadata, caches/archives, native binaries, connected repository integration, and fork provenance",
+  "local_host":{
+    "git_repositories_found":[],
+    "chrono_source_directories":[],
+    "solver_source_archives":[],
+    "native_solver_binaries":[],
+    "git_lfs":"NOT_AVAILABLE"
+  },
+  "connected_repository_sources":[
+    {
+      "engine_role":"Project Chrono",
+      "repository":"projectchrono/chrono",
+      "branch":"main",
+      "head_commit":"9e95a025adbd454f04f263986865b88e38cadd43",
+      "source_status":"AUTHORITATIVE_UPSTREAM_METADATA_VERIFIED",
+      "executable_source_available_to_runtime":"NO",
+      "build_status":"NOT_EXECUTED",
+      "runtime_status":"BLOCKED",
+      "reason":"Connector can inspect repository metadata/source files, but no source tree/archive can be transferred into the native execution runtime through the available integration."
+    },
+    {
+      "engine_role":"OpenRadioss",
+      "repository":"NAIF-Automotive-Safety-Lab/OpenRadioss",
+      "branch":"main",
+      "head_commit":"bad6688602d770e019b75773d2d5a48b4f9bd918",
+      "fork":true,
+      "parent":"gabrielrussell/OpenRadioss",
+      "source_role":"REAL_OPENRADIOSS_SOURCE_FORK",
+      "qualification":"NOT_STARTED",
+      "reason":"G3 source qualification is gated behind G2 PASS."
+    },
+    {
+      "engine_role":"Gmsh",
+      "repository":"NAIF-Automotive-Safety-Lab/pygmsh",
+      "branch":"main",
+      "head_commit":"5415fb97cb07df9846c7bb178be2fc494f1f4ca3",
+      "fork":true,
+      "parent":"nschloe/pygmsh",
+      "source_role":"PYTHON_WRAPPER_FOR_GMSH_NOT_NATIVE_GMSH_SOURCE",
+      "qualification":"NOT_ACCEPTABLE_AS_NATIVE_GMSH_SOURCE",
+      "reason":"Repository README identifies pygmsh as a Python interface/wrapper around Gmsh; it is not the native Gmsh solver source tree."
+    },
+    {
+      "engine_role":"CalculiX",
+      "repository":"NAIF-Automotive-Safety-Lab/CalculiX-Examples",
+      "branch":"master",
+      "head_commit":"316273e9105e44ce7e3ee05059dac1bc3f256a69",
+      "fork":true,
+      "parent":"calculix/CalculiX-Examples",
+      "source_role":"EXAMPLES_NOT_SOLVER_SOURCE",
+      "qualification":"NOT_ACCEPTABLE_AS_NATIVE_CALCULIX_SOURCE",
+      "reason":"Repository README describes parametric CalculiX examples and helper scripts; it is not the CalculiX solver source tree."
+    }
+  ],
+  "environment_conclusion":"BLOCKED",
+  "primary_blocker":"Native Project Chrono source/runtime is absent from the executable host and cannot currently be provisioned through an approved runtime-capable source path."
+}
