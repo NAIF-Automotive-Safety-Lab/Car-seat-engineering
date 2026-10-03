@@ -1,1 +1,10 @@
-{"status":"NOT_PROVEN","runtime_execution_performed":false,"reason":"CI evidence not yet generated."}
+{
+  "schema_version":"1.0",
+  "status":"BLOCKED",
+  "engine":"Project Chrono",
+  "version":"10.0.0",
+  "native_build":false,
+  "runtime_test":"BLOCKED",
+  "reason":"Project Chrono source/build is not available in the current offline execution container; github.com DNS resolution failed and pychrono is absent.",
+  "engineering_claim":false
+}
