@@ -1,14 +1,12 @@
 {
-  "schema_version": "1.0",
-  "probe_id": "ENV-CHRONO-001",
-  "status": "BLOCKED",
-  "engine": "Project Chrono native runtime",
-  "source_status": "BLOCKED",
-  "build_status": "BLOCKED",
-  "runtime_status": "BLOCKED",
-  "generic_engine_probe": "NOT_EXECUTED",
-  "repeatability": "NOT_PROVEN",
-  "reason": "No native Project Chrono source/runtime is present or cached locally. github.com DNS resolution/HTTPS/git transport are unavailable from the execution shell; pychrono is also absent. No substitute package was treated as native proof.",
-  "engineering_claim": false,
-  "tocs_g2_started": false
+  "schema_version":"1.0",
+  "evidence_id":"ENV-CHRONO-001",
+  "status":"BLOCKED",
+  "source_status":"BLOCKED",
+  "build_status":"BLOCKED",
+  "runtime_status":"BLOCKED",
+  "probe_1":"BLOCKED",
+  "probe_2":"BLOCKED",
+  "repeatability":"BLOCKED",
+  "reason":"No native Project Chrono runtime is executable in the host. Qualification was not run."
 }
