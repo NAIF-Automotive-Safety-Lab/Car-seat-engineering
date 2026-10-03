@@ -18,15 +18,19 @@
     "ENV-BASE-001":"PASS",
     "ENV-BUILD-001":"PASS",
     "ENV-PY-001":"PASS",
-    "ENV-R41-001":"BLOCKED",
+    "ENV-R41-001":"SUPERSEDED_BY_ENV-R41-BASELINE-GATE-002",
+    "ENV-R41-BASELINE-GATE-002":"PASS",
     "ENV-NET-001":"BLOCKED",
     "ENV-CHRONO-001":"BLOCKED"
   },
   "stop_condition":"DO NOT START ENGINEERING SIMULATION",
   "primary_blockers":[
-    "Required R4.1 SHA string supplied by the work order is 65 hexadecimal characters and is not a valid SHA-256 digest.",
     "github.com DNS/HTTPS/Git transport unavailable in the execution host.",
     "Git LFS executable unavailable.",
-    "Native Project Chrono runtime not available."
+    "Native Project Chrono source/runtime is not available locally or in an executable cache."
+  ],
+  "notes":[
+    "R4.1 baseline SHA source reconciliation is PASS; the authoritative lock field is 64-character SHA-256 and matches the three independent artifact hashes.",
+    "ENV-R41-001 is retained as historical evidence of the earlier malformed-reference observation and is not current gate authority."
   ]
 }
