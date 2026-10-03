@@ -1,1 +1,7 @@
-{"schema_version":"1.0","status":"BLOCKED","reason":"Mandatory physical inputs are not closed; OpenRadioss execution is forbidden."}
+{
+  "schema_version":"1.0",
+  "status":"BLOCKED",
+  "openradioss_runtime":"BLOCKED",
+  "physical_input_closure":"BLOCKED",
+  "reason":"Mandatory physical inputs are missing/unverified; OpenRadioss execution is forbidden."
+}
