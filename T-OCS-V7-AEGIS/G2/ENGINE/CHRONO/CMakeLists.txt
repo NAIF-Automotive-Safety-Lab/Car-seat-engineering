@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.18)
+project(tocs_chrono_engine_probe LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+find_package(Chrono CONFIG REQUIRED)
+
+if(TARGET Chrono::ChronoEngine)
+  set(CHRONO_TARGET Chrono::ChronoEngine)
+elseif(TARGET Chrono::ChronoEngine_static)
+  set(CHRONO_TARGET Chrono::ChronoEngine_static)
+else()
+  message(FATAL_ERROR "No supported Chrono Engine target was exported")
+endif()
+
+add_executable(tocs_chrono_probe probe.cpp)
+target_link_libraries(tocs_chrono_probe PRIVATE ${CHRONO_TARGET})
