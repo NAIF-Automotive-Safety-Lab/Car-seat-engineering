@@ -1,0 +1,1 @@
+Current limitations: physical properties, contacts, loads, boundary conditions, and physical test data are not closed. Unity and Omniverse runtimes are unavailable in hosted CI. Crash, safety, and manufacturing validation remain NOT_PROVEN.
