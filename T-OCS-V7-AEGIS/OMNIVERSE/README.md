@@ -1,0 +1,1 @@
+OMNIVERSE = BLOCKED without an actual runtime. Screenshots never substitute for execution.
