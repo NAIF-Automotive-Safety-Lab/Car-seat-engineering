@@ -1,52 +1,74 @@
-# T-OCS V7.0 REVISION-2 — Fail-Closed Execution Report
+# T-OCS V7.0 REVISION-2 — Superseding Execution Report
 
 COMMAND:
-aegis gate-status
+Direct host qualification and strict baseline verification.
 
-ENVIRONMENT:
-Python 3.13.5; CMake 3.31.6; Ninja 1.12.1; g++ 14.2.0; OCP available; pychrono unavailable; gmsh unavailable; ccx unavailable; ParaView/pvbatch unavailable; no Desktop Commander device; github.com DNS unavailable from the execution container.
+HOST:
+Linux 6.18.44 x86_64; AMD EPYC 9V74 80-Core Processor; 3 logical CPUs; 6,091,040 KiB RAM; 31,263,448 KiB root free; NVIDIA runtime not detected.
 
-ARTIFACTS:
-Exact R4.1 STEP; deterministic Open CASCADE readback reports; Chrono capability/build/runtime status; G3 input closure/OpenRadioss status; G4 self-check/ledger; SHA-256 evidence; final gate result.
+DEPENDENCIES:
+gcc/g++/gfortran 14.2.0 PASS; CMake 3.31.6 PASS; Ninja 1.12.1 PASS; Make 4.4.1 PASS; Git 2.47.3 PASS; Python 3.13.5 PASS; pip 25.1.1 PASS; pytest 9.0.2 PASS; numpy 2.3.5 PASS; scipy 1.17.0 PASS; pandas 2.2.3 PASS; jsonschema 4.26.0 PASS; pydantic 2.13.4 PASS; matplotlib 3.10.8 PASS; OCP 7.9.3.1 PASS; cadquery 2.8.0 PASS.
 
-TESTS:
-SHA-256 verification; STEP readback; 62-solid count; repeatability of baseline readback; native Chrono acquisition attempt; G3 fail-closed check; JSON validation; G4 hashing self-check; deterministic gate evaluation.
+MISSING DEPENDENCIES:
+Git LFS; native Project Chrono runtime/source; OpenRadioss Starter/Engine; Gmsh; ParaView/pvbatch; CalculiX; Code_Aster; Unity 6; Omniverse.
 
-RESULTS:
-R4.1 SHA-256 = fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68.
-R4.1 size = 1,220,000 bytes.
-STEP readback = IFSelect_RetDone; transferred roots = 1; solid count = 62.
-Two baseline-readback reports are byte-identical by SHA-256: fb14843e8c4b35a0f1b8548854c4d3922029d2266fc7ea65c8425111b6edcc73.
-Native Project Chrono execution = BLOCKED because github.com DNS failed and pychrono is absent. No T-OCS kinematic scenario executed.
-G3 physical-input closure = BLOCKED; OpenRadioss run refused.
-G4 self-check = PASS; G4 gate = NOT_PROVEN.
+BASELINE:
+BLOCKED.
 
-REGRESSION:
-BLOCKED — source-readback repeatability PASS; engineering G2/G3 regression is not executable while G2/G3 are blocked.
+BASELINE EVIDENCE:
+Exact file size = 1,220,000 bytes.
+Computed SHA-256 = fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68 (64 hexadecimal characters).
+STEP read = PASS, IFSelect_RetDone.
+B-Rep transfer roots = 1.
+Solid count = 62.
 
-EVIDENCE:
-G0-R41-001
-G2-CAP-001
-G3-CLOSURE-001
-G4-SELF-001
-
-BLOCKERS:
-G1 NOT_PROVEN — no separate G1 acceptance contract supplied.
-G2 BLOCKED — native Chrono runtime unavailable; authoritative T-OCS joint/constraint executable closure incomplete.
-G3 BLOCKED — mandatory physical inputs missing/unverified; OpenRadioss runtime unavailable.
-G4 NOT_PROVEN — complete critical-artifact evidence review/hash closure incomplete.
+CRITICAL STOP CONDITION:
+The SHA string supplied in the work order has 65 hexadecimal characters, so it cannot be a SHA-256 digest. It also differs from the computed valid digest. No correction or substitution was made.
 
 G2:
-BLOCKED
+BLOCKED — native Chrono acquisition/runtime was not attempted beyond the allowed environment qualification boundary because GitHub DNS/HTTPS is unavailable and no cached native Chrono runtime exists. No T-OCS engineering kinematic simulation was executed.
 
 G3:
-BLOCKED
+BLOCKED — mandatory physical inputs and required OpenRadioss/Gmsh/ParaView runtimes are not closed/available. No dynamic engineering simulation was executed.
 
 G4:
-NOT_PROVEN
+NOT_PROVEN — evidence infrastructure exists, but the complete engineering evidence gate cannot close while G2/G3 are blocked.
 
-OVERALL:
-BLOCKED
+ENVIRONMENT:
+BLOCKED.
 
-NEXT EXECUTION UNIT:
-Close the authoritative T-OCS joint/constraint model from the exact SHA-matched R4.1 artifact — frames, axes, DOF, limits, reaction definitions, and LOCK170 semantics — without inference; then rerun native Chrono G2.
+TESTS EXECUTED:
+Host probe PASS; compiler/build probes PASS; Python venv/import/schema/determinism PASS; exact R4.1 SHA computation PASS; exact STEP read PASS; B-Rep transfer PASS; 62-solid count PASS; GitHub DNS/HTTPS/Git probes BLOCKED; Git LFS probe BLOCKED.
+
+ARTIFACTS:
+ENVIRONMENT/environment_manifest.json
+ENVIRONMENT/capability_matrix.json
+ENVIRONMENT/runtime_probes/*
+ENVIRONMENT/versions/toolchain_versions.json
+ENVIRONMENT/logs/network.log
+ENVIRONMENT/reports/ENVIRONMENT_FINAL_REPORT.md
+ENVIRONMENT/hashes/SHA256SUMS.json
+VALIDATION/FINAL_GATE_RESULT.json
+
+HASHES:
+Environment evidence manifest SHA-256 = f244cc7d9bfc97bcef8e420b0caa1f5f5040ccd8c60cb5d94d5c5af26c817ef4
+
+REGRESSION:
+BLOCKED.
+
+BLOCKERS:
+1. Malformed governing R4.1 SHA-256 reference (65 hex characters).
+2. github.com DNS/HTTPS/Git transport unavailable.
+3. Git LFS unavailable.
+4. Native Project Chrono unavailable.
+5. Required G3 runtimes unavailable.
+
+NO-GO ITEMS:
+No G2 engineering simulation.
+No G3 dynamic physics.
+No physical validation claim.
+No mutation/regeneration of R4.1.
+No silent correction of the governing SHA.
+
+NEXT SINGLE EXECUTION UNIT:
+Resolve the authoritative R4.1 SHA-256 reference. Once explicitly corrected/confirmed, rerun the baseline gate before any native Chrono/OpenRadioss acquisition or engineering simulation.
