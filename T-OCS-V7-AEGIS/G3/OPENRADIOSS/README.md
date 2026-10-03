@@ -1,0 +1,1 @@
+OpenRadioss is the primary G3 solver. The runner is fail-closed and refuses execution unless a declared executable runtime exists and the mandatory physical-input closure is PASS.
