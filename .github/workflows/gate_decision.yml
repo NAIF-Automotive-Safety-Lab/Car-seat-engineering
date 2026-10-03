@@ -6,6 +6,9 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+      - name: Baseline gate configuration regression
+        run: |
+          python3 -m pytest -q T-OCS-V7-AEGIS/tests/test_baseline_gate_config.py
       - name: Emit machine-readable gate state
         run: |
           python3 - <<'PY'

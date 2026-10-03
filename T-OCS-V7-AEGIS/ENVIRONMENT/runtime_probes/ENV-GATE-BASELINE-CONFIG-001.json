@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "GATE-BASELINE-CONFIG-001",
+  "status": "PASS",
+  "authority": "PETER",
+  "timestamp": "2026-10-04T02:36:00+03:00",
+  "scope": "AEGIS baseline gate configuration regression",
+  "test_method": "dynamic governing-lock substitution plus source scan for embedded R4.1 SHA literals",
+  "result": {
+    "reads_R4_1_BASELINE_LOCK_expected_sha256": true,
+    "hardcoded_governing_sha_detected": false,
+    "dynamic_lock_change_detected": true
+  },
+  "baseline_gate_runtime": {
+    "status": "PASS",
+    "artifact_size_bytes": 1220000,
+    "artifact_sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "expected_sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "step_read": "PASS",
+    "brep": "PASS",
+    "solid_count": 62,
+    "artifact_mutation": false
+  },
+  "no_engineering_execution": true,
+  "g2_started": false,
+  "g3_started": false,
+  "chrono_started": false
+}
