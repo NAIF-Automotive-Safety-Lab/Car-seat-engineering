@@ -1,0 +1,11 @@
+{
+  "evidence_id":"ENV-G3-001",
+  "status":"BLOCKED",
+  "OpenRadioss_Starter":"BLOCKED",
+  "OpenRadioss_Engine":"BLOCKED",
+  "Gmsh":"BLOCKED",
+  "ParaView_pvbatch":"BLOCKED",
+  "CalculiX":"BLOCKED",
+  "Code_Aster":"BLOCKED",
+  "reason":"Required runtimes are not available; acquisition was stopped at the network blocker."
+}
