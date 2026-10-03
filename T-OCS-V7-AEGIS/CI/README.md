@@ -1,0 +1,1 @@
+GitHub Actions is the active execution host because no Desktop Commander device is connected to this session.
