@@ -1,0 +1,21 @@
+{
+  "schema_version":"1.0",
+  "qualification_id":"ENVIRONMENT-QUAL-001",
+  "status":"PASS",
+  "hash_algorithm":"SHA-256",
+  "artifacts":[
+    {"artifact":"capability_matrix.json","sha256":"c343be9269f646de96b88607beeb123d7348f3cfb6a88ba6e345725b4cff4f92","size_bytes":1639},
+    {"artifact":"environment_manifest.json","sha256":"dd785b076a6281fbcc0b3b6698ed812fe159a1649f143a2f6081c148bf1ab53c","size_bytes":1000},
+    {"artifact":"runtime_probes/ENV-BASE-001.json","sha256":"202de69cdcbc6080b954869bffea88e4941d6ce49f7968e342e1a869a7770a87","size_bytes":1040},
+    {"artifact":"runtime_probes/ENV-BUILD-001.json","sha256":"c58bdae1468ba260a13c47510e5b889803793767481b02a216938918d191e851","size_bytes":361},
+    {"artifact":"runtime_probes/ENV-PY-001.json","sha256":"f8dfb7a64958b042f9c1adb9f0fb24d285b72d22d56de92b350987308b5e7c53","size_bytes":1178},
+    {"artifact":"runtime_probes/ENV-NET-001.json","sha256":"4ad99f6b7445adaa86aaafb5772353fc9e35b8b8530239ed228ba009a2d3ed8c","size_bytes":382},
+    {"artifact":"runtime_probes/ENV-R41-001.json","sha256":"99b1af68e6105d1679e2ece3b39aa8352c5f942315c12444e6545fa797046c1f","size_bytes":1084},
+    {"artifact":"runtime_probes/ENV-CHRONO-001.json","sha256":"e7325a6f27bd8bc00acba96afe58ab960810e6809cbba5a6db2dfa8cd83c1878","size_bytes":599},
+    {"artifact":"runtime_probes/ENV-G3-001.json","sha256":"9fc7391bd86f1c21c16c1ce57b18bbbb40941c27ee34adf63524527ccbe3588d","size_bytes":309},
+    {"artifact":"versions/toolchain_versions.json","sha256":"e890350e7ca085457f36c76f22d89af5d2bd8971f77692887cc9dd42e5a74223","size_bytes":285},
+    {"artifact":"logs/network.log","sha256":"a41f56cb71e18a5dba07defc11790d71b9be50c8b3572ff7ff1a8c965fd3e0cf","size_bytes":347},
+    {"artifact":"reports/ENVIRONMENT_FINAL_REPORT.md","sha256":"c0a5b0a11a02de7f7b720de5b3c874c7a43b2d44844a1ce9f11eed801c658c97","size_bytes":1507}
+  ],
+  "manifest_sha256":"f244cc7d9bfc97bcef8e420b0caa1f5f5040ccd8c60cb5d94d5c5af26c817ef4"
+}
