@@ -1,0 +1,6 @@
+{
+  "schema_version": "1.0",
+  "status": "BLOCKED",
+  "frames": [],
+  "reason": "Authoritative frame definitions are not closed."
+}
