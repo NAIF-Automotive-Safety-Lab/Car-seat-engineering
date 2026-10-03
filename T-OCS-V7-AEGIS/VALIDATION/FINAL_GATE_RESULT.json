@@ -13,11 +13,10 @@
     "MANUFACTURING_VALIDATION":"NOT_PROVEN"
   },
   "g4_self_check":"PASS",
-  "g4_gate":"NOT_PROVEN",
   "blockers":[
-    "G1 acceptance contract not supplied",
-    "G2 native Chrono unavailable and authoritative joint/constraint closure incomplete",
-    "G3 physical inputs missing/unverified and OpenRadioss runtime unavailable",
-    "G4 evidence package review/full critical-artifact hash coverage is not yet closed"
+    "G1 NOT_PROVEN: no separate G1 acceptance contract was supplied by the work order.",
+    "G2 BLOCKED: Chrono native runtime is unavailable and authoritative T-OCS joint/constraint closure remains incomplete. No T-OCS kinematic run was executed.",
+    "G3 BLOCKED: mandatory physical inputs are missing/unverified; OpenRadioss execution is forbidden.",
+    "G4 NOT_PROVEN: evidence-engine self-check passed, but full critical-artifact evidence review/hash closure is incomplete."
   ]
 }
