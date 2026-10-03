@@ -1,0 +1,32 @@
+{
+  "schema_version":"1.0",
+  "qualification_id":"ENVIRONMENT-QUAL-001",
+  "status":"BLOCKED",
+  "environment_status":"BLOCKED",
+  "qualification_scope":"host + network + build + Python + baseline + engine availability",
+  "host":{
+    "os":"Linux",
+    "kernel":"6.18.44",
+    "architecture":"x86_64",
+    "cpu_model":"AMD EPYC 9V74 80-Core Processor",
+    "logical_cpu_count":3,
+    "ram_kib":6091040,
+    "root_disk_free_kib":31263448,
+    "gpu_nvidia_smi":"NOT_DETECTED"
+  },
+  "completed":{
+    "ENV-BASE-001":"PASS",
+    "ENV-BUILD-001":"PASS",
+    "ENV-PY-001":"PASS",
+    "ENV-R41-001":"BLOCKED",
+    "ENV-NET-001":"BLOCKED",
+    "ENV-CHRONO-001":"BLOCKED"
+  },
+  "stop_condition":"DO NOT START ENGINEERING SIMULATION",
+  "primary_blockers":[
+    "Required R4.1 SHA string supplied by the work order is 65 hexadecimal characters and is not a valid SHA-256 digest.",
+    "github.com DNS/HTTPS/Git transport unavailable in the execution host.",
+    "Git LFS executable unavailable.",
+    "Native Project Chrono runtime not available."
+  ]
+}
