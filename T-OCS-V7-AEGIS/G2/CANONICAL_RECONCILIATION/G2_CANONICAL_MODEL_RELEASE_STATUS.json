@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "G2-CANONICAL-RELEASE-001",
+  "timestamp": "2026-10-04T01:18:00Z",
+  "canonical_model_status": "BLOCKED",
+  "g2_input_closure": "BLOCKED",
+  "g2_execution": "NOT_STARTED",
+  "g2_repeatability": "NOT_STARTED",
+  "g3": "LOCKED",
+  "casadi": {
+    "version": "3.7.2",
+    "runtime_qualification": "PASS",
+    "repeatability": "PASS",
+    "role": "runtime qualification only; not T-OCS G2 pass"
+  },
+  "release_gate": {
+    "all_required_model_fields_authoritative": false,
+    "representation_conflicts_resolved_for_execution": false,
+    "canonical_model_numerically_executable_without_reinterpretation": false,
+    "unsupported_assumptions_introduced": false,
+    "result": "BLOCKED"
+  },
+  "resolved_findings": [
+    "Conflict B is a representation-grain difference: 16 V7 reference/BOM records, 31 logical SR11 MBD groups, 62 R4.1 geometric solids.",
+    "Conflict C is historical provenance and is resolved by the current immutable R4.1 lock."
+  ],
+  "unresolved_findings": [
+    "Conflict A lacks an authoritative executable crosswalk from the four V7 joint families to the six SR11 records.",
+    "Current body-to-joint/body-to-frame executable mapping is not released.",
+    "Current executable frames and local axes are incomplete.",
+    "Executable constraints and initial state are missing.",
+    "G2 execution protocol values are not authoritatively released."
+  ],
+  "r4_1": {
+    "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "size_bytes": 1220000,
+    "solids": 62,
+    "mutation": false
+  },
+  "next_state": "WAIT_FOR_AUTHORITY_DECISIONS_ONLY",
+  "no_go_claims": [
+    "G2 PASS",
+    "Native Chrono PASS",
+    "physical/crash validation",
+    "manufacturing validation",
+    "G3 authorization"
+  ]
+}
