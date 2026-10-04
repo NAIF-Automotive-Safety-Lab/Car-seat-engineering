@@ -1,0 +1,201 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "G2-CANONICAL-RECONCILIATION-001",
+  "status": "BLOCKED",
+  "purpose": "Resolve source-representation conflicts without executing G2 or inventing inputs.",
+  "conflicts": [
+    {
+      "id": "CONFLICT-A-001",
+      "topic": "4-joint V7 declaration vs 6-joint SR11 representation",
+      "source_A": {
+        "artifact": "artifacts/master_v4/v7_baseline_independent_verification.json",
+        "revision": "commit 02b7919cddd54a116ba74d6fba13e8983d001231",
+        "location": "$.kinematic_audit.declared_joints",
+        "status": "PARTIALLY_VERIFIED",
+        "finding": "V7 audit declares J_RAIL,J_SEATBACK,J_LINK_L,J_LINK_R; executable_joint_graph=false and DOF/limits metadata-only."
+      },
+      "source_B": {
+        "artifact": "SR11/joints/V1_SR11_JOINT_MAPPING.json",
+        "revision": "V1 / git blob 10f4c658c77037147f788deeacbfa853122e3636",
+        "location": "$.joints[*]",
+        "status": "DEFINED_NOT_EXECUTABLE",
+        "finding": "Six records: two physical rail prismatic joints, one seatback revolute, two model-defined linkages, one state-dependent LOCK170 constraint."
+      },
+      "classification": "REPRESENTATION-GRAIN_DIFFERENCE",
+      "evidence": [
+        "V7_MANUS_INTERFACE_DEFINITION_AUDIT.md: V7 current interface package is design-defined; no executable graph.",
+        "artifacts/master_v3/v7_evidence_graph_closure.json: SR11 joint mapping is CANDIDATE_SOURCE and NOT_AUTHORITATIVE_V7.",
+        "SR11/joints/V1_SR11_JOINT_MAPPING.json: status MODEL_SPECIFICATION_ONLY."
+      ],
+      "resolution_status": "PARTIALLY_RESOLVED",
+      "resolution": "The six-record SR11 representation is historical/model decomposition. The four-record V7 declaration is the later V7 joint-family declaration. However no controlled source explicitly maps the four families to an executable current joint graph, so canonical numerical joint inventory remains unresolved.",
+      "no_invented_choice": true
+    },
+    {
+      "id": "CONFLICT-B-001",
+      "topic": "16 V7 reference/BOM records vs 31 SR11 MBD logical bodies vs 62 R4.1 B-Rep solids",
+      "source_A": {
+        "artifact": "artifacts/master_v4/v7_baseline_independent_verification.json",
+        "revision": "commit 02b7919cddd54a116ba74d6fba13e8983d001231",
+        "location": "$.reference_identity and $.step_audit",
+        "status": "PARTIALLY_VERIFIED",
+        "finding": "16 V7 reference/BOM records map to STEP; assembly contains 21 solids; this is V7 component/reference grain, not a body-count assertion."
+      },
+      "source_B": {
+        "artifact": "SR11/manifests/V1_SR11_BODY_MAPPING.json",
+        "revision": "V1 / git blob dafa4ce4a17804f0f65d2eb54233d28d5f45b515",
+        "location": "$.bodies[*]",
+        "status": "DEFINED_NOT_EXECUTABLE",
+        "finding": "31 MBD body records deterministically group the 62 R4.1 solids; mapping covers solids 1..62."
+      },
+      "classification": "REPRESENTATION-GRAIN_DIFFERENCE",
+      "evidence": [
+        "ARTIFACT_RECOVERY_REPORT.json: 31 body records accepted as grouped representation; solid coverage 62/62.",
+        "SR11/manifests/V1_SR11_BODY_MAPPING.json: mapping_type deterministic_solid_index_from_R4.1_STEP_readback; solids=62.",
+        "artifacts/master_v4/v7_baseline_independent_verification.json: 16 V7 reference records and 21 solids in reconstruction assembly."
+      ],
+      "resolution_status": "RESOLVED_AS_GRAIN_DIFFERENCE",
+      "resolution": "16 = V7 reference/BOM record grain; 31 = logical MBD grouping grain; 62 = geometric B-Rep solid count. No evidence establishes a single authoritative physical rigid-body count. Therefore no physical-body count is promoted.",
+      "no_invented_choice": true
+    },
+    {
+      "id": "CONFLICT-C-001",
+      "topic": "Historical V4 baseline hash assertion vs current R4.1 lock",
+      "source_A": {
+        "artifact": "R4_1_BASELINE_LOCK.json",
+        "revision": "current branch; git blob b925e65fbe46232096c8fc8c8a4d7f10b4bd211a",
+        "location": "$.expected_sha256,$.sha_match,$.solid_count,$.mutation_detected",
+        "status": "VERIFIED",
+        "finding": "Current lock carries the exact 64-character digest; sha_match=true; solid_count=62; mutation_detected=false."
+      },
+      "source_B": {
+        "artifact": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/PHYSICAL_INPUT_ENGINEERING/JON_PHYSICAL_INPUT_ENGINEERING_MASTER.json",
+        "revision": "branch; git blob c1dd5d5d8864757a5fd4fee856a13c542ef1ddbe",
+        "location": "$.CURRENT_STATE.IMPORTANT_EVIDENCE_CONFLICT",
+        "status": "HISTORICAL_CONFLICT",
+        "finding": "Historical V4 package recorded BASELINE_HASH_MATCH=false while asserting the same digest."
+      },
+      "classification": "HISTORICAL_RECORD_CONFLICT",
+      "evidence": [
+        "Current R4_1_BASELINE_LOCK.json is internally consistent and matches the governing digest.",
+        "Current recovery checks retained no R4.1 mutation."
+      ],
+      "resolution_status": "RESOLVED_BY_CURRENT_AUTHORITY",
+      "resolution": "Historical false-match assertion is retained as provenance only. The current immutable lock and independent artifact verification govern current work. The lock was not changed by this command.",
+      "no_invented_choice": true
+    }
+  ],
+  "resolution_summary": {
+    "conflict_A": "PARTIALLY_RESOLVED",
+    "conflict_B": "RESOLVED_AS_GRAIN_DIFFERENCE",
+    "conflict_C": "RESOLVED_BY_CURRENT_AUTHORITY",
+    "canonical_release": "BLOCKED"
+  },
+  "authoritative_chain": [
+    {
+      "artifact": "V7_MANUS_INTERFACE_DEFINITION_AUDIT.md",
+      "revision": "audit 2026-09-09",
+      "authority_level": "V7 current interface-definition audit",
+      "status": "VERIFIED_WITH_BLOCKERS"
+    },
+    {
+      "artifact": "artifacts/master_v4/v7_baseline_independent_verification.json",
+      "revision": "commit 02b7919cddd54a116ba74d6fba13e8983d001231",
+      "authority_level": "V7 independent verification",
+      "status": "DEFINED_NOT_EXECUTABLE"
+    },
+    {
+      "artifact": "SR11/joints/V1_SR11_JOINT_MAPPING.json",
+      "revision": "V1; blob 10f4c658c77037147f788deeacbfa853122e3636",
+      "authority_level": "historical candidate/model specification",
+      "status": "NOT_AUTHORITATIVE_V7"
+    },
+    {
+      "artifact": "SR11/manifests/V1_SR11_BODY_MAPPING.json",
+      "revision": "V1; blob dafa4ce4a17804f0f65d2eb54233d28d5f45b515",
+      "authority_level": "historical deterministic grouping",
+      "status": "NOT_AUTHORITATIVE_EXECUTABLE"
+    },
+    {
+      "artifact": "R4_1_BASELINE_LOCK.json",
+      "revision": "current branch; blob b925e65fbe46232096c8fc8c8a4d7f10b4bd211a",
+      "authority_level": "current immutable R4.1 gate",
+      "status": "VERIFIED"
+    }
+  ],
+  "canonical_decision_matrix": [
+    {
+      "field": "canonical_body_set",
+      "status": "CONFLICTED",
+      "finding": "The 16-reference,31-logical-body,62-solid grains are distinguishable, but no controlled evidence establishes the single current executable physical-body set."
+    },
+    {
+      "field": "canonical_joint_set",
+      "status": "CONFLICTED",
+      "finding": "Four V7 declared joint families and six SR11 historical records are not mapped by a released executable graph."
+    },
+    {
+      "field": "canonical_joint_graph",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "finding": "Model/design relations exist, but executable_joint_graph=false; current G2 joint closure remains BLOCKED."
+    },
+    {
+      "field": "canonical_DOF",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "finding": "MECHANISM_AUDIT records model_dof=2, but V7 audit says DOF/limits are metadata only and current dof_map.json is empty."
+    },
+    {
+      "field": "canonical_frames",
+      "status": "MISSING",
+      "finding": "Current G2 frames.json is empty; SR11 frame labels are model-defined only and exact executable frame transforms are not released."
+    },
+    {
+      "field": "canonical_axes",
+      "status": "PARTIALLY_VERIFIED",
+      "finding": "R4.1 global convention +X=FWD,+Y=LEFT,+Z=UP is explicit; exact joint/local axes are not uniformly released. J_SEATBACK has conflicting historical/model representations."
+    },
+    {
+      "field": "canonical_coordinate_convention",
+      "status": "VERIFIED",
+      "finding": "The controlled definition master explicitly sets +X=FWD,+Y=LEFT,+Z=UP with right-hand rotation."
+    },
+    {
+      "field": "canonical_constraints",
+      "status": "MISSING",
+      "finding": "Current G2 constraints.json contains an empty constraints array and says equations/reactions/limits/state semantics are not closed."
+    },
+    {
+      "field": "canonical_limits_end_stops",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "finding": "End-stop and limit concepts exist, but executable numeric limits/reaction definitions are not proven."
+    },
+    {
+      "field": "canonical_lock_rebound_states",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "finding": "Lock/rebound state names are defined; hardware/model state semantics are not executable closure."
+    },
+    {
+      "field": "canonical_initial_state",
+      "status": "MISSING",
+      "finding": "No authoritative numerical initial pose/orientation/q/velocity/angular velocity/initial constraint-state set exists."
+    },
+    {
+      "field": "canonical_dynamic_fields",
+      "status": "NOT_REQUIRED_FOR_DECLARED_SCOPE",
+      "finding": "Declared scope is kinematic/constraint execution only; dynamic force/mass/inertia/contact parameters are excluded at this gate, but remain mandatory for later dynamic extension."
+    }
+  ],
+  "decision_required": [
+    "DEC-001",
+    "DEC-002",
+    "DEC-003",
+    "DEC-004",
+    "DEC-005"
+  ],
+  "r4_1_check": {
+    "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "size_bytes": 1220000,
+    "solids": 62,
+    "mutation": false
+  }
+}
