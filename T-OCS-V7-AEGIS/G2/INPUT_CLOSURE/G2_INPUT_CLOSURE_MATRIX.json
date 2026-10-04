@@ -1,0 +1,432 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "G2-INPUT-CLOSURE-EVIDENCE-001",
+  "status": "BLOCKED",
+  "scope_ref": "G2-SCOPE-DECL-001",
+  "counts": {
+    "PARTIALLY_VERIFIED": 5,
+    "CONFLICTED": 2,
+    "DEFINED_NOT_EXECUTABLE": 11,
+    "VERIFIED": 1,
+    "MISSING": 12,
+    "NOT_REQUIRED_FOR_DECLARED_SCOPE": 9
+  },
+  "total_records": 40,
+  "records": [
+    {
+      "id": "K-001",
+      "field": "body_component_list",
+      "status": "PARTIALLY_VERIFIED",
+      "primary_sources": [
+        "SRC-008",
+        "SRC-001"
+      ],
+      "finding": "16 V7 reference/BOM records exist; current G2 scaffold has 32 historical model-defined bodies and is NOT_PROVEN."
+    },
+    {
+      "id": "K-002",
+      "field": "declared_joint_list",
+      "status": "CONFLICTED",
+      "primary_sources": [
+        "SRC-008",
+        "SRC-002"
+      ],
+      "finding": "V7 audit declares 4 joints; G2 historical scaffold lists 6 joint records."
+    },
+    {
+      "id": "K-003",
+      "field": "parent_child_graph",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "primary_sources": [
+        "SRC-009",
+        "SRC-010",
+        "SRC-008"
+      ],
+      "finding": "Nine interface relations are model/design-defined; no executable multibody graph exists."
+    },
+    {
+      "id": "K-004",
+      "field": "graph_connectivity",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "primary_sources": [
+        "SRC-009",
+        "SRC-010",
+        "SRC-003"
+      ],
+      "finding": "Multiple parent relations exist without explicit closed-loop constraint equations."
+    },
+    {
+      "id": "K-005",
+      "field": "DOF_count",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "primary_sources": [
+        "SRC-008",
+        "SRC-004"
+      ],
+      "finding": "DOF/limits are metadata only; dof_map.json is empty."
+    },
+    {
+      "id": "K-006",
+      "field": "constrained_DOF",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "primary_sources": [
+        "SRC-009",
+        "SRC-003"
+      ],
+      "finding": "Interface constrained/coupled DOF statements exist; no global executable set."
+    },
+    {
+      "id": "K-007",
+      "field": "generalized_coordinates",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "primary_sources": [
+        "SRC-009",
+        "SRC-004"
+      ],
+      "finding": "q1/q2 are conceptual; executable generalized-coordinate map not closed."
+    },
+    {
+      "id": "K-008",
+      "field": "coordinate_convention",
+      "status": "VERIFIED",
+      "primary_sources": [
+        "SRC-011"
+      ],
+      "finding": "+X=FWD, +Y=LEFT, +Z=UP with right-hand rotation convention is explicit."
+    },
+    {
+      "id": "K-009",
+      "field": "sign_convention",
+      "status": "PARTIALLY_VERIFIED",
+      "primary_sources": [
+        "SRC-011",
+        "SRC-009"
+      ],
+      "finding": "Right-hand convention explicit; individual joint signs not released in one executable map."
+    },
+    {
+      "id": "K-010",
+      "field": "units",
+      "status": "PARTIALLY_VERIFIED",
+      "primary_sources": [
+        "SRC-010",
+        "SRC-011"
+      ],
+      "finding": "Units appear in source records, but no single executable G2 unit manifest."
+    },
+    {
+      "id": "K-011",
+      "field": "native_origin",
+      "status": "MISSING",
+      "primary_sources": [
+        "SRC-011",
+        "SRC-009"
+      ],
+      "finding": "Exact machine-readable R4.1 origin/instance mapping is not released."
+    },
+    {
+      "id": "K-012",
+      "field": "joint_axes",
+      "status": "PARTIALLY_VERIFIED",
+      "primary_sources": [
+        "SRC-009",
+        "SRC-010"
+      ],
+      "finding": "q1/q2 axes are conceptually identified; exact local attachment/pin axes not released."
+    },
+    {
+      "id": "K-013",
+      "field": "reference_frames",
+      "status": "MISSING",
+      "primary_sources": [
+        "SRC-005",
+        "SRC-011"
+      ],
+      "finding": "frames.json is empty; executable reference frames absent."
+    },
+    {
+      "id": "K-014",
+      "field": "J_SEATBACK_axis",
+      "status": "PARTIALLY_VERIFIED",
+      "primary_sources": [
+        "SRC-009",
+        "SRC-010"
+      ],
+      "finding": "IF-R4-09 gives [0,1,0] at model level; physical pin axis not released."
+    },
+    {
+      "id": "K-015",
+      "field": "travel_limits",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "primary_sources": [
+        "SRC-008"
+      ],
+      "finding": "Declared limits are metadata only; executable numeric limit set not proven."
+    },
+    {
+      "id": "K-016",
+      "field": "end_stops",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "primary_sources": [
+        "SRC-012",
+        "SRC-010"
+      ],
+      "finding": "Safe end-stop requirements defined; executable stop geometry/reactions not closed."
+    },
+    {
+      "id": "K-017",
+      "field": "lock_states",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "primary_sources": [
+        "SRC-012",
+        "SRC-009"
+      ],
+      "finding": "Lock states/fault conditions are definition/test items, not executable state equations."
+    },
+    {
+      "id": "K-018",
+      "field": "rebound_states",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "primary_sources": [
+        "SRC-012",
+        "SRC-010"
+      ],
+      "finding": "Rebound states defined conceptually; behavior laws not closed."
+    },
+    {
+      "id": "K-019",
+      "field": "contact_interference",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "primary_sources": [
+        "SRC-008",
+        "SRC-010"
+      ],
+      "finding": "Positive overlap/interface geometry documented; intended contact versus hard interference unresolved."
+    },
+    {
+      "id": "K-020",
+      "field": "initial_position",
+      "status": "MISSING",
+      "primary_sources": [
+        "SRC-007",
+        "SRC-006"
+      ],
+      "finding": "No authoritative numerical initial pose."
+    },
+    {
+      "id": "K-021",
+      "field": "initial_orientation",
+      "status": "MISSING",
+      "primary_sources": [
+        "SRC-007",
+        "SRC-006"
+      ],
+      "finding": "No authoritative numerical initial orientation."
+    },
+    {
+      "id": "K-022",
+      "field": "initial_generalized_coordinates",
+      "status": "MISSING",
+      "primary_sources": [
+        "SRC-007",
+        "SRC-004"
+      ],
+      "finding": "No executable q1/q2 initial values."
+    },
+    {
+      "id": "K-023",
+      "field": "initial_velocity",
+      "status": "MISSING",
+      "primary_sources": [
+        "SRC-008",
+        "SRC-007"
+      ],
+      "finding": "Vehicle pulse/initial velocity is explicitly external-data-required and absent."
+    },
+    {
+      "id": "K-024",
+      "field": "initial_angular_velocity",
+      "status": "MISSING",
+      "primary_sources": [
+        "SRC-007"
+      ],
+      "finding": "No authoritative angular-velocity initial condition."
+    },
+    {
+      "id": "K-025",
+      "field": "initial_constraint_state",
+      "status": "MISSING",
+      "primary_sources": [
+        "SRC-003",
+        "SRC-007"
+      ],
+      "finding": "No executable initial constraint-state vector."
+    },
+    {
+      "id": "K-026",
+      "field": "initial_lock_rebound_state",
+      "status": "MISSING",
+      "primary_sources": [
+        "SRC-009",
+        "SRC-007"
+      ],
+      "finding": "State names exist; initial executable assignment absent."
+    },
+    {
+      "id": "D-001",
+      "field": "mass",
+      "status": "NOT_REQUIRED_FOR_DECLARED_SCOPE",
+      "primary_sources": [
+        "SRC-007",
+        "SRC-008"
+      ],
+      "finding": "Pure kinematic/constraint gate excludes force/moment prediction."
+    },
+    {
+      "id": "D-002",
+      "field": "CG",
+      "status": "NOT_REQUIRED_FOR_DECLARED_SCOPE",
+      "primary_sources": [
+        "SRC-007",
+        "SRC-008"
+      ],
+      "finding": "Pure kinematic/constraint gate excludes dynamic force/moment prediction."
+    },
+    {
+      "id": "D-003",
+      "field": "inertia_tensor",
+      "status": "NOT_REQUIRED_FOR_DECLARED_SCOPE",
+      "primary_sources": [
+        "SRC-007",
+        "SRC-008"
+      ],
+      "finding": "No dynamic rotational equation is accepted at this gate."
+    },
+    {
+      "id": "D-004",
+      "field": "load_definitions",
+      "status": "NOT_REQUIRED_FOR_DECLARED_SCOPE",
+      "primary_sources": [
+        "SRC-007",
+        "SRC-008"
+      ],
+      "finding": "No externally applied load history is accepted for kinematic-only gate."
+    },
+    {
+      "id": "D-005",
+      "field": "force_laws",
+      "status": "NOT_REQUIRED_FOR_DECLARED_SCOPE",
+      "primary_sources": [
+        "SRC-008"
+      ],
+      "finding": "No force-law prediction is in declared kinematic scope."
+    },
+    {
+      "id": "D-006",
+      "field": "torque_laws",
+      "status": "NOT_REQUIRED_FOR_DECLARED_SCOPE",
+      "primary_sources": [
+        "SRC-008"
+      ],
+      "finding": "No torque-law prediction is in declared kinematic scope."
+    },
+    {
+      "id": "D-007",
+      "field": "damping",
+      "status": "NOT_REQUIRED_FOR_DECLARED_SCOPE",
+      "primary_sources": [
+        "SRC-008",
+        "SRC-012"
+      ],
+      "finding": "Excluded from declared kinematic-only gate."
+    },
+    {
+      "id": "D-008",
+      "field": "friction",
+      "status": "NOT_REQUIRED_FOR_DECLARED_SCOPE",
+      "primary_sources": [
+        "SRC-008",
+        "SRC-010"
+      ],
+      "finding": "Excluded from pure kinematic replay; remains unresolved for dynamic/contact extension."
+    },
+    {
+      "id": "D-009",
+      "field": "contact_parameters",
+      "status": "NOT_REQUIRED_FOR_DECLARED_SCOPE",
+      "primary_sources": [
+        "SRC-008",
+        "SRC-010"
+      ],
+      "finding": "Excluded from pure kinematic replay; not closed for contact dynamics."
+    },
+    {
+      "id": "E-001",
+      "field": "solver_timestep",
+      "status": "MISSING",
+      "primary_sources": [
+        "SRC-006",
+        "SRC-007"
+      ],
+      "finding": "No authoritative G2 execution timestep."
+    },
+    {
+      "id": "E-002",
+      "field": "integration_method",
+      "status": "MISSING",
+      "primary_sources": [
+        "SRC-006",
+        "SRC-007"
+      ],
+      "finding": "No authoritative G2 integration method."
+    },
+    {
+      "id": "E-003",
+      "field": "numerical_tolerances",
+      "status": "MISSING",
+      "primary_sources": [
+        "SRC-006",
+        "SRC-007"
+      ],
+      "finding": "No authoritative G2 numerical tolerance set."
+    },
+    {
+      "id": "E-004",
+      "field": "output_channels",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "primary_sources": [
+        "SRC-008",
+        "SRC-009"
+      ],
+      "finding": "Conceptual kinematic/state outputs exist; executable output map absent."
+    },
+    {
+      "id": "E-005",
+      "field": "source_baseline_identity",
+      "status": "CONFLICTED",
+      "primary_sources": [
+        "SRC-014",
+        "SRC-011"
+      ],
+      "finding": "Current lock matches stated R4.1 SHA; historical evidence records BASELINE_HASH_MATCH=false."
+    }
+  ],
+  "deterministic_checks": {
+    "unit_consistency": "PARTIALLY_VERIFIED",
+    "coordinate_system": "VERIFIED_PARTIAL",
+    "graph_connectivity": "DEFINED_NOT_EXECUTABLE",
+    "joint_inventory": "CONFLICTED",
+    "dof_closure": "DEFINED_NOT_EXECUTABLE",
+    "limits_states": "DEFINED_NOT_EXECUTABLE",
+    "initial_state": "MISSING",
+    "dynamic_scope": "NOT_REQUIRED_FOR_DECLARED_SCOPE",
+    "source_revision_consistency": "CONFLICTED"
+  },
+  "acceptance": "BLOCKED — next executor cannot construct T-OCS G2 without inventing engineering inputs.",
+  "r4_1": {
+    "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "size_bytes": 1220000,
+    "solids": 62,
+    "mutation": false
+  }
+}
