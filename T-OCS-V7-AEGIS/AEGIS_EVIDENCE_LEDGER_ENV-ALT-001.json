@@ -154,7 +154,7 @@
       "command_identity": "T-OCS-V7-REV2-G2-AUTHORITATIVE-INPUT-CLOSURE"
     },
     {
-      "id": "G2-INPUT-MATRIX-001",
+      "id": "G2-INPUT-CLOSURE-MATRIX-001",
       "status": "BLOCKED",
       "artifact": "T-OCS-V7-AEGIS/G2/INPUT_CLOSURE/G2_INPUT_CLOSURE_MATRIX.json",
       "sha256": "317e97ba70b4e563329bbb0b2cee7095cb11f4d77513ece68992fc84335456a8",
