@@ -35,7 +35,7 @@
       "id": "G2-ALT-CASADI-QUAL-A",
       "status": "PASS",
       "artifact": "T-OCS-V7-AEGIS/G2/ALT/CASADI/qualification_A.json",
-      "sha256": "464d51de7be893fce157be2118331e7c1ae01f7abcc3c824d84c9f38e34abefd",
+      "sha256": "b8a395bb83a18ee5ba83f7af49407aef25d4c9109ee0d5eb4bb83c278e78552a",
       "timestamp": "2026-10-04T00:21:00Z",
       "engine": "CasADi",
       "environment": "Linux 6.18.44 / Python 3.13.5 / x86_64",
@@ -45,7 +45,7 @@
       "id": "G2-ALT-CASADI-QUAL-B",
       "status": "PASS",
       "artifact": "T-OCS-V7-AEGIS/G2/ALT/CASADI/qualification_B.json",
-      "sha256": "cb04b11a3800f708800ceefb7cf605ac890828a204e64ef3f9afdc014295161d",
+      "sha256": "2b60f928b3680e7e990b4eb167337b55ae082a88a13894d7200677ccdb35cd4a",
       "timestamp": "2026-10-04T00:21:00Z",
       "engine": "CasADi",
       "environment": "Linux 6.18.44 / Python 3.13.5 / x86_64",
@@ -55,7 +55,7 @@
       "id": "G2-ALT-CASADI-REPEAT-001",
       "status": "PASS",
       "artifact": "T-OCS-V7-AEGIS/G2/ALT/CASADI/repeatability.json",
-      "sha256": "22867e69e7fcaee28da21f373af0f96307ec7a7c11bcceb1004d280f9e9fdadc",
+      "sha256": "315f973f8c3db4f977b7b31fa03cda05ceea34cfdbc4a476ff273b64cd6d8289",
       "timestamp": "2026-10-04T00:21:00Z",
       "engine": "CasADi",
       "environment": "Linux 6.18.44 / Python 3.13.5 / x86_64",
@@ -90,6 +90,26 @@
       "sha256": "f69d85a9d5e0a21120256f79d5eda5e60d0f2e91e6aa2a8cd185d4857fdfcf8a",
       "timestamp": "2026-10-04T00:21:00Z",
       "engine": null,
+      "environment": "Linux 6.18.44 / Python 3.13.5 / x86_64",
+      "command_identity": "T-OCS-V7-REV2-LOCAL-RUNTIME-SALVAGE-CASADI"
+    },
+    {
+      "id": "G2-ALT-CASADI-TRAJECTORY-A",
+      "status": "PASS",
+      "artifact": "T-OCS-V7-AEGIS/G2/ALT/CASADI/trajectory_A.json",
+      "sha256": "e95642793a5e4169a7c6a580930ce0731076d41a1129b0fbea7999e913a09afa",
+      "timestamp": "2026-10-04T00:21:00Z",
+      "engine": "CasADi",
+      "environment": "Linux 6.18.44 / Python 3.13.5 / x86_64",
+      "command_identity": "T-OCS-V7-REV2-LOCAL-RUNTIME-SALVAGE-CASADI"
+    },
+    {
+      "id": "G2-ALT-CASADI-TRAJECTORY-B",
+      "status": "PASS",
+      "artifact": "T-OCS-V7-AEGIS/G2/ALT/CASADI/trajectory_B.json",
+      "sha256": "016d9e0eeeda617a73ce7cb5e4b6c9efb0ae2434e3433edb3628caa17d5ba777",
+      "timestamp": "2026-10-04T00:21:00Z",
+      "engine": "CasADi",
       "environment": "Linux 6.18.44 / Python 3.13.5 / x86_64",
       "command_identity": "T-OCS-V7-REV2-LOCAL-RUNTIME-SALVAGE-CASADI"
     }
@@ -169,5 +189,11 @@
     "chrono": "BLOCKED",
     "g3": "LOCKED",
     "r4_1": "UNCHANGED"
+  },
+  "next_gate": {
+    "g2_alt": "BLOCKED",
+    "g2_kinematic_computational": "BLOCKED",
+    "g3": "LOCKED",
+    "requirement": "Close authoritative T-OCS joint/constraint and initial-condition inputs before any T-OCS solver/model run."
   }
 }
