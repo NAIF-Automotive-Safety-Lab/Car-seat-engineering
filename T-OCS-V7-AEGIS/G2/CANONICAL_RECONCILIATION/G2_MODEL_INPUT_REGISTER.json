@@ -1,105 +1,79 @@
 {
-  "schema_version": "1.0",
-  "evidence_id": "G2-MODEL-INPUT-REG-001",
+  "schema_version": "2.0",
+  "evidence_id": "G2-MODEL-INPUT-REG-REV2-001",
+  "register": "A \u2014 T-OCS AUTHORITATIVE MODEL INPUTS",
   "status": "BLOCKED",
-  "classification_rule": "Only VERIFIED is admissible as current model authority. All other states remain non-executable.",
+  "admissibility_rule": "Only VERIFIED fields are current model authority. No other status may be executed or promoted.",
   "inputs": [
     {
       "field": "body_topology",
       "status": "CONFLICTED",
-      "finding": "16 V7 reference/BOM records versus 31 logical MBD body groups; 62 solids are geometry entities, not a physical-body count."
+      "finding": "No authoritative current physical-body grain; 16/31/21/62 are different or unsupported counts."
     },
     {
       "field": "joint_graph",
       "status": "CONFLICTED",
-      "finding": "Four V7 joint families versus six SR11 decomposition records; no authoritative executable crosswalk."
+      "finding": "Four V7 families and six SR11 mixed records lack an authority crosswalk."
     },
     {
       "field": "DOF",
       "status": "DEFINED_NOT_EXECUTABLE",
-      "finding": "2-DOF model evidence exists, but current executable DOF map is absent."
+      "finding": "Metadata indicates 2 DOF; executable map is absent."
     },
     {
       "field": "reference_frames",
       "status": "MISSING",
-      "finding": "frames.json is empty; no current executable frame transforms."
+      "finding": "No current frame transform list."
     },
     {
       "field": "joint_axes",
       "status": "PARTIALLY_VERIFIED",
-      "finding": "Global axes verified; exact local joint axes incomplete."
+      "finding": "Only global convention; no closed local axes."
     },
     {
       "field": "constraints",
       "status": "MISSING",
-      "finding": "Executable constraint equations absent."
+      "finding": "No equations or complete semantics."
     },
     {
       "field": "limits_end_stops",
       "status": "DEFINED_NOT_EXECUTABLE",
-      "finding": "Requirements/metadata exist; executable limit set absent."
+      "finding": "No executable values/laws."
     },
     {
       "field": "lock_rebound_semantics",
       "status": "DEFINED_NOT_EXECUTABLE",
-      "finding": "State names exist; executable transition/constraint laws absent."
+      "finding": "No executable state transition/constraint law."
     },
     {
       "field": "initial_position",
       "status": "MISSING",
-      "finding": "No authoritative numerical initial pose."
+      "finding": "No controlled numerical pose."
     },
     {
       "field": "initial_orientation",
       "status": "MISSING",
-      "finding": "No authoritative numerical orientation."
+      "finding": "No controlled numerical orientation."
     },
     {
       "field": "initial_generalized_coordinates",
       "status": "MISSING",
-      "finding": "No executable q initialization."
+      "finding": "No controlled q initialization."
     },
     {
       "field": "initial_velocity",
       "status": "MISSING",
-      "finding": "Vehicle pulse/initial velocity explicitly external-data-required and absent."
+      "finding": "Vehicle pulse/velocity is external-data-required."
     },
     {
       "field": "initial_angular_velocity",
       "status": "MISSING",
-      "finding": "No authoritative value."
+      "finding": "No controlled numerical angular velocity."
     },
     {
-      "field": "initial_constraint_state",
-      "status": "MISSING",
-      "finding": "No executable initial constraint state."
-    },
-    {
-      "field": "initial_lock_rebound_state",
-      "status": "MISSING",
-      "finding": "No executable assignment."
-    },
-    {
-      "field": "mass_CG_inertia",
+      "field": "required_physical_parameters",
       "status": "NOT_REQUIRED_FOR_DECLARED_SCOPE",
-      "finding": "Excluded from declared kinematic-only gate; current source records remain null."
-    },
-    {
-      "field": "loads_force_torque_damping_friction_contact",
-      "status": "NOT_REQUIRED_FOR_DECLARED_SCOPE",
-      "finding": "Excluded from kinematic-only scope; required for any later dynamic/contact extension."
+      "finding": "Mass, CG, inertia, loads/contact/damping are not required for declared kinematic-only scope; they are not inferred."
     }
-  ],
-  "candidate_runtime": {
-    "engine": "CasADi",
-    "version": "3.7.2",
-    "qualification": "AVAILABLE/QUALIFIED/REPEATABLE",
-    "role": "Alternative computational runtime only; not T-OCS G2 PASS."
-  },
-  "r4_1": {
-    "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
-    "size_bytes": 1220000,
-    "solids": 62,
-    "mutation": false
-  }
+  ]
 }
