@@ -168,6 +168,62 @@
       "sha256": "6cdd5a3fbdbbd58913b65233805835b6c48b9ce40b7179719ab3ced2d1aa30c4",
       "timestamp": "2026-10-04T00:42:00Z",
       "command_identity": "T-OCS-V7-REV2-G2-AUTHORITATIVE-INPUT-CLOSURE"
+    },
+    {
+      "id": "G2-CANONICAL-RECONCILIATION-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/CANONICAL_RECONCILIATION/G2_CANONICAL_MODEL_RECONCILIATION.json",
+      "sha256": "3428dacaea0d4c54664c19282d0d2f94734df233e6fd46b39019d3a4b4c8f306",
+      "timestamp": "2026-10-04T01:20:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-CANONICAL-MODEL-RECONCILIATION"
+    },
+    {
+      "id": "G2-CANONICAL-RECONCILIATION-DOC-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/CANONICAL_RECONCILIATION/G2_CANONICAL_MODEL_RECONCILIATION.md",
+      "sha256": "d8e68414713b426dea2962e1ab29688aad88442c1b96f7ad403fe65c42bd3b1c",
+      "timestamp": "2026-10-04T01:20:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-CANONICAL-MODEL-RECONCILIATION"
+    },
+    {
+      "id": "G2-CANONICAL-DECISION-MATRIX-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/CANONICAL_RECONCILIATION/G2_CANONICAL_DECISION_MATRIX.json",
+      "sha256": "5d40d2c4ca06fc7af10f876520a5e3d800450939f671d9e9daaf9dbb305c16da",
+      "timestamp": "2026-10-04T01:20:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-CANONICAL-MODEL-RECONCILIATION"
+    },
+    {
+      "id": "G2-MODEL-INPUT-REG-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/CANONICAL_RECONCILIATION/G2_MODEL_INPUT_REGISTER.json",
+      "sha256": "ab19178ab16af4bc8f0f97518fb30c09cc2b728d447a949ffa9de9dc9fa21bed",
+      "timestamp": "2026-10-04T01:20:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-CANONICAL-MODEL-RECONCILIATION"
+    },
+    {
+      "id": "G2-EXECUTION-PROTOCOL-REG-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/CANONICAL_RECONCILIATION/G2_EXECUTION_PROTOCOL_REGISTER.json",
+      "sha256": "1d4c4b255716e49b4cb60e236c3196a1a6655161e8cdd81622c63818713d16af",
+      "timestamp": "2026-10-04T01:20:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-CANONICAL-MODEL-RECONCILIATION"
+    },
+    {
+      "id": "G2-DECISION-REQUIRED-REG-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/CANONICAL_RECONCILIATION/G2_DECISION_REQUIRED_REGISTER.json",
+      "sha256": "b24a17b4f4048c87574f014a784327497e58b894ebe7411e5e60102122f7cd21",
+      "timestamp": "2026-10-04T01:20:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-CANONICAL-MODEL-RECONCILIATION"
+    },
+    {
+      "id": "G2-CANONICAL-RELEASE-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/CANONICAL_RECONCILIATION/G2_CANONICAL_MODEL_RELEASE_STATUS.json",
+      "sha256": "8318a610c4f0fe791bd0355bc4024fbb84334fa732c1a9bcb67a97f1f1c2ee50",
+      "timestamp": "2026-10-04T01:20:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-CANONICAL-MODEL-RECONCILIATION"
     }
   ],
   "artifact_hashes": [
@@ -236,11 +292,11 @@
     "tocs_g2_equivalence": "NOT_CLAIMED"
   },
   "final_decision": {
+    "canonical_model_status": "BLOCKED",
     "g2_input_closure": "BLOCKED",
     "g2_execution": "NOT_STARTED",
     "g2_repeatability": "NOT_STARTED",
     "g3": "LOCKED",
-    "casadi_runtime": "QUALIFIED_REPEATABLE",
     "r4_1": "UNCHANGED"
   },
   "next_gate": {
