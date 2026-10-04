@@ -112,6 +112,62 @@
       "engine": "CasADi",
       "environment": "Linux 6.18.44 / Python 3.13.5 / x86_64",
       "command_identity": "T-OCS-V7-REV2-LOCAL-RUNTIME-SALVAGE-CASADI"
+    },
+    {
+      "id": "G2-INPUT-CLOSURE-EVIDENCE-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/INPUT_CLOSURE/G2_INPUT_CLOSURE_EVIDENCE.json",
+      "sha256": "7a8dd29aaa6cc739db94c03856e0c346089d5dd3f78568efa87198d84c5a9782",
+      "timestamp": "2026-10-04T00:42:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-AUTHORITATIVE-INPUT-CLOSURE"
+    },
+    {
+      "id": "G2-INPUT-SOURCE-REG-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/INPUT_CLOSURE/G2_INPUT_SOURCE_REGISTER.json",
+      "sha256": "a8f33067d9de19430c895a52fbe2452f627b088d7f1774904d7c891eedf70503",
+      "timestamp": "2026-10-04T00:42:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-AUTHORITATIVE-INPUT-CLOSURE"
+    },
+    {
+      "id": "G2-INPUT-CONFLICT-REG-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/INPUT_CLOSURE/G2_INPUT_CONFLICT_REGISTER.json",
+      "sha256": "fd8045cf0f60afb42f6412d7097f52b4807d45bb00680e57dc561cbf52416589",
+      "timestamp": "2026-10-04T00:42:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-AUTHORITATIVE-INPUT-CLOSURE"
+    },
+    {
+      "id": "G2-INPUT-MISSING-REG-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/INPUT_CLOSURE/G2_INPUT_MISSING_REGISTER.json",
+      "sha256": "4dd178ee5b6f1ebdbe91ff774cd0183d781972d5e9770ab62f07240300a4be74",
+      "timestamp": "2026-10-04T00:42:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-AUTHORITATIVE-INPUT-CLOSURE"
+    },
+    {
+      "id": "G2-SCOPE-DECL-001",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "artifact": "T-OCS-V7-AEGIS/G2/INPUT_CLOSURE/G2_SCOPE_DECLARATION.json",
+      "sha256": "159b199e3f9c5482a293f9119a2bbaf35e083ea23251dabf93ab9280907f4c69",
+      "timestamp": "2026-10-04T00:42:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-AUTHORITATIVE-INPUT-CLOSURE"
+    },
+    {
+      "id": "G2-INPUT-MATRIX-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/INPUT_CLOSURE/G2_INPUT_CLOSURE_MATRIX.json",
+      "sha256": "317e97ba70b4e563329bbb0b2cee7095cb11f4d77513ece68992fc84335456a8",
+      "timestamp": "2026-10-04T00:42:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-AUTHORITATIVE-INPUT-CLOSURE"
+    },
+    {
+      "id": "G2-INPUT-MATRIX-DOC-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/INPUT_CLOSURE/G2_INPUT_CLOSURE_MATRIX.md",
+      "sha256": "6cdd5a3fbdbbd58913b65233805835b6c48b9ce40b7179719ab3ced2d1aa30c4",
+      "timestamp": "2026-10-04T00:42:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-AUTHORITATIVE-INPUT-CLOSURE"
     }
   ],
   "artifact_hashes": [
@@ -180,14 +236,11 @@
     "tocs_g2_equivalence": "NOT_CLAIMED"
   },
   "final_decision": {
-    "selected_engine": "CasADi",
-    "engine_class": "SYMBOLIC_NUMERICAL_OPTIMIZATION_FRAMEWORK",
-    "engine_qualification": "PASS",
-    "software_repeatability": "PASS",
-    "g2_alt": "BLOCKED",
-    "g2_kinematic_computational": "BLOCKED",
-    "chrono": "BLOCKED",
+    "g2_input_closure": "BLOCKED",
+    "g2_execution": "NOT_STARTED",
+    "g2_repeatability": "NOT_STARTED",
     "g3": "LOCKED",
+    "casadi_runtime": "QUALIFIED_REPEATABLE",
     "r4_1": "UNCHANGED"
   },
   "next_gate": {
