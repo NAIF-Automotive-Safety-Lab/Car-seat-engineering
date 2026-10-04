@@ -1,0 +1,18 @@
+{
+  "evidence_id":"ENV-PY-001",
+  "status":"PASS",
+  "python":"3.13.5",
+  "venv":"created",
+  "package_path_bridge":"/opt/pyvenv/lib/python3.13/site-packages via explicit host_venv.pth",
+  "packages":{
+    "pytest":"9.0.2",
+    "numpy":"2.3.5",
+    "scipy":"1.17.0",
+    "pandas":"2.2.3",
+    "jsonschema":"4.26.0",
+    "pydantic":"2.13.4",
+    "matplotlib":"3.10.8"
+  },
+  "json_schema_test":"PASS",
+  "deterministic_python_test":"PASS"
+}

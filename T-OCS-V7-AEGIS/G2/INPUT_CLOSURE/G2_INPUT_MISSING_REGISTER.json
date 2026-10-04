@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "G2-INPUT-MISSING-REG-001",
+  "status": "BLOCKED",
+  "missing": [
+    {
+      "id": "M-001",
+      "field": "native_origin",
+      "source_basis": [
+        "SRC-011",
+        "SRC-009"
+      ],
+      "reason": "Native R4.1 origin is mandated, but exact machine-readable origin/instance mapping is not released."
+    },
+    {
+      "id": "M-002",
+      "field": "reference_frames",
+      "source_basis": [
+        "SRC-005",
+        "SRC-011"
+      ],
+      "reason": "frames.json is empty; executable reference-frame definitions absent."
+    },
+    {
+      "id": "M-003",
+      "field": "initial_position",
+      "source_basis": [
+        "SRC-007",
+        "SRC-006"
+      ],
+      "reason": "No authoritative numerical initial pose."
+    },
+    {
+      "id": "M-004",
+      "field": "initial_orientation",
+      "source_basis": [
+        "SRC-007",
+        "SRC-006"
+      ],
+      "reason": "No authoritative numerical initial orientation."
+    },
+    {
+      "id": "M-005",
+      "field": "initial_generalized_coordinates",
+      "source_basis": [
+        "SRC-007",
+        "SRC-004"
+      ],
+      "reason": "No executable q1/q2 initial values."
+    },
+    {
+      "id": "M-006",
+      "field": "initial_velocity",
+      "source_basis": [
+        "SRC-008",
+        "SRC-007"
+      ],
+      "reason": "Vehicle pulse/initial velocity is explicitly external-data-required and absent."
+    },
+    {
+      "id": "M-007",
+      "field": "initial_angular_velocity",
+      "source_basis": [
+        "SRC-007"
+      ],
+      "reason": "No authoritative angular-velocity initial condition."
+    },
+    {
+      "id": "M-008",
+      "field": "initial_constraint_state",
+      "source_basis": [
+        "SRC-003",
+        "SRC-007"
+      ],
+      "reason": "No executable initial constraint-state vector."
+    },
+    {
+      "id": "M-009",
+      "field": "initial_lock_rebound_state",
+      "source_basis": [
+        "SRC-009",
+        "SRC-007"
+      ],
+      "reason": "Initial executable lock/rebound assignment absent."
+    },
+    {
+      "id": "M-010",
+      "field": "solver_timestep",
+      "source_basis": [
+        "SRC-006",
+        "SRC-007"
+      ],
+      "reason": "No authoritative G2 execution timestep."
+    },
+    {
+      "id": "M-011",
+      "field": "integration_method",
+      "source_basis": [
+        "SRC-006",
+        "SRC-007"
+      ],
+      "reason": "No authoritative G2 integration method."
+    },
+    {
+      "id": "M-012",
+      "field": "numerical_tolerances",
+      "source_basis": [
+        "SRC-006",
+        "SRC-007"
+      ],
+      "reason": "No authoritative G2 numerical tolerance set."
+    }
+  ]
+}

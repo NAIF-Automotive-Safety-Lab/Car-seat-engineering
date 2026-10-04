@@ -1,0 +1,6 @@
+ENV-CHRONO-001
+RUNTIME=BLOCKED
+pychrono_import=FAIL ModuleNotFoundError
+native Chrono executable/library=NOT_FOUND
+generic Chrono engine probe=NOT_EXECUTED
+No T-OCS G2 simulation started.

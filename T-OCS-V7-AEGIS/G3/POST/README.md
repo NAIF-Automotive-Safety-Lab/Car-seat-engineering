@@ -1,0 +1,1 @@
+Python and ParaView are downstream post-processors. They cannot create evidence when raw solver inputs/outputs are missing. Processed data must reference raw-output hashes.

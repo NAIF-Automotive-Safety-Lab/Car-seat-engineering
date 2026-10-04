@@ -1,0 +1,1 @@
+Gmsh stages: immutable geometry import -> physical groups -> mesh -> element counts -> quality metrics -> boundary groups -> reproducibility -> SHA-256. Status BLOCKED until physics/model closure exists.

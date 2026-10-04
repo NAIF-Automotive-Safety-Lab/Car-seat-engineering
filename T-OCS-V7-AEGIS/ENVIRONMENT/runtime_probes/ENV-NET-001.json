@@ -1,0 +1,10 @@
+{
+  "evidence_id":"ENV-NET-001",
+  "status":"BLOCKED",
+  "dns_github":"BLOCKED",
+  "https_github":"BLOCKED",
+  "git_transport":"BLOCKED",
+  "git_lfs_version":"BLOCKED",
+  "git_lfs_env":"BLOCKED",
+  "exact_failure":"curl: Could not resolve host: github.com; git ls-remote failed because github.com cannot be resolved; git-lfs is not a git command"
+}

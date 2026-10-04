@@ -1,0 +1,308 @@
+{
+  "evidence_id": "ENV-ALT-FALLBACK-LEDGER-001",
+  "timestamp": "2026-10-04T00:07:30Z",
+  "status": "BLOCKED",
+  "selected_engine": "CasADi",
+  "records": [
+    {
+      "id": "ENV-ALT-PY-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/ENVIRONMENT/runtime_probes/ENV-ALT-PY-001.json"
+    },
+    {
+      "id": "ENV-ALT-PY-002",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/ENVIRONMENT/runtime_probes/ENV-ALT-PY-002.json"
+    },
+    {
+      "id": "ENV-ALT-PY-REPEATABILITY-001",
+      "status": "PASS",
+      "artifact": "T-OCS-V7-AEGIS/G2/ALT/FALLBACK_CHAIN/repeatability.json"
+    },
+    {
+      "id": "G2-ALT-EXEC-001",
+      "status": "NOT_STARTED",
+      "artifact": null,
+      "reason": "No fallback engine passed qualification."
+    },
+    {
+      "id": "G2-ALT-REPEAT-001",
+      "status": "NOT_STARTED",
+      "artifact": null,
+      "reason": "No selected engine and no G2-ALT engineering execution."
+    },
+    {
+      "id": "G2-ALT-CASADI-QUAL-A",
+      "status": "PASS",
+      "artifact": "T-OCS-V7-AEGIS/G2/ALT/CASADI/qualification_A.json",
+      "sha256": "b8a395bb83a18ee5ba83f7af49407aef25d4c9109ee0d5eb4bb83c278e78552a",
+      "timestamp": "2026-10-04T00:21:00Z",
+      "engine": "CasADi",
+      "environment": "Linux 6.18.44 / Python 3.13.5 / x86_64",
+      "command_identity": "T-OCS-V7-REV2-LOCAL-RUNTIME-SALVAGE-CASADI"
+    },
+    {
+      "id": "G2-ALT-CASADI-QUAL-B",
+      "status": "PASS",
+      "artifact": "T-OCS-V7-AEGIS/G2/ALT/CASADI/qualification_B.json",
+      "sha256": "2b60f928b3680e7e990b4eb167337b55ae082a88a13894d7200677ccdb35cd4a",
+      "timestamp": "2026-10-04T00:21:00Z",
+      "engine": "CasADi",
+      "environment": "Linux 6.18.44 / Python 3.13.5 / x86_64",
+      "command_identity": "T-OCS-V7-REV2-LOCAL-RUNTIME-SALVAGE-CASADI"
+    },
+    {
+      "id": "G2-ALT-CASADI-REPEAT-001",
+      "status": "PASS",
+      "artifact": "T-OCS-V7-AEGIS/G2/ALT/CASADI/repeatability.json",
+      "sha256": "315f973f8c3db4f977b7b31fa03cda05ceea34cfdbc4a476ff273b64cd6d8289",
+      "timestamp": "2026-10-04T00:21:00Z",
+      "engine": "CasADi",
+      "environment": "Linux 6.18.44 / Python 3.13.5 / x86_64",
+      "command_identity": "T-OCS-V7-REV2-LOCAL-RUNTIME-SALVAGE-CASADI"
+    },
+    {
+      "id": "G2-ALT-CASADI-INPUT-GATE-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/ALT/CASADI/input_gate.json",
+      "sha256": "dd6ac326633a7a4bacf58fbaab1d4880aa1390f1bcc17baad71b9b6bf30fa01a",
+      "timestamp": "2026-10-04T00:21:00Z",
+      "engine": "CasADi",
+      "environment": "Linux 6.18.44 / Python 3.13.5 / x86_64",
+      "command_identity": "T-OCS-V7-REV2-G2-ALT-CASADI-INPUT-GATE"
+    },
+    {
+      "id": "G2-ALT-EXEC-001",
+      "status": "NOT_STARTED",
+      "artifact": null,
+      "reason": "CasADi runtime qualified, but authoritative T-OCS G2 input closure is incomplete."
+    },
+    {
+      "id": "G2-ALT-REPEAT-001",
+      "status": "NOT_STARTED",
+      "artifact": null,
+      "reason": "No T-OCS G2 case executed."
+    },
+    {
+      "id": "ENV-LOCAL-RUNTIME-SALVAGE-001",
+      "status": "PASS",
+      "artifact": "T-OCS-V7-AEGIS/ENVIRONMENT/runtime_probes/LOCAL-RUNTIME-SALVAGE-001.json",
+      "sha256": "f69d85a9d5e0a21120256f79d5eda5e60d0f2e91e6aa2a8cd185d4857fdfcf8a",
+      "timestamp": "2026-10-04T00:21:00Z",
+      "engine": null,
+      "environment": "Linux 6.18.44 / Python 3.13.5 / x86_64",
+      "command_identity": "T-OCS-V7-REV2-LOCAL-RUNTIME-SALVAGE-CASADI"
+    },
+    {
+      "id": "G2-ALT-CASADI-TRAJECTORY-A",
+      "status": "PASS",
+      "artifact": "T-OCS-V7-AEGIS/G2/ALT/CASADI/trajectory_A.json",
+      "sha256": "e95642793a5e4169a7c6a580930ce0731076d41a1129b0fbea7999e913a09afa",
+      "timestamp": "2026-10-04T00:21:00Z",
+      "engine": "CasADi",
+      "environment": "Linux 6.18.44 / Python 3.13.5 / x86_64",
+      "command_identity": "T-OCS-V7-REV2-LOCAL-RUNTIME-SALVAGE-CASADI"
+    },
+    {
+      "id": "G2-ALT-CASADI-TRAJECTORY-B",
+      "status": "PASS",
+      "artifact": "T-OCS-V7-AEGIS/G2/ALT/CASADI/trajectory_B.json",
+      "sha256": "016d9e0eeeda617a73ce7cb5e4b6c9efb0ae2434e3433edb3628caa17d5ba777",
+      "timestamp": "2026-10-04T00:21:00Z",
+      "engine": "CasADi",
+      "environment": "Linux 6.18.44 / Python 3.13.5 / x86_64",
+      "command_identity": "T-OCS-V7-REV2-LOCAL-RUNTIME-SALVAGE-CASADI"
+    },
+    {
+      "id": "G2-INPUT-CLOSURE-EVIDENCE-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/INPUT_CLOSURE/G2_INPUT_CLOSURE_EVIDENCE.json",
+      "sha256": "7a8dd29aaa6cc739db94c03856e0c346089d5dd3f78568efa87198d84c5a9782",
+      "timestamp": "2026-10-04T00:42:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-AUTHORITATIVE-INPUT-CLOSURE"
+    },
+    {
+      "id": "G2-INPUT-SOURCE-REG-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/INPUT_CLOSURE/G2_INPUT_SOURCE_REGISTER.json",
+      "sha256": "a8f33067d9de19430c895a52fbe2452f627b088d7f1774904d7c891eedf70503",
+      "timestamp": "2026-10-04T00:42:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-AUTHORITATIVE-INPUT-CLOSURE"
+    },
+    {
+      "id": "G2-INPUT-CONFLICT-REG-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/INPUT_CLOSURE/G2_INPUT_CONFLICT_REGISTER.json",
+      "sha256": "fd8045cf0f60afb42f6412d7097f52b4807d45bb00680e57dc561cbf52416589",
+      "timestamp": "2026-10-04T00:42:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-AUTHORITATIVE-INPUT-CLOSURE"
+    },
+    {
+      "id": "G2-INPUT-MISSING-REG-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/INPUT_CLOSURE/G2_INPUT_MISSING_REGISTER.json",
+      "sha256": "4dd178ee5b6f1ebdbe91ff774cd0183d781972d5e9770ab62f07240300a4be74",
+      "timestamp": "2026-10-04T00:42:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-AUTHORITATIVE-INPUT-CLOSURE"
+    },
+    {
+      "id": "G2-SCOPE-DECL-001",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "artifact": "T-OCS-V7-AEGIS/G2/INPUT_CLOSURE/G2_SCOPE_DECLARATION.json",
+      "sha256": "159b199e3f9c5482a293f9119a2bbaf35e083ea23251dabf93ab9280907f4c69",
+      "timestamp": "2026-10-04T00:42:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-AUTHORITATIVE-INPUT-CLOSURE"
+    },
+    {
+      "id": "G2-INPUT-CLOSURE-MATRIX-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/INPUT_CLOSURE/G2_INPUT_CLOSURE_MATRIX.json",
+      "sha256": "317e97ba70b4e563329bbb0b2cee7095cb11f4d77513ece68992fc84335456a8",
+      "timestamp": "2026-10-04T00:42:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-AUTHORITATIVE-INPUT-CLOSURE"
+    },
+    {
+      "id": "G2-INPUT-MATRIX-DOC-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/INPUT_CLOSURE/G2_INPUT_CLOSURE_MATRIX.md",
+      "sha256": "6cdd5a3fbdbbd58913b65233805835b6c48b9ce40b7179719ab3ced2d1aa30c4",
+      "timestamp": "2026-10-04T00:42:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-AUTHORITATIVE-INPUT-CLOSURE"
+    },
+    {
+      "id": "G2-CANONICAL-RECONCILIATION-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/CANONICAL_RECONCILIATION/G2_CANONICAL_MODEL_RECONCILIATION.json",
+      "sha256": "3428dacaea0d4c54664c19282d0d2f94734df233e6fd46b39019d3a4b4c8f306",
+      "timestamp": "2026-10-04T01:20:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-CANONICAL-MODEL-RECONCILIATION"
+    },
+    {
+      "id": "G2-CANONICAL-RECONCILIATION-DOC-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/CANONICAL_RECONCILIATION/G2_CANONICAL_MODEL_RECONCILIATION.md",
+      "sha256": "d8e68414713b426dea2962e1ab29688aad88442c1b96f7ad403fe65c42bd3b1c",
+      "timestamp": "2026-10-04T01:20:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-CANONICAL-MODEL-RECONCILIATION"
+    },
+    {
+      "id": "G2-CANONICAL-DECISION-MATRIX-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/CANONICAL_RECONCILIATION/G2_CANONICAL_DECISION_MATRIX.json",
+      "sha256": "5d40d2c4ca06fc7af10f876520a5e3d800450939f671d9e9daaf9dbb305c16da",
+      "timestamp": "2026-10-04T01:20:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-CANONICAL-MODEL-RECONCILIATION"
+    },
+    {
+      "id": "G2-MODEL-INPUT-REG-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/CANONICAL_RECONCILIATION/G2_MODEL_INPUT_REGISTER.json",
+      "sha256": "ab19178ab16af4bc8f0f97518fb30c09cc2b728d447a949ffa9de9dc9fa21bed",
+      "timestamp": "2026-10-04T01:20:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-CANONICAL-MODEL-RECONCILIATION"
+    },
+    {
+      "id": "G2-EXECUTION-PROTOCOL-REG-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/CANONICAL_RECONCILIATION/G2_EXECUTION_PROTOCOL_REGISTER.json",
+      "sha256": "1d4c4b255716e49b4cb60e236c3196a1a6655161e8cdd81622c63818713d16af",
+      "timestamp": "2026-10-04T01:20:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-CANONICAL-MODEL-RECONCILIATION"
+    },
+    {
+      "id": "G2-DECISION-REQUIRED-REG-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/CANONICAL_RECONCILIATION/G2_DECISION_REQUIRED_REGISTER.json",
+      "sha256": "b24a17b4f4048c87574f014a784327497e58b894ebe7411e5e60102122f7cd21",
+      "timestamp": "2026-10-04T01:20:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-CANONICAL-MODEL-RECONCILIATION"
+    },
+    {
+      "id": "G2-CANONICAL-RELEASE-001",
+      "status": "BLOCKED",
+      "artifact": "T-OCS-V7-AEGIS/G2/CANONICAL_RECONCILIATION/G2_CANONICAL_MODEL_RELEASE_STATUS.json",
+      "sha256": "8318a610c4f0fe791bd0355bc4024fbb84334fa732c1a9bcb67a97f1f1c2ee50",
+      "timestamp": "2026-10-04T01:20:00Z",
+      "command_identity": "T-OCS-V7-REV2-G2-CANONICAL-MODEL-RECONCILIATION"
+    }
+  ],
+  "artifact_hashes": [
+    {
+      "path": "T-OCS-V7-AEGIS/ENVIRONMENT/runtime_probes/ENV-ALT-PY-001.json",
+      "sha256": "edfe7b7fe2607f159f050d0ff9aae19804ce19e7c5a1f6fea0b8c6962551e087",
+      "size_bytes": 2037
+    },
+    {
+      "path": "T-OCS-V7-AEGIS/ENVIRONMENT/runtime_probes/ENV-ALT-PY-002.json",
+      "sha256": "3bf3eb4c13caceaac86f8f35a4291154d44a57a08738f0c480713e5d2f51cde6",
+      "size_bytes": 2037
+    },
+    {
+      "path": "T-OCS-V7-AEGIS/G2/ALT/FALLBACK_CHAIN/qualification_001.json",
+      "sha256": "edfe7b7fe2607f159f050d0ff9aae19804ce19e7c5a1f6fea0b8c6962551e087",
+      "size_bytes": 2037
+    },
+    {
+      "path": "T-OCS-V7-AEGIS/G2/ALT/FALLBACK_CHAIN/qualification_002.json",
+      "sha256": "3bf3eb4c13caceaac86f8f35a4291154d44a57a08738f0c480713e5d2f51cde6",
+      "size_bytes": 2037
+    },
+    {
+      "path": "T-OCS-V7-AEGIS/G2/ALT/FALLBACK_CHAIN/repeatability.json",
+      "sha256": "e374f8d359c42b7791f9aff06eeee813edd157bb0c99a5628adf4c0fdf19f60a",
+      "size_bytes": 235
+    },
+    {
+      "path": "T-OCS-V7-AEGIS/G2/ALT/PYCHRONO/qualification_001.json",
+      "sha256": "4744ed7d22cc005ff82b93555ad3100a853859188692a2aa7769d5acc8d2b34f",
+      "size_bytes": 414
+    },
+    {
+      "path": "T-OCS-V7-AEGIS/G2/ALT/PYBULLET/qualification_001.json",
+      "sha256": "34d75639b6cd8474f334da7065c07abae1f1af7d8ad43b3f5ec621542c3b7b68",
+      "size_bytes": 414
+    },
+    {
+      "path": "T-OCS-V7-AEGIS/G2/ALT/MUJOCO/qualification_001.json",
+      "sha256": "ffb317c898ee4376c59f675c126aa8cea8f953fb98777f62e530f417e70087c5",
+      "size_bytes": 408
+    },
+    {
+      "path": "T-OCS-V7-AEGIS/G2/ALT/DRAKE/qualification_001.json",
+      "sha256": "4b202b35589a28b29c140b78e04a3e9dc43a93b4c91007ae17bdb86e1894c4e6",
+      "size_bytes": 409
+    },
+    {
+      "path": "T-OCS-V7-AEGIS/G2/ALT/DART/qualification_001.json",
+      "sha256": "24db2bb79fc7aaeda5fbe5c3fff723989f16681e16d61dab8ed3ce108a04bd64",
+      "size_bytes": 406
+    },
+    {
+      "path": "T-OCS-V7-AEGIS/G2/ALT/PINOCCHIO/qualification_001.json",
+      "sha256": "f1cf07e42f21d8ecc700767a83155733b34997d6af3890e1570b1c3113d2bde7",
+      "size_bytes": 417
+    }
+  ],
+  "casadi": {
+    "version": "3.7.2",
+    "engine_class": "SYMBOLIC_NUMERICAL_OPTIMIZATION_FRAMEWORK",
+    "binding_so_sha256": "77cb78d64a0893d221a3508abaa9e66f6ecca161e8043d0551f82158da849a04",
+    "core_so_sha256": "106e2af1cabc576cdc86db3d1e844f0be6ed3a2beeb45a85565039a0253b010f",
+    "qualification_repeatability": "PASS",
+    "tocs_g2_equivalence": "NOT_CLAIMED"
+  },
+  "final_decision": {
+    "canonical_model_status": "BLOCKED",
+    "g2_input_closure": "BLOCKED",
+    "g2_execution": "NOT_STARTED",
+    "g2_repeatability": "NOT_STARTED",
+    "g3": "LOCKED",
+    "r4_1": "UNCHANGED"
+  },
+  "next_gate": {
+    "g2_alt": "BLOCKED",
+    "g2_kinematic_computational": "BLOCKED",
+    "g3": "LOCKED",
+    "requirement": "Close authoritative T-OCS joint/constraint and initial-condition inputs before any T-OCS solver/model run."
+  }
+}

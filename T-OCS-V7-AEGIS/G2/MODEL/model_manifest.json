@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "model_id": "T-OCS-V7-REV2-G2-MODEL",
+  "status": "BLOCKED",
+  "inputs": [
+    "R4.1/R4.1.step",
+    "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+  ],
+  "engineering_properties_promoted": false,
+  "semantic_joint_closure": false
+}

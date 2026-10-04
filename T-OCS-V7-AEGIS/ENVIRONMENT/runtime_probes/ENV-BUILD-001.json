@@ -1,0 +1,12 @@
+{
+  "evidence_id":"ENV-BUILD-001",
+  "status":"PASS",
+  "cpp_direct_build":"PASS",
+  "cpp_direct_runtime":"PASS",
+  "fortran_direct_build":"PASS",
+  "fortran_direct_runtime":"PASS",
+  "cmake_configure":"PASS",
+  "cmake_build":"PASS",
+  "cmake_generator":"Ninja",
+  "claim_scope":"compiler/build capability only; not engineering validation"
+}

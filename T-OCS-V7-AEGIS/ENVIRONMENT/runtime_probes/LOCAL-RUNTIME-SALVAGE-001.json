@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "ENV-LOCAL-RUNTIME-SALVAGE-001",
+  "timestamp": "2026-10-04T00:16:00Z",
+  "status": "PASS",
+  "selected_candidate": "CasADi",
+  "host": {
+    "os": "Linux 6.18.44",
+    "architecture": "x86_64",
+    "cpu": "AMD EPYC 9V74 80-Core Processor",
+    "python": "3.13.5",
+    "python_executable": "/opt/pyvenv/bin/python3"
+  },
+  "scientific_stack": [
+    {
+      "name": "numpy",
+      "state": "AVAILABLE",
+      "version": "2.3.5"
+    },
+    {
+      "name": "scipy",
+      "state": "AVAILABLE",
+      "version": "1.17.0"
+    },
+    {
+      "name": "sympy",
+      "state": "AVAILABLE",
+      "version": "1.14.0"
+    },
+    {
+      "name": "matplotlib",
+      "state": "AVAILABLE",
+      "version": "3.10.8"
+    },
+    {
+      "name": "pandas",
+      "state": "AVAILABLE",
+      "version": "2.2.3"
+    },
+    {
+      "name": "networkx",
+      "state": "AVAILABLE",
+      "version": "3.6.1"
+    },
+    {
+      "name": "casadi",
+      "state": "AVAILABLE",
+      "version": "3.7.2"
+    },
+    {
+      "name": "roboticstoolbox",
+      "state": "MISSING",
+      "version": null
+    },
+    {
+      "name": "spatialmath",
+      "state": "MISSING",
+      "version": null
+    },
+    {
+      "name": "crocoddyl",
+      "state": "MISSING",
+      "version": null
+    },
+    {
+      "name": "gekko",
+      "state": "MISSING",
+      "version": null
+    },
+    {
+      "name": "opensim",
+      "state": "MISSING",
+      "version": null
+    },
+    {
+      "name": "modern_robotics",
+      "state": "MISSING",
+      "version": null
+    }
+  ],
+  "native_capabilities": [
+    {
+      "name": "CMake",
+      "state": "AVAILABLE",
+      "version": "3.31.6"
+    },
+    {
+      "name": "GCC",
+      "state": "AVAILABLE",
+      "version": "14.2.0"
+    },
+    {
+      "name": "G++",
+      "state": "AVAILABLE",
+      "version": "14.2.0"
+    },
+    {
+      "name": "Clang",
+      "state": "AVAILABLE",
+      "version": "17.0.0"
+    },
+    {
+      "name": "Ninja",
+      "state": "AVAILABLE",
+      "version": "1.12.1"
+    },
+    {
+      "name": "Make",
+      "state": "AVAILABLE",
+      "version": "4.4.1"
+    },
+    {
+      "name": "Eigen",
+      "state": "MISSING",
+      "version": null
+    },
+    {
+      "name": "ODE",
+      "state": "MISSING",
+      "version": null
+    },
+    {
+      "name": "Bullet",
+      "state": "MISSING",
+      "version": null
+    },
+    {
+      "name": "MuJoCo",
+      "state": "MISSING",
+      "version": null
+    },
+    {
+      "name": "DART",
+      "state": "MISSING",
+      "version": null
+    },
+    {
+      "name": "OpenSim",
+      "state": "MISSING",
+      "version": null
+    },
+    {
+      "name": "Gmsh",
+      "state": "MISSING",
+      "version": null
+    },
+    {
+      "name": "CalculiX",
+      "state": "MISSING",
+      "version": null
+    },
+    {
+      "name": "ParaView",
+      "state": "MISSING",
+      "version": null
+    },
+    {
+      "name": "Docker",
+      "state": "MISSING",
+      "version": null
+    },
+    {
+      "name": "Conda",
+      "state": "MISSING",
+      "version": null
+    }
+  ],
+  "local_envs": [
+    "/mnt/data/T-OCS-V7-ENVIRONMENT-QUALIFICATION-20261004/.venv",
+    "/mnt/data/tocs_env_qual/.venv",
+    "/opt/pyvenv",
+    "/opt/pyvenv-python-tool",
+    "/opt/terminal-server/pyvenv"
+  ],
+  "offline_package_artifacts": {
+    "wheels": "MISSING",
+    "solver_archives": "MISSING",
+    "relevant_pip_cache": "MISSING",
+    "system_solver_cache": "MISSING"
+  },
+  "casadi_native": {
+    "module_path": "/opt/pyvenv/lib/python3.13/site-packages/casadi/__init__.py",
+    "binding_so": "/opt/pyvenv/lib/python3.13/site-packages/casadi/_casadi.so",
+    "binding_so_sha256": "77cb78d64a0893d221a3508abaa9e66f6ecca161e8043d0551f82158da849a04",
+    "core_so": "/opt/pyvenv/lib/python3.13/site-packages/casadi/libcasadi.so.3.7",
+    "core_so_sha256": "106e2af1cabc576cdc86db3d1e844f0be6ed3a2beeb45a85565039a0253b010f"
+  },
+  "prohibited_network_actions": {
+    "github_retry": false,
+    "bypass": false,
+    "download": false
+  }
+}

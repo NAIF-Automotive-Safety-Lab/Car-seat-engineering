@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "G2-CANONICAL-RECONCILIATION-001",
+  "status": "BLOCKED",
+  "conflicts": [
+    {
+      "id": "A",
+      "classification": "REPRESENTATION_GRAIN_DIFFERENCE",
+      "resolution_status": "PARTIALLY_RESOLVED",
+      "source_A": {
+        "artifact": "artifacts/master_v4/v7_baseline_independent_verification.json",
+        "revision": "commit 02b7919cddd54a116ba74d6fba13e8983d001231",
+        "location": "$.kinematic_audit.declared_joints",
+        "finding": "V7 declares four joint families; executable_joint_graph=false and DOF/limits are metadata-only."
+      },
+      "source_B": {
+        "artifact": "SR11/joints/V1_SR11_JOINT_MAPPING.json",
+        "revision": "V1; blob 10f4c658c77037147f788deeacbfa853122e3636",
+        "location": "$.joints[*]",
+        "finding": "Six records: two rail prismatics, seatback revolute, two model-defined linkages, and LOCK170 state-dependent constraint."
+      },
+      "evidence": [
+        "V7_MANUS_INTERFACE_DEFINITION_AUDIT.md",
+        "artifacts/master_v3/v7_evidence_graph_closure.json",
+        "SR11/joints/V1_SR11_JOINT_MAPPING.json"
+      ],
+      "resolution": "The six-record SR11 representation is historical/model-specification decomposition; the four-family representation is the later V7 declaration. No controlled executable crosswalk exists."
+    },
+    {
+      "id": "B",
+      "classification": "REPRESENTATION_GRAIN_DIFFERENCE",
+      "resolution_status": "RESOLVED_AS_GRAIN_DIFFERENCE",
+      "source_A": {
+        "artifact": "artifacts/master_v4/v7_baseline_independent_verification.json",
+        "revision": "commit 02b7919cddd54a116ba74d6fba13e8983d001231",
+        "location": "$.reference_identity,$.step_audit",
+        "finding": "16 V7 reference/BOM records; reconstruction assembly contains 21 B-Rep solids."
+      },
+      "source_B": {
+        "artifact": "SR11/manifests/V1_SR11_BODY_MAPPING.json",
+        "revision": "V1; blob dafa4ce4a17804f0f65d2eb54233d28d5f45b515",
+        "location": "$.mapping_type,$.solids,$.bodies[*]",
+        "finding": "31 logical MBD body groups deterministically cover all 62 R4.1 solids."
+      },
+      "evidence": [
+        "ARTIFACT_RECOVERY_REPORT.json",
+        "EVIDENCE_MANIFEST.json",
+        "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+      ],
+      "resolution": "16 = V7 reference/BOM grain; 31 = logical MBD grouping grain; 62 = geometric solid count. Physical rigid-body count is not established."
+    },
+    {
+      "id": "C",
+      "classification": "HISTORICAL_RECORD_CONFLICT",
+      "resolution_status": "RESOLVED_BY_CURRENT_AUTHORITY",
+      "source_A": {
+        "artifact": "R4_1_BASELINE_LOCK.json",
+        "revision": "current branch; blob b925e65fbe46232096c8fc8c8a4d7f10b4bd211a",
+        "location": "$.expected_sha256,$.sha_match,$.solid_count,$.mutation_detected",
+        "finding": "Current lock matches the exact R4.1 digest; 62 solids; mutation false."
+      },
+      "source_B": {
+        "artifact": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/PHYSICAL_INPUT_ENGINEERING/JON_PHYSICAL_INPUT_ENGINEERING_MASTER.json",
+        "revision": "branch; blob c1dd5d5d8864757a5fd4fee856a13c542ef1ddbe",
+        "location": "$.CURRENT_STATE.IMPORTANT_EVIDENCE_CONFLICT",
+        "finding": "Historical V4 package reported BASELINE_HASH_MATCH=false."
+      },
+      "evidence": [
+        "R4_1_BASELINE_LOCK.json",
+        "current R4.1 recovery evidence"
+      ],
+      "resolution": "Retain the historical assertion as provenance only. Current immutable lock governs and was not modified."
+    }
+  ],
+  "canonical_release": "BLOCKED",
+  "reason": "No single current numerically executable G2 model can be released without an authoritative executable body/joint crosswalk, closed frames/axes, constraints and initial state."
+}

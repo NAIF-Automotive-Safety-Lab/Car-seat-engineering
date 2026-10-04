@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "status": "BLOCKED",
+  "reason": "Historical SR11 joint map is not current authoritative executable closure; no proprietary semantics are promoted.",
+  "source_artifact": "SR11/joints/V1_SR11_JOINT_MAPPING.json",
+  "joints": [
+    {
+      "joint_id": "J-RAIL-CARRIAGE-L",
+      "historical_type": "prismatic",
+      "status": "BLOCKED"
+    },
+    {
+      "joint_id": "J-RAIL-CARRIAGE-R",
+      "historical_type": "prismatic",
+      "status": "BLOCKED"
+    },
+    {
+      "joint_id": "J-SEATBACK",
+      "historical_type": "revolute",
+      "status": "BLOCKED"
+    },
+    {
+      "joint_id": "J-ROTCTRL-L",
+      "historical_type": "model-defined linkage",
+      "status": "BLOCKED"
+    },
+    {
+      "joint_id": "J-ROTCTRL-R",
+      "historical_type": "model-defined linkage",
+      "status": "BLOCKED"
+    },
+    {
+      "joint_id": "J-LOCK170",
+      "historical_type": "state-dependent mechanical constraint",
+      "status": "BLOCKED"
+    }
+  ]
+}

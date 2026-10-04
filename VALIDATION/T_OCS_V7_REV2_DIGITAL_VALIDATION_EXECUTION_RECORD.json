@@ -1,0 +1,39 @@
+{
+  "work_order": "T-OCS V7.0 REVISION-2 PHYSICAL CONCEPT → VALIDATION",
+  "execution_date": "2026-10-02",
+  "source_repo": "NAIF-Automotive-Safety-Lab/Car-seat-engineering",
+  "source_head": "02b7919cddd54a116ba74d6fba13e8983d001231",
+  "local_evidence_package_zip_sha256": "3717d19e56d63a0adf0432ef9f2b404fd133483a7184790d27a840aad0ef6d8d",
+  "final_status": "BLOCKED",
+  "validation_level": "V0",
+  "gates": {
+    "G0_INPUT_INTEGRITY": "PASS",
+    "G1_DIGITAL_MODEL": "BLOCKED",
+    "G2_KINEMATICS": "BLOCKED",
+    "G3_PHYSICS": "BLOCKED",
+    "G4_VALIDATION_EVIDENCE": "NOT_PROVEN"
+  },
+  "physical_evidence": {
+    "measurements": 0,
+    "test_results": 0,
+    "physical_validation": "NOT_DONE"
+  },
+  "known_blockers": [
+    "authoritative released V7 native CAD/assembly/hardpoints not closed",
+    "14 key physical parameters UNKNOWN",
+    "no executable NVIDIA/Omniverse runtime in this environment",
+    "no executable Unity runtime in this environment",
+    "no physical test correlation data",
+    "absorber/lock/rebound characterization absent"
+  ],
+  "claims_forbidden_without_new_evidence": [
+    "CRASH VALIDATED",
+    "SAFETY VALIDATED",
+    "MANUFACTURING VALIDATED",
+    "CAE PASS",
+    "PHYSICAL TEST PASS",
+    "OCCUPANT PROTECTION VALIDATED",
+    "CERTIFIED"
+  ],
+  "artifact_note": "A local 57-file evidence package was generated with OpenUSD scene contract, parameter register, K/D scenario contracts, measurement register, regression matrix, fail-closed gates, correlation plan and SHA-256 manifest. Runtime results are intentionally absent."
+}

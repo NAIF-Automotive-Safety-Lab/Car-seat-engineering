@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "G2-ALT-CASADI-SELECT-001",
+  "timestamp": "2026-10-04T00:16:30Z",
+  "selected_engine": "CasADi",
+  "engine_class": "SYMBOLIC_NUMERICAL_OPTIMIZATION_FRAMEWORK",
+  "qualification": "PASS",
+  "software_runtime_repeatability": "PASS",
+  "chrono_equivalence": "NOT_CLAIMED",
+  "g2_alt_status": "BLOCKED",
+  "g2_kinematic_computational_status": "BLOCKED",
+  "reason": "CasADi runtime is operational, but authoritative T-OCS G2 execution inputs are incomplete: no executable joint/constraint closure, no authoritative initial state/vehicle datum closure, and required mass/CG/inertia/physical inputs remain unproven.",
+  "g2_execution_started": false,
+  "g3": "LOCKED",
+  "r4_1": "UNCHANGED"
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "G2-SCOPE-DECL-001",
+  "status": "DEFINED_NOT_EXECUTABLE",
+  "declared_scope": "T-OCS V7.0 REVISION-2 G2 kinematic/constraint execution only; no crash-dynamics, material-response, or physical-validation claim.",
+  "basis": [
+    {
+      "source": "T-OCS-V7-AEGIS/G2/RUNS/LATEST_G2_STATUS.json",
+      "location": "$.reason"
+    },
+    {
+      "source": "artifacts/master_v4/v7_baseline_independent_verification.json",
+      "location": "$.kinematic_audit"
+    },
+    {
+      "source": "T-OCS-V7-AEGIS/G2/SCENARIOS/registry.json",
+      "location": "$.scenarios[*]"
+    }
+  ],
+  "dynamic_inputs_scope_rule": "Mass, CG, inertia, load histories, force/torque laws, damping, friction and contact parameters are NOT_REQUIRED_FOR_DECLARED_SCOPE here; required for any later dynamic/contact extension.",
+  "excluded_claims": [
+    "crash validation",
+    "occupant injury prediction",
+    "physical validation",
+    "CAE certification",
+    "manufacturing release"
+  ]
+}

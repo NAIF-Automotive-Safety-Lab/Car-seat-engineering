@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "G2-INPUT-CONFLICT-REG-001",
+  "status": "BLOCKED",
+  "conflicts": [
+    {
+      "id": "C-001",
+      "status": "CONFLICTED",
+      "field": "R4.1 baseline identity",
+      "source_A": "R4_1_BASELINE_LOCK.json",
+      "source_A_location": "$.expected_sha256 / $.sha_match",
+      "source_A_finding": "Current lock is internally consistent and matches stated digest.",
+      "source_B": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/PHYSICAL_INPUT_ENGINEERING/JON_PHYSICAL_INPUT_ENGINEERING_MASTER.json",
+      "source_B_location": "$.CURRENT_STATE.IMPORTANT_EVIDENCE_CONFLICT",
+      "source_B_finding": "Historical V4 package reported BASELINE_HASH_MATCH=false while asserting same digest.",
+      "required_action": "Preserve historical conflict; do not edit lock."
+    },
+    {
+      "id": "C-002",
+      "status": "CONFLICTED",
+      "field": "body/component representation",
+      "source_A": "artifacts/master_v4/v7_baseline_independent_verification.json",
+      "source_A_location": "$.reference_identity",
+      "source_A_finding": "16 V7 reference/BOM records mapped to STEP.",
+      "source_B": "T-OCS-V7-AEGIS/G2/MODEL/bodies.json",
+      "source_B_location": "$.bodies[*]",
+      "source_B_finding": "32 historical SR11 model-defined bodies, NOT_PROVEN.",
+      "required_action": "Release an explicit current body-to-solid mapping."
+    },
+    {
+      "id": "C-003",
+      "status": "CONFLICTED",
+      "field": "declared joint inventory",
+      "source_A": "artifacts/master_v4/v7_baseline_independent_verification.json",
+      "source_A_location": "$.kinematic_audit.declared_joints",
+      "source_A_finding": "4 declared joints.",
+      "source_B": "T-OCS-V7-AEGIS/G2/MODEL/joints.json",
+      "source_B_location": "$.joints[*]",
+      "source_B_finding": "6 historical/model-defined joint records.",
+      "required_action": "Release one current authoritative executable joint graph; do not merge inventories silently."
+    }
+  ]
+}

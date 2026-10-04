@@ -1,0 +1,6 @@
+{
+  "schema_version": "1.0",
+  "status": "BLOCKED",
+  "constraints": [],
+  "reason": "Constraint equations, limits, reaction definitions, and state semantics are not closed."
+}

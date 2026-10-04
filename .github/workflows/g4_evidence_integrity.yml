@@ -1,0 +1,18 @@
+name: G4 Evidence Integrity
+on:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate evidence files
+        run: |
+          test -f T-OCS-V7-AEGIS/G4/EVIDENCE_ENGINE/self_check.py
+          test -f T-OCS-V7-AEGIS/G4/EVIDENCE_ENGINE/self_check_result.json
+          python3 - <<'PY'
+          import json
+          for p in ["T-OCS-V7-AEGIS/G4/EVIDENCE_ENGINE/self_check_result.json","T-OCS-V7-AEGIS/VALIDATION/FINAL_GATE_RESULT.json"]:
+              json.load(open(p))
+          print("G4_JSON_INTEGRITY=PASS")
+          PY

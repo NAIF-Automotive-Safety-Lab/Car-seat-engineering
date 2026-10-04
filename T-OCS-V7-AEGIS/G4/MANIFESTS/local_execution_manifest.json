@@ -1,0 +1,9 @@
+{
+  "schema_version":"1.0",
+  "run_id":"T-OCS-V7-REV2-LOCAL-20261004-001",
+  "execution_host":"container",
+  "environment":{"python":"3.13.5","cmake":"3.31.6","ninja":"1.12.1","g++":"14.2.0","OCP":"AVAILABLE","pychrono":"BLOCKED","gmsh":"BLOCKED","ccx":"BLOCKED","pvbatch":"BLOCKED","paraview":"BLOCKED","network_to_github":"BLOCKED","desktop_commander":"BLOCKED"},
+  "baseline":{"artifact":"R4.1/R4.1.step","source_library_artifact":"T_OCS_V0_R4_1_SHOULDER_REPAIR.step","source_file_id":"file_00000000719c82109a9629b5f23950df","sha256":"fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68","size_bytes":1220000,"sha_match":"PASS","step_readback":"PASS","solid_count":62,"solid_count_repeatability":"PASS"},
+  "non_execution_reasons":["Project Chrono native source could not be cloned because github.com DNS resolution failed.","pychrono is not installed and is not accepted as native Chrono evidence.","Authoritative T-OCS joint/constraint semantics remain incomplete.","Mandatory G3 physical inputs remain missing/unverified.","Unity 6 and Omniverse runtimes are unavailable."],
+  "claim_boundary":{"CRASH_VALIDATION":"NOT_PROVEN","SAFETY_VALIDATION":"NOT_PROVEN","MANUFACTURING_VALIDATION":"NOT_PROVEN"}
+}

@@ -1,0 +1,16 @@
+SCENARIO_ID,NAME,STATUS,WHY_NOT_PASS
+K-001,Initial-state geometry integrity,NOT_PROVEN,Exact R2 geometry not verified
+K-002,Allowed motion,NOT_PROVEN,Exact R2 joint semantics not verified
+K-003,Forbidden motion,NOT_PROVEN,Software boundary check is not mechanism proof
+K-004,Travel limits,NOT_PROVEN,End-stop geometry not validated
+K-005,Collision/interference,BLOCKED,Exact collision geometry/contact map unavailable
+K-006,Return/repositioning,NOT_PROVEN,Software-only reset behavior
+K-007,Repeatability,NOT_PROVEN,No physical mechanism repeatability evidence
+D-001,Static equilibrium,BLOCKED,Mass/material/fixture inputs missing
+D-002,Controlled displacement,BLOCKED,Absorber F-x/contact/joint laws missing
+D-003,Controlled velocity,BLOCKED,Absorber F-v and initial velocity missing
+D-004,Contact event,BLOCKED,Contact/friction parameters missing
+D-005,Boundary/stop interaction,BLOCKED,Stop geometry and contact law missing
+D-006,Joint-limit interaction,BLOCKED,Joint limits/load model missing
+D-007,Parameter sensitivity,BLOCKED,Defensible uncertainty bounds not established
+XC-001,NVIDIA vs Unity equivalent case,BLOCKED,Engines and authoritative R2 parameter set unavailable

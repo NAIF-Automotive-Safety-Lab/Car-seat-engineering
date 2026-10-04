@@ -1,0 +1,11 @@
+{
+  "evidence_id":"ENV-CHRONO-001",
+  "name":"Project Chrono native runtime",
+  "required":true,
+  "status":"BLOCKED",
+  "installation_status":"NOT_FOUND",
+  "native_runtime_test":"BLOCKED",
+  "source_origin":"official Project Chrono source/release",
+  "source_acquisition":"BLOCKED",
+  "reason":"github.com DNS/HTTPS unavailable and no cached native Chrono source/runtime exists. A Python wrapper is not accepted as native runtime proof."
+}

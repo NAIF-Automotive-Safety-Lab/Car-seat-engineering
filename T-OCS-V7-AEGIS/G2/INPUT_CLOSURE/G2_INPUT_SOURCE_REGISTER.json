@@ -1,0 +1,132 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "G2-INPUT-SOURCE-REG-001",
+  "sources": [
+    {
+      "source_id": "SRC-001",
+      "artifact": "T-OCS-V7-AEGIS/G2/MODEL/bodies.json",
+      "revision": "branch codex/t-ocs-v7-rev2-aegis-pipeline-2026-10-04; blob c0703b97992a85510ab71212687a31c493196390",
+      "location": "$.bodies[*],$.source_artifact,$.source_sha256",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "finding": "Historical SR11 body mapping; 32 model-defined bodies; file status NOT_PROVEN.",
+      "source_sha256": null
+    },
+    {
+      "source_id": "SRC-002",
+      "artifact": "T-OCS-V7-AEGIS/G2/MODEL/joints.json",
+      "revision": "branch codex/t-ocs-v7-rev2-aegis-pipeline-2026-10-04; blob 22622a7c4d8f517e011186189eeec7691f921828",
+      "location": "$.joints[*],$.reason",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "finding": "Six historical/model-defined joint records; file status BLOCKED.",
+      "source_sha256": null
+    },
+    {
+      "source_id": "SRC-003",
+      "artifact": "T-OCS-V7-AEGIS/G2/MODEL/constraints.json",
+      "revision": "branch codex/t-ocs-v7-rev2-aegis-pipeline-2026-10-04; blob 447c33058e4b229125a67e07d1908055d1e4af5d",
+      "location": "$.constraints,$.reason",
+      "status": "MISSING",
+      "finding": "Empty constraints array; equations absent.",
+      "source_sha256": null
+    },
+    {
+      "source_id": "SRC-004",
+      "artifact": "T-OCS-V7-AEGIS/G2/MODEL/dof_map.json",
+      "revision": "branch codex/t-ocs-v7-rev2-aegis-pipeline-2026-10-04; blob 1d12c912ed1ff424d04294bc8b986fd441be93bb",
+      "location": "$.entries,$.reason",
+      "status": "MISSING",
+      "finding": "Empty DOF map.",
+      "source_sha256": null
+    },
+    {
+      "source_id": "SRC-005",
+      "artifact": "T-OCS-V7-AEGIS/G2/MODEL/frames.json",
+      "revision": "branch codex/t-ocs-v7-rev2-aegis-pipeline-2026-10-04; blob 336102f6fdf08631cc6111e81a8ee0e733aa617c",
+      "location": "$.frames,$.reason",
+      "status": "MISSING",
+      "finding": "Empty frame definitions.",
+      "source_sha256": null
+    },
+    {
+      "source_id": "SRC-006",
+      "artifact": "T-OCS-V7-AEGIS/G2/MODEL/model_manifest.json",
+      "revision": "branch codex/t-ocs-v7-rev2-aegis-pipeline-2026-10-04; blob e32ff65b7a7fe1d652e48b7c4ef207b9e0385742",
+      "location": "$.inputs,$.engineering_properties_promoted,$.semantic_joint_closure",
+      "status": "BLOCKED",
+      "finding": "Manifest explicitly BLOCKED; semantic joint closure false.",
+      "source_sha256": null
+    },
+    {
+      "source_id": "SRC-007",
+      "artifact": "T-OCS-V7-AEGIS/G2/RUNS/LATEST_G2_STATUS.json",
+      "revision": "branch codex/t-ocs-v7-rev2-aegis-pipeline-2026-10-04",
+      "location": "$.authoritative_joint_constraint_closure,$.reason",
+      "status": "BLOCKED",
+      "finding": "Current status says authoritative joint/constraint closure incomplete.",
+      "source_sha256": null
+    },
+    {
+      "source_id": "SRC-008",
+      "artifact": "artifacts/master_v4/v7_baseline_independent_verification.json",
+      "revision": "commit 02b7919cddd54a116ba74d6fba13e8983d001231; blob aa4c220d146c3698657789de2987331e80fcffd0",
+      "location": "$.reference_identity,$.kinematic_audit,$.mass_properties,$.cae_inputs",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "finding": "16 V7 refs; 4 declared joints; executable graph false; mass/CG/inertia null.",
+      "source_sha256": "b7e5f7d7f7ff7abdf86a381f69997b06e8172a5a3b6020fd29bdddb0893ccf85"
+    },
+    {
+      "source_id": "SRC-009",
+      "artifact": "V7_MANUS_INTERFACE_DEFINITION_AUDIT.json",
+      "revision": "commit 02b7919cddd54a116ba74d6fba13e8983d001231; blob 94cbb41059b1b0e50b38194a84864a7975d8b937",
+      "location": "$.claims,$.interfaces[*]",
+      "status": "PARTIALLY_VERIFIED",
+      "finding": "9 interfaces model-defined; only IF-R4-08/09 source-supported at model-artifact level.",
+      "source_sha256": null
+    },
+    {
+      "source_id": "SRC-010",
+      "artifact": "artifacts/interface_semantics_closure/V7_INTERFACE_SEMANTICS_CLOSURE.json",
+      "revision": "commit 02b7919cddd54a116ba74d6fba13e8983d001231",
+      "location": "$.counts,$.records[*]",
+      "status": "PARTIALLY_VERIFIED",
+      "finding": "9 interfaces; none closed; contact/clearance semantics unresolved.",
+      "source_sha256": "e6be7d2326f73e4e9d51f1f2f766e59f66f2edc428dc3748e2b907a1dfc18502; geometry ad47a76f28c1c6fcb1b61b3fd100c993bae368ac5a30312bec80c966c9a372c2; forensics 089e5b2533cd48528e45bd02fb5e84769e625b28687865881b6f6196ad823492"
+    },
+    {
+      "source_id": "SRC-011",
+      "artifact": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/PHYSICAL_INPUT_ENGINEERING/JON_PHYSICAL_INPUT_ENGINEERING_MASTER.json",
+      "revision": "branch codex/t-ocs-v7-rev2-aegis-pipeline-2026-10-04; blob c1dd5d5d8864757a5fd4fee856a13c542ef1ddbe",
+      "location": "$.BASELINE,$.CURRENT_STATE,$.DEFINITION_RULES,$.RECORDS[*]",
+      "status": "PARTIALLY_VERIFIED",
+      "finding": "Explicit axis convention; physical-input closure 0/14; no promotion.",
+      "source_sha256": null
+    },
+    {
+      "source_id": "SRC-012",
+      "artifact": "docs/master_v4/V7_BASELINE_INDEPENDENT_VERIFICATION_REPORT.md",
+      "revision": "commit 02b7919cddd54a116ba74d6fba13e8983d001231; blob 4fdf5b1f8430e6f326a8148681543c5f53c10e2e",
+      "location": "## F. Kinematic defects; ## K. CAE readiness defects",
+      "status": "PARTIALLY_VERIFIED",
+      "finding": "Kinematics DEFINED NOT EXECUTABLE; CAE inputs blocked.",
+      "source_sha256": null
+    },
+    {
+      "source_id": "SRC-013",
+      "artifact": "tools/generate_master_v2_gate.py",
+      "revision": "commit 02b7919cddd54a116ba74d6fba13e8983d001231",
+      "location": "top-level parts list",
+      "status": "PARTIALLY_VERIFIED",
+      "finding": "14-item audit list; not release authority.",
+      "source_sha256": null
+    },
+    {
+      "source_id": "SRC-014",
+      "artifact": "R4_1_BASELINE_LOCK.json",
+      "revision": "branch codex/t-ocs-v7-rev2-aegis-pipeline-2026-10-04; blob b925e65fbe46232096c8fc8c8a4d7f10b4bd211a",
+      "location": "$.expected_sha256,$.solid_count,$.sha_match,$.mutation_detected",
+      "status": "VERIFIED",
+      "finding": "Current governing lock is internally consistent and matches R4.1.",
+      "source_sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68"
+    }
+  ]
+}

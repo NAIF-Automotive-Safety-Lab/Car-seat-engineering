@@ -1,0 +1,7 @@
+ENV-CHRONO-001
+CMake=3.31.6
+CXX=g++ 14.2.0
+SOURCE=BLOCKED
+BUILD=BLOCKED
+No native Chrono source was available locally or from an accessible executable cache.
+No build attempted.

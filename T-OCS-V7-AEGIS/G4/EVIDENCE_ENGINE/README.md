@@ -1,0 +1,1 @@
+G4 is the evidence and provenance system, not another physics solver. Self-check PASS proves only hashing and ledger mechanics.

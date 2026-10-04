@@ -1,0 +1,20 @@
+{
+  "schema_version":"1.0",
+  "evidence_id":"ENV-CHRONO-RECOVERY-001",
+  "engine":"Project Chrono",
+  "source_origin":"https://github.com/projectchrono/chrono",
+  "source_repository":"projectchrono/chrono",
+  "branch":"main",
+  "head_commit_observed":"9e95a025adbd454f04f263986865b88e38cadd43",
+  "origin_authority":"OFFICIAL_UPSTREAM",
+  "local_source_status":"MISSING",
+  "local_archive_status":"MISSING",
+  "native_library_status":"MISSING",
+  "native_executable_status":"MISSING",
+  "pychrono_status":"MISSING",
+  "connected_source_status":"AVAILABLE_FOR_METADATA_ONLY",
+  "runtime_provisioning_status":"NETWORK-BLOCKED",
+  "native_build_status":"BLOCKED",
+  "native_runtime_status":"BLOCKED",
+  "reason":"No authoritative Chrono source tree/archive/runtime is present in the executable host. Shell DNS/HTTPS/Git transport to github.com is blocked. No unofficial source, wrapper, or substitute solver was used."
+}

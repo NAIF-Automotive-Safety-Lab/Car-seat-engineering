@@ -1,0 +1,11 @@
+--- DNS ---
+NO ADDRESS RETURNED FOR github.com
+--- HTTPS ---
+curl: (6) Could not resolve host: github.com
+http=000 err=Could not resolve host: github.com
+--- GIT ---
+fatal: unable to access 'https://github.com/projectchrono/chrono.git/': Could not resolve host: github.com
+--- LFS VERSION ---
+git: 'lfs' is not a git command
+--- LFS ENV ---
+git: 'lfs' is not a git command

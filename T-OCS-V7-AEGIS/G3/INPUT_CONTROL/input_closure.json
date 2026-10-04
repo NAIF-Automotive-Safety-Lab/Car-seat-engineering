@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "status": "BLOCKED",
+  "mandatory_items": [
+    {
+      "item": "material",
+      "status": "MISSING",
+      "source": null,
+      "value": null
+    },
+    {
+      "item": "density",
+      "status": "MISSING",
+      "source": null,
+      "value": null
+    },
+    {
+      "item": "elastic_plastic_properties",
+      "status": "MISSING",
+      "source": null,
+      "value": null
+    },
+    {
+      "item": "contact_friction",
+      "status": "MISSING",
+      "source": null,
+      "value": null
+    },
+    {
+      "item": "fastener_representation",
+      "status": "MISSING",
+      "source": null,
+      "value": null
+    },
+    {
+      "item": "mass_properties",
+      "status": "MISSING",
+      "source": null,
+      "value": null
+    },
+    {
+      "item": "load_definition",
+      "status": "MISSING",
+      "source": null,
+      "value": null
+    },
+    {
+      "item": "boundary_conditions",
+      "status": "MISSING",
+      "source": null,
+      "value": null
+    },
+    {
+      "item": "mesh_strategy",
+      "status": "UNVERIFIED",
+      "source": null,
+      "value": null
+    },
+    {
+      "item": "element_formulation",
+      "status": "UNVERIFIED",
+      "source": null,
+      "value": null
+    },
+    {
+      "item": "time_integration",
+      "status": "UNVERIFIED",
+      "source": null,
+      "value": null
+    },
+    {
+      "item": "units",
+      "status": "UNVERIFIED",
+      "source": null,
+      "value": null
+    },
+    {
+      "item": "initial_conditions",
+      "status": "MISSING",
+      "source": null,
+      "value": null
+    }
+  ],
+  "placeholders": {
+    "stroke_180_mm": "NOT_ENGINEERING_TRUTH",
+    "mesh_deflection_2_mm": "NOT_ENGINEERING_TRUTH"
+  },
+  "silent_substitution": false
+}

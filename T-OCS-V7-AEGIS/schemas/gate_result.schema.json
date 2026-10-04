@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "G0",
+    "G1",
+    "G2",
+    "G3",
+    "G4",
+    "OVERALL",
+    "fail_closed"
+  ],
+  "properties": {
+    "G0": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED",
+        "NOT_PROVEN"
+      ]
+    },
+    "G1": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED",
+        "NOT_PROVEN"
+      ]
+    },
+    "G2": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED",
+        "NOT_PROVEN"
+      ]
+    },
+    "G3": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED",
+        "NOT_PROVEN"
+      ]
+    },
+    "G4": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED",
+        "NOT_PROVEN"
+      ]
+    },
+    "OVERALL": {
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED",
+        "NOT_PROVEN"
+      ]
+    },
+    "fail_closed": {
+      "const": true
+    }
+  }
+}

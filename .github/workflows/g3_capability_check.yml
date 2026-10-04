@@ -1,0 +1,18 @@
+name: G3 Capability Check
+on:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check physical-input control
+        run: |
+          python3 - <<'PY'
+          import json
+          p="T-OCS-V7-AEGIS/G3/INPUT_CONTROL/input_closure.json"
+          d=json.load(open(p))
+          print("G3_INPUT_CLOSURE="+d["status"])
+          if d["status"] not in {"PASS","FAIL","BLOCKED","NOT_PROVEN"}:
+              raise SystemExit(1)
+          PY

@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "status": "BLOCKED",
+  "scenarios": [
+    {
+      "scenario_id": "G3-DYNAMIC_RESPONSE",
+      "name": "dynamic_response",
+      "status": "BLOCKED",
+      "reason": "mandatory physical input closure and OpenRadioss runtime are not closed"
+    },
+    {
+      "scenario_id": "G3-LOAD_RESPONSE",
+      "name": "load_response",
+      "status": "BLOCKED",
+      "reason": "mandatory physical input closure and OpenRadioss runtime are not closed"
+    },
+    {
+      "scenario_id": "G3-CONTACT_RESPONSE",
+      "name": "contact_response",
+      "status": "BLOCKED",
+      "reason": "mandatory physical input closure and OpenRadioss runtime are not closed"
+    },
+    {
+      "scenario_id": "G3-ENERGY_BALANCE",
+      "name": "energy_balance",
+      "status": "BLOCKED",
+      "reason": "mandatory physical input closure and OpenRadioss runtime are not closed"
+    },
+    {
+      "scenario_id": "G3-DISPLACEMENT_RESPONSE",
+      "name": "displacement_response",
+      "status": "BLOCKED",
+      "reason": "mandatory physical input closure and OpenRadioss runtime are not closed"
+    },
+    {
+      "scenario_id": "G3-VELOCITY_ACCELERATION_RESPONSE",
+      "name": "velocity_acceleration_response",
+      "status": "BLOCKED",
+      "reason": "mandatory physical input closure and OpenRadioss runtime are not closed"
+    },
+    {
+      "scenario_id": "G3-SENSITIVITY",
+      "name": "sensitivity",
+      "status": "BLOCKED",
+      "reason": "mandatory physical input closure and OpenRadioss runtime are not closed"
+    },
+    {
+      "scenario_id": "G3-REPEATABILITY",
+      "name": "repeatability",
+      "status": "BLOCKED",
+      "reason": "mandatory physical input closure and OpenRadioss runtime are not closed"
+    },
+    {
+      "scenario_id": "G3-NUMERICAL_STABILITY",
+      "name": "numerical_stability",
+      "status": "BLOCKED",
+      "reason": "mandatory physical input closure and OpenRadioss runtime are not closed"
+    },
+    {
+      "scenario_id": "G3-CROSS_SOLVER",
+      "name": "cross_solver",
+      "status": "BLOCKED",
+      "reason": "mandatory physical input closure and OpenRadioss runtime are not closed"
+    }
+  ]
+}

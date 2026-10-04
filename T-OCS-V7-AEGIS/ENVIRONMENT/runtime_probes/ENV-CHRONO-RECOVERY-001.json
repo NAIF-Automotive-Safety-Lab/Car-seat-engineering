@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "ENV-CHRONO-RECOVERY-001",
+  "timestamp": "2026-10-04T02:36:00+03:00",
+  "status": "BLOCKED",
+  "environment": {
+    "os": "Linux 6.18.44",
+    "architecture": "x86_64",
+    "cpu": "AMD EPYC 9V74 80-Core Processor",
+    "logical_cpus": 3,
+    "ram_kib": 6091040,
+    "root_disk_free_kib": 31235008,
+    "python": "3.13.5",
+    "gcc": "14.2.0",
+    "gxx": "14.2.0",
+    "gfortran": "14.2.0",
+    "cmake": "3.31.6",
+    "ninja": "1.12.1",
+    "make": "4.4.1",
+    "git": "2.47.3"
+  },
+  "network": {
+    "github_dns": "NETWORK-BLOCKED",
+    "github_https": "NETWORK-BLOCKED",
+    "git_transport": "NETWORK-BLOCKED"
+  },
+  "local_chrono": {
+    "source_tree": "MISSING",
+    "source_archive": "MISSING",
+    "native_executables": "MISSING",
+    "native_libraries": "MISSING",
+    "cmake_config": "MISSING",
+    "pychrono_module": "MISSING",
+    "pychrono_package_metadata": "MISSING"
+  },
+  "cache_search": {
+    "chrono_directories": "MISSING",
+    "chrono_archives": "MISSING",
+    "pychrono_wheels": "MISSING",
+    "apt_cached_chrono_artifacts": "MISSING",
+    "relevant_local_git_checkout": "MISSING"
+  },
+  "connected_authoritative_source": {
+    "repository": "projectchrono/chrono",
+    "branch": "main",
+    "head_commit": "9e95a025adbd454f04f263986865b88e38cadd43",
+    "source_status": "AVAILABLE_FOR_METADATA_ONLY",
+    "runtime_provisioning": "NETWORK-BLOCKED"
+  },
+  "qualification": {
+    "source": "BLOCKED",
+    "build": "BLOCKED",
+    "runtime": "BLOCKED",
+    "probe_1": "BLOCKED",
+    "probe_2": "BLOCKED",
+    "repeatability": "BLOCKED"
+  },
+  "baseline": {
+    "status": "PASS",
+    "artifact_size_bytes": 1220000,
+    "artifact_sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "step_read": "PASS",
+    "brep": "PASS",
+    "solid_count": 62,
+    "mutation": false
+  },
+  "gate_state": {
+    "GATE-BASELINE-CONFIG-001": "PASS",
+    "R4_1_BASELINE": "PASS",
+    "G2": "BLOCKED",
+    "G3": "LOCKED"
+  },
+  "stop_condition": "NETWORK_PROVISIONING_BLOCKED",
+  "required_external_provisioning_action": "Provide an approved, authoritative Project Chrono source tree/archive or precompiled native runtime into the executable environment; then run ENV-CHRONO-001-A and ENV-CHRONO-001-B.",
+  "prohibited_substitutions": [
+    "Unity",
+    "PyBullet",
+    "MuJoCo",
+    "custom Python dynamics",
+    "OpenRadioss",
+    "CalculiX"
+  ]
+}
