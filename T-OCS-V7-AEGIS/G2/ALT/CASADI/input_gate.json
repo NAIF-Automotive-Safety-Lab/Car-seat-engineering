@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "G2-ALT-CASADI-INPUT-GATE-001",
+  "timestamp": "2026-10-04T00:17:00Z",
+  "status": "BLOCKED",
+  "engine": "CasADi",
+  "required_inputs": [
+    {
+      "input": "authoritative T-OCS joint graph / constraints / DOF closure",
+      "status": "MISSING"
+    },
+    {
+      "input": "authoritative joint axes / datum references",
+      "status": "MISSING"
+    },
+    {
+      "input": "validated joint limits / end-stop / lock / rebound definitions",
+      "status": "MISSING"
+    },
+    {
+      "input": "authoritative initial conditions",
+      "status": "MISSING"
+    },
+    {
+      "input": "mass / CG / inertia for dynamic scope",
+      "status": "MISSING"
+    },
+    {
+      "input": "validated load / force laws where dynamic scope requires them",
+      "status": "MISSING"
+    }
+  ],
+  "evidence_basis": [
+    "LATEST_G2_STATUS.json: authoritative_joint_constraint_closure=BLOCKED",
+    "V7 baseline independent verification: kinematics=DEFINED NOT EXECUTABLE; mass/CG/inertia=null",
+    "V7 interface semantics closure: closure C = 0; authoritative vehicle/production datum not established"
+  ],
+  "decision": "Do not create a simplified T-OCS G2 case from guessed values. G2-ALT remains BLOCKED."
+}
