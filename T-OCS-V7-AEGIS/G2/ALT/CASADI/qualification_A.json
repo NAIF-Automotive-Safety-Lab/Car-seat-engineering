@@ -32,7 +32,10 @@
   "tocs_g2_status": "BLOCKED_INPUT_MISSING",
   "run_id": "ALT-ENGINE-001-A",
   "final_state": [
-    1.1174101630971847,
-    0.1847234105298416
-  ]
+    0.6539339289988908,
+    0.8731212639232487
+  ],
+  "trajectory_sha256": "715cb8e72edd34a87bf77cc057bb81377548b4f937f225d8d43115ebb2776658",
+  "trajectory_samples_verified": 101,
+  "full_trajectory_retained_in_execution_workspace": true
 }
