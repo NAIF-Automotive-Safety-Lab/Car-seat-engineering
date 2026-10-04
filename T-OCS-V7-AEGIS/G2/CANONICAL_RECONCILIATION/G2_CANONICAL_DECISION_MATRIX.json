@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "G2-CANONICAL-DECISION-MATRIX-001",
+  "status": "BLOCKED",
+  "fields": [
+    {
+      "field": "canonical_body_set",
+      "status": "CONFLICTED",
+      "evidence": "16 V7 reference/BOM records; 31 SR11 logical MBD groups; 62 R4.1 B-Rep solids. Physical rigid-body count not established."
+    },
+    {
+      "field": "canonical_joint_set",
+      "status": "CONFLICTED",
+      "evidence": "V7 declares 4 joint families; SR11 V1 contains 6 historical/model-specification records."
+    },
+    {
+      "field": "canonical_joint_graph",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "evidence": "V7 audit states executable_joint_graph=false; current G2 joint closure BLOCKED."
+    },
+    {
+      "field": "canonical_DOF",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "evidence": "MECHANISM_AUDIT says model_dof=2, but current DOF map empty and V7 audit calls DOF/limits metadata-only."
+    },
+    {
+      "field": "canonical_frames",
+      "status": "MISSING",
+      "evidence": "Current frames.json has empty frames list."
+    },
+    {
+      "field": "canonical_axes",
+      "status": "PARTIALLY_VERIFIED",
+      "evidence": "Global R4.1 axes convention is explicit; exact local axes not uniformly released."
+    },
+    {
+      "field": "coordinate_convention",
+      "status": "VERIFIED",
+      "evidence": "R4.1 native/global: +X=FWD,+Y=LEFT,+Z=UP; right-hand rotation."
+    },
+    {
+      "field": "canonical_constraints",
+      "status": "MISSING",
+      "evidence": "Current constraints.json is empty; executable equations absent."
+    },
+    {
+      "field": "limits_end_stops",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "evidence": "Limit/end-stop concepts exist, but executable values/reactions are not closed."
+    },
+    {
+      "field": "lock_rebound_states",
+      "status": "DEFINED_NOT_EXECUTABLE",
+      "evidence": "State names and requirements exist; executable semantics are not closed."
+    },
+    {
+      "field": "canonical_initial_state",
+      "status": "MISSING",
+      "evidence": "No authoritative numerical initial pose/orientation/q/velocity/angular velocity/state assignment."
+    },
+    {
+      "field": "required_dynamic_fields",
+      "status": "NOT_REQUIRED_FOR_DECLARED_SCOPE",
+      "evidence": "Declared gate is kinematic/constraint execution only. Dynamics are excluded here and remain blocked for later extension."
+    }
+  ],
+  "release_test": {
+    "all_required_fields_authoritative": false,
+    "conflicts_resolved_for_execution": false,
+    "numerically_executable_without_reinterpretation": false,
+    "unsupported_assumptions_introduced": false,
+    "result": "BLOCKED"
+  },
+  "r4_1": {
+    "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "size_bytes": 1220000,
+    "solids": 62,
+    "mutation": false
+  }
+}
