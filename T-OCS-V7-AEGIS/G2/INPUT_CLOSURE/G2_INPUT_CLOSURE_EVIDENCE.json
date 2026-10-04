@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "G2-INPUT-CLOSURE-EVIDENCE-001",
+  "status": "BLOCKED",
+  "timestamp": "2026-10-04T00:42:00Z",
+  "matrix_counts": {
+    "VERIFIED": 1,
+    "PARTIALLY_VERIFIED": 5,
+    "DEFINED_NOT_EXECUTABLE": 11,
+    "MISSING": 12,
+    "CONFLICTED": 2,
+    "NOT_REQUIRED_FOR_DECLARED_SCOPE": 9
+  },
+  "total_matrix_records": 40,
+  "acceptance_failures": [
+    "Unresolved source conflicts",
+    "Executable joint graph/DOF map absent",
+    "Native origin/reference frames not closed",
+    "Initial state missing",
+    "Executable constraints/limits/state semantics missing",
+    "G2 solver settings not authoritatively released"
+  ],
+  "casadi": {
+    "version": "3.7.2",
+    "qualification": "PASS",
+    "repeatability": "PASS",
+    "role": "alternative computational runtime only; not Chrono and not G2 PASS"
+  },
+  "g2_execution_status": "NOT_STARTED",
+  "g2_repeatability_status": "NOT_STARTED",
+  "g3_status": "LOCKED",
+  "r4_1": {
+    "sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "size_bytes": 1220000,
+    "solids": 62,
+    "mutation": false
+  }
+}
