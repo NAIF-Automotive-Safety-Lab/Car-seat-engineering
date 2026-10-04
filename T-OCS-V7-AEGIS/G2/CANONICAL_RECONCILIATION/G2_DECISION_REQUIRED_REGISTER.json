@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "G2-DECISION-REQUIRED-REG-001",
+  "status": "BLOCKED",
+  "decision_rule": "Only unresolved authority decisions are listed. No proposed engineering value is supplied.",
+  "decisions": [
+    {
+      "id": "DEC-001",
+      "decision_required": "Release one current executable joint ontology/crosswalk between the four V7 joint families and the six SR11 records.",
+      "affected_fields": [
+        "canonical_joint_set",
+        "canonical_joint_graph",
+        "DOF"
+      ],
+      "why_evidence_insufficient": "SR11 is MODEL_SPECIFICATION_ONLY/CANDIDATE_SOURCE; V7 is metadata-only with executable_joint_graph=false. No controlled crosswalk exists.",
+      "downstream_effect": "Joint graph and global DOF cannot be instantiated deterministically.",
+      "sources": [
+        "CONFLICT-A-001"
+      ],
+      "invented_value": null
+    },
+    {
+      "id": "DEC-002",
+      "decision_required": "Release the canonical current G2 body decomposition grain.",
+      "affected_fields": [
+        "canonical_body_set",
+        "body_topology"
+      ],
+      "why_evidence_insufficient": "16 V7 reference/BOM records, 31 logical SR11 MBD groups, and 62 solids are different representation grains; no current physical rigid-body authority is released.",
+      "downstream_effect": "Body-to-joint/body-to-frame mapping cannot be finalized.",
+      "sources": [
+        "CONFLICT-B-001"
+      ],
+      "invented_value": null
+    },
+    {
+      "id": "DEC-003",
+      "decision_required": "Release machine-readable current frame/origin transforms and exact local joint axes.",
+      "affected_fields": [
+        "canonical_frames",
+        "canonical_axes"
+      ],
+      "why_evidence_insufficient": "Only global +X/+Y/+Z convention is explicit. Current G2 frames list is empty and local physical axes are not uniformly released.",
+      "downstream_effect": "Constraint equations cannot be created without reinterpretation.",
+      "sources": [
+        "SRC-009",
+        "SRC-011"
+      ],
+      "invented_value": null
+    },
+    {
+      "id": "DEC-004",
+      "decision_required": "Release the executable initial state for the authorized G2 scenario.",
+      "affected_fields": [
+        "initial_position",
+        "initial_orientation",
+        "initial_generalized_coordinates",
+        "initial_velocity",
+        "initial_angular_velocity",
+        "initial_constraint_state",
+        "initial_lock_rebound_state"
+      ],
+      "why_evidence_insufficient": "Current G2 status is BLOCKED and vehicle pulse/initial velocity is external-data-required; no numerical initial state is controlled.",
+      "downstream_effect": "Deterministic initialization is impossible.",
+      "sources": [
+        "SRC-007",
+        "SRC-008"
+      ],
+      "invented_value": null
+    },
+    {
+      "id": "DEC-005",
+      "decision_required": "Release the G2 execution protocol values and acceptance tolerances.",
+      "affected_fields": [
+        "integration_method",
+        "timestep_policy",
+        "solver_tolerances",
+        "convergence_criteria",
+        "output_sampling_interval",
+        "termination_conditions",
+        "repeatability_comparison_tolerance"
+      ],
+      "why_evidence_insufficient": "Only the generic CasADi software probe is qualified; no T-OCS execution protocol is authoritative.",
+      "downstream_effect": "A later run could not be audited against a fixed protocol.",
+      "sources": [
+        "G2/ALT/CASADI qualification evidence",
+        "SRC-006",
+        "SRC-007"
+      ],
+      "invented_value": null
+    }
+  ]
+}
