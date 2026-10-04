@@ -34,22 +34,42 @@
     {
       "id": "G2-ALT-CASADI-QUAL-A",
       "status": "PASS",
-      "artifact": "T-OCS-V7-AEGIS/G2/ALT/CASADI/qualification_A.json"
+      "artifact": "T-OCS-V7-AEGIS/G2/ALT/CASADI/qualification_A.json",
+      "sha256": "464d51de7be893fce157be2118331e7c1ae01f7abcc3c824d84c9f38e34abefd",
+      "timestamp": "2026-10-04T00:21:00Z",
+      "engine": "CasADi",
+      "environment": "Linux 6.18.44 / Python 3.13.5 / x86_64",
+      "command_identity": "T-OCS-V7-REV2-LOCAL-RUNTIME-SALVAGE-CASADI"
     },
     {
       "id": "G2-ALT-CASADI-QUAL-B",
       "status": "PASS",
-      "artifact": "T-OCS-V7-AEGIS/G2/ALT/CASADI/qualification_B.json"
+      "artifact": "T-OCS-V7-AEGIS/G2/ALT/CASADI/qualification_B.json",
+      "sha256": "cb04b11a3800f708800ceefb7cf605ac890828a204e64ef3f9afdc014295161d",
+      "timestamp": "2026-10-04T00:21:00Z",
+      "engine": "CasADi",
+      "environment": "Linux 6.18.44 / Python 3.13.5 / x86_64",
+      "command_identity": "T-OCS-V7-REV2-LOCAL-RUNTIME-SALVAGE-CASADI"
     },
     {
       "id": "G2-ALT-CASADI-REPEAT-001",
       "status": "PASS",
-      "artifact": "T-OCS-V7-AEGIS/G2/ALT/CASADI/repeatability.json"
+      "artifact": "T-OCS-V7-AEGIS/G2/ALT/CASADI/repeatability.json",
+      "sha256": "22867e69e7fcaee28da21f373af0f96307ec7a7c11bcceb1004d280f9e9fdadc",
+      "timestamp": "2026-10-04T00:21:00Z",
+      "engine": "CasADi",
+      "environment": "Linux 6.18.44 / Python 3.13.5 / x86_64",
+      "command_identity": "T-OCS-V7-REV2-LOCAL-RUNTIME-SALVAGE-CASADI"
     },
     {
       "id": "G2-ALT-CASADI-INPUT-GATE-001",
       "status": "BLOCKED",
-      "artifact": "T-OCS-V7-AEGIS/G2/ALT/CASADI/input_gate.json"
+      "artifact": "T-OCS-V7-AEGIS/G2/ALT/CASADI/input_gate.json",
+      "sha256": "dd6ac326633a7a4bacf58fbaab1d4880aa1390f1bcc17baad71b9b6bf30fa01a",
+      "timestamp": "2026-10-04T00:21:00Z",
+      "engine": "CasADi",
+      "environment": "Linux 6.18.44 / Python 3.13.5 / x86_64",
+      "command_identity": "T-OCS-V7-REV2-G2-ALT-CASADI-INPUT-GATE"
     },
     {
       "id": "G2-ALT-EXEC-001",
@@ -62,6 +82,16 @@
       "status": "NOT_STARTED",
       "artifact": null,
       "reason": "No T-OCS G2 case executed."
+    },
+    {
+      "id": "ENV-LOCAL-RUNTIME-SALVAGE-001",
+      "status": "PASS",
+      "artifact": "T-OCS-V7-AEGIS/ENVIRONMENT/runtime_probes/LOCAL-RUNTIME-SALVAGE-001.json",
+      "sha256": "f69d85a9d5e0a21120256f79d5eda5e60d0f2e91e6aa2a8cd185d4857fdfcf8a",
+      "timestamp": "2026-10-04T00:21:00Z",
+      "engine": null,
+      "environment": "Linux 6.18.44 / Python 3.13.5 / x86_64",
+      "command_identity": "T-OCS-V7-REV2-LOCAL-RUNTIME-SALVAGE-CASADI"
     }
   ],
   "artifact_hashes": [
@@ -128,5 +158,16 @@
     "core_so_sha256": "106e2af1cabc576cdc86db3d1e844f0be6ed3a2beeb45a85565039a0253b010f",
     "qualification_repeatability": "PASS",
     "tocs_g2_equivalence": "NOT_CLAIMED"
+  },
+  "final_decision": {
+    "selected_engine": "CasADi",
+    "engine_class": "SYMBOLIC_NUMERICAL_OPTIMIZATION_FRAMEWORK",
+    "engine_qualification": "PASS",
+    "software_repeatability": "PASS",
+    "g2_alt": "BLOCKED",
+    "g2_kinematic_computational": "BLOCKED",
+    "chrono": "BLOCKED",
+    "g3": "LOCKED",
+    "r4_1": "UNCHANGED"
   }
 }
