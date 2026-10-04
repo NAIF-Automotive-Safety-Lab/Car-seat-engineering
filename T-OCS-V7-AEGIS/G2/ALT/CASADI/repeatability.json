@@ -7,8 +7,11 @@
   "run_A": "ALT-ENGINE-001-A",
   "run_B": "ALT-ENGINE-001-B",
   "comparison": "IDENTICAL_TRAJECTORY_AND_FINAL_STATE",
+  "run_A_trajectory_sha256": "715cb8e72edd34a87bf77cc057bb81377548b4f937f225d8d43115ebb2776658",
+  "run_B_trajectory_sha256": "715cb8e72edd34a87bf77cc057bb81377548b4f937f225d8d43115ebb2776658",
   "max_abs_difference": 0,
   "tolerance": 1e-12,
+  "final_state_equal": true,
   "software_runtime_repeatability": "PASS",
   "tocs_g2_repeatability": "NOT_PROVEN"
 }
