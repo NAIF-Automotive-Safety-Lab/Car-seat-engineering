@@ -1,50 +1,86 @@
 # T-OCS V7.0 REVISION-2 — G2 CANONICAL MODEL RECONCILIATION
 
-## Decision
-**G2 CANONICAL MODEL = BLOCKED**
+## CANONICAL MODEL STATUS
 
-### Conflict A — 4-joint vs 6-joint
-- V7 audit: `J_RAIL`, `J_SEATBACK`, `J_LINK_L`, `J_LINK_R`; executable graph = false.
-- SR11 V1 mapping: two rail prismatics + seatback revolute + two linkages + LOCK170 state constraint.
-- Classification: representation-grain difference.
-- Resolution: partially resolved. SR11 is historical/model-specification decomposition; V7 is the later declared joint-family representation. No authoritative executable crosswalk exists.
+**BLOCKED**
 
-### Conflict B — 16 vs 31 vs 62
-- 16 = V7 reference/BOM record grain.
-- 31 = SR11 logical MBD body grouping grain.
-- 62 = R4.1 B-Rep solid count.
-- These are not the same quantity. No evidence establishes a single physical rigid-body count.
+## Conflict A — four-joint vs six-joint representation
 
-### Conflict C — historical baseline hash assertion
-- Current R4.1 lock is internally consistent and matches the governing digest.
-- The older V4 assertion of `BASELINE_HASH_MATCH=false` is retained only as historical provenance.
-- Current authority resolves the conflict without changing the lock.
+**SOURCE A:** `artifacts/master_v4/v7_baseline_independent_verification.json`, audit commit `02b7919cddd54a116ba74d6fba13e8983d001231`, `$.kinematic_audit.declared_joints`.
 
-## Canonical model decision
+Finding: V7 declares four joint families: `J_RAIL`, `J_SEATBACK`, `J_LINK_L`, `J_LINK_R`. The same source states `executable_joint_graph=false` and DOF/limits are metadata only.
+
+**SOURCE B:** `SR11/joints/V1_SR11_JOINT_MAPPING.json`, V1, blob `10f4c658c77037147f788deeacbfa853122e3636`.
+
+Finding: six records are present: two rail prismatic joints, one seatback revolute, two model-defined linkages, and one state-dependent `LOCK170` constraint.
+
+**Classification:** REPRESENTATION_GRAIN_DIFFERENCE.
+
+**Resolution:** PARTIALLY RESOLVED. The six-record SR11 representation is historical/model-specification decomposition; the four-family representation is the later V7 declaration. No controlled executable crosswalk exists, so no canonical numerical joint inventory may be released.
+
+## Conflict B — 16 vs 31 vs 62
+
+**16** = V7 reference/BOM record grain.
+
+**31** = logical MBD body-group grain in `SR11/manifests/V1_SR11_BODY_MAPPING.json`.
+
+**62** = R4.1 geometric B-Rep solid count.
+
+The SR11 mapping explicitly states deterministic solid-index mapping and covers all 62 solids. The recovery report records 31 grouped body records and 62/62 coverage.
+
+**Classification:** REPRESENTATION_GRAIN_DIFFERENCE.
+
+**Resolution:** RESOLVED AS GRAIN DIFFERENCE. No evidence establishes a single authoritative physical rigid-body count. Therefore no physical-body count is promoted.
+
+## Conflict C — historical R4.1 hash assertion
+
+The current `R4_1_BASELINE_LOCK.json` is internally consistent: the governing SHA matches the artifact, solid count is 62, and mutation is false. An older V4 record reported `BASELINE_HASH_MATCH=false`.
+
+**Classification:** HISTORICAL_RECORD_CONFLICT.
+
+**Resolution:** RESOLVED BY CURRENT AUTHORITY. The old statement remains provenance only; the current immutable lock governs.
+
+## Canonical decision
+
 | Field | Status |
 |---|---|
-| canonical_body_set | CONFLICTED |
-| canonical_joint_set | CONFLICTED |
-| canonical_joint_graph | DEFINED_NOT_EXECUTABLE |
-| canonical_DOF | DEFINED_NOT_EXECUTABLE |
-| canonical_frames | MISSING |
-| canonical_axes | PARTIALLY_VERIFIED |
-| canonical_coordinate_convention | VERIFIED |
-| canonical_constraints | MISSING |
-| canonical_limits_end_stops | DEFINED_NOT_EXECUTABLE |
-| canonical_lock_rebound_states | DEFINED_NOT_EXECUTABLE |
-| canonical_initial_state | MISSING |
-| canonical_dynamic_fields | NOT_REQUIRED_FOR_DECLARED_SCOPE |
+| canonical body set | CONFLICTED |
+| canonical joint set | CONFLICTED |
+| canonical joint graph | DEFINED_NOT_EXECUTABLE |
+| canonical DOF | DEFINED_NOT_EXECUTABLE |
+| canonical frames | MISSING |
+| canonical axes | PARTIALLY_VERIFIED |
+| coordinate convention | VERIFIED |
+| canonical constraints | MISSING |
+| limits/end-stops | DEFINED_NOT_EXECUTABLE |
+| lock/rebound states | DEFINED_NOT_EXECUTABLE |
+| canonical initial state | MISSING |
+| dynamic fields | NOT_REQUIRED_FOR_DECLARED_SCOPE |
 
 ## Release gate
-- All required model fields authoritative: **NO**
-- All representation conflicts resolved for execution: **NO**
-- Numerically executable without reinterpretation: **NO**
-- Unsupported assumptions introduced: **NO**
-- **RESULT = BLOCKED**
 
-## R4.1
-`fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68` / 1,220,000 bytes / 62 solids / mutation FALSE.
+Required authoritative model fields: **NO**.
 
-## G2/G3
-G2 execution = NOT_STARTED. G2 repeatability = NOT_STARTED. G3 = LOCKED.
+Representation conflicts resolved for execution: **NO**.
+
+Numerically executable without reinterpretation: **NO**.
+
+Unsupported engineering assumptions introduced: **NO**.
+
+**G2 CANONICAL MODEL = BLOCKED**
+
+## Protection
+
+R4.1 SHA-256 = `fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68`
+
+Size = 1,220,000 bytes.
+
+Solids = 62.
+
+Mutation = FALSE.
+
+G2 execution = NOT_STARTED.
+
+G2 repeatability = NOT_STARTED.
+
+G3 = LOCKED.
