@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "G2-ALT-CASADI-REPEAT-001",
+  "evidence_class": "SOFTWARE_RUNTIME_QUALIFICATION_ONLY",
+  "status": "PASS",
+  "engine": "CasADi",
+  "run_A": "ALT-ENGINE-001-A",
+  "run_B": "ALT-ENGINE-001-B",
+  "comparison": "IDENTICAL_TRAJECTORY_AND_FINAL_STATE",
+  "max_abs_difference": 0,
+  "tolerance": 1e-12,
+  "software_runtime_repeatability": "PASS",
+  "tocs_g2_repeatability": "NOT_PROVEN"
+}
