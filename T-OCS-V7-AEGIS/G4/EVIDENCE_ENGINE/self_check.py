@@ -21,7 +21,7 @@ def digest(p: Path) -> str:
 
 rows=[]
 for p in sorted(ROOT.rglob("*")):
-    if p.is_file() and p not in {SELF,HASHFILE}:
+    if p.is_file() and p not in {SELF,HASHFILE} and "__pycache__" not in p.parts and p.suffix != ".pyc":
         rows.append({"artifact":str(p.relative_to(ROOT)).replace("\\","/"),"sha256":digest(p),"size_bytes":p.stat().st_size})
 
 HASHFILE.write_text(json.dumps({"schema_version":"1.0","run_id":os.environ.get("AEGIS_RUN_ID","LOCAL"),"artifacts":rows},indent=2,sort_keys=True)+"\n",encoding="utf-8")

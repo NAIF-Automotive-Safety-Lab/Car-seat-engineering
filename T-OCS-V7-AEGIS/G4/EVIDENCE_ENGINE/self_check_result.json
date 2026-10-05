@@ -1,11 +1,11 @@
 {
-  "artifact_count":34,
-  "engineering_claims_promoted":false,
-  "fail_closed":true,
-  "gate_status":"NOT_PROVEN",
-  "physical_validation_claimed":false,
-  "reason":"The self-check mechanism passed, but G4 gate acceptance requires complete critical-artifact evidence review/hash closure.",
-  "schema_version":"1.0",
-  "self_check":"PASS",
-  "status":"PASS"
+  "artifact_count": 118,
+  "engineering_claims_promoted": false,
+  "fail_closed": true,
+  "gate_status": "NOT_PROVEN",
+  "physical_validation_claimed": false,
+  "schema_version": "1.0",
+  "self_check": "PASS",
+  "status": "PASS",
+  "timestamp_utc": "2026-10-04T01:58:26.840024+00:00"
 }

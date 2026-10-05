@@ -4,83 +4,87 @@
 
 **BLOCKED**
 
-## Conflict A — four-joint vs six-joint representation
+This is evidence-first and fail-closed. G2 was **not executed**, CasADi was **not run**, R4.1 was **not changed**, and G3 remains **locked**.
 
-**SOURCE A:** `artifacts/master_v4/v7_baseline_independent_verification.json`, audit commit `02b7919cddd54a116ba74d6fba13e8983d001231`, `$.kinematic_audit.declared_joints`.
+## Conflict register
 
-Finding: V7 declares four joint families: `J_RAIL`, `J_SEATBACK`, `J_LINK_L`, `J_LINK_R`. The same source states `executable_joint_graph=false` and DOF/limits are metadata only.
+| Conflict | Source A | Source B | Classification | Resolution status |
+|---|---|---|---|---|
+| A: 4 vs 6 joints | V7 verification: 4 declared families; graph explicitly not executable | SR11 V1: 6 MODEL_SPECIFICATION_ONLY mixed records | Conflicted representation grain; source B mixes physical joints, logical/model-defined linkages, and LOCK170 constraint | **BLOCKED** — no controlled crosswalk proves containment or a current graph |
+| B: 16 vs recorded 32 bodies | V7: 16 BOM/reference records | G2 closure register claims 32 SR11 bodies; direct SR11 mapping and scaffold each contain **31** logical groups | Unsupported source-record count plus representation-grain difference | 32 claim **rejected**; canonical physical body set remains **BLOCKED** |
+| C-001: R4.1 identity | Current immutable lock | Historical P0 record says hash mismatch | Historical provenance conflict | **RESOLVED** by current immutable lock |
 
-**SOURCE B:** `SR11/joints/V1_SR11_JOINT_MAPPING.json`, V1, blob `10f4c658c77037147f788deeacbfa853122e3636`.
+### Conflict A evidence
 
-Finding: six records are present: two rail prismatic joints, one seatback revolute, two model-defined linkages, and one state-dependent `LOCK170` constraint.
+The V7 source declares `J_RAIL`, `J_SEATBACK`, `J_LINK_L`, and `J_LINK_R`, but expressly says `executable_joint_graph=false`. SR11 V1 contains two rail prismatics, one seatback revolute, two model-defined linkages, and a state-dependent `LOCK170` constraint. The two rail records may be a bilateral decomposition, but that is not a controlled crosswalk. It must not be silently chosen. `LOCK170` is a constraint/state record, not proof of a sixth physical joint.
 
-**Classification:** REPRESENTATION_GRAIN_DIFFERENCE.
+### Conflict B evidence
 
-**Resolution:** PARTIALLY RESOLVED. The six-record SR11 representation is historical/model-specification decomposition; the four-family representation is the later V7 declaration. No controlled executable crosswalk exists, so no canonical numerical joint inventory may be released.
+16 is V7 BOM/reference grain. The recorded 32-body assertion fails direct count: `SR11/manifests/V1_SR11_BODY_MAPPING.json` has 31 logical MBD groups and `G2/MODEL/bodies.json` also has 31. SR11 maps those groups to 62 R4.1 solids; the V7 reconstruction has 21 B-Rep solids. No controlled source says whether duplicate, reference, visual, or construction bodies are included in a current physical rigid-body model. The counts therefore do **not** establish the same model revision or a supersession relation.
 
-## Conflict B — 16 vs 31 vs 62
-
-**16** = V7 reference/BOM record grain.
-
-**31** = logical MBD body-group grain in `SR11/manifests/V1_SR11_BODY_MAPPING.json`.
-
-**62** = R4.1 geometric B-Rep solid count.
-
-The SR11 mapping explicitly states deterministic solid-index mapping and covers all 62 solids. The recovery report records 31 grouped body records and 62/62 coverage.
-
-**Classification:** REPRESENTATION_GRAIN_DIFFERENCE.
-
-**Resolution:** RESOLVED AS GRAIN DIFFERENCE. No evidence establishes a single authoritative physical rigid-body count. Therefore no physical-body count is promoted.
-
-## Conflict C — historical R4.1 hash assertion
-
-The current `R4_1_BASELINE_LOCK.json` is internally consistent: the governing SHA matches the artifact, solid count is 62, and mutation is false. An older V4 record reported `BASELINE_HASH_MATCH=false`.
-
-**Classification:** HISTORICAL_RECORD_CONFLICT.
-
-**Resolution:** RESOLVED BY CURRENT AUTHORITY. The old statement remains provenance only; the current immutable lock governs.
-
-## Canonical decision
+## Canonical-model decision matrix
 
 | Field | Status |
 |---|---|
-| canonical body set | CONFLICTED |
-| canonical joint set | CONFLICTED |
-| canonical joint graph | DEFINED_NOT_EXECUTABLE |
-| canonical DOF | DEFINED_NOT_EXECUTABLE |
-| canonical frames | MISSING |
-| canonical axes | PARTIALLY_VERIFIED |
-| coordinate convention | VERIFIED |
-| canonical constraints | MISSING |
-| limits/end-stops | DEFINED_NOT_EXECUTABLE |
-| lock/rebound states | DEFINED_NOT_EXECUTABLE |
-| canonical initial state | MISSING |
-| dynamic fields | NOT_REQUIRED_FOR_DECLARED_SCOPE |
+| canonical_body_set | CONFLICTED |
+| canonical_joint_set | CONFLICTED |
+| canonical_joint_graph | DEFINED_NOT_EXECUTABLE |
+| canonical_DOF | DEFINED_NOT_EXECUTABLE |
+| canonical_frames | MISSING |
+| canonical_axes | PARTIALLY_VERIFIED |
+| canonical_coordinate_convention | VERIFIED |
+| canonical_constraints | MISSING |
+| canonical_limits_end_stops | DEFINED_NOT_EXECUTABLE |
+| canonical_lock_rebound_states | DEFINED_NOT_EXECUTABLE |
+| canonical_initial_state | MISSING |
+| required_dynamic_fields | NOT_REQUIRED_FOR_DECLARED_SCOPE |
 
-## Release gate
+## Separate registers
 
-Required authoritative model fields: **NO**.
+- **Register A — T-OCS authoritative model inputs:** `G2_MODEL_INPUT_REGISTER.json`.
+- **Register B — G2 execution protocol:** `G2_EXECUTION_PROTOCOL_REGISTER.json`. Protocol controls are explicitly not design facts.
 
-Representation conflicts resolved for execution: **NO**.
+## Authoritative release test
 
-Numerically executable without reinterpretation: **NO**.
-
-Unsupported engineering assumptions introduced: **NO**.
+Every required field authoritative: **NO**. Conflicts resolved for execution: **NO**. Numerically expressible without reinterpretation: **NO**. Declared scope executable: **NO**. No values were guessed: **YES**.
 
 **G2 CANONICAL MODEL = BLOCKED**
 
-## Protection
+## Decision required
 
-R4.1 SHA-256 = `fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68`
+Engineering authority must resolve DEC-001 through DEC-006 in `G2_DECISION_REQUIRED_REGISTER.json`. This is not optional paperwork: without those decisions, any executable model would be an unsupported synthetic substitute.
 
-Size = 1,220,000 bytes.
+## R4.1 protection
 
-Solids = 62.
+- SHA-256: `fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68`
+- Size: `1,220,000 bytes`
+- Solids: `62`
+- Mutation: `FALSE`
 
-Mutation = FALSE.
+## Final status
 
-G2 execution = NOT_STARTED.
+```text
+CANONICAL MODEL STATUS
+BLOCKED
 
-G2 repeatability = NOT_STARTED.
+G2 INPUT CLOSURE
+BLOCKED
 
-G3 = LOCKED.
+G2 EXECUTION
+NOT_STARTED
+
+G2 REPEATABILITY
+NOT_STARTED
+
+G3
+LOCKED
+
+R4.1
+FAIL
+
+DECISION REQUIRED
+LIST
+
+FINAL STATUS
+BLOCKED
+```

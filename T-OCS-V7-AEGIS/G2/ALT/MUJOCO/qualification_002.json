@@ -1,0 +1,242 @@
+{
+  "command": [
+    "/tmp/tocs-g2-physics-venv/bin/python",
+    "-c",
+    "import json\nimport mujoco\nimport numpy as np\nxml = \"\"\"<mujoco><option timestep='0.002'/><worldbody><geom type='plane' size='2 2 .1'/><body pos='0 0 1'><freejoint/><geom type='sphere' size='.1' mass='1'/></body></worldbody></mujoco>\"\"\"\nmodel = mujoco.MjModel.from_xml_string(xml)\ndata = mujoco.MjData(model)\ntrajectory = []\ncontact_seen = False\ncontact_force = None\nfor _ in range(400):\n    mujoco.mj_step(model, data)\n    contact_seen = contact_seen or data.ncon > 0\n    if data.ncon > 0:\n        force = np.zeros(6)\n        mujoco.mj_contactForce(model, data, 0, force)\n        contact_force = force.tolist()\n    if len(trajectory) < 5 or _ >= 395:\n        trajectory.append({\"time\": data.time, \"qpos\": data.qpos.tolist(), \"qvel\": data.qvel.tolist(), \"contacts\": data.ncon})\nprint(json.dumps({\"engine_version\": mujoco.__version__, \"model_compilation\": True, \"state_initialization\": True, \"mj_step\": True, \"joint_state_extraction\": True, \"contact_capability\": contact_seen, \"contact_force\": contact_force, \"trajectory\": trajectory}, sort_keys=True))\n"
+  ],
+  "engine": "MUJOCO",
+  "evidence_id": "ENV-ALT-MUJOCO-002",
+  "exit_status": 0,
+  "result": {
+    "contact_capability": true,
+    "contact_force": [
+      9.809997049360836,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "engine_version": "3.14.0",
+    "joint_state_extraction": true,
+    "mj_step": true,
+    "model_compilation": true,
+    "state_initialization": true,
+    "trajectory": [
+      {
+        "contacts": 0,
+        "qpos": [
+          0.0,
+          0.0,
+          0.99996076,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "qvel": [
+          0.0,
+          0.0,
+          -0.019620000000000002,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "time": 0.002
+      },
+      {
+        "contacts": 0,
+        "qpos": [
+          0.0,
+          0.0,
+          0.99988228,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "qvel": [
+          0.0,
+          0.0,
+          -0.039240000000000004,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "time": 0.004
+      },
+      {
+        "contacts": 0,
+        "qpos": [
+          0.0,
+          0.0,
+          0.99976456,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "qvel": [
+          0.0,
+          0.0,
+          -0.05886000000000001,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "time": 0.006
+      },
+      {
+        "contacts": 0,
+        "qpos": [
+          0.0,
+          0.0,
+          0.9996076,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "qvel": [
+          0.0,
+          0.0,
+          -0.07848000000000001,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "time": 0.008
+      },
+      {
+        "contacts": 0,
+        "qpos": [
+          0.0,
+          0.0,
+          0.9994114000000001,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "qvel": [
+          0.0,
+          0.0,
+          -0.0981,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "time": 0.01
+      },
+      {
+        "contacts": 1,
+        "qpos": [
+          0.0,
+          0.0,
+          0.09963281578984966,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "qvel": [
+          0.0,
+          0.0,
+          1.074785493142716e-07,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "time": 0.7920000000000006
+      },
+      {
+        "contacts": 1,
+        "qpos": [
+          0.0,
+          0.0,
+          0.09963281599347482,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "qvel": [
+          0.0,
+          0.0,
+          1.018125757602541e-07,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "time": 0.7940000000000006
+      },
+      {
+        "contacts": 1,
+        "qpos": [
+          0.0,
+          0.0,
+          0.09963281618536665,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "qvel": [
+          0.0,
+          0.0,
+          9.594591551177225e-08,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "time": 0.7960000000000006
+      },
+      {
+        "contacts": 1,
+        "qpos": [
+          0.0,
+          0.0,
+          0.09963281636534968,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "qvel": [
+          0.0,
+          0.0,
+          8.999151438577644e-08,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "time": 0.7980000000000006
+      },
+      {
+        "contacts": 1,
+        "qpos": [
+          0.0,
+          0.0,
+          0.0996328165334239,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "qvel": [
+          0.0,
+          0.0,
+          8.403711325978064e-08,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "time": 0.8000000000000006
+      }
+    ]
+  },
+  "run_id": "G2-ALT-MUJOCO-LOCAL-20261004-003",
+  "schema_version": "2.0",
+  "status": "PASS",
+  "stderr": ""
+}

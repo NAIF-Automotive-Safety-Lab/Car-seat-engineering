@@ -1,0 +1,131 @@
+{
+  "automatic_fallback_order": [
+    "PYCHRONO",
+    "PYBULLET",
+    "MUJOCO",
+    "DRAKE",
+    "DART",
+    "PINOCCHIO"
+  ],
+  "engine_qualification": "PASS",
+  "engines": [
+    {
+      "artifact": "G2/ALT/PYCHRONO/qualification_001.json",
+      "artifact_sha256": "82c31f67ebf1af392943b599c8a6a377df9beeac2f4bd1c6c825b108c6d12c10",
+      "chrono_equivalence": "NOT_CLAIMED",
+      "distribution": "pychrono",
+      "engine": "PYCHRONO",
+      "evidence_id": "ENV-ALT-PYCHRONO-001",
+      "import_command": [
+        "/tmp/tocs-g2-physics-venv/bin/python",
+        "-c",
+        "import importlib; import importlib.metadata; m=importlib.import_module('pychrono'); print(importlib.metadata.version('pychrono')); print(m.__file__)"
+      ],
+      "import_exit_status": 1,
+      "import_status": "FAILED",
+      "import_stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/root/.pyenv/versions/3.12.13/lib/python3.12/importlib/__init__.py\", line 90, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1324, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'pychrono'",
+      "module": "pychrono",
+      "module_file": null,
+      "native_library": "NOT_TESTED",
+      "package_version": null,
+      "qualification_status": "BLOCKED_AT_IMPORT_GATE",
+      "reason": "Local import unavailable; chain automatically advances without a network install.",
+      "run_id": "G2-ALT-MUJOCO-LOCAL-20261004-003",
+      "runtime": "NOT_TESTED",
+      "schema_version": "2.0",
+      "shared_library_resolution": "NOT_TESTED",
+      "status": "BLOCKED",
+      "t_ocs_g2_execution": "NOT_STARTED"
+    },
+    {
+      "artifact": "G2/ALT/PYBULLET/qualification_001.json",
+      "artifact_sha256": "0ed90f002b23a5960e97a0ebf59a96ebf0b614d0dc5c5b7313059f000c7e9064",
+      "chrono_equivalence": "NOT_CLAIMED",
+      "distribution": "pybullet",
+      "engine": "PYBULLET",
+      "evidence_id": "ENV-ALT-PYBULLET-001",
+      "import_command": [
+        "/tmp/tocs-g2-physics-venv/bin/python",
+        "-c",
+        "import importlib; import importlib.metadata; m=importlib.import_module('pybullet'); print(importlib.metadata.version('pybullet')); print(m.__file__)"
+      ],
+      "import_exit_status": 1,
+      "import_status": "FAILED",
+      "import_stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/root/.pyenv/versions/3.12.13/lib/python3.12/importlib/__init__.py\", line 90, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1324, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'pybullet'",
+      "module": "pybullet",
+      "module_file": null,
+      "native_library": "NOT_TESTED",
+      "package_version": null,
+      "qualification_status": "BLOCKED_AT_IMPORT_GATE",
+      "reason": "Local import unavailable; chain automatically advances without a network install.",
+      "run_id": "G2-ALT-MUJOCO-LOCAL-20261004-003",
+      "runtime": "NOT_TESTED",
+      "schema_version": "2.0",
+      "shared_library_resolution": "NOT_TESTED",
+      "status": "BLOCKED",
+      "t_ocs_g2_execution": "NOT_STARTED"
+    },
+    {
+      "artifact": "G2/ALT/MUJOCO/qualification_001.json",
+      "artifact_sha256": "e9b606f02a40dfa71f34960aef956fb859dd8dd79428957ecbe79df2e4c5f768",
+      "chrono_equivalence": "NOT_CLAIMED",
+      "distribution": "mujoco",
+      "engine": "MUJOCO",
+      "evidence_id": "ENV-ALT-MUJOCO-001",
+      "import_command": [
+        "/tmp/tocs-g2-physics-venv/bin/python",
+        "-c",
+        "import importlib; import importlib.metadata; m=importlib.import_module('mujoco'); print(importlib.metadata.version('mujoco')); print(m.__file__)"
+      ],
+      "import_exit_status": 0,
+      "import_status": "PASS",
+      "import_stderr": "",
+      "module": "mujoco",
+      "module_file": "/tmp/tocs-g2-physics-venv/lib/python3.12/site-packages/mujoco/__init__.py",
+      "native_library": "PASS",
+      "package_version": "3.14.0",
+      "qualification_status": "PASS",
+      "reason": "Two deterministic engine runtime qualifications completed.",
+      "run_A_command": [
+        "/tmp/tocs-g2-physics-venv/bin/python",
+        "-c",
+        "import json\nimport mujoco\nimport numpy as np\nxml = \"\"\"<mujoco><option timestep='0.002'/><worldbody><geom type='plane' size='2 2 .1'/><body pos='0 0 1'><freejoint/><geom type='sphere' size='.1' mass='1'/></body></worldbody></mujoco>\"\"\"\nmodel = mujoco.MjModel.from_xml_string(xml)\ndata = mujoco.MjData(model)\ntrajectory = []\ncontact_seen = False\ncontact_force = None\nfor _ in range(400):\n    mujoco.mj_step(model, data)\n    contact_seen = contact_seen or data.ncon > 0\n    if data.ncon > 0:\n        force = np.zeros(6)\n        mujoco.mj_contactForce(model, data, 0, force)\n        contact_force = force.tolist()\n    if len(trajectory) < 5 or _ >= 395:\n        trajectory.append({\"time\": data.time, \"qpos\": data.qpos.tolist(), \"qvel\": data.qvel.tolist(), \"contacts\": data.ncon})\nprint(json.dumps({\"engine_version\": mujoco.__version__, \"model_compilation\": True, \"state_initialization\": True, \"mj_step\": True, \"joint_state_extraction\": True, \"contact_capability\": contact_seen, \"contact_force\": contact_force, \"trajectory\": trajectory}, sort_keys=True))\n"
+      ],
+      "run_A_exit_status": 0,
+      "run_B_command": [
+        "/tmp/tocs-g2-physics-venv/bin/python",
+        "-c",
+        "import json\nimport mujoco\nimport numpy as np\nxml = \"\"\"<mujoco><option timestep='0.002'/><worldbody><geom type='plane' size='2 2 .1'/><body pos='0 0 1'><freejoint/><geom type='sphere' size='.1' mass='1'/></body></worldbody></mujoco>\"\"\"\nmodel = mujoco.MjModel.from_xml_string(xml)\ndata = mujoco.MjData(model)\ntrajectory = []\ncontact_seen = False\ncontact_force = None\nfor _ in range(400):\n    mujoco.mj_step(model, data)\n    contact_seen = contact_seen or data.ncon > 0\n    if data.ncon > 0:\n        force = np.zeros(6)\n        mujoco.mj_contactForce(model, data, 0, force)\n        contact_force = force.tolist()\n    if len(trajectory) < 5 or _ >= 395:\n        trajectory.append({\"time\": data.time, \"qpos\": data.qpos.tolist(), \"qvel\": data.qvel.tolist(), \"contacts\": data.ncon})\nprint(json.dumps({\"engine_version\": mujoco.__version__, \"model_compilation\": True, \"state_initialization\": True, \"mj_step\": True, \"joint_state_extraction\": True, \"contact_capability\": contact_seen, \"contact_force\": contact_force, \"trajectory\": trajectory}, sort_keys=True))\n"
+      ],
+      "run_B_exit_status": 0,
+      "run_id": "G2-ALT-MUJOCO-LOCAL-20261004-003",
+      "runtime": "PASS",
+      "schema_version": "2.0",
+      "shared_library_resolution": "PASS",
+      "status": "PASS",
+      "t_ocs_g2_execution": "NOT_STARTED"
+    }
+  ],
+  "environment": {
+    "cpu_architecture": "x86_64",
+    "os": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "python_executable": "/tmp/tocs-g2-physics-venv/bin/python",
+    "python_version": "3.12.13 (main, May  1 2026, 05:53:44) [GCC 13.3.0]",
+    "runtime_path": "/root/.pyenv/versions/3.12.13/bin/python3.12"
+  },
+  "evidence_id": "ENV-ALT-PY-004",
+  "g2_alt_execution": "BLOCKED",
+  "g2_alt_repeatability": "PASS",
+  "g3": "LOCKED",
+  "network": {
+    "installation_attempted": false,
+    "network_access_attempted": false
+  },
+  "r4_1": "UNCHANGED",
+  "root_cause": "MuJoCo runtime qualification passed, but authoritative T-OCS body/joint/frame/constraint/initial-state inputs remain blocked; no T-OCS model was executed.",
+  "run_id": "G2-ALT-MUJOCO-LOCAL-20261004-003",
+  "schema_version": "2.0",
+  "selected_python_engine": "MUJOCO",
+  "status": "PASS",
+  "timestamp_utc": "2026-10-04T01:58:22.883449+00:00"
+}
