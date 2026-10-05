@@ -1,9 +1,17 @@
 {
-  "schema_version":"1.0",
-  "status":"BLOCKED",
-  "baseline_readback":"PASS",
-  "chrono_native_runtime":"BLOCKED",
-  "authoritative_joint_constraint_closure":"BLOCKED",
-  "unity_crosscheck":"BLOCKED",
-  "reason":"Chrono native runtime is unavailable and authoritative T-OCS joint/constraint closure remains incomplete. No T-OCS kinematic run was executed."
+  "schema_version": "1.2",
+  "status": "BLOCKED",
+  "baseline_readback": "PASS",
+  "chrono_native_runtime": "BLOCKED",
+  "alternative_python_fallback": "PASS",
+  "alternative_fallback_evidence": "G2/ALT/FALLBACK_CHAIN/qualification_003.json",
+  "selected_python_engine": "MUJOCO",
+  "engine_qualification": "PASS",
+  "g2_alt_execution": "BLOCKED",
+  "g2_alt_repeatability": "PASS",
+  "authoritative_joint_constraint_closure": "BLOCKED",
+  "unity_crosscheck": "BLOCKED",
+  "g3": "LOCKED",
+  "r4_1": "UNCHANGED",
+  "reason": "MuJoCo runtime qualification and two-run repeatability passed. No T-OCS G2 model was executed because authoritative body/joint/frame/constraint/initial-state closure remains blocked."
 }

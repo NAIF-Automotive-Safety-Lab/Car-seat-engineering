@@ -1,1 +1,26 @@
-{"engine":"PINOCCHIO","evidence_parent":["ENV-ALT-PY-001","ENV-ALT-PY-002"],"import_status":"FAILED","module":"pinocchio","module_state":"MISSING","native_library":"NOT_TESTED","package_version":null,"qualification_status":"FAILED_AT_IMPORT_GATE","reason":"No module named 'pinocchio'; no offline wheel/archive; network provisioning blocked","runtime":"NOT_TESTED","status":"BLOCKED","substitution_for_chrono":false}
+{
+  "chrono_equivalence": "NOT_CLAIMED",
+  "distribution": "pin",
+  "engine": "PINOCCHIO",
+  "evidence_id": "ENV-ALT-PINOCCHIO-001",
+  "import_command": [
+    "/tmp/tocs-g2-physics-venv/bin/python",
+    "-c",
+    "import importlib; import importlib.metadata; m=importlib.import_module('pinocchio'); print(importlib.metadata.version('pin')); print(m.__file__)"
+  ],
+  "import_exit_status": 1,
+  "import_status": "FAILED",
+  "import_stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/root/.pyenv/versions/3.12.13/lib/python3.12/importlib/__init__.py\", line 90, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1324, in _find_and_load_unlocked\nModuleNotFoundError: No module named 'pinocchio'",
+  "module": "pinocchio",
+  "module_file": null,
+  "native_library": "NOT_TESTED",
+  "package_version": null,
+  "qualification_status": "BLOCKED_AT_IMPORT_GATE",
+  "reason": "Local import unavailable; chain automatically advances without a network install.",
+  "run_id": "G2-ALT-MUJOCO-LOCAL-20261004-001",
+  "runtime": "NOT_TESTED",
+  "schema_version": "2.0",
+  "shared_library_resolution": "NOT_TESTED",
+  "status": "BLOCKED",
+  "t_ocs_g2_execution": "NOT_STARTED"
+}

@@ -1,1 +1,38 @@
-{"engine":"MUJOCO","module":"mujoco","status":"BLOCKED","qualification_status":"FAILED_AT_IMPORT_GATE","module_state":"MISSING","import_status":"FAILED","native_library":"NOT_TESTED","runtime":"NOT_TESTED","package_version":null,"reason":"No module named 'mujoco'; no offline wheel/archive; network provisioning blocked","substitution_for_chrono":false,"evidence_parent":["ENV-ALT-PY-001","ENV-ALT-PY-002"]}
+{
+  "chrono_equivalence": "NOT_CLAIMED",
+  "distribution": "mujoco",
+  "engine": "MUJOCO",
+  "evidence_id": "ENV-ALT-MUJOCO-001",
+  "import_command": [
+    "/tmp/tocs-g2-physics-venv/bin/python",
+    "-c",
+    "import importlib; import importlib.metadata; m=importlib.import_module('mujoco'); print(importlib.metadata.version('mujoco')); print(m.__file__)"
+  ],
+  "import_exit_status": 0,
+  "import_status": "PASS",
+  "import_stderr": "",
+  "module": "mujoco",
+  "module_file": "/tmp/tocs-g2-physics-venv/lib/python3.12/site-packages/mujoco/__init__.py",
+  "native_library": "PASS",
+  "package_version": "3.14.0",
+  "qualification_status": "PASS",
+  "reason": "Two deterministic engine runtime qualifications completed.",
+  "run_A_command": [
+    "/tmp/tocs-g2-physics-venv/bin/python",
+    "-c",
+    "import json\nimport mujoco\nimport numpy as np\nxml = \"\"\"<mujoco><option timestep='0.002'/><worldbody><geom type='plane' size='2 2 .1'/><body pos='0 0 1'><freejoint/><geom type='sphere' size='.1' mass='1'/></body></worldbody></mujoco>\"\"\"\nmodel = mujoco.MjModel.from_xml_string(xml)\ndata = mujoco.MjData(model)\ntrajectory = []\ncontact_seen = False\ncontact_force = None\nfor _ in range(400):\n    mujoco.mj_step(model, data)\n    contact_seen = contact_seen or data.ncon > 0\n    if data.ncon > 0:\n        force = np.zeros(6)\n        mujoco.mj_contactForce(model, data, 0, force)\n        contact_force = force.tolist()\n    if len(trajectory) < 5 or _ >= 395:\n        trajectory.append({\"time\": data.time, \"qpos\": data.qpos.tolist(), \"qvel\": data.qvel.tolist(), \"contacts\": data.ncon})\nprint(json.dumps({\"engine_version\": mujoco.__version__, \"model_compilation\": True, \"state_initialization\": True, \"mj_step\": True, \"joint_state_extraction\": True, \"contact_capability\": contact_seen, \"contact_force\": contact_force, \"trajectory\": trajectory}, sort_keys=True))\n"
+  ],
+  "run_A_exit_status": 0,
+  "run_B_command": [
+    "/tmp/tocs-g2-physics-venv/bin/python",
+    "-c",
+    "import json\nimport mujoco\nimport numpy as np\nxml = \"\"\"<mujoco><option timestep='0.002'/><worldbody><geom type='plane' size='2 2 .1'/><body pos='0 0 1'><freejoint/><geom type='sphere' size='.1' mass='1'/></body></worldbody></mujoco>\"\"\"\nmodel = mujoco.MjModel.from_xml_string(xml)\ndata = mujoco.MjData(model)\ntrajectory = []\ncontact_seen = False\ncontact_force = None\nfor _ in range(400):\n    mujoco.mj_step(model, data)\n    contact_seen = contact_seen or data.ncon > 0\n    if data.ncon > 0:\n        force = np.zeros(6)\n        mujoco.mj_contactForce(model, data, 0, force)\n        contact_force = force.tolist()\n    if len(trajectory) < 5 or _ >= 395:\n        trajectory.append({\"time\": data.time, \"qpos\": data.qpos.tolist(), \"qvel\": data.qvel.tolist(), \"contacts\": data.ncon})\nprint(json.dumps({\"engine_version\": mujoco.__version__, \"model_compilation\": True, \"state_initialization\": True, \"mj_step\": True, \"joint_state_extraction\": True, \"contact_capability\": contact_seen, \"contact_force\": contact_force, \"trajectory\": trajectory}, sort_keys=True))\n"
+  ],
+  "run_B_exit_status": 0,
+  "run_id": "G2-ALT-MUJOCO-LOCAL-20261004-003",
+  "runtime": "PASS",
+  "schema_version": "2.0",
+  "shared_library_resolution": "PASS",
+  "status": "PASS",
+  "t_ocs_g2_execution": "NOT_STARTED"
+}

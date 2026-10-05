@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "G2-CANONICAL-EVIDENCE-LEDGER-REV2-001",
+  "scope": "Hashes of controlled input evidence and required G2 canonical-model release artifacts. The ledger itself is subsequently covered by the repository-wide G4 SHA256SUMS manifest.",
+  "r4_1_protection": {
+    "requested_sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "observed_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "requested_sha256_length": 65,
+    "observed_sha256_length": 64,
+    "size_bytes": 1220000,
+    "solids": 62,
+    "mutation": false,
+    "immutable_payload_integrity": "PASS",
+    "requested_digest_check": "FAIL",
+    "result": "FAIL",
+    "finding": "The supplied digest has 65 hexadecimal characters and differs from the observed 64-character SHA-256. R4.1 was not mutated."
+  },
+  "source_evidence": [
+    {
+      "artifact": "R4_1_BASELINE_LOCK.json",
+      "sha256": "936c3bb2898c7c814ab9d1b14f0d8c4420b7d1b7b9384e119e10bbbc610ea836",
+      "size_bytes": 568,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    },
+    {
+      "artifact": "R4.1.step",
+      "sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "size_bytes": 1220000,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    },
+    {
+      "artifact": "SR11/joints/V1_SR11_JOINT_MAPPING.json",
+      "sha256": "79a415c51b97cba9bc377c7403197de2df4593587224678c3dd19b3db9e2a6b7",
+      "size_bytes": 1098,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    },
+    {
+      "artifact": "SR11/manifests/V1_SR11_BODY_MAPPING.json",
+      "sha256": "4d58f83c795aeee138183b8978f49c0d93a356c0c5753d501961771ced391859",
+      "size_bytes": 11774,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    },
+    {
+      "artifact": "artifacts/master_v4/v7_baseline_independent_verification.json",
+      "sha256": "2ae3f9568a22bf7d596fc890db054f9005a2ad890b5b65dad42618edd3725f9e",
+      "size_bytes": 7142,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    },
+    {
+      "artifact": "V7_MANUS_INTERFACE_DEFINITION_AUDIT.json",
+      "sha256": "a218353818262478225dfb39edfaa321740f0cdb4f927f553d3a51bc8aa0fe91",
+      "size_bytes": 12526,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    },
+    {
+      "artifact": "T-OCS-V7-AEGIS/G2/MODEL/bodies.json",
+      "sha256": "8ac1724aed818e1be0a53155ba923a8abfa71c4d67a004a6969bd0d00cb888d7",
+      "size_bytes": 8778,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    },
+    {
+      "artifact": "T-OCS-V7-AEGIS/G2/MODEL/joints.json",
+      "sha256": "8670b348225481b0113a19571ae5c18f855220545fdbd375e1e0a5e49fd5e7d7",
+      "size_bytes": 983,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    },
+    {
+      "artifact": "T-OCS-V7-AEGIS/G2/MODEL/frames.json",
+      "sha256": "2a5c2641744678f04ec96e88c2e88883cf95cdfbc3b66bbff66b525f85db1400",
+      "size_bytes": 132,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    },
+    {
+      "artifact": "T-OCS-V7-AEGIS/G2/MODEL/constraints.json",
+      "sha256": "87426828c3787cc08e22a9618aaa3a3578dbe46ee871a313a16bdfa123abadfc",
+      "size_bytes": 177,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    },
+    {
+      "artifact": "T-OCS-V7-AEGIS/G2/MODEL/dof_map.json",
+      "sha256": "50df1d0824ff8ad1a8079b9bfc5aa4e72f2d9278c6a72eaad8a06f021dfe4014",
+      "size_bytes": 146,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    },
+    {
+      "artifact": "T-OCS-V7-AEGIS/G2/INPUT_CLOSURE/G2_INPUT_CONFLICT_REGISTER.json",
+      "sha256": "ef3c47d3af7bc5a9fed9c0bd7f524f2edef0096a0a463bd4ded3ef79ccd7421c",
+      "size_bytes": 1984,
+      "repository_last_commit": "8202b9a781a0a7cb4439d067c75c42d44e07a442",
+      "repository_last_commit_date": "2026-10-04T03:29:54+03:00"
+    },
+    {
+      "artifact": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/PHYSICAL_INPUT_ENGINEERING/JON_PHYSICAL_INPUT_ENGINEERING_MASTER.json",
+      "sha256": "353379f505b544da60b1846f6288411fb947e1a8b930d59c389e75c6fe97c45e",
+      "size_bytes": 62247,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    }
+  ],
+  "release_artifacts": [
+    {
+      "artifact": "G2/CANONICAL_RECONCILIATION/G2_CANONICAL_MODEL_RECONCILIATION.json",
+      "sha256": "e042c44c6c49e4680edec9fc9f3f8b0eb0ac8a82b30fb46114caaac97fc18b75",
+      "size_bytes": 10443
+    },
+    {
+      "artifact": "G2/CANONICAL_RECONCILIATION/G2_CANONICAL_MODEL_RECONCILIATION.md",
+      "sha256": "f7837c2744c63cc51c4f3628130a71557f1bb9e70a20d1ac7a8a928d3cecfee6",
+      "size_bytes": 3963
+    },
+    {
+      "artifact": "G2/CANONICAL_RECONCILIATION/G2_CANONICAL_DECISION_MATRIX.json",
+      "sha256": "bf2f5cf8af687a9f2a1bd728bd658d0f468453a85d7c0ba7c3c7f81f34bcc311",
+      "size_bytes": 3541
+    },
+    {
+      "artifact": "G2/CANONICAL_RECONCILIATION/G2_MODEL_INPUT_REGISTER.json",
+      "sha256": "c51add89b132db893ef7432470877758699714b3fff39493ac108982eb8208f6",
+      "size_bytes": 2430
+    },
+    {
+      "artifact": "G2/CANONICAL_RECONCILIATION/G2_EXECUTION_PROTOCOL_REGISTER.json",
+      "sha256": "ed9cf090fc901fb9bddeb4de851bdcd225327eb5cdf7b057a121ed1c4ddade48",
+      "size_bytes": 1857
+    },
+    {
+      "artifact": "G2/CANONICAL_RECONCILIATION/G2_DECISION_REQUIRED_REGISTER.json",
+      "sha256": "a504dc10c7787465d71b4407677bdc6ba67f51969cbf6d462f2a62db4abd9109",
+      "size_bytes": 3574
+    },
+    {
+      "artifact": "G2/CANONICAL_RECONCILIATION/G2_CANONICAL_MODEL_RELEASE_STATUS.json",
+      "sha256": "1109963af68f4a59b468dfc6dabf47643eb91443851fa1cca8e1fae4cf51b4da",
+      "size_bytes": 1393
+    }
+  ]
+}

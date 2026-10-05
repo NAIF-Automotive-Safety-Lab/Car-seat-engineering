@@ -1,77 +1,185 @@
 {
-  "schema_version": "1.0",
-  "evidence_id": "G2-CANONICAL-RECONCILIATION-001",
-  "status": "BLOCKED",
+  "schema_version": "2.0",
+  "evidence_id": "G2-CANONICAL-RECONCILIATION-REV2-001",
+  "mode": "RED-TEAM / EVIDENCE-FIRST / FAIL-CLOSED",
+  "scope": "T-OCS V7.0 REVISION-2 G2 kinematic/constraint execution only; G2 was not executed and CasADi was not run.",
+  "canonical_model_status": "BLOCKED",
   "conflicts": [
     {
-      "id": "A",
-      "classification": "REPRESENTATION_GRAIN_DIFFERENCE",
-      "resolution_status": "PARTIALLY_RESOLVED",
+      "conflict": "A \u2014 four-joint family versus six historical joint records",
       "source_A": {
         "artifact": "artifacts/master_v4/v7_baseline_independent_verification.json",
-        "revision": "commit 02b7919cddd54a116ba74d6fba13e8983d001231",
-        "location": "$.kinematic_audit.declared_joints",
-        "finding": "V7 declares four joint families; executable_joint_graph=false and DOF/limits are metadata-only."
+        "recorded_revision": "independent V7 baseline verification; audit commit 02b7919cddd54a116ba74d6fba13e8983d001231",
+        "location": "$.kinematic_audit",
+        "finding": "Four declared joint families: J_RAIL, J_SEATBACK, J_LINK_L, J_LINK_R; executable_joint_graph=false; DOF and limits are metadata only."
       },
       "source_B": {
         "artifact": "SR11/joints/V1_SR11_JOINT_MAPPING.json",
-        "revision": "V1; blob 10f4c658c77037147f788deeacbfa853122e3636",
-        "location": "$.joints[*]",
-        "finding": "Six records: two rail prismatics, seatback revolute, two model-defined linkages, and LOCK170 state-dependent constraint."
+        "recorded_revision": "V1; repository blob 10f4c658c77037147f788deeacbfa853122e3636",
+        "location": "$.status, $.joints[*]",
+        "finding": "Six MODEL_SPECIFICATION_ONLY records: two physical rail-to-carriage prismatic records, one seatback revolute record, two model-defined linkage records, and one state-dependent LOCK170 constraint."
       },
+      "classification": "CONFLICTED_REPRESENTATION_GRAIN; source B is historical/model-specification only, not a current executable authority. The two rail records could be a bilateral decomposition of J_RAIL, but no controlled crosswalk establishes containment. LOCK170 is explicitly a constraint/state record, not evidence of a sixth physical joint.",
       "evidence": [
-        "V7_MANUS_INTERFACE_DEFINITION_AUDIT.md",
-        "artifacts/master_v3/v7_evidence_graph_closure.json",
-        "SR11/joints/V1_SR11_JOINT_MAPPING.json"
+        "V7 source explicitly says its graph is not executable.",
+        "SR11 labels itself MODEL_SPECIFICATION_ONLY and mixes physical-joint types, model-defined linkages, and a state-dependent constraint."
       ],
-      "resolution": "The six-record SR11 representation is historical/model-specification decomposition; the four-family representation is the later V7 declaration. No controlled executable crosswalk exists."
+      "resolution_status": "BLOCKED \u2014 no canonical joint inventory, graph, or DOF may be released."
     },
     {
-      "id": "B",
-      "classification": "REPRESENTATION_GRAIN_DIFFERENCE",
-      "resolution_status": "RESOLVED_AS_GRAIN_DIFFERENCE",
+      "conflict": "B \u2014 16 reference/BOM records versus recorded 32 historical-body claim",
       "source_A": {
         "artifact": "artifacts/master_v4/v7_baseline_independent_verification.json",
-        "revision": "commit 02b7919cddd54a116ba74d6fba13e8983d001231",
-        "location": "$.reference_identity,$.step_audit",
-        "finding": "16 V7 reference/BOM records; reconstruction assembly contains 21 B-Rep solids."
+        "recorded_revision": "independent V7 baseline verification; audit commit 02b7919cddd54a116ba74d6fba13e8983d001231",
+        "location": "$.reference_identity, $.assembly_audit",
+        "finding": "16 reference/BOM and assembly-manifest records; 21 reconstruction B-Rep solids."
       },
       "source_B": {
-        "artifact": "SR11/manifests/V1_SR11_BODY_MAPPING.json",
-        "revision": "V1; blob dafa4ce4a17804f0f65d2eb54233d28d5f45b515",
-        "location": "$.mapping_type,$.solids,$.bodies[*]",
-        "finding": "31 logical MBD body groups deterministically cover all 62 R4.1 solids."
+        "artifact": "T-OCS-V7-AEGIS/G2/INPUT_CLOSURE/G2_INPUT_CONFLICT_REGISTER.json",
+        "recorded_revision": "G2 closure register C-002",
+        "location": "$.conflicts[id=C-002].source_B_finding",
+        "finding": "Records the claim of 32 historical SR11 model-defined bodies."
       },
+      "controlled_trace": {
+        "artifact": "SR11/manifests/V1_SR11_BODY_MAPPING.json",
+        "recorded_revision": "V1; repository blob dafa4ce4a17804f0f65d2eb54233d28d5f45b515",
+        "location": "$.bodies",
+        "finding": "Direct controlled count is 31 MODEL_DEFINED logical MBD groups, deterministically mapping all 62 R4.1 solid indices. The G2 MODEL/bodies.json scaffold also contains 31 entries, not 32."
+      },
+      "classification": "SOURCE_RECORD_COUNT_ERROR plus REPRESENTATION_GRAIN_DIFFERENCE. The recorded 32 claim is contradicted by its named SR11 source and scaffold; 16 is a V7 reference/BOM count; 31 is a historical logical/body-group count; 21 and 62 are B-Rep solid counts at other geometry grains. None establishes a current physical rigid-body count. Duplicate/reference/visual/construction-body inclusion is not released.",
       "evidence": [
-        "ARTIFACT_RECOVERY_REPORT.json",
-        "EVIDENCE_MANIFEST.json",
-        "SR11/manifests/V1_SR11_BODY_MAPPING.json"
+        "SR11 mapping has 31 entries and declares deterministic 62-solid coverage.",
+        "V7 verifier distinguishes 16 BOM records from 21 reconstruction solids."
       ],
-      "resolution": "16 = V7 reference/BOM grain; 31 = logical MBD grouping grain; 62 = geometric solid count. Physical rigid-body count is not established."
+      "resolution_status": "32 count claim REJECTED as unsupported by its cited artifact; canonical physical body set remains BLOCKED."
     },
     {
-      "id": "C",
-      "classification": "HISTORICAL_RECORD_CONFLICT",
-      "resolution_status": "RESOLVED_BY_CURRENT_AUTHORITY",
+      "conflict": "C-001 \u2014 historical R4.1 baseline identity assertion",
       "source_A": {
         "artifact": "R4_1_BASELINE_LOCK.json",
-        "revision": "current branch; blob b925e65fbe46232096c8fc8c8a4d7f10b4bd211a",
-        "location": "$.expected_sha256,$.sha_match,$.solid_count,$.mutation_detected",
-        "finding": "Current lock matches the exact R4.1 digest; 62 solids; mutation false."
+        "recorded_revision": "current immutable lock; repository blob b925e65fbe46232096c8fc8c8a4d7f10b4bd211a",
+        "location": "$.expected_sha256, $.sha_match, $.solid_count, $.mutation_detected",
+        "finding": "Expected SHA-256 matches, solid_count=62, mutation_detected=false, status=PASS."
       },
       "source_B": {
         "artifact": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/PHYSICAL_INPUT_ENGINEERING/JON_PHYSICAL_INPUT_ENGINEERING_MASTER.json",
-        "revision": "branch; blob c1dd5d5d8864757a5fd4fee856a13c542ef1ddbe",
+        "recorded_revision": "historical P0 record",
         "location": "$.CURRENT_STATE.IMPORTANT_EVIDENCE_CONFLICT",
-        "finding": "Historical V4 package reported BASELINE_HASH_MATCH=false."
+        "finding": "Historical V4 package states BASELINE_HASH_MATCH=false."
       },
+      "classification": "HISTORICAL_PROVENANCE_CONFLICT. Source B does not supersede the current immutable lock.",
       "evidence": [
-        "R4_1_BASELINE_LOCK.json",
-        "current R4.1 recovery evidence"
+        "Independent current SHA-256 of R4.1.step equals fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68.",
+        "Current file size is 1,220,000 bytes; lock records 62 solids and no mutation."
       ],
-      "resolution": "Retain the historical assertion as provenance only. Current immutable lock governs and was not modified."
+      "resolution_status": "RESOLVED_BY_CURRENT_IMMUTABLE_AUTHORITY; R4.1 was not modified."
     }
   ],
-  "canonical_release": "BLOCKED",
-  "reason": "No single current numerically executable G2 model can be released without an authoritative executable body/joint crosswalk, closed frames/axes, constraints and initial state."
+  "evidence_artifacts": [
+    {
+      "artifact": "R4_1_BASELINE_LOCK.json",
+      "sha256": "936c3bb2898c7c814ab9d1b14f0d8c4420b7d1b7b9384e119e10bbbc610ea836",
+      "size_bytes": 568,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    },
+    {
+      "artifact": "R4.1.step",
+      "sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+      "size_bytes": 1220000,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    },
+    {
+      "artifact": "SR11/joints/V1_SR11_JOINT_MAPPING.json",
+      "sha256": "79a415c51b97cba9bc377c7403197de2df4593587224678c3dd19b3db9e2a6b7",
+      "size_bytes": 1098,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    },
+    {
+      "artifact": "SR11/manifests/V1_SR11_BODY_MAPPING.json",
+      "sha256": "4d58f83c795aeee138183b8978f49c0d93a356c0c5753d501961771ced391859",
+      "size_bytes": 11774,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    },
+    {
+      "artifact": "artifacts/master_v4/v7_baseline_independent_verification.json",
+      "sha256": "2ae3f9568a22bf7d596fc890db054f9005a2ad890b5b65dad42618edd3725f9e",
+      "size_bytes": 7142,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    },
+    {
+      "artifact": "V7_MANUS_INTERFACE_DEFINITION_AUDIT.json",
+      "sha256": "a218353818262478225dfb39edfaa321740f0cdb4f927f553d3a51bc8aa0fe91",
+      "size_bytes": 12526,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    },
+    {
+      "artifact": "T-OCS-V7-AEGIS/G2/MODEL/bodies.json",
+      "sha256": "8ac1724aed818e1be0a53155ba923a8abfa71c4d67a004a6969bd0d00cb888d7",
+      "size_bytes": 8778,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    },
+    {
+      "artifact": "T-OCS-V7-AEGIS/G2/MODEL/joints.json",
+      "sha256": "8670b348225481b0113a19571ae5c18f855220545fdbd375e1e0a5e49fd5e7d7",
+      "size_bytes": 983,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    },
+    {
+      "artifact": "T-OCS-V7-AEGIS/G2/MODEL/frames.json",
+      "sha256": "2a5c2641744678f04ec96e88c2e88883cf95cdfbc3b66bbff66b525f85db1400",
+      "size_bytes": 132,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    },
+    {
+      "artifact": "T-OCS-V7-AEGIS/G2/MODEL/constraints.json",
+      "sha256": "87426828c3787cc08e22a9618aaa3a3578dbe46ee871a313a16bdfa123abadfc",
+      "size_bytes": 177,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    },
+    {
+      "artifact": "T-OCS-V7-AEGIS/G2/MODEL/dof_map.json",
+      "sha256": "50df1d0824ff8ad1a8079b9bfc5aa4e72f2d9278c6a72eaad8a06f021dfe4014",
+      "size_bytes": 146,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    },
+    {
+      "artifact": "T-OCS-V7-AEGIS/G2/INPUT_CLOSURE/G2_INPUT_CONFLICT_REGISTER.json",
+      "sha256": "ef3c47d3af7bc5a9fed9c0bd7f524f2edef0096a0a463bd4ded3ef79ccd7421c",
+      "size_bytes": 1984,
+      "repository_last_commit": "8202b9a781a0a7cb4439d067c75c42d44e07a442",
+      "repository_last_commit_date": "2026-10-04T03:29:54+03:00"
+    },
+    {
+      "artifact": "JON_P0_PHYSICAL_PROTOTYPE_MASTER/PHYSICAL_INPUT_ENGINEERING/JON_PHYSICAL_INPUT_ENGINEERING_MASTER.json",
+      "sha256": "353379f505b544da60b1846f6288411fb947e1a8b930d59c389e75c6fe97c45e",
+      "size_bytes": 62247,
+      "repository_last_commit": "df39449c276c23c3c818b4455710e85145cdcd88",
+      "repository_last_commit_date": "2026-10-04T01:45:24+03:00"
+    }
+  ],
+  "r4_1_protection": {
+    "requested_sha256": "fbe6b17cdbf7282a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "observed_sha256": "fbe6b17cdbf728a2e47963e567e12eeceb1352a36e719e7d1c55cc5f712a0a68",
+    "requested_sha256_length": 65,
+    "observed_sha256_length": 64,
+    "size_bytes": 1220000,
+    "solids": 62,
+    "mutation": false,
+    "immutable_payload_integrity": "PASS",
+    "requested_digest_check": "FAIL",
+    "result": "FAIL",
+    "finding": "The supplied digest has 65 hexadecimal characters and differs from the observed 64-character SHA-256. R4.1 was not mutated."
+  },
+  "conclusion": "No current authoritative, internally consistent, numerically expressible G2 model exists in controlled evidence. A technically executable substitute would be trash engineering: it would manufacture authority rather than preserve it."
 }

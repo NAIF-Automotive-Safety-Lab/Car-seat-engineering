@@ -1,0 +1,14 @@
+{
+  "engine": "MUJOCO",
+  "evidence_id": "ENV-ALT-MUJOCO-PROVISION-001",
+  "native_module": "/tmp/tocs-g2-physics-venv/lib/python3.12/site-packages/mujoco/__init__.py",
+  "native_module_sha256": "131342cd035fa2022b8ea46e1380aaa80641ee1d983d65c427a694517c3c6790",
+  "package": "mujoco",
+  "package_version": "3.14.0",
+  "provisioning": "ordinary package-index install into isolated /tmp environment; no firewall, DNS, or security changes",
+  "python_executable": "/tmp/tocs-g2-physics-venv/bin/python",
+  "python_version": "3.12.13",
+  "r4_1": "UNCHANGED",
+  "schema_version": "1.0",
+  "t_ocs_model_execution": "NOT_STARTED"
+}

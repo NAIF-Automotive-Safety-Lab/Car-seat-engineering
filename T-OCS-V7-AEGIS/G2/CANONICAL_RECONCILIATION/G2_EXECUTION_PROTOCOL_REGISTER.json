@@ -1,70 +1,63 @@
 {
-  "schema_version": "1.0",
-  "evidence_id": "G2-EXECUTION-PROTOCOL-REG-001",
+  "schema_version": "2.0",
+  "evidence_id": "G2-EXECUTION-PROTOCOL-REG-REV2-001",
+  "register": "B \u2014 G2 EXECUTION PROTOCOL",
   "status": "BLOCKED",
-  "scope": "Execution protocol only; not T-OCS design authority.",
-  "selected_runtime_candidate": {
-    "engine": "CasADi",
-    "version": "3.7.2",
-    "qualification": "PASS",
-    "repeatability": "PASS",
-    "authorization_for_TOCS_G2": false
-  },
+  "classification_rule": "Protocol settings are execution controls, not T-OCS design facts. Synthetic CasADi qualification is not authorization and was not rerun.",
   "fields": [
     {
-      "field": "integration_method",
+      "field": "selected_numerical_integration_method",
       "status": "MISSING",
       "value": null,
-      "reason": "No authoritative T-OCS G2 integration method is released; do not reuse synthetic probe settings as project protocol."
+      "finding": "No authorized G2 integration method."
     },
     {
       "field": "timestep_policy",
       "status": "MISSING",
       "value": null,
-      "reason": "No authoritative T-OCS G2 timestep policy."
+      "finding": "No authorized timestep policy."
     },
     {
       "field": "solver_tolerances",
       "status": "MISSING",
       "value": null,
-      "reason": "No authoritative G2 tolerance set."
+      "finding": "No authorized tolerance set."
     },
     {
       "field": "convergence_criteria",
       "status": "MISSING",
       "value": null,
-      "reason": "No G2 convergence acceptance criteria."
+      "finding": "No authorized acceptance criterion."
     },
     {
       "field": "deterministic_seed_policy",
       "status": "NOT_REQUIRED_FOR_DECLARED_SCOPE",
-      "value": "No stochastic component specified.",
-      "reason": "No stochastic numerical process has been authorized."
+      "value": null,
+      "finding": "No authorized stochastic process exists in declared scope."
     },
     {
       "field": "output_sampling_interval",
       "status": "MISSING",
       "value": null,
-      "reason": "No authoritative output sampling policy."
+      "finding": "No authorized sampling interval."
     },
     {
       "field": "termination_conditions",
       "status": "MISSING",
       "value": null,
-      "reason": "No authoritative event/termination rules."
+      "finding": "No authorized termination rules."
     },
     {
       "field": "repeatability_comparison_tolerance",
       "status": "MISSING",
       "value": null,
-      "reason": "No predefined T-OCS model repeatability tolerance."
+      "finding": "No authorized comparison tolerance."
     },
     {
       "field": "runtime_environment_identifier",
       "status": "PARTIALLY_VERIFIED",
-      "value": "Linux 6.18.44 / x86_64 / Python 3.13.5 / CasADi 3.7.2",
-      "reason": "Environment is known; T-OCS execution authorization is not."
+      "value": null,
+      "finding": "Local environment is recorded, but no runtime is authorized for T-OCS G2."
     }
-  ],
-  "rule": "CasADi synthetic qualification PASS does not populate T-OCS execution protocol and does not unlock G2."
+  ]
 }
