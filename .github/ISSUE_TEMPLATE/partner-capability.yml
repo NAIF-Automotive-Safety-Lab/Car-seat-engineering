@@ -1,0 +1,66 @@
+name: Non-confidential partner capability inquiry
+description: Share a public, non-confidential overview of how your organisation could support T-OCS V7.
+title: "[Partner inquiry]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Public disclosure notice:** GitHub issues are public. Do not include confidential or proprietary information, technical dimensions/geometry, mechanism details, unpublished test data, personal contact details, or trade secrets. For an initial private contact, email **naifautomotivesafetylab@gmail.com**. Do not upload confidential files.
+  - type: input
+    id: organisation
+    attributes:
+      label: Organisation
+      description: Company, lab, university, consultancy, or investor organisation.
+      placeholder: Organisation name
+    validations:
+      required: true
+  - type: input
+    id: role
+    attributes:
+      label: Your role
+      description: Your function or area of responsibility (no personal contact details).
+      placeholder: Engineering, testing, partnerships, manufacturing, research...
+    validations:
+      required: true
+  - type: dropdown
+    id: capability
+    attributes:
+      label: Relevant capability
+      description: Select the closest fit.
+      options:
+        - Seat-system / automotive engineering
+        - CAE / simulation feasibility
+        - Physical test article / fixture
+        - Dynamic / sled testing
+        - Instrumentation / measurement / correlation
+        - Manufacturing / automotive supplier
+        - OEM / Tier-1 evaluation
+        - Applied research / university / lab
+        - Co-development / licensing / strategic support
+        - Other relevant capability
+    validations:
+      required: true
+  - type: textarea
+    id: contribution
+    attributes:
+      label: Proposed contribution (non-confidential)
+      description: Briefly describe the capability, resources, or next step you could offer. No technical secrets or sensitive data.
+      placeholder: A high-level description only
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: website
+    attributes:
+      label: Organisation website (optional)
+      description: Public organisation URL only.
+      placeholder: https://example.org
+    validations:
+      required: false
+  - type: checkboxes
+    id: public_confirmation
+    attributes:
+      label: Public-information confirmation
+      options:
+        - label: I understand this submission is public and confirm it contains no confidential or sensitive information.
+          required: true
