@@ -1,6 +1,8 @@
 # T-OCS Parallel Engineering Development Package — V5/V6/V7
 
-**Public, non-confidential project overview for potential engineering and strategic partners:** [T-OCS V7 L0 overview and partnership inquiry](https://htmlpreview.github.io/?https://github.com/NAIF-Automotive-Safety-Lab/Car-seat-engineering/blob/main/docs/inbound/index.html) · [Source HTML](docs/inbound/index.html)
+**Public L0 overview (TEMPORARY PREVIEW):** [T-OCS V7 L0 overview and partnership inquiry](https://htmlpreview.github.io/?https://github.com/NAIF-Automotive-Safety-Lab/Car-seat-engineering/blob/main/docs/inbound/index.html) · [Source HTML](docs/inbound/index.html)
+
+**Hosting status — 24 October 2026:** The HTML preview serves the intended public page but is hosted by a third-party preview service and is not production hosting. The GitHub Pages URL currently returns 404. The Replit publishing status can report success while its visitor-facing page still displays a build placeholder. Treat the preview as temporary and do not label either production route as live until a fresh external fetch verifies the actual T-OCS V7 page body.
 
 This public overview is an introduction only. It does not claim completed safety validation, certification, regulatory compliance, production readiness, OEM endorsement, or completed dynamic/sled-test results.
 
