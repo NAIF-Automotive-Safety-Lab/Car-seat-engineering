@@ -12,6 +12,12 @@ T-OCS V7.0 REVISION-2 is a rear-seat occupant-control system concept being advan
 
 The near-term aim is to scope a disciplined next step with qualified technical or industrial partners. Public material is deliberately limited to L0; this repository is not a substitute for controlled engineering disclosure or evidence review.
 
+## Partner inquiry entry point
+
+- **Preferred first contact:** [naifautomotivesafetylab@gmail.com](mailto:naifautomotivesafetylab@gmail.com)
+- **Partner inquiry guide:** [How to start a qualified, non-confidential discussion](docs/inbound/PARTNER_INQUIRY.md)
+- **Optional public intake:** [Open a non-confidential partner inquiry](https://github.com/NAIF-Automotive-Safety-Lab/Car-seat-engineering/issues/new?template=partner-capability.yml). GitHub issues are public; do not submit confidential or proprietary information.
+
 ## Partner pathways
 
 We welcome initial discussions with qualified organisations whose capabilities are relevant to one or more of these areas:
