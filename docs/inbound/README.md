@@ -5,6 +5,8 @@ This folder contains the public-facing, non-confidential overview for T-OCS V7.0
 - Site source: [index.html](./index.html)
 - **Temporary public preview (not production hosting):** https://htmlpreview.github.io/?https://github.com/NAIF-Automotive-Safety-Lab/Car-seat-engineering/blob/main/docs/inbound/index.html
 - Project contact: naifautomotivesafetylab@gmail.com
+- Partner inquiry guide: [PARTNER_INQUIRY.md](./PARTNER_INQUIRY.md)
+- Optional public intake: [GitHub non-confidential partner inquiry](https://github.com/NAIF-Automotive-Safety-Lab/Car-seat-engineering/issues/new?template=partner-capability.yml). GitHub issues are public; do not submit confidential or proprietary information.
 
 ## Disclosure and evidence boundary
 
